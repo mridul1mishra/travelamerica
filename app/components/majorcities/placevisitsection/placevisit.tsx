@@ -7,7 +7,7 @@ type PlacevisitProps = {
 const Placevisit: React.FC<PlacevisitProps> = ({city}) => {
   const [content, setContent] = useState<PlaceVisitSection | null>(null);
   useEffect(() => {
-    fetch(`${process.env.PUBLIC_URL}/data/majorcities/${city}/placevisit.json`)
+    fetch(`/data/majorcities/${city}/placevisit.json`)
       .then((res) => res.json())
       .then((data: PlacevisitJson) => setContent(data.planTripSection))
       .catch((err) => console.error(`Error loading JSON for ${city}:`, err));

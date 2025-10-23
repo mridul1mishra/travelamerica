@@ -1,5 +1,6 @@
+"use client";
 import React, {JSX, useState, useEffect} from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "next/navigation";
 import Footer from "../../components/Header/Footer/footer";
 import Header from "../../components/Header/header";
 import Airportsection from "../../components/majorcities/airportsection/airportsection";
@@ -28,8 +29,10 @@ const sections: Section[] = propertyListing.sections;
 
 
 
-function CityPage(): JSX.Element {
-  const { city } = useParams<{ city: string }>();
+export default function CityPage() {
+    const params = useParams();
+    const cityParam = params?.city;
+const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
     const [activeSection, setActiveSection] = useState<number | null>(1);
     const [activeGroup, setActiveGroup] = useState<number | null>(1);
     const [content, setContent] = useState<PlaceVisitSection | null>(null);
@@ -39,19 +42,16 @@ function CityPage(): JSX.Element {
     const [plantripcontentsections, setplantripcontentSections] = useState<PlantripcontentSection[]>([]);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-    console.log("Active section changed:", activeSection);
-  }, [activeSection]);
   
  
 useEffect(() => {
   if (!city) return;
   setLoading(true);
   Promise.all([
-    fetch(`${process.env.PUBLIC_URL}/data/majorcities/${city}/airportsection.json`).then((res) => res.json()),
-    fetch(`${process.env.PUBLIC_URL}/data/majorcities/${city}/propertylisting.json`).then((res) => res.json()),
-    fetch(`${process.env.PUBLIC_URL}/data/majorcities/${city}/plantrip.json`).then((res) => res.json()),
-    fetch(`${process.env.PUBLIC_URL}/data/majorcities/${city}/plantripcontent.json`).then((res) => res.json()),
+    fetch(`/data/majorcities/${city}/airportsection.json`).then((res) => res.json()),
+    fetch(`/data/majorcities/${city}/propertylisting.json`).then((res) => res.json()),
+    fetch(`/data/majorcities/${city}/plantrip.json`).then((res) => res.json()),
+    fetch(`/data/majorcities/${city}/plantripcontent.json`).then((res) => res.json()),
   ])
     .then(([airportData, Propertylisting, personaData, plantripData]) => {
       setairportSection(airportData);
@@ -75,7 +75,7 @@ if (!city) return <div>Loading place visit data...</div>;;
     return(
         
         <div className="App">
-      <Header image={`${process.env.PUBLIC_URL}/data/majorcities/${city}/assets/${city}.jpeg`} bannerText={`Welcome to ${capitalizeWords(city)}!`} />
+      <Header image={`/data/majorcities/${city}/assets/${city}.jpeg`} bannerText={`Welcome to ${capitalizeWords(city)}!`} />
       <Airportsection content={airportsection} onSelect={setActiveSection} />
       <Propertylisting content={propertySections} active={activeSection} />
       <Plantripsection content={personaContent} onSelect={setActiveGroup} />
@@ -92,4 +92,3 @@ function capitalizeWords(str: string) {
     .toLowerCase()
     .replace(/\b\w/g, (char) => char.toUpperCase());
 }
-export default CityPage;

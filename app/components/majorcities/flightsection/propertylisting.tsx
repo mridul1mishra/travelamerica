@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "next/navigation";
 import "./propertylisting.css";
 import PropertyListingModel from "../../../models/propertylisting";
 import {Cruise} from "../../../models/propertylisting";
@@ -26,8 +26,8 @@ const Propertylisting: React.FC<SectionsProps> = ({content, active}) =>{
       try {
         setLoading(true);
         const [hotelRes, cruiseRes] = await Promise.all([
-          fetch(`${process.env.PUBLIC_URL}/data/majorcities/${city}/hotels.json`),
-          fetch(`${process.env.PUBLIC_URL}/data/majorcities/${city}/cruises.json`)
+          fetch(`/data/majorcities/${city}/hotels.json`),
+          fetch(`/data/majorcities/${city}/cruises.json`)
         ]);
         const [hotelData, cruiseData]: [Cruise[], Cruise[]] = await Promise.all([
           hotelRes.json(),
