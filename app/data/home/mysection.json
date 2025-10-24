@@ -18,13 +18,13 @@
       "title": "Las Vegas, Nevada",
       "description": "Famous casinos and nightlife, the Strip, world-class entertainment, nearby natural attractions like Red Rock Canyon......",
       "image": "https://www.greentalks.com/-/media/Project/AdaniGreenTalks/Stories-images/Naval-boats/Naval-boats-Story-Web-Thumbnail05x.jpg",
-      "link": "majorcities/newyork"
+      "link": "majorcities/lasvegas"
     },
     {
       "title": "Orlando, Florida",
       "description": "Theme parks including Walt Disney World, Universal Studios, SeaWorld, family-friendly attractions......",
       "image": "https://www.greentalks.com/-/media/Project/AdaniGreenTalks/Stories-images/Takachar/TakacharStory-Web-Thumbnail05x.jpg",
-      "link": "majorcities/newyork"
+      "link": "majorcities/orlando"
     }
   ]
 }

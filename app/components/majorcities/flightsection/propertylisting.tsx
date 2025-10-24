@@ -15,7 +15,10 @@ type SectionsProps = {
 
 
 const Propertylisting: React.FC<SectionsProps> = ({content, active}) =>{
-  const { city } = useParams();
+  const params = useParams();
+const cityParam = params?.city;
+const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
+
   const [hotels, setHotels] = useState<Cruise[]>([]);
   const [cruises, setCruise] = useState<Cruise[]>([]);
   const [loading, setLoading] = useState(true);

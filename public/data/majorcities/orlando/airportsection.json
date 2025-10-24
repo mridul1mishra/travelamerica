@@ -1,0 +1,24 @@
+{
+  "title": "Experience Orlando",
+  "description": "Orlando, a vibrant city in central Florida, is home to a diverse population and a thriving tourism culture. Nestled among lakes and lush landscapes, it’s renowned for world-famous theme parks and family adventures.",
+  "tabs": [
+    {
+      "id": 1,
+      "label": "Flights",
+      "img": "/data/majorcities/lasvegas/assets/departures.svg",
+      "section": "flight-section"
+    },
+    {
+      "id": 2,
+      "label": "Stays",
+      "img": "/data/majorcities/lasvegas/assets/departures.svg",
+      "section": "hotel-section"
+    },
+    {
+      "id": 3,
+      "label": "Cruise",
+      "img": "/data/majorcities/lasvegas/assets/departures.svg",
+      "section": "cruise-section"
+    }
+  ]
+}

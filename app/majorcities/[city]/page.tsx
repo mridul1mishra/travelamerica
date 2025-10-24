@@ -41,7 +41,7 @@ const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
     const [personaContent, setPersonaContent] = useState<Personas | null>(null);
     const [plantripcontentsections, setplantripcontentSections] = useState<PlantripcontentSection[]>([]);
     const [loading, setLoading] = useState(true);
-
+    const citiesWithoutBanner = ['lasvegas'];
   
  
 useEffect(() => {
@@ -75,7 +75,7 @@ if (!city) return <div>Loading place visit data...</div>;;
     return(
         
         <div className="App">
-      <Header image={`/data/majorcities/${city}/assets/${city}.jpeg`} bannerText={`Welcome to ${capitalizeWords(city)}!`} />
+      <Header image={`/data/majorcities/${city}/assets/${city}.jpeg`} bannerText={!citiesWithoutBanner.includes(city) ? `Welcome to ${capitalizeWords(city)}!` : ""} />
       <Airportsection content={airportsection} onSelect={setActiveSection} />
       <Propertylisting content={propertySections} active={activeSection} />
       <Plantripsection content={personaContent} onSelect={setActiveGroup} />

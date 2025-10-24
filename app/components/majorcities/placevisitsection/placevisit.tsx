@@ -22,7 +22,7 @@ const Placevisit: React.FC<PlacevisitProps> = ({city}) => {
     {content.places.map((row, rowIndex) => (
     <div key={rowIndex} className="place-visit">
       {row.map((place, index) => (
-    <div key={index} className={index === 0 ? "fixed-width-div" : undefined}>
+    <div key={index} className="fixed-width-div">
       <span><img src={place.icon} alt={place.name}/></span><span className="place-name">{place.name}</span>
     </div>
     

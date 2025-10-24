@@ -1,0 +1,47 @@
+{
+  "planTripSection": {
+    "title": "Place to visit in Lasvegas",
+    "places": [
+      [
+        {
+          "name": "TCL Chinese Theatre",
+          "icon": "/data/majorcities/lasvegas/assets/Current Location.svg"
+        },
+        {
+          "name": "Hollywood Sign",
+          "icon": "/data/majorcities/lasvegas/assets/Current Location.svg"
+        }
+      ],
+      [
+        {
+          "name": "Santa Monica Pier",
+          "icon": "/data/majorcities/lasvegas/assets/Current Location.svg"
+        },
+        {
+          "name": "Venice Beach Boardwalk",
+          "icon": "/data/majorcities/lasvegas/assets/Current Location.svg"
+        }
+      ],
+      [
+        {
+          "name": "The Getty Center",
+          "icon": "/data/majorcities/lasvegas/assets/Current Location.svg"
+        },
+        {
+          "name": "The Broad Museum",
+          "icon": "/data/majorcities/lasvegas/assets/Current Location.svg"
+        }
+      ],
+      [
+        {
+          "name": "Rodeo Drive & Beverly Hills",
+          "icon": "/data/majorcities/lasvegas/assets/Current Location.svg"
+        },
+        {
+          "name": "Universal Studios Hollywood",
+          "icon": "/data/majorcities/lasvegas/assets/Current Location.svg"
+        }
+      ]
+    ]
+  }
+}

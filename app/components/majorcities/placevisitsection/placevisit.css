@@ -7,7 +7,7 @@
   padding-left: 10px;
 }
 .fixed-width-div {
-    width: 200px; /* set your desired fixed width */
+    width: 232px; /* set your desired fixed width */
     display: flex; /* to align img and text horizontally */
     align-items: center; /* vertically center items */
     gap: 8px; /* space between image and text */
