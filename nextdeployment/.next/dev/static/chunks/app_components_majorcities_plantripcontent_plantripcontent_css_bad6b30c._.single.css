@@ -1,0 +1,43 @@
+/* [project]/app/components/majorcities/plantripcontent/plantripcontent.css [app-client] (css) */
+.content-section, .plan-trip-content {
+  margin-top: 20px;
+}
+
+.plan-trip-content.active, .content-section.active {
+  display: block;
+}
+
+.group-section {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.group-section h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.solo-section {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.solo-section h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.couple-section {
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.couple-section h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=app_components_majorcities_plantripcontent_plantripcontent_css_bad6b30c._.single.css.map*/

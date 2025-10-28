@@ -1,4 +1,5 @@
 .plan-trip-section{
+  flex: 1;
   background-color: #f6f2ef;
   padding: 40px;
   padding-bottom: 10px;

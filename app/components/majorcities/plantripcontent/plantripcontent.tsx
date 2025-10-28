@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import "./plantripcontent.css";
 import { PlantripcontentJson, PlantripcontentSection  } from "../../../models/plantripcontent";

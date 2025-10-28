@@ -33,10 +33,14 @@ a{
 }
 
 /* Logo */
-.brand-logo strong {
-  font-size: 24px;
-  letter-spacing: 1px;
-  padding-left: 7px;
+.brand-logo {
+  display: block;               /* Prevent inline spacing issues */
+  max-width: 100px;             /* Adjust size as needed */
+  height: auto;                 /* Maintain aspect ratio */
+  margin-left: 0;               
+  margin-right: auto;
+  cursor: pointer;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 /* Navigation Links */

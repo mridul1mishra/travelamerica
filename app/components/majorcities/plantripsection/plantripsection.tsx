@@ -1,3 +1,4 @@
+"use client"
 import React, {useState} from "react";
 import "./plantripsection.css";
 import Personas from "../../../models/personas";

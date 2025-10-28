@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import "./footer.css"; // optional if you want to style it
 
@@ -15,20 +16,20 @@ const Footer = () => {
       </ul>
     </div>
     <div>
-      <h3>Connect</h3>
+      <h3></h3>
       <ul className="vertical-list">
-        <li><a href="#">Instagram</a></li>
+       { /* <li><a href="#">Instagram</a></li>
         <li><a href="#">Facebook</a></li>
         <li><a href="#">YouTube</a></li>
-        <li><a href="#">Pinterest</a></li>
+        <li><a href="#">Pinterest</a></li> */}
       </ul>
     </div>
     <div>
       <h3>Company Info</h3>
       <ul className="vertical-list">
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Company Details</a></li>
+        <li className="link"><a href="/termsandcondition">Terms of Service</a></li>
+        <li className="link"><a href="/privacy">Privacy Policy</a></li>
+        <li className="link"><a href="/companydetails">Company Details</a></li>
       </ul>
     </div>
   </div>

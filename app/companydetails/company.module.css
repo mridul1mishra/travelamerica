@@ -1,0 +1,134 @@
+/* app/terms/terms.module.css */
+
+/* Page layout */
+.container {
+  max-width: 900px;
+  margin: -790px auto 0;
+  padding: 2.5rem 1.5rem;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial;
+  color: #1f2937; /* slate-800 */
+  line-height: 1.6;
+}
+
+/* Header / title */
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #0f172a; /* slate-900 */
+}
+
+.effectiveDate {
+  color: #475569; /* slate-500 */
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Banner */
+.banner {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+  background: linear-gradient(180deg,#eef2ff 0%, #fff 100%);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(15,23,42,0.03);
+}
+
+.bannerInner {
+  width: 100%;
+  max-width: 1100px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+.imagebanner{
+  padding-bottom: 92px;
+  max-width: 105%;
+}
+.list { }
+
+.list ul {
+  list-style-type: lower-alpha;
+  padding-left: 1.25rem;
+}
+
+.list ul ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+/* Text overlay on banner */
+.bannerText {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1rem;
+  z-index: 6;
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 1.05rem;
+  background: rgba(255,255,255,0.6);
+  padding: 8px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 10px rgba(2,6,23,0.06);
+}
+
+/* SVG wrapper to size and contain the illustration */
+.bannerSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+/* Icons / panels inside the SVG will carry these classes for animation */
+.shape--float {
+  animation: floatY 6s ease-in-out infinite;
+  transform-origin: center;
+  opacity: 0.95;
+}
+
+.shape--slow {
+  animation-duration: 8s;
+}
+
+.shape--fast {
+  animation-duration: 4.8s;
+}
+
+/* subtle moving clouds/waves */
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px) rotate(-0.3deg); }
+  100% { transform: translateY(0); }
+}
+
+/* Content styling (terms) */
+.prose h2 {
+  font-size: 1.125rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #0b1220;
+}
+
+.prose p {
+  margin: 0.45rem 0 0.9rem 0;
+  color: #374151;
+  font-size: 0.98rem;
+}
+
+/* small screens */
+@media (max-width: 640px) {
+  .banner { height: 160px; }
+  .title { font-size: 1.4rem; }
+  .bannerText { font-size: 0.95rem; bottom: 0.75rem; left: 0.75rem; }
+}

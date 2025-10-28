@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/components/majorcities/plantripcontent/plantripcontent.css"],"sourcesContent":[".content-section {\r\n    \r\n    margin-top: 20px;\r\n  }\r\n  .plan-trip-content{\r\n    \r\n    margin-top: 20px;\r\n  }\r\n  .plan-trip-content.active{\r\n     display: block;\r\n  }\r\n  .content-section.active {\r\n    display: block;\r\n  }\r\n.group-section {\r\n  font-family: Arial, sans-serif;\r\n  max-width: 900px;\r\n  margin: 20px auto;\r\n}\r\n\r\n.group-section h2 {\r\n  font-size: 18px;\r\n  margin-bottom: 15px;\r\n}\r\n.solo-section {\r\n  font-family: Arial, sans-serif;\r\n  max-width: 900px;\r\n  margin: 20px auto;\r\n}\r\n\r\n.solo-section h2 {\r\n  font-size: 18px;\r\n  margin-bottom: 15px;\r\n}\r\n.couple-section {\r\n  font-family: Arial, sans-serif;\r\n  max-width: 900px;\r\n  margin: 20px auto;\r\n}\r\n\r\n.couple-section h2 {\r\n  font-size: 18px;\r\n  margin-bottom: 15px;\r\n}"],"names":[],"mappings":"AAAA;;;;AAQE;;;;AAMF;;;;;;AAMA;;;;;AAIA;;;;;;AAMA;;;;;AAIA;;;;;;AAMA"}}]
+}

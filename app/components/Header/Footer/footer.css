@@ -4,6 +4,9 @@
   padding: 40px;
   font-family: sans-serif;
 }
+.link{
+  cursor: pointer;
+}
 
 .footer-top {
   display: flex;
