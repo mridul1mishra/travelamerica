@@ -23,13 +23,11 @@ const sections: Section[] = propertyListing.sections;
 
 
 
-
-
-
 export default function CityPage() {
     const params = useParams();
     const cityParam = params?.city;
-const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
+    const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
+    
     const [activeSection, setActiveSection] = useState<number | null>(1);
     const [activeGroup, setActiveGroup] = useState<number | null>(1);
     const [content, setContent] = useState<PlaceVisitSection | null>(null);
