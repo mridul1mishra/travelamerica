@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: `
               default-src 'self';
-              script-src 'self' https://www.googletagmanager.com;
+              script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
               style-src 'self' 'unsafe-inline';
               img-src 'self' data: https:;
               font-src 'self' https://fonts.gstatic.com;
@@ -18,6 +18,7 @@ const nextConfig: NextConfig = {
               frame-src 'none';
             `.replace(/\s{2,}/g, " ").trim(), // compact the header
           },
+          
         ],
       },
     ];
