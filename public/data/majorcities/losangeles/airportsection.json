@@ -5,19 +5,19 @@
     {
       "id": 1,
       "label": "Flights",
-      "img": "https://www.adaniairports.com/-/media/project/ahmedabadairport/home/departures.svg",
+      "img": "/data/majorcities/lasvegas/assets/departures.svg",
       "section": "flight-section"
     },
     {
       "id": 2,
       "label": "Stays",
-      "img": "https://www.adaniairports.com/-/media/project/ahmedabadairport/home/departures.svg",
+      "img": "/data/majorcities/lasvegas/assets/departures.svg",
       "section": "hotel-section"
     },
     {
       "id": 3,
       "label": "Cruise",
-      "img": "https://www.adaniairports.com/-/media/project/ahmedabadairport/home/departures.svg",
+      "img": "/data/majorcities/lasvegas/assets/departures.svg",
       "section": "cruise-section"
     }
   ]
