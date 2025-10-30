@@ -10,10 +10,7 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: `
               default-src 'self';
-      script-src 'self'
-        https://www.googletagmanager.com
-        https://www.google-analytics.com
-        'sha256-dj8U3DHIoYgqto74jrgiN/gt4JUGBkkmPMdLxxCuZ6c=';
+      script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
       style-src 'self' 'unsafe-inline';
       img-src 'self' data: https:;
       font-src 'self' https://fonts.gstatic.com;
