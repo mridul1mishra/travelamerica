@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
               style-src 'self' 'unsafe-inline';
               img-src 'self' data: https:;
               font-src 'self' https://fonts.gstatic.com;
-              connect-src 'self';
+              connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
               frame-src 'none';
             `.replace(/\s{2,}/g, " ").trim(), // compact the header
           },
