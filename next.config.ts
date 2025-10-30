@@ -10,13 +10,16 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: `
               default-src 'self';
-              script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
-              style-src 'self' 'unsafe-inline';
-              img-src 'self' data: https:;
-              font-src 'self' https://fonts.gstatic.com;
-              connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
-              frame-src 'none';
-            `.replace(/\s{2,}/g, " ").trim(), // compact the header
+      script-src 'self'
+        https://www.googletagmanager.com
+        https://www.google-analytics.com
+        'sha256-dj8U3DHIoYgqto74jrgiN/gt4JUGBkkmPMdLxxCuZ6c=';
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data: https:;
+      font-src 'self' https://fonts.gstatic.com;
+      connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;
+      frame-src 'none';
+    `.replace(/\s{2,}/g, " ").trim(),
           },
           
         ],
