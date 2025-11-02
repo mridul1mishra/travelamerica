@@ -12,6 +12,44 @@
   margin-top: -780px;
 }
 
+/* Banner */
+.banner {
+  width: 100%;
+  height: 280px; /* fixed visible height to crop top & bottom */
+  border-radius: 12px;
+  overflow: hidden; /* hides the cropped parts */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+  background: linear-gradient(180deg, #eef2ff 0%, #fff 100%);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.03);
+}
+
+/* Make banner image fill and crop vertically */
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crops top & bottom */
+  object-position: center; /* keeps center visible */
+}
+
+.bannerInner {
+  width: 100%;
+  max-width: 1100px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.imagebanner{
+  padding-bottom: 92px;
+}
+
 /* Header / title */
 .title {
   font-size: 1.75rem;
@@ -26,31 +64,7 @@
   font-size: 0.95rem;
 }
 
-/* Banner */
-.banner {
-  width: 100%;
-  height: 220px;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.75rem;
-  background: linear-gradient(180deg,#eef2ff 0%, #fff 100%);
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
-  border: 1px solid rgba(15,23,42,0.03);
-}
 
-.bannerInner {
-  width: 100%;
-  max-width: 1100px;
-  padding: 1rem 1.25rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  justify-content: center;
-}
 
 /* Text overlay on banner */
 .bannerText {
@@ -68,13 +82,7 @@
   box-shadow: 0 4px 10px rgba(2,6,23,0.06);
 }
 
-/* SVG wrapper to size and contain the illustration */
-.bannerSvg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  pointer-events: none;
-}
+
 
 /* Icons / panels inside the SVG will carry these classes for animation */
 .shape--float {
