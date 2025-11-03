@@ -3,7 +3,12 @@
   padding: 40px;
 }
 
-
+@font-face {
+  font-family: 'CorbenBold';
+  src: url('/data/corben-cdnfonts/merriweather/Merriweather-VariableFont_opsz,wdth,wght.ttf') format('ttf');
+  font-weight: bold;
+  font-style: normal;
+}
 
 .green-stories p {
   color: #555;
