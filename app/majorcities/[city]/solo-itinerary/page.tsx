@@ -32,7 +32,7 @@ export default function SoloItineraryPage() {
               <li>Midday: The Met to MoMA</li>
               <li>Evening: Dinner at Time Out Market or Eataly Flatiron</li>
           </ul>
-          <Link href="/destination/newyork/landmark" className={styles.ctaButton}>
+          <Link href="/majorcities/newyork/landmark" className={styles.ctaButton}>
             Discover More NYC Landmarks 🗽
           </Link>
         </div>
@@ -47,7 +47,7 @@ export default function SoloItineraryPage() {
               <li>Midday: Walk the High Line → lunch at Chelsea Market</li>
               <li>Evening: Catch a Broadway show — solo seats are easy to grab</li>
           </ul>
-          <Link href="/destination/newyork/neighbourhood" className={styles.ctaButton}>
+          <Link href="/majorcities/newyork" className={styles.ctaButton}>
             Find Your NYC Neighborhood
           </Link>
         </div>
@@ -78,7 +78,7 @@ export default function SoloItineraryPage() {
               <li>Afternoon: Chill in Prospect Park or visit Brooklyn Museum</li>
               <li>Evening: Rooftop drink at Westlight or jazz at The Django</li>
           </ul>
-          <Link href="/destination/newyork/food" className={styles.ctaButton}>
+          <Link href="/majorcities/newyork/food" className={styles.ctaButton}>
             Discover NYC’s Food Scene
           </Link>
         </div>
