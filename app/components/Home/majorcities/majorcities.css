@@ -123,7 +123,7 @@
     font-weight: 700; /* strong emphasis */
     text-align: center;
     color: #222; /* dark, high contrast */
-    font-family: "Merriweather", "Georgia", serif; /* elegant but readable */
+    font-family: 'CorbenBold', serif;
     letter-spacing: 0.5px; /* subtle spacing for refinement */
     margin-bottom: 15px;
     margin-top: 10px;
