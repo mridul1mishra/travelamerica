@@ -12,7 +12,7 @@ export default function FoodPage() {
     const citiesWithoutBanner = ['lasvegas'];
     return(
         <>
-        <Header image={`/data/majorcities/${city}/assets/banner-itinerary.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Travel ${capitalizeWords(city)}!` : ""} />
+        <Header image={`/data/majorcities/${city}/assets/foodpagebanner.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Travel ${capitalizeWords(city)}!` : ""} />
         <section className={styles.splitSection}>
                 <div className={styles.imageWrapper}>
                 <Image
