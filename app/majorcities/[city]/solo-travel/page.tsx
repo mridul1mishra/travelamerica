@@ -1,5 +1,5 @@
 export const generateMetadata = () => ({
-  title: '3-Day Solo Travel Itinerary for New York | Travel America',
+  title: 'Solo Female Travel NYC: Tips, Itinerary & Safe Neighbourhoods | Travel America',
   description:  'Explore NYC solo with this 3-day itinerary covering landmarks, neighborhoods, and Brooklyn vibes.'
 });
 
