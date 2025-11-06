@@ -12,7 +12,29 @@ export default function SoloItineraryClient() {
     const cityParam = params?.city;
     const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
     const citiesWithoutBanner = ['lasvegas'];
+    const schema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "3-Day Solo Travel Itinerary for New York | Travel America",
+    "author": { "@type": "Organization", "name": "Travel America" },
+    "datePublished": "2025-11-01",
+    "image": "https://www.travelamerica.work/images/nyc-solo-itinerary-cover.jpg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Travel America",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.travelamerica.work/logo.png"
+      }
+    },
+    "description": "Explore NYC solo with this 3-day itinerary covering landmarks, neighborhoods, and Brooklyn vibes."
+  };
     return(
+      <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
     <div className="App">
       <Header image={`/data/majorcities/${city}/assets/banner-itinerary.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Travel Itinerary for New York City` : ""} />
         
@@ -26,7 +48,7 @@ export default function SoloItineraryClient() {
           />
         </div>
         <div className={styles.textWrapper}>
-          <h2 className={styles.heading}>Solo Travel NYC: 3-Day Itinerary for First-Time Visitors</h2>
+          <h2 className={styles.heading}>Day 1: NYC Landmarks for Solo Travelers</h2>
           <p className={styles.subheading}>Start with the classics. Today’s about iconic sights and easy wins.</p>
           <ul className={styles.itineraryList}>
               <li className={styles.subheading}>Morning: Central Park — Bethesda Terrace to Strawberry Fields</li>
@@ -86,7 +108,8 @@ export default function SoloItineraryClient() {
         </div>
       </section>
       <Footer />  
-    </div>       
+    </div>
+    </>       
 );
 }
 function capitalizeWords(str: string) {
