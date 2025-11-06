@@ -11,19 +11,19 @@
     {
       "title": "Los Angeles, California",
       "description": "Hollywood, Santa Monica Pier, Venice Beach, Universal Studios, vibrant arts scene....",
-      "image": "https://www.greentalks.com/-/media/Project/AdaniGreenTalks/Stories-images/Explore-Stories-images/robo-bionics-final/Robobionics-Web-Thumbnail05x.jpg",
+      "image": "/data/RobobionicsWebThumbnail05x.jpg",
       "link": "majorcities/losangeles"
     },
     {
       "title": "Las Vegas, Nevada",
       "description": "Famous casinos and nightlife, the Strip, world-class entertainment, nearby natural attractions like Red Rock Canyon......",
-      "image": "https://www.greentalks.com/-/media/Project/AdaniGreenTalks/Stories-images/Naval-boats/Naval-boats-Story-Web-Thumbnail05x.jpg",
+      "image": "/data/NavalboatsStoryWebThumbnail05x.jpg",
       "link": "majorcities/lasvegas"
     },
     {
       "title": "Orlando, Florida",
       "description": "Theme parks including Walt Disney World, Universal Studios, SeaWorld, family-friendly attractions......",
-      "image": "https://www.greentalks.com/-/media/Project/AdaniGreenTalks/Stories-images/Takachar/TakacharStory-Web-Thumbnail05x.jpg",
+      "image": "/data/TakacharStoryWebThumbnail05x.jpg",
       "link": "majorcities/orlando"
     }
   ]
