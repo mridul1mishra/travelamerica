@@ -10,14 +10,35 @@ export default function LandmarkPage() {
     const cityParam = params?.city;
     const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
     const citiesWithoutBanner = ['lasvegas'];
+    const schema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "3-Day Solo Travel Itinerary for New York | Travel America",
+    "author": { "@type": "Organization", "name": "Travel America" },
+    "datePublished": "2025-11-01",
+    "image": "https://www.travelamerica.work/images/nyc-solo-itinerary-cover.jpg",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Travel America",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.travelamerica.work/logo.png"
+      }
+    },
+    "description": "Explore New York City’s iconic landmarks with our solo travel guide. Maps, tips & safety"
+  };
     return(
         <>
-       <Header image={`/data/majorcities/${city}/assets/landmark-banner.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Travel ${capitalizeWords(city)}!` : ""} />
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+       <Header image={`/data/majorcities/${city}/assets/landmark-banner.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Travel in New York City – Landmark Guide!` : ""} />
        <section className={styles.splitSection}>
         <div className={styles.imageWrapper}>
           <Image
-            src="/data/majorcities/newyork/assets/landmark_manhattan.png"
-            alt="Day 1 NYC Route Map"
+            src="/data/majorcities/newyork/assets/solo-travel-manhattan-landmarks.png"
+            alt="Route map of Manhattan landmarks for solo travelers, including Times Square, Central Park, and Empire State Building."
             fill
             className={styles.mapImage}
           />
@@ -44,8 +65,8 @@ export default function LandmarkPage() {
         </div>
         <div className={styles.imageWrapper}>
           <Image
-            src="/data/majorcities/newyork/assets/landmark_brooklyn.png"
-            alt="Day 1 NYC Route Map"
+            src="/data/majorcities/newyork/assets/solo-traveler-manhattan-bridge-sunset-new-york-cityscape.png"
+            alt="Solo traveler enjoying sunset near Manhattan Bridge in New York City, with skyline and cobblestone path in view"
             fill
             className={styles.mapImage}
           />
@@ -54,8 +75,8 @@ export default function LandmarkPage() {
       <section className={styles.splitSection}>
         <div className={styles.imageWrapper}>
           <Image
-            src="/data/majorcities/newyork/assets/landmark_sol.png"
-            alt="Day 1 NYC Route Map"
+            src="/data/majorcities/newyork/assets/solo-traveler-statue-of-liberty-waterfront-new-york-city.png"
+            alt="Solo traveler standing by the waterfront in New York City, looking at the Statue of Liberty on an overcast day with boats and skyline in the background."
             fill
             className={styles.mapImage}
           />
