@@ -83,7 +83,7 @@ const schema2 = {
   },
   "headline": "3-Day Solo Travel Itinerary for New York | Travel America",
   "description": "A 3-day solo travel itinerary for NYC with safety tips, local navigation tools, and packing advice.",
-  "keywords": ["solo travel NYC", "NYC itinerary", "safe travel tips", "Citymapper", "MetroCard", "NYC solo female travel", "things to do alone NYC"],
+  "keywords": ["solo travel NYC", "NYC itinerary", "safe travel tips", "Citymapper", "MetroCard", "NYC solo travel", "things to do alone NYC"],
   "image": {
     "@type": "ImageObject",
     "url": "https://www.travelamerica.work/data/majorcities/newyork/assets/safetybanner.png",
@@ -122,7 +122,7 @@ const schema2 = {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-        <Header image={`/data/majorcities/${city}/assets/safetybanner.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? (<span style={{ color: '#1A2A3A', fontWeight: '600', fontSize: '40px' }}>Solo Female Travel in NYC: Safe Itinerary, <br />Packing Tips and Best Neighborhoods!</span>) : ""} />
+        <Header image={`/data/majorcities/${city}/assets/safetybanner.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? (<span style={{ color: '#1A2A3A', fontWeight: '600', fontSize: '40px' }}>Solo Travel in NYC: Safe Itinerary, <br />Packing Tips and Best Landmarks!</span>) : ""} />
         <section className={styles.splitSection}>
         <div className={styles.imageWrapper}>
           <Image
