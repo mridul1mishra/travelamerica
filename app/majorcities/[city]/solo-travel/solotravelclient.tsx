@@ -122,7 +122,7 @@ const schema2 = {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-        <Header image={`/data/majorcities/${city}/assets/safetybanner.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Female Travel in NYC: Safe Itinerary, Packing Tips and Best Neighborhoods!` : ""} />
+        <Header image={`/data/majorcities/${city}/assets/safetybanner.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? (<span style={{ color: '#1A2A3A', fontWeight: '600', fontSize: '40px' }}>Solo Female Travel in NYC: Safe Itinerary, <br />Packing Tips and Best Neighborhoods!</span>) : ""} />
         <section className={styles.splitSection}>
         <div className={styles.imageWrapper}>
           <Image
