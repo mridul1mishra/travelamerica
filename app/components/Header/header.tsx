@@ -1,12 +1,12 @@
 "use client"
-import { useState, useEffect } from "react";
+import { useState, useEffect, ReactNode } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import "./header.css"; // keep your CSS
 
 type HeroProps = {
   image: string | StaticImageData; // accept Next.js image imports
-  bannerText: string;
+  bannerText: ReactNode;
 };
 
 const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
