@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://www.travelamerica.work/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": ":subdomain.travelamerica.work"
+        }
+      ],
+      "statusCode": 308
+    }
+  ]
+}
