@@ -1,6 +1,6 @@
 .flight-section {
   font-family: Arial, sans-serif;
-  max-width: 900px;
+  max-width: 1090px;
   margin: 20px auto;
 }
 
@@ -346,4 +346,49 @@
 .card-footer {
   margin-top: 0.5rem;  /* smaller top margin */
   gap: 1rem;            /* reduce huge gap between price and button */
+}
+.flight-layout {
+  display: flex;
+  gap: 102px;
+  align-items: flex-start;
+}
+.travel-smart-sidebar {
+  width: 280px; /* or try 300px for more breathing room */
+  min-width: 260px;
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 40px;
+  height: fit-content;
+  font-family: Arial, sans-serif;
+}
+
+.travel-smart-sidebar h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.travel-smart-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.travel-smart-sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.travel-smart-sidebar .icon {
+  font-size: 16px;
 }

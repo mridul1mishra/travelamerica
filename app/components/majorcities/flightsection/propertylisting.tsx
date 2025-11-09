@@ -66,36 +66,52 @@ const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
     return(
       <section className={`${section.className} content-section`}>
       <h2>{section.title}</h2>
-      <div className="flight-table">
-        {/* Header */}
-        <div className="flight-row header">
-          {section.header.map((head, idx) => (
-            <div key={idx} className="cell">{head}</div>
+      <div className="flight-layout">
+        <div className="flight-table">
+          {/* Header */}
+          <div className="flight-row header">
+            {section.header.map((head, idx) => (
+              <div key={idx} className="cell">{head}</div>
+            ))}
+          </div>
+
+          {/* Rows */}
+          {section.rows.map((row, idx) => (
+            <div key={idx} className={`flight-row ${row.highlight ? "highlight" : ""}`}>
+              <div className="cell airline">
+                <img src={row.airline.logo} alt={row.airline.name} className="image" />
+                <small>{row.airline.name}</small>
+              </div>
+              <div className="cell">
+                <div>{row.departure.time}</div>
+                <small>{row.departure.city}</small>
+              </div>
+              <div className="cell">
+                <div>{row.arrival.time}</div>
+                <small>{row.arrival.city}</small>
+              </div>
+              <div className="cell">{row.duration}</div>
+              <div className="cell price">{row.price}</div>
+              <div className="cell">
+                <a href={row.buttonUrl} className="btn">{row.buttonText}</a>
+              </div>
+            </div>
           ))}
         </div>
-
-        {/* Rows */}
-        {section.rows.map((row, idx) => (
-          <div key={idx} className={`flight-row ${row.highlight ? "highlight" : ""}`}>
-            <div className="cell airline">
-              <img src={row.airline.logo} alt={row.airline.name} className="image" />
-              <small>{row.airline.name}</small>
-            </div>
-            <div className="cell">
-              <div>{row.departure.time}</div>
-              <small>{row.departure.city}</small>
-            </div>
-            <div className="cell">
-              <div>{row.arrival.time}</div>
-              <small>{row.arrival.city}</small>
-            </div>
-            <div className="cell">{row.duration}</div>
-            <div className="cell price">{row.price}</div>
-            <div className="cell">
-              <a href={row.buttonUrl} className="btn">{row.buttonText}</a>
-            </div>
-          </div>
-        ))}
+        <aside className="travel-smart-sidebar">
+              <h3>Travel Smart</h3>
+              <ul>
+                <li>
+                  <a href="/majorcities/newyork/solo-travel" style={{ cursor: "pointer" }}><span className="icon">🔐</span> Safety Tips</a>
+                </li>
+                <li>
+                  <a href="/majorcities/newyork/landmark" style={{ cursor: "pointer" }}><span className="icon">🧳</span> Solo Travel Advice</a>
+                </li>
+                <li>
+                  <a href="/majorcities/newyork/food" style={{ cursor: "pointer" }}><span className="icon">🍽️</span> NYC Food Guide: Bagels, Bites & Beyond</a>
+                </li>
+              </ul>
+        </aside>
       </div>
     </section>
     
