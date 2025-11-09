@@ -10,6 +10,17 @@
         }
       ],
       "statusCode": 308
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://www.travelamerica.work/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": "travelamerica.work"
+        }
+      ],
+      "statusCode": 308
     }
   ]
 }
