@@ -1,0 +1,50 @@
+{
+  "Planning & Logistics": [
+    {
+      "question": "How do I plan a solo trip to the U.S.?",
+      "answer": "Start by choosing a city hub like NYC, Chicago, or San Francisco. Use our solo travel guides, itineraries, and packing tips to build your route."
+    },
+    {
+      "question": "What documents do I need to travel to the U.S.?",
+      "answer": "You’ll need a valid passport, visa or ESTA (depending on your country), and proof of accommodation or return ticket."
+    },
+    {
+      "question": "Can I book flights and stays directly from Travel America?",
+      "answer": "We provide curated travel modules and booking links, but all reservations are handled by trusted third-party providers."
+    }
+  ],
+  "Timing & Seasons": [
+    {
+      "question": "What’s the best time to visit major U.S. cities?",
+      "answer": "Spring (April–June) and fall (September–November) offer mild weather and fewer crowds. Check each city hub for seasonal highlights."
+    },
+    {
+      "question": "Are U.S. cities safe to visit during winter?",
+      "answer": "Yes, but weather can vary. Northern cities may have snow and delays, while southern hubs like Miami stay warm year-round."
+    }
+  ],
+  "Solo Travel Tips": [
+    {
+      "question": "Is solo travel safe in the U.S.?",
+      "answer": "Most major cities are safe for solo travelers. Stick to well-lit areas, use transit apps, and follow local safety guidelines."
+    },
+    {
+      "question": "How do I meet people while traveling solo?",
+      "answer": "Join walking tours, stay in social hostels, or attend local events listed in our city hubs. Solo-friendly activities are tagged in our guides."
+    },
+    {
+      "question": "What should I pack for a solo trip?",
+      "answer": "Pack layered clothing, a charger, ID, travel insurance, and navigation tools. See our gear checklist for essentials."
+    }
+  ],
+  "Transit & Navigation": [
+    {
+      "question": "What’s the best way to get around U.S. cities?",
+      "answer": "Most cities offer subways, buses, and rideshare options. Our city hubs include transit maps and app recommendations."
+    },
+    {
+      "question": "Can I use public transport safely as a solo traveler?",
+      "answer": "Yes. Use apps like Citymapper or Google Maps, avoid empty stations late at night, and keep your belongings secure."
+    }
+  ]
+}

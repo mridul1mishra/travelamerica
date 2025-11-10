@@ -1,14 +1,17 @@
+'use client'
 import React from "react";
 import "./majorcities.css"; // optional if you want to style it
 import { StoriesSectionProps } from "../../../models/story";
 import StoryCard from "./storycard/storycard";
 
+interface MajorCitiesProps {
+  section: StoriesSectionProps;
+}
 
-
-const majorcities: React.FC<StoriesSectionProps> = ({section }) => {
-  const { heading, storydescription, stories } = section;
+export default function Majorcities({ section: { heading, storydescription, stories } }: StoriesSectionProps) {
+  
     return (
-        <section className="green-stories">
+        <section className="travel-stories">
   <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
   className="back-to-top"><h2  className="section-heading">{heading}</h2></button>
   <p className="description-text">{storydescription}</p>
@@ -25,5 +28,3 @@ const majorcities: React.FC<StoriesSectionProps> = ({section }) => {
         </section>
     );
 };
-
-export default majorcities;

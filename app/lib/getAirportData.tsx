@@ -8,3 +8,4 @@ export async function getSectionData(city: string) {
   const plantripcontentsections = plantripRaw.plantripcontentsection;
   return { airportsection, propertySections, personaContent, plantripcontentsections };
 }
+

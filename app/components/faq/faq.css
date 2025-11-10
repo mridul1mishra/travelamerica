@@ -1,0 +1,67 @@
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.faq-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+}
+
+details {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+summary {
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding-right: 2rem;
+  position: relative;
+  list-style: none;
+  display: block;
+}
+
+summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.25rem;
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+
+details p {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  padding-left: 0.5rem;
+}
+/* Remove default marker in WebKit browsers (Chrome, Safari) */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Remove marker in Firefox */
+details > summary {
+  list-style-type: none;
+}
+
+/* Optional: override marker in all browsers */
+details summary::marker {
+  content: '';
+  display: none;
+}
