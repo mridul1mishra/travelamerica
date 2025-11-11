@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.679" height="19.5" viewBox="0 0 22.679 19.5">
+  <defs>
+    <style>
+      .a { fill: #179f95; }
+    </style>
+  </defs>
+  <g>
+    <!-- Ship hull -->
+    <polygon class="a" points="2,15 20.679,15 18,18 4.679,18"></polygon>
+    <!-- Ship deck -->
+    <rect class="a" x="5" y="10" width="12.679" height="3"></rect>
+    <!-- Ship cabin -->
+    <rect class="a" x="9" y="7" width="4.679" height="3"></rect>
+    <!-- Flag -->
+    <polygon class="a" points="11.34,7 11.34,3 14,5"></polygon>
+  </g>
+</svg>

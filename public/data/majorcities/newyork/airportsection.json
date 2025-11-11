@@ -11,13 +11,13 @@
     {
       "id": 2,
       "label": "Stays",
-      "img": "/data/majorcities/lasvegas/assets/departures.svg",
+      "img": "/data/majorcities/lasvegas/assets/hotel.svg",
       "section": "hotel-section"
     },
     {
       "id": 3,
       "label": "Cruise",
-      "img": "/data/majorcities/lasvegas/assets/departures.svg",
+      "img": "/data/majorcities/lasvegas/assets/cruise.svg",
       "section": "cruise-section"
     }
   ]

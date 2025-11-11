@@ -1,20 +1,27 @@
 .flight-section {
   font-family: Arial, sans-serif;
-  max-width: 1090px;
+  max-width: 1120px;
   margin: 20px auto;
+  padding: 0 15px;
 }
 
 .flight-section h2 {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 15px;
 }
-.image{
-  height: 32px;
-  width: 32px;
+
+.flight-layout {
+    align-items: flex-start;
+    gap: 102px;
+    display: flex;
+}
+
+.flight-table-wrapper {
+  flex: 1 1 0;
+  min-width: 600px;
 }
 
 .flight-table {
-  
   border-radius: 6px;
   overflow: hidden;
 }
@@ -52,9 +59,9 @@
   font-weight: bold;
 }
 
-.logo {
-  width: 28px;
+.image {
   height: 28px;
+  width: 28px;
   object-fit: contain;
   border-radius: 4px;
 }
@@ -65,330 +72,151 @@
 }
 
 .btn {
-  display: inline-block;
-  padding: 6px 14px;
-  background: #0066d4;
-  color: #fff;
-  font-size: 14px;
-  text-decoration: none;
-  border-radius: 20px;
-  font-weight: bold;
-  border: 2px solid transparent;
-  text-align: center;
-  cursor: pointer;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    background: #0066d4;
+    border: 2px solid #0000;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn:hover {
   background: #0053a8;
 }
-.filters {
-  flex: 0 0 250px;
-  background: #fff;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
 
-.filters h3 {
-  margin-top: 0;
-}
-
-.filters label {
-  display: block;
-  margin: 1rem 0 0.5rem;
-  font-weight: bold;
-}
-
-.filters input,
-.filters select {
-  width: 100%;
-  padding: 0.4rem;
-}
-
-/* Grid */
-.listing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  flex: 1;
-}
-
-/* Hotel Card */
-.hotel-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.hotel-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-/* Image and Favorite Button */
-.image-wrap {
-  position: relative;
-}
-
-.image-wrap img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.favorite {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(255,255,255,0.8);
-  border: none;
-  border-radius: 50%;
-  padding: 0.4rem;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
-
-/* Card Content */
-.card-content {
-  padding: 1rem;
-}
-
-.card-content h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.2rem;
-}
-
-.rating {
-  color: #f5a623;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.rating span {
-  color: #555;
-  font-weight: normal;
-  font-size: 0.9rem;
-}
-
-.location {
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-/* Price and Button */
-.price-action {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.price {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #0077cc;
-}
-
-.details-btn {
-  background: #0077cc;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.details-btn:hover {
-  background: #005fa3;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hotel-listing {
-    flex-direction: column;
-  }
-
-  .filters {
-    flex: 1;
-    order: 2;
-  }
-
-  .listing-grid {
-    order: 1;
-  }
-}
-.cruise-carousel-container {
-  max-width: 800px;
-  margin: 2rem auto;
-}
-
-.carousel-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.carousel-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #0077cc;
-}
-
-.nav-buttons {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.nav-btn.top {
-  background: #0077cc;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.nav-btn.top:hover {
-  background: #005fa3;
-}
-
-/* Carousel track styling */
-.carousel-wrapper {
-  overflow: hidden;
-  position: relative;
-}
-
-.carousel-track {
-  display: flex;
-  scroll-snap-type: x mandatory;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 1rem;
-
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.carousel-track::-webkit-scrollbar { display: none; }
-
-/* Cards */
-.cruise-card {
-  flex: 0 0 800px;
-  display: flex;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-  scroll-snap-align: center;
-}
-.price .per-person {
-  font-size: 0.75rem; /* smaller text */
-  color: #4a4a4a;
-  margin-left: 0.25rem;
-}
-.card-image {
-  flex: 0 0 385px;
-}
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-}
-
-.card-content {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-.card-content h3 { color: #0077cc; margin: 0 0 0.3rem 0; }
-.route, .duration { color: #555; font-size: 0.9rem; }
-.price { color: #28a745; font-weight: bold; margin-top: 0.5rem; }
-
-
-.details-btn:hover { background: #005fa3; }
-
-.card-footer {
-  display: flex;
-  justify-content: space-between; /* space between price and button */
-  align-items: center;
-  margin-top: 0.3rem;
-  gap: 150px;
-}
-
-.details-btn {
-  white-space: nowrap;       /* keeps button text on one line */
-  padding: 0.3rem 0.6rem; /* smaller button */
-  border: none;
-  background: #0077cc;
-  color: #fff;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.details-btn:hover {
-  background: #005fa3;
-}
-
-.card-content {
-  padding: 1rem 1rem 0.5rem 1rem; /* bottom padding reduced */
-}
-.card-content p {
-  margin: 0; /* removes extra spacing from <p> tags */
-}
-
-/* Reduce spacing in the footer */
-.card-footer {
-  margin-top: 0.5rem;  /* smaller top margin */
-  gap: 1rem;            /* reduce huge gap between price and button */
-}
-.flight-layout {
-  display: flex;
-  gap: 102px;
-  align-items: flex-start;
-}
 .travel-smart-sidebar {
-  width: 280px; /* or try 300px for more breathing room */
-  min-width: 260px;
-  flex: 1;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  position: sticky;
-  top: 40px;
-  height: fit-content;
-  font-family: Arial, sans-serif;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 1;
+    width: 280px;
+    min-width: 260px;
+    height: fit-content;
+    padding: 20px;
+    font-family: Arial,sans-serif;
+    position: sticky;
+    top: 40px;
+    box-shadow: 0 2px 8px #0000000d
 }
 
 .travel-smart-sidebar h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #333;
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .travel-smart-sidebar ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .travel-smart-sidebar li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 10px;
+    color: #555;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
 }
+.icon {
+  margin-right: 6px;
+}
+/* Default: show desktop layout, hide mobile group */
+.mobile-flight-stack {
+  display: none;
+}
+/* Mobile view: show stacked layout, hide desktop cells */
+/* Mobile view: show stacked layout, hide desktop cells */
+@media (max-width: 768px) {
+  .flight-row {
+    flex-direction: column;
+    padding: 16px;
+  }
+.flight-layout {
+    flex-direction: column;
+  }
+  .flight-row .cell:not(.mobile-flight-stack) {
+    display: none;
+  }
 
-.travel-smart-sidebar .icon {
-  font-size: 16px;
+  .mobile-flight-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .airline-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+  }
+
+  .airline-logo {
+    height: 28px;
+    width: 28px;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+.price{
+  color: #28a745
+}
+  .time-city-row {
+    display: flex;
+    gap: 226px;
+  }
+
+  .segment {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+  }
+  .city{
+    font-size: 15px;
+  }
+
+  .duration-price-row {
+    display: flex;
+    gap: 245px;
+    
+  }
+
+  .button-row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 8px 20px;
+    background: #0066d4;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    
+  }
+  .sidebar-wrapper {
+    order: 2; /* ensure it comes after flight table */
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .travel-smart-sidebar {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    border-top: 1px solid #eee;
+    padding: 16px;
+  }
 }

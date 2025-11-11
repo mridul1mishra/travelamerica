@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.679" height="19.5" viewBox="0 0 22.679 19.5">
+  <defs>
+    <style>
+      .a { fill: #179f95; }
+    </style>
+  </defs>
+  <g>
+    <!-- Hotel building base -->
+    <rect class="a" x="1" y="6" width="20.679" height="12" rx="1"></rect>
+    <!-- Roof line -->
+    <rect class="a" x="0" y="4" width="22.679" height="2"></rect>
+    <!-- Windows -->
+    <rect class="a" x="3" y="8" width="2.5" height="2.5"></rect>
+    <rect class="a" x="7" y="8" width="2.5" height="2.5"></rect>
+    <rect class="a" x="11" y="8" width="2.5" height="2.5"></rect>
+    <rect class="a" x="15" y="8" width="2.5" height="2.5"></rect>
+    <rect class="a" x="3" y="12" width="2.5" height="2.5"></rect>
+    <rect class="a" x="7" y="12" width="2.5" height="2.5"></rect>
+    <rect class="a" x="11" y="12" width="2.5" height="2.5"></rect>
+    <rect class="a" x="15" y="12" width="2.5" height="2.5"></rect>
+    <!-- Hotel sign -->
+    <rect class="a" x="8" y="2" width="6.679" height="2" rx="0.5"></rect>
+  </g>
+</svg>

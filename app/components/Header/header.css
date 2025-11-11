@@ -93,15 +93,17 @@ a{
 /* Hero Section */
 .hero {
   height: 100vh;
-  background-size: 100% 100%;
-  background-position: center;
+  background-size: cover;           /* scales proportionally */
+  background-position: center;      /* keeps subject centered */
+  background-repeat: no-repeat;     /* prevents repetition */
+  background-attachment: scroll;    /* avoids parallax on mobile */
   position: relative;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: white;
 }
 
 .hero-text h1 {
