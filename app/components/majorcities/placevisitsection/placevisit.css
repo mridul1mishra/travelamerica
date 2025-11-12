@@ -1,7 +1,8 @@
-.place-visit{
+.place-visit {
   display: flex;
-  gap: 250px;
-  padding-bottom: 30px
+  flex-wrap: wrap; /* allow items to wrap on smaller screens */
+  gap: 40px; /* smaller, more fluid gap */
+  padding-bottom: 30px;
 }
 .place-name{
   padding-left: 10px;
@@ -17,4 +18,16 @@
   padding: 40px;
   padding-bottom: 10px;
   font-family: Arial, sans-serif;
+}
+/* Mobile */
+@media (max-width: 600px) {
+  .place-visit {
+    flex-direction: column; /* stack vertically */
+    gap: 15px;
+    padding-bottom: 15px;
+  }
+  .fixed-width-div {
+    flex: 1 1 100%; /* full width */
+    max-width: 100%;
+  }
 }
