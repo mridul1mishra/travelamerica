@@ -127,11 +127,167 @@
 .icon {
   margin-right: 6px;
 }
+/* Hotel css */
+.cruise-carousel-container {
+  position: relative;        /* allows absolute positioning of arrows/dots */
+  width: 100%;               /* spans full width of parent */
+  max-width: 1200px;         /* optional constraint for readability */
+  margin: 0 auto;            /* centers the carousel */
+  overflow: hidden;          /* hides overflowing slides */
+  display: flex;             /* aligns slides horizontally */
+  flex-direction: column;       /* ensures slides line up side by side */
+  gap: 0;
+}
+.carousel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-muted, #e6e6e6);
+  background: var(--surface, #fff);
+}
+/* Carousel wrapper: only one card visible */
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+/* Track: flex row, slides left/right */
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;  /* Firefox */
+  scroll-snap-type: x mandatory;
+}
+
+/* Card layout: image left, text right */
+.cruise-card {
+  flex: 0 0 100%;          /* full width */
+  scroll-snap-align: start; /* 👈 snap each card to start */
+  display: flex;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  height: 268px;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;          /* Chrome, Safari */
+}
+/* Image section */
+.card-image {
+  flex: 0 0 40%; /* image takes 40% of card width */
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text section */
+.card-content {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.card-content .route,
+.card-content .duration {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.amount {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #0077cc;
+}
+
+.per-person {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.details-btn {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.details-btn:hover {
+  background: #e65c00;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-btn {
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #005fa3;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+  .cruise-card {
+    flex-direction: column;
+  }
+
+  .card-image {
+    flex: 0 0 auto;
+    height: 200px;
+  }
+}
+/* Hotel css */
+
 /* Default: show desktop layout, hide mobile group */
 .mobile-flight-stack {
   display: none;
 }
-/* Mobile view: show stacked layout, hide desktop cells */
 /* Mobile view: show stacked layout, hide desktop cells */
 @media (max-width: 768px) {
   .flight-row {
@@ -218,5 +374,59 @@
     border-radius: 0;
     border-top: 1px solid #eee;
     padding: 16px;
+  }
+}
+/* mobile view for css */
+@media (max-width: 640px) {
+  /* Header: stack vertically */
+  .carousel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;              /* tighter spacing */
+    padding: 8px 12px;     /* smaller padding */
+  }
+
+  .carousel-title {
+    font-size: 1.1rem;     /* smaller heading */
+  }
+
+  .nav-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-btn {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Card: full width, taller image */
+  .cruise-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: auto;          /* let content define height */
+    flex-direction: column;/* stack image above text */
+  }
+
+  .card-image img {
+    height: 180px;         /* smaller image height */
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .card-content {
+    padding: 8px;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .details-btn {
+    width: 100%;           /* full-width button */
+    padding: 8px;
+    font-size: 0.9rem;
   }
 }

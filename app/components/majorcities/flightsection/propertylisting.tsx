@@ -11,12 +11,8 @@ type SectionsProps = {
   active: number | null;
   content: PropertyListingModel['sections'];
 };
-
-
-
-
 const Propertylisting: React.FC<SectionsProps> = ({content, active}) =>{
-  const params = useParams();
+const params = useParams();
 const cityParam = params?.city;
 const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
 
@@ -52,9 +48,11 @@ const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
   const trackRef = useRef<HTMLDivElement | null>(null);
     const scroll = (direction: "left" | "right") => {
       if (trackRef.current) {
-        const scrollAmount = trackRef.current.offsetWidth * 0.8;
+        const card = trackRef.current.querySelector<HTMLDivElement>(".cruise-card");
+        if (!card) return;
+        const cardWidth = card.offsetWidth + 16; // add gap if you have margin/gap
         trackRef.current.scrollBy({
-          left: direction === "right" ? scrollAmount : -scrollAmount,
+          left: direction === "right" ? cardWidth : -cardWidth,
           behavior: "smooth",
         });
       }
