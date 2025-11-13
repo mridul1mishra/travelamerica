@@ -26,7 +26,14 @@ const Airportsection: React.FC<Props> = ({ content, onSelect }) => {
       <div className="container">
         <div className="intro-and-sidebar">
           <div className="intro">
-            <h2>{city.title}</h2>
+            if(city === 'lasvegas')
+            {
+              <h1>{city.title}</h1>
+            }
+            else{
+              <h2>{city.title}</h2>
+            }
+            
             <p>{city.description}</p>
 
             <div className="tab-container">
