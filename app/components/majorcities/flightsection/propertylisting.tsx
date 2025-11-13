@@ -77,7 +77,7 @@ const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
               {/* Desktop layout */}
               <div className="cell airline">
                 <img src={row.airline.logo} alt={row.airline.name} className="image" />
-                <small>{row.airline.name}</small>
+                
               </div>
               <div className="cell">
                 <div>{row.departure.time}</div>

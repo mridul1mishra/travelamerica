@@ -7,7 +7,7 @@
       "header": ["Airline", "Departure", "Arrival", "Duration", "Price", ""],
       "rows": [
         {
-          "airline": { "name": "", "logo": "F9.png" },
+          "airline": { "name": "Frontier", "logo": "F9.png" },
           "departure": { "time": "14:46", "city": "Dallas" },
           "arrival": { "time": "15:52", "city": "Las Vegas" },
           "duration": "03h",
@@ -16,7 +16,7 @@
           "buttonUrl": "https://www.priceline.com/m/fly/search/DFW-LAS-20251109/details/a90ea452f528445dbd6e883cd5a82c96?ref-key=undefined&num-adults=1&num-children=0&num-infants=0&itinerary-type-code=OW&cabin-class=ECO&search-type=10&type=rm&price-key=CgJ2MRIkZGU3NjhhNTktOGNhNC00MWFkLTgyY2QtYTNmMDBhNmIxOTEzGAEiB0NMQVNTSUMqBQiYAhABMgVndXNlNDowV09SS0ZMT1dfSURfYjhiN2ZhMmYtZTA1Mi00MzYzLWFhNGUtZGU4NjQxZTVkMDk5&item-key=a90ea452f528445dbd6e883cd5a82c96&arc=undefined-&search-key=de768a59-8ca4-41ad-82cd-a3f00a6b1913&workflow-id=WORKFLOW_ID_b8b7fa2f-e052-4363-aa4e-de8641e5d099&userActionType=false"
         },
         {
-          "airline": { "name": "", "logo": "/data/southwest.png" },
+          "airline": { "name": "SouthWest", "logo": "/data/southwest.png" },
           "departure": { "time": "05:55", "city": "Oak land CA" },
           "arrival": { "time": "07:25", "city": "Las Vegas" },
           "duration": "1h 30m",
@@ -26,7 +26,7 @@
           "highlight": true
         },
         {
-          "airline": { "name": "", "logo": "/data/southwest.png" },
+          "airline": { "name": "SouthWest", "logo": "/data/southwest.png" },
           "departure": { "time": "09:30", "city": "Los Angeles" },
           "arrival": { "time": "10:45", "city": "Las Vegas" },
           "duration": "01h 30m",
@@ -35,7 +35,7 @@
           "buttonUrl": "https://www.southwest.com/air/low-fare-calendar/select-dates.html?adultPassengersCount=1&cbid=6403032&clk=6403032&currencyCode=USD&departureDate=2025-11-01&destinationAirportCode=LAS&hasNearByAirport=false&lapInfantPassengersCount=0&originationAirportCode=LAX&passengerType=ADULT&persistNotifications=true&promoCode=&returnAirportCode=&returnDate=&selectedFlight1=2025-11-18&selectedFlight2&tripType=oneway"
         },
         {
-          "airline": { "name": "", "logo": "/data/ua.webp" },
+          "airline": { "name": "United Airlines", "logo": "/data/ua.webp" },
           "departure": { "time": "08:25", "city": "San Francisco" },
           "arrival": { "time": "10:05", "city": "Las Vegas" },
           "duration": "01h 40m",
@@ -44,7 +44,7 @@
           "buttonUrl": "https://www.united.com/en/us/fsr/choose-flights?tt=1&st=bestmatches&d=2025-11-09&clm=7&taxng=1&f=SFO&px=1&newHP=True&sc=7&tqp=R&t=LAS&idx=1&mm=0"
         },
         {
-          "airline": { "name": "", "logo": "F9.png" },
+          "airline": { "name": "Frontier", "logo": "F9.png" },
           "departure": { "time": "07:59", "city": "Newyork City" },
           "arrival": { "time": "10:31", "city": "Las Vegas" },
           "duration": "05h 32m",

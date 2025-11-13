@@ -7,7 +7,7 @@
       "header": ["Airline", "Departure", "Arrival", "Duration", "Price", ""],
       "rows": [
         {
-          "airline": { "name": "", "logo": "F9.png" },
+          "airline": { "name": "Frontier", "logo": "F9.png" },
           "departure": { "time": "11:32", "city": "New York City" },
           "arrival": { "time": "02:35", "city": "Orlando" },
           "duration": "03h3m",
@@ -16,7 +16,7 @@
           "buttonUrl": "https://www.bing.com/travel/flight-search?q=flights+from+nyc-orl&src=nyc&des=orl&ddate=2025-11-21&isr=0&rdate=2025-11-23&cls=0&adult=1&child=0&infant=0&sel=ISP%2CMCO%2C11%3A32%3A00%2CF9%2C3941%2C0%7C&sin=&form=FBL1YC&entrypoint=FBL1YC"
         },
         {
-          "airline": { "name": "", "logo": "NK.png" },
+          "airline": { "name": "Spirit", "logo": "NK.png" },
           "departure": { "time": "11:49", "city": "Newark" },
           "arrival": { "time": "14:44", "city": "Orlando" },
           "duration": "2h 55m",
@@ -26,7 +26,7 @@
           "highlight": true
         },
         {
-          "airline": { "name": "", "logo": "/data/ua.webp" },
+          "airline": { "name": "United Airlines", "logo": "/data/ua.webp" },
           "departure": { "time": "21:30", "city": "Los Angeles" },
           "arrival": { "time": "05:14", "city": "Orlando" },
           "duration": "04h 44m",
@@ -35,7 +35,7 @@
           "buttonUrl": "https://www.bing.com/travel/flight-search?q=flights+from+lax-orl&src=lax&des=orl&ddate=2025-11-17&isr=0&rdate=2025-11-19&cls=0&adult=1&child=0&infant=0&sel=LAX%2CMCO%2C21%3A30%3A00%2CUA%2C1730%2C0%7C&sin=&form=SUMLST&entrypoint=FBL1YC"
         },
         {
-          "airline": { "name": "", "logo": "F9.png" },
+          "airline": { "name": "Frontier", "logo": "F9.png" },
           "departure": { "time": "22:23", "city": "San Fransisco" },
           "arrival": { "time": "10:09", "city": "Orlando" },
           "duration": "08h 46m",
@@ -45,7 +45,7 @@
           "buttonUrl": "https://www.bing.com/travel/flight-search?q=flights+from+sfo-orl&src=sfo&des=orl&ddate=2025-11-17&isr=0&rdate=2025-11-19&cls=0&adult=1&child=0&infant=0&sel=SFO%2CATL%2C22%3A23%3A00%2CF9%2C1448%2C0%7CATL%2CMCO%2C08%3A30%3A00%2CF9%2C4556%2C1%7C&sin=&form=SUMLST&entrypoint=FBL1YC"
         },
         {
-          "airline": { "name": "", "logo": "NK.png" },
+          "airline": { "name": "Spirit", "logo": "NK.png" },
           "departure": { "time": "06:48", "city": "Chicago" },
           "arrival": { "time": "10:30", "city": "Orlando" },
           "duration": "02h 42m",
