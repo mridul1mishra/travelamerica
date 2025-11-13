@@ -168,7 +168,7 @@ const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
               <div className="card-content">
                 <h3>{c.title}</h3>
                 <p className="route">{c.route}</p>
-                <p className="duration">Rating(users): {c.duration}</p>
+                <p className="duration">Rating {c.duration}</p>
                 <div className="card-footer">
                 <p className="price">
                   <span className="amount">{c.price.split(" ")[0]}</span>{" "}<br />

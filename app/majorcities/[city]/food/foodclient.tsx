@@ -90,7 +90,7 @@ export default function FoodClientPage() {
                 <p className={styles.subheading}>🧈 <strong>Artisan Bagels & Inventive Toppings -</strong> Black Seed, Bagel Pub, and Utopia Bagels offer inventive flavors, wood-fired styles, and viral-worthy creations.</p>
                 <p className={styles.subheading}>🗺️ <strong>Solo Bites & Schmear -</strong>Hudson Bagel, Apollo Bagels, and Tompkins Square Bagels provide cozy counters and outdoor seating — perfect for solo snacking.</p>
                 
-                <Link href="/majorcities/solo-travel" className={styles.ctaButton}>
+                <Link href="/majorcities/newyork/solo-travel" className={styles.ctaButton}>
                     Solo Travel Tips for Dining Out
                 </Link>
                 </div>
