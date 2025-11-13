@@ -4,8 +4,6 @@ import { useParams } from "next/navigation";
 import "./propertylisting.css";
 import PropertyListingModel from "../../../models/propertylisting";
 import {Cruise} from "../../../models/propertylisting";
-import cruisesData from "../../../data/majorcities/Newyork/cruises.json"
-import hotelsData from "../../../data/majorcities/Newyork/hotels.json"
 
 type SectionsProps = {
   active: number | null;
