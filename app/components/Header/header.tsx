@@ -2,6 +2,7 @@
 import { useState, useEffect, ReactNode } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { usePathname, useSearchParams } from "next/navigation";
 import "./header.css"; // keep your CSS
 
 type HeroProps = {
@@ -14,6 +15,7 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
+  const pathname = usePathname();
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -47,7 +49,10 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
       </header>
 
       <div className="hero-text">
-        <h1>{bannerText}</h1>
+        {
+        pathname.includes("companydetails") || pathname.includes("privacy") || pathname.includes("termsandcondition") ?
+        <h1>{bannerText}</h1> : <h2></h2>
+        }
       </div>
     </section>
   );
