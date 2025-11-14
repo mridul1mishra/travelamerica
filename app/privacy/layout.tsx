@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Travel America",
-  description: "Learn how Travel America collects, uses, and protects your personal information. Our Privacy Policy explains data handling, cookies, third‑party services, and your rights as a user.",
+  description: "Travel America Privacy Policy: How we collect, use & protect data, cookies, third‑party services, and your user rights.",
   
 };
 

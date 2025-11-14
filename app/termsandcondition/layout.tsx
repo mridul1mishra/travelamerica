@@ -17,8 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Terms of Service | Travel America",
-  description: "Read Travel America’s Terms of Service outlining site usage, U.S. jurisdiction, third‑party responsibilities, and user conduct. Learn how we protect content, limit liability, and ensure compliance for all travelers.",
-  
+  description: "Travel America’s Terms: Site usage, U.S. jurisdiction, third‑party duties & user conduct. Protecting content, limiting liability & ensuring compliance.",  
 };
 
 

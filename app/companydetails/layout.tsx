@@ -16,9 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Travel America | Explore USA Destinations, Attractions & Travel Guidess",
-  description: "Discover the beauty, culture, and adventure of the United States with Travel America. Get accurate, user‑friendly guides to cities, attractions, accommodations, and experiences across the USA—making every trip smooth, memorable, and exciting",
-  
+  title: "Travel America | USA Destinations, Attractions & Travel Guides",
+  description: "Discover USA with Travel America: Beauty, culture & adventure. Guides to cities, attractions, stays & experiences for smooth, memorable trips.",
 };
 
 export default function RootLayout({
