@@ -28,29 +28,29 @@ return (
       <article className={`prose ${styles.prose}`} aria-label="Terms and conditions">
         <div className={styles.list}>
         
-        <p>Travel America Travel Co. is dedicated to helping travelers experience the beauty, culture, and adventure of the United States. From the bustling streets of New York City to the scenic national parks of the West, we provide reliable, up-to-date travel information to make your journey smooth, memorable, and exciting.</p>
+        <p>Travel America Travel Co. helps travelers discover the beauty, culture, and adventure of the United States. From New York City’s bustling streets to the scenic national parks of the West, we provide reliable, up‑to‑date travel information to make every journey smooth, memorable, and exciting.</p>
         </div>
         <div className={styles.list}>
             <h2>Our Mission</h2>
-            <p>To inspire and guide travelers with accurate, user-friendly information about destinations, attractions, accommodations, and experiences across the USA.</p>
+            <p>We inspire and guide travelers with accurate, user‑friendly information about destinations, attractions, accommodations, and experiences across the USA.</p>
         </div>
         <div className={styles.list}>
             <h2>Our Vision</h2>
-            <p>To become the most trusted companion for anyone exploring the United States, offering insights that turn every trip into an unforgettable adventure.</p>
+            <p>To be the most trusted companion for anyone exploring the United States, offering insights that turn every trip into an unforgettable adventure.</p>
         </div>
         <div className={styles.list}>
             <h2>Services We Provide:</h2>
             <ul>
-                <li>Detailed city and state guides</li>
-                <li>Information on top attractions, parks, museums, and landmarks</li>
-                <li>Transportation tips: flights, trains, buses, and car rentals</li>
-                <li>Family-friendly, solo, and adventure travel suggestions</li>
+                <li>City and state travel guides</li>
+                <li>Top attractions, parks, museums, and landmarks</li>
+                <li>Transportation tips: flights, trains, buses, car rentals</li>
+                <li>Family, solo, and adventure travel suggestions</li>
                 <li>Seasonal highlights and events</li>
             </ul>
         </div>
         <div>
             <h2>Why Choose Us?</h2>
-            <p>We combine accurate information, local insights, and a traveler-first approach to make exploring the USA hassle-free and enjoyable. Whether you’re planning your first trip or revisiting your favorite cities, ExploreUSA Travel Co. is here to guide every step of your journey.</p>
+            <p>We combine accurate information, local insights, and a traveler‑first approach to make exploring the USA hassle‑free and enjoyable. Whether it’s your first trip or a return visit, ExploreUSA Travel Co. guides you every step of the way.</p>
         </div>
         <div>
             <h2>9. Contact Us</h2>

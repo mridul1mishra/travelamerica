@@ -11,9 +11,9 @@
           "departure": { "time": "14:46", "city": "Dallas" },
           "arrival": { "time": "15:52", "city": "Las Vegas" },
           "duration": "03h",
-          "price": "$36",
+          "price": "$29",
           "buttonText": "View Prices",
-          "buttonUrl": "https://www.priceline.com/m/fly/search/DFW-LAS-20251109/details/a90ea452f528445dbd6e883cd5a82c96?ref-key=undefined&num-adults=1&num-children=0&num-infants=0&itinerary-type-code=OW&cabin-class=ECO&search-type=10&type=rm&price-key=CgJ2MRIkZGU3NjhhNTktOGNhNC00MWFkLTgyY2QtYTNmMDBhNmIxOTEzGAEiB0NMQVNTSUMqBQiYAhABMgVndXNlNDowV09SS0ZMT1dfSURfYjhiN2ZhMmYtZTA1Mi00MzYzLWFhNGUtZGU4NjQxZTVkMDk5&item-key=a90ea452f528445dbd6e883cd5a82c96&arc=undefined-&search-key=de768a59-8ca4-41ad-82cd-a3f00a6b1913&workflow-id=WORKFLOW_ID_b8b7fa2f-e052-4363-aa4e-de8641e5d099&userActionType=false"
+          "buttonUrl": "https://www.priceline.com/m/fly/search/DFW-LAS-20251211/?cabin-class=ECO&no-date-search=false&search-type=00&num-adults=1"
         },
         {
           "airline": { "name": "SouthWest", "logo": "/data/southwest.png" },
