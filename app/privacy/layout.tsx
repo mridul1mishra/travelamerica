@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import Script from 'next/script';
 
 
@@ -16,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Travel Americas | Discover Iconic Cities to Visit",
-  description: "Discover carefully selected city guides for Las Vegas, Orlando, New York, and Los Angeles. Explore culture, food, and attractions with insider insights.",
+  title: "Privacy Policy | Travel America",
+  description: "Learn how Travel America collects, uses, and protects your personal information. Our Privacy Policy explains data handling, cookies, third‑party services, and your rights as a user.",
   
 };
 

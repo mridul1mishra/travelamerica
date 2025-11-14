@@ -17,7 +17,7 @@ export default async function Home(){
   const { faqTravelHubData } = await getFaq();
     return (
     <div className="App">      
-      <Header image={banner} bannerText="Our Story" />
+      <Header image={banner} bannerText="Our Story"  />
           <div id="major-cities">
               <Majorcities section={section} />
               <FAQ groupedFaqs={faqTravelHubData}/>

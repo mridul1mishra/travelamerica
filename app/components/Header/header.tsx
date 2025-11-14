@@ -23,12 +23,12 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
   }, []);
   return (
     <section
-      className="hero"
+      className="hero" 
        style={{ backgroundImage: `url(${typeof image === 'string' ? image : image.src})` }}
     >
       <header className={`overlay-header ${isScrolled ? "scrolled" : ""}`}>
         <div className="brand-logo">
-          <a href="/"><img src={isScrolled ? "/data/logo.png" : "/data/logo3.png"} alt="Travel Americas Logo" /></a>
+          <a href="/"><img src={isScrolled ? "/data/logo.png" : "/data/logo3.png"} alt="Travel Americas Logo" loading="lazy"/></a>
         </div>
         <nav className="main-nav">
           <button className="hamburger" onClick={toggleMenu} aria-label="Toggle menu">
