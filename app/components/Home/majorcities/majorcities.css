@@ -3,7 +3,7 @@
   padding: 40px;
 }
 html {
-  font-family: "CorbenBold", system-ui, sans-serif;
+  font-family: "CorbenBold", "Arial", sans-serif;
   font-size-adjust: 0.5;       /* aligns x-height */
   ascent-override: 90%;
   descent-override: 20%;
@@ -11,7 +11,7 @@ html {
 }
 
 @font-face {
-  font-family: 'CorbenBold';
+  font-family: 'CorbenBold', sans-serif;
   src: url("/data/corben-cdnfonts/Corben-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
