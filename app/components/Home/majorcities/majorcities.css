@@ -92,8 +92,8 @@ html {
 .view-more-btn {
   all: unset;
   cursor: pointer;
-  background-color: #ff6600;
-  color: white;
+  background-color: #d35400; /* darker orange */
+  color: #fff;
   border: none;
   padding: 10px 20px;
   font-size: 1rem;
