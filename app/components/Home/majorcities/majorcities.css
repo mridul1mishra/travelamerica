@@ -97,14 +97,14 @@ html {
 
 @media (max-width: 768px) {
   .view-more-btn {
-    background-color: #d35400;
+    background-color: #0066d4;
     color: #fff;
   }
 }
 .view-more-btn {
   all: unset;
   cursor: pointer;
-  background-color: #d35400; /* darker orange */
+  background-color: #0066d4; /* darker orange */
   color: #fff;
   border: none;
   padding: 10px 20px;
