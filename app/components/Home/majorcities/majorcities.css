@@ -89,6 +89,18 @@ html {
 .carousel-controls button:hover {
   background: #eee;
 }
+.view-more-btn:hover,
+.view-more-btn:focus {
+  background-color: #d35400; /* darker orange for better contrast */
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .view-more-btn {
+    background-color: #d35400;
+    color: #fff;
+  }
+}
 .view-more-btn {
   all: unset;
   cursor: pointer;
