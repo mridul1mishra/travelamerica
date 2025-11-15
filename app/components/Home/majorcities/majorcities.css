@@ -2,6 +2,13 @@
   text-align: center;
   padding: 40px;
 }
+html {
+  font-family: "CorbenBold", system-ui, sans-serif;
+  font-size-adjust: 0.5;       /* aligns x-height */
+  ascent-override: 90%;
+  descent-override: 20%;
+  line-gap-override: 0%;
+}
 
 @font-face {
   font-family: 'CorbenBold';

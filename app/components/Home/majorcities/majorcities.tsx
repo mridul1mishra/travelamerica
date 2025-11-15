@@ -18,7 +18,8 @@ export default function Majorcities({ section: { heading, storydescription, stor
           rel="preload"
           as="font"
           href="/data/corben-cdnfonts/Corben-Bold.ttf"
-          type="font/woff2"
+          type="font/ttf"
+          crossOrigin="anonymous"
         />
         <link
           rel="preload"
