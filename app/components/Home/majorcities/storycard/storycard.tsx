@@ -11,7 +11,10 @@ const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
 
   return (
     <div className="story-card">
-      <img src={image} alt={title} />
+      <img src={image} alt={title} 
+      sizes="(max-width: 768px) 425px, (max-width: 1200px) 850px, 1295px"
+      width="425"
+      height="240"/>
       <div className="story-content">
         <h3>{title}</h3>
         <p>{description}</p>
