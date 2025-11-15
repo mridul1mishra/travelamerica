@@ -45,8 +45,22 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
        style={{ backgroundImage: `url(${typeof image === 'string' ? image : image.src})` }}
     >
       <header className={`overlay-header ${isScrolled ? "scrolled" : ""}`}>
-        <div className="brand-logo">
-          <a href="/"><img src={isScrolled ? "/data/logo.webp" : "/data/logo3.webp"} alt="Travel Americas Logo"/></a>
+        <div className="brand-logo">          
+          <a href="/">
+    {isScrolled ? (
+      <picture>
+        <source srcSet="/data/logo-150.webp" type="image/webp" media="(max-width: 768px)" />
+        <source srcSet="/data/logo-300.webp" type="image/webp" />
+        <img src="/data/logo.png" alt="Travel Americas Logo" width="150" height="150" />
+      </picture>
+    ) : (
+      <picture>
+        <source srcSet="/data/logo3-150.webp" type="image/webp" media="(max-width: 768px)" />
+        <source srcSet="/data/logo3-300.webp" type="image/webp" />
+        <img src="/data/logo3.png" alt="Travel Americas Logo" width="150" height="150" />
+      </picture>
+    )}
+  </a>
         </div>
         <nav className="main-nav">
           <button className="hamburger" onClick={toggleMenu} aria-label="Toggle menu">
