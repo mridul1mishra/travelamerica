@@ -69,7 +69,7 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
       <picture>
         <source srcSet="/data/logo-150.webp" type="image/webp" media="(max-width: 768px)" />
         <source srcSet="/data/logo-300.webp" type="image/webp" />
-        <img src="/data/logo.png" alt="Travel Americas Logo" width="150" height="150" />
+        <img src="/data/logo.png" alt="Travel Americas Logo" width="150" height="150" fetchPriority="high"/>
       </picture>
     ) : (
       <picture>
