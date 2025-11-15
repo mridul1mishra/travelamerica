@@ -12,7 +12,8 @@ html {
 
 @font-face {
   font-family: 'CorbenBold';
-  src: url('/data/corben-cdnfonts/Corben-Bold.ttf') format('truetype');
+  src: url("/data/corben-cdnfonts/Corben-Bold.woff2") format("woff2"),
+       url("/data/corben-cdnfonts/Corben-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap; 
@@ -125,7 +126,7 @@ html {
     margin-bottom: 15px;
     margin-top: 10px;
     background: linear-gradient(90deg, #1d4ed8, #3b82f6); /* blue gradient */
-    -webkit-background-clip: text;
+    
     -webkit-text-fill-color: transparent; /* gradient text effect */
 }
 .back-to-top {
