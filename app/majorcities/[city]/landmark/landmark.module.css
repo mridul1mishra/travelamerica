@@ -72,7 +72,7 @@
 }
 @font-face {
   font-family: 'CorbenBold';
-  src: url('/data/corben-cdnfonts/Corben-Bold.ttf') format('woff2');
+  src: url('/data/corben-cdnfonts/Corben-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
