@@ -30,13 +30,13 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
         <link
           rel="preload"
           as="image"
-          href="/data/logo.png"
+          href="/data/logo.webp"
           type="image/png"
         />
         <link
           rel="preload"
           as="image"
-          href="/data/logo3.png"
+          href="/data/logo3.webp"
           type="image/png"
         />
       </Head>
@@ -46,7 +46,7 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
     >
       <header className={`overlay-header ${isScrolled ? "scrolled" : ""}`}>
         <div className="brand-logo">
-          <a href="/"><img src={isScrolled ? "/data/logo.png" : "/data/logo3.png"} alt="Travel Americas Logo"/></a>
+          <a href="/"><img src={isScrolled ? "/data/logo.webp" : "/data/logo3.webp"} alt="Travel Americas Logo"/></a>
         </div>
         <nav className="main-nav">
           <button className="hamburger" onClick={toggleMenu} aria-label="Toggle menu">
