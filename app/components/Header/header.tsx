@@ -39,6 +39,24 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
           href="/data/logo3.webp"
           type="image/png"
         />
+        <link
+    rel="preload"
+    as="image"
+    href="/data/logo-300.webp"
+    type="image/webp"
+  />
+  <link
+    rel="preload"
+    as="image"
+    href="/data/logo3-150.webp"
+    type="image/webp"
+  />
+  <link
+    rel="preload"
+    as="image"
+    href="/data/logo3-300.webp"
+    type="image/webp"
+  />
       </Head>
     <section
       className="hero" 
