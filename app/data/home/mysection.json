@@ -5,7 +5,7 @@
     {
       "title": "New York City, New York",
       "description": "The Statue of Liberty, Times Square, Central Park, Broadway shows, world-class museums...",
-      "image": "nycbanner.jpeg",
+      "image": "/nycbanner.jpeg",
       "link": "majorcities/newyork"
     },
     {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Story } from "../../../../models/story";
-
+import Image, { StaticImageData } from "next/image";
 
 interface StoryCardProps {
   story: Story;
@@ -11,10 +11,15 @@ const StoryCard: React.FC<StoryCardProps> = ({ story }) => {
 
   return (
     <div className="story-card">
-      <img src={image} alt={title} 
+      <div style={{ position: "relative", width: "425px", height: "240px" }}>
+      <Image src={image} alt={title} 
+      fetchPriority="high"
+      fill
+      decoding="async"
       sizes="(max-width: 768px) 425px, (max-width: 1200px) 850px, 1295px"
-      width="425"
-      height="240"/>
+      style={{ objectFit: "cover" }}
+      />
+      </div>
       <div className="story-content">
         <h3>{title}</h3>
         <p>{description}</p>
