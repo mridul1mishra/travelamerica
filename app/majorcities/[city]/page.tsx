@@ -37,3 +37,11 @@ function capitalizeWords(str: string) {
     .toLowerCase()
     .replace(/\b\w/g, (char) => char.toUpperCase());
 }
+export async function generateStaticParams() {
+  return [
+    { city: "newyork" },
+    { city: "orlando" },
+    { city: "lasvegas" },
+    { city: "losangeles" }
+  ];
+}

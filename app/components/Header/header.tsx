@@ -74,9 +74,9 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
         <div className="brand-logo">          
           <a href="/">
     {isScrolled ? (
-      <Image src="/data/logo.png" alt="Travel Americas Logo" width="150" height="150" fetchPriority="high"/>
+      <Image src="/data/logo.png" alt="Travel Americas Logo" width={150} height={150} sizes="(max-width: 768px) 100px, 150px" fetchPriority="high"/>
     ) : (
-      <Image src="/data/logo3.png" alt="Travel Americas Logo" width="150" height="150"  fetchPriority="high"/>
+      <Image src="/data/logo3.png" alt="Travel Americas Logo" width={150} height={150}  sizes="(max-width: 768px) 100px, 150px" fetchPriority="high"/>
       
     )}
   </a>

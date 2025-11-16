@@ -8,10 +8,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { city } = await params;
   const formattedCity = city.charAt(0).toUpperCase() + city.slice(1);
+  const canonicalUrl = `https://www.travelamerica.work/majorcities/${city}`;
 
   return {
     title: `Explore ${formattedCity} | Travel America`,
     description: `Plan your trip to ${formattedCity} with curated stays, airport info, and travel tips.`,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     keywords: [
       `${formattedCity} travel guide`,
       `top attractions in ${formattedCity}`,
