@@ -59,14 +59,17 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
   />
       </Head>
     <section className="hero">
-        <Image src={typeof image === "string" ? image : image.src}
-          alt="Travel Americas banner showing city skyline"
-          width="1295"
-          height="832"
-          fetchPriority="high"
-          decoding="async"
-          style={{ objectFit: "cover", width: "100%", height: "auto" }}
-        />
+        <div style={{ position: "relative", width: "100%", height: "auto", aspectRatio: "1295 / 832" }}>
+  <Image
+    src={typeof image === "string" ? image : image.src}
+    alt="Travel Americas banner showing city skyline"
+    fill
+    priority
+    fetchPriority="high"
+    decoding="async"
+    style={{ objectFit: "cover" }}
+  />
+</div>
       <header className={`overlay-header ${isScrolled ? "scrolled" : ""}`}>
         <div className="brand-logo">          
           <a href="/">
