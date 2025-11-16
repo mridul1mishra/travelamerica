@@ -6,5 +6,6 @@ export default interface Cities {
     label: string;
     img: string;
     section: string;
+    alt: string;
   }[];
 }

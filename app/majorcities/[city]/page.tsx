@@ -7,7 +7,7 @@ import Propertylisting from "../../components/majorcities/flightsection/property
 import Plantripsection from "../../components/majorcities/plantripsection/plantripsection";
 import Plantripcontent from "../../components/majorcities/plantripcontent/plantripcontent";
 import CityUI from "./cityui";
-import { getSectionData } from "@/app/lib/getAirportData";
+import { getAirportData } from "@/app/lib/getAirportData";
 type PageProps = {
   params: { city: string };
 };
@@ -19,7 +19,7 @@ export default async function CityPage({ params }: PageProps) {
   const city = resolvedParams?.city;
   const citiesWithoutBanner = ['lasvegas'];
     if (!city) return <div>Loading place visit data...</div>;
-    const { airportsection, propertySections, personaContent, plantripcontentsections } = await getSectionData(city);
+    const { airportsection, propertySections, personaContent, plantripcontentsections } = await getAirportData(city);
     return (
       <div className="App">
               <Header image={`/data/majorcities/${city}/assets/${city}.jpeg`} bannerText={!citiesWithoutBanner.includes(city) ? `Welcome to ${capitalizeWords(city)}!` : ""} />

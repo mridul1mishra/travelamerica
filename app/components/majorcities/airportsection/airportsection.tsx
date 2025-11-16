@@ -43,14 +43,14 @@ const Airportsection: React.FC<Props> = ({ content, onSelect }) => {
                   onClick={() => handleClick(tab.id)}
                   data-section={tab.section}
                 >
-                  <img src={tab.img} alt={tab.label} />
+                  <img src={tab.img} alt={tab.alt} />
                   {tab.label}
                 </button>
               ))}
             </div>
           </div>
           <div className="cta-button-wrapper">
-            <button className="plan-button">Plan Your NYC Trip →</button>
+            <a href="/majorcities/newyork/solo-travel"><button className="plan-button">Plan Your NYC Trip →</button></a>
           </div>
           
         </div>

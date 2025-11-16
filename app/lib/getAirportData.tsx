@@ -1,4 +1,4 @@
-export async function getSectionData(city: string) {
+export async function getAirportData(city: string) {
   const [airportsection, propertySections, personaContent, plantripRaw] = await Promise.all([
     fetch(`https://www.travelamerica.work/data/majorcities/${city}/airportsection.json`).then(res => res.json()),
     fetch(`https://www.travelamerica.work/data/majorcities/${city}/propertylisting.json`).then(res => res.json()),

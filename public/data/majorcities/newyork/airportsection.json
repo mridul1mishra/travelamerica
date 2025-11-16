@@ -4,21 +4,24 @@
   "tabs": [
     {
       "id": 1,
-      "label": "Flights",
+      "label": "Flightsss",
       "img": "/data/majorcities/lasvegas/assets/departures.svg",
-      "section": "flight-section"
+      "section": "flight-section",
+      "alt": "Flights departures"
     },
     {
       "id": 2,
       "label": "Stays",
       "img": "/data/majorcities/lasvegas/assets/hotel.svg",
-      "section": "hotel-section"
+      "section": "hotel-section",
+      "alt": "Hotels icons"
     },
     {
       "id": 3,
       "label": "Cruise",
       "img": "/data/majorcities/lasvegas/assets/cruise.svg",
-      "section": "cruise-section"
+      "section": "cruise-section",
+      "alt": "Cruises icons"
     }
   ]
 }
