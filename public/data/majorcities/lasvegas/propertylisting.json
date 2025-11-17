@@ -13,7 +13,7 @@
           "duration": "03h",
           "price": "$29",
           "buttonText": "View Prices",
-          "buttonUrl": "https://www.priceline.com/m/fly/search/DFW-LAS-20251211/?cabin-class=ECO&no-date-search=false&search-type=00&num-adults=1"
+          "buttonUrl": "https://www.priceline.com/"
         },
         {
           "airline": { "name": "SouthWest", "logo": "/data/southwest.png" },
@@ -53,74 +53,6 @@
           "highlight": true,
           "buttonUrl": "https://www.kayak.com/flights/JFK-LAS/2025-11-09?ucs=10r0ex&sort=bestflight_a"
         }
-      ]
-    },
-    {
-      "id": 2,
-      "title": "",
-      "className": "hotel-section",
-      "header": ["Travel Type", "Departure", "Arrival", "Duration", "Price", ""],
-      "rows": [
-        {
-          "airline": { "name": "Solo", "logo": "" },
-          "departure": { "time": "06:45", "city": "Guwahati" },
-          "arrival": { "time": "07:35", "city": "Agartala" },
-          "duration": "00h 50m",
-          "price": "₹1,972",
-          "buttonText": "View Prices"
-        },
-        {
-          "airline": { "name": "IndiGo", "logo": "indigo-icon.png" },
-          "departure": { "time": "09:30", "city": "Imphal" },
-          "arrival": { "time": "10:20", "city": "Agartala" },
-          "duration": "00h 50m",
-          "price": "₹2,887",
-          "buttonText": "View Prices"
-        },
-        {
-          "airline": { "name": "Air India", "logo": "airindia-icon.png" },
-          "departure": { "time": "01:05", "city": "Kolkata" },
-          "arrival": { "time": "02:05", "city": "Agartala" },
-          "duration": "01h 00m",
-          "price": "₹3,560",
-          "buttonText": "View Prices",
-          "highlight": true
-        }
-        
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Book Cruise to New York",
-      "className": "cruise-section",
-      "header": ["Airline", "Departure", "Arrival", "Duration", "Price", ""],
-      "rows": [
-        {
-          "airline": { "name": "IndiGo", "logo": "indigo-icon.png" },
-          "departure": { "time": "06:45", "city": "Guwahati" },
-          "arrival": { "time": "07:35", "city": "Agartala" },
-          "duration": "00h 50m",
-          "price": "₹1,972",
-          "buttonText": "View Prices"
-        },
-        {
-          "airline": { "name": "IndiGo", "logo": "indigo-icon.png" },
-          "departure": { "time": "09:30", "city": "Imphal" },
-          "arrival": { "time": "10:20", "city": "Agartala" },
-          "duration": "00h 50m",
-          "price": "₹2,887",
-          "buttonText": "View Prices"
-        },
-        {
-          "airline": { "name": "Air India", "logo": "airindia-icon.png" },
-          "departure": { "time": "01:05", "city": "Kolkata" },
-          "arrival": { "time": "02:05", "city": "Agartala" },
-          "duration": "01h 00m",
-          "price": "₹3,560",
-          "buttonText": "View Prices",
-          "highlight": true
-        }
-        
       ]
     }
   ]
