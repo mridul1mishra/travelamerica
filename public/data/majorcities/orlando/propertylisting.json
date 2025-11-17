@@ -13,7 +13,7 @@
           "duration": "03h3m",
           "price": "$38",
           "buttonText": "View Prices",
-          "buttonUrl": "https://www.bing.com/travel/flight-search?q=flights+from+nyc-orl&src=nyc&des=orl&ddate=2025-11-21&isr=0&rdate=2025-11-23&cls=0&adult=1&child=0&infant=0&sel=ISP%2CMCO%2C11%3A32%3A00%2CF9%2C3941%2C0%7C&sin=&form=FBL1YC&entrypoint=FBL1YC"
+          "buttonUrl": "https://www.skyscanner.com/flights"
         },
         {
           "airline": { "name": "Spirit", "logo": "NK.png" },
@@ -22,7 +22,7 @@
           "duration": "2h 55m",
           "price": "$24",
           "buttonText": "View Prices",
-          "buttonUrl": "https://www.skyscanner.com/flights/",
+          "buttonUrl": "https://www.skyscanner.com/flights",
           "highlight": true
         },
         {
