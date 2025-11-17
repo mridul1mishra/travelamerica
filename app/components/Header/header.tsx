@@ -92,7 +92,7 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
       <div className="hero-text">
         {
         pathname.includes("companydetails") || pathname.includes("privacy") || pathname.includes("termsandcondition") ?
-        <h1>{bannerText}</h1> : <h2></h2>
+        <h1>{bannerText}</h1> : ""
         }
       </div>
     </section>

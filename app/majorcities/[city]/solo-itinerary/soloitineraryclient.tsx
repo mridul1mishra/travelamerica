@@ -37,7 +37,11 @@ export default function SoloItineraryClient() {
       />
     <div className="App">
       <Header image={`/data/majorcities/${city}/assets/banner-itinerary.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Travel Itinerary for New York City` : ""} />
-        
+      <section className={styles.splitSection} style={{ paddingTop: "175px", textAlign: "center" }}>
+                <div style={{ width: "100%", textAlign: "center" }}>
+                <h1  className={styles.sectionheading}>3-Day Solo Travel Itinerary for New York City</h1>
+                </div>
+      </section>  
       <section className={styles.splitSection}>
         <div className={styles.imageWrapper}>
           <Image

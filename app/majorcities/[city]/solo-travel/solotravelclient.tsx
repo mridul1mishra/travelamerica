@@ -110,19 +110,15 @@ const schema2 = {
 };
     return(
         <>
-        <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema2) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}
-      />
-        <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema2) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
         <Header image={`/data/majorcities/${city}/assets/safetybanner.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? (<span style={{ color: '#1A2A3A', fontWeight: '600', fontSize: '40px' }}>Solo Travel in NYC: Safe Itinerary, <br />Packing Tips and Best Landmarks!</span>) : ""} />
+        <section className={styles.splitSection} style={{ paddingTop: "175px", textAlign: "center" }}>
+                <div style={{ width: "100%", textAlign: "center" }}>
+                <h1  className={styles.sectionheading}>Solo Travel in NYC: Safe Itinerary,<br />Packing Tips and Best Landmarks!</h1>
+                </div>
+      </section> 
         <section className={styles.splitSection}>
         <div className={styles.imageWrapper}>
           <Image

@@ -10,9 +10,9 @@ const Footer = () => {
     <div>
       <h3>New York</h3>
       <ul className="vertical-list">
-        <li><a href="/majorcities/newyork/solo-travel">Solo Travel Tips</a></li>
-        <li><a href="/majorcities/newyork/solo-itinerary">Solo Travel Itinerary</a></li>
-        <li><a href="/majorcities/newyork/landmark">Landmark in New York</a></li>
+        <li style={{cursor: 'pointer'}}><a href="/majorcities/newyork/solo-travel">Solo Travel Tips</a></li>
+        <li style={{cursor: 'pointer'}}><a href="/majorcities/newyork/solo-itinerary">Solo Travel Itinerary</a></li>
+        <li style={{cursor: 'pointer'}}><a href="/majorcities/newyork/landmark">Landmark in New York</a></li>
       </ul>
     </div>
     <div>

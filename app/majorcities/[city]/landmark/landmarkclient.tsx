@@ -34,6 +34,11 @@ export default function LandmarkPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
        <Header image={`/data/majorcities/${city}/assets/landmark-banner.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Travel in New York City – Landmark Guide!` : ""} />
+       <section className={styles.splitSection} style={{ paddingTop: "175px", textAlign: "center" }}>
+                <div style={{ width: "100%", textAlign: "center" }}>
+                <h1  className={styles.sectionheading}>Solo Travel in New York City – Landmark Guide!</h1>
+                </div>
+      </section> 
        <section className={styles.splitSection}>
         <div className={styles.imageWrapper}>
           <Image
