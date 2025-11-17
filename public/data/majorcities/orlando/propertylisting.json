@@ -22,7 +22,7 @@
           "duration": "2h 55m",
           "price": "$24",
           "buttonText": "View Prices",
-          "buttonUrl": "https://www.spirit.com/",
+          "buttonUrl": "https://www.skyscanner.com/flights/",
           "highlight": true
         },
         {
@@ -32,7 +32,7 @@
           "duration": "04h 44m",
           "price": "$89",
           "buttonText": "View Prices" ,
-          "buttonUrl": "https://www.bing.com/travel/flight-search?q=flights+from+lax-orl&src=lax&des=orl&ddate=2025-11-17&isr=0&rdate=2025-11-19&cls=0&adult=1&child=0&infant=0&sel=LAX%2CMCO%2C21%3A30%3A00%2CUA%2C1730%2C0%7C&sin=&form=SUMLST&entrypoint=FBL1YC"
+          "buttonUrl": "https://www.skyscanner.com/flights"
         },
         {
           "airline": { "name": "Frontier", "logo": "F9.png" },
@@ -42,7 +42,7 @@
           "price": "$64",
           "buttonText": "View Prices",
           "highlight": true,
-          "buttonUrl": "https://www.bing.com/travel/flight-search?q=flights+from+sfo-orl&src=sfo&des=orl&ddate=2025-11-17&isr=0&rdate=2025-11-19&cls=0&adult=1&child=0&infant=0&sel=SFO%2CATL%2C22%3A23%3A00%2CF9%2C1448%2C0%7CATL%2CMCO%2C08%3A30%3A00%2CF9%2C4556%2C1%7C&sin=&form=SUMLST&entrypoint=FBL1YC"
+          "buttonUrl": "https://www.skyscanner.com/flights"
         },
         {
           "airline": { "name": "Spirit", "logo": "NK.png" },
@@ -52,77 +52,10 @@
           "price": "$50",
           "buttonText": "View Prices",
           "highlight": true,
-          "buttonUrl": "https://www.bing.com/travel/flight-search?q=flights+from+chi-orl&src=chi&des=orl&ddate=2025-11-15&isr=0&rdate=2025-11-17&cls=0&adult=1&child=0&infant=0&sel=ORD%2CMCO%2C06%3A48%3A00%2CNK%2C620%2C0%7C&sin=&form=SUMLST&entrypoint=FBL1YC"
+          "buttonUrl": "https://www.skyscanner.com/flights"
         }
-      ]
-    },
-    {
-      "id": 2,
-      "title": "",
-      "className": "hotel-section",
-      "header": ["Travel Type", "Departure", "Arrival", "Duration", "Price", ""],
-      "rows": [
-        {
-          "airline": { "name": "Solo", "logo": "" },
-          "departure": { "time": "06:45", "city": "Guwahati" },
-          "arrival": { "time": "07:35", "city": "Agartala" },
-          "duration": "00h 50m",
-          "price": "₹1,972",
-          "buttonText": "View Prices"
-        },
-        {
-          "airline": { "name": "IndiGo", "logo": "indigo-icon.png" },
-          "departure": { "time": "09:30", "city": "Imphal" },
-          "arrival": { "time": "10:20", "city": "Agartala" },
-          "duration": "00h 50m",
-          "price": "₹2,887",
-          "buttonText": "View Prices"
-        },
-        {
-          "airline": { "name": "Air India", "logo": "airindia-icon.png" },
-          "departure": { "time": "01:05", "city": "Kolkata" },
-          "arrival": { "time": "02:05", "city": "Agartala" },
-          "duration": "01h 00m",
-          "price": "₹3,560",
-          "buttonText": "View Prices",
-          "highlight": true
-        }
-        
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Book Cruise to New York",
-      "className": "cruise-section",
-      "header": ["Airline", "Departure", "Arrival", "Duration", "Price", ""],
-      "rows": [
-        {
-          "airline": { "name": "IndiGo", "logo": "indigo-icon.png" },
-          "departure": { "time": "06:45", "city": "Guwahati" },
-          "arrival": { "time": "07:35", "city": "Agartala" },
-          "duration": "00h 50m",
-          "price": "₹1,972",
-          "buttonText": "View Prices"
-        },
-        {
-          "airline": { "name": "IndiGo", "logo": "indigo-icon.png" },
-          "departure": { "time": "09:30", "city": "Imphal" },
-          "arrival": { "time": "10:20", "city": "Agartala" },
-          "duration": "00h 50m",
-          "price": "₹2,887",
-          "buttonText": "View Prices"
-        },
-        {
-          "airline": { "name": "Air India", "logo": "airindia-icon.png" },
-          "departure": { "time": "01:05", "city": "Kolkata" },
-          "arrival": { "time": "02:05", "city": "Agartala" },
-          "duration": "01h 00m",
-          "price": "₹3,560",
-          "buttonText": "View Prices",
-          "highlight": true
-        }
-        
       ]
     }
+    
   ]
 }
