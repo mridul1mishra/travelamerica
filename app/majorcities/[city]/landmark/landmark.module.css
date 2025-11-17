@@ -75,12 +75,14 @@
   src: url('/data/corben-cdnfonts/Corben-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
+  font-display: swap; 
 }
 @font-face {
   font-family: 'Montserrat';
   src: url('/data/corben-cdnfonts/Montserrat-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
+  font-display: swap; 
 }
 /* Responsive layout */
 @media screen and (max-width: 1024px) {

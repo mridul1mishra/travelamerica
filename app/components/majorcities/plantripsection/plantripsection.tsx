@@ -35,7 +35,7 @@ const Plantripsection: React.FC<Props> = ({content, onSelect}) => {
       key={tab.id}
       className={active === tab.id ? "trip active" : "trip"}
       onClick={() => handleClick(tab.id)} data-section={tab.section}>
-        <i className="fa-solid fa-suitcase-rolling" style={{ fontSize: "32px", color: tab.color}}></i>
+        <i className="fa-solid fa-suitcase-rolling" style={{ fontSize: "32px", color: tab.color}} aria-hidden="true"></i>
          {tab.label}
       </button>
       ))}
