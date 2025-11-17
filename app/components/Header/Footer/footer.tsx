@@ -8,11 +8,11 @@ const Footer = () => {
         <footer className="travel-footer">
   <div className="footer-top">
     <div>
-      <h3>Explore</h3>
+      <h3>New York</h3>
       <ul className="vertical-list">
-        <li><a href="#">Group Traveller</a></li>
-        <li><a href="#">Solo Traveller</a></li>
-        <li><a href="#">Couple</a></li>
+        <li><a href="/majorcities/newyork/solo-travel">Solo Travel Tips</a></li>
+        <li><a href="/majorcities/newyork/solo-itinerary">Solo Travel Itinerary</a></li>
+        <li><a href="/majorcities/newyork/landmark">Landmark in New York</a></li>
       </ul>
     </div>
     <div>

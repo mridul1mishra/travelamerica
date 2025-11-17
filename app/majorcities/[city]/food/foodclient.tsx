@@ -34,7 +34,13 @@ export default function FoodClientPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
         <Header image={`/data/majorcities/${city}/assets/foodpagebanner.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Travel ${capitalizeWords(city)}!` : ""} />
+        <section className={styles.splitSection} style={{ paddingTop: "175px", textAlign: "center" }}>
+                <div style={{ width: "100%", textAlign: "center" }}>
+                <h1  className={styles.sectionheading}>Discover the Best Solo Dining Spots and Flavorful Food Halls in NYC</h1>
+                </div>
+        </section>
         <section className={styles.splitSection}>
+                
                 <div className={styles.imageWrapper}>
                 <Image
                     src="/data/majorcities/newyork/assets/asian-food-rainy-day-solo-dining-new-york-city.png"
