@@ -30,7 +30,7 @@ export default function Majorcities({ section: { heading, storydescription, stor
       </Head>
         <section className="travel-stories">
   <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  className="back-to-top"><h2  className="section-heading">{heading}</h2></button>
+  className="back-to-top"><h1  className="section-heading">{heading}</h1></button>
   <p className="description-text">{storydescription}</p>
 
   <div className="story-cards">

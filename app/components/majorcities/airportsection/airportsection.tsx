@@ -26,13 +26,7 @@ const Airportsection: React.FC<Props> = ({ content, onSelect }) => {
       <div className="container">
         <div className="intro-and-sidebar">
           <div className="intro">
-            {city.title.includes('Las Vegas') ?
-              <h1>{city.title}</h1>
-            
-            :
-              <h2>{city.title}</h2>}
-            
-            
+            <h1>{city.title}</h1>
             <p>{city.description}</p>
 
             <div className="tab-container">

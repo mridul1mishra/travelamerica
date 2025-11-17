@@ -60,26 +60,18 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
       </Head>
     <section className="hero">
         <div style={{ position: "relative", width: "100%", height: "auto", aspectRatio: "1295 / 832" }}>
-  <Image
-    src={typeof image === "string" ? image : image.src}
-    alt="Travel Americas banner showing city skyline"
-    fill
-    priority
-    fetchPriority="high"
-    decoding="async"
-    style={{ objectFit: "cover" }}
-  />
-</div>
+          <Image src={typeof image === "string" ? image : image.src} alt="Travel Americas banner showing city skyline" fill priority fetchPriority="high" decoding="async" style={{ objectFit: "cover" }}/>
+        </div>
       <header className={`overlay-header ${isScrolled ? "scrolled" : ""}`}>
         <div className="brand-logo">          
           <a href="/">
-    {isScrolled ? (
-      <Image src="/data/logo.png" alt="Travel Americas Logo" width={150} height={150} sizes="(max-width: 768px) 100px, 150px" fetchPriority="high"/>
-    ) : (
-      <Image src="/data/logo3.png" alt="Travel Americas Logo" width={150} height={150}  sizes="(max-width: 768px) 100px, 150px" fetchPriority="high"/>
-      
-    )}
-  </a>
+            {isScrolled ? (
+              <Image src="/data/logo.png" alt="Travel Americas Logo" width={150} height={150} sizes="(max-width: 768px) 100px, 150px" fetchPriority="high"/>
+            ) : (
+              <Image src="/data/logo3.png" alt="Travel Americas Logo" width={150} height={150}  sizes="(max-width: 768px) 100px, 150px" fetchPriority="high"/>
+              
+            )}
+          </a>
         </div>
         <nav className="main-nav">
           <button className="hamburger" onClick={toggleMenu} aria-label="Toggle menu">

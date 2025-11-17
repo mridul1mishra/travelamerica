@@ -6,19 +6,22 @@
       "id": 1,
       "label": "Flights",
       "img": "/data/majorcities/lasvegas/assets/departures.svg",
-      "section": "flight-section"
+      "section": "flight-section",
+      "alt": "Flight departure icon"
     },
     {
       "id": 2,
       "label": "Stays",
-      "img": "/data/majorcities/lasvegas/assets/departures.svg",
-      "section": "hotel-section"
+      "img": "/data/majorcities/lasvegas/assets/hotel.svg",
+      "section": "hotel-section",
+      "alt": "Hotels icon"
     },
     {
       "id": 3,
       "label": "Cruise",
-      "img": "/data/majorcities/lasvegas/assets/departures.svg",
-      "section": "cruise-section"
+      "img": "/data/majorcities/lasvegas/assets/cruise.svg",
+      "section": "cruise-section",
+      "alt": "Cruises icon"
     }
   ]
 }
