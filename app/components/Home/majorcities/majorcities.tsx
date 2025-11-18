@@ -14,19 +14,9 @@ export default function Majorcities({ section: { heading, storydescription, stor
     return (
       <>
       <Head>
-        <link
-          rel="preload"
-          as="font"
-          href="/data/corben-cdnfonts/Corben-Bold.woff2"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="/data/logo3.png"
-          type="image/png"
-        />
+        <link rel="preload" as="font" href="/data/corben-cdnfonts/Corben-Bold.woff2" type="font/woff2" crossOrigin="anonymous"/>
+        <link rel="preload" as="image" href="/data/logo3.png" type="image/png"/>
+        
       </Head>
         <section className="travel-stories">
   <h1  className="section-heading">{heading}</h1>
