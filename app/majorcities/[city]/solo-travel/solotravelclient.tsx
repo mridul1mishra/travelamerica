@@ -11,40 +11,40 @@ export default function SoloTravelPage() {
     const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
     const citiesWithoutBanner = ['lasvegas'];
     const schema = {
-  "@context": "https://schema.org",
-  "@type": "TouristTrip",
-  "name": "Solo Travel Itinerary for New York City",
-  "description": "Explore NYC solo with this 3-day itinerary covering landmarks, neighborhoods, and Brooklyn vibes.",
-  "touristType": {
-    "@type": "Audience",
-    "name": "Solo Travelers"
-  },
-  "itinerary": {
-    "@type": "ItemList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Day 1: Midtown Landmarks & Safety Prep" },
-      { "@type": "ListItem", "position": 2, "name": "Day 2: Neighborhood Exploration & Smart Navigation" },
-      { "@type": "ListItem", "position": 3, "name": "Day 3: Solo Dining & Cultural Highlights" }
-    ]
-  },
-  "image": "https://www.travelamerica.work/data/majorcities/newyork/assets/safetybanner.png",
-  "touristAttraction": [
-    { "@type": "TouristAttraction", "name": "Times Square" },
-    { "@type": "TouristAttraction", "name": "Central Park" },
-    { "@type": "TouristAttraction", "name": "NYC Ferry" }
-  ],
-  "location": {
-    "@type": "Place",
-    "name": "New York City",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "New York",
-      "addressRegion": "NY",
-      "addressCountry": "US"
-    }
-  }
-};
-const schema1 = {
+                      "@context": "https://schema.org",
+                      "@type": "TouristTrip",
+                      "name": "Solo Travel Itinerary for New York City",
+                      "description": "Explore NYC solo with this 3-day itinerary covering landmarks, neighborhoods, and Brooklyn vibes.",
+                      "touristType": {
+                        "@type": "Audience",
+                        "name": "Solo Travelers"
+                      },
+                      "itinerary": {
+                        "@type": "ItemList",
+                        "itemListElement": [
+                          { "@type": "ListItem", "position": 1, "name": "Day 1: Midtown Landmarks & Safety Prep" },
+                          { "@type": "ListItem", "position": 2, "name": "Day 2: Neighborhood Exploration & Smart Navigation" },
+                          { "@type": "ListItem", "position": 3, "name": "Day 3: Solo Dining & Cultural Highlights" }
+                        ]
+                      },
+                      "image": "https://www.travelamerica.work/data/majorcities/newyork/assets/safetybanner.png",
+                      "location": {
+                        "@type": "Place",
+                        "name": "New York City",
+                        "touristAttraction": [
+                        { "@type": "TouristAttraction", "name": "Times Square" },
+                        { "@type": "TouristAttraction", "name": "Central Park" },
+                        { "@type": "TouristAttraction", "name": "NYC Ferry" }
+                      ],
+                        "address": {
+                          "@type": "PostalAddress",
+                          "addressLocality": "New York",
+                          "addressRegion": "NY",
+                          "addressCountry": "US"
+                        }
+                      }
+                    };
+    const schema1 = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -73,8 +73,8 @@ const schema1 = {
       "item": "https://www.travelamerica.work/majorcities/newyork/solo-travel"
     }
   ]
-};
-const schema2 = {
+                };
+    const schema2 = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "mainEntityOfPage": {
@@ -107,7 +107,7 @@ const schema2 = {
     { "@type": "Thing", "name": "Solo Travel" },
     { "@type": "Place", "name": "New York City" }
   ]
-};
+                };
     return(
         <>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema2) }}/>
