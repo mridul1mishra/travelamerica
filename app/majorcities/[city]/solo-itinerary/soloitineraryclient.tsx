@@ -13,22 +13,39 @@ export default function SoloItineraryClient() {
     const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
     const citiesWithoutBanner = ['lasvegas'];
     const schema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "3-Day Solo Travel Itinerary for New York | Travel America",
-    "author": { "@type": "Organization", "name": "Travel America" },
-    "datePublished": "2025-11-01",
-    "image": "https://www.travelamerica.work/images/nyc-solo-itinerary-cover.jpg",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Travel America",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.travelamerica.work/logo.png"
-      }
-    },
-    "description": "Explore NYC solo with this 3-day itinerary covering landmarks, neighborhoods, and Brooklyn vibes."
-  };
+                      "@context": "https://schema.org",
+                      "@type": "TouristTrip",
+                      "name": "Solo Travel Itinerary for New York City",
+                      "description": "Explore NYC solo with this 3-day itinerary covering landmarks, neighborhoods, and Brooklyn vibes.",
+                      "touristType": {
+                        "@type": "Audience",
+                        "name": "Solo Travelers"
+                      },
+                      "itinerary": {
+                        "@type": "ItemList",
+                        "itemListElement": [
+                          { "@type": "ListItem", "position": 1, "name": "Day 1: Midtown Landmarks & Safety Prep" },
+                          { "@type": "ListItem", "position": 2, "name": "Day 2: Neighborhood Exploration & Smart Navigation" },
+                          { "@type": "ListItem", "position": 3, "name": "Day 3: Solo Dining & Cultural Highlights" }
+                        ]
+                      },
+                      "image": "https://www.travelamerica.work/data/majorcities/newyork/assets/safetybanner.png",
+                      "location": {
+                        "@type": "Place",
+                        "name": "New York City",
+                        "touristAttraction": [
+                        { "@type": "TouristAttraction", "name": "Times Square" },
+                        { "@type": "TouristAttraction", "name": "Central Park" },
+                        { "@type": "TouristAttraction", "name": "NYC Ferry" }
+                      ],
+                        "address": {
+                          "@type": "PostalAddress",
+                          "addressLocality": "New York",
+                          "addressRegion": "NY",
+                          "addressCountry": "US"
+                        }
+                      }
+                    };
     return(
       <>
       <script

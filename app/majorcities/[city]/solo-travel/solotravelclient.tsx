@@ -10,40 +10,7 @@ export default function SoloTravelPage() {
     const cityParam = params?.city;
     const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
     const citiesWithoutBanner = ['lasvegas'];
-    const schema = {
-                      "@context": "https://schema.org",
-                      "@type": "TouristTrip",
-                      "name": "Solo Travel Itinerary for New York City",
-                      "description": "Explore NYC solo with this 3-day itinerary covering landmarks, neighborhoods, and Brooklyn vibes.",
-                      "touristType": {
-                        "@type": "Audience",
-                        "name": "Solo Travelers"
-                      },
-                      "itinerary": {
-                        "@type": "ItemList",
-                        "itemListElement": [
-                          { "@type": "ListItem", "position": 1, "name": "Day 1: Midtown Landmarks & Safety Prep" },
-                          { "@type": "ListItem", "position": 2, "name": "Day 2: Neighborhood Exploration & Smart Navigation" },
-                          { "@type": "ListItem", "position": 3, "name": "Day 3: Solo Dining & Cultural Highlights" }
-                        ]
-                      },
-                      "image": "https://www.travelamerica.work/data/majorcities/newyork/assets/safetybanner.png",
-                      "location": {
-                        "@type": "Place",
-                        "name": "New York City",
-                        "touristAttraction": [
-                        { "@type": "TouristAttraction", "name": "Times Square" },
-                        { "@type": "TouristAttraction", "name": "Central Park" },
-                        { "@type": "TouristAttraction", "name": "NYC Ferry" }
-                      ],
-                        "address": {
-                          "@type": "PostalAddress",
-                          "addressLocality": "New York",
-                          "addressRegion": "NY",
-                          "addressCountry": "US"
-                        }
-                      }
-                    };
+    
     const schema1 = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -112,7 +79,6 @@ export default function SoloTravelPage() {
         <>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema2) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
         <Header image={`/data/majorcities/${city}/assets/safetybanner.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? (<span style={{ color: '#1A2A3A', fontWeight: '600', fontSize: '40px' }}>Solo Travel in NYC: Safe Itinerary, <br />Packing Tips and Best Landmarks!</span>) : ""} />
         <section className={styles.splitSection} style={{ paddingTop: "175px", textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
