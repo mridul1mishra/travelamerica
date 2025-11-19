@@ -10,25 +10,33 @@ export default function LandmarkPage() {
     const cityParam = params?.city;
     const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
     const citiesWithoutBanner = ['lasvegas'];
-    const schema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "3-Day Solo Travel Itinerary for New York | Travel America",
-    "author": { "@type": "Organization", "name": "Travel America" },
-    "datePublished": "2025-11-01",
-    "image": "https://www.travelamerica.work/images/nyc-solo-itinerary-cover.jpg",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Travel America",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.travelamerica.work/logo.png"
-      }
-    },
-    "description": "Explore New York City’s iconic landmarks with our solo travel guide. Maps, tips & safety"
-  };
+    const schema = city === "newyork"
+      ? {
+  "@context": "https://schema.org",
+  "@type": "LandmarksOrHistoricalBuildings",
+  "name": "Statue of Liberty",
+  "description": "The Statue of Liberty is a colossal neoclassical sculpture on Liberty Island in New York Harbor.",
+  "image": "https://www.travelamerica.work/images/statue-of-liberty.jpg",
+  "url": "https://www.travelamerica.work/landmarks/statue-of-liberty",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Liberty Island",
+    "addressLocality": "New York",
+    "addressRegion": "NY",
+    "postalCode": "10004",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "40.6892",
+    "longitude": "-74.0445"
+  },
+  "touristType": "Solo Travelers"
+} : null;
+
     return(
         <>
+        
         <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

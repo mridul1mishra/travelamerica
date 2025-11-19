@@ -10,23 +10,36 @@ export default function FoodClientPage() {
     const cityParam = params?.city;
     const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
     const citiesWithoutBanner = ['lasvegas'];
-    const schema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "3-Day Solo Travel Itinerary for New York | Travel America",
-    "author": { "@type": "Organization", "name": "Travel America" },
-    "datePublished": "2025-11-01",
-    "image": "https://www.travelamerica.work/data/majorcities/newyork/assets/foodpagebanner.png",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Travel America",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.travelamerica.work/logo.png"
-      }
-    },
-   
-  };
+    const schema = city === "newyork"
+      ? {
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Classic New York Cheesecake",
+  "description": "A creamy cheesecake recipe perfect for solo travelers exploring NYC flavors.",
+  "image": "https://www.travelamerica.work/images/ny-cheesecake.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "Travel America"
+  },
+  "datePublished": "2025-11-19",
+  "recipeIngredient": [
+    "2 cups graham cracker crumbs",
+    "4 packages cream cheese",
+    "1 cup sugar",
+    "4 eggs"
+  ],
+  "recipeInstructions": [
+    { "@type": "HowToStep", "text": "Preheat oven to 325°F." },
+    { "@type": "HowToStep", "text": "Mix crumbs and butter, press into pan." },
+    { "@type": "HowToStep", "text": "Beat cream cheese and sugar, add eggs." },
+    { "@type": "HowToStep", "text": "Bake for 55 minutes, cool before serving." }
+  ],
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "250 calories"
+  }
+}: null;
+
     return(
         <>
         <script
