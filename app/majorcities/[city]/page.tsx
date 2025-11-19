@@ -23,7 +23,7 @@ export default async function CityPage({ params }: PageProps) {
 
   const data = cityData[city];
   const schema = {"@context": "https://schema.org",
-    "@type": "FAQ",
+    "@type": "TouristDestination",
     "@id": `https://www.travelamerica.work/majorcities/${city}#destination`,
     "name": `${city.charAt(0).toUpperCase() + city.slice(1)} City`,
     "description": `Discover ${city} City: landmarks, food, and solo travel experiences for travelers in America.`,
