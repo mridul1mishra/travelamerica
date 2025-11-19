@@ -30,8 +30,8 @@ export default function SoloItineraryClient() {
                         ]
                       },
                       "image": "https://www.travelamerica.work/data/majorcities/newyork/assets/safetybanner.png",
-                      "location": {
-                        "@type": "Place",
+                      "spatialCoverage": {
+                        "@type": "TouristDestination",
                         "name": "New York City",
                         "touristAttraction": [
                         { "@type": "TouristAttraction", "name": "Times Square" },

@@ -84,7 +84,7 @@ export default function SoloTravelPage() {
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>Solo Travel in NYC: Safe Itinerary,<br />Packing Tips and Best Landmarks!</h1>
                 </div>
-      </section> 
+        </section> 
         <section className={styles.splitSection}>
         <div className={styles.imageWrapper}>
           <Image
