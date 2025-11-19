@@ -5,8 +5,7 @@ import Propertylisting from "@/app/components/majorcities/flightsection/property
 import Plantripcontent from "@/app/components/majorcities/plantripcontent/plantripcontent";
 import Plantripsection from "@/app/components/majorcities/plantripsection/plantripsection";
 import PropertyListingModel, { Section } from "../../models/propertylisting";
-import { PlantripcontentSection, PlantripcontentJson } from "../../models/plantripcontent";
-import React, { useState } from "react";
+import { useState } from "react";
 type PlacevisitProps = {
   city: string; // e.g. "Newyork", "London"
   airportsection: any;
