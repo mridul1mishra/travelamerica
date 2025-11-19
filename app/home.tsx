@@ -65,14 +65,6 @@ export default async function Home(){
   ]
 };
     return (
-      <>
-        <Head>
-          <title></title>
-          <meta name="description" content="Discover carefully selected city guides for Las Vegas, Orlando, New York, and Los Angeles. Explore culture, food, and attractions with insider insights" />
-          <link rel="preload" as="font" href="/data/corben-cdnfonts/Corben-Bold.woff2" type="font/woff2" crossOrigin="anonymous"/>
-          <link rel="preload" as="image" href="/data/logo3.png" type="image/png"/>
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
-        </Head>
         <div className="App">      
           <Header image={banner} bannerText="Our Story"  />
           <div id="major-cities" style={{paddingTop: 150}}>
@@ -80,7 +72,7 @@ export default async function Home(){
               <FAQ groupedFaqs={faqTravelHubData}/>
           </div>
           <Footer />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
         </div>
-      </>
   );
 }
