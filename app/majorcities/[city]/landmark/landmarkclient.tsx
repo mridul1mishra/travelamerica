@@ -16,8 +16,8 @@ export default function LandmarkPage() {
   "@type": "LandmarksOrHistoricalBuildings",
   "name": "Statue of Liberty",
   "description": "The Statue of Liberty is a colossal neoclassical sculpture on Liberty Island in New York Harbor.",
-  "image": "https://www.travelamerica.work/images/statue-of-liberty.jpg",
-  "url": "https://www.travelamerica.work/landmarks/statue-of-liberty",
+  "image": "https://www.travelamerica.work/data/majorcities/newyork/assets/statue-of-liberty.jpg",
+  "url": "https://www.travelamerica.work/landmarks",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Liberty Island",
@@ -41,7 +41,7 @@ export default function LandmarkPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-       <Header image={`/data/majorcities/${city}/assets/landmark-banner.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Travel in New York City – Landmark Guide!` : ""} />
+       <Header image={`/data/majorcities/${city}/assets/statue-of-liberty.jpg`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Travel in New York City – Landmark Guide!` : ""} />
        <section className={styles.splitSection} style={{ paddingTop: "175px", textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>Solo Travel in New York City – Landmark Guide!</h1>

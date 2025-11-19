@@ -13,32 +13,73 @@ export default function FoodClientPage() {
     const schema = city === "newyork"
       ? {
   "@context": "https://schema.org",
-  "@type": "Recipe",
-  "name": "Classic New York Cheesecake",
-  "description": "A creamy cheesecake recipe perfect for solo travelers exploring NYC flavors.",
-  "image": "https://www.travelamerica.work/images/ny-cheesecake.jpg",
+  "@type": "Article",
+  "headline": "Solo Dining, NYC Style: Cozy Counters & Elegant Bars",
+  "description": "A curated guide to solo dining in New York City, featuring ramen counters, elegant bars, and local flavor spots.",
   "author": {
     "@type": "Organization",
     "name": "Travel America"
   },
-  "datePublished": "2025-11-19",
-  "recipeIngredient": [
-    "2 cups graham cracker crumbs",
-    "4 packages cream cheese",
-    "1 cup sugar",
-    "4 eggs"
-  ],
-  "recipeInstructions": [
-    { "@type": "HowToStep", "text": "Preheat oven to 325°F." },
-    { "@type": "HowToStep", "text": "Mix crumbs and butter, press into pan." },
-    { "@type": "HowToStep", "text": "Beat cream cheese and sugar, add eggs." },
-    { "@type": "HowToStep", "text": "Bake for 55 minutes, cool before serving." }
-  ],
-  "nutrition": {
-    "@type": "NutritionInformation",
-    "calories": "250 calories"
-  }
-}: null;
+  "datePublished": "2025-10-19",
+  "image": "https://www.travelamerica.work/data/majorcities/assets/nyc-solo-dining.png",
+  "articleSection": ["Fast & Flavorful", "Bar Dining", "Local Flavor"],
+  "mainEntity": [
+    {
+      "@type": "Restaurant",
+      "name": "Ichiran Ramen",
+      "servesCuisine": "Japanese Ramen",
+      "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
+    },
+    {
+      "@type": "Restaurant",
+      "name": "Mimi Cheng’s Dumplings",
+      "servesCuisine": "Chinese Dumplings",
+      "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
+    },
+    {
+      "@type": "Restaurant",
+      "name": "Shake Shack",
+      "servesCuisine": "American Burgers",
+      "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
+    },
+    {
+      "@type": "Restaurant",
+      "name": "The Modern",
+      "servesCuisine": "Contemporary American",
+      "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
+    },
+    {
+      "@type": "Restaurant",
+      "name": "Estela",
+      "servesCuisine": "Modern American",
+      "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
+    },
+    {
+      "@type": "Restaurant",
+      "name": "Café Sabarsky",
+      "servesCuisine": "Austrian Café",
+      "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
+    },
+    {
+      "@type": "Restaurant",
+      "name": "Murray’s Bagels",
+      "servesCuisine": "Bagels",
+      "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
+    },
+    {
+      "@type": "Restaurant",
+      "name": "Grand Central Oyster Bar",
+      "servesCuisine": "Seafood",
+      "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
+    },
+    {
+      "@type": "Restaurant",
+      "name": "Joe Allen",
+      "servesCuisine": "American",
+      "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
+    }
+  ]
+} : null;
 
     return(
         <>
@@ -46,7 +87,7 @@ export default function FoodClientPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-        <Header image={`/data/majorcities/${city}/assets/foodpagebanner.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Travel ${capitalizeWords(city)}!` : ""} />
+        <Header image={`/data/majorcities/${city}/assets/nyc-solo-dining.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Travel ${capitalizeWords(city)}!` : ""} />
         <section className={styles.splitSection} style={{ paddingTop: "175px", textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>Discover the Best Solo Dining Spots and Flavorful Food Halls in NYC</h1>

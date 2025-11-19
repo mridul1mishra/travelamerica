@@ -29,7 +29,7 @@ export default function SoloItineraryClient() {
                           { "@type": "ListItem", "position": 3, "name": "Day 3: Solo Dining & Cultural Highlights" }
                         ]
                       },
-                      "image": "https://www.travelamerica.work/data/majorcities/newyork/assets/safetybanner.png",
+                      "image": "https://www.travelamerica.work/data/majorcities/newyork/assets/solo-travel-itinerary.png",
                       "spatialCoverage": {
                         "@type": "TouristDestination",
                         "name": "New York City",
@@ -53,7 +53,7 @@ export default function SoloItineraryClient() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
     <div className="App">
-      <Header image={`/data/majorcities/${city}/assets/banner-itinerary.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Travel Itinerary for New York City` : ""} />
+      <Header image={`/data/majorcities/${city}/assets/solo-travel-itinerary.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? `Solo Travel Itinerary for New York City` : ""} />
       <section className={styles.splitSection} style={{ paddingTop: "175px", textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>3-Day Solo Travel Itinerary for New York City</h1>
