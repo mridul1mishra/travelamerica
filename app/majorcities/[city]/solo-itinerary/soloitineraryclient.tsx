@@ -12,26 +12,38 @@ export default function SoloItineraryClient() {
     const cityParam = params?.city;
     const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
     const citiesWithoutBanner = ['lasvegas'];
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "TouristTrip",
-      "name": "Solo Travel Itinerary for New York City",
-      "about": {
-        "@type": "TouristDestination",
-        "name": "New York City",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "New York",
-          "addressRegion": "NY",
-          "addressCountry": "US"
-        },
-        "containsPlace": [
-          { "@type": "TouristAttraction", "name": "Times Square" },
-          { "@type": "TouristAttraction", "name": "Central Park" },
-          { "@type": "TouristAttraction", "name": "NYC Ferry" }
-        ]
+    const schema = city === "newyork"
+      ? {
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "Solo Travel Itinerary for New York City",
+  "description": "Explore NYC solo with this 3-day itinerary covering landmarks, neighborhoods, and Brooklyn vibes.",
+  "touristType": { "@type": "Audience", "name": "Solo Travelers" },
+  "itinerary": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Day 1: Midtown Landmarks",
+        "item": { "@type": "TouristAttraction", "name": "Times Square" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Day 2: Neighborhood Exploration",
+        "item": { "@type": "TouristAttraction", "name": "Central Park" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Day 3: Solo Dining & Culture",
+        "item": { "@type": "TouristAttraction", "name": "NYC Ferry" }
       }
-    };
+    ]
+  }
+}: null;
+
 
     return(
       <>
