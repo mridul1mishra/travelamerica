@@ -75,8 +75,84 @@ export default function SoloTravelPage() {
     { "@type": "Place", "name": "New York City" }
   ]
                 };
+    const schema3 = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is New York City safe for solo travelers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, NYC is generally safe for solo travelers, especially in well-lit areas like Midtown, SoHo, and Brooklyn Heights. Stay alert and avoid isolated zones after dark."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I pack for solo travel in NYC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pack a portable charger, ID/passport copies, MetroCard or OMNY, and a basic first aid kit. NYC demands readiness and smart gear."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I navigate NYC solo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use Citymapper, Transit App, and NYC Ferry. Stay in central hotels with 24/7 security and avoid rush hour subway transfers."
+      }
+    }
+  ]
+};
+    const schema4 = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "NYC Solo Travel Safety & Packing Checklist",
+  "itemListOrder": "Unordered",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Portable charger" },
+    { "@type": "ListItem", "position": 2, "name": "ID/passport copies" },
+    { "@type": "ListItem", "position": 3, "name": "MetroCard or OMNY card" },
+    { "@type": "ListItem", "position": 4, "name": "Basic first aid kit" },
+    { "@type": "ListItem", "position": 5, "name": "Citymapper or Transit App" },
+    { "@type": "ListItem", "position": 6, "name": "Stay alert in Midtown and Bronx after dark" }
+  ]
+};
+    const schema5 = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Navigate NYC Safely as a Solo Traveler",
+  "description": "Step-by-step guide for solo travelers to navigate New York City using public transport and apps.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Download Citymapper or Transit App",
+      "text": "Use these apps to plan subway and bus routes in real time."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Preload your MetroCard or OMNY",
+      "text": "Avoid queues and delays by preparing your transit card in advance."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Avoid rush hour transfers",
+      "text": "Plan routes to skip crowded stations between 7–9 AM and 5–7 PM."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Stay in safe, central hotels",
+      "text": "Choose accommodations with 24/7 security in neighborhoods like SoHo or Brooklyn Heights."
+    }
+  ]
+};
+
     return(
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema5) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema4) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema3) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema2) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
         <Header image={`/data/majorcities/${city}/assets/safetybanner.png`} bannerText={city && !citiesWithoutBanner.includes(city) ? (<span style={{ color: '#1A2A3A', fontWeight: '600', fontSize: '40px' }}>Solo Travel in NYC: Safe Itinerary, <br />Packing Tips and Best Landmarks!</span>) : ""} />
