@@ -13,30 +13,25 @@ export default function SoloItineraryClient() {
     const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
     const citiesWithoutBanner = ['lasvegas'];
     const schema = {
-  "@context": "https://schema.org",
-  "@type": "TouristTrip",
-  "name": "Solo Travel Itinerary for New York City",
-  "description": "Explore NYC solo with this 3-day itinerary covering landmarks, neighborhoods, and Brooklyn vibes.",
-  "touristType": { "@type": "Audience", "name": "Solo Travelers" },
-  "itinerary": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Day 1: Midtown Landmarks",
-        "item": {
-          "@type": "TouristDestination",
-          "name": "New York City",
-          "touristAttraction": [
-            { "@type": "TouristAttraction", "name": "Times Square" },
-            { "@type": "TouristAttraction", "name": "Central Park" }
-          ]
-        }
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "Solo Travel Itinerary for New York City",
+      "about": {
+        "@type": "TouristDestination",
+        "name": "New York City",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "New York",
+          "addressRegion": "NY",
+          "addressCountry": "US"
+        },
+        "containsPlace": [
+          { "@type": "TouristAttraction", "name": "Times Square" },
+          { "@type": "TouristAttraction", "name": "Central Park" },
+          { "@type": "TouristAttraction", "name": "NYC Ferry" }
+        ]
       }
-    ]
-  }
-};
+    };
 
     return(
       <>
