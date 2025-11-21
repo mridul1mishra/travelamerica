@@ -26,8 +26,7 @@ export default function RootLayout({
       <head>
           <title>Travel Americas | Discover Iconic Cities to Visit</title>
           <meta name="description" content="Discover carefully selected city guides for Las Vegas, Orlando, New York, and Los Angeles. Explore culture, food, and attractions with insider insights" />
-          <link rel="preload" as="font" href="/data/corben-cdnfonts/Corben-Bold.woff2" type="font/woff2" crossOrigin="anonymous"/>
-          <link rel="preload" as="image" href="/data/logo3.png" type="image/png"/>
+          
           
       </head>
       

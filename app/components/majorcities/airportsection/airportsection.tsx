@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import "./airportsection.css";
 import Cities from "../../../models/majorcities";
+import { useParams } from "next/navigation";
 
 type Props = {
   onSelect: (section: number) => void;
@@ -21,7 +22,7 @@ const Airportsection: React.FC<Props> = ({ content, onSelect }) => {
   }
 
   const city = content;
-
+console.log("URL",city);
   return (
     <section className="airport-section">
       <div className="container">
@@ -45,7 +46,7 @@ const Airportsection: React.FC<Props> = ({ content, onSelect }) => {
             </div>
           </div>
           <div className="cta-button-wrapper">
-            <a href="/majorcities/newyork/solo-travel"><button className="plan-button">Plan Your NYC Trip →</button></a>
+            <a href={city.url}><button className="plan-button">{city.label} →</button></a>
           </div>
           
         </div>
