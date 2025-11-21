@@ -1,26 +1,34 @@
 [
   {
-    "img": "/data/majorcities/losangeles/assets/carnival-baja-mexico-region-image-2.avif",
-    "title": "Los Angeles",
-    "route": "Los Angeles → Catalina Island → Ensenada → Los Angeles",
-    "duration": "4 Nights",
-    "price": "$189 AVG PER PERSON",
+    "img": "/data/majorcities/orlando/assets/rc-cruise.jpg",
+    "title": "Utopia of the Seas: 3‑Night Bahamas & Perfect Day at CocoCay",
+    "route": "Port Canaveral (Orlando) → Nassau Bahamas → CocoCay → Port Canaveral (Orlando)",
+    "duration": "offers weekend Bahamas getaways with private island access—perfect for first-time cruisers seeking modern amenities and short, memorable trips",
+    "price": "$479 per person, starting price",
     "url": "https://www.carnival.com/booking/review?embkCode=LAX&itinCode=LXQ&durDays=4&shipCode=FN&subRegionCode=MB&sailingID=20717&sailDate=12072025&numGuests=2&isMilitary=N&isOver55=N&isPastGuest=N&stateCode=&couponCode=&evsel=&locality=1&currency=USD&qbPrice=189&qbMetaCode=IS&qbRateCode=P2P&country=US"
   },
   {
-    "img": "/data/majorcities/losangeles/assets/royal-carribean-cruise.webp",
-    "title": "Navigator of the Seas",
-    "route": "Los Angeles → Ensenada, Mexico → Cabo → Vallarta → Los Angeles",
-    "duration": "7 Nights",
-    "price": "$530 AVG PER PERSON",
-    "url": "https://www.royalcaribbean.com/itinerary/7-night-ensenada-cabo-vallarta-cruise-from-los-angeles-on-navigator-NV07X058?country=USA&currencyCode=USD&sailDate=2026-01-26"
+    "img": "/data/majorcities/orlando/assets/RC-cruise.webp",
+    "title": "Star of the Seas: 7‑Night Eastern Caribbean",
+    "route": "Port Canaveral (Orlando) → CocoCay Bahamas → At Sea → Charlotte Amalie, St. Thomas → Philipsburg, St. Maarten → 2 Days At Sea → Port Canaveral (Orlando)",
+    "duration": "The Star of the Seas is Royal Caribbean’s newest Icon Class flagship. It blends mega‑ship innovation making it a versatile choice for solo explorers, couples, families/group, and luxury adventurers alike",
+    "price": "$1,038 per person, starting price",
+    "url": "https://www.royalcaribbean.com/itinerary/7-night-eastern-caribbean-perfect-day-from-orlando-port-canaveral-on-star-ST07E440"
   },
   {
-    "img": "/data/majorcities/losangeles/assets/1440_JOY15LAXCSLACAPRQPCLPCTCTGMIA.avif",
-    "title": "Norwegian Cruise",
-    "route": "Los Angeles → Cabo → Acapulco → Puerto Quetzal → Puntarenas → Panama City(Panama Canal) → Cartagena → Colombia to Miami",
-    "duration": "15 Nights",
-    "price": "$1,199 AVG PER PERSON",
+    "img": "/data/majorcities/orlando/assets/carnival-glory_orientation.avif",
+    "title": "Carnival Glory: 3‑Night Bahamas",
+    "route": "Port Canaveral (Orlando) → At Sea → Celebration Key, Bahamas → Port Canaveral (Orlando)",
+    "duration": "The Carnival Glory 3‑Night Bahamas cruise With Carnival’s lively onboard atmosphere and a private island stop, it’s ideal for explorers, couples, families, and groups seeking a quick tropical escape.",
+    "price": "$319–$379 per person, starting price",
     "url": "https://www.ncl.com/vacation-builder/planning/cruise-itinerary?itineraryCode=JOY15LAXCSLACAPRQPCLPCTCTGMIA-NIC-JOY15LAXACACSLCTGPCLPCTPRQMIA&guests=2&gateway=NONE"
+  },
+  {
+    "img": "/data/majorcities/orlando/assets/disney-cruise-wish.avif",
+    "title": "Disney Wish: Bahamian Cruise (3 nights)",
+    "route": "Port Canaveral Orlando → Nassau(Bahamas) → Castaway Cay(Disney Pvt. Island) → Port Canaveral",
+    "duration": "The Disney Wish 3‑Night Bahamian Cruise is a premium short escape With Disney’s signature entertainment, themed dining, and private island exclusivity, it’s ideal for families, couples, and luxury travellers seeking a magical getaway.",
+    "price": "$1,052 per person, starting price",
+    "url": "https://www.cruisecritic.com/find-a-cruise/departure-port-port-canaveral/ship-disney-wish"
   }
 ]
