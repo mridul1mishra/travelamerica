@@ -4,7 +4,7 @@ import Majorcities from "./components/Home/majorcities/majorcities";
 import { StorySection } from './models/story';
 import mySectionData from "./data/home/mysection.json";
 import Footer from './components/Header/Footer/footer';
-import banner from "./assets/Banner.jpg";
+
 import FAQ from './components/faq/faq';
 import { getFaq } from './lib/FaqData';
 import Head from 'next/head';
@@ -12,7 +12,7 @@ import Script from 'next/script';
 
 const section: StorySection = mySectionData as StorySection;
 export default async function Home(){
-
+  const banner = "/data/home/banner.webp";
   const { faqTravelHubData } = await getFaq();
   const schema = {
   "@context": "https://schema.org",
