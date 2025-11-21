@@ -25,9 +25,43 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const schema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Us - Travel America",
+  "url": "https://www.travelamerica.work/companydetails",
+  "description": "Learn more about Travel America, our mission to provide curated itineraries, travel tips, and resources for solo, group, and couple travelers across major US cities.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Travel America",
+    "url": "https://www.travelamerica.work",
+    "logo": "https://www.travelamerica.work/_next/image?url=%2Fdata%2Flogo3.png&w=3840&q=75",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "info@travelamerica.work"
+    },
+    "foundingDate": "2023",
+    "founder": {
+      "@type": "Person",
+      "name": "Mridul"
+    }
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Travel America",
+    "url": "https://www.travelamerica.work"
+  }
+};
+
   return (
     <html lang="en">
-      
+      <head>
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      </head>
       
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
