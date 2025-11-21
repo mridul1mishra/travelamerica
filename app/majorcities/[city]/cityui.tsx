@@ -18,9 +18,6 @@ export default function CityUIPage({ airportsection, propertySections,personaCon
     
     const [activeSection, setActiveSection] = useState<number | null>(1);
     const [activeGroup, setActiveGroup] = useState<number | null>(1);
-    
-
-
     return (
         <>
         <Airportsection content={airportsection} onSelect={setActiveSection} />

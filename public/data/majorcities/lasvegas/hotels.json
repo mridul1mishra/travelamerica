@@ -1,42 +1,42 @@
 [
   {
-    "img": "/data/majorcities/losangeles/assets/loews-hollywood-hotel.jpg",
+    "img": "/data/majorcities/lasvegas/assets/venetian-hotel.jpg",
     "title": "The Venetian Resort",
-    "route": "Enter a world made in the image of Italian-inspired grandeur, where possibility waits around every corner. You're invited to explore dynamic experiences in opulent surroundings, from lavish suites and electrifying casinos to world-class restaurants and entertainment. Here's to la bella vita.",
+    "route": "This Italian-inspired luxury resort on the Las Vegas Strip offers gondola rides, expansive suites, and multiple pools. With a full-service spa and group-friendly layouts, it’s a top choice for travelers seeking immersive Las Vegas experiences. Perfect for adventurers, it combines upscale amenities with a vibrant social atmosphere.",
     "duration": "4.5 (5,400)",
     "price": "$182 1 night, 2 adults",
     "url": "https://www.venetianlasvegas.com/book"
   },
   {
-    "img": "/data/majorcities/losangeles/assets/Freehand-Hotel.jpg",
-    "title": "MGM Grand",
-    "route": "Freehand Los Angeles blends boutique style with hostel vibes in downtown LA. Set in a restored 1920s building, it offers chic private rooms, shared dorms, and a rooftop pool with sweeping city views. Popular for its artsy design, lively Broken Shaker bar, and central location near entertainment and dining.",
+    "img": "/data/majorcities/lasvegas/assets/flamingo.jpg",
+    "title": "Flamingo Las Vegas",
+    "route": "Located right on the Strip for safety and convenience. Travelers enjoy easy access to nightlife, dining, and attractions without transport. Its garden and wildlife habitat provide a calmer retreat, with consistently strong reviews highlighting location and balanced budget value.",
     "duration": "3 (672 reviews)",
-    "price": "$108 1 night, 2 adults",
-    "url": "https://www.booking.com/hotel/us/freehand-los-angeles.html?aid=2276674&label=msn-r92LlIDH7ysN7G_rX9OEFg-80127075285737%3Atikwd-80127263367521%3Aloc-190%3Aneo%3Amte%3Alp96789%3Adec%3AqsFreehand%20Los%20Angeles&sid=50697d3a2a1c8ab93bb555d9cd655158&age=0&all_sr_blocks=208673609_347117586_0_0_0_566874&checkin=2025-09-30&checkout=2025-10-01&dest_id=20014181&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=208673609_347117586_0_0_0_566874&hpos=1&matching_block_id=208673609_347117586_0_0_0_566874&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=208673609_347117586_0_0_0_566874_10756&srepoch=1758984211&srpvid=42a3677cdab000d2&type=total&ucfs=1&"
+    "price": "$124 per night",
+    "url": "https://www.booking.com/hotel/us/flamingo-casino.html"
   },
   {
-    "img": "/data/majorcities/losangeles/assets/podshare-hollywood.webp",
-    "title": "Caesars Palace",
-    "route": "PodShare Hollywood is a budget-friendly co-living space in the heart of Hollywood, Los Angeles. It offers shared sleeping pods, communal kitchens, and lounge areas, creating a social and vibrant environment. Ideal for solo travelers, digital nomads, or groups seeking affordable accommodations near major attractions like the Walk of Fame.",
+    "img": "/data/majorcities/lasvegas/assets/cosmo-balcony.jpg",
+    "title": "The Cosmopolitan of Las Vegas",
+    "route": "The property delivers a modern, upscale vibe with balcony rooms overlooking the Strip. Travelers enjoy its rooftop pools, trendy clubs, and Michelin-starred dining. Positioned centrally, it’s ideal for spontaneous exploration, appealing to those seeking indulgence, nightlife, and premium experiences in a vibrant social atmosphere.",
     "duration": "4.0 (152 reviews)",
-    "price": "$56 1 night, 2 adults",
+    "price": "$175 per night",
     "url": "https://www.booking.com/hotel/us/podshare-hollywood.html?aid=2276674&label=msn-r92LlIDH7ysN7G_rX9OEFg-80127075285737%3Atikwd-80127263367521%3Aloc-190%3Aneo%3Amte%3Alp96789%3Adec%3AqsFreehand%20Los%20Angeles&sid=50697d3a2a1c8ab93bb555d9cd655158&all_sr_blocks=207976503_95463134_0_0_0&checkin=2025-10-08&checkout=2025-10-09&dest_id=2079765&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=207976503_95463134_0_0_0&hpos=1&matching_block_id=207976503_95463134_0_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=207976503_95463134_0_0_0__5576&srepoch=1758984686&srpvid=eeac6871bf340339&type=total&ucfs=1&"
   },
   {
-    "img": "/data/majorcities/losangeles/assets/Linehotel-LA.webp",
-    "title": "Mariott International",
-    "route": "The LINE Hotel Los Angeles, located in vibrant Koreatown, offers a stylish and modern boutique experience ideal for couples. With chic rooms, rooftop pool, and trendy dining, it blends romance and city energy. Perfect for couples seeking a lively, design-focused stay while exploring LA’s restaurants, nightlife, and attractions.",
+    "img": "/data/majorcities/lasvegas/assets/excaliberresorts.webp",
+    "title": "Excalibur Hotel & Casino",
+    "route": "This castle-themed retreat on the Strip offers safety, convenience, and group-friendly amenities with walkable access to shows, dining, and nightlife. Its spacious rooms, multiple pools, and casual dining options make it a great choice for groups of friends. The playful castle theme adds charm, creating a fun atmosphere that appeals to all travelers, with particular popularity among female groups seeking a lively yet budget-conscious getaway.",
     "duration": "4.0 (1574 reviews)",
-    "price": "$169 1 night, 2 adults",
+    "price": "$58 avg. per night",
     "url": "https://www.booking.com/hotel/us/the-l-a-line.html?aid=2276674&label=msn-r92LlIDH7ysN7G_rX9OEFg-80127075285737%3Atikwd-80127263367521%3Aloc-190%3Aneo%3Amte%3Alp96789%3Adec%3AqsFreehand%20Los%20Angeles&sid=50697d3a2a1c8ab93bb555d9cd655158&all_sr_blocks=46593502_91930054_2_0_0_236312&checkin=2025-10-08&checkout=2025-10-09&dest_id=465935&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=46593502_91930054_2_0_0_236312&hpos=1&matching_block_id=46593502_91930054_2_0_0_236312&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=46593502_91930054_2_0_0_236312_16892&srepoch=1758985558&srpvid=5aba6a26e07404e0&type=total&ucfs=1&"
   },
   {
-    "img": "/data/majorcities/losangeles/assets/Linehotel-LA.webp",
-    "title": "Hilton Hotel and Resorts",
-    "route": "The LINE Hotel Los Angeles, located in vibrant Koreatown, offers a stylish and modern boutique experience ideal for couples. With chic rooms, rooftop pool, and trendy dining, it blends romance and city energy. Perfect for couples seeking a lively, design-focused stay while exploring LA’s restaurants, nightlife, and attractions.",
+    "img": "/data/majorcities/lasvegas/assets/Bellagio-Exterior-Cooler.webp",
+    "title": "Bellagio",
+    "route": "Bellagio delivers timeless luxury on the Las Vegas Strip, renowned for its iconic fountains and romantic atmosphere. Couples enjoy elegant suites, fine dining, and a world-class spa, all within walking distance of nightlife and entertainment. Its blend of sophistication and convenience makes it a favorite for shared indulgent escapes.",
     "duration": "4.0 (1574 reviews)",
-    "price": "$169 1 night, 2 adults",
-    "url": "https://www.booking.com/hotel/us/the-l-a-line.html?aid=2276674&label=msn-r92LlIDH7ysN7G_rX9OEFg-80127075285737%3Atikwd-80127263367521%3Aloc-190%3Aneo%3Amte%3Alp96789%3Adec%3AqsFreehand%20Los%20Angeles&sid=50697d3a2a1c8ab93bb555d9cd655158&all_sr_blocks=46593502_91930054_2_0_0_236312&checkin=2025-10-08&checkout=2025-10-09&dest_id=465935&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=46593502_91930054_2_0_0_236312&hpos=1&matching_block_id=46593502_91930054_2_0_0_236312&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=46593502_91930054_2_0_0_236312_16892&srepoch=1758985558&srpvid=5aba6a26e07404e0&type=total&ucfs=1&"
+    "price": "$174 avg. nights",
+    "url": "https://www.booking.com/hotel/us/bellagio.html"
   }
 ]

@@ -27,10 +27,12 @@ const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
           fetch(`/data/majorcities/${city}/hotels.json`),
           fetch(`/data/majorcities/${city}/cruises.json`)
         ]);
+        
         const [hotelData, cruiseData]: [Cruise[], Cruise[]] = await Promise.all([
           hotelRes.json(),
           cruiseRes.json()
         ]);
+
         setHotels(hotelData);
         setCruise(cruiseData);
       } catch (error) {
@@ -44,6 +46,7 @@ const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
   }, [city]);
   const section = content.find(s => s.id === active);
   const trackRef = useRef<HTMLDivElement | null>(null);
+  
     const scroll = (direction: "left" | "right") => {
       if (trackRef.current) {
         const card = trackRef.current.querySelector<HTMLDivElement>(".cruise-card");

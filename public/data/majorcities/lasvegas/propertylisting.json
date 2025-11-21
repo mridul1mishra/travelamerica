@@ -54,6 +54,16 @@
           "buttonUrl": "https://www.kayak.com/flights/JFK-LAS/2025-11-09?ucs=10r0ex&sort=bestflight_a"
         }
       ]
+    },
+    {
+      "id": 2,
+      "title": "Book Hotels to Las Vegas",
+      "className": "hotel-section"
+    },
+    {
+      "id": 3,
+      "title": "Book Cruise to Las Vegas",
+      "className": "cruise-section"
     }
   ]
 }

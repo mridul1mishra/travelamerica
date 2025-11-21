@@ -55,7 +55,16 @@
           "buttonUrl": "https://www.skyscanner.com/flights"
         }
       ]
+    },
+    {
+      "id": 2,
+      "title": "Book Hotels to Orlando",
+      "className": "hotel-section"
+    },
+    {
+      "id": 3,
+      "title": "Book Cruise to Orlando",
+      "className": "cruise-section"
     }
-    
   ]
 }
