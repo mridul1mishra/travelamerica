@@ -41,6 +41,84 @@ export default async function CityPage({ params }: PageProps) {
     "image": `https://www.travelamerica.work/data/${city}.jpg`,
     "touristType": "Solo Travelers",
   };
+  const schema1 = city === "newyork" ? {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "New York City Travel Hub",
+  "description": "Your complete guide to solo travel in New York City — attractions, food, safety tips, and itineraries.",
+  "url": "https://www.travelamerica.work/newyork",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.travelamerica.work"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "New York City",
+        "item": "https://yourdomain.com/newyork"
+      }
+    ]
+  },
+  "about": {
+    "@type": "City",
+    "name": "New York City",
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/New_York_City",
+      "https://www.nyc.gov"
+    ]
+  },
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is New York City safe for solo travelers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, NYC is generally safe for solo travelers, especially in well-known areas like Manhattan. Stay alert in crowded places and use common travel precautions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the best neighborhoods to stay in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Popular solo-friendly neighborhoods include Midtown Manhattan, Brooklyn’s Williamsburg, and the Upper West Side."
+        }
+      }
+    ]
+  },
+  "hasPart": {
+    "@type": "ItemList",
+    "name": "New York City Travel Clusters",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Top Attractions",
+        "url": "https://www.travelamerica.work/majorcities/newyork/solo-travel"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Food & Dining",
+        "url": "https://www.travelamerica.work/majorcities/newyork/food"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Solo Travel Tips",
+        "url": "https://www.travelamerica.work/majorcities/newyork/solo-travel"
+      }
+    ]
+  }
+
+  }: null;
   const canonicalUrl = `https://www.travelamerica.work/majorcities/${city}`;
   const citiesWithoutBanner = ['lasvegas'];
     if (!city) return <div>Loading place visit data...</div>;
@@ -54,8 +132,8 @@ export default async function CityPage({ params }: PageProps) {
               
               <Placevisit city={city}/>
               <Footer />
-              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
+              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
       </div>
       </>
     );

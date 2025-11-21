@@ -41,6 +41,12 @@ export default function SoloItineraryClient() {
         "item": { "@type": "TouristAttraction", "name": "NYC Ferry" }
       }
     ]
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Travel America",
+    "url": "https://www.travelamerica.work",
+    "logo": "https://www.travelamerica.work/data/logo3.png"
   }
 }: null;
 
