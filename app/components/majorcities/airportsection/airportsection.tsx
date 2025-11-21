@@ -22,7 +22,7 @@ const Airportsection: React.FC<Props> = ({ content, onSelect }) => {
   }
 
   const city = content;
-console.log("URL",city);
+
   return (
     <section className="airport-section">
       <div className="container">
