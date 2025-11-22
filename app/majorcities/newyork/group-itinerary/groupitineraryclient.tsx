@@ -7,8 +7,58 @@ import styles from './groupitinerary.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
 
 export default function GroupItineraryClient() {
+    const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "3-Day New York City Group Travel Itinerary",
+  "description": "Plan the perfect 3-day NYC trip for groups with museums, parks, Broadway, and a Hudson River dinner cruise.",
+  "author": {
+    "@type": "Organization",
+    "name": "YourBrandName"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "TouristAttraction",
+        "position": 1,
+        "name": "Metropolitan Museum of Art",
+        "description": "Quiet reflection in timeless galleries."
+      },
+      {
+        "@type": "TouristAttraction",
+        "position": 2,
+        "name": "Central Park",
+        "description": "Tree-lined paths and lakeside views."
+      },
+      {
+        "@type": "TouristAttraction",
+        "position": 3,
+        "name": "Guggenheim Museum",
+        "description": "Modern art in iconic spiral galleries."
+      },
+      {
+        "@type": "TouristAttraction",
+        "position": 4,
+        "name": "Frick Collection",
+        "description": "Intimate encounters with European masterpieces."
+      },
+      {
+        "@type": "Event",
+        "position": 5,
+        "name": "Hudson River Dinner Cruise",
+        "description": "Group dancing, skyline views, and shared plates."
+      }
+    ]
+  }
+};
+
     return(
         <>
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
         <div className="App">
             <Header image={`/data/majorcities/newyork/assets/solo-travel-itinerary.png`} bannerText={`Solo Travel Itinerary for New York City`} />
             <section className={styles.splitSection} style={{ paddingTop: "175px", textAlign: "center" }}>
@@ -18,7 +68,7 @@ export default function GroupItineraryClient() {
             </section>  
             <section className={styles.splitSection}>
                 <div className={styles.imageWrapper}>
-                <Image src="/data/majorcities/newyork/assets/daysolonew.png" alt="Map of solo travel route through Central Park and Rockefeller Center in NYC"
+                <Image src="/data/majorcities/newyork/assets/group/nyc-group-itinerary-day1-times-square-chelsea-market-broadway.png" alt="Day 1 NYC group itinerary map featuring Times Square, Top of the Rock, Chelsea Market, High Line, Hell’s Kitchen, and Broadway highlights"
                     fill className={styles.mapImage}/>
                 </div>
                 <div className={styles.textWrapper}>
@@ -50,8 +100,8 @@ export default function GroupItineraryClient() {
         </div>
         <div className={styles.imageWrapper}>
           <Image
-            src="/data/majorcities/newyork/assets/day2solo.png"
-            alt="Scenic view of New York City landmarks featured in the Day 2 solo travel itinerary"
+            src="/data/majorcities/newyork/assets/group/nyc-group-itinerary-day2-harlem-museums-east-village.png"
+            alt="Scene-based illustration of group interaction at Natural History Museum with kids pointing at dinosaur skeleton and adults reacting with playful awe"
             fill
             className={styles.mapImage}
           />
@@ -59,11 +109,11 @@ export default function GroupItineraryClient() {
             </section>
             <section className={styles.splitSection}>
                 <div className={styles.imageWrapper}>
-                <Image src="/data/majorcities/newyork/assets/daysolonew.png" alt="Map of solo travel route through Central Park and Rockefeller Center in NYC"
+                <Image src="/data/majorcities/newyork/assets/group/nyc-group-itinerary-day3-dinner-cruise-dancing-manhattan.png" alt="Scene-based illustration of Day 3 NYC group itinerary with friends dancing on a Hudson River dinner cruise, Manhattan skyline, and live jazz band"
                     fill className={styles.mapImage}/>
                 </div>
                 <div className={styles.textWrapper}>
-                <h2 className={styles.heading}>Day 1: Culture, Cruise, and Companionship</h2>
+                <h2 className={styles.heading}>Day 3: Culture, Cruise, and Companionship</h2>
                 <p className={styles.subheading}></p>
                 <ul className={styles.itineraryList}>
                     <li className={styles.subheading}>🌅After the excitement of Broadway and the East Village, Day 3 begins at a gentler pace. Groups step into the Metropolitan Museum of Art, where timeless galleries invite quiet reflection and awe. A short walk into Central Park offers tree‑lined paths and lakeside views, creating a restorative balance of art and nature to ease into the day.</li>
