@@ -12,8 +12,7 @@ export default function SoloItineraryClient() {
     const cityParam = params?.city;
     const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
     const citiesWithoutBanner = ['lasvegas'];
-    const schema = city === "newyork"
-      ? {
+    const schema = {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
   "name": "Solo Travel Itinerary for New York City",
@@ -48,7 +47,7 @@ export default function SoloItineraryClient() {
     "url": "https://www.travelamerica.work",
     "logo": "https://www.travelamerica.work/data/logo3.png"
   }
-}: null;
+};
 
 
     return(
