@@ -66,7 +66,7 @@ export default async function Home(){
 };
     return (
         <div className="App">      
-          <Header image={banner} bannerText="Our Story"  />
+          <Header image={banner} bannerText="Banner Image Discover America Most Iconic Cities"  />
           <div id="major-cities" >
               <Majorcities section={section} />
               <FAQ groupedFaqs={faqTravelHubData}/>
