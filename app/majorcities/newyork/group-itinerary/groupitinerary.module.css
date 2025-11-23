@@ -121,7 +121,7 @@
 
   .heading {
     font-size: 1.75rem;
-    padding-top: 120px;
+    padding-inline-start: 40px;
   }
 
   .subheading {

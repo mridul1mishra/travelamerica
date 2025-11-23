@@ -76,10 +76,10 @@ export default function SoloItineraryClient() {
           <h2 className={styles.heading}>Day 1: NYC Landmarks for Solo Travelers</h2>
           <p className={styles.subheading}>Start with the classics. Today’s about iconic sights and easy wins.</p>
           <ul className={styles.itineraryList}>
-              <li className={styles.subheading}>Morning: Central Park — Bethesda Terrace to Strawberry Fields</li>
-              <li className={styles.subheading}>Afternoon: Rockefeller Center — Top of the Rock</li>
-              <li className={styles.subheading}>Midday: The Met to MoMA</li>
-              <li className={styles.subheading}>Evening: Dinner at Time Out Market or Eataly Flatiron</li>
+              <li className={styles.subheading}>🌅Morning: Central Park — Bethesda Terrace to Strawberry Fields</li>
+              <li className={styles.subheading}>☀️Afternoon: Rockefeller Center — Top of the Rock</li>
+              <li className={styles.subheading}>☀️Midday: The Met to MoMA</li>
+              <li className={styles.subheading}>🌙Evening: Dinner at Time Out Market or Eataly Flatiron</li>
           </ul>
           <Link href="/majorcities/newyork/solo-travel" className={styles.ctaButton}>
             NYC solo travel safety tips
@@ -91,10 +91,10 @@ export default function SoloItineraryClient() {
           <h2 className={styles.heading}>Day 2: Neighborhoods & Culture</h2>
           <p className={styles.subheading}>Get local. Today’s about walking, eating, and soaking up NYC’s creative energy.</p>
           <ul className={styles.itineraryList}>
-              <li className={styles.subheading}>Morning: Coffee + bagel in West Village — Joe Coffee or Murray’s Bagels</li>
-              <li className={styles.subheading}>Afternoon: Explore SoHo galleries or shop in Nolita</li>
-              <li className={styles.subheading}>Midday: Walk the High Line → lunch at Chelsea Market</li>
-              <li className={styles.subheading}>Evening: Catch a Broadway show — solo seats are easy to grab</li>
+              <li className={styles.subheading}>🌅Morning: Coffee + bagel in West Village — Joe Coffee or Murray’s Bagels</li>
+              <li className={styles.subheading}>☀️Afternoon: Explore SoHo galleries or shop in Nolita</li>
+              <li className={styles.subheading}>☀️Midday: Walk the High Line → lunch at Chelsea Market</li>
+              <li className={styles.subheading}>🌙Evening: Catch a Broadway show — solo seats are easy to grab</li>
           </ul>
           <Link href="/majorcities/newyork/landmark" className={styles.ctaButton}>
             Best neighborhoods for solo travelers in NYC
@@ -122,10 +122,10 @@ export default function SoloItineraryClient() {
           <h2 className={styles.heading}>Day 3: Brooklyn & Local Vibes</h2>
           <p className={styles.subheading}>Cross the river. Brooklyn offers chill parks, great food, and skyline views.</p>
           <ul className={styles.itineraryList}>
-              <li className={styles.subheading}>Morning: Take the Staten Island Ferry for free Statue of Liberty views</li>
-              <li className={styles.subheading}>Midday: Walk Brooklyn Bridge → explore DUMBO and lunch at Empire Stores</li>
-              <li className={styles.subheading}>Afternoon: Chill in Prospect Park or visit Brooklyn Museum</li>
-              <li className={styles.subheading}>Evening: Rooftop drink at Westlight or jazz at The Django</li>
+              <li className={styles.subheading}>🌅Morning: Take the Staten Island Ferry for free Statue of Liberty views</li>
+              <li className={styles.subheading}>☀️Midday: Walk Brooklyn Bridge → explore DUMBO and lunch at Empire Stores</li>
+              <li className={styles.subheading}>☀️Afternoon: Chill in Prospect Park or visit Brooklyn Museum</li>
+              <li className={styles.subheading}>🌙Evening: Rooftop drink at Westlight or jazz at The Django</li>
           </ul>
           <Link href="/majorcities/newyork/food" className={styles.ctaButton}>
             Best Food Stops Along the Route
