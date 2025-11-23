@@ -87,7 +87,7 @@ export default function FoodClientPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-        <Header image={`/data/majorcities/newyork/assets/nyc-solo-dining.png`} bannerText="Solo Travel" />
+        <Header image={`/data/majorcities/newyork/assets/nyc-solo-dining.png`} bannerText="Hero banner showcasing NYC solo dining experience for travelers" />
         <section className={styles.splitSection} style={{textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>Discover the Best Solo Dining Spots and Flavorful Food Halls in NYC</h1>
