@@ -61,7 +61,7 @@ export default function GroupItineraryClient() {
       />
         <div className="App">
             <Header image={`/data/majorcities/newyork/assets/solo-travel-itinerary.png`} bannerText={`Solo Travel Itinerary for New York City`} />
-            <section className={styles.splitSection} style={{ paddingTop: "175px", textAlign: "center" }}>
+            <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                     <h1  className={styles.sectionheading}>3 Days in New York City!</h1>
                     <p>Step into New York with friends or fellow travelers — from Broadway nights to museum mornings, Central Park strolls to a Hudson River dinner cruise. This 3‑day itinerary blends culture, connection, and skyline views, giving groups the perfect balance of discovery and relaxation</p>

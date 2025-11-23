@@ -52,7 +52,11 @@
   color: #0364A0;
   margin: 2.5rem 0 0.625rem;
 }
-
+:global(li) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .subheading {
   font-family: 'Montserrat', sans-serif;
   color: rgb(24, 62, 126);

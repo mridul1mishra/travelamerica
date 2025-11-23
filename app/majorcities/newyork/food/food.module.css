@@ -22,6 +22,12 @@
     background-clip: text;
     -webkit-text-fill-color: transparent; /* gradient text effect */
 }
+
+:global(li) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .description-text {
     max-width: 900px; /* keeps line length readable */
     margin: 20px auto 40px; /* centers and adds space above/below */
