@@ -16,6 +16,10 @@ export async function generateMetadata({
     alternates: {
       canonical: canonicalUrl,
     },
+    robots: {
+    index: true,
+    follow: true,
+  },
     keywords: [
       `${formattedCity} travel guide`,
       `top attractions in ${formattedCity}`,

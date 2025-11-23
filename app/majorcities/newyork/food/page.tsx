@@ -1,9 +1,20 @@
 export const generateMetadata = () => ({
   title: 'Discover the Best Solo Dining Spots and Flavorful Food Halls in NYC',
   description:  'Plan your solo NYC adventure with tips on safety, packExplore the best solo dining spots in NYC, from cozy counters to vibrant food halls. Savor iconic bagels, ramen, and more for the perfect solo meal!',
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
       canonical: 'https://www.travelamerica.work/majorcities/newyork/food',
     },
+    twitter: {
+    card: "summary_large_image",
+    title: "3-Day NYC Group Travel Itinerary",
+    description: "Plan the perfect 3-day NYC trip for groups with museums, parks, Broadway, and a Hudson River dinner cruise.",
+    images: ["https://yourwebsite.com/images/nyc-group-itinerary-day3-dinner-cruise-dancing.png"],
+    
+  }
 });
 
 import FoodClientPage from './foodclient';

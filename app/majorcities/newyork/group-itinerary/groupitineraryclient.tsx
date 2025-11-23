@@ -63,7 +63,8 @@ export default function GroupItineraryClient() {
             <Header image={`/data/majorcities/newyork/assets/solo-travel-itinerary.png`} bannerText={`Solo Travel Itinerary for New York City`} />
             <section className={styles.splitSection} style={{ paddingTop: "175px", textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
-                    <h1  className={styles.sectionheading}>3-Day Group Travel Itinerary for New York City</h1>
+                    <h1  className={styles.sectionheading}>3 Days in New York City!</h1>
+                    <p>Step into New York with friends or fellow travelers — from Broadway nights to museum mornings, Central Park strolls to a Hudson River dinner cruise. This 3‑day itinerary blends culture, connection, and skyline views, giving groups the perfect balance of discovery and relaxation</p>
                 </div>
             </section>  
             <section className={styles.splitSection}>
@@ -77,7 +78,7 @@ export default function GroupItineraryClient() {
                 <ul className={styles.itineraryList}>
                     <li className={styles.subheading}>🌅Start your 3‑day New York group itinerary in Times Square, where friends grab coffee, snap photos, and soak in the neon buzz. Head to Rockefeller Center’s Top of the Rock for panoramic skyline views — perfect for group shots and planning the day ahead.</li>
                     <li className={styles.subheading}>☀️Chelsea Market anchors the NYC itinerary with bustling halls, artisan shops, local flavors, and shared discovery. Groups then wander toward the High Line, where elevated paths and city views spark playful energy. Male groups enjoy tacos, female groups capture stylish photos, and kids delight in ice cream stops and colorful murals. Shared laughter and spontaneous moments leave everyone energized by the city experience.</li>
-                    <li className={styles.subheading}>🌙Cap off the night with dinner in Hell’s Kitchen, , one of the best neighborhoods for group dining in NYC. Friends can enjoy hearty meals,  shared plates, or cocktails before heading to a  Broadway show. Distinctive group behaviors blend naturally — playful banter, cozy conversations, and balanced laughter — flowing smoothly from food to theater. As the lights dim 🎶, anticipation builds, and the shared awe of the performance unifies the group — ending the first night with laughter, wonder, and lasting connection.</li>
+                    <li className={styles.subheading}>🌙Cap off the night with dinner in Hell’s Kitchen. Friends can enjoy hearty meals, shared plates, or cocktails before heading to a  Broadway show. Distinctive group behaviors blend naturally — As the lights dim 🎶, anticipation builds, and the shared awe of the performance unifies the group — ending the first night with laughter, wonder, and lasting connection.</li>
                 </ul>
                 <Link href="/majorcities/newyork/solo-travel" className={styles.ctaButton}>
                     NYC solo travel safety tips
