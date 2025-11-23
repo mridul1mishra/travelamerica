@@ -60,7 +60,7 @@ export default function GroupItineraryClient() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
         <div className="App">
-            <Header image={`/data/majorcities/newyork/assets/solo-travel-itinerary.png`} bannerText={`Solo Travel Itinerary for New York City`} />
+            <Header image={`/data/majorcities/newyork/assets/group/nyc-group-itinerary-brooklyn-bridge-sunset.jpg`} bannerText={`Group of friends sharing tacos and coffee on a rooftop terrace overlooking Brooklyn Bridge and East River at sunset in NYC`} />
             <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                     <h1  className={styles.sectionheading}>3 Days in New York City!</h1>
@@ -77,8 +77,8 @@ export default function GroupItineraryClient() {
                 <p className={styles.subheading}></p>
                 <ul className={styles.itineraryList}>
                     <li className={styles.subheading}>🌅Start your 3‑day New York group itinerary in Times Square, where friends grab coffee, snap photos, and soak in the neon buzz. Head to Rockefeller Center’s Top of the Rock for panoramic skyline views — perfect for group shots and planning the day ahead.</li>
-                    <li className={styles.subheading}>☀️Chelsea Market anchors the NYC itinerary with bustling halls, artisan shops, local flavors, and shared discovery. Groups then wander toward the High Line, where elevated paths and city views spark playful energy. Male groups enjoy tacos, female groups capture stylish photos, and kids delight in ice cream stops and colorful murals. Shared laughter and spontaneous moments leave everyone energized by the city experience.</li>
-                    <li className={styles.subheading}>🌙Cap off the night with dinner in Hell’s Kitchen. Friends can enjoy hearty meals, shared plates, or cocktails before heading to a  Broadway show. Distinctive group behaviors blend naturally — As the lights dim 🎶, anticipation builds, and the shared awe of the performance unifies the group — ending the first night with laughter, wonder, and lasting connection.</li>
+                    <li className={styles.subheading}>☀️Chelsea Market anchors the afternoon with bustling halls, artisan shops, and local flavors. Groups then wander toward the High Line, where elevated paths and skyline views spark playful energy. Friends savor tacos, travelers capture stylish photos, and families pause for street performances—shared laughter and spontaneous moments leave everyone energized for the evening ahead.</li>
+                    <li className={styles.subheading}>🌙Cap off the night with dinner in Hell’s Kitchen. Friends can enjoy hearty meals, shared plates, or cocktails before heading to a  Broadway show. As the lights dim 🎶, anticipation builds, and the shared awe of the performance unifies the group — ending the Day 1 with laughter, wonder, and lasting connection.</li>
                 </ul>
                 <Link href="/majorcities/newyork/solo-travel" className={styles.ctaButton}>
                     NYC solo travel safety tips

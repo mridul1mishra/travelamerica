@@ -63,7 +63,7 @@
   font-family: 'CorbenBold', serif;
   font-size: 2rem;
   color: #0364A0;
-  margin: 2.5rem 0 0.625rem;
+  margin: 0 0 0.625rem;
   
 }
 :global(li) {
@@ -121,7 +121,7 @@
 
   .heading {
     font-size: 1.75rem;
-    padding-top: 120px;
+    padding-inline-start: 40px;
   }
 
   .subheading {

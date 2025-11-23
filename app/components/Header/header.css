@@ -25,11 +25,11 @@ a{
 }
 
 .overlay-header.scrolled .hamburger {
-  color: #222;
+  color: #7e2b7c;
 }
 
 .overlay-header.scrolled .nav-links li a {
-  color: #222;
+  color: #7e2b7c;
   padding-right: 60px;
   cursor: pointer;
 }
@@ -127,7 +127,7 @@ a{
     width: 70%;
     height: 100vh;
     background: white;
-    color: #222;
+    color: #7e2b7c;
     display: none;
     flex-direction: column;
     justify-content: center;

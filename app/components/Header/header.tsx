@@ -8,7 +8,7 @@ import Head from "next/head";
 
 type HeroProps = {
   image: string | StaticImageData; // accept Next.js image imports
-  bannerText: ReactNode;
+  bannerText: string;
 };
 
 const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
@@ -60,7 +60,7 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
       </Head>
     <section className="hero">
         <div style={{ position: "relative", width: "100%", height: "auto", aspectRatio: "1295 / 832" }}>
-          <Image src={typeof image === "string" ? image : image.src} alt="Travel Americas banner showing city skyline" fill priority fetchPriority="high" decoding="async" style={{ objectFit: "cover" }}/>
+          <Image src={typeof image === "string" ? image : image.src} alt={bannerText} fill priority fetchPriority="high" decoding="async" style={{ objectFit: "cover" }}/>
         </div>
       <header className={`overlay-header scrolled`}>
         <div className="brand-logo">          
