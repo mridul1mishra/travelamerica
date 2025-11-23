@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
           <title>Travel Americas | Discover Iconic Cities to Visit</title>
           <meta name="description" content="Discover carefully selected city guides for Las Vegas, Orlando, New York, and Los Angeles. Explore culture, food, and attractions with insider insights" />
           
@@ -38,7 +39,9 @@ export default function RootLayout({
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', 'G-SM7NC16K21');`}}/>
+        <div className="full-height">
         {children}
+        </div>
       </body>
     </html>
   );

@@ -4,14 +4,14 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px 40px;
+  padding: calc(env(safe-area-inset-top) + 20px) 40px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
   z-index: 1000;
   transition: all 0.3s ease;
-  background: rgba(0, 0, 0, 0.4); /* semi-transparent overlay */
+  
 }
 a{
   all: unset;
@@ -92,19 +92,19 @@ a{
 
 /* Hero Section */
 .hero {
-  height: 100vh;
-  background-size: cover;           /* scales proportionally */
-  background-position: center;      /* keeps subject centered */
-  background-repeat: no-repeat;     /* prevents repetition */
-  background-attachment: scroll;    /* avoids parallax on mobile */
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   position: relative;
   display: flex;
+  width: 100%;
+  overflow: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
 }
+
 
 .hero-text h1 {
   font-size: 48px;
