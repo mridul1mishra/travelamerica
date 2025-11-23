@@ -94,7 +94,7 @@ a{
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: 100dvh;
   min-height: -webkit-fill-available;
   position: relative;
   display: flex;
@@ -105,6 +105,8 @@ a{
   align-items: center;
   text-align: center;
   color: white;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 
