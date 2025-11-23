@@ -62,15 +62,13 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
         <div style={{ position: "relative", width: "100%", height: "auto", aspectRatio: "1295 / 832" }}>
           <Image src={typeof image === "string" ? image : image.src} alt="Travel Americas banner showing city skyline" fill priority fetchPriority="high" decoding="async" style={{ objectFit: "cover" }}/>
         </div>
-      <header className={`overlay-header ${isScrolled ? "scrolled" : ""}`}>
+      <header className={`overlay-header scrolled`}>
         <div className="brand-logo">          
           <a href="/">
-            {isScrolled ? (
-              <Image src="/data/logo.webp" alt="Travel Americas Logo" width={150} height={150} sizes="(max-width: 768px) 100px, 150px" fetchPriority="high"/>
-            ) : (
-              <Image src="/data/logo3.webp" alt="Travel Americas Logo" width={150} height={150}  sizes="(max-width: 768px) 100px, 150px" fetchPriority="high"/>
+               
+              <Image src="/data/logo.webp" alt="Travel Americas Logo" width={150} height={150}  sizes="(max-width: 768px) 100px, 150px" fetchPriority="high"/>
               
-            )}
+            
           </a>
         </div>
         <nav className="main-nav">
