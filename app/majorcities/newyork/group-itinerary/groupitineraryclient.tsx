@@ -60,7 +60,7 @@ export default function GroupItineraryClient() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
         <div className="App">
-            <Header image={`/data/majorcities/newyork/assets/group/nyc-group-itinerary-brooklyn-bridge-sunset.jpg`} bannerText={`Group of friends sharing tacos and coffee on a rooftop terrace overlooking Brooklyn Bridge and East River at sunset in NYC`} />
+            <Header image={`/data/majorcities/newyork/assets/group/nyc-group-itinerary-brooklyn-bridge-sunset.jpg`} bannerText="Group of friends sharing tacos and coffee on a rooftop terrace overlooking Brooklyn Bridge and East River at sunset in NYC" />
             <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                     <h1  className={styles.sectionheading}>3 Days in New York City!</h1>
