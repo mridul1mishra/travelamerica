@@ -1,15 +1,11 @@
 "use client";
-import { useParams } from "next/navigation";
+
 import Header from "../../../components/Header/header";
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './solotrave.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
 export default function SoloTravelPage() {
-    const params = useParams();
-    const cityParam = params?.city;
-    const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
-    const citiesWithoutBanner = ['lasvegas'];
     
     const schema1 = {
   "@context": "https://schema.org",
