@@ -8,7 +8,7 @@ import styles from '../group-travel/grouptravel.module.css';
 export default function GroupTravelPage() {
 return (
     <>
-        <Header image={`/data/majorcities/newyork/assets/safetybanner.png`} bannerText="Solo Travel in NYC: Safe Itinerary, Packing Tips and Best Landmarks!" />
+        <Header image={`/data/majorcities/newyork/assets/group/nyc-group-travel-packing-flatlay-essentials.jpg`} bannerText="Flatlay of NYC group travel essentials including backpack, metro card, sneakers, and city map" />
         <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>Group Travel in NYC!</h1>
@@ -44,7 +44,7 @@ return (
             See our full guide to food halls and bagel stops.
           </Link>
         </div>
-        <div className={styles.imageWrapper}>
+        <div className={styles.imageWrappermid}>
           <Image
             src="/data/majorcities/newyork/assets/group/nyc-group-travel-gear-guide-essentials-comfort-smart.png"
             alt="Three-part illustration showing NYC solo travel packing tips: essentials like sanitizer and charger, comfort items like layered outfits and umbrella, and smart gear like snacks, journal, and navigation tools."

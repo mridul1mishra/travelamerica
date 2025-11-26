@@ -26,7 +26,13 @@
 .imageWrapper {
   flex: 1;
   position: relative;
-  height: 678px;
+  height: 760px;
+  min-width: 300px;
+}
+.imageWrappermid {
+  flex: 1;
+  position: relative;
+  height: 786px;
   min-width: 300px;
 }
 
