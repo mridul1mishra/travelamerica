@@ -85,8 +85,8 @@ export default function GroupLandmarksPage() {
           <p className={styles.subheading}>🚶‍♂️Group travelers exploring Manhattan landmarks share ferries to the Statue of Liberty, reflect together at Ellis Island, feel the shared pulse of Broadway lights in Times Square, and capture skyline moments at Rockefeller Center. 🗽🌆🎭 — New York’s icons shine brightest together.</p>
           <p className={styles.subheading}>📸 Manhattan group activities range from classic museum tours at MoMA, the Met with guided entry, to Midtown escape rooms that spark teamwork, flavorful food tours weaving through Chinatown and Little Italy, and cutting-edge multisensory attractions in Chelsea—together offering unforgettable experiences for groups.</p>
           <p  className={styles.subheading}>🧭 Groups in Manhattan can savor Hudson River cruises with sweeping skyline views, stroll the High Line’s elevated gardens and art installations. — scenic, festive, and unforgettable moments across New York City</p>
-          <Link href="/majorcities/newyork/solo-itinerary" className={styles.ctaButton}>
-            Add to Your NYC Itinerary
+          <Link href="/majorcities/newyork/group-itinerary" className={styles.ctaButton}>
+            Explore your Group trip plan
           </Link>
         </div>
       </section>
@@ -96,8 +96,8 @@ export default function GroupLandmarksPage() {
           <p className={styles.subheading}>🚶‍♂️Marvels of design inspire awe, Brooklyn's Skyline views meet creative streets. It’s the harmony of ambition meeting artistry, weaving unforgettable shared stories.</p>
           <p className={styles.subheading}>📸 Season after season, blossoms return, colors deepen, and holiday lights draw us close — group travel experiences that transform time together into lasting connections and shared belonging.</p>
           <p  className={styles.subheading}>🧭 Festive sensations — laughter on ice, rhythms in summer, toasts in breweries — transform each season into celebrations of belonging and connections.</p>
-          <Link href="/majorcities/newyork/solo-travel" className={styles.ctaButton}>
-            Solo Travel Tips for Exploring Safely
+          <Link href="/majorcities/newyork/group-travel" className={styles.ctaButton}>
+            Group Travel Tips for Exploring Safely
           </Link>
         </div>
         <div className={styles.imageWrapper}>
