@@ -80,8 +80,8 @@ export default function GroupItineraryClient() {
                     <li className={styles.subheading}>☀️Chelsea Market anchors the afternoon with bustling halls, artisan shops, and local flavors. Groups then wander toward the High Line, where elevated paths and skyline views spark playful energy. Friends savor tacos, travelers capture stylish photos, and families pause for street performances—shared laughter and spontaneous moments leave everyone energized for the evening ahead.</li>
                     <li className={styles.subheading}>🌙Cap off the night with dinner in Hell’s Kitchen. Friends can enjoy hearty meals, shared plates, or cocktails before heading to a  Broadway show. As the lights dim 🎶, anticipation builds, and the shared awe of the performance unifies the group — ending the Day 1 with laughter, wonder, and lasting connection.</li>
                 </ul>
-                <Link href="/majorcities/newyork/solo-travel" className={styles.ctaButton}>
-                    NYC solo travel safety tips
+                <Link href="/majorcities/newyork/group-travel" className={styles.ctaButton}>
+                    NYC group travel safety tips
                 </Link>
                 </div>
             </section>
@@ -95,8 +95,8 @@ export default function GroupItineraryClient() {
               <li className={styles.subheading}>🌙As night falls, Times Square glows with neon spectacle and street performers. A Broadway show fills the evening with shared awe and applause. The group then drifts into the East Village, where live music and eclectic bars extend the rhythm of discovery, closing Day 2 with camaraderie.</li>
               
           </ul>
-          <Link href="/majorcities/newyork/landmark" className={styles.ctaButton}>
-            Best neighborhoods for solo travelers in NYC
+          <Link href="/majorcities/newyork/group-landmarks" className={styles.ctaButton}>
+            Best neighborhoods for Group travelers in NYC
           </Link>
         </div>
         <div className={styles.imageWrapper}>
@@ -122,7 +122,7 @@ export default function GroupItineraryClient() {
                     <li className={styles.subheading}>🌙On the third evening in New York, the pace stays gentle. Groups gather at a Hudson River dinner cruise, where city lights shimmer across the water and conversation flows easily. Solo travelers find quiet reflection on deck, couples enjoy intimate skyline views, and larger groups share laughter over shared plates. The evening blends dining, scenery, and calm energy, ensuring the New York group travel itinerary ends with balance and memorable moments.</li>
                 </ul>
                 <Link href="/majorcities/newyork/solo-travel" className={styles.ctaButton}>
-                    NYC solo travel safety tips
+                    Explore Your Solo Trip Plan
                 </Link>
                 </div>
             </section>

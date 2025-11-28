@@ -29,7 +29,7 @@ return (
           <p className={styles.subheading}><strong>Urban vigilance:</strong> In Union Square and Times Square, group travelers must anticipate sudden urban challenges. Carry compact flashlights, reflective bands, and portable weather gear to stay prepared. Avoid unsafe shortcuts, keep valuables secure, and stay aligned. Share emergency contacts, know local service numbers, and identify nearby medical facilities for quick support.</p>
           <p className={styles.subheading}><strong>Urban preparedness:</strong> In crowded NYC subway hubs like Times Square, group travelers risk delays or separation. Carry portable chargers, a shared first aid kit, and distribute ID/passport copies. Preload MetroCards or OMNY for smooth entry. These NYC safety tips ensure readiness, coordination, and stress‑free group travel.</p>
           <p className={styles.subheading}><strong>Smart navigation:</strong> Rush-hour crowds and complex subway hubs like Times Square or Penn Station can overwhelm groups and cause separation. Using tools like Citymapper, Transit App, or the MTA app helps plan routes, avoid congestion, and keep everyone coordinated for smoother, stress-free travel together.</p>
-          <Link href="/majorcities/newyork/solo-itinerary" className={styles.ctaButton}>
+          <Link href="/majorcities/newyork/group-itinerary" className={styles.ctaButton}>
             Group Travel 3 Day Itinerary for NYC
           </Link>
         </div>
@@ -67,7 +67,7 @@ return (
           <p className={styles.subheading}><strong>🎭</strong>Group travel planning requires flexible accommodation, coordinated arrival times, anchor event reservations, and smooth transport. Booking shared spaces, syncing schedules, reserving activities early, and using group passes improve logistics, reduce stress, and deliver memorable, efficient, and enjoyable group travel experiences.</p>
           <p className={styles.subheading}><strong>🛍️</strong>Packing cubes, shared first‑aid kits, and secure communication apps dominate queries. Solutions streamline luggage, enhance safety, and deliver benefits like reduced stress, smoother coordination, and memorable group travel experiences</p>
           <p className={styles.subheading}><strong>🎶</strong>Group journeys thrive when inclusive activities, balanced downtime, and early event bookings are prioritized. Coordinating shared meals and cultural outings strengthens bonds, reduces stress, and creates lasting memories. Simple gear like instant cameras or picnic kits enhances these experiences without complicating logistics.</p>
-          <Link href="/majorcities/newyork/landmark" className={styles.ctaButton}>
+          <Link href="/majorcities/newyork/group-landmarks" className={styles.ctaButton}>
             Best Neighborhoods for Solo Travelers in New York
           </Link>
         </div>
