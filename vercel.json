@@ -21,6 +21,21 @@
         }
       ],
       "statusCode": 308
+    },
+    {
+      "source": "/majorcities/lasvegas/solo-itinerary",
+      "destination": "/majorcities/newyork/solo-itinerary",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/orlando/solo-itinerary",
+      "destination": "/majorcities/newyork/solo-itinerary",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/losangeles/solo-itinerary",
+      "destination": "/majorcities/newyork/solo-itinerary",
+      "permanent": true
     }
   ]
 }
