@@ -6,12 +6,8 @@ import Image from 'next/image';
 import styles from './food.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
 export default function FoodClientPage() {
-    const params = useParams();
-    const cityParam = params?.city;
-    const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
-    const citiesWithoutBanner = ['lasvegas'];
-    const schema = city === "newyork"
-      ? {
+    
+    const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Solo Dining, NYC Style: Cozy Counters & Elegant Bars",
@@ -79,14 +75,89 @@ export default function FoodClientPage() {
       "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
     }
   ]
-} : null;
-
+};
+    const schema1 = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where can solo diners find fast and flavorful meals in NYC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solo diners can enjoy quick, flavorful meals at Ichiran Ramen, Mimi Cheng’s Dumplings, and Shake Shack, all offering counter seating or solo booths."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which NYC restaurants offer stylish bar dining for solo guests?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Modern, Estela, and Café Sabarsky provide elegant bar seating where solo guests can enjoy refined food and ambiance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are good spots for solo dining near Broadway theaters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Murray’s Bagels, Grand Central Oyster Bar, and Joe Allen deliver iconic bites and Broadway-adjacent charm, ideal for pre- or post-show dining."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can solo diners eat with skyline views in DUMBO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In DUMBO, solo diners can enjoy skyline views with curated eats like Pat LaFrieda burgers and rooftop cocktails."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the best Midtown counter dining options for solo visitors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midtown offers solo-friendly counter culture at Grand Central with Roberta’s pizza, Takumi Tacos, and Blue Bottle coffee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can solo diners explore diverse flavors in Chelsea Market?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chelsea Market is perfect for solo diners to enjoy iconic tacos, hand-pulled noodles, and sweet treats in one of NYC’s most vibrant food halls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which bagel shops in NYC serve traditional hand-rolled bagels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Murray’s, Ess-a-Bagel, and Absolute Bagels are iconic shops serving traditional, hand-rolled bagels with timeless toppings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I find artisan bagels with inventive toppings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Black Seed, Bagel Pub, and Utopia Bagels offer inventive flavors, wood-fired styles, and viral-worthy creations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are cozy solo-friendly bagel spots in NYC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hudson Bagel, Apollo Bagels, and Tompkins Square Bagels provide cozy counters and outdoor seating, perfect for solo snacking."
+      }
+    }
+  ]
+};
     return(
         <>
-        <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
         <Header image={`/data/majorcities/newyork/assets/nyc-solo-dining.png`} bannerText="Hero banner showcasing NYC solo dining experience for travelers" />
         <section className={styles.splitSection} style={{textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>

@@ -6,10 +6,6 @@ import Image from 'next/image';
 import styles from './landmark.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
 export default function LandmarkPage() {
-    const params = useParams();
-    const cityParam = params?.city;
-    const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
-    const citiesWithoutBanner = ['lasvegas'];
     const schema = {
   "@context": "https://schema.org",
   "@type": "LandmarksOrHistoricalBuildings",
@@ -32,14 +28,66 @@ export default function LandmarkPage() {
   },
   "touristType": "Solo Travelers"
 };
+    const schema1 = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes Manhattan ideal for solo travelers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Manhattan offers iconic views, peaceful strolls in Central Park, sensory immersion in Times Square, and quiet reflection at The Met and MoMA. Its walkable streets, reliable transit, and cozy cafés make it safe, spontaneous, and perfect for solo discovery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can solo travelers enjoy spontaneity in Manhattan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solo travelers can explore museums, cafés, and vibrant streets at their own pace. Manhattan’s walkable landmarks and central stays allow flexible itineraries without rigid plans, offering freedom to wander and reflect."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is Brooklyn a great destination for solo travelers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Brooklyn invites solo travelers to roam creative streets, linger in indie bookstores, savor skyline views from Dumbo, and reflect in Prospect Park. Its soulful, walkable neighborhoods and vibrant cafés make it ideal for self-paced exploration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can solo travelers plan flexible itineraries in Brooklyn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Brooklyn unfolds best with modular itineraries. Solo travelers can loop through creative hubs, pause in parks, stay near transit, and explore cafés by vibe, making discovery easy and soulful."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes visiting the Statue of Liberty special for solo travelers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standing solo beneath the Statue of Liberty offers a cinematic, introspective experience. Ferry rides, skyline views, and quiet reflection make it empowering, peaceful, and perfect for solo photo ops."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should solo travelers plan a visit to the Statue of Liberty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solo travelers can plan morning ferries, skyline loops, and nearby solo-friendly cafés. Pairing the visit with Lower Manhattan walks creates a seamless itinerary for reflection and exploration."
+      }
+    }
+  ]
+};
 
     return(
         <>
         
-        <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
        <Header image={`/data/majorcities/newyork/assets/statue-of-liberty.jpg`} bannerText="Solo Travel in New York City – Landmark Guide!" />
        <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
