@@ -113,7 +113,7 @@ export default async function CityPage({ params }: PageProps) {
               
               <Placevisit city={city}/>
               <Footer />
-              
+              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
       </div>
       </>
     );
