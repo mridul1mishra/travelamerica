@@ -22,25 +22,7 @@ export default async function CityPage({ params }: PageProps) {
   };
 
   const data = cityData[city];
-  const schema = {"@context": "https://schema.org",
-    "@type": "TouristDestination",
-    "@id": `https://www.travelamerica.work/majorcities/${city}#destination`,
-    "name": `${city.charAt(0).toUpperCase() + city.slice(1)} City`,
-    "description": `Discover ${city} City: landmarks, food, and solo travel experiences for travelers in America.`,
-    "url": `https://www.travelamerica.work/majorcities/${city}`,
-    "containedInPlace": {
-      "@type": "City",
-      "@id": `https://en.wikipedia.org/wiki/${data?.wiki}`,
-      "name": city,
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": data?.lat,
-        "longitude": data?.lng,
-      },
-    },
-    "image": `https://www.travelamerica.work/data/${city}.jpg`,
-    "touristType": "Solo Travelers",
-  };
+  
   const schema1 = city === "newyork" ? {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -132,7 +114,6 @@ export default async function CityPage({ params }: PageProps) {
               
               <Placevisit city={city}/>
               <Footer />
-              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
               <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
       </div>
       </>
