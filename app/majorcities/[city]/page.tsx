@@ -101,7 +101,6 @@ export default async function CityPage({ params }: PageProps) {
   }
 
   }: null;
-  const canonicalUrl = `https://www.travelamerica.work/majorcities/${city}`;
   const citiesWithoutBanner = ['lasvegas'];
     if (!city) return <div>Loading place visit data...</div>;
     const { airportsection, propertySections, personaContent, plantripcontentsections } = await getAirportData(city);
