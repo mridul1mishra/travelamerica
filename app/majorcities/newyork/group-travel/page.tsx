@@ -12,7 +12,7 @@ export const generateMetadata = () => ({
     card: "summary_large_image",
     title: "Group Travel in NYC: Safety Tips, Packing Essentials & Landmark Planning",
     description: "Explore NYC confidently with our group travel safety guide — smart packing tips, safe itineraries, and must-see landmarks for every explorer.",
-    images: ["/data/majorcities/newyork/assets/group/nyc-group-travel-packing-flatlay-essentials.jpg"]
+    images: ["https://www.travelamerica.work/data/majorcities/newyork/assets/group/nyc-group-travel-packing-flatlay-essentials.jpg"]
   }
 });
 

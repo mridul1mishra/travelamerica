@@ -123,7 +123,7 @@ export default function GroupLandmarksPage() {
           <p className={styles.subheading}>🗽This stadium’s roar and the garden’s bloom unfold Bronx seasons into vivid, year‑round celebrations for festival‑minded groups of travelers.</p>
           <p className={styles.subheading}>🚶‍♀️ When travelers land, the Bronx invites them to walk its historic streets, taste its cultural flavors, and join its global connections — culminating in a living heritage shared across every season.</p>
           <p  className={styles.subheading}>🧭 Discover Bronx hidden gems — from literary echoes at Poe’s Cottage to authentic tastes on Arthur Avenue and natural escapes at Wave Hill. These attractions connect history, culture, and nature, offering group travelers authentic experiences year‑round reasons to visit the Bronx.</p>
-          <Link href="/majorcities/newyork/food" className={styles.ctaButton}>
+          <Link href="/majorcities/newyork/group-dining" className={styles.ctaButton}>
             Best Eats Near These Landmarks
           </Link>
         </div>

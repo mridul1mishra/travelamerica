@@ -6,7 +6,7 @@ export const generateMetadata = () => ({
     follow: true,
   },
   alternates: {
-      canonical: 'https://www.travelamerica.work/majorcities/newyork/landmark',
+      canonical: 'https://www.travelamerica.work/majorcities/newyork/group-landmarks',
     },
     twitter: {
     card: "summary_large_image",
