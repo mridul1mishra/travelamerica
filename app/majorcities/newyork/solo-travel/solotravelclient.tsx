@@ -155,7 +155,7 @@ export default function SoloTravelPage() {
         <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>Solo Travel in NYC!</h1>
-                <p>Safe Itinerary, Packing Tips and Best Landmarks — Imagine stepping off the subway alone at midnight, with Broadway lights guiding your way. NYC offers solo travelers both excitement and safety — if you know where to go.</p>
+                <p>Traveling alone doesn’t mean unsafe — here’s how to explore NYC confidently.</p>
                 </div>
         </section> 
         <section className={styles.splitSection}>

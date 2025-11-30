@@ -10,14 +10,13 @@ export default function LandmarkPage() {
     const cityParam = params?.city;
     const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
     const citiesWithoutBanner = ['lasvegas'];
-    const schema = city === "newyork"
-      ? {
+    const schema = {
   "@context": "https://schema.org",
   "@type": "LandmarksOrHistoricalBuildings",
   "name": "Statue of Liberty",
   "description": "The Statue of Liberty is a colossal neoclassical sculpture on Liberty Island in New York Harbor.",
   "image": "https://www.travelamerica.work/data/majorcities/newyork/assets/statue-of-liberty.jpg",
-  "url": "https://www.travelamerica.work/landmarks",
+  "url": "https://www.travelamerica.work/majorcities/newyork/landmark",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Liberty Island",
@@ -32,7 +31,7 @@ export default function LandmarkPage() {
     "longitude": "-74.0445"
   },
   "touristType": "Solo Travelers"
-} : null;
+};
 
     return(
         <>

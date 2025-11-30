@@ -48,13 +48,62 @@ export default function SoloItineraryClient() {
     "logo": "https://www.travelamerica.work/data/logo3.png"
   }
 };
-
+    const schema1 = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is New York City safe for solo travelers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, NYC is generally safe for solo travelers if you stay aware of your surroundings, avoid isolated areas late at night, and use common sense in busy neighborhoods."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best 3-day solo itinerary for New York City?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A popular 3-day solo itinerary includes: Day 1 exploring Manhattan landmarks like Times Square and Central Park, Day 2 visiting museums and neighborhoods such as SoHo and Greenwich Village, and Day 3 discovering Brooklyn highlights like the Brooklyn Bridge and DUMBO."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which neighborhoods are best for solo travelers in NYC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midtown Manhattan, Greenwich Village, and Williamsburg are great for solo travelers thanks to their walkability, vibrant food scenes, and safe, lively atmosphere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the best food spots for solo travelers in NYC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solo travelers often enjoy casual yet iconic spots like Katz’s Delicatessen, Joe’s Pizza, and Chelsea Market, where dining alone feels natural and welcoming."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can solo travelers get around NYC easily?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The subway is the fastest and most affordable way to get around NYC. Solo travelers should buy a MetroCard or OMNY tap card, and use apps like Google Maps for navigation."
+      }
+    }
+  ]
+};
 
     return(
       <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}
       />
     <div className="App">
       <Header image={`/data/majorcities/newyork/assets/solo-travel-itinerary.png`} bannerText="Solo Travel Itinerary for New York City" />
@@ -82,7 +131,7 @@ export default function SoloItineraryClient() {
               <li className={styles.subheading}>🌙Evening: Dinner at Time Out Market or Eataly Flatiron</li>
           </ul>
           <Link href="/majorcities/newyork/solo-travel" className={styles.ctaButton}>
-            NYC solo travel safety tips
+            Read NYC Solo Travel Safety Tips
           </Link>
         </div>
       </section>
