@@ -104,7 +104,7 @@ export default function GroupDiningClientPage() {
                 <p className={styles.subheading}>🍷 Brooklyn creamed spinach, truffle baked macaroni, steakhouse potato gratin, and onion rings are classic steak sides preferred by travelers.</p>
                 <p className={styles.subheading}>🥯 Group travelers in Brooklyn savor Junior’s Cheesecake, indulge in Brooklyn Blackout Cake, and share Bananas Foster French Toast after steakhouse dinners.</p>
                 
-                <Link href="/majorcities/newyork/solo-itinerary" className={styles.ctaButton}>
+                <Link href="/majorcities/newyork/group-itinerary" className={styles.ctaButton}>
                     Plan Your NYC Itinerary
                 </Link>
                 </div>
@@ -117,7 +117,7 @@ export default function GroupDiningClientPage() {
                 <p className={styles.subheading}>🍣 NYC’s best mocktails include Beets ’N’ Cream at Bangkok Supper Club, Earhart at Getaway, and Dante’s Virgin Garibaldi — each offering unique flavor profiles that showcase the city’s growing zero‑proof cocktail culture.</p>
                 <p className={styles.subheading}>🥟 In New York City, brewery lovers step into a story where history pours from Brooklyn Brewery’s taps, innovation fizzes at Other Half, and Grimm’s sours swirl like alchemy in East Williamsburg transform the city into a living film reel of neighborhoods, flavors, and community</p>
                 
-                <Link href="/majorcities/newyork/landmark" className={styles.ctaButton}>
+                <Link href="/majorcities/newyork/group-landmarks" className={styles.ctaButton}>
                    Explore NYC Landmarks Nearby
                 </Link>
                 </div>
@@ -146,7 +146,7 @@ export default function GroupDiningClientPage() {
                 <p className={styles.subheading}>🧈 <strong>Artisan Bagels & Inventive Toppings -</strong> Black Seed, Bagel Pub, and Utopia Bagels offer inventive flavors, wood-fired styles, and viral-worthy creations.</p>
                 <p className={styles.subheading}>🗺️ <strong>Solo Bites & Schmear -</strong>Hudson Bagel, Apollo Bagels, and Tompkins Square Bagels provide cozy counters and outdoor seating — perfect for solo snacking.</p>
                 
-                <Link href="/majorcities/newyork/solo-travel" className={styles.ctaButton}>
+                <Link href="/majorcities/newyork/group-travel" className={styles.ctaButton}>
                     Solo Travel Tips for Dining Out
                 </Link>
                 </div>

@@ -40,7 +40,7 @@ return (
           <p className={styles.subheading}><strong>🧼 Pack Essential</strong>Group travelers in NYC walk 5–7 miles daily, so pack comfortable shoes, portable chargers, and reusable water bottles. Add anti‑theft neck wallets, weather‑ready layers, and hand sanitizer to stay secure, connected, and healthy. These essentials ensure safer, smoother, and more coordinated city exploration.</p>
           <p className={styles.subheading}><strong>🧥 Pack Comfort</strong>Group travelers in NYC gain extra comfort from reflective wristbands for easy regrouping, compact flashlights for safer night walks, offline maps for stress‑free navigation, foldable seating mats for outdoor breaks, and spray sunscreen for shared protection, with backups like jackets or hotel cards.</p>
           <p className={styles.subheading}><strong>🎒 Pack Smart</strong>Bluetooth item trackers for bags, offline compass plus waypoint app for orientation, NFC contact tags or QR regroup cards for quick reconnection, shared multi‑port charging cable, and pen‑notebook for addresses, reducing loss, disorientation, and coordination friction.</p>
-          <Link href="/majorcities/newyork/food" className={styles.ctaButton}>
+          <Link href="/majorcities/newyork/group-dining" className={styles.ctaButton}>
             See our full guide to food halls and bagel stops.
           </Link>
         </div>
