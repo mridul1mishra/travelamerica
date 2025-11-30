@@ -84,7 +84,7 @@ export default function GroupDiningClientPage() {
         <section className={styles.splitSection} style={{textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>Discover Group Dining in NYC!</h1>
-                <p>From tucked‑away corners perfect for solo explorers to sprawling tables built for groups, New York City’s food scene adapts to every traveller. Group dining here means more than just eating — it’s about sharing the city itself.</p>
+                <p>Discover New York City’s iconic food scene: fresh bagels at sunrise, sizzling Brooklyn steaks, classic foldable pizza slices, and vibrant breweries offering craft beer and group‑friendly experiences across the boroughs.</p>
                 </div>
         </section>
         <section className={styles.splitSection}>

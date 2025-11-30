@@ -44,6 +44,26 @@
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
+  <url>
+    <loc>https://www.travelamerica.work/majorcities/newyork/group-dining</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.travelamerica.work/majorcities/newyork/group-travel</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.travelamerica.work/majorcities/newyork/group-itinerary</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.travelamerica.work/majorcities/newyork/group-landmarks</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 
   <!-- Add more cities manually as needed -->
 
