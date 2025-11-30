@@ -91,7 +91,7 @@ export default function GroupDiningClientPage() {
                 
                 <div className={styles.imageWrapper}>
                 <Image
-                    src="/data/majorcities/newyork/assets/asian-food-rainy-day-solo-dining-new-york-city.png"
+                    src="/data/majorcities/newyork/assets/group/food/nyc-group-food.png"
                     alt="Table with pizza, pasta, taco, and soda overlooking the Empire State Building in New York City, capturing a solo traveler’s cozy dining experience"
                     fill
                     className={styles.mapImage}
@@ -112,11 +112,10 @@ export default function GroupDiningClientPage() {
         <section className={styles.splitSection}>
                 
                 <div className={styles.textWrapper}>
-                <h2 className={styles.heading}>Flavor Hopping: NYC’s Most Delicious Food Hall Stops</h2>
-                <p>Anyone who says that money cannot buy happiness has clearly never spent their money on pizza.</p>
+                <h2 className={styles.heading}>Slices, Sips, and Stories: New York’s Flavorful Journey</h2>
                 <p className={styles.subheading}>🏙️ New York pizza slice culture defines the city, with every best NYC pizza spot offering an authentic thin crust pie. From Brooklyn pizza legends to the iconic Joe’s Pizza, travelers search for the famous New York style pizza experience that delivers flavor, tradition, and the perfect foldable slice.</p>
-                <p className={styles.subheading}>🍣 <strong>Midtown’s Best Counter Culture -</strong> Hop to Grand Central for Roberta’s pizza, Takumi Tacos, and Blue Bottle coffee in a compact, solo-friendly space.</p>
-                <p className={styles.subheading}>🥟 <strong>Chelsea Market: A Flavorful Finale -</strong> End with iconic tacos, hand-pulled noodles, and sweet treats in one of NYC’s most vibrant food halls.</p>
+                <p className={styles.subheading}>🍣 NYC’s best mocktails include Beets ’N’ Cream at Bangkok Supper Club, Earhart at Getaway, and Dante’s Virgin Garibaldi — each offering unique flavor profiles that showcase the city’s growing zero‑proof cocktail culture.</p>
+                <p className={styles.subheading}>🥟 In New York City, brewery lovers step into a story where history pours from Brooklyn Brewery’s taps, innovation fizzes at Other Half, and Grimm’s sours swirl like alchemy in East Williamsburg transform the city into a living film reel of neighborhoods, flavors, and community</p>
                 
                 <Link href="/majorcities/newyork/landmark" className={styles.ctaButton}>
                    Explore NYC Landmarks Nearby
@@ -124,9 +123,10 @@ export default function GroupDiningClientPage() {
                 </div>
                 <div className={styles.imageWrapper}>
                 <Image
-                    src="/data/majorcities/newyork/assets/nyc-asian-food-hall-solo-dining-rainy-day-dumbo-chelsea.png"
+                    src="/data/majorcities/newyork/assets/group/food/nyc-group-mocktail.png"
                     alt="Solo traveler enjoying Asian-inspired dishes like ramen and dumplings by a window on a rainy day in New York City, evoking the cozy vibe of DUMBO and Chelsea food halls."
-                    fill
+                    width = "640"
+                    height = "960"
                     className={styles.mapImage}
                 />
                 </div>
