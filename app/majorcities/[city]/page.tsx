@@ -47,7 +47,7 @@ export default async function CityPage({ params }: PageProps) {
   "@type": "WebPage",
   "name": "New York City Travel Hub",
   "description": "Your complete guide to solo travel in New York City — attractions, food, safety tips, and itineraries.",
-  "url": "https://www.travelamerica.work/newyork",
+  "url": "https://www.travelamerica.work/majorcities/newyork",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [

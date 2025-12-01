@@ -6,6 +6,181 @@ import Footer from "@/app/components/Header/Footer/footer";
 import styles from '../group-travel/grouptravel.module.css';
 
 export default function GroupTravelPage() {
+  const schema1 = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.travelamerica.work/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Major Cities",
+      "item": "https://www.travelamerica.work/majorcities/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "New York",
+      "item": "https://www.travelamerica.work/majorcities/newyork/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Group Travel",
+      "item": "https://www.travelamerica.work/majorcities/newyork/group-travel"
+    }
+  ]
+};
+const schema2 = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.travelamerica.work/majorcities/newyork/solo-travel"
+  },
+  "headline": "Group Travel in NYC: Safety Tips, Packing Essentials & Landmark Planning",
+  "description": "Explore NYC confidently with our group travel safety guide — smart packing tips, safe itineraries, and must-see landmarks for every explorer.",
+  "keywords": ["Group travel NYC", "NYC itinerary", "safe travel tips", "Citymapper", "MetroCard", "NYC group travel", "things to do alone NYC"],
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.travelamerica.work/data/majorcities/newyork/assets/safetybanner.png",
+    "height": 600,
+    "width": 1200
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Travel America"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Travel America",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.travelamerica.work/logo.png"
+    }
+  },
+  "datePublished": "2025-11-29",
+  "about": [
+    { "@type": "Thing", "name": "Group Travel" },
+    { "@type": "Place", "name": "New York City" }
+  ]
+};
+const schema3 = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is New York City safe for solo travelers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, NYC is generally safe for solo travelers, especially in well-lit areas like Midtown, SoHo, and Brooklyn Heights. Stay alert and avoid isolated zones after dark."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I pack for solo travel in NYC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pack a portable charger, ID/passport copies, MetroCard or OMNY, and a basic first aid kit. NYC demands readiness and smart gear."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I navigate NYC solo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use Citymapper, Transit App, and NYC Ferry. Stay in central hotels with 24/7 security and avoid rush hour subway transfers."
+      }
+    }
+  ]
+};
+const schema4 = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is New York City safe for group travelers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, NYC is generally safe for groups, especially in busy areas like Times Square, Central Park, and Midtown. Groups should stay together, designate meeting points, and avoid isolated zones late at night."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should we pack for group travel in NYC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Groups should pack portable chargers, shared MetroCards or OMNY passes, comfortable walking shoes, and a group itinerary. Consider walkie-talkies or messaging apps to stay connected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do groups navigate NYC efficiently?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Groups can use charter buses, subway passes, or rideshare vans. Apps like Citymapper and Transit help coordinate routes. For large groups, booking guided tours or private shuttles ensures smoother navigation."
+      }
+    }
+  ]
+};
+const schema5 = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Navigate NYC Safely as a Group Traveler",
+  "description": "Step-by-step guide for group travelers to navigate New York City using public transport and other options.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Plan routes with group-friendly apps",
+      "text": "Use apps like Google Maps, Citymapper, or Transit to coordinate subway, bus, ferry, and walking routes."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Preload MetroCards or OMNY passes",
+      "text": "Prepare group MetroCards or OMNY passes in advance to avoid queues and keep everyone moving together."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Book charter buses or vans",
+      "text": "For large groups, reserve charter buses or vans to travel smoothly between major landmarks."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Use ferries and water taxis",
+      "text": "Take NYC ferries or water taxis for scenic group travel across boroughs and to attractions like the Statue of Liberty."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Coordinate rideshare for smaller groups",
+      "text": "Split into smaller groups and use rideshare services like Uber or Lyft for flexible point-to-point travel."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Walk together in safe areas",
+      "text": "Explore neighborhoods such as Central Park, SoHo, and Brooklyn Heights on foot, staying together and designating meeting points."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Avoid rush hour transfers",
+      "text": "Plan routes to skip crowded subway stations between 7–9 AM and 5–7 PM when traveling as a group."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Stay in safe, central hotels",
+      "text": "Choose accommodations with 24/7 security and easy access to multiple transport options."
+    }
+  ]
+};
+
+
+
 return (
     <>
         <Header image={`/data/majorcities/newyork/assets/group/nyc-group-travel-packing-flatlay-essentials.jpg`} bannerText="Flatlay of NYC group travel essentials including backpack, metro card, sneakers, and city map" />
@@ -74,6 +249,12 @@ return (
         
         </section>
         <Footer />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema5) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema4) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema3) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema2) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
+        
     </>
     );
 }

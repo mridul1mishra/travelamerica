@@ -14,7 +14,7 @@ export default function GroupItineraryClient() {
   "description": "Plan the perfect 3-day NYC trip for groups with museums, parks, Broadway, and a Hudson River dinner cruise.",
   "author": {
     "@type": "Organization",
-    "name": "YourBrandName"
+    "name": "Travel America"
   },
   "mainEntity": {
     "@type": "ItemList",
@@ -52,13 +52,57 @@ export default function GroupItineraryClient() {
     ]
   }
 };
+    const schema1 = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best 3-day itinerary in New York City for groups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A popular 3-day group itinerary includes Day 1 exploring Times Square, Broadway, and Central Park; Day 2 visiting the Statue of Liberty, Ellis Island, and the 9/11 Memorial; and Day 3 enjoying museums like the Met or MoMA followed by group dining in Midtown."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can large groups travel around New York City?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Groups can use charter buses, subway passes, or rideshare vans. Walking tours are also a great option for exploring neighborhoods together."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there group discounts for NYC attractions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, attractions like the Statue of Liberty, Empire State Building, and museums often provide discounted rates for groups of 10 or more. Booking in advance is recommended."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are good group dining options in New York City?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Family-style restaurants such as Carmine’s, Korean BBQ spots like Kang Ho Dong Baekjeong, and dim sum halls like Jing Fong are ideal for group dining."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should groups plan accommodations for a 3-day NYC trip?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Groups often book hotels with central locations near Midtown or Downtown. Options like suite-style hotels or boutique stays with communal spaces work well for group travelers."
+      }
+    }
+  ]
+};
 
     return(
         <>
-        <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
         <div className="App">
             <Header image={`/data/majorcities/newyork/assets/group/nyc-group-itinerary-brooklyn-bridge-sunset.jpg`} bannerText="Group of friends sharing tacos and coffee on a rooftop terrace overlooking Brooklyn Bridge and East River at sunset in NYC" />
             <section className={styles.splitSection} style={{ textAlign: "center" }}>

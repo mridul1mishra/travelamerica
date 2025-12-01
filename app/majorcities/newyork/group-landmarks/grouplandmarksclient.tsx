@@ -6,7 +6,7 @@ import Image from 'next/image';
 import styles from './grouptravellandmarks.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
 export default function GroupLandmarksPage() {
-    const citiesWithoutBanner = ['lasvegas'];
+    
     const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -59,12 +59,59 @@ export default function GroupLandmarksPage() {
     }
   ]
 };
+const schema1 = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the best landmarks in NYC for group visits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Top group-friendly landmarks include the Statue of Liberty, Empire State Building, Times Square, Central Park, and the 9/11 Memorial & Museum."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do NYC landmarks offer group discounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, many landmarks such as the Statue of Liberty, Empire State Building, and museums provide discounted rates for groups of 10 or more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can large groups book tickets for NYC landmarks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Groups can book tickets online through official landmark websites or platforms like CityPASS. For very large groups, contacting the landmark directly is recommended."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which NYC landmarks are best for photo opportunities with groups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Times Square, Brooklyn Bridge, Top of the Rock, and Central Park are especially popular for group photos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are guided tours available for groups at NYC landmarks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, most major landmarks such as the Statue of Liberty, Central Park, and the 9/11 Memorial offer guided tours tailored for groups."
+      }
+    }
+  ]
+};
 
 
 
     return(
         <>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
        <Header image={`/data/majorcities/newyork/assets/group/nyc-group-travel-landmarks.png`} bannerText="Solo Travel in New York City – Landmark Guide!" />
        <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>

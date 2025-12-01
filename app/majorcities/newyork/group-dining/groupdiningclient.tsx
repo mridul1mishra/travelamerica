@@ -5,74 +5,120 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './groupdining.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
-export default function GroupDiningClientPage() {
-    
+export default function GroupDiningClientPage() {    
     const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Solo Dining, NYC Style: Cozy Counters & Elegant Bars",
-  "description": "A curated guide to solo dining in New York City, featuring ramen counters, elegant bars, and local flavor spots.",
+  "headline": "Group Dining in NYC: Shared Tables & Festive Feasts",
+  "description": "A curated guide to group dining in New York City, highlighting family-style restaurants, lively communal tables, and festive spots perfect for gatherings.",
   "author": {
     "@type": "Organization",
-    "name": "Travel America"
+    "name": "Travel America",
+    "url": "https://www.travelamerica.work"
   },
   "datePublished": "2025-10-19",
-  "image": "https://www.travelamerica.work/data/majorcities/assets/nyc-solo-dining.png",
-  "articleSection": ["Fast & Flavorful", "Bar Dining", "Local Flavor"],
+  "image": "https://www.travelamerica.work/data/majorcities/assets/nyc-group-dining.png",
+  "articleSection": ["Family Style", "Communal Tables", "Festive Gatherings"],
   "mainEntity": [
     {
       "@type": "Restaurant",
-      "name": "Ichiran Ramen",
-      "servesCuisine": "Japanese Ramen",
+      "name": "Carmine’s Italian Restaurant",
+      "servesCuisine": "Italian Family Style",
       "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
     },
     {
       "@type": "Restaurant",
-      "name": "Mimi Cheng’s Dumplings",
-      "servesCuisine": "Chinese Dumplings",
+      "name": "Kang Ho Dong Baekjeong",
+      "servesCuisine": "Korean BBQ",
       "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
     },
     {
       "@type": "Restaurant",
-      "name": "Shake Shack",
-      "servesCuisine": "American Burgers",
+      "name": "Jing Fong",
+      "servesCuisine": "Chinese Dim Sum",
       "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
     },
     {
       "@type": "Restaurant",
-      "name": "The Modern",
-      "servesCuisine": "Contemporary American",
+      "name": "Roberta’s",
+      "servesCuisine": "Wood-Fired Pizza",
+      "address": { "@type": "PostalAddress", "addressLocality": "Brooklyn", "addressRegion": "NY" }
+    },
+    {
+      "@type": "Restaurant",
+      "name": "Beer Authority",
+      "servesCuisine": "Gastropub",
       "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
     },
     {
       "@type": "Restaurant",
-      "name": "Estela",
-      "servesCuisine": "Modern American",
+      "name": "The Smith",
+      "servesCuisine": "American Brasserie",
       "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
     },
     {
       "@type": "Restaurant",
-      "name": "Café Sabarsky",
-      "servesCuisine": "Austrian Café",
+      "name": "Keens Steakhouse",
+      "servesCuisine": "Steakhouse",
       "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
     },
     {
       "@type": "Restaurant",
-      "name": "Murray’s Bagels",
-      "servesCuisine": "Bagels",
+      "name": "Han Dynasty",
+      "servesCuisine": "Sichuan Chinese",
       "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
     },
     {
       "@type": "Restaurant",
-      "name": "Grand Central Oyster Bar",
-      "servesCuisine": "Seafood",
+      "name": "La Esquina",
+      "servesCuisine": "Mexican",
       "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
+    }
+  ]
+};
+    const schema1 = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the best restaurants in NYC for group dining?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Popular group-friendly restaurants in NYC include Carmine’s Italian Restaurant for family-style dining, Jing Fong for dim sum, and Keens Steakhouse for classic steakhouse gatherings."
+      }
     },
     {
-      "@type": "Restaurant",
-      "name": "Joe Allen",
-      "servesCuisine": "American",
-      "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
+      "@type": "Question",
+      "name": "Do NYC restaurants offer private rooms for large groups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, many restaurants such as The Smith and Keens Steakhouse offer private dining rooms or sections that can be reserved for large parties."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I book group dining reservations online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most NYC restaurants allow group reservations through platforms like OpenTable or directly on their websites. For very large groups, it’s best to call the restaurant directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which cuisines are best for sharing with groups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Family-style Italian, Korean BBQ, dim sum, and wood-fired pizza are especially popular for group dining because they emphasize shared plates and communal tables."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there budget-friendly group dining options in NYC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, places like Roberta’s in Brooklyn for pizza, Han Dynasty for Sichuan dishes, and La Esquina for Mexican food offer affordable menus that work well for groups."
+      }
     }
   ]
 };
