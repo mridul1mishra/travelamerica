@@ -7,7 +7,7 @@ import styles from './food.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
 export default function FoodClientPage() {
     
-    const schema = {
+    const Article = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Solo Dining, NYC Style: Cozy Counters & Elegant Bars",
@@ -76,7 +76,7 @@ export default function FoodClientPage() {
     }
   ]
 };
-    const schema1 = {
+    const FAQPage = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -154,10 +154,170 @@ export default function FoodClientPage() {
     }
   ]
 };
+const breadcrumblist = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.travelamerica.work/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Major Cities",
+      "item": "https://www.travelamerica.work/majorcities/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "New York",
+      "item": "https://www.travelamerica.work/majorcities/newyork/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Solo Travel",
+      "item": "https://www.travelamerica.work/majorcities/newyork/food"
+    }
+  ]
+                };
+const itemlist ={
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "NYC Solo Dining Food Experiences",
+  "itemListOrder": "Unordered",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Fast & Flavorful Solo Dining",
+      "description": "Ichiran Ramen, Mimi Cheng’s Dumplings, and Shake Shack offer quick meals with counter seating or solo booths."
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Bar Dining with Style",
+      "description": "The Modern, Estela, and Café Sabarsky provide elegant bar seating where solo guests enjoy refined food and ambiance."
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Local Flavor & Theater Vibes",
+      "description": "Murray’s Bagels, Grand Central Oyster Bar, and Joe Allen deliver iconic bites and Broadway-adjacent charm."
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "DUMBO Eats with Views",
+      "description": "Pat LaFrieda burgers and rooftop cocktails paired with skyline views in DUMBO."
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Midtown Counter Culture",
+      "description": "Roberta’s pizza, Takumi Tacos, and Blue Bottle coffee in Grand Central’s compact, solo-friendly space."
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Chelsea Market Finale",
+      "description": "Iconic tacos, hand-pulled noodles, and sweet treats in one of NYC’s most vibrant food halls."
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Traditional Bagels",
+      "description": "Murray’s, Ess-a-Bagel, and Absolute Bagels serve hand-rolled classics with timeless toppings."
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "Artisan Bagels & Inventive Toppings",
+      "description": "Black Seed, Bagel Pub, and Utopia Bagels offer inventive flavors, wood-fired styles, and viral-worthy creations."
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "Solo Bites & Schmear",
+      "description": "Hudson Bagel, Apollo Bagels, and Tompkins Square Bagels provide cozy counters and outdoor seating for solo snacking."
+    }
+  ]
+};
+const howto = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Explore NYC Solo Dining Experiences",
+  "description": "Step-by-step guide for solo travelers to enjoy New York City's diverse food culture, from ramen counters to bagel shops.",
+  "supply": [
+    { "@type": "HowToSupply", "name": "MetroCard or OMNY pass" },
+    { "@type": "HowToSupply", "name": "Camera or smartphone for food photos" },
+    { "@type": "HowToSupply", "name": "Cash or card for quick bites" }
+  ],
+  "tool": [
+    { "@type": "HowToTool", "name": "Google Maps or Citymapper" },
+    { "@type": "HowToTool", "name": "NYC Food Apps for reservations and reviews" }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Fast & Flavorful Solo Dining",
+      "text": "Start with Ichiran Ramen, Mimi Cheng’s Dumplings, or Shake Shack for quick meals with counter seating or solo booths."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Bar Dining with Style",
+      "text": "Head to The Modern, Estela, or Café Sabarsky for elegant bar seating and refined solo dining."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Local Flavor & Theater Vibes",
+      "text": "Enjoy Murray’s Bagels, Grand Central Oyster Bar, or Joe Allen for iconic bites near Broadway shows."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "DUMBO Eats with Views",
+      "text": "Savor Pat LaFrieda burgers and rooftop cocktails while enjoying skyline views in DUMBO."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Midtown Counter Culture",
+      "text": "Grab Roberta’s pizza, Takumi Tacos, and Blue Bottle coffee in Grand Central’s compact, solo-friendly space."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Chelsea Market Finale",
+      "text": "End your food journey with tacos, hand-pulled noodles, and sweet treats in Chelsea Market."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Traditional Bagels",
+      "text": "Taste hand-rolled classics at Murray’s, Ess-a-Bagel, and Absolute Bagels with timeless toppings."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Artisan Bagels & Inventive Toppings",
+      "text": "Sample inventive flavors at Black Seed, Bagel Pub, and Utopia Bagels with wood-fired styles."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Solo Bites & Schmear",
+      "text": "Relax at Hudson Bagel, Apollo Bagels, or Tompkins Square Bagels with cozy counters and outdoor seating."
+    }
+  ]
+};
+
+
+
     return(
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Article) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQPage) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howto) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemlist) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumblist) }}/>
         <Header image={`/data/majorcities/newyork/assets/nyc-solo-dining.png`} bannerText="Hero banner showcasing NYC solo dining experience for travelers" />
         <section className={styles.splitSection} style={{textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>

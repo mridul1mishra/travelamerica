@@ -102,34 +102,21 @@ const schema3 = {
 };
 const schema4 = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is New York City safe for group travelers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, NYC is generally safe for groups, especially in busy areas like Times Square, Central Park, and Midtown. Groups should stay together, designate meeting points, and avoid isolated zones late at night."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What should we pack for group travel in NYC?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Groups should pack portable chargers, shared MetroCards or OMNY passes, comfortable walking shoes, and a group itinerary. Consider walkie-talkies or messaging apps to stay connected."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do groups navigate NYC efficiently?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Groups can use charter buses, subway passes, or rideshare vans. Apps like Citymapper and Transit help coordinate routes. For large groups, booking guided tours or private shuttles ensures smoother navigation."
-      }
-    }
+  "@type": "ItemList",
+  "name": "NYC Group Travel Safety & Packing Checklist",
+  "itemListOrder": "Unordered",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Portable chargers for multiple devices" },
+    { "@type": "ListItem", "position": 2, "name": "Group ID copies or shared emergency contacts" },
+    { "@type": "ListItem", "position": 3, "name": "MetroCards or OMNY passes for all members" },
+    { "@type": "ListItem", "position": 4, "name": "Shared first aid kit and basic medicines" },
+    { "@type": "ListItem", "position": 5, "name": "Group coordination apps (WhatsApp, Google Maps, Citymapper)" },
+    { "@type": "ListItem", "position": 6, "name": "Pre-arranged meeting points in busy areas like Times Square or Central Park" },
+    { "@type": "ListItem", "position": 7, "name": "Charter bus or rideshare booking details for large groups" },
+    { "@type": "ListItem", "position": 8, "name": "Stay alert together in crowded zones and avoid isolated areas after dark" }
   ]
 };
+
 const schema5 = {
   "@context": "https://schema.org",
   "@type": "HowTo",

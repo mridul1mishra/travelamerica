@@ -6,7 +6,7 @@ import Image from 'next/image';
 import styles from './landmark.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
 export default function LandmarkPage() {
-    const schema = {
+    const historicallandmarks = {
   "@context": "https://schema.org",
   "@type": "LandmarksOrHistoricalBuildings",
   "name": "Statue of Liberty",
@@ -28,7 +28,7 @@ export default function LandmarkPage() {
   },
   "touristType": "Solo Travelers"
 };
-    const schema1 = {
+    const faqpage = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -82,12 +82,138 @@ export default function LandmarkPage() {
     }
   ]
 };
+const breadcrumblist = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.travelamerica.work/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "New York",
+      "item": "https://www.travelamerica.work/majorcities/newyork/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Solo Travel",
+      "item": "https://www.travelamerica.work/majorcities/newyork/landmark"
+    }
+  ]
+};
+const itemlist = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "NYC Solo Traveler Landmarks & Borough Highlights",
+  "itemListOrder": "Unordered",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Empire State Building",
+      "description": "Iconic views from the Empire State Building, bold and cinematic for solo discovery."
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Central Park",
+      "description": "Peaceful strolls and reflective walks in Central Park, endlessly walkable for solo travelers."
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Times Square",
+      "description": "Sensory immersion in Times Square’s lights and energy, perfect for spontaneous solo photo ops."
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "The Met & MoMA",
+      "description": "Quiet reflection and cultural immersion at The Met and MoMA, ideal for flexible solo itineraries."
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Brooklyn Creative Streets",
+      "description": "Roam indie bookstores, soulful cafés, and skyline views from Dumbo for unexpected solo moments."
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Prospect Park",
+      "description": "Reflect in Prospect Park’s walkable, soulful spaces with freedom to explore at your own pace."
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Statue of Liberty",
+      "description": "Stand solo beneath the Statue of Liberty, enjoy ferry views, skyline moments, and quiet reflection."
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "Lower Manhattan Walks",
+      "description": "Pair a Statue of Liberty visit with Lower Manhattan walks, skyline loops, and solo-friendly cafés."
+    }
+  ]
+};
+const howto = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Explore NYC Landmarks as a Solo Traveler",
+  "description": "Step-by-step guide for solo travelers to experience Manhattan, Brooklyn, and iconic landmarks like the Statue of Liberty.",
+  "totalTime": "P3D",
+  "supply": [
+    { "@type": "HowToSupply", "name": "MetroCard or OMNY pass" },
+    { "@type": "HowToSupply", "name": "Comfortable walking shoes" },
+    { "@type": "HowToSupply", "name": "Portable charger" },
+    { "@type": "HowToSupply", "name": "Camera or smartphone for photo ops" }
+  ],
+  "tool": [
+    { "@type": "HowToTool", "name": "Citymapper or Google Maps" },
+    { "@type": "HowToTool", "name": "NYC Ferry" }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Discover Manhattan Icons",
+      "text": "Visit the Empire State Building for panoramic views, stroll through Central Park, immerse yourself in Times Square, and reflect at The Met or MoMA."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Capture Solo Moments",
+      "text": "Take spontaneous photo ops in walkable streets, enjoy cozy cafés, and explore cultural immersion at your own pace."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Roam Brooklyn’s Creative Streets",
+      "text": "Explore indie bookstores, skyline views from Dumbo, Prospect Park’s soulful spaces, and vibrant cafés."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Experience the Statue of Liberty",
+      "text": "Stand solo beneath the Statue of Liberty, enjoy ferry rides with skyline views, and pair the visit with Lower Manhattan walks."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Plan Flexible Itineraries",
+      "text": "Use apps to design modular routes, stay near transit, and explore museums, cafés, and neighborhoods without rigid schedules."
+    }
+  ]
+};
 
-    return(
+return(
         <>
-        
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(historicallandmarks) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howto) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemlist) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqpage) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumblist) }}/>
        <Header image={`/data/majorcities/newyork/assets/statue-of-liberty.jpg`} bannerText="Solo Travel in New York City – Landmark Guide!" />
        <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
@@ -153,11 +279,5 @@ export default function LandmarkPage() {
       </section>
        <Footer />
        </>
-
     )
-}
-function capitalizeWords(str: string) {
-  return str
-    .toLowerCase()
-    .replace(/\b\w/g, (char) => char.toUpperCase());
 }

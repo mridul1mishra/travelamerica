@@ -6,7 +6,7 @@ import Image from 'next/image';
 import styles from './groupdining.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
 export default function GroupDiningClientPage() {    
-    const schema = {
+    const Article = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Group Dining in NYC: Shared Tables & Festive Feasts",
@@ -76,7 +76,7 @@ export default function GroupDiningClientPage() {
     }
   ]
 };
-    const schema1 = {
+    const FAQPage = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -122,10 +122,163 @@ export default function GroupDiningClientPage() {
     }
   ]
 };
+const breadcrumblist = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.travelamerica.work/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "New York",
+      "item": "https://www.travelamerica.work/majorcities/newyork/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Solo Travel",
+      "item": "https://www.travelamerica.work/majorcities/newyork/group-dining"
+    }
+  ]
+};
+const itemlist = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "NYC Food & Drink Highlights for Travelers",
+  "itemListOrder": "Unordered",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Peter Luger Ribeye",
+      "description": "Bold flavor, marbling, and tenderness make this ribeye a favorite for group dining travelers."
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Le Relais de Venise L’Entrecôte",
+      "description": "Classic French steak frites in Brooklyn, perfect for shared dining experiences."
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Classic Steakhouse Sides",
+      "description": "Brooklyn creamed spinach, truffle baked macaroni, steakhouse potato gratin, and onion rings."
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Brooklyn Desserts",
+      "description": "Junior’s Cheesecake, Brooklyn Blackout Cake, and Bananas Foster French Toast enjoyed after steakhouse dinners."
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "NYC Pizza Slice Culture",
+      "description": "Authentic thin crust pies from Brooklyn legends to Joe’s Pizza, defining New York’s iconic slice tradition."
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "NYC Mocktails",
+      "description": "Beets ’N’ Cream at Bangkok Supper Club, Earhart at Getaway, and Dante’s Virgin Garibaldi showcase zero‑proof cocktail culture."
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "NYC Breweries",
+      "description": "Brooklyn Brewery’s history, Other Half’s innovation, and Grimm’s sours in East Williamsburg create a vibrant brewery scene."
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "Traditional Bagels",
+      "description": "Murray’s, Ess-a-Bagel, and Absolute Bagels serve hand‑rolled classics with timeless toppings."
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "Artisan Bagels & Inventive Toppings",
+      "description": "Black Seed, Bagel Pub, and Utopia Bagels offer inventive flavors, wood‑fired styles, and viral‑worthy creations."
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "Solo Bites & Schmear",
+      "description": "Hudson Bagel, Apollo Bagels, and Tompkins Square Bagels provide cozy counters and outdoor seating for solo snacking."
+    }
+  ]
+};
+const howto = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Experience NYC Food & Drink as a Traveler",
+  "description": "Step-by-step guide for travelers to explore steakhouses, pizza culture, mocktails, breweries, and bagels in New York City.",
+  "supply": [
+    { "@type": "HowToSupply", "name": "Group dining reservations" },
+    { "@type": "HowToSupply", "name": "MetroCard or OMNY pass for borough travel" },
+    { "@type": "HowToSupply", "name": "Camera or smartphone for food photos" }
+  ],
+  "tool": [
+    { "@type": "HowToTool", "name": "Google Maps or Citymapper" },
+    { "@type": "HowToTool", "name": "NYC Food Tour Guides" }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Savor NYC Steakhouses",
+      "text": "Begin with Peter Luger Ribeye for bold flavor, or enjoy French steak frites at Le Relais de Venise L’Entrecôte. Pair with classic sides like creamed spinach, truffle baked macaroni, and potato gratin."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Indulge in Brooklyn Desserts",
+      "text": "Share Junior’s Cheesecake, Brooklyn Blackout Cake, or Bananas Foster French Toast after steakhouse dinners."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Experience NYC Pizza Slice Culture",
+      "text": "Taste authentic thin crust pies from Brooklyn legends to Joe’s Pizza, embracing the city’s iconic foldable slice tradition."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Explore NYC Mocktails",
+      "text": "Try Beets ’N’ Cream at Bangkok Supper Club, Earhart at Getaway, and Dante’s Virgin Garibaldi to discover the city’s zero-proof cocktail culture."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Visit NYC Breweries",
+      "text": "Step into Brooklyn Brewery for history, Other Half for innovation, and Grimm’s for sour alchemy in East Williamsburg."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Enjoy Traditional Bagels",
+      "text": "Taste hand-rolled classics at Murray’s, Ess-a-Bagel, and Absolute Bagels with timeless toppings."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Discover Artisan Bagels",
+      "text": "Sample inventive flavors at Black Seed, Bagel Pub, and Utopia Bagels with wood-fired styles and viral-worthy creations."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Solo Bagel Bites",
+      "text": "Relax at Hudson Bagel, Apollo Bagels, or Tompkins Square Bagels with cozy counters and outdoor seating for solo snacking."
+    }
+  ]
+};
 
     return(
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Article) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQPage) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumblist) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemlist) }}/>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howto) }}/>      
         <Header image={`/data/majorcities/newyork/assets/nyc-solo-dining.png`} bannerText="Hero banner showcasing NYC solo dining experience for travelers" />
         <section className={styles.splitSection} style={{textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>

@@ -8,10 +8,7 @@ import Footer from "@/app/components/Header/Footer/footer";
 
 
 export default function SoloItineraryClient() {
-    const params = useParams();
-    const cityParam = params?.city;
-    const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
-    const citiesWithoutBanner = ['lasvegas'];
+    
     const schema = {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
@@ -94,17 +91,97 @@ export default function SoloItineraryClient() {
     }
   ]
 };
+const schema2 = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "NYC Solo Traveler 3-Day Itinerary",
+  "itemListOrder": "Ordered",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Day 1: Times Square, Broadway, and Central Park",
+      "description": "Start your solo trip with iconic sights, a Broadway show, and a peaceful walk in Central Park."
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Day 2: Statue of Liberty, Ellis Island, and 9/11 Memorial",
+      "description": "Explore NYC’s history and resilience with visits to Liberty Island, Ellis Island Immigration Museum, and the 9/11 Memorial."
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Day 3: Museums and Local Dining",
+      "description": "Spend the day at The Met or MoMA, then enjoy solo-friendly dining spots like ramen counters or cozy cafés."
+    }
+  ]
+};
+const schema3 = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Experience NYC in 3 Days as a Solo Traveler",
+  "description": "Step-by-step solo travel itinerary for exploring New York City in three days.",
+  "totalTime": "P3D",
+  "supply": [
+    { "@type": "HowToSupply", "name": "MetroCard or OMNY pass" },
+    { "@type": "HowToSupply", "name": "Comfortable walking shoes" },
+    { "@type": "HowToSupply", "name": "Portable charger" }
+  ],
+  "tool": [
+    { "@type": "HowToTool", "name": "Citymapper or Transit App" },
+    { "@type": "HowToTool", "name": "NYC Ferry" }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Day 1: Explore Midtown & Central Park",
+      "text": "Visit Times Square, catch a Broadway show, and enjoy a solo walk through Central Park."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Day 2: Discover NYC’s History",
+      "text": "Take a ferry to the Statue of Liberty and Ellis Island, then visit the 9/11 Memorial & Museum."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Day 3: Museums & Local Dining",
+      "text": "Spend the day at The Met or MoMA, then enjoy solo-friendly dining spots like ramen counters or cozy cafés."
+    }
+  ]
+};
+const schema4 = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.travelamerica.work/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "New York",
+      "item": "https://www.travelamerica.work/majorcities/newyork/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Solo Travel",
+      "item": "https://www.travelamerica.work/majorcities/newyork/solo-travel"
+    }
+  ]
+};
 
     return(
       <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema3) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema4) }}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema2) }}/>
     <div className="App">
       <Header image={`/data/majorcities/newyork/assets/solo-travel-itinerary.png`} bannerText="Solo Travel Itinerary for New York City" />
       <section className={styles.splitSection} style={{  textAlign: "center" }}>
