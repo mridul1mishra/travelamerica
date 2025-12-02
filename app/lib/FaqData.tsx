@@ -6,7 +6,7 @@ export async function getFaq() {
 }
 export async function getFaqItinerary() {
   const [faqTravelHubData] = await Promise.all([
-    fetch(`https://www.travelamerica.work/data/faq/travelhubfaq.json`).then(res => res.json()),
+    fetch(`https://www.travelamerica.work/data/faq/itineraryfaq.json`).then(res => res.json()),
   ]);
   return {faqTravelHubData };
 }
