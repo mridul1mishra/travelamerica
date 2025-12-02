@@ -259,7 +259,7 @@ const schema4 = {
           </Link>
         </div>
       </section>
-      
+      <FAQ groupedFaqs={grouped}/>
       <Footer />  
     </div>
     </>       
