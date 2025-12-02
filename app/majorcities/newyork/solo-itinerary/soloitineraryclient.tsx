@@ -5,38 +5,39 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './SoloItinerary.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
+import FAQ from "@/app/components/faq/faq";
+import { getFaq, getFaqItinerary } from "@/app/lib/FaqData";
 
+interface FaqItem {
+  id: string;
+  question: string;
+  answer: string;
+}
 
-export default function SoloItineraryClient() {
+// Define props for the component
+interface SoloItineraryClientProps {
+  grouped: Record<string, FaqItem[]>;
+}
+
+export default async function SoloItineraryClient({ grouped }: SoloItineraryClientProps) {
     
     const schema = {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
   "name": "Solo Travel Itinerary for New York City",
   "description": "Explore NYC solo with this 3-day itinerary covering landmarks, neighborhoods, and Brooklyn vibes.",
-  "touristType": { "@type": "Audience", "name": "Solo Travelers" },
-  "itinerary": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Day 1: Midtown Landmarks",
-        "item": { "@type": "TouristAttraction", "name": "Times Square" }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Day 2: Neighborhood Exploration",
-        "item": { "@type": "TouristAttraction", "name": "Central Park" }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Day 3: Solo Dining & Culture",
-        "item": { "@type": "TouristAttraction", "name": "NYC Ferry" }
-      }
-    ]
+  "touristType": {"@type": "Audience", "name": "Solo Travelers" },
+  "about": [{"@type": "Thing","name": "Solo Travel" }, {"@type": "Place", "name": "New York City"}],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "name": "Solo NYC Travel Itinerary",
+    "url": "https://www.travelamerica.work/majorcities/newyork/solo-itinerary"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.travelamerica.work/data/majorcities/newyork/assets/solo-travel-itinerary.png",
+    "height": 600,
+    "width": 1200
   },
   "provider": {
     "@type": "Organization",
@@ -258,6 +259,7 @@ const schema4 = {
           </Link>
         </div>
       </section>
+      <FAQ groupedFaqs={grouped}/>
       <Footer />  
     </div>
     </>       

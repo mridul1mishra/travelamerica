@@ -6,6 +6,7 @@ type FAQItem = {
 type FAQProps = {
   groupedFaqs: Record<string, FAQItem[]>;
 };
+
 export default function FAQ({ groupedFaqs }: FAQProps){
     return (
     <section className="faq-section">

@@ -16,8 +16,10 @@ export const generateMetadata = () => ({
   }
 });
 
+import { getFaqItinerary } from '@/app/lib/FaqData';
 import SoloItineraryClient from './soloitineraryclient';
 
-export default function SoloItineraryPage() {
-  return <SoloItineraryClient />;
+export default async function SoloItineraryPage() {
+  const { faqTravelHubData } = await getFaqItinerary();
+  return <SoloItineraryClient grouped={faqTravelHubData} />;
 }

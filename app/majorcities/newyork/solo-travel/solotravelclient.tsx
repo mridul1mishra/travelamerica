@@ -42,6 +42,7 @@ export default function SoloTravelPage() {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
+    "name": "Solo Travel Safety Tips",
     "@id": "https://www.travelamerica.work/majorcities/newyork/solo-travel"
   },
   "headline": "3-Day Solo Travel Itinerary for New York | Travel America",
