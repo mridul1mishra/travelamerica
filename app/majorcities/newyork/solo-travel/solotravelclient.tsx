@@ -155,7 +155,7 @@ export default function SoloTravelPage() {
         <Header image={`/data/majorcities/newyork/assets/safetybanner.png`} bannerText="Solo Travel in NYC: Safe Itinerary, Packing Tips and Best Landmarks!" />
         <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
-                <h1  className={styles.sectionheading}>Solo Travel in NYC!</h1>
+                <h1  className={styles.sectionheading}>Solo Travel in NYC: Safety tips & Landmark Guide!</h1>
                 <p>Traveling alone doesn’t mean unsafe — here’s how to explore NYC confidently.</p>
                 </div>
         </section> 
