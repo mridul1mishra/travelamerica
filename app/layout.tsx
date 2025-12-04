@@ -3,7 +3,18 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from 'next/script';
 
-
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+export const metadata: Metadata = {
+  title: {
+    default: "Travel Americas | Discover Iconic Cities to Visit",
+    template: "%s", // allows page.tsx to inject its own title
+  },
+  description: "Discover carefully selected city guides for Las Vegas, Orlando, New York, and Los Angeles. Explore culture, food, and attractions with insider insights",
+};
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,18 +33,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-          <title>Travel Americas | Discover Iconic Cities to Visit</title>
-          <meta name="description" content="Discover carefully selected city guides for Las Vegas, Orlando, New York, and Los Angeles. Explore culture, food, and attractions with insider insights" />
-          
-          
-      </head>
-      
+    <html lang="en">      
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Script strategy="afterInteractive"  src="https://www.googletagmanager.com/gtag/js?id=G-SM7NC16K21"/>
         <Script id="ga-script"  strategy="afterInteractive"  dangerouslySetInnerHTML={{__html: `window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}

@@ -1,17 +1,21 @@
 // app/majorcities/[city]/layout.tsx
 import type { Metadata } from 'next';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ city: string }>;
-}): Promise<Metadata> {
-  const { city } = await params;
-  const formattedCity = city.charAt(0).toUpperCase() + city.slice(1);
+export async function generateMetadata({ params }: { params: Promise<{ city: string }> }) {
+  const { city } = await params; // ✅ unwrap the Promise
+  const formattedCity = city.toLowerCase();
+  let title;
+  if (formattedCity === "newyork") {
+    title = "Explore NYC Travel: Solo Safety, Group Planning, Dining & Landmark Routes";
+  } else {
+    title = `Explore ${formattedCity} | Travel America`;
+  }
+
   const canonicalUrl = `https://www.travelamerica.work/majorcities/${city}`;
 
   return {
-    title: `Explore ${formattedCity} | Travel America`,
+    
+    title,
     description: `Plan your trip to ${formattedCity} with curated stays, airport info, and travel tips.`,
     alternates: {
       canonical: canonicalUrl,
