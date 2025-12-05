@@ -174,7 +174,7 @@ export default function SoloTravelPage() {
           <p className={styles.subheading}><strong>Urban preparedness</strong> Pack a portable charger, ID/passport copies, and a basic first aid kit. Preload your MetroCard or OMNY for smooth subway access — NYC demands readiness, speed, and smart gear.</p>
           <p className={styles.subheading}><strong>Smart navigation.</strong>Use Citymapper, Transit App, and NYC Ferry for smooth navigation. Stay in safe, central hotels with 24/7 security. Plan routes, avoid rush hour transfers, and explore walkable neighborhoods like SoHo.</p>
           <Link href="/majorcities/newyork/solo-itinerary" className={styles.ctaButton}>
-            Solo Travel Safety Tips for NYC
+            Experience the 3‑Day NYC Itinerary.
           </Link>
         </div>
         </section>
