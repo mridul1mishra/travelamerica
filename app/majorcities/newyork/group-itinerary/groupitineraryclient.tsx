@@ -218,7 +218,7 @@ const HowTo = {
                     <li className={styles.subheading}>☀️Chelsea Market anchors the afternoon with bustling halls, artisan shops, and local flavors. Groups then wander toward the High Line, where elevated paths and skyline views spark playful energy. Friends savor tacos, travelers capture stylish photos, and families pause for street performances—shared laughter and spontaneous moments leave everyone energized for the evening ahead.</li>
                     <li className={styles.subheading}>🌙Cap off the night with dinner in Hell’s Kitchen. Friends can enjoy hearty meals, shared plates, or cocktails before heading to a  Broadway show. As the lights dim 🎶, anticipation builds, and the shared awe of the performance unifies the group — ending the Day 1 with laughter, wonder, and lasting connection.</li>
                 </ul>
-                <Link href="/majorcities/newyork/group-dining" className={styles.ctaButton}>
+                <Link href="/majorcities/newyork/group-travel" className={styles.ctaButton}>
                     NYC group travel safety tips
                 </Link>
                 </div>
@@ -259,8 +259,8 @@ const HowTo = {
                     <li className={styles.subheading}>☀️The afternoon continues with New York museums, offering groups a reflective pace after the city’s energy. At the Guggenheim Museum, modern art unfolds within its iconic spiral galleries, while the Frick Collection provides intimate encounters with European masterpieces. Together, these cultural landmarks enrich the group travel itinerary in NYC, balancing discovery with relaxation.</li>
                     <li className={styles.subheading}>🌙On the third evening in New York, the pace stays gentle. Groups gather at a Hudson River dinner cruise, where city lights shimmer across the water and conversation flows easily. Solo travelers find quiet reflection on deck, couples enjoy intimate skyline views, and larger groups share laughter over shared plates. The evening blends dining, scenery, and calm energy, ensuring the New York group travel itinerary ends with balance and memorable moments.</li>
                 </ul>
-                <Link href="/majorcities/newyork/group-travel" className={styles.ctaButton}>
-                    Explore Your Solo Trip Plan
+                <Link href="/majorcities/newyork/group-dining" className={styles.ctaButton}>
+                    Discover NYC steakhouses
                 </Link>
                 </div>
             </section>
