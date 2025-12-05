@@ -346,7 +346,7 @@ const howto = {
                 <p className={styles.subheading}>🗺️ <strong>Solo Bites & Schmear -</strong>Hudson Bagel, Apollo Bagels, and Tompkins Square Bagels provide cozy counters and outdoor seating — perfect for solo snacking.</p>
                 
                 <Link href="/majorcities/newyork/group-travel" className={styles.ctaButton}>
-                    Solo Travel Tips for Dining Out
+                    Group Travel Safety Tips
                 </Link>
                 </div>
         </section>
