@@ -230,7 +230,7 @@ return (
           <p className={styles.subheading}><strong>🛍️</strong>Packing cubes, shared first‑aid kits, and secure communication apps dominate queries. Solutions streamline luggage, enhance safety, and deliver benefits like reduced stress, smoother coordination, and memorable group travel experiences</p>
           <p className={styles.subheading}><strong>🎶</strong>Group journeys thrive when inclusive activities, balanced downtime, and early event bookings are prioritized. Coordinating shared meals and cultural outings strengthens bonds, reduces stress, and creates lasting memories. Simple gear like instant cameras or picnic kits enhances these experiences without complicating logistics.</p>
           <Link href="/majorcities/newyork/group-landmarks" className={styles.ctaButton}>
-            Best Neighborhoods for Solo Travelers in New York
+            Best Neighborhoods for Group Travelers in New York
           </Link>
         </div>
         
