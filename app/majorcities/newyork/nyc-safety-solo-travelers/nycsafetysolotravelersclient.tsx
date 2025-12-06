@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default async function NYCSafetySolTravelersClient () {
 return(
     <>
-    <Header image={`/data/majorcities/newyork/assets/solo‑nyc‑safety‑banner‑updated‑traveler.png`} bannerText="Solo Travel Itinerary for New York City" />
+    <Header image={`/data/majorcities/newyork/assets/solo‑nyc‑safety‑banner‑updated‑traveler.png`} bannerText="Updated NYC solo travel safety banner with new traveler in backpack and phone" />
       <section className={styles.splitSection} style={{  textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>Is NYC Safe for Solo Travelers?</h1>
