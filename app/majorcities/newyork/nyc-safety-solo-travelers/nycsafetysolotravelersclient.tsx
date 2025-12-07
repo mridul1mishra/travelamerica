@@ -4,8 +4,111 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default async function NYCSafetySolTravelersClient () {
+const webpage = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Is NYC Safe for Solo Travelers?",
+  "url": "https://www.travelamerica.work/majorcities/newyork/nyc-safety-solo-travelers",
+  "description": "A comprehensive guide for solo travelers exploring New York City safely. Covers general safety, neighborhood insights, transport tips, and nightlife & dining safety.",
+  "keywords": ["NYC solo travel safety",
+  "New York City safety tips",
+  "Solo female traveler NYC safety",
+  "Budget travel safety NYC",
+  "NYC neighborhoods safe for tourists",
+  "Subway safety NYC solo travelers",
+  "Nightlife safety NYC solo travel",
+  "Dining safety NYC solo travel",
+  "How safe is NYC for solo travelers",
+  "Solo travel guide New York"],
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Example Travel Safety Guides",
+    "url": "https://www.travelamerica.work"
+  },
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is NYC safe for solo travelers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, NYC can be safe for solo travelers when you plan ahead and follow practical safety tips. This guide covers general safety, neighborhood awareness, transport strategies, and nightlife & dining safety."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the general safety overview for solo travelers in NYC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NYC is generally safe, but solo travelers should stay alert, avoid isolated areas late at night, and keep valuables minimal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which neighborhoods are safest for solo travelers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Neighborhoods like Midtown, Upper West Side, and Brooklyn Heights are well-lit, lively, and considered safer for solo exploration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can solo travelers stay safe using NYC transport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Plan routes in advance, use well-lit subway stations, keep belongings secure, and prefer official taxis or rideshare apps late at night."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the safest nightlife and dining options for solo travelers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Choose lively venues like rooftop bars, Broadway shows, or jazz clubs. Sit near crowds or staff in food halls, and always trust your instincts."
+        }
+      }
+    ]
+  }
+};
+
+  const Breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.travelamerica.work/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "New York",
+      "item": "https://www.travelamerica.work/majorcities/newyork/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Solo Travel Safety",
+      "item": "https://www.travelamerica.work/majorcities/newyork/solo-travel"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Is NYC Safe for Solo Travelers?",
+      "item": "https://www.travelamerica.work/majorcities/newyork/nyc-safety-solo-travelers"
+    }
+  ]
+};
+
 return(
     <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webpage) }}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Breadcrumb) }}/>
+      
     <Header image={`/data/majorcities/newyork/assets/solo‑nyc‑safety‑banner‑updated‑traveler.png`} bannerText="Updated NYC solo travel safety banner with new traveler in backpack and phone" />
       <section className={styles.splitSection} style={{  textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
