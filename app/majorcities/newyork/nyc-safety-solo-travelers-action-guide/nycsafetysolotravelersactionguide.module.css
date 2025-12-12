@@ -25,13 +25,10 @@
 
 /* Image wrapper */
 .imageWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: pink;
-  width: 400px;
-  height: 600px;
+  flex: 1;
   position: relative;
+  height: 678px;
+  min-width: 300px;
 }
 .mapImage {
   object-fit: cover;   /* or cover */
