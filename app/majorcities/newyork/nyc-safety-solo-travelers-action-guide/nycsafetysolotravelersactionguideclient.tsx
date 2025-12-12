@@ -5,8 +5,80 @@ import Link from 'next/link';
 import Footer from '@/app/components/Header/Footer/footer';
 
 export default async function nycsafetysolotravelersactionguide () {
+    const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "NYC Solo Traveler Action Guide",
+  "description": "Safety guide for solo travelers in New York City covering neighborhood, situational, and accommodation safety.",
+  "mainEntity": [
+    {
+      "@type": "HowTo",
+      "name": "Neighborhood Safety",
+      "description": "Tips for staying safe in NYC neighborhoods.",
+      "step": [
+        { "@type": "HowToStep", "name": "Know the area", "text": "Research crime maps, local forums, and community alerts before arrival." },
+        { "@type": "HowToStep", "name": "Stay visible", "text": "Stick to well-lit streets and avoid isolated shortcuts." },
+        { "@type": "HowToStep", "name": "Blend in", "text": "Avoid drawing unnecessary attention; observe local customs and dress codes." },
+        { "@type": "HowToStep", "name": "Stay connected", "text": "Share your live location with trusted contacts." }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Situational Safety",
+      "description": "Awareness strategies for crowded streets, late nights, and unexpected moments.",
+      "step": [
+        { "@type": "HowToStep", "name": "Trust instincts", "text": "If a subway platform feels empty, wait for the next train." },
+        { "@type": "HowToStep", "name": "De-escalate", "text": "Ignore aggressive ticket sellers instead of engaging." },
+        { "@type": "HowToStep", "name": "Spot exits", "text": "At Broadway shows or concerts, note the nearest exit before the crowd builds." },
+        { "@type": "HowToStep", "name": "Time awareness", "text": "Skip isolated shortcuts through parks after midnight." }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Accommodation Safety",
+      "description": "Guidelines for safe stays in hotels, hostels, or Airbnbs.",
+      "step": [
+        { "@type": "HowToStep", "name": "Safe hotels/hostels", "text": "Choose properties near busy hubs like Times Square or Union Square with 24/7 front desks." },
+        { "@type": "HowToStep", "name": "Airbnb awareness", "text": "Favor listings in well-lit neighborhoods like Williamsburg or the Upper West Side; check reviews for locks and smoke detectors." },
+        { "@type": "HowToStep", "name": "Room security", "text": "Test locks and latches immediately; confirm safes and fire exits are functional." },
+        { "@type": "HowToStep", "name": "Solo visibility", "text": "Let staff or hosts know you’re traveling alone to build awareness and informal support." }
+      ],
+      "mentions": [
+        {
+          "@type": "Place",
+          "name": "Williamsburg",
+          "address": { "@type": "PostalAddress", "addressLocality": "Brooklyn", "addressRegion": "NY" }
+        },
+        {
+          "@type": "Place",
+          "name": "Upper West Side",
+          "address": { "@type": "PostalAddress", "addressLocality": "Manhattan", "addressRegion": "NY" }
+        },
+        {
+          "@type": "LodgingBusiness",
+          "name": "Times Square Hotel",
+          "address": { "@type": "PostalAddress", "addressLocality": "Manhattan", "addressRegion": "NY" },
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "24/7 front desk", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Secure entry", "value": true }
+          ]
+        }
+      ]
+    }
+  ],
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.travelamerica.work/" },
+      { "@type": "ListItem", "position": 2, "name": "Destination Guide", "item": "https://www.travelamerica.work/major-cities/newyork" },
+      { "@type": "ListItem", "position": 3, "name": "NYC Solo Traveler Guide", "item": "https://www.travelamerica.work/major-cities/newyork/nyc-safety-solo-travelers-action-guide" }
+    ]
+  }
+};
+
     return(
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
         <Header image={`/data/majorcities/newyork/assets/nyc-solo-travel-safety-guide-banner-new.png`} bannerText="NYC solo travel safety guide — neighborhood tips, subway awareness, exits, and time cues" />
         <section className={styles.splitSection} style={{  textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
