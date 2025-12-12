@@ -7,7 +7,7 @@ import Footer from '@/app/components/Header/Footer/footer';
 export default async function nycsafetysolotravelersactionguide () {
     return(
         <>
-        <Header image={`/data/majorcities/newyork/assets/solo‑nyc‑safety‑banner‑updated‑traveler.png`} bannerText="Updated NYC solo travel safety banner with new traveler in backpack and phone" />
+        <Header image={`/data/majorcities/newyork/assets/nyc-solo-travel-safety-guide-banner-new.png`} bannerText="NYC solo travel safety guide — neighborhood tips, subway awareness, exits, and time cues" />
         <section className={styles.splitSection} style={{  textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>Is NYC Safe for Solo Travelers?</h1>
@@ -55,8 +55,8 @@ export default async function nycsafetysolotravelersactionguide () {
           </div>
           <div className={styles.imageWrapper}>
             <Image
-                src="/data/majorcities/newyork/assets/solo‑nyc‑transport‑safety‑hands‑closeup.png"
-                alt="Close-up of solo traveler’s hand with phone in NYC night transport scene"
+                src="/data/majorcities/newyork/assets/urban-safety-tips-city-awareness-nighttime-navigation-current-2.png"
+                alt="Illustrated urban safety tips for confident city navigation at night — subway caution, Times Square de-escalation, concert exit awareness, and park timing advice"
                 fill
                 className={styles.mapImage}
             />
@@ -64,7 +64,10 @@ export default async function nycsafetysolotravelersactionguide () {
         </section>
         <section className={styles.splitSection}>
             <div className={styles.imageWrapper}>
-            <Image src="/data/majorcities/newyork/assets/solo‑nightlife‑safety‑nyc‑illustration.png" alt="Solo traveler in NYC nightlife scene" fill className={styles.mapImage}/>
+            <Image src="/data/majorcities/newyork/assets/nyc-room-safety-new-1.png" 
+            alt="NYC lodging safety — hotel, Airbnb, locks, solo travel." 
+            fill
+            className={styles.mapImage}/>
             </div>
             <div className={styles.textWrapper}>
             <h2 className={styles.heading}>🏨 Accommodation Safety</h2>
