@@ -1,0 +1,150 @@
+.splitSection {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+.sectionheading {
+    font-size: 2.5rem; /* large, commanding */
+    font-weight: 700; /* strong emphasis */
+    text-align: center;
+    color: #222; /* dark, high contrast */
+    font-family: 'CorbenBold'; 
+    letter-spacing: 0.5px; /* subtle spacing for refinement */
+    margin-bottom: 15px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #1d4ed8, #3b82f6); /* blue gradient */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* gradient text effect */
+}
+@font-face {
+  font-family: 'CorbenBold';
+  src: url('/data/corben-cdnfonts/Corben-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; 
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/data/corben-cdnfonts/Montserrat-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; 
+}
+/* Image wrapper */
+.imageWrapper {
+  flex: 1;
+  position: relative;
+  height: 678px;
+  min-width: 300px;
+}
+
+.mapImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Text wrapper */
+.textWrapper {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Heading and subheading */
+.heading {
+  font-family: 'CorbenBold', serif;
+  font-size: 2rem;
+  color: #0364A0;
+  margin: 0 0 0.625rem;
+}
+:global(li) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.subheading {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(24, 62, 126);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* CTA button */
+.ctaButton {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #0070f3;
+  color: white;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  white-space: nowrap;
+  max-width: fit-content;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.ctaButton:hover {
+  background-color: #005bb5;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 1024px) {
+  .splitSection {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+.splitSection .imageWrapper {
+  order: -1; /* Ensures image appears above text on mobile */
+}
+  .imageWrapper {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+  }
+
+  .textWrapper {
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 1.75rem;
+    padding-inline-start: 40px;
+  }
+
+  .subheading {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .heading {
+    font-size: 1.5rem;
+    padding-top: 0px;
+  }
+
+  .subheading {
+    font-size: 0.95rem;
+  }
+
+  .imageWrapper {
+    aspect-ratio: 4 / 3;
+  }
+}
