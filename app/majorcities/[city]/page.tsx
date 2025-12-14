@@ -119,7 +119,7 @@ export default async function CityPage({ params }: PageProps) {
     ]
   }
 
-  }: "";
+  }: null;
   const citiesWithoutBanner = ['lasvegas'];
     if (!city) return <div>Loading place visit data...</div>;
     const { airportsection, propertySections, personaContent, plantripcontentsections } = await getAirportData(city);
@@ -133,6 +133,9 @@ export default async function CityPage({ params }: PageProps) {
               <Placevisit city={city}/>
               <Footer />
               <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
+        {schema1 && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
+      )}
               <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
       </div>
       </>
