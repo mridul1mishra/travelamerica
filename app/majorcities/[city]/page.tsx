@@ -126,8 +126,7 @@ export default async function CityPage({ params }: PageProps) {
     return (
       <>
       <div className="App">
-              <Header image={`/data/majorcities/${city}/assets/${city}.jpeg`} bannerText=`Welcome to ${capitalizeWords(city)}!`} />
-              
+              <Header image={`/data/majorcities/${city}/assets/${city}.jpeg`} bannerText={`Welcome to ${capitalizeWords(city)}!`} />
               <CityUI airportsection={airportsection} propertySections={propertySections} personaContent={personaContent} plantripcontentsections={plantripcontentsections} city={""}/>
               
               <Placevisit city={city}/>
