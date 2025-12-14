@@ -119,14 +119,14 @@ export default async function CityPage({ params }: PageProps) {
     ]
   }
 
-  }: null;
+  }: "";
   const citiesWithoutBanner = ['lasvegas'];
     if (!city) return <div>Loading place visit data...</div>;
     const { airportsection, propertySections, personaContent, plantripcontentsections } = await getAirportData(city);
     return (
       <>
       <div className="App">
-              <Header image={`/data/majorcities/${city}/assets/${city}.jpeg`} bannerText={!citiesWithoutBanner.includes(city) ? `Welcome to ${capitalizeWords(city)}!` : ""} />
+              <Header image={`/data/majorcities/${city}/assets/${city}.jpeg`} bannerText=`Welcome to ${capitalizeWords(city)}!`} />
               
               <CityUI airportsection={airportsection} propertySections={propertySections} personaContent={personaContent} plantripcontentsections={plantripcontentsections} city={""}/>
               
