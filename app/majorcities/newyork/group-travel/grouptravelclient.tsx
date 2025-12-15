@@ -36,6 +36,40 @@ export default function GroupTravelPage() {
     }
   ]
 };
+  const schema2 = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.travelamerica.work/majorcities/newyork/solo-travel"
+  },
+  "headline": "Group Travel in NYC: Safety Tips, Packing Essentials & Landmark Planning",
+  "description": "Explore NYC confidently with our group travel safety guide — smart packing tips, safe itineraries, and must-see landmarks for every explorer.",
+  "keywords": ["Group travel NYC", "NYC itinerary", "safe travel tips", "Citymapper", "MetroCard", "NYC group travel", "things to do alone NYC"],
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.travelamerica.work/data/majorcities/newyork/assets/safetybanner.png",
+    "height": 600,
+    "width": 1200
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Travel America"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Travel America",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.travelamerica.work/logo.png"
+    }
+  },
+  "datePublished": "2025-11-29",
+  "about": [
+    { "@type": "Thing", "name": "Group Travel" },
+    { "@type": "Place", "name": "New York City" }
+  ]
+};
 const schema3 = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -205,7 +239,7 @@ return (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema5) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema4) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema3) }}/>
-        
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema2) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
         
     </>
