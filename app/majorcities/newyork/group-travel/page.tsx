@@ -1,4 +1,4 @@
-import { generateDailyEvents } from '../lib/generateDailyEvents';
+import { generateDailyEvents } from '../../lib/generateDailyEvents';
 export const generateMetadata = () => ({
   title: 'Group Travel in NYC: Safety Tips, Packing Essentials & Landmark Planning',
   description:  'Explore NYC confidently with our group travel safety guide — smart packing tips, safe itineraries, and must-see landmarks for every explorer.',
