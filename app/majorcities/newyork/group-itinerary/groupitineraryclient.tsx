@@ -7,84 +7,7 @@ import styles from './groupitinerary.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
 
 export default function GroupItineraryClient() {
-    const BlogPosting = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "3-Day New York City Group Travel Itinerary",
-  "description": "Plan the perfect 3-day NYC trip for groups with museums, parks, Broadway, and a Hudson River dinner cruise.",
-  "author": {
-    "@type": "Organization",
-    "name": "Travel America"
-  },
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "TouristAttraction",
-        "position": 1,
-        "name": "Metropolitan Museum of Art",
-        "description": "Quiet reflection in timeless galleries."
-      },
-      {
-        "@type": "TouristAttraction",
-        "position": 2,
-        "name": "Central Park",
-        "description": "Tree-lined paths and lakeside views."
-      },
-      {
-        "@type": "TouristAttraction",
-        "position": 3,
-        "name": "Guggenheim Museum",
-        "description": "Modern art in iconic spiral galleries."
-      },
-      {
-        "@type": "TouristAttraction",
-        "position": 4,
-        "name": "Frick Collection",
-        "description": "Intimate encounters with European masterpieces."
-      },
-      {
-  "@type": "Event",
-  "position": 5,
-  "name": "Hudson River Dinner Cruise",
-  "description": "Enjoy a nightly NYC dinner cruise with gourmet dining, live entertainment, and skyline views.",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "image": [
-    "https://www.travelamerica.work/images/hudson-river-cruise.jpg"
-  ],
-  "location": {
-    "@type": "Place",
-    "name": "Pier 81, Hudson River",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "West 41st Street & 12th Avenue",
-      "addressLocality": "New York",
-      "addressRegion": "NY",
-      "postalCode": "10036",
-      "addressCountry": "US"
-    }
-  },
-  "organizer": {
-    "@type": "Organization",
-    "name": "Hudson’s by World Yacht",
-    "url": "https://pier81nyc.com/"
-  },
-  "performer": {
-    "@type": "MusicGroup",
-    "name": "NYC Jazz Ensemble"
-  },
-  "eventSchedule": {
-    "@type": "Schedule",
-    "startDate": "2025-12-16",
-    "endDate": "2026-12-16",
-    "repeatFrequency": "P1D",
-    "byDay": "https://schema.org/DayOfWeek"
-  }
-}
-
-    ]
-  }
-};
+    
     const FAQPage = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -225,7 +148,7 @@ const HowTo = {
 
     return(
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BlogPosting) }}/>        
+                
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemlist) }}/>        
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQPage) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HowTo) }}/>
