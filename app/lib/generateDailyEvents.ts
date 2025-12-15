@@ -1,3 +1,13 @@
+interface DailyEventOptions {
+  name: string;
+  description: string;
+  baseImage: string;
+  organizerName: string;
+  organizerUrl: string;
+  days?: number;
+  startHour?: number;
+  durationHours?: number;
+}
 export function generateDailyEvents({
   name,
   description,
@@ -6,8 +16,8 @@ export function generateDailyEvents({
   organizerUrl,
   days = 7,
   startHour = 19,
-  durationHours = 3
-}) {
+  durationHours = 3,
+}: DailyEventOptions) {
   const today = new Date();
 
   // Helper to format ISO without milliseconds
