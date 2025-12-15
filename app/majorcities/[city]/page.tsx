@@ -135,7 +135,6 @@ export default async function CityPage({ params }: PageProps) {
         {schema1 && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
       )}
-              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
       </div>
       </>
     );
