@@ -74,7 +74,7 @@ export default function GroupItineraryPage() {
   };
   return (
     <>
-      <GroupItineraryClient />
+      <GroupTravelClient />
       <Script id="structured-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BlogPosting) }} />
     </>
   );
