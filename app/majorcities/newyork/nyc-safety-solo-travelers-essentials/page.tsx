@@ -2,8 +2,8 @@ export const generateMetadata = () => ({
   title: 'NYC Solo Travel Safety: Culture, Tech & Belongings',
   description:  'Solo travelers in NYC: blend in, protect valuables, and use smart tech for a safe adventure.',
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
   alternates: {
       canonical: 'https://www.travelamerica.work/majorcities/newyork/nyc-solo-travel-safety',
