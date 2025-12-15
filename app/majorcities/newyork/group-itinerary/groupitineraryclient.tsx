@@ -47,12 +47,10 @@ export default function GroupItineraryClient() {
   "@type": "Event",
   "position": 5,
   "name": "Hudson River Dinner Cruise",
-  "description": "Enjoy a 3-hour NYC dinner cruise with gourmet dining, live entertainment, and skyline views.",
-  "startDate": "2025-12-16T19:00:00-05:00",
-  "endDate": "2025-12-16T22:00:00-05:00",
+  "description": "Enjoy a nightly NYC dinner cruise with gourmet dining, live entertainment, and skyline views.",
   "eventStatus": "https://schema.org/EventScheduled",
   "image": [
-    "https://nycwatercruises.com/images/dinner-cruise.jpg"
+    "https://www.travelamerica.work/images/hudson-river-cruise.jpg"
   ],
   "location": {
     "@type": "Place",
@@ -75,13 +73,12 @@ export default function GroupItineraryClient() {
     "@type": "MusicGroup",
     "name": "NYC Jazz Ensemble"
   },
-  "offers": {
-    "@type": "Offer",
-    "url": "https://eventcruisesnyc.com/events/premier-skyline-dinner-cruise-nyc",
-    "price": "120.00",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "validFrom": "2025-11-01T00:00:00-05:00"
+  "eventSchedule": {
+    "@type": "Schedule",
+    "startDate": "2025-12-16",
+    "endDate": "2026-12-16",
+    "repeatFrequency": "P1D",
+    "byDay": "https://schema.org/DayOfWeek"
   }
 }
 
