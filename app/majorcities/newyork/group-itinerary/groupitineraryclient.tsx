@@ -44,11 +44,47 @@ export default function GroupItineraryClient() {
         "description": "Intimate encounters with European masterpieces."
       },
       {
-        "@type": "Event",
-        "position": 5,
-        "name": "Hudson River Dinner Cruise",
-        "description": "Group dancing, skyline views, and shared plates."
-      }
+  "@type": "Event",
+  "position": 5,
+  "name": "Hudson River Dinner Cruise",
+  "description": "Enjoy a 3-hour NYC dinner cruise with gourmet dining, live entertainment, and skyline views.",
+  "startDate": "2025-12-16T19:00:00-05:00",
+  "endDate": "2025-12-16T22:00:00-05:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "image": [
+    "https://nycwatercruises.com/images/dinner-cruise.jpg"
+  ],
+  "location": {
+    "@type": "Place",
+    "name": "Pier 81, Hudson River",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "West 41st Street & 12th Avenue",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "postalCode": "10036",
+      "addressCountry": "US"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Hudson’s by World Yacht",
+    "url": "https://pier81nyc.com/"
+  },
+  "performer": {
+    "@type": "MusicGroup",
+    "name": "NYC Jazz Ensemble"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://eventcruisesnyc.com/events/premier-skyline-dinner-cruise-nyc",
+    "price": "120.00",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2025-11-01T00:00:00-05:00"
+  }
+}
+
     ]
   }
 };
