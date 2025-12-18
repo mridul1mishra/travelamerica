@@ -1,6 +1,6 @@
 import Home from "./home";
 import type { Metadata } from "next";
-import Home from "./home";
+
 
 export const metadata: Metadata = {
   title: "Travel Americas | Discover Iconic Cities to Visit",
