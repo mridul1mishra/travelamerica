@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 import Home from "./home";
 
 export const metadata: Metadata = {
-  title: "Travel Americas | Home",
+  title: "Travel Americas | Discover Iconic Cities to Visit",
   description: "Discover carefully selected city guides for Las Vegas, Orlando, New York, and Los Angeles. Explore culture, food, and attractions with insider insights",
   alternates: {
     canonical: "https://www.travelamerica.work/",
   },
   openGraph: {
-    title: "Travel Americas | Home",
+    title: "Travel Americas | Discover Iconic Cities to Visit",
     description: "Discover carefully selected city guides for Las Vegas, Orlando, New York, and Los Angeles. Explore culture, food, and attractions with insider insights",
     url: "https://www.travelamerica.work",
     siteName: "Travel Americas",
