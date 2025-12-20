@@ -1,0 +1,164 @@
+.splitSection {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+.sectionheading {
+    font-size: 2.5rem; /* large, commanding */
+    font-weight: 700; /* strong emphasis */
+    text-align: center;
+    color: #222; /* dark, high contrast */
+    font-family: 'CorbenBold'; 
+    letter-spacing: 0.5px; /* subtle spacing for refinement */
+    margin-bottom: 15px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #1d4ed8, #3b82f6); /* blue gradient */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* gradient text effect */
+}
+/* Heading and subheading */
+.heading {
+  font-family: 'CorbenBold', serif;
+  font-size: 2rem;
+  color: #0364A0;
+  margin: 0 0 0.625rem;
+  
+}
+:global(li) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.subheading {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(24, 62, 126);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+@font-face {
+  font-family: 'CorbenBold';
+  src: url('/data/corben-cdnfonts/Corben-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; 
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/data/corben-cdnfonts/Montserrat-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; 
+}
+
+/* CSS CARD */
+
+/* MAIN CARD */
+
+
+.safety-section {
+  display: flex;
+   flex-direction: column;
+  
+  gap: 32px;              /* spacing between cards */
+  padding: 32px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.safety-cards-row {
+  display: flex;
+  flex-direction: row;
+  gap: 155px;
+  
+  width: 100%;
+}
+.safety-section__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0364a0; /* deep navy */
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+.safety-card {
+  background: #fef9c3; /* warm pale yellow */
+  color: #e2e8f0;      /* soft cool gray text */
+  border-radius: 18px;
+  flex-direction: row;
+  max-width: 360px;
+  padding: 22px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* SHARED BLOCK STYLES */
+.safety-card__block {
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.08); /* subtle contrast */
+}
+
+.safety-card__block h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0f172a; /* dark navy for headings */
+}
+
+.safety-card__block ul {
+  margin: 0;
+  list-style: disc; 
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #0f172a; /* readable dark navy */
+}
+
+/* DO BLOCK */
+.safety-card__block--do {
+  border-left: 4px solid #22c55e; /* green */
+}
+
+/* DON'T BLOCK */
+.safety-card__block--dont {
+  border-left: 4px solid #ef4444; /* red */
+}
+
+/* SAFETY ANCHOR */
+/* SAFETY ANCHOR — PERFECTLY MATCHED */
+.safety-card__anchor {
+  background: #fef9c3; /* same warm pale yellow as the main card */
+  border-left: 4px solid #facc15; /* subtle gold accent */
+  padding: 14px 16px;
+  border-radius: 14px;
+  margin-top: 4px; /* slight breathing room like your image */
+}
+
+.safety-card__anchor h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0f172a; /* deep navy for perfect contrast */
+}
+
+.safety-card__anchor p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #0f172a; /* same navy as headings */
+}
+
+
+/* close card */
