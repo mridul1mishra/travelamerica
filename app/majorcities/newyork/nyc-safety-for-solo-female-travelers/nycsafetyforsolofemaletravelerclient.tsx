@@ -222,7 +222,7 @@ return(
         </div>
         </div>
         <div className={styles["safety-card"]}>
-        <div className={`${styles["safety-card__block1"]} ${styles["safety-card__block--do"]}`}>
+        <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--do"]}`}>
             <h3>✅ WHAT TO DO</h3>
                 <ul>
                     <li>Move calmly to another car at the next stop</li>
