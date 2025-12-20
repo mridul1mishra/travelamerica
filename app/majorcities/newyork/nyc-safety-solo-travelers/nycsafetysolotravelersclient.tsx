@@ -2,6 +2,7 @@ import styles from './nycsafetysolotravelers.module.css';
 import Header from "../../../components/Header/header";
 import Image from 'next/image';
 import Link from 'next/link';
+import Footer from '@/app/components/Header/Footer/footer';
 
 export default async function NYCSafetySolTravelersClient () {
 const webpage = {
@@ -172,6 +173,7 @@ return(
           </Link>
         </div>
       </section>
+      <Footer/>
     </>
 );
 }

@@ -36,7 +36,7 @@ export default function GroupTravelPage() {
     }
   ]
 };
-const schema2 = {
+  const schema2 = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "mainEntityOfPage": {

@@ -59,7 +59,7 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
   />
       </Head>
     <section className="hero">
-        <div style={{ position: "relative", width: "100%", height: "auto", aspectRatio: "1295 / 832" }}>
+        <div style={{ position: "relative", width: "100%", height: "auto", aspectRatio: "1295 / 832", marginTop: "77px" }}>
           <Image src={typeof image === "string" ? image : image.src} alt={bannerText} fill priority fetchPriority="high" decoding="async" style={{ objectFit: "cover", objectPosition: "bottom" }}/>
         </div>
       <header className={`overlay-header scrolled`}>

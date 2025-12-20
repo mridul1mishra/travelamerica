@@ -7,51 +7,7 @@ import styles from './groupitinerary.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
 
 export default function GroupItineraryClient() {
-    const BlogPosting = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "3-Day New York City Group Travel Itinerary",
-  "description": "Plan the perfect 3-day NYC trip for groups with museums, parks, Broadway, and a Hudson River dinner cruise.",
-  "author": {
-    "@type": "Organization",
-    "name": "Travel America"
-  },
-  "mainEntity": {
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "TouristAttraction",
-        "position": 1,
-        "name": "Metropolitan Museum of Art",
-        "description": "Quiet reflection in timeless galleries."
-      },
-      {
-        "@type": "TouristAttraction",
-        "position": 2,
-        "name": "Central Park",
-        "description": "Tree-lined paths and lakeside views."
-      },
-      {
-        "@type": "TouristAttraction",
-        "position": 3,
-        "name": "Guggenheim Museum",
-        "description": "Modern art in iconic spiral galleries."
-      },
-      {
-        "@type": "TouristAttraction",
-        "position": 4,
-        "name": "Frick Collection",
-        "description": "Intimate encounters with European masterpieces."
-      },
-      {
-        "@type": "Event",
-        "position": 5,
-        "name": "Hudson River Dinner Cruise",
-        "description": "Group dancing, skyline views, and shared plates."
-      }
-    ]
-  }
-};
+    
     const FAQPage = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -192,7 +148,7 @@ const HowTo = {
 
     return(
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BlogPosting) }}/>        
+                
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemlist) }}/>        
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQPage) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HowTo) }}/>

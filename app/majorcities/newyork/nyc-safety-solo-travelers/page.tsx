@@ -2,8 +2,8 @@ export const generateMetadata = () => ({
   title: 'Is NYC Safe for Solo Travelers? Nightlife, Transport & Neighborhood Tips',
   description:  'Explore solo travel safety in NYC with tips on transport, nightlife, neighborhoods, and smart planning. From subway strategies to rooftop bar confidence, this guide helps you navigate the city with ease.',
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
   alternates: {
       canonical: 'https://www.travelamerica.work/majorcities/newyork/nyc-safety-solo-travelers',
@@ -19,7 +19,7 @@ export const generateMetadata = () => ({
 import { getFaqItinerary } from '@/app/lib/FaqData';
 import NYCSafetySolTravelersClient from './nycsafetysolotravelersclient';
 
-export default async function SoloItineraryPage() {
+export default async function NYCsafetysolotravelersPage() {
   const { faqTravelHubData } = await getFaqItinerary();
   return <NYCSafetySolTravelersClient />;
 }
