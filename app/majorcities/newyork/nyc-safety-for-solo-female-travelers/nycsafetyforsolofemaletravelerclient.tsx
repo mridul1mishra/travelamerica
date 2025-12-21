@@ -51,23 +51,24 @@ return(
         <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--do"]}`}>
             <h3>✅ WHAT TO DO</h3>
                 <ul>
-                    <li>Move calmly to another car at the next stop</li>
+                    <li>Choose the car with people</li>
                     <li>Stand near the door or conductor’s window</li>
-                    <li>Keep your attention up and your bag in front</li>
+                    <li>Keep your bag in front</li>
+                    <li>Stay aware at each stop</li>
                 </ul>
         </div>
         <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--dont"]}`}>
             <h3>🚫 WHAT NOT TO DO</h3>
             <ul>
-            <li>Don’t engage</li>
-            <li>Don’t film them</li>
-            <li>Don’t confront</li>
+            <li>Don’t enter an empty car</li>
+            <li>Don’t sit in the far corner</li>
+            <li>Don’t use noise‑canceling headphones</li>
             </ul>
         </div>
 
         <div className={`${styles["safety-card__anchor"]}`}>
             <h3>🛡️ SAFETY ANCHOR</h3>
-            <p>“Changing cars is normal in NYC—riders do it all the time.”</p>
+            <p>Most NYC rides are uneventful — choosing a populated car keeps you safe.</p>
         </div>
         </div>
         </div>
