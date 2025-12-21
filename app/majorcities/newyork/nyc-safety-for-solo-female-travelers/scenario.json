@@ -1,49 +1,72 @@
-[
-  {
-    "icon": "🚇",
-    "title": "Entering a Subway Car at Night",
-    "description": "It’s 10:45 PM. A train arrives. One car is empty; the next is moderately full.",
-    "do": [
-      "Choose the car with people",
-      "Keep your bag in front",
-      "Stay aware at each stop"
-    ],
-    "dont": [
-      "Don’t enter an empty car",
-      "Don’t sit in the far corner",
-      "Don’t use noise‑canceling headphones"
-    ],
-    "anchor": "Most NYC rides are uneventful — choosing a populated car keeps you safe."
-  },
-  {
-    "icon": "🚇",
-    "title": "Someone is acting erratic on the train",
-    "description": "A person is pacing, shouting, or behaving unpredictably.",
-    "do": [
-      "Move calmly to another car",
-      "Stand near the door",
-      "Avoid eye contact"
-    ],
-    "dont": [
-      "Engage them",
-      "Film them",
-      "Confront or comment"
-    ],
-    "anchor": "Changing cars is normal in NYC — riders do it all the time."
-  },
-  {
-    "icon": "🚇",
-    "title": "Late‑Night Transfer in a Quiet Station",
-    "description": "You need to switch lines at a station with low foot traffic.",
-    "do": [
-      "Stay on the main platform",
-      "Stand near the Help Point intercom",
-      "Move toward groups or well‑lit areas"
-    ],
-    "dont": [
-      "Don’t walk down empty corridors",
-      "Don’t stand alone at the far end"
-    ],
-    "anchor": "Staying in visible, central areas is the safest choice at night."
-  }
-]
+{
+  "sections": [
+    {
+      "title": "Subway Scenario: Uncomfortable Passenger",
+      "cards": [
+        {
+          "icon": "🚇",
+          "title": "Entering a Subway Car at Night",
+          "description": "It’s 10:45 PM. A train arrives. One car is empty; the next is moderately full.",
+          "do": [
+            "Choose the car with people",
+            "Keep your bag in front",
+            "Stay aware at each stop"
+          ],
+          "dont": [
+            "Don’t enter an empty car",
+            "Don’t sit in the far corner",
+            "Don’t use noise‑canceling headphones"
+          ],
+          "anchor": "Most NYC rides are uneventful — choosing a populated car keeps you safe."
+        },
+        {
+          "icon": "🚇",
+          "title": "Someone is acting erratic on the train",
+          "description": "A person is pacing, shouting, or behaving unpredictably.",
+          "do": ["Move calmly to another car", "Stand near the door", "Avoid eye contact"],
+          "dont": ["Engage them", "Film them", "Confront or comment"],
+          "anchor": "Changing cars is normal in NYC — riders do it all the time."
+        },
+        {
+          "icon": "🚇",
+          "title": "Late‑Night Transfer in a Quiet Station",
+          "description": "You need to switch lines at a station with low foot traffic.",
+          "do": [
+            "Stay on the main platform",
+            "Stand near the Help Point intercom",
+            "Move toward groups or well‑lit areas"
+          ],
+          "dont": ["Don’t walk down empty corridors", "Don’t stand alone at the far end"],
+          "anchor": "Staying in visible, central areas is the safest choice at night."
+        }
+      ]
+    },
+
+    {
+      "title": "Section 2 Title",
+      "cards": [
+        { /* card 1 */ },
+        { /* card 2 */ },
+        { /* card 3 */ }
+      ]
+    },
+
+    {
+      "title": "Section 3 Title",
+      "cards": [
+        { /* card 1 */ },
+        { /* card 2 */ },
+        { /* card 3 */ }
+      ]
+    },
+
+    {
+      "title": "Section 4 Title",
+      "cards": [
+        { /* card 1 */ },
+        { /* card 2 */ },
+        { /* card 3 */ }
+      ]
+    }
+  ]
+}
