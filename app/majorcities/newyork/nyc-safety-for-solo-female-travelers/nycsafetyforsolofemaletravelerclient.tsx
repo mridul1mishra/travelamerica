@@ -25,19 +25,21 @@ return(
         <div className={`${styles["flip-card__inner"]} ${flipped ? styles["is-flipped"] : ""}`}  onClick={() => setFlipped(!flipped)}>
         <div className={styles["flip-card__front"]}>
             <div className={styles["safety-front-card"]}>
-            <div className={styles["safety-front-card__icon"]}>
-                🚇
-            </div>
+                <div className={styles["safety-front-card__body"]}>
+                <div className={styles["safety-front-card__icon"]}>
+                    🚇
+                </div>
 
-            <div className={styles["safety-front-card__content"]}>
-                <h3 className={styles["safety-front-card__scenario"]}>
-                Entering a Subway Car at Night
-                </h3>
+                <div className={styles["safety-front-card__content"]}>
+                    <h3 className={styles["safety-front-card__scenario"]}>
+                    Entering a Subway Car at Night
+                    </h3>
 
-                <p className={styles["safety-front-card__description"]}>
-                It’s 10:45 PM. A train arrives. One car is empty; the next is moderately full
-                </p>
-            </div>
+                    <p className={styles["safety-front-card__description"]}>
+                    It’s 10:45 PM. A train arrives. One car is empty; the next is moderately full
+                    </p>
+                </div>
+                </div>
             <div className={styles["safety-front-card__footer"]}>
                 Tap to flip →
             </div>
