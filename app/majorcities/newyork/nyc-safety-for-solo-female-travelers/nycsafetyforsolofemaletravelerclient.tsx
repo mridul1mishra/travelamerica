@@ -21,6 +21,8 @@ return(
         <h2 className={styles["safety-section__title"]}>
             Subway Scenario: Uncomfortable Passenger
         </h2>
+        <div className={styles["flip-card"]}>
+        <div className={`${styles["flip-card__inner"]} ${flipped ? styles["is-flipped"] : ""}`}  onClick={() => setFlipped(!flipped)}>
         <div className={styles["safety-front-card"]}>
             <div className={styles["safety-front-card__icon"]}>
                 🚇
@@ -66,7 +68,7 @@ return(
         
         
         </div>    
-        
+        </div></div>
 
     </section>
     
