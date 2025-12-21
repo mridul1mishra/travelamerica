@@ -108,6 +108,15 @@
 
   font-family: system-ui, sans-serif;
 }
+.safety-front-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.safety-front-card__footer {
+  margin-top: auto;
+}
 
 /* ICON */
 .safety-front-card__icon {
