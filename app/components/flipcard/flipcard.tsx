@@ -5,18 +5,20 @@ import styles from "./flipcard.module.css";
 interface FlipCardProps {
   front: React.ReactNode;
   back: React.ReactNode;
+  isFlipped: boolean;
+  onFlip: () => void;
 }
 
-export default function FlipCard({ front, back }: FlipCardProps) {
-  const [flipped, setFlipped] = useState(false);
+export default function FlipCard({ front, back, isFlipped, onFlip }: FlipCardProps) {
+  
 
   return (
     <div className={styles["flip-card"]}>
       <div
         className={`${styles["flip-card__inner"]} ${
-          flipped ? styles["is-flipped"] : ""
+          isFlipped  ? styles["is-flipped"] : ""
         }`}
-        onClick={() => setFlipped(!flipped)}
+        onClick={onFlip}
       >
         <div className={styles["flip-card__front"]}>{front}</div>
         <div className={styles["flip-card__back"]}>{back}</div>

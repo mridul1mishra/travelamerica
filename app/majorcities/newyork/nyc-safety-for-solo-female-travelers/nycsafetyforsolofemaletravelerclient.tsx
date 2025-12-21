@@ -10,8 +10,10 @@ import { FrontCard } from './frontcard';
 import { BackCard } from './backcard';
 import scenarios from "./scenario.json";
 
+
+
 export default function NYCsafetyforsolofemaletravelerclient() {
-    const [flipped, setFlipped] = useState(false);
+    const [activeCard, setActiveCard] = useState<number | null>(null);
     const schemaObject = {
   "@context": "https://schema.org",
   "@graph": [
@@ -149,7 +151,11 @@ return(
 
           <div className={styles["cards-row"]}>
             {section.cards.map((s, i) => (
-              <FlipCard key={i} front={<FrontCard scenario={s} />} back={<BackCard scenario={s} />}
+              <FlipCard key={i} 
+              front={<FrontCard scenario={s} />} 
+              back={<BackCard scenario={s} />}
+              isFlipped={activeCard === i}
+              onFlip={() => setActiveCard(activeCard === i ? null : i)}
               />
             ))}
           </div>
