@@ -248,6 +248,7 @@
   padding: 14px 16px;
   border-radius: 14px;
   margin-top: 4px; /* slight breathing room like your image */
+  background: rgba(0, 0, 0, 0.08); /* subtle contrast */
 }
 
 .safety-card__anchor h3 {
