@@ -8,8 +8,134 @@ import { useState } from 'react';
 
 export default function NYCsafetyforsolofemaletravelerclient() {
     const [flipped, setFlipped] = useState(false);
+    const schemaObject = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://yourdomain.com/nyc-solo-female-traveler-safety",
+      "name": "NYC Solo Female Traveler Safety Guide",
+      "description": "A scenario-based safety guide for solo female travelers navigating New York City, including subway safety, rideshare tips, street awareness, and real-world decision-making.",
+      "keywords": "NYC safety, solo female travel, subway safety, NYC travel tips, women travel safety, NYC scenarios, travel safety guide",
+      "url": "https://yourdomain.com/nyc-solo-female-traveler-safety",
+      "isPartOf": {
+        "@id": "https://yourdomain.com/#organization"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yourdomain.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Travel Safety",
+          "item": "https://yourdomain.com/travel-safety"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "NYC Solo Female Traveler Safety Guide",
+          "item": "https://yourdomain.com/nyc-solo-female-traveler-safety"
+        }
+      ]
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://yourdomain.com/#organization",
+      "name": "Your Brand Name",
+      "url": "https://yourdomain.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://yourdomain.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.instagram.com/yourbrand",
+        "https://www.youtube.com/yourbrand",
+        "https://www.linkedin.com/company/yourbrand"
+      ]
+    },
+
+    {
+      "@type": "ItemList",
+      "name": "NYC Safety Scenarios",
+      "itemListOrder": "Ascending",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Entering a Subway Car at Night"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Walking Past a Group on the Sidewalk"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Someone Following You for a Block"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Late-Night Rideshare Pickup"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Crowded Times Square Encounter"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Empty Subway Platform at Night"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Aggressive Panhandler Approaches"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Unlicensed Taxi Offers a Ride"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Lost in a Quiet Neighborhood"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Someone Blocking Your Path"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Late-Night Convenience Store Stop"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Street Harassment While Walking"
+        }
+      ]
+    }
+  ]
+};
+
 return(    
     <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObject) }}/>
     <Header image={`/data/majorcities/newyork/assets/nyc-solo-female-traveler-night-safety-banner.jpeg`} bannerText="NYC solo travel safety guide — neighborhood tips, subway awareness, exits, and time cues" />
     <section className={styles.splitSection} style={{  textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
