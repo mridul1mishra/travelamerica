@@ -581,8 +581,8 @@ return(
             <h3>✅ WHAT TO DO</h3>
                 <ul>
                     <li>Use another device to lock your phone</li>
-                    <li>• Contact your hotel</li>
-                    <li>File a police report Contact your insurance provider</li>
+                    <li>Contact your hotel</li>
+                    <li>File a police report and contact your insurance provider</li>
                 </ul>
         </div>
         <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--dont"]}`}>
@@ -692,7 +692,7 @@ return(
             <h3>✅ WHAT TO DO</h3>
                 <ul>
                     <li>Enter a store or hotel lobby</li>
-                    <li>Cross the street or Call someone</li>
+                    <li>Cross the street or call someone</li>
                     <li>Change direction</li>
                 </ul>
         </div>
