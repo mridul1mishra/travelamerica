@@ -1,18 +1,19 @@
 "use client";
 import styles from './nycsafetysolofemaletravelers.module.css';
 import Header from "../../../components/Header/header";
-import Image from 'next/image';
-import Link from 'next/link';
 import Footer from '@/app/components/Header/Footer/footer';
 import { useState } from 'react';
 import FlipCard from '@/app/components/flipcard/flipcard';
 import { FrontCard } from './frontcard';
 import { BackCard } from './backcard';
-import scenarios from "./scenario.json";
+import rawData from "./scenario.json";
+import type { ScenarioData } from "@/app/models/scenario";
+
 
 
 
 export default function NYCsafetyforsolofemaletravelerclient() {
+  const scenarios = rawData as ScenarioData;
     const [activeCard, setActiveCard] = useState<number | null>(null);
     const schemaObject = {
   "@context": "https://schema.org",
@@ -146,8 +147,9 @@ return(
                 </div>
     </section>
     {scenarios.sections.map((section, sectionIndex) => (
-        <section key={sectionIndex} className={styles["safety-section"]}>
-          <h2 className={styles["safety-section__title"]}>{section.title}</h2>
+      
+        <section key={sectionIndex} className={`${styles["safety-section"]} ${styles[`theme--${section.theme}`]}`}>
+        <h2 className={styles["safety-section__title"]}>{section.title}</h2>
 
           <div className={styles["cards-row"]}>
             {section.cards.map((s, i) => (
@@ -160,6 +162,7 @@ return(
             ))}
           </div>
         </section>
+    
       ))}
     <Footer />    
     </>

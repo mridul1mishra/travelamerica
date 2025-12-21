@@ -60,8 +60,8 @@
 /* Flip Card */
 .flip-card {
   perspective: 1000px;
-  width: 360px;
-  height: 431px; /* match your card height */
+  width: 320px;
+  height: auto; /* match your card height */
   position: relative;
   margin-bottom: 32px;
 
@@ -111,7 +111,7 @@
   justify-content: center;
   gap: 16px;
   /* sizing fix */
-  max-width: 320px;
+  max-width: 290px;
   width: 100%;
   min-height: 360px;             /* 🔥 match back card height */
 
@@ -278,5 +278,31 @@
   color: #0f172a; /* same navy as headings */
 }
 
+/*card color*/
+.theme--purple .safety-card,
+.theme--purple .safety-front-card {
+  background-color: #f3e8ff !important;
+  border-color: #a855f7 !important;
+}
+
+.theme--blue .safety-card,
+.theme--blue .safety-front-card {
+  background-color: #e0f2fe;
+  border-color: #3b82f6;
+}
+
+.theme--green .safety-card,
+.theme--green .safety-front-card {
+  background-color: #dcfce7;
+  border-color: #22c55e;
+}
+
+.theme--orange .safety-card,
+.theme--orange .safety-front-card {
+  background-color: #ffedd5;
+  border-color: #fb923c;
+}
+
+/* card color */
 
 /* close card */

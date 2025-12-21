@@ -2,6 +2,7 @@
   "sections": [
     {
       "title": "Subway Scenario: Uncomfortable Passenger",
+      "theme": "purple",
       "cards": [
         {
           "icon": "🚇",
@@ -44,6 +45,7 @@
 
     {
       "title": "Street Scenario: Navigating Crowds & Encounters",
+      "theme": "blue",
       "cards": [
         {
           "icon": "🚶‍♀️",
@@ -98,6 +100,7 @@
 
     {
       "title": "Rideshare Scenario: Safe Pickups & Drop‑offs",
+      "theme": "green",
       "cards": [
         {
           "icon": "🚗",
@@ -152,6 +155,7 @@
 
     {
       "title": "Neighborhood Scenario: Low‑Traffic Areas",
+      "theme": "orange",
       "cards": [
         {
           "icon": "🌃",

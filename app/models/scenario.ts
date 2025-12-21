@@ -8,5 +8,9 @@ export interface Scenario {
 }
 export interface ScenarioSection {
   title: string;
+  theme: string;
   cards: Scenario[];
+}
+export interface ScenarioData {
+  sections: ScenarioSection[];
 }
