@@ -369,6 +369,182 @@ return(
         </div>
 
     </section>
+        
+    <section className={styles["safety-section"]}>
+        <h2 className={styles["safety-section__title"]}>
+            AVOID MANIPULATION (Scams + Approaches)
+        </h2>
+        <div className={styles["cards-row"]}>
+        <div className={styles["flip-card"]}>
+        <div className={`${styles["flip-card__inner"]} ${flipped ? styles["is-flipped"] : ""}`}  onClick={() => setFlipped(!flipped)}>
+        <div className={styles["flip-card__front"]}>
+            <div className={styles["safety-front-card"]}>
+
+                <div className={styles["safety-front-card__icon"]}>
+                    🚇
+                </div>
+
+                <div className={styles["safety-front-card__content"]}>
+                    <h3 className={styles["safety-front-card__scenario"]}>
+                    Times Square “Free Gift” Scam
+                    </h3>
+
+                    <p className={styles["safety-front-card__description"]}>
+                    Someone tries to hand you a CD, bracelet, or “free” item.
+                    </p>
+                </div>
+                
+            <div className={styles["safety-front-card__footer"]}>
+                Tap to flip →
+            </div>
+        </div>
+        </div>
+            <div className={styles["flip-card__back"]}>
+        <div className={styles["safety-cards-row"]}>
+        <div className={styles["safety-card"]}>
+        <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--do"]}`}>
+            <h3>✅ WHAT TO DO</h3>
+                <ul>
+                    <li>Keep walking  </li>
+                    <li>Keep your hands close</li>
+                    <li>Stay aware of your bag</li>
+                </ul>
+        </div>
+        <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--dont"]}`}>
+            <h3>🚫 WHAT NOT TO DO</h3>
+            <ul>
+            <li>Don’t take the item </li>
+            <li>Don’t pose for photos </li>
+            <li>Don’t open your bag</li>
+            </ul>
+        </div>
+
+        <div className={`${styles["safety-card__anchor"]}`}>
+            <h3>🛡️ SAFETY ANCHOR</h3>
+            <p>Ignoring them is normal — locals do it every day.</p>
+        </div>
+        </div>
+        </div>
+        
+        
+        </div>    
+        </div>
+        </div>
+        
+        
+        <div className={styles["flip-card"]}>
+        <div className={`${styles["flip-card__inner"]} ${flipped ? styles["is-flipped"] : ""}`}  onClick={() => setFlipped(!flipped)}>
+        <div className={styles["flip-card__front"]}>
+            <div className={styles["safety-front-card"]}>
+                
+                <div className={styles["safety-front-card__icon"]}>
+                    🚇
+                </div>
+
+                <div className={styles["safety-front-card__content"]}>
+                    <h3 className={styles["safety-front-card__scenario"]}>
+                    Aggressive Street Approach
+                    </h3>
+
+                    <p className={styles["safety-front-card__description"]}>
+                    Someone tries to distract, pressure, or corner you.
+                    </p>
+                </div>
+                
+            <div className={styles["safety-front-card__footer"]}>
+                Tap to flip →
+            </div>
+        </div>
+        </div>
+            <div className={styles["flip-card__back"]}>
+        <div className={styles["safety-cards-row"]}>
+        <div className={styles["safety-card"]}>
+        <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--do"]}`}>
+            <h3>✅ WHAT TO DO</h3>
+                <ul>
+                    <li>Walk with purpose  </li>
+                    <li>Say “No, thank you” without stopping</li>
+                    <li>Change direction</li>
+                </ul>
+        </div>
+        <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--dont"]}`}>
+            <h3>🚫 WHAT NOT TO DO</h3>
+            <ul>
+            <li>Don’t explain</li>
+            <li>Don’t stop</li>
+            <li>Don’t engage</li>
+            </ul>
+        </div>
+
+        <div className={`${styles["safety-card__anchor"]}`}>
+            <h3>🛡️ SAFETY ANCHOR</h3>
+            <p>NYC rewards confidence — pace and direction matter</p>
+        </div>
+        </div>
+        </div>
+        
+        
+        </div>    
+        </div>
+        </div>
+        <div className={styles["flip-card"]}>
+        <div className={`${styles["flip-card__inner"]} ${flipped ? styles["is-flipped"] : ""}`}  onClick={() => setFlipped(!flipped)}>
+        <div className={styles["flip-card__front"]}>
+            <div className={styles["safety-front-card"]}>
+                
+                <div className={styles["safety-front-card__icon"]}>
+                    🚇
+                </div>
+
+                <div className={styles["safety-front-card__content"]}>
+                    <h3 className={styles["safety-front-card__scenario"]}>
+                    Fake Ticket or Donation Scam
+                    </h3>
+
+                    <p className={styles["safety-front-card__description"]}>
+                    Someone claims to sell tickets or collect donations
+                    </p>
+                </div>
+                
+            <div className={styles["safety-front-card__footer"]}>
+                Tap to flip →
+            </div>
+        </div>
+        </div>
+            <div className={styles["flip-card__back"]}>
+        <div className={styles["safety-cards-row"]}>
+        <div className={styles["safety-card"]}>
+        <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--do"]}`}>
+            <h3>✅ WHAT TO DO</h3>
+                <ul>
+                    <li>Buy tickets only from official booths</li>
+                    <li>Walk away immediately</li>
+                    <li>Keep your bag closed</li>
+                </ul>
+        </div>
+        <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--dont"]}`}>
+            <h3>🚫 WHAT NOT TO DO</h3>
+            <ul>
+            <li>Don’t show your wallet</li>
+            <li>Don’t give cash</li>
+            </ul>
+        </div>
+
+        <div className={`${styles["safety-card__anchor"]}`}>
+            <h3>🛡️ SAFETY ANCHOR</h3>
+            <p>If it’s not from an official counter, it’s not real</p>
+        </div>
+        </div>
+        </div>
+        
+        
+        </div>    
+        </div>
+        </div>
+        
+        </div>
+
+    </section>
     <Footer />    
     </>
 );
