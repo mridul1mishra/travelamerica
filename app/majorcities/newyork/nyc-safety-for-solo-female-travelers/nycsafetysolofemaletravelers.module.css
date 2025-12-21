@@ -71,6 +71,12 @@
   transform-style: preserve-3d;
   cursor: pointer;
 }
+/* Hover flip (desktop only) */
+@media (hover: hover) {
+  .flip-card:hover .flip-card__inner {
+    transform: rotateY(180deg);
+  }
+}
 .is-flipped {
   transform: rotateY(180deg);
 }
