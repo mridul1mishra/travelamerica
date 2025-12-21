@@ -25,7 +25,7 @@ return(
         <div className={styles["flip-card"]}>
         <div className={`${styles["flip-card__inner"]} ${flipped ? styles["is-flipped"] : ""}`}  onClick={() => setFlipped(!flipped)}>
         <div className={styles["flip-card__front"]}>
-            <div className={styles["safety-front-card"]} style={{ background: "#FFFBE8" }}>
+            <div className={styles["safety-front-card"]}>
 
                 <div className={styles["safety-front-card__icon"]}>
                     🚇
@@ -48,7 +48,7 @@ return(
         </div>
             <div className={styles["flip-card__back"]}>
         <div className={styles["safety-cards-row"]}>
-        <div className={styles["safety-card"]} style={{ background: "#FFFBE8" }}>
+        <div className={styles["safety-card"]}>
         <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--do"]}`}>
             <h3>✅ WHAT TO DO</h3>
                 <ul>
@@ -82,7 +82,7 @@ return(
         <div className={styles["flip-card"]}>
         <div className={`${styles["flip-card__inner"]} ${flipped ? styles["is-flipped"] : ""}`}  onClick={() => setFlipped(!flipped)}>
         <div className={styles["flip-card__front"]}>
-            <div className={styles["safety-front-card"]} style={{ background: "#FFFBE8" }}>
+            <div className={styles["safety-front-card"]}>
                 
                 <div className={styles["safety-front-card__icon"]}>
                     🚇
@@ -105,7 +105,7 @@ return(
         </div>
             <div className={styles["flip-card__back"]}>
         <div className={styles["safety-cards-row"]}>
-        <div className={styles["safety-card"]} style={{ background: "#FFFBE8" }}>
+        <div className={styles["safety-card"]}>
         <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--do"]}`}>
             <h3>✅ WHAT TO DO</h3>
                 <ul>
@@ -137,7 +137,7 @@ return(
         <div className={styles["flip-card"]}>
         <div className={`${styles["flip-card__inner"]} ${flipped ? styles["is-flipped"] : ""}`}  onClick={() => setFlipped(!flipped)}>
         <div className={styles["flip-card__front"]}>
-            <div className={styles["safety-front-card"]} style={{ background: "#FFFBE8" }}>
+            <div className={styles["safety-front-card"]}>
                 
                 <div className={styles["safety-front-card__icon"]}>
                     🚇
@@ -160,7 +160,7 @@ return(
         </div>
             <div className={styles["flip-card__back"]}>
         <div className={styles["safety-cards-row"]}>
-        <div className={styles["safety-card"]} style={{ background: "#FFFBE8" }}>
+        <div className={styles["safety-card"]}>
         <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--do"]}`}>
             <h3>✅ WHAT TO DO</h3>
                 <ul>
@@ -257,8 +257,8 @@ return(
         
         <div className={styles["flip-card"]}>
         <div className={`${styles["flip-card__inner"]} ${flipped ? styles["is-flipped"] : ""}`}  onClick={() => setFlipped(!flipped)}>
-        <div className={styles["flip-card__front"]} style={{ background: "#FFFBE8" }}>
-            <div className={styles["safety-front-card"]}>
+        <div className={styles["flip-card__front"]}>
+            <div className={styles["safety-front-card"]} style={{ background: "#FFFBE8" }}>
                 
                 <div className={styles["safety-front-card__icon"]}>
                     🚇
