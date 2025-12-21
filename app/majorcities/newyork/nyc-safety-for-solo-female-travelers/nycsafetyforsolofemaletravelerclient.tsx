@@ -13,13 +13,13 @@ export default function NYCsafetyforsolofemaletravelerclient() {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://yourdomain.com/nyc-solo-female-traveler-safety",
+      "@id": "https://www.travelamerica.work/majorcities/newyork/nyc-safety-for-solo-female-travelers",
       "name": "NYC Solo Female Traveler Safety Guide",
       "description": "A scenario-based safety guide for solo female travelers navigating New York City, including subway safety, rideshare tips, street awareness, and real-world decision-making.",
       "keywords": "NYC safety, solo female travel, subway safety, NYC travel tips, women travel safety, NYC scenarios, travel safety guide",
-      "url": "https://yourdomain.com/nyc-solo-female-traveler-safety",
+      "url": "https://www.travelamerica.work/majorcities/newyork/nyc-safety-for-solo-female-travelers",
       "isPartOf": {
-        "@id": "https://yourdomain.com/#organization"
+        "@id": "https://www.travelamerica.work/#organization"
       }
     },
 
@@ -30,13 +30,13 @@ export default function NYCsafetyforsolofemaletravelerclient() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://yourdomain.com/"
+          "item": "https://www.travelamerica.work/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Travel Safety",
-          "item": "https://yourdomain.com/travel-safety"
+          "item": "https://www.travelamerica.work/majorcities/newyork"
         },
         {
           "@type": "ListItem",
@@ -49,20 +49,13 @@ export default function NYCsafetyforsolofemaletravelerclient() {
 
     {
       "@type": "Organization",
-      "@id": "https://yourdomain.com/#organization",
+      "@id": "https://www.travelamerica.work/#organization",
       "name": "Your Brand Name",
-      "url": "https://yourdomain.com",
+      "url": "https://www.travelamerica.work",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://yourdomain.com/logo.png"
+        "url": "https://www.travelamerica.work/logo.png"
       },
-      "sameAs": [
-        "https://www.instagram.com/yourbrand",
-        "https://www.youtube.com/yourbrand",
-        "https://www.linkedin.com/company/yourbrand"
-      ]
-    },
-
     {
       "@type": "ItemList",
       "name": "NYC Safety Scenarios",
