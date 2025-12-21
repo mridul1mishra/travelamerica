@@ -166,7 +166,7 @@
   display: flex;
   flex-direction: column;  
   gap: 32px;              /* spacing between cards */
-  padding: 32px 16px;
+  padding: 32px 16px 47px;
   width: 100%;
   box-sizing: border-box;
 }
