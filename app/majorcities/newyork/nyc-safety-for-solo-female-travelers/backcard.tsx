@@ -1,4 +1,7 @@
-export function BackCard({ scenario }) {
+import { Scenario } from '@/app/models/scenario';
+import styles from './nycsafetysolofemaletravelers.module.css';
+
+export function BackCard({ scenario }: { scenario: Scenario }) {
   return (
     <div className={styles["safety-cards-row"]}>
       <div className={styles["safety-card"]}>

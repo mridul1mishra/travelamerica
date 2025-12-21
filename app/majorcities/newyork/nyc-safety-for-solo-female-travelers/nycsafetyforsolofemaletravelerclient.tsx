@@ -5,6 +5,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/app/components/Header/Footer/footer';
 import { useState } from 'react';
+import FlipCard from '@/app/components/flipcard/flipcard';
+import { FrontCard } from './frontcard';
+import { BackCard } from './backcard';
+import scenarios from "./scenario.json";
 
 export default function NYCsafetyforsolofemaletravelerclient() {
     const [flipped, setFlipped] = useState(false);
@@ -55,7 +59,9 @@ export default function NYCsafetyforsolofemaletravelerclient() {
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.travelamerica.work/logo.png"
-      },
+      }
+    },
+
     {
       "@type": "ItemList",
       "name": "NYC Safety Scenarios",
@@ -126,6 +132,7 @@ export default function NYCsafetyforsolofemaletravelerclient() {
   ]
 };
 
+
 return(    
     <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObject) }}/>
@@ -142,14 +149,12 @@ return(
 
           <div className={styles["cards-row"]}>
             {section.cards.map((s, i) => (
-              <FlipCard
-                key={i}
-                front={<FrontCard scenario={s} />}
-                back={<BackCard scenario={s} />}
+              <FlipCard key={i} front={<FrontCard scenario={s} />} back={<BackCard scenario={s} />}
               />
             ))}
           </div>
         </section>
+      ))}
     <Footer />    
     </>
 );

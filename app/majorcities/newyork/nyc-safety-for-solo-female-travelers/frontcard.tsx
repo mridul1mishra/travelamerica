@@ -1,4 +1,7 @@
-export function FrontCard({ scenario }) {
+import styles from './nycsafetysolofemaletravelers.module.css';
+import { Scenario } from '@/app/models/scenario'
+
+export function FrontCard({ scenario }: { scenario: Scenario }){
   return (
     <div className={styles["safety-front-card"]}>
       <div className={styles["safety-front-card__icon"]}>{scenario.icon}</div>

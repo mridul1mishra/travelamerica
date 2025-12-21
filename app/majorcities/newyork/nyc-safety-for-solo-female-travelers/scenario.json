@@ -43,29 +43,164 @@
     },
 
     {
-      "title": "Section 2 Title",
+      "title": "Street Scenario: Navigating Crowds & Encounters",
       "cards": [
-        { /* card 1 */ },
-        { /* card 2 */ },
-        { /* card 3 */ }
+        {
+          "icon": "🚶‍♀️",
+          "title": "Walking Past a Group on the Sidewalk",
+          "description": "A group is gathered ahead, taking up most of the sidewalk.",
+          "do": [
+            "Cross the street early if possible",
+            "Walk with purpose and steady pace",
+            "Keep your phone accessible but not out"
+          ],
+          "dont": [
+            "Don’t squeeze through the group",
+            "Don’t slow down or hesitate",
+            "Don’t make unnecessary eye contact"
+          ],
+          "anchor": "Changing your path early is normal in NYC — locals do it constantly."
+        },
+        {
+          "icon": "👣",
+          "title": "Someone Following You for a Block",
+          "description": "You notice someone behind you matching your pace.",
+          "do": [
+            "Change direction or cross the street",
+            "Enter a store or well‑lit area",
+            "Call someone so your voice is heard"
+          ],
+          "dont": [
+            "Don’t confront them",
+            "Don’t walk into isolated areas",
+            "Don’t show fear or panic"
+          ],
+          "anchor": "Redirecting your route is a powerful way to break unwanted patterns."
+        },
+        {
+          "icon": "🗽",
+          "title": "Crowded Times Square Encounter",
+          "description": "A costumed character or promoter approaches you aggressively.",
+          "do": [
+            "Keep walking without stopping",
+            "Hold your bag close",
+            "Use firm but neutral body language"
+          ],
+          "dont": [
+            "Don’t take photos unless you want to pay",
+            "Don’t engage in conversation",
+            "Don’t let them block your path"
+          ],
+          "anchor": "Times Square performers rely on engagement — ignoring them is expected."
+        }
       ]
     },
 
     {
-      "title": "Section 3 Title",
+      "title": "Rideshare Scenario: Safe Pickups & Drop‑offs",
       "cards": [
-        { /* card 1 */ },
-        { /* card 2 */ },
-        { /* card 3 */ }
+        {
+          "icon": "🚗",
+          "title": "Late‑Night Rideshare Pickup",
+          "description": "You’re waiting for an Uber or Lyft outside a bar or restaurant.",
+          "do": [
+            "Verify the license plate before approaching",
+            "Ask the driver to confirm your name",
+            "Sit in the back seat on the passenger side"
+          ],
+          "dont": [
+            "Don’t say your name first",
+            "Don’t get into a car with mismatched details",
+            "Don’t wait alone in a dark spot"
+          ],
+          "anchor": "Verification is your strongest safety tool — drivers expect it."
+        },
+        {
+          "icon": "🚕",
+          "title": "Unlicensed Taxi Offers a Ride",
+          "description": "A driver in an unmarked car waves you over.",
+          "do": [
+            "Ignore and keep walking",
+            "Use only official apps or yellow cabs",
+            "Move toward a populated area"
+          ],
+          "dont": [
+            "Don’t negotiate or respond",
+            "Don’t get into any unmarked vehicle",
+            "Don’t reveal your destination"
+          ],
+          "anchor": "Licensed NYC drivers never solicit riders — ignoring is the norm."
+        },
+        {
+          "icon": "📍",
+          "title": "Drop‑Off in a Quiet Area",
+          "description": "Your rideshare drops you off on a dimly lit street.",
+          "do": [
+            "Ask the driver to stop closer to a lit corner",
+            "Scan your surroundings before exiting",
+            "Walk confidently toward your destination"
+          ],
+          "dont": [
+            "Don’t linger near the car",
+            "Don’t walk with your head down",
+            "Don’t take out valuables immediately"
+          ],
+          "anchor": "Drivers are used to adjusting drop‑off points — it’s okay to ask."
+        }
       ]
     },
 
     {
-      "title": "Section 4 Title",
+      "title": "Neighborhood Scenario: Low‑Traffic Areas",
       "cards": [
-        { /* card 1 */ },
-        { /* card 2 */ },
-        { /* card 3 */ }
+        {
+          "icon": "🌃",
+          "title": "Lost in a Quiet Neighborhood",
+          "description": "You realize you’ve taken a wrong turn in a low‑traffic area.",
+          "do": [
+            "Move toward the nearest lit intersection",
+            "Use your phone discreetly to re‑route",
+            "Walk with purpose even if unsure"
+          ],
+          "dont": [
+            "Don’t stop in the middle of the street",
+            "Don’t display confusion",
+            "Don’t ask random strangers for directions"
+          ],
+          "anchor": "Projecting confidence reduces unwanted attention dramatically."
+        },
+        {
+          "icon": "🚫",
+          "title": "Someone Blocking Your Path",
+          "description": "A person steps into your walking line intentionally.",
+          "do": [
+            "Change direction immediately",
+            "Move toward a store or group",
+            "Use your voice if needed: 'No, thank you.'"
+          ],
+          "dont": [
+            "Don’t freeze in place",
+            "Don’t engage in conversation",
+            "Don’t let them corner you"
+          ],
+          "anchor": "Changing direction is a powerful boundary — use it early."
+        },
+        {
+          "icon": "🏪",
+          "title": "Late‑Night Convenience Store Stop",
+          "description": "You enter a bodega or deli late at night with few customers.",
+          "do": [
+            "Stand near the counter or staff",
+            "Keep your bag zipped and close",
+            "Buy quickly and leave confidently"
+          ],
+          "dont": [
+            "Don’t wander deep into the aisles",
+            "Don’t display cash openly",
+            "Don’t stay if something feels off"
+          ],
+          "anchor": "Positioning yourself near staff increases safety and visibility."
+        }
       ]
     }
   ]
