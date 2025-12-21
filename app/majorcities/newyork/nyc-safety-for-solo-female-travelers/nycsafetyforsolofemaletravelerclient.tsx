@@ -23,7 +23,8 @@ return(
         </h2>
         <div className={styles["flip-card"]}>
         <div className={`${styles["flip-card__inner"]} ${flipped ? styles["is-flipped"] : ""}`}  onClick={() => setFlipped(!flipped)}>
-        <div className={styles["safety-front-card"]}>
+        <div className={styles["flip-card__front"]}>
+            <div className={styles["safety-front-card"]}>
             <div className={styles["safety-front-card__icon"]}>
                 🚇
             </div>
@@ -41,6 +42,8 @@ return(
                 Tap to flip →
             </div>
         </div>
+        </div>
+            <div className={styles["flip-card__back"]}>
         <div className={styles["safety-cards-row"]}>
         <div className={styles["safety-card"]}>
         <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--do"]}`}>
@@ -65,10 +68,12 @@ return(
             <p>“Changing cars is normal in NYC—riders do it all the time.”</p>
         </div>
         </div>
+        </div>
         
         
         </div>    
-        </div></div>
+        </div>
+        </div>
 
     </section>
     
