@@ -53,7 +53,6 @@ return(
             <h3>✅ WHAT TO DO</h3>
                 <ul>
                     <li>Choose the car with people</li>
-                    <li>Stand near the door or conductor’s window</li>
                     <li>Keep your bag in front</li>
                     <li>Stay aware at each stop</li>
                 </ul>
@@ -110,7 +109,7 @@ return(
         <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--do"]}`}>
             <h3>✅ WHAT TO DO</h3>
                 <ul>
-                    <li>Move calmly to another car at the next stop</li>
+                    <li>Move calmly to another car</li>
                     <li>Stand near the door</li>
                     <li>Avoid eye contact</li>
                 </ul>
@@ -231,8 +230,7 @@ return(
                 <ul>
                     <li>Order a rideshare from inside</li>
                     <li>Check the license plate</li>
-                    <li>Sit behind the driver</li>
-                    <li>Share your trip</li>
+                    <li>Sit behind the driver and share your trip</li>
                 </ul>
         </div>
         <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--dont"]}`}>
