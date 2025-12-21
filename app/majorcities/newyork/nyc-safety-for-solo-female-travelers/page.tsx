@@ -16,9 +16,9 @@ export const generateMetadata = () => ({
   }
 });
 
-import { getFaqItinerary } from '@/app/lib/FaqData';
+
 import NYCSafetyforSoloFemaleTravelerClient from './nycsafetyforsolofemaletravelerclient';
 export default async function NYCSafetyforsolofemaletraveler() {
-  const { faqTravelHubData } = await getFaqItinerary();
+  
   return <NYCSafetyforSoloFemaleTravelerClient />;
 }

@@ -57,14 +57,75 @@
 }
 
 /* CSS CARD */
+/* Front Card */
+/* FRONT CARD WRAPPER */
+.safety-front-card {
+  background: #fef9c3; /* same warm yellow as your main cards */
+  border-radius: 18px;
+  padding: 20px 22px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* layout fix */
+  display: flex;
+  flex-direction: column;        /* vertical layout */
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  /* sizing fix */
+  max-width: 360px;
+  width: 100%;
+  min-height: 360px;             /* 🔥 match back card height */
+
+  font-family: system-ui, sans-serif;
+}
+
+/* ICON */
+.safety-front-card__icon {
+  font-size: 32px;
+  line-height: 1;
+}
+
+/* TEXT CONTENT */
+.safety-front-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+/* SCENARIO TITLE */
+.safety-front-card__scenario {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+/* DESCRIPTION */
+.safety-front-card__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #0f172a;
+}
+
+.safety-front-card__footer {
+  font-size: 14px;
+  color: #0f172a;
+  opacity: 0.7;
+  margin-top: 12px;
+  text-align: center;
+}
+/* Front Card */
 
 /* MAIN CARD */
 
 
 .safety-section {
   display: flex;
-   flex-direction: column;
-  
+  flex-direction: column;  
   gap: 32px;              /* spacing between cards */
   padding: 32px 16px;
   width: 100%;
