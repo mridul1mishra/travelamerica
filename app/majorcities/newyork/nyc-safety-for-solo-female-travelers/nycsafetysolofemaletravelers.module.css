@@ -61,7 +61,9 @@
 .flip-card {
   perspective: 1000px;
   width: 360px;
-  height: 360px; /* match your card height */
+  height: 431px; /* match your card height */
+  overflow: hidden;
+  position: relative;
 }
 .flip-card__inner {
   position: relative;
@@ -108,18 +110,13 @@
   justify-content: center;
   gap: 16px;
   /* sizing fix */
-  max-width: 360px;
+  max-width: 320px;
   width: 100%;
-  min-height: 360px;             /* 🔥 match back card height */
+  min-height: 430px;             /* 🔥 match back card height */
 
   font-family: system-ui, sans-serif;
 }
-.safety-front-card__body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
+
 .safety-front-card__footer {
   margin-top: auto;
 }
@@ -167,14 +164,21 @@
 
 /* MAIN CARD */
 
-
-.safety-section {
+.cards-row {
   display: flex;
-  flex-direction: column;  
+  gap: 2rem;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 10px; /* ← left & right padding */
+}
+.safety-section {
+  display: flex; 
+  flex-direction: column; 
   gap: 32px;              /* spacing between cards */
-  padding: 32px 16px 74px;
+  padding: 32px 16px;
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: 32px;
 }
 .safety-cards-row {
   display: flex;
@@ -184,6 +188,7 @@
   width: 100%;
 }
 .safety-section__title {
+  display: block;
   font-size: 20px;
   font-weight: 700;
   color: #0364a0; /* deep navy */
@@ -194,7 +199,6 @@
   background: #fef9c3; /* warm pale yellow */
   color: #e2e8f0;      /* soft cool gray text */
   border-radius: 18px;
-  flex-direction: row;
   max-width: 360px;
   padding: 22px;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
@@ -203,6 +207,7 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+  margin-bottom: 32px;
 }
 
 /* SHARED BLOCK STYLES */
