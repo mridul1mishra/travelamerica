@@ -91,11 +91,11 @@ return(
 
                 <div className={styles["safety-front-card__content"]}>
                     <h3 className={styles["safety-front-card__scenario"]}>
-                    Entering a Subway Car at Night
+                    Someone is acting erratic on the train
                     </h3>
 
                     <p className={styles["safety-front-card__description"]}>
-                    It’s 10:45 PM. A train arrives. One car is empty; the next is moderately full
+                    A person is pacing, shouting, or behaving unpredictably.
                     </p>
                 </div>
                 
@@ -110,24 +110,23 @@ return(
         <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--do"]}`}>
             <h3>✅ WHAT TO DO</h3>
                 <ul>
-                    <li>Choose the car with people</li>
-                    <li>Stand near the door or conductor’s window</li>
-                    <li>Keep your bag in front</li>
-                    <li>Stay aware at each stop</li>
+                    <li>Move calmly to another car at the next stop</li>
+                    <li>Stand near the door</li>
+                    <li>Avoid eye contact</li>
                 </ul>
         </div>
         <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--dont"]}`}>
             <h3>🚫 WHAT NOT TO DO</h3>
             <ul>
-            <li>Don’t enter an empty car</li>
-            <li>Don’t sit in the far corner</li>
-            <li>Don’t use noise‑canceling headphones</li>
+            <li>Engage them</li>
+            <li>Film them</li>
+            <li>Confront or comment</li>
             </ul>
         </div>
 
         <div className={`${styles["safety-card__anchor"]}`}>
             <h3>🛡️ SAFETY ANCHOR</h3>
-            <p>Most NYC rides are uneventful — choosing a populated car keeps you safe.</p>
+            <p>Changing cars is normal in NYC — riders do it all the time.</p>
         </div>
         </div>
         </div>
@@ -147,11 +146,11 @@ return(
 
                 <div className={styles["safety-front-card__content"]}>
                     <h3 className={styles["safety-front-card__scenario"]}>
-                    Entering a Subway Car at Night
+                    Late‑Night Transfer in a Quiet Station
                     </h3>
 
                     <p className={styles["safety-front-card__description"]}>
-                    It’s 10:45 PM. A train arrives. One car is empty; the next is moderately full
+                    You need to switch lines at a station with low foot traffic.
                     </p>
                 </div>
                 
@@ -166,24 +165,22 @@ return(
         <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--do"]}`}>
             <h3>✅ WHAT TO DO</h3>
                 <ul>
-                    <li>Choose the car with people</li>
-                    <li>Stand near the door or conductor’s window</li>
-                    <li>Keep your bag in front</li>
-                    <li>Stay aware at each stop</li>
+                    <li>Stay on the main platform  </li>
+                    <li>Stand near the Help Point intercom</li>
+                    <li>Move toward groups or well‑lit areas</li>
                 </ul>
         </div>
         <div className={`${styles["safety-card__block"]} ${styles["safety-card__block--dont"]}`}>
             <h3>🚫 WHAT NOT TO DO</h3>
             <ul>
-            <li>Don’t enter an empty car</li>
-            <li>Don’t sit in the far corner</li>
-            <li>Don’t use noise‑canceling headphones</li>
+            <li>Don’t walk down empty corridors</li>
+            <li>Don’t stand alone at the far end</li>
             </ul>
         </div>
 
         <div className={`${styles["safety-card__anchor"]}`}>
             <h3>🛡️ SAFETY ANCHOR</h3>
-            <p>Most NYC rides are uneventful — choosing a populated car keeps you safe.</p>
+            <p>Staying in visible, central areas is the safest choice at night.</p>
         </div>
         </div>
         </div>
