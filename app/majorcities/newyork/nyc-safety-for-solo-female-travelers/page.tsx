@@ -2,8 +2,8 @@ export const generateMetadata = () => ({
   title: 'NYC Safety Scenarios for Solo Female Travelers | Practical, Real‑World Guidance',
   description:  'A scenario‑based NYC safety guide for solo female travelers. Clear, calm steps for navigating subways, stations, and late‑night situations.',
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
   alternates: {
       canonical: 'https://www.travelamerica.work/majorcities/newyork/nyc-safety-for-solo-female-travelers',
