@@ -231,4 +231,8 @@
     height: auto;
     max-height: 320px;
   }
+  .heroImage {
+    flex: unset;
+    width: 100%;
+  }
 }
