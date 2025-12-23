@@ -221,3 +221,14 @@
     z-index: 1001;
   }
 }
+@media (max-width: 900px) {
+  .heroImageWrapper {
+    height: auto;
+    min-height: 260px; /* prevents collapse */
+  }
+
+  .heroImageWrapper img {
+    height: auto;
+    max-height: 320px;
+  }
+}
