@@ -1,0 +1,16 @@
+{
+  "sections": [
+    {
+      "id": "transport",
+      "title": "Getting Around NYC",
+      "summary": "The subway is the fastest way to move around the city, with safe alternatives depending on time and comfort.",
+      "bullets": [
+        "Subway: reliable, fast, and safe during the day.",
+        "Buses: great for above‑ground views and short distances.",
+        "Rideshare: ideal for late‑night travel or unfamiliar areas.",
+        "Walking: Manhattan is extremely walkable — stick to main avenues after dark."
+      ],
+      "link": "/nyc/transportation"
+    }
+  ]
+}

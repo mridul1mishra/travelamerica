@@ -1,0 +1,16 @@
+{
+  "sections": [
+    {
+      "id": "safety",
+      "title": "Safety Essentials",
+      "summary": "NYC is one of the safest major cities, but smart habits make solo travel smoother and more confident.",
+      "bullets": [
+        "Stay aware on the subway and avoid empty cars late at night.",
+        "Use well‑lit streets and stick to main avenues after dark.",
+        "Keep your bag in front of you in crowded areas.",
+        "Trust your instincts and step away from uncomfortable situations."
+      ],
+      "link": "/nyc/safety"
+    }
+  ]
+}

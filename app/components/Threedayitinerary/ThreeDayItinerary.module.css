@@ -1,0 +1,92 @@
+.section {
+  padding: 60px 0;
+  max-width: 900px;
+  margin: 0 auto;
+  scroll-margin-top: 80px;
+}
+
+.heading {
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.dayBlock {
+  display: flex;
+  gap: 20px;
+}
+
+.dayMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
+.dayLabel {
+  background: #1a73e8;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.line {
+  flex-grow: 1;
+  width: 2px;
+  background: #d0d0d0;
+  margin-top: 8px;
+}
+
+.bullets {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.bullets li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.ctaWrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cta {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #1a73e8;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta:hover {
+  background: #155fc4;
+}
+
+@media (max-width: 768px) {
+  .dayBlock {
+    flex-direction: column;
+  }
+
+  .dayMarker {
+    flex-direction: row;
+    gap: 12px;
+    width: auto;
+  }
+
+  .line {
+    height: 2px;
+    width: 100%;
+  }
+}

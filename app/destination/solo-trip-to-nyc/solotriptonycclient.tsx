@@ -2,11 +2,21 @@
 import styles from './solotriptonyc.module.css';
 import { useState } from "react";
 import Image from "next/image";
+import QuickActionBar from '@/app/components/quickactionbar/quickactionbar';
+import sectionsData from "@/app/data/destination/infosection.json";
+import getaroundData from "@/app/data/destination/gettingaround.json";
+import InfoSection from '@/app/components/infosection/infosection';
+import neighborhoodsData  from "@/app/data/destination/neighborhoods.json";
+import BestNeighborhoodsGrid from '@/app/components/BestNeighborhoodGrid/bestneighborhoodgrid';
+import itineraryData from "@/app/data/destination/itinerary.json";
+import { ItineraryProps } from "@/app/models/itinerary";
+import ThreeDayItinerary from '@/app/components/itinerary/itinerary';
 
-export default function NYCsafetyforsolofemaletravelerclient() {
+export default function SoloTripNYCClient() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
+  const data = itineraryData as ItineraryProps;
     return(
         <>
         <section className={`${styles.overlayheader} ${styles.scrolled}`}>
@@ -56,6 +66,11 @@ export default function NYCsafetyforsolofemaletravelerclient() {
 
             </div>
         </section>
+        <QuickActionBar />
+        <InfoSection sections={sectionsData.sections} />
+        <BestNeighborhoodsGrid  neighborhoods={neighborhoodsData.neighborhoods}  ctaLink="/nyc/where-to-stay"/>
+        <InfoSection sections={getaroundData.sections} />
+        <ThreeDayItinerary days={data.days} ctaLink="/nyc/3-day-itinerary" />
 
         </>
     );

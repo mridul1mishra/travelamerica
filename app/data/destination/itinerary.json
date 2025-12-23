@@ -1,0 +1,28 @@
+{
+  "days": [
+    {
+      "day": "Day 1",
+      "bullets": [
+        "Explore Central Park and the Upper West Side",
+        "Visit the American Museum of Natural History",
+        "Walk Columbus Circle and grab dinner nearby"
+      ]
+    },
+    {
+      "day": "Day 2",
+      "bullets": [
+        "Start at Times Square and Bryant Park",
+        "Visit the Empire State Building",
+        "Evening walk on the High Line"
+      ]
+    },
+    {
+      "day": "Day 3",
+      "bullets": [
+        "Brooklyn Bridge morning walk",
+        "Explore DUMBO and Brooklyn Heights",
+        "Sunset at Brooklyn Bridge Park"
+      ]
+    }
+  ]
+}

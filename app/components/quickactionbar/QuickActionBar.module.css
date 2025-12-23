@@ -1,0 +1,54 @@
+.quickBar {
+  display: flex;
+  justify-content: center; /* centers the bar */
+  gap: 12px;
+  padding: 12px 20px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #f7f7f7;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.action:hover {
+  background: #eaeaea;
+}
+
+.icon {
+  font-size: 18px;
+  color: #1a73e8; /* subtle brand color */
+}
+
+@media (max-width: 768px) {
+  .quickBar {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .action {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .icon {
+    font-size: 16px;
+  }
+}
