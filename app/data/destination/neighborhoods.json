@@ -3,22 +3,22 @@
     {
       "name": "Upper West Side",
       "reason": "Calm, residential, extremely walkable.",
-      "link": "/nyc/where-to-stay/upper-west-side"
+      "link": "#"
     },
     {
       "name": "Midtown",
       "reason": "Central, well‑lit, close to major attractions.",
-      "link": "/nyc/where-to-stay/midtown"
+      "link": "#"
     },
     {
       "name": "Brooklyn Heights",
       "reason": "Quiet streets and skyline views.",
-      "link": "/nyc/where-to-stay/brooklyn-heights"
+      "link": "#"
     },
     {
       "name": "Chelsea",
       "reason": "Artsy, lively, and well‑connected by subway.",
-      "link": "/nyc/where-to-stay/chelsea"
+      "link": "#"
     }
   ]
 }

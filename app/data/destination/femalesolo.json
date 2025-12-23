@@ -1,0 +1,23 @@
+{
+  "tiles": [
+    {
+      "title": "Safe Neighborhoods",
+      "description": "Stay in areas like UWS, Midtown, or Brooklyn Heights for comfort and walkability.",
+      "icon": "MdLocationCity",
+      "link": "#"
+    },
+    {
+      "title": "Smart Transit Tips",
+      "description": "Avoid empty subway cars, use rideshare late at night, and stick to main avenues.",
+      "icon": "FaSubway",
+      "link": "#"
+    },
+    {
+      "title": "Emergency Support",
+      "description": "Know when to call 911, use 311, or step into a deli or café for help.",
+      "icon": "FaHandsHelping",
+      "link": "#"
+    }
+  ],
+  "ctaLink": "/majorcities/newyork/nyc-safety-for-solo-female-travelers"
+}

@@ -11,12 +11,19 @@ import BestNeighborhoodsGrid from '@/app/components/BestNeighborhoodGrid/bestnei
 import itineraryData from "@/app/data/destination/itinerary.json";
 import { ItineraryProps } from "@/app/models/itinerary";
 import ThreeDayItinerary from '@/app/components/itinerary/itinerary';
+import femaleSoloData from "@/app/data/destination/femalesolo.json";
+import FemaleSoloTiles from "@/app/components/Solofemaletravel/solofemaletravel";
+import { FemaleSoloData } from "@/app/models/femalesolo";
+import Footer from '@/app/components/Header/Footer/footer';
+
+
 
 export default function SoloTripNYCClient() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
   const data = itineraryData as ItineraryProps;
+  const femaleSolo = femaleSoloData as FemaleSoloData;
     return(
         <>
         <section className={`${styles.overlayheader} ${styles.scrolled}`}>
@@ -47,8 +54,8 @@ export default function SoloTripNYCClient() {
                     <p className={styles.subtext}>Safe, confident, and stress‑free solo travel in NYC.</p>
 
                     <div className={styles.herobuttons}>
-                        <a href="#" className={`${styles.btn} ${styles.primary}`}>Start with Safety </a>
-                        <a href="#" className={`${styles.btn} ${styles.secondary}`}>Where to Stay</a>
+                        <a href="/majorcities/newyork/nyc-safety-solo-travelers" className={`${styles.btn} ${styles.primary}`}>Start with Safety </a>
+                        <a href="/majorcities/newyork/landmark" className={`${styles.btn} ${styles.secondary}`}>Where to Stay</a>
                     </div>
 
                     <p className={styles.updated}>Updated for 2025</p>
@@ -68,9 +75,11 @@ export default function SoloTripNYCClient() {
         </section>
         <QuickActionBar />
         <InfoSection sections={sectionsData.sections} />
-        <BestNeighborhoodsGrid  neighborhoods={neighborhoodsData.neighborhoods}  ctaLink="/nyc/where-to-stay"/>
+        <BestNeighborhoodsGrid  neighborhoods={neighborhoodsData.neighborhoods}  ctaLink="/majorcities/newyork/landmark"/>
         <InfoSection sections={getaroundData.sections} />
-        <ThreeDayItinerary days={data.days} ctaLink="/nyc/3-day-itinerary" />
+        <ThreeDayItinerary days={data.days} ctaLink="/majorcities/newyork/solo-itinerary" />
+        <FemaleSoloTiles tiles={femaleSolo.tiles}  ctaLink={femaleSolo.ctaLink} />
+        <Footer></Footer>
 
         </>
     );
