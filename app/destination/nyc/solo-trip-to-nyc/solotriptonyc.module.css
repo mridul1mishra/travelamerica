@@ -222,17 +222,31 @@
   }
 }
 @media (max-width: 900px) {
+  .herocontainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .heroImage {
+    flex: unset;         /* Prevent collapse */
+    width: 100%;
+  }
+
   .heroImageWrapper {
-    height: auto;
-    min-height: 260px; /* prevents collapse */
+    height: auto;        /* Let image define height */
+    min-height: 260px;   /* Prevent collapse */
+    width: 100%;
   }
 
   .heroImageWrapper img {
-    height: auto;
-    max-height: 320px;
-  }
-  .heroImage {
-    flex: unset;
     width: 100%;
+    height: auto;
+    object-fit: contain; /* Keeps full image visible */
+    display: block;
+    border-radius: 12px;
+  }
+
+  .herobuttons {
+    justify-content: center;
   }
 }
