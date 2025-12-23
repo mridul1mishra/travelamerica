@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./FemaleSoloTiles.module.css";
-import { FemaleSoloTile } from "@/app/models/femalesolo";
+import { FemaleSoloTile } from "@/app/models/femaleSolo";
 import { MdLocationCity } from "react-icons/md";
 import { FaSubway, FaHandsHelping } from "react-icons/fa";
 import { JSX } from "react";

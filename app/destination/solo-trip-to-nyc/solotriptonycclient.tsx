@@ -13,7 +13,7 @@ import { ItineraryProps } from "@/app/models/itinerary";
 import ThreeDayItinerary from '@/app/components/itinerary/itinerary';
 import femaleSoloData from "@/app/data/destination/femalesolo.json";
 import FemaleSoloTiles from "@/app/components/Solofemaletravel/solofemaletravel";
-import { FemaleSoloData } from "@/app/models/femalesolo";
+import { FemaleSoloData } from "@/app/models/femaleSolo";
 import Footer from '@/app/components/Header/Footer/footer';
 
 
