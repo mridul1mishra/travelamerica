@@ -1,0 +1,23 @@
+.page-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.content-section {
+  margin-bottom: 4rem;
+}
+
+.section-block h2 {
+  margin-bottom: 1rem;
+}
+
+.section-block ul {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
