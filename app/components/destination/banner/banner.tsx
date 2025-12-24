@@ -12,8 +12,8 @@ export default function Banner() {
         </p>
 
         <div className={styles.bannerCTA}>
-          <a href="#summary">Quick Summary</a>
-          <a href="#neighborhoods">Neighborhood Rankings</a>
+          <a href="#neighborhood">See the Best Areas</a>
+          <a href="/destination/solo-travel-to-nyc">Solo Travel Guide</a>
         </div>
       </div>
 
