@@ -64,6 +64,78 @@ export default async function SoloTripToNYC() {
     ]
   }
 };
+const FAQSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the safest area to stay in NYC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Upper West Side is widely considered one of the safest areas to stay in NYC, especially for solo travelers, thanks to its residential feel, walkability, and proximity to parks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where should first-time visitors stay in NYC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midtown East is ideal for first-time visitors because it offers fast subway access, walkable streets, and close proximity to major attractions without the chaos of Times Square."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most affordable area to stay in NYC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Long Island City is one of the best budget-friendly areas, offering modern hotels, quiet streets, and quick subway access to Manhattan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Williamsburg a good area to stay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Williamsburg is great for travelers who want trendy restaurants, nightlife, and a youthful vibe while still being one subway stop from Manhattan."
+      }
+    }
+  ]
+};
+  const howto = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Choose the Best Area to Stay in NYC",
+  "description": "A step-by-step guide to choosing the best NYC neighborhood based on safety, convenience, budget, and travel style.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Decide your top priority",
+      "text": "Choose whether safety, convenience, nightlife, or budget matters most for your trip."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Pick a neighborhood that matches your vibe",
+      "text": "Select from calm residential areas like the Upper West Side or lively areas like Williamsburg."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Check subway access",
+      "text": "Ensure your hotel is near a reliable subway line such as the 1/2/3, B/C, L, or 7 trains."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Compare pros and cons",
+      "text": "Review each neighborhood’s strengths and trade-offs to match your travel style."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Choose a hotel within your budget",
+      "text": "Select accommodations that balance safety, convenience, and price."
+    }
+  ]
+};
+
 
 
   return (
@@ -71,7 +143,8 @@ export default async function SoloTripToNYC() {
       {/* Schema blocks */}
   <BestAreatoStatyClient />
     <Script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObject) }}/>
-      
+    <Script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQSchema) }}/>
+    <Script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howto) }}/>
   </>
 );
   
