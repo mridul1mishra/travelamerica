@@ -29,9 +29,9 @@ export default function FAQAccordion() {
     },
   ];
 
-  const [openIndex, setOpenIndex] = useState(null);
+ const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggle = (i) => {
+  const toggle = (i: number) => {
     setOpenIndex(openIndex === i ? null : i);
   };
 
