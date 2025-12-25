@@ -8,7 +8,7 @@ import DecisionFramework from '@/app/components/destination/decisionframework/de
 import NeighborhoodRankingCards from '@/app/components/destination/neighborhoodrankingcard/neighborhoodrankingcard';
 import MapSection from '@/app/components/destination/wherenottostay/wherenottostay';
 import WhereNotToStay from '@/app/components/destination/wherenottostay/wherenottostay';
-import faqData from "@/app/data/destination/solotriptonyc/faqsection.json";
+import faqData from "@/app/data/destination/bestplacetostay/faqsection.json";
 import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
 
 export default function BestAreatoStayClient() {
