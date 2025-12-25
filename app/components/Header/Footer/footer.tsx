@@ -12,7 +12,7 @@ const Footer = () => {
       <ul className="vertical-list">
         <li style={{cursor: 'pointer'}}><a href="/majorcities/newyork/solo-travel">Solo Travel Tips</a></li>
         <li style={{cursor: 'pointer'}}><a href="/majorcities/newyork/solo-itinerary">Solo Travel Itinerary</a></li>
-        <li style={{cursor: 'pointer'}}><a href="/majorcities/newyork/landmark">Landmark in New York</a></li>
+        <li style={{cursor: 'pointer'}}><a href="/destination/nyc/solo-trip-to-nyc">Solo Trip to NYC Guide</a></li>
       </ul>
     </div>
     <div>
