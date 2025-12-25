@@ -234,8 +234,8 @@ return(
           <p className={styles.subheading}>🚶‍♂️Manhattan invites solo discovery—iconic views from the Empire State, peaceful strolls in Central Park, sensory immersion in Times Square, and quiet reflection at The Met and MoMA. Bold, cinematic, endlessly walkable.</p>
           <p className={styles.subheading}>📸 Manhattan suits solo travelers with walkable streets, reliable transit, endless sights, and cozy cafés. It’s safe, spontaneous, and full of energy—ideal for unplanned detours, solo photo ops, and cultural immersion.</p>
           <p  className={styles.subheading}>🧭 Manhattan invites solo spontaneity with walkable landmarks, flexible itineraries, and central stays. Explore museums, cafés, and vibrant streets at your own pace—no rigid plans, just freedom to wander and reflect.</p>
-          <Link href="/majorcities/newyork/solo-itinerary" className={styles.ctaButton}>
-            Add to Your NYC Itinerary
+          <Link href="/destination/nyc/solo-trip-to-nyc" className={styles.ctaButton}>
+            Plan Your NYC Solo Trip
           </Link>
         </div>
       </section>
@@ -245,8 +245,8 @@ return(
           <p className={styles.subheading}>🚶‍♂️Brooklyn invites solo travelers to roam creative streets, linger in indie bookstores, savor skyline views from Dumbo, and reflect in Prospect Park. It’s soulful, walkable, and full of unexpected solo moments.</p>
           <p className={styles.subheading}>📸 Brooklyn rewards solo travelers with creative freedom, walkable neighborhoods, and soulful spaces. Explore indie shops, quiet parks, and vibrant cafés—no schedule, no pressure, just your rhythm and the borough’s pulse.</p>
           <p  className={styles.subheading}>🧭 Brooklyn unfolds best with flexible plans—loop through creative hubs, pause in parks, stay near transit, and explore cafés by vibe. Modular itineraries make solo discovery easy, soulful, and self-paced.</p>
-          <Link href="/majorcities/newyork/solo-travel" className={styles.ctaButton}>
-            Solo Travel Tips for Exploring Safely
+          <Link href="/majorcities/newyork/solo-itinerary" className={styles.ctaButton}>
+            Add to Your NYC Itinerary
           </Link>
         </div>
         <div className={styles.imageWrapper}>
