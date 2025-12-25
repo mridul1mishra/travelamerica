@@ -1,4 +1,4 @@
-import Script from "next/script";
+
 
 export const generateMetadata = () => ({
   title: 'Best Areas to Stay in NYC 2026: Safest & Most Convenient',
@@ -142,9 +142,9 @@ const FAQSchema = {
   <>
       {/* Schema blocks */}
   <BestAreatoStatyClient />
-    <Script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObject) }}/>
-    <Script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQSchema) }}/>
-    <Script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howto) }}/>
+    <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObject) }}/>
+    <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQSchema) }}/>
+    <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howto) }}/>
   </>
 );
   
