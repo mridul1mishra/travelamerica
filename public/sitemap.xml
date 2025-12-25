@@ -94,6 +94,11 @@
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
+  <url>
+    <loc>https://www.travelamerica.work/destination/nyc/best-areas-to-stay</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 
   <!-- Add more cities manually as needed -->
 
