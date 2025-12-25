@@ -30,8 +30,8 @@ export default async function NYCSoloTravelSafetyClient () {
               <li className={styles.subheading}><img src="/data/majorcities/newyork/assets/iconpart3safety/icon3.png" style={{ width: '24px', height: '24px', marginRight: '8px', verticalAlign: 'middle' }} alt="Safety icon"/>NYC’s cashless shift raises fraud risks; using virtual cards with limits, biometric wallet authentication, and AI-verified ride apps protects payments, ensuring privacy, security, and safer digital transactions.</li>
           </ul>
           <p className={styles.subheading}>In New York City, technology doesn’t replace awareness — it strengthens it</p>
-          <Link href="/majorcities/newyork/landmark" className={styles.ctaButton}>
-            Safest Neighborhoods in NYC for Solo Travel
+          <Link href="/destination/nyc/solo-trip-to-nyc" className={styles.ctaButton}>
+            NYC Solo Travel Basics
           </Link>
         </div>
       </section>
