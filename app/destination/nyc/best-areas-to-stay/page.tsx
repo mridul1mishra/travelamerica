@@ -8,7 +8,7 @@ export const generateMetadata = () => ({
     follow: true,
   },
   alternates: {
-      canonical: 'https://www.travelamerica.work/destination/solo-trip-to-nyc',
+      canonical: 'https://www.travelamerica.work/destination/best-areas-to-stay',
     },
     twitter: {
     card: "summary_large_image",
