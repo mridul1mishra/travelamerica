@@ -1,0 +1,26 @@
+[
+  {
+    "neighborhood": "Upper West Side",
+    "lines": ["1", "2", "3", "B", "C"],
+    "access": "Direct trains to Times Square, Midtown, and Downtown with no transfers.",
+    "night": "1/2/3 run frequently late; B/C slows after 10 PM.",
+    "walk": "Most stations are 3–6 minutes apart with wide, well-lit avenues.",
+    "notes": "72 St and 96 St are the most reliable for solo travelers."
+  },
+  {
+    "neighborhood": "Midtown",
+    "lines": ["A", "C", "E", "1", "2", "3", "N", "Q", "R", "W", "7"],
+    "access": "Fastest access to all boroughs with multiple transfer-free routes.",
+    "night": "ACE and 123 remain reliable; NQRW quieter but consistent.",
+    "walk": "Stations every 2–3 blocks; high foot traffic even late.",
+    "notes": "Times Sq–42 St is safest for late-night transfers."
+  },
+  {
+    "neighborhood": "Brooklyn Heights",
+    "lines": ["2", "3", "4", "5", "R"],
+    "access": "Direct access to Manhattan in under 10 minutes.",
+    "night": "2/3 run well; R train slows significantly after 11 PM.",
+    "walk": "Short walks but quieter streets; stick to Montague St at night.",
+    "notes": "Borough Hall is best for solo travelers; Clark St is quieter."
+  }
+]

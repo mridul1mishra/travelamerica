@@ -1,0 +1,22 @@
+[
+  {
+    "question": "Why does subway access matter for solo travelers?",
+    "answer": "Subway access affects how quickly and safely you can move between neighborhoods, especially at night. Direct routes and reliable service reduce transfer anxiety and help you avoid isolated stations."
+  },
+  {
+    "question": "Which subway lines are safest at night?",
+    "answer": "Lines like 1, 2, 3 and A, C, E tend to run frequently and serve well-lit, high-traffic stations. Lines like R, B, and C may slow down or become less predictable after 10 PM."
+  },
+  {
+    "question": "How were these neighborhoods selected?",
+    "answer": "We chose neighborhoods based on solo traveler feedback, station density, night service reliability, and walkability. Each area offers direct access to major hubs with minimal transfers."
+  },
+  {
+    "question": "What do the colored subway badges mean?",
+    "answer": "Each badge represents an MTA subway line, color-coded to match official NYC transit signage. Red for 1/2/3, blue for A/C/E, orange for B/D/F/M, yellow for N/Q/R/W, and so on."
+  },
+  {
+    "question": "Is this dashboard useful for daytime travel too?",
+    "answer": "Yes — while it’s optimized for night safety, the access and walkability insights apply throughout the day. It’s especially helpful for planning routes with minimal transfers."
+  }
+]

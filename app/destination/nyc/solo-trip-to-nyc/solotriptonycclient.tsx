@@ -15,7 +15,11 @@ import femaleSoloData from "@/app/data/destination/femalesolo.json";
 import FemaleSoloTiles from "@/app/components/Solofemaletravel/solofemaletravel";
 import { FemaleSoloData } from "@/app/models/femaleSolo";
 import Footer from '@/app/components/Header/Footer/footer';
-
+import { WhyTrustThisGuide } from '@/app/components/destination/whytrustitem/whytrustthisguide';
+import { ScenarioSection } from '@/app/components/destination/scenariocard/scenariosection';
+import { SubwayAccessSection } from '@/app/components/destination/subwayaccess/subwayaccess';
+import faqData from "@/app/data/destination/solotriptonyc/faqsection.json";
+import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
 
 
 export default function SoloTripNYCClient() {
@@ -75,10 +79,14 @@ export default function SoloTripNYCClient() {
         </section>
         <QuickActionBar />
         <InfoSection sections={sectionsData.sections} />
+        <WhyTrustThisGuide />
         <BestNeighborhoodsGrid  neighborhoods={neighborhoodsData.neighborhoods}  ctaLink="/majorcities/newyork/landmark"/>
+        <SubwayAccessSection />
         <InfoSection sections={getaroundData.sections} />
         <ThreeDayItinerary days={data.days} ctaLink="/majorcities/newyork/solo-itinerary" />
+        <ScenarioSection />
         <FemaleSoloTiles tiles={femaleSolo.tiles}  ctaLink={femaleSolo.ctaLink} />
+        <FAQAccordion faqs={faqData} />
         <Footer></Footer>
 
         </>

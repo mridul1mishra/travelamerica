@@ -8,7 +8,8 @@ import DecisionFramework from '@/app/components/destination/decisionframework/de
 import NeighborhoodRankingCards from '@/app/components/destination/neighborhoodrankingcard/neighborhoodrankingcard';
 import MapSection from '@/app/components/destination/wherenottostay/wherenottostay';
 import WhereNotToStay from '@/app/components/destination/wherenottostay/wherenottostay';
-import FAQSection from '@/app/components/destination/faqsection/faqsection';
+import faqData from "@/app/data/destination/solotriptonyc/faqsection.json";
+import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
 
 export default function BestAreatoStayClient() {
     return(
@@ -19,7 +20,7 @@ export default function BestAreatoStayClient() {
             <DecisionFramework />
             <NeighborhoodRankingCards />
             <WhereNotToStay />
-            <FAQSection />
+            <FAQAccordion faqs={faqData} />
             <Footer />
         </>
 

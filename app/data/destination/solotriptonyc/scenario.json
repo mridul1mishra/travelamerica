@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Walking alone after 10 PM",
+    "context": "You’re heading back from a Broadway show or dinner in Midtown.",
+    "advice": "Stick to well-lit avenues like 7th or 8th, avoid empty side streets, and walk with purpose. If you feel uneasy, step into a deli or call a rideshare.",
+    "cta": "Explore late-night safety tips →"
+  },
+  {
+    "title": "Navigating the subway solo",
+    "context": "You’re switching lines at Times Square or Union Square during off-peak hours.",
+    "advice": "Avoid empty cars, stand near conductors, and follow clear signage. If confused, ask a station agent or fellow commuter — New Yorkers are surprisingly helpful.",
+    "cta": "See subway safety guide →"
+  },
+  {
+    "title": "Feeling watched or followed",
+    "context": "You’re walking through SoHo or Lower East Side and notice someone trailing you.",
+    "advice": "Cross the street, enter a store or café, and stay visible. Don’t engage. If it persists, call 911 or ask staff to help you stay safe.",
+    "cta": "Learn how to handle attention →"
+  },
+  {
+    "title": "Getting home after missing the last train",
+    "context": "It’s past midnight and your subway line isn’t running.",
+    "advice": "Use rideshare apps with location sharing enabled. Avoid random cabs unless clearly marked. If budget is tight, walk to a major avenue and wait near a busy spot.",
+    "cta": "See late-night transit options →"
+  }
+]
