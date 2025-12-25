@@ -340,8 +340,8 @@ const howto = {
                 <p className={styles.subheading}>🍷 <strong>Bar Dining with Style -</strong> The Modern, Estela, and Café Sabarsky provide elegant bar seating where solo guests can enjoy refined food and ambiance.</p>
                 <p className={styles.subheading}>🥯 <strong>Local Flavor & Theater Vibes -</strong> Murray’s Bagels, Grand Central Oyster Bar, and Joe Allen deliver iconic bites and Broadway-adjacent charm — ideal for pre- or post-show dining.</p>
                 
-                <Link href="/majorcities/newyork/solo-itinerary" className={styles.ctaButton}>
-                    Plan Your NYC Itinerary
+                <Link href="/destination/nyc/solo-trip-to-nyc" className={styles.ctaButton}>
+                    NYC Solo Traveler Tips
                 </Link>
                 </div>
         </section>
@@ -353,8 +353,8 @@ const howto = {
                 <p className={styles.subheading}>🍣 <strong>Midtown’s Best Counter Culture -</strong> Hop to Grand Central for Roberta’s pizza, Takumi Tacos, and Blue Bottle coffee in a compact, solo-friendly space.</p>
                 <p className={styles.subheading}>🥟 <strong>Chelsea Market: A Flavorful Finale -</strong> End with iconic tacos, hand-pulled noodles, and sweet treats in one of NYC’s most vibrant food halls.</p>
                 
-                <Link href="/majorcities/newyork/landmark" className={styles.ctaButton}>
-                   Explore NYC Landmarks Nearby
+                <Link href="/majorcities/newyork/solo-itinerary" className={styles.ctaButton}>
+                   Plan Your NYC Itinerary
                 </Link>
                 </div>
                 <div className={styles.imageWrapper}>

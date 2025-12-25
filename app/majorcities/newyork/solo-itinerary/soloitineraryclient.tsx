@@ -208,8 +208,8 @@ const schema4 = {
               <li className={styles.subheading}>☀️Midday: The Met to MoMA</li>
               <li className={styles.subheading}>🌙Evening: Dinner at Time Out Market or Eataly Flatiron</li>
           </ul>
-          <Link href="/majorcities/newyork/solo-travel" className={styles.ctaButton}>
-            Read NYC Solo Travel Safety Tips
+          <Link href="/destination/nyc/solo-trip=to-nyc" className={styles.ctaButton}>
+            Solo Trip to NYC Guide
           </Link>
         </div>
       </section>

@@ -173,8 +173,8 @@ export default function SoloTravelPage() {
           <p className={styles.subheading}><strong>Urban vigilance.</strong> Stay alert in Midtown and Bronx after dark; explore Upper West Side, Brooklyn Heights, Astoria. Walk briskly, stay aware. For help, dial 911 or 311; top hospitals include Mount Sinai and Bellevue.</p>
           <p className={styles.subheading}><strong>Urban preparedness</strong> Pack a portable charger, ID/passport copies, and a basic first aid kit. Preload your MetroCard or OMNY for smooth subway access — NYC demands readiness, speed, and smart gear.</p>
           <p className={styles.subheading}><strong>Smart navigation.</strong>Use Citymapper, Transit App, and NYC Ferry for smooth navigation. Stay in safe, central hotels with 24/7 security. Plan routes, avoid rush hour transfers, and explore walkable neighborhoods like SoHo.</p>
-          <Link href="/majorcities/newyork/solo-itinerary" className={styles.ctaButton}>
-            Experience the 3‑Day NYC Itinerary.
+          <Link href="/destination/nyc/solo-trip-to-nyc" className={styles.ctaButton}>
+            NYC Solo Travel Guide
           </Link>
         </div>
         </section>
@@ -184,8 +184,8 @@ export default function SoloTravelPage() {
           <p className={styles.subheading}><strong>🧼 Pack Essential</strong>Pack a high-capacity charger, backup cables, and transit apps. Bring sanitizer, lip balm, and travel-size toiletries. Add SIM or adapter if international. Don’t forget meds, wipes, and noise-canceling earbuds.</p>
           <p className={styles.subheading}><strong>🧥 Pack Comfort</strong>Pack layered outfits and walking shoes for NYC’s shifting weather. Bring a compact umbrella, seasonal extras like gloves or sunscreen, and breathable fabrics to stay comfortable across boroughs and changing conditions.</p>
           <p className={styles.subheading}><strong>🎒 Pack Smart</strong>Carry your ID, hotel details, and key cards in a secure crossbody bag. Pack water, snacks, a journal, and a foldable tote for flexibility on the go. Add smart navigation tools like a compact compass, AirTag, or tile tracker to stay oriented and safeguard your essentials.x`</p>
-          <Link href="/majorcities/newyork/food" className={styles.ctaButton}>
-            See our full guide to food halls and bagel stops.
+          <Link href="/majorcities/newyork/solo-itinerary" className={styles.ctaButton}>
+            Experience the 3‑Day NYC Itinerary.
           </Link>
         </div>
         <div className={styles.imageWrapper}>

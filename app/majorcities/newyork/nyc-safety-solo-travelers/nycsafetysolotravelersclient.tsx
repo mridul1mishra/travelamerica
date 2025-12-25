@@ -128,8 +128,8 @@ return(
               <li className={styles.subheading}>🛡️NYC is safer than many U.S. cities, but petty theft remains the main risk. Crowds provide both protection and pickpocket opportunities, while strong police presence and surveillance in tourist areas add an extra layer of security for solo travelers</li>
               <li className={styles.subheading}>🌆NYC has many lively areas for solo travelers like the Upper West Side, Midtown, and Williamsburg. Some quieter neighborhoods can feel less secure late at night, so it’s best to stick to well‑lit, populated routes.</li>
           </ul>
-          <Link href="/majorcities/newyork/landmark" className={styles.ctaButton}>
-            Safest Neighborhoods in NYC for Solo Travel
+          <Link href="/destination/nyc/solo-trip-to-nyc" className={styles.ctaButton}>
+            NYC Solo Trip Essentials
           </Link>
         </div>
       </section>

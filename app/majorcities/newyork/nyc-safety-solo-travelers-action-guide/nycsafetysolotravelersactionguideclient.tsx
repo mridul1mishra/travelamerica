@@ -105,8 +105,8 @@ export default async function nycsafetysolotravelersactionguide () {
                 <li className={styles.subheading}>👥 Blend in: Avoid drawing unnecessary attention; observe local customs and dress codes.</li>
                 <li className={styles.subheading}>📱 Stay connected: Share your live location with trusted contacts.</li>
             </ul>
-                <Link href="/majorcities/newyork/landmark" className={styles.ctaButton}>
-                Safest Neighborhoods in NYC for Solo Travel
+                <Link href="/destination/nyc/solo-travel-to-nyc" className={styles.ctaButton}>
+                NYC Solo Travel Basics
             </Link>
             </div>
         </section>
