@@ -1,3 +1,9 @@
+.wrapper { 
+  background: #f4efe9; /* page beige */ 
+  padding: 0px 20px 0px; 
+  display: flex; 
+  justify-content: center; 
+}
 .hero {
   position: relative;
   min-height: 520px;                 /* 👈 KEY FIX */
@@ -7,7 +13,7 @@
     #cf8b72 100%
   );
 
-  padding: 60px 20px 180px;          /* more bottom space for envelope */
+  padding: 60px 20px 30px;          /* more bottom space for envelope */
   text-align: center;
   overflow: hidden;
 
@@ -72,4 +78,49 @@
     100% 100%,
     0 100%
   );
+}
+.hero-content {
+  margin-bottom: 0; /* Removed margin */
+}
+/* Additional styles for info box */
+.infobox {
+  background: #fdf2ec;
+  padding: 20px;
+  max-width: 800px;
+   margin-top: 87px; /* Negative margin to make it touch the folded clip-path */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1; 
+}
+
+
+.infobox h2 {
+  color: #5a2d2d;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.infobox ul {
+  list-style-type: none;
+  padding-left: 0;
+  color: #5a2d2d;
+}
+
+.infobox ul li {
+  margin: 8px 0;
+}
+.infoicon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d5947d, #cf8b72); /* Terracotta gradient */
+  color: white;
+  font-size: 1.2rem;  /* Adjust icon size */
+  text-align: center;
+  line-height: 30px;  /* Vertically center the icon */
+  margin-right: 8px;
+  vertical-align: middle;
 }
