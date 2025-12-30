@@ -5,6 +5,8 @@ import SectionSafestNeighborhoods from '@/app/components/destination/bestareatos
 import SoloTripIntro from '@/app/components/destination/bestareatostay/solotripintro/solotripintro';
 import Header from '@/app/components/destination/header/header';
 import guideContent from '@/app/data/destination/bestplacetostay/guideContent.json';
+import NeighborhoodRankingCards from '@/app/components/destination/neighborhoodrankingcard/neighborhoodrankingcard';
+import Footer from '@/app/components/destination/header/Footer/footer';
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <Banner content={guideContent.banner} />
       <SoloTripIntro />
       <SectionSafestNeighborhoods />
+      <NeighborhoodRankingCards />
+      <Footer />
     </>
   );
 }
