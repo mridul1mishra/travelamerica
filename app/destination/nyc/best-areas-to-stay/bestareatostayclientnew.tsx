@@ -6,7 +6,7 @@ import SoloTripIntro from '@/app/components/destination/bestareatostay/solotripi
 import Header from '@/app/components/destination/header/header';
 import guideContent from '@/app/data/destination/bestplacetostay/guideContent.json';
 import NeighborhoodRankingCards from '@/app/components/destination/neighborhoodrankingcard/neighborhoodrankingcard';
-import Footer from '@/app/components/destination/header/Footer/footer';
+import Footer from '@/app/components/Header/Footer/footer';
 
 export default function Home() {
   return (
