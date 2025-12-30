@@ -8,6 +8,7 @@ import faqData from "@/app/data/destination/bestplacetostay/faqsection.json";
 import guideContent from '@/app/data/destination/bestplacetostay/guideContent.json';
 import NeighborhoodRankingCards from '@/app/components/destination/neighborhoodrankingcard/neighborhoodrankingcard';
 import Footer from '@/app/components/Header/Footer/footer';
+import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
 
 export default function Home() {
   return (
