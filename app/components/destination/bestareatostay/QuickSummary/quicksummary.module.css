@@ -1,0 +1,33 @@
+.summary { 
+    background-color: #ffffff; 
+    padding: 2rem; 
+    border-left: 6px solid #0070f3; 
+    max-width: 700px; 
+    margin: -3rem auto 2rem; /* THIS CREATES THE OVERLAP */ 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
+    position: relative; 
+    z-index: 5; /* ensures it sits above the banner */ 
+}
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.item::before {
+  content: '•';
+  margin-right: 0.5rem;
+  color: #0070f3;
+}
