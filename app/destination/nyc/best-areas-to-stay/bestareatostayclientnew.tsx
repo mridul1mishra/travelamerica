@@ -18,7 +18,9 @@ export default function Home() {
       <SoloTripIntro />
       <SectionSafestNeighborhoods />
       <NeighborhoodRankingCards />
+      <div class="container">
       <FAQAccordion faqs={faqData} />
+      </div>
       <Footer />
     </>
   );
