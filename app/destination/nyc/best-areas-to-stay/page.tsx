@@ -19,7 +19,7 @@ export const generateMetadata = () => ({
 });
 
 
-import BestAreatoStatyClient from './bestareatostayclient';
+import BestAreatoStatyClient from './bestareastostayclient';
 
 export default async function SoloTripToNYC() {
   const schemaObject = {
