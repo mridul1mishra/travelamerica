@@ -1,4 +1,5 @@
 "use client"
+import styles from './bestareatostay.module.css';
 import Banner from '@/app/components/destination/bestareatostay/Banner/Banner';
 import QuickSummary from '@/app/components/destination/bestareatostay/QuickSummary/quicksummary';
 import SectionSafestNeighborhoods from '@/app/components/destination/bestareatostay/safestneighborhood/safestneighborhood';
@@ -18,7 +19,7 @@ export default function Home() {
       <SoloTripIntro />
       <SectionSafestNeighborhoods />
       <NeighborhoodRankingCards />
-      <div className="container">
+      <div className={styles.container}>
       <FAQAccordion faqs={faqData} />
       </div>
       <Footer />
