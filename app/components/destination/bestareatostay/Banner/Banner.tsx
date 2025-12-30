@@ -10,9 +10,9 @@ export default function Banner({ content }: Props) {
     <section className={styles.wrapper}>
       <div className={styles.hero}>  
   <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-    <a href="#">Home</a>
+    <a href="/">Home</a>
     <span>›</span>
-    <a href="#">Solo Trip to NYC</a>
+    <a href="/destination/solo-trip-to-nyc">Solo Trip to NYC</a>
     <span>›</span>
     <span className={styles.current}>Best Areas to Stay</span>
   </nav>
