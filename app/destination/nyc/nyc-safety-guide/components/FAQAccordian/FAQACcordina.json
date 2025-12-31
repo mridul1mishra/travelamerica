@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "question": "Is New York City safe for solo travelers?",
+    "answer": "Yes, NYC is generally safe for solo travelers who stay aware and follow basic precautions. Stick to well-lit streets, avoid isolated areas late at night, and trust your instincts. Popular neighborhoods like Midtown, Upper West Side, and Brooklyn Heights are especially solo-friendly."
+  },
+  {
+    "id": 2,
+    "question": "Which NYC neighborhoods should I avoid at night?",
+    "answer": "Avoid desolate areas in the far west of Midtown, parts of the South Bronx, and isolated industrial zones in Brooklyn. Stick to populated, well-lit areas and use Google Maps or Citymapper to plan safe walking routes."
+  },
+  {
+    "id": 3,
+    "question": "Is the NYC subway safe at night?",
+    "answer": "Generally yes, but avoid empty platforms and late-night transfers in less busy stations. Wait near the conductor’s car, and use well-known stations like Times Square, Union Square, or Grand Central for transfers."
+  },
+  {
+    "id": 4,
+    "question": "Should I use rideshare or yellow cabs?",
+    "answer": "Both are safe. Rideshare apps offer tracking and driver info, while yellow cabs are regulated and easy to hail in Manhattan. Avoid unmarked cars offering rides."
+  },
+  {
+    "id": 5,
+    "question": "What should I do if someone follows me?",
+    "answer": "Cross the street, enter a store or café, and avoid confrontation. If needed, call 911 or ask a nearby person for help. Trust your instincts and prioritize visibility."
+  },
+  {
+    "id": 6,
+    "question": "Is it safe to walk alone at night?",
+    "answer": "Yes, in busy areas like Midtown, SoHo, and Williamsburg. Avoid quiet blocks after 11 PM, walk confidently, and stay on main avenues. Share your location with a trusted contact."
+  },
+  {
+    "id": 7,
+    "question": "What safety apps should I use in NYC?",
+    "answer": "Citymapper and Transit App for navigation, Citizen for local alerts, and Noonlight for emergency response. Enable location sharing with a trusted contact."
+  },
+  {
+    "id": 8,
+    "question": "Should I carry pepper spray?",
+    "answer": "Pepper spray is legal in NYC for self-defense, but rarely needed. Most solo travelers rely on awareness, route planning, and staying in populated areas."
+  },
+  {
+    "id": 9,
+    "question": "What should I do in an emergency?",
+    "answer": "Call 911 for police, fire, or medical help. For non-emergencies, dial 311. NYC hospitals like Mount Sinai and Bellevue are well-equipped and centrally located."
+  },
+  {
+    "id": 10,
+    "question": "Are there safe places to go if I feel uncomfortable?",
+    "answer": "Yes — enter a hotel lobby, café, or store. NYC is full of 24/7 businesses and public spaces. You can also approach a subway booth attendant or MTA employee."
+  }
+]

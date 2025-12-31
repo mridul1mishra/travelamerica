@@ -1,12 +1,28 @@
-import Banner from '../components/destination/bestareatostay/Banner';
-import QuickSummary from '../components/destination/bestareatostay/QuickSummary';
-import guideContent from '../data/guideContent.json';
+"use client"
+import styles from './bestareatostay.module.css';
+import Banner from '@/app/components/destination/bestareatostay/Banner/Banner';
+import QuickSummary from '@/app/components/destination/bestareatostay/QuickSummary/quicksummary';
+import SectionSafestNeighborhoods from '@/app/components/destination/bestareatostay/safestneighborhood/safestneighborhood';
+import SoloTripIntro from '@/app/components/destination/bestareatostay/solotripintro/solotripintro';
+import Header from '@/app/components/destination/header/header';
+import faqData from "@/app/data/destination/bestplacetostay/faqsection.json";
+import guideContent from '@/app/data/destination/bestplacetostay/guideContent.json';
+import NeighborhoodRankingCards from '@/app/components/destination/neighborhoodrankingcard/neighborhoodrankingcard';
+import Footer from '@/app/components/Header/Footer/footer';
+import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
 
 export default function Home() {
   return (
     <>
+    <Header />
       <Banner content={guideContent.banner} />
-      <QuickSummary points={guideContent.quickSummary} />
+      <SoloTripIntro />
+      <SectionSafestNeighborhoods />
+      <NeighborhoodRankingCards />
+      <div className={styles.container}>
+      <FAQAccordion faqs={faqData} />
+      </div>
+      <Footer />
     </>
   );
 }

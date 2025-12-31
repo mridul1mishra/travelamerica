@@ -60,6 +60,7 @@ export default function NeighborhoodRankingCards() {
  ];
 
   return (
+    <div className={styles.container}>
     <section id="neighborhood" className={styles.wrapper}> 
         <h2>Best Neighborhoods to Stay in NYC (Ranked for Solo Travelers)</h2> 
         <p className={styles.intro}> These neighborhoods offer the best mix of safety, walkability, transit access, and comfort for solo travelers. Each one serves a different travel style — choose the vibe that fits you. </p> 
@@ -106,6 +107,7 @@ export default function NeighborhoodRankingCards() {
                 </div> 
                 ))} 
         </div> 
-    </section> 
+    </section>
+    </div>
   );
 }
