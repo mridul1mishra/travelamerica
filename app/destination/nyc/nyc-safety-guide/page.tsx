@@ -1,12 +1,11 @@
 
 
 export const metadata = {
-  title: "NYC Safety Guide for Solo Travelers (2025) | Safe Areas, Tips & Scenarios",
-  description:
-    "A calm, practical NYC safety guide for solo travelers. Learn safe neighborhoods, subway tips, real-world scenarios, night safety, and how to navigate New York City confidently.",
-  alternates: {
-    canonical: "https://www.travelamerica.work/destination/nyc/nyc-safety-guide"
-  },
+  title: "NYC Solo Female Safety Guide 2026 | Tips, Areas & Scenarios",
+  description: "A practical NYC safety guide for solo women. Learn safe areas, subway tips, night safety, and what to do in real situations.", 
+  alternates: { 
+    canonical: "https://www.travelamerica.work/destination/nyc/nyc-solo-female-travel-safety-guide"
+   },
 
   robots: {
     index: true,
@@ -20,30 +19,29 @@ export const metadata = {
     }
   },
 
-  openGraph: {
-    title: "NYC Safety Guide for Solo Travelers",
-    description:
-      "Practical, scenario-based safety advice for navigating New York City with confidence.",
-    url: "https://www.travelamerica.work/destination/nyc/nyc-safety-guide",
-    siteName: "Travel America",
-    type: "article",
-    locale: "en_US",
-    images: [
-      {
-        url: "https://www.travelamerica.work/data/majorcities/newyork/assets/safety/nyc-safety-guide.png",
-        width: 1200,
-        height: 630,
-        alt: "NYC Safety Guide for Solo Travelers"
-      }
-    ]
-  },
+  openGraph: { 
+    title: "NYC Solo Female Travel Safety Guide (2026)", 
+    description: "A calm, practical, scenario-based NYC safety guide for solo female travelers. Learn safe areas, subway safety, night safety, and what to do in real situations.", 
+    url: "https://www.travelamerica.work/destination/nyc/nyc-solo-female-travel-safety-guide", 
+    siteName: "Travel America", 
+    type: "article", 
+    locale: "en_US", 
+    images: [ { 
+      url: "https://www.travelamerica.work/data/majorcities/newyork/assets/safety/nyc-safety-guide.png", 
+      width: 1200, 
+      height: 630, 
+      alt: "NYC Solo Female Travel Safety Guide" 
+    } 
+  ] 
+},
 
-  twitter: {
-    card: "summary_large_image",
-    title: "NYC Safety Guide for Solo Travelers",
-    description:
-      "Calm, practical safety advice for navigating New York City confidently.",
-    images: ["https://www.travelamerica.work/data/majorcities/newyork/assets/safety/nyc-safety-guide.png"]
+  twitter: { 
+    card: "summary_large_image", 
+    title: "NYC Solo Female Travel Safety Guide (2026)", 
+    description: "Practical, scenario-based safety advice for solo women navigating New York City confidently.", 
+    images: [
+    "https://www.travelamerica.work/data/majorcities/newyork/assets/safety/nyc-safety-guide.png"
+  ] 
   }
 };
 

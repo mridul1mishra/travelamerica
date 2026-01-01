@@ -1,0 +1,39 @@
+.wrapper {
+  margin: 2rem 0;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.question {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.answer {
+  margin-top: 0.8rem;
+  padding-left: 1.2rem;
+  line-height: 1.55;
+}

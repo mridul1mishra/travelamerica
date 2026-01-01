@@ -1,0 +1,89 @@
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Filter Pills */
+.pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.pill { 
+    padding: 0.5rem 1rem; 
+    border-radius: 9999px; 
+    font-size: 0.875rem; 
+    font-weight: 500; 
+    background: transparent; 
+    border: none; 
+    color: #374151; 
+    cursor: pointer; 
+    transition: color 0.2s ease; 
+}
+
+.pill:hover { 
+    background: #f3f4f6; 
+}
+.pillActive { 
+    color: #111827; 
+    font-weight: 600; 
+    border-bottom: 2px solid #111827; 
+}
+
+/* Scenario Cards */
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Color band at top of card */
+.band {
+  height: 6px;
+  width: 100%;
+}
+
+/* Category colors */
+.bandStreet {
+  background: #2563EB;
+}
+
+.bandTransit {
+  background: #059669;
+}
+
+.bandAccommodation {
+  background: #D97706;
+}
+
+.bandSocial {
+  background: #0EA5E9;
+}
+
+.cardBody {
+  padding: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.cardList {
+  list-style: disc inside;
+  font-size: 0.875rem;
+  color: #4b5563;
+  padding-left: 0.5rem;
+}
+
+.cardList li {
+  margin-bottom: 0.25rem;
+}
