@@ -1,19 +1,26 @@
-.wrapper {
-  background: #f5f7fa;
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
-}
 
+.wrapper { 
+  background: #f5f7fa; /* page beige */ 
+  padding: 0px 20px 0px; 
+  display: flex; 
+  justify-content: center; 
+}
 .hero {
   position: relative;
-  max-width: 900px;
-  width: 100%;
-  padding: 60px 20px 120px;
+  min-height: 520px;                 /* 👈 KEY FIX */
+  background: linear-gradient(
+    135deg,
+    #e8f1ff 0%,
+    #cdddfc 100%
+  );
+
+  padding: 60px 20px 30px;          /* more bottom space for envelope */
   text-align: center;
-  background: linear-gradient(135deg, #e8f1ff 0%, #cdddfc 100%);
-  border-radius: 0 0 12px 12px;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Breadcrumb */
@@ -22,40 +29,61 @@
   justify-content: center;
   gap: 8px;
   font-size: 0.9rem;
-  color: #4a4a4a;
-  margin-bottom: 24px;
+  color: #fff;
+  opacity: 0.85;
+  margin-bottom: 32px;
 }
 
 .breadcrumb a {
-  color: #005bbb;
+  color: #fff;
   text-decoration: none;
 }
 
-.current {
-  font-weight: 600;
+.breadcrumb a:hover {
+  text-decoration: underline;
 }
 
-/* Title + Subtitle */
-.heroContent h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
-  color: #0d1b2a;
-  margin-bottom: 10px;
+.breadcrumb .current {
+  font-weight: 500;
+  opacity: 0.95;
 }
 
-.subtitle {
+/* Content */
+.herocontent h1 {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin-bottom: 16px;
+}
+
+.herocontent p {
+  color: #fff;
   font-size: 1.15rem;
-  color: #33415c;
-  margin-bottom: 10px;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-.topics {
-  font-size: 0.95rem;
-  color: #4f5d75;
-  margin-bottom: 40px;
-}
+/* Envelope bottom */
+.envelopebottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background: #fdf2ec;
 
-/* Info Box */
+  clip-path: polygon(
+    0 0,
+    50% 40%,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+.hero-content {
+  margin-bottom: 0; /* Removed margin */
+}
+/* Additional styles for info box */
 .infobox {
   background: #fdf2ec;
   padding: 20px;
@@ -96,21 +124,4 @@
   line-height: 30px;  /* Vertically center the icon */
   margin-right: 8px;
   vertical-align: middle;
-}
-/* Envelope Bottom */
-.envelopeBottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 110px;
-  background: #ffffff;
-
-  clip-path: polygon(
-    0 0,
-    50% 55%,
-    100% 0,
-    100% 100%,
-    0 100%
-  );
 }
