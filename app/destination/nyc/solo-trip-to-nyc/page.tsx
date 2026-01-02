@@ -23,7 +23,7 @@ import SoloTripNYCClient from './solotriptonycclient';
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Solo Trip to NYC (2025 Guide): Safety, Best Areas, Itinerary & Tips",
+  "headline": "Solo Trip to NYC (2026 Guide): Safety, Best Areas, Itinerary & Tips",
   "description": "Plan your solo trip to NYC with safe areas, transit tips, a 3‑day itinerary, and what to avoid.",
   "author": {
     "@type": "Person",
