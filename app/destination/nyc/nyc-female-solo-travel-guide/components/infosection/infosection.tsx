@@ -5,6 +5,7 @@ import { InfoSectionProps } from "@/app/models/infosectionprops";
 export default function InfoSection({ sections }: InfoSectionProps) {
   return (
     <>
+      <div className={styles.wrapper}>
       {sections.map((section) => (
         <section key={section.id} id={section.id} className={styles.section}>
           <h2>{section.title}</h2>
@@ -22,6 +23,7 @@ export default function InfoSection({ sections }: InfoSectionProps) {
           </Link>
         </section>
       ))}
+      </div>
     </>
   );
 }
