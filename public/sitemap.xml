@@ -114,6 +114,11 @@
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
+  <url>
+    <loc>https://www.travelamerica.work/destination/nyc/subway-safety-guide</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 
   <!-- Add more cities manually as needed -->
 
