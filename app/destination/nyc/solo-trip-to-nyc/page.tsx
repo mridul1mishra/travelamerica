@@ -1,8 +1,8 @@
 import Script from "next/script";
 
 export const generateMetadata = () => ({
-  title: 'Solo Trip to NYC (2025 Guide): Safety, Itinerary, Neighborhoods & Tips',
-  description:  'Solo Trip to NYC (2025 Guide): Safety, Itinerary, Neighborhoods & Tips',
+  title: 'Solo Trip to NYC (2026 Guide): Safety, Itinerary, Neighborhoods & Tips',
+  description:  'Solo Trip to NYC (2026 Guide): Safety, Itinerary, Neighborhoods & Tips',
   robots: {
     index: true,
     follow: true,
@@ -12,7 +12,7 @@ export const generateMetadata = () => ({
     },
     twitter: {
     card: "summary_large_image",
-    title: 'Solo Trip to NYC (2025 Guide): Safety, Itinerary, Neighborhoods & Tips',
+    title: 'Solo Trip to NYC (2026 Guide): Safety, Itinerary, Neighborhoods & Tips',
     description:  'Plan your NYC solo trip with safe areas, smart transit tips, and a simple 3‑day itinerary.',
     images: ["https://www.travelamerica.work/social/solo-trip-to-nyc-gritty.png"]
   }
@@ -87,9 +87,9 @@ export default async function SoloTripToNYC() {
   return (
   <>
       {/* Schema blocks */}
-      <Script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}/>
-      <Script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
-      <Script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}/>
+      <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}/>
+      <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
+      <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}/>
       
   <SoloTripNYCClient />
   </>
