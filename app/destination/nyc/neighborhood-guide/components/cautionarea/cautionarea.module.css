@@ -1,0 +1,84 @@
+.wrapper {
+  width: 100%;
+  background: #f8fafc; /* slate-50 */
+  padding: 3rem 1.5rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #0f172a; /* slate-900 */
+}
+
+.subheading {
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
+  color: #475569; /* slate-600 */
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+.grid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0; /* slate-200 */
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.headerRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.tag {
+  background: #facc15; /* yellow-400 */
+  color: #1e293b; /* slate-800 */
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.70rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.reason {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.list {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.list li {
+  font-size: 0.95rem;
+  color: #334155; /* slate-700 */
+  line-height: 1.5;
+}
