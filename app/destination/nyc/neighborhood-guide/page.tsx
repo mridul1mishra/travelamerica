@@ -23,13 +23,13 @@ export const metadata = {
     title: "NYC Neighborhood Guide for Solo Travelers (2026)",
     description:
       "A calm, practical NYC neighborhood guide built for solo travelers. Compare areas by comfort, foot traffic, lighting, transit access, and night‑time predictability.",
-    url: "https://travelamerica.com/destination/nyc/neighborhood-guide",
+    url: "https://www.travelamerica.com/destination/nyc/neighborhood-guide",
     siteName: "Travel America",
     type: "article",
     locale: "en_US",
     images: [
       {
-        url: "https://travelamerica.com/images/nyc-neighborhood-guide-og.png",
+        url: "https://www.travelamerica.com/images/nyc-neighborhood-guide-og.png",
         width: 1200,
         height: 630,
         alt: "NYC Neighborhood Guide for Solo Travelers",
@@ -42,7 +42,7 @@ export const metadata = {
     title: "NYC Neighborhood Guide for Solo Travelers (2026)",
     description:
       "A calm, scenario‑aware NYC neighborhood guide for solo travelers. Learn which areas feel most predictable and how they change from day to night.",
-    images: ["https://travelamerica.com/images/nyc-neighborhood-guide-og.png"],
+    images: ["https://www.travelamerica.com/images/nyc-neighborhood-guide-og.png"],
   },
 };
 
