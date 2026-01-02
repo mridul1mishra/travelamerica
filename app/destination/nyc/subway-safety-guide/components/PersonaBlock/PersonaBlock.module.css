@@ -1,0 +1,64 @@
+.wrapper {
+  margin-top: 60px;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #111;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.card {
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 24px;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.personaName {
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.section {
+  margin-top: 16px;
+}
+
+.heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.list {
+  margin-left: 18px;
+  color: #444;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.list li {
+  margin-bottom: 4px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "hero": {
+    "title": "NYC Subway Safety Guide for Solo Travelers",
+    "subtitle": "A practical, scenario‑driven guide to navigating NYC’s subway confidently and safely.",
+    "hero_image": "/data/metadataimage/nyc-subway-generic.jpg",
+    "breadcrumbs": [
+      { "label": "Solo Trip to NYC", "slug": "/destination/nyc/solo-trip-to-nyc" },
+      { "label": "Subway Safety Guide", "slug": "/destination/nyc/subway-safety-guide" }
+    ],
+    "updated_on": "2026-01-02"
+  },
+
+  "why_trust_this_guide": {
+    "author_expertise": "Built using NYC transit data, rider behavior patterns, and real-world solo traveler insights.",
+    "local_insights": "Neighborhood-specific notes based on station layout, foot traffic, and time-of-day patterns.",
+    "safety_framework": "Structured using cognitive load reduction, progressive disclosure, and scenario-based learning.",
+    "data_sources": [
+      "MTA service data",
+      "NYC Transit crime statistics",
+      "Local commuter behavior patterns"
+    ],
+    "editorial_standards": "Fact-checked, persona-driven, and updated regularly for accuracy."
+  },
+
+  "core_principles": [
+    {
+      "icon": "awareness",
+      "title": "Stay Aware, Not Afraid",
+      "description": "Confidence comes from understanding your surroundings and making deliberate choices."
+    },
+    {
+      "icon": "positioning",
+      "title": "Position Yourself Strategically",
+      "description": "Choose well-lit areas, stand near other riders, and avoid isolated corners."
+    },
+    {
+      "icon": "instincts",
+      "title": "Trust Your Instincts",
+      "description": "If something feels off, move cars, change platforms, or exit the station."
+    },
+    {
+      "icon": "minimize-risk",
+      "title": "Minimize Exposure to Risk",
+      "description": "Avoid empty cars, late-night transfers, and poorly lit exits."
+    },
+    {
+      "icon": "tools",
+      "title": "Use Tools That Give You Control",
+      "description": "Apps, alerts, and maps help you stay ahead of delays and disruptions."
+    }
+  ],
+
+  "subway_basics": {
+    "how_the_system_works": "NYC’s subway runs 24/7 with 472 stations across four boroughs.",
+    "peak_vs_off_peak": {
+      "peak": "7–10 AM and 4–7 PM — crowded but safer due to high foot traffic.",
+      "off_peak": "Late nights and early mornings — quieter, requires more awareness."
+    },
+    "fare_basics": "Use OMNY or a MetroCard. Tap once per ride; transfers within 2 hours are free.",
+    "station_layouts": "Most stations have multiple exits, mezzanines, and platforms. Follow signage closely.",
+    "train_types": "Local trains stop at every station; express trains skip stops and run on center tracks."
+  },
+
+  "personas": [
+    {
+      "id": "solo_female_traveler",
+      "top_concerns": ["Harassment", "Late-night travel", "Crowded platforms"],
+      "recommended_behaviors": [
+        "Ride in the conductor car",
+        "Avoid empty cars",
+        "Stand near families or commuters"
+      ],
+      "avoid_list": ["Isolated platforms", "Late-night transfers"],
+      "confidence_boosters": ["Plan routes ahead", "Use live service alerts"]
+    },
+    {
+      "id": "first_time_visitor",
+      "top_concerns": ["Navigation", "Service changes", "Platform confusion"],
+      "recommended_behaviors": [
+        "Use Google Maps or Citymapper",
+        "Follow color-coded lines",
+        "Ask MTA staff for help"
+      ],
+      "avoid_list": ["Last-minute platform changes"],
+      "confidence_boosters": ["Arrive early", "Screenshot your route"]
+    },
+    {
+      "id": "late_night_commuter",
+      "top_concerns": ["Low foot traffic", "Empty cars", "Long waits"],
+      "recommended_behaviors": [
+        "Wait near the station booth",
+        "Choose cars with riders",
+        "Avoid isolated exits"
+      ],
+      "avoid_list": ["Empty platforms", "Sleeping riders"],
+      "confidence_boosters": ["Track trains in real time"]
+    }
+  ],
+
+  "scenarios": [
+    {
+      "scenario_title": "Entering a Station Alone",
+      "what_to_do": [
+        "Choose well-lit entrances",
+        "Walk with purpose",
+        "Keep valuables out of sight",
+        "Stand near staffed booths"
+      ],
+      "pro_tips": "Use main entrances instead of side streets."
+    },
+    {
+      "scenario_title": "Choosing the Safest Car",
+      "what_to_do": [
+        "Pick the car near the conductor",
+        "Avoid empty cars",
+        "Look for families or commuters",
+        "Stay near the middle of the platform"
+      ],
+      "pro_tips": "The conductor is usually in the middle of the train."
+    },
+    {
+      "scenario_title": "Handling Empty Platforms",
+      "what_to_do": [
+        "Move closer to station staff",
+        "Stand near cameras",
+        "Avoid isolated corners",
+        "Stay alert to surroundings"
+      ],
+      "pro_tips": "Use the entrance with the most foot traffic."
+    },
+    {
+      "scenario_title": "Navigating Late-Night Trains",
+      "what_to_do": [
+        "Ride in the conductor car",
+        "Avoid empty cars",
+        "Stay near other riders",
+        "Limit transfers"
+      ],
+      "pro_tips": "Plan routes that minimize platform changes."
+    },
+    {
+      "scenario_title": "Dealing with Crowded Trains",
+      "what_to_do": [
+        "Keep your bag in front",
+        "Stay balanced",
+        "Avoid confrontations",
+        "Move away from doors"
+      ],
+      "pro_tips": "Crowds are normal — stay calm and patient."
+    },
+    {
+      "scenario_title": "Avoiding Scams & Panhandlers",
+      "what_to_do": [
+        "Ignore solicitation",
+        "Avoid eye contact",
+        "Move cars if needed",
+        "Stay near commuters"
+      ],
+      "pro_tips": "Most panhandling is harmless — disengage politely."
+    },
+    {
+      "scenario_title": "Handling Harassment",
+      "what_to_do": [
+        "Move to another car",
+        "Stand near others",
+        "Alert the conductor",
+        "Exit at the next busy station"
+      ],
+      "pro_tips": "Trust your instincts — act early."
+    }
+  ],
+
+  "neighborhood_notes": [
+    {
+      "area_name": "Midtown Manhattan",
+      "lines": ["1", "2", "3", "A", "C", "E", "N", "Q", "R", "W"],
+      "peak_safety_notes": "High foot traffic; safest during rush hours.",
+      "late_night_notes": "Some stations get quieter after 11 PM.",
+      "transfer_complexity": "Times Square and Herald Square can be overwhelming."
+    },
+    {
+      "area_name": "Lower Manhattan",
+      "lines": ["4", "5", "6", "J", "Z", "R"],
+      "peak_safety_notes": "Busy with commuters and tourists.",
+      "late_night_notes": "Financial District becomes very quiet after 9 PM.",
+      "transfer_complexity": "Brooklyn Bridge–City Hall has multiple platforms."
+    },
+    {
+      "area_name": "Brooklyn — Williamsburg",
+      "lines": ["L"],
+      "peak_safety_notes": "Young commuter crowd; safe and busy.",
+      "late_night_notes": "L line runs frequently but platforms thin out.",
+      "transfer_complexity": "Simple layout; easy to navigate."
+    }
+  ],
+
+  "tools_and_apps": [
+    { "name": "MTA App", "description": "Live service alerts and train arrival times." },
+    { "name": "Google Maps Transit", "description": "Reliable routing and platform guidance." },
+    { "name": "Citymapper", "description": "Best for alternative routes and delay avoidance." },
+    { "name": "Citizen App", "description": "Awareness of incidents near stations." }
+  ],
+
+  "behavioral_cues": {
+    "green_flags": [
+      "Families and commuters nearby",
+      "Well-lit platforms",
+      "Visible MTA staff",
+      "Moderate foot traffic"
+    ],
+    "red_flags": [
+      "Empty cars during rush hour",
+      "Aggressive solicitation",
+      "Broken lighting",
+      "People pacing or watching riders"
+    ]
+  },
+
+  "emergency_playbook": {
+    "if_you_feel_unsafe": [
+      "Move to another car",
+      "Stand near the conductor",
+      "Exit at the next busy station"
+    ],
+    "if_someone_harasses_you": [
+      "Create distance",
+      "Move cars",
+      "Alert the conductor"
+    ],
+    "if_you_get_lost": [
+      "Check maps",
+      "Ask MTA staff",
+      "Exit to street level if needed"
+    ],
+    "if_your_phone_dies": [
+      "Use station maps",
+      "Follow signage",
+      "Ask staff for directions"
+    ],
+    "if_service_stops": [
+      "Stay calm",
+      "Listen for announcements",
+      "Follow conductor instructions"
+    ]
+  },
+
+  "etiquette": {
+    "platform_etiquette": "Stand behind the yellow line and let riders exit first.",
+    "train_etiquette": "Keep bags in front and avoid blocking doors.",
+    "rush_hour_rules": "Expect crowds; move into the center of the car.",
+    "unspoken_norms": "Minimal eye contact, low-volume conversations."
+  },
+
+  "checklist": {
+    "essentials": ["MetroCard or OMNY", "Charged phone", "Route screenshot"],
+    "safety_items": ["Crossbody bag", "Portable charger"],
+    "digital_tools": ["MTA app", "Google Maps"],
+    "what_not_to_carry": ["Open drinks", "Loose valuables"]
+  },
+
+  "faq": [
+    {
+      "question": "Is the NYC subway safe at night",
+      "answer": "Yes, with precautions — ride in busier cars and avoid isolated stations."
+    },
+    {
+      "question": "Which lines are safest",
+      "answer": "Lines with high commuter traffic like 1/2/3, A/C/E, and N/Q/R/W."
+    },
+    {
+      "question": "How do I avoid empty cars",
+      "answer": "Look for cars with riders and avoid unusually empty ones during busy times."
+    }
+  ],
+
+  "internal_links": [
+    { "label": "Solo Trip to NYC", "slug": "/solo-trip-to-nyc" },
+    { "label": "NYC Night Safety Guide", "slug": "/solo-trip-to-nyc/night-safety" },
+    { "label": "NYC Neighborhood Safety Guide", "slug": "/solo-trip-to-nyc/neighborhood-safety" },
+    { "label": "NYC Transit Etiquette", "slug": "/solo-trip-to-nyc/transit-etiquette" }
+  ],
+
+  "footer_cta": {
+    "text": "Plan your NYC solo trip with confidence",
+    "button_label": "Explore More Safety Guides",
+    "button_link": "/solo-trip-to-nyc"
+  }
+}

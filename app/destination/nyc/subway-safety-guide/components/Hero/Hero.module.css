@@ -1,0 +1,50 @@
+.heroWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.breadcrumbs {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.breadcrumbLink {
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.breadcrumbLink:hover {
+  text-decoration: underline;
+}
+
+.separator {
+  margin: 0 6px;
+  color: #9ca3af;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #4b5563;
+  max-width: 600px;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.updatedOn {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}

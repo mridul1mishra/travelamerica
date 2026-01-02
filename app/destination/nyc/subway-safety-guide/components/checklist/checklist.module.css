@@ -1,0 +1,49 @@
+.wrapper {
+  margin-top: 60px;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #111;
+}
+
+.section {
+  margin-bottom: 28px;
+}
+
+.heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+}
+
+.bullet {
+  font-size: 1.2rem;
+  color: #1f2937;
+  line-height: 1;
+}
+
+.text {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.55;
+}

@@ -1,0 +1,69 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "NYC Subway Safety Guide (2026)",
+      "description": "A clear, scenario‑driven NYC Subway Safety Guide covering core principles, emergency steps, etiquette, tools, and neighborhood insights for 2026.",
+      "author": {
+        "@type": "Organization",
+        "name": "YourSiteName"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "YourSiteName",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yourdomain.com/logo.png"
+        }
+      },
+      "image": "https://yourdomain.com/og/subway-safety-guide.png",
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-01-01",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://yourdomain.com/subway-safety-guide"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://yourdomain.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "NYC Subway Safety Guide",
+          "item": "https://yourdomain.com/subway-safety-guide"
+        }
+      ]
+    },
+
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the NYC subway safe at night?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, but stay in well‑lit areas, ride in busier cars, and avoid empty stations when possible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which subway apps should I use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the official MTA app, Google Maps, and Transit for real‑time arrivals and service changes."
+          }
+        }
+      ]
+    }
+  ]
+}

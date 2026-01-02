@@ -1,0 +1,37 @@
+.section {
+  margin-top: 60px;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.subheading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.list {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.listItem {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
