@@ -207,9 +207,15 @@ const schema4 = {
               <p className={styles.description}>Easy solo-friendly walk, iconic views.</p>
               </li>
             
-              <li className={styles.subheading}>☀️Afternoon: Rockefeller Center → Top of the Rock</li>
-              <li className={styles.subheading}>☀️Midday: The Met to MoMA</li>
-              <li className={styles.subheading}>🌙Evening: Dinner at Time Out Market or Eataly Flatiron</li>
+              <li className={styles.subheading}>☀️Afternoon: Rockefeller Center → Top of the Rock
+              <p className={styles.description}>Best skyline shots, smooth solo flow.</p>
+              </li>
+              <li className={styles.subheading}>☀️Midday: The Met to MoMA
+              <p className={styles.description}>Pick one or sample both — world‑class art, simple navigation.</p>
+              </li>
+              <li className={styles.subheading}>🌙Evening: Dinner at Time Out Market or Eataly Flatiron
+              <p className={styles.description}>Great solo dining energy, safe and lively.</p>
+              </li>
           </ul>
           <Link href="/destination/nyc/solo-trip=to-nyc" className={styles.ctaButton}>
             Solo Trip to NYC Guide
