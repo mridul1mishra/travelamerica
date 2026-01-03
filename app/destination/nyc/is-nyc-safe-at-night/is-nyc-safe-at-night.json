@@ -11,7 +11,7 @@
     "meterScore": 7,
     "quickSummary": "NYC’s busiest areas remain active and well-patrolled at night. Risks increase in quieter neighborhoods and during late-night transit.",
     "bestFor": ["Solo women", "First-time visitors", "Budget travelers"],
-    "avoidIf": ["You dislike crowds", "You avoid late-night transit", "You prefer quiet nightlife-free zones"]
+    "Less Ideal If": ["Prefer quieter, low‑traffic streets after dark", "Feel uneasy in high‑energy or crowded nighttime areas", "Prefer calm, residential neighborhoods with minimal nightlife"]
   },
 
   "neighborhoodSafetyGrid": [
