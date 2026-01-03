@@ -20,6 +20,23 @@ export default function NeighborhoodCards({ neighborhoods }: NeighborhoodCardsPr
 
               {/* Night vibe */}
               <p className={styles.vibe}>{n.nightVibe}</p>
+              <div className={styles.indicators}>
+                <div className={styles.indicatorItem}>
+                  <span className={styles.icon}>💡</span>
+                  <span className={styles.label}>Lighting:</span> {n.indicators.lighting}
+                </div>
+              
+                <div className={styles.indicatorItem}>
+                  <span className={styles.icon}>🚶</span>
+                  <span className={styles.label}>Foot Traffic:</span> {n.indicators.footTraffic}
+                </div>
+              
+                <div className={styles.indicatorItem}>
+                  <span className={styles.icon}>🚓</span>
+                  <span className={styles.label}>Police Presence:</span> {n.indicators.policePresence}
+                </div>
+              </div>
+
 
               {/* Magazine-style 2-column layout */}
               <div className={styles.columns}>
