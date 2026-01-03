@@ -239,7 +239,7 @@
     "methodology": "We analyze NYPD data, traveler patterns, and local insights.",
     "localInsights": "Built with input from NYC residents and frequent travelers.",
     "dataSources": ["NYPD Crime Stats", "311 Reports", "MTA Data"],
-    "editorialProcess": "Every guide is reviewed for accuracy and clarity.",
-    "safetyExpertsConsulted": ["Local security advisors"]
+    "editorialProcess": "Every guide is reviewed for accuracy and clarity."
+    
   }
 }
