@@ -163,17 +163,32 @@
   ],
 
   "corePrinciples": [
-    {
-      "title": "Situational Awareness",
-      "description": "Stay alert and aware of your surroundings.",
-      "example": "Avoid wearing noise-canceling headphones at night."
-    },
-    {
-      "title": "Transit Planning",
-      "description": "Know your route before heading out.",
-      "example": "Check subway schedules after midnight."
-    }
-  ],
+  {
+    "title": "Read the Room",
+    "description": "Scan the environment every few minutes to understand the vibe, foot traffic, and exits.",
+    "example": "If a block suddenly gets quiet or lighting drops, switch to a busier avenue."
+  },
+  {
+    "title": "Plan Your Moves",
+    "description": "Know your next 2–3 steps before you start walking — route, transit option, and backup.",
+    "example": "If the subway platform looks empty, pivot to a bus or rideshare instead of waiting alone."
+  },
+  {
+    "title": "Stay in the Flow",
+    "description": "Stick to well‑lit, high‑foot‑traffic streets and avoid sudden detours into quiet blocks.",
+    "example": "Walk along 7th Ave instead of cutting through an empty side street after 11 PM."
+  },
+  {
+    "title": "Signal Confidence",
+    "description": "Walk with purpose, keep your head up, and avoid behaviors that signal distraction.",
+    "example": "Hold your phone at chest level for navigation instead of staring down at it."
+  },
+  {
+    "title": "Trust Micro‑Signals",
+    "description": "If something feels off — a person, a block, a station — change direction immediately.",
+    "example": "If someone starts pacing near you on the platform, move closer to the conductor."
+  }
+],
 
   "transitSafety": {
     "subway": {
