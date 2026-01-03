@@ -160,7 +160,7 @@ export interface TrustBlockProps {
   localInsights: string;
   dataSources: string[];
   editorialProcess: string;
-  safetyExpertsConsulted: string[];
+  
 }
 
 /* -------------------------------------------------------
