@@ -5,8 +5,7 @@ export default function TrustBlock({
   methodology,
   localInsights,
   dataSources,
-  editorialProcess,
-  safetyExpertsConsulted
+  editorialProcess
 }: TrustBlockProps) {
   return (
     <section className={styles.section}>
