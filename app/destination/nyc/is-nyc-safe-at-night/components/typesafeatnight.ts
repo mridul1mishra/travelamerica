@@ -101,6 +101,12 @@ export interface TransitSafetyProps {
 /* -------------------------------------------------------
    8. Neighborhood Deep Dives (NeighborhoodCards)
 ------------------------------------------------------- */
+export interface NeighborhoodIndicators {
+  lighting: string;
+  footTraffic: string;
+  policePresence: string;
+}
+
 export interface NeighborhoodCard {
   name: string;
   nightVibe: string;
@@ -109,6 +115,7 @@ export interface NeighborhoodCard {
   avoidSpots: string[];
   idealFor: string;
   notFor: string;
+  indicators: NeighborhoodIndicators; // ← NEW
 }
 
 export interface NeighborhoodCardsProps {
