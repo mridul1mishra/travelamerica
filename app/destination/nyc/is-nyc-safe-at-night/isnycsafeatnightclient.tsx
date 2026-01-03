@@ -28,11 +28,7 @@ export default function Page() {
     <main>
       {/* 1. Hero Section */}
       <HeroSafety {...data.heroSafety} />
-
-      {/* 2. Safety Verdict Snapshot */}
-      <SectionWrapper id="safetyMeter">
       <SafetyMeter {...data.safetyMeter} />
-      </SectionWrapper>
 
       {/* 3. Neighborhood Safety Grid */}
       <SectionWrapper id="neighborhoods">
