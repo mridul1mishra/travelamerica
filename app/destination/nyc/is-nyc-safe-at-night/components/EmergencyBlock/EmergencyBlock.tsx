@@ -23,7 +23,8 @@ export default function EmergencyBlock({
 
           <div className={styles.card}>
             <h3 className={styles.title}>🚓NYPD Precinct Locator</h3>
-            <p>{nypdPrecinctLocator}</p>
+            <a href="{nypdPrecinctLocator}" className="{styles.link}" target="_blank">Find Your Precinct</a>
+            <p>{nypdPrecinctLocatorText}</p>
           </div>
 
           <div className={styles.card}>
