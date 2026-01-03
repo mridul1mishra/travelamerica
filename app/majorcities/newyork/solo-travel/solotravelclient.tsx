@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './solotrave.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
-import schema from "./schema.json";
+import schema from "./Schema.json";
 export default function SoloTravelPage() {
     
     
