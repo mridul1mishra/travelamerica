@@ -146,7 +146,7 @@ const BreadCrumbList = {
  
     return ( 
     <> 
-    <script id="nyc-safety-guide-schema" type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify([Article, FAQ, BreadCrumbList ])}} />
-    <ClientPage /> </> 
+    <script id="nyc-safety-guide-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [ Article, FAQ, BreadCrumbList ] }) }} />
+      <ClientPage /> </> 
     ); 
 }
