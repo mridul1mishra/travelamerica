@@ -9,41 +9,45 @@ export default function NeighborhoodCards({ neighborhoods }: NeighborhoodCardsPr
 
         <div className={styles.grid}>
           {neighborhoods.map((n, index) => (
-            <div key={index} className={styles.card}>
-              <h3 className={styles.name}>{n.name}</h3>
+            <article key={index} className={styles.card}>
+              {/* Header */}
+              <header className={styles.header}>
+                <h3 className={styles.name}>{n.name}</h3>
+                <span className={`${styles.badge} ${styles[n.safetyRating.toLowerCase()]}`}>
+                  {n.safetyRating}
+                </span>
+              </header>
 
+              {/* Night vibe */}
               <p className={styles.vibe}>{n.nightVibe}</p>
 
-              <div className={styles.rating}>
-                <strong>Safety Rating:</strong> {n.safetyRating}
+              {/* Magazine-style 2-column layout */}
+              <div className={styles.columns}>
+                <div className={styles.column}>
+                  <h4 className={styles.subheading}>Safe Spots</h4>
+                  <ul className={styles.list}>
+                    {n.safeSpots.map((spot, i) => (
+                      <li key={i}>{spot}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className={styles.column}>
+                  <h4 className={styles.subheading}>Avoid Spots</h4>
+                  <ul className={styles.list}>
+                    {n.avoidSpots.map((spot, i) => (
+                      <li key={i}>{spot}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
-              <div className={styles.block}>
-                <h4 className={styles.subheading}>Safe Spots</h4>
-                <ul className={styles.list}>
-                  {n.safeSpots.map((spot, i) => (
-                    <li key={i}>{spot}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className={styles.block}>
-                <h4 className={styles.subheading}>Avoid Spots</h4>
-                <ul className={styles.list}>
-                  {n.avoidSpots.map((spot, i) => (
-                    <li key={i}>{spot}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <p className={styles.meta}>
-                <strong>Ideal For:</strong> {n.idealFor}
-              </p>
-
-              <p className={styles.meta}>
-                <strong>Not For:</strong> {n.notFor}
-              </p>
-            </div>
+              {/* Footer */}
+              <footer className={styles.footer}>
+                <p><strong>Ideal For:</strong> {n.idealFor}</p>
+                <p><strong>Not For:</strong> {n.notFor}</p>
+              </footer>
+            </article>
           ))}
         </div>
       </div>
