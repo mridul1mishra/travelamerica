@@ -24,7 +24,7 @@ export interface SafetyMeterProps {
 ------------------------------------------------------- */
 export interface NeighborhoodSafetyItem {
   name: string;
-  safetyLevel: "Safe" | "Mixed" | "Avoid Late";
+  safetyLevel: string;
   why: string;
   bestTimeToVisit: string | null;
   avoidAfter: string | null;
@@ -160,7 +160,7 @@ export interface TrustBlockProps {
   localInsights: string;
   dataSources: string[];
   editorialProcess: string;
-  safetyExpertsConsulted?: string[];
+  safetyExpertsConsulted: string[];
 }
 
 /* -------------------------------------------------------
