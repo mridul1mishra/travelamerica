@@ -231,8 +231,8 @@
   ],
 
   "interlinkingGrid": [
-    { "title": "Solo Trip to NYC Guide", "url": "/solo-trip-to-nyc" },
-    { "title": "NYC Subway Safety", "url": "/nyc-subway-safety" }
+    { "title": "Solo Trip to NYC Guide", "url": "/destination/nyc/solo-trip-to-nyc" },
+    { "title": "NYC Subway Safety", "url": "/destination/nyc/nyc-subway-safety" }
   ],
 
   "trustBlock": {
