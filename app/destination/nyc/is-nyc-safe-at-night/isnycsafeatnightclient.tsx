@@ -44,10 +44,10 @@ export default function Page() {
       <ScenarioCards scenarios={data.scenarioCards} />
       </SectionWrapper>
 
-      {/* 5. Persona Safety Blocks */}
+      {/* 5. Persona Safety Blocks 
       <SectionWrapper id="personas">
       <PersonaSafetyBlocks personas={data.personaSafetyBlocks} />
-      </SectionWrapper>
+      </SectionWrapper>*/}
 
       {/* 6. Core Safety Principles */}
       <SectionWrapper id="principles">
