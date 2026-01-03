@@ -122,6 +122,7 @@ export interface EmergencyBlockProps {
   call911: string;
   call311: string;
   nypdPrecinctLocator: string;
+  nypdPrecinctLocatorText: string; 
   nearestHospital: string;
   subwayHelpPoints: string;
   lateNightTransportLinks?: string[];
