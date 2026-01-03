@@ -177,30 +177,46 @@
 
   "transitSafety": {
     "subway": {
-      "riskLevel": "Moderate",
-      "bestHours": "Before midnight",
-      "avoidHours": "2–4 AM",
-      "tips": [
-        "Wait near the conductor",
-        "Avoid empty cars",
-        "Use staffed stations"
-      ],
-      "recommendedRoutes": ["1/2/3", "A/C/E", "N/Q/R"]
-    },
-    "bus": {
-      "riskLevel": "Low",
-      "bestHours": "Evening",
-      "avoidHours": null,
-      "tips": ["Sit near the front", "Use well-lit stops"],
-      "recommendedRoutes": [ "M7/M20 (Manhattan)", "B62 (Brooklyn)", "Q32 (Queens)" ]
-    },
-    "rideshare": {
-      "riskLevel": "Low",
-      "bestHours": "Anytime",
-      "avoidHours": "Late-night intervals with long gaps",
-      "tips": ["Verify driver", "Share trip"],
-      
-    }
+  "riskLevel": "Moderate",
+  "bestHours": "Before midnight",
+  "avoidHours": "2–4 AM",
+  "tips": [
+    "Wait near the conductor",
+    "Avoid empty cars",
+    "Use staffed stations"
+  ],
+  "recommendedRoutes": ["1/2/3", "A/C/E", "N/Q/R"]
+},
+
+"bus": {
+  "riskLevel": "Low",
+  "bestHours": "Evening",
+  "avoidHours": "Late-night intervals with long gaps",
+  "tips": [
+    "Sit near the front",
+    "Use well-lit stops"
+  ],
+  "recommendedRoutes": [
+    "M7/M20 (Manhattan)",
+    "B62 (Brooklyn)",
+    "Q32 (Queens)"
+  ]
+},
+
+"rideshare": {
+  "riskLevel": "Low",
+  "bestHours": "Anytime",
+  "avoidHours": "None — but stay alert after 2 AM",
+  "tips": [
+    "Verify driver",
+    "Share trip"
+  ],
+  "recommendedRoutes": [
+    "Short hops between neighborhoods",
+    "Late-night trips where transit is sparse"
+  ]
+}
+
   },
 
   "neighborhoodCards": [
