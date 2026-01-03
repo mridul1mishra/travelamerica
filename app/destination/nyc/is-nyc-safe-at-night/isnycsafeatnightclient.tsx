@@ -1,66 +1,92 @@
-import fs from "fs";
-import path from "path";
-
+"use client"
 import HeroSafety from "./components/hero/hero";
 import SafetyMeter from "./components/SafetyMeter/SafetyMeter";
-{/*import NeighborhoodSafetyGrid from "@/components/NeighborhoodSafetyGrid/NeighborhoodSafetyGrid";
-import ScenarioCards from "@/components/ScenarioCards/ScenarioCards";
-import PersonaSafetyBlocks from "@/components/PersonaSafetyBlocks/PersonaSafetyBlocks";
-import CorePrinciples from "@/components/CorePrinciples/CorePrinciples";
-import TransitSafety from "@/components/TransitSafety/TransitSafety";
-import NeighborhoodCards from "@/components/NeighborhoodCards/NeighborhoodCards";
-import EmergencyBlock from "@/components/EmergencyBlock/EmergencyBlock";
-import FAQAccordion from "@/components/FAQAccordion/FAQAccordion";
-import InterlinkingGrid from "@/components/InterlinkingGrid/InterlinkingGrid";
-import TrustBlock from "@/components/TrustBlock/TrustBlock";*/}
+import NeighborhoodSafetyGrid from "./components/NeighborhoodSafetyGrid/NeighborhoodSafetyGrid";
+import ScenarioCards from "./components/ScenarioCards/ScenarioCards";
+import PersonaSafetyBlocks from "./components/PersonaSafetyBlocks/PersonaSafetyBlocks";
+import CorePrinciples from "./components/CorePrinciples/CorePrinciples";
+import TransitSafety from "./components/TransitSafety/TransitSafety";
+import NeighborhoodCards from "./components/NeighborhoodCards/NeighborhoodCards";
+import EmergencyBlock from "./components/EmergencyBlock/EmergencyBlock";
+import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
+import InterlinkingGrid from "./components/InterlinkingGrid/InterlinkingGrid";
+import TrustBlock from "./components/TrustBlock/TrustBlock";
+import SectionWrapper from "./Sectionwrapper";
+import data from "./is-nyc-safe-at-night.json";
 
 import type { IsNycSafeAtNightPage } from "./components/typesafeatnight";
+import Header from "@/app/components/destination/header/header";
+import Footer from "@/app/components/Header/Footer/footer";
 
 export default function Page() {
     
   // Load JSON content
-  const filePath = path.join(process.cwd(), "app/destination/nyc/is-nyc-safe-at-night/is-nyc-safe-at-night.json");
-  const jsonData = fs.readFileSync(filePath, "utf-8");
-  const data: IsNycSafeAtNightPage = JSON.parse(jsonData);
   
   return (
+    <>
+    <Header />
     <main>
       {/* 1. Hero Section */}
+      <SectionWrapper id="hero">
       <HeroSafety {...data.heroSafety} />
+      </SectionWrapper>
 
       {/* 2. Safety Verdict Snapshot */}
+      <SectionWrapper id="safetyMeter">
       <SafetyMeter {...data.safetyMeter} />
-      
+      </SectionWrapper>
 
       {/* 3. Neighborhood Safety Grid */}
-   {/*   <NeighborhoodSafetyGrid neighborhoods={data.neighborhoodSafetyGrid} />*/}
+      <SectionWrapper id="neighborhoods">
+      <NeighborhoodSafetyGrid neighborhoods={data.neighborhoodSafetyGrid} />
+      </SectionWrapper>
 
       {/* 4. Night Scenarios */}
-      {/*<ScenarioCards scenarios={data.scenarioCards} />*/}
+      <SectionWrapper id="scenarios">
+      <ScenarioCards scenarios={data.scenarioCards} />
+      </SectionWrapper>
 
       {/* 5. Persona Safety Blocks */}
-      {/*<PersonaSafetyBlocks personas={data.personaSafetyBlocks} />*/}
+      <SectionWrapper id="personas">
+      <PersonaSafetyBlocks personas={data.personaSafetyBlocks} />
+      </SectionWrapper>
 
       {/* 6. Core Safety Principles */}
-      {/*<CorePrinciples principles={data.corePrinciples} />*/}
+      <SectionWrapper id="principles">
+      <CorePrinciples principles={data.corePrinciples} />
+      </SectionWrapper>
 
       {/* 7. Transit Safety */}
-      {/*<TransitSafety {...data.transitSafety} />*/}
+      <SectionWrapper id="transitSafety">
+      <TransitSafety {...data.transitSafety} />
+      </SectionWrapper>
 
       {/* 8. Neighborhood Deep Dives */}
-      {/*<NeighborhoodCards neighborhoods={data.neighborhoodCards} />*/}
+      <SectionWrapper id="neighborhoods">
+      <NeighborhoodCards neighborhoods={data.neighborhoodCards} />
+      </SectionWrapper>
 
       {/* 9. Emergency Resources */}
-      {/*<EmergencyBlock {...data.emergencyBlock} />*/}
+      <SectionWrapper id="emergencyBlock">
+      <EmergencyBlock {...data.emergencyBlock} />
+      </SectionWrapper>
 
       {/* 10. FAQ */}
-      {/*<FAQAccordion faqs={data.faq} />*/}
+      <SectionWrapper id="faq">
+      <FAQAccordion faqs={data.faq} />
+      </SectionWrapper>
 
       {/* 11. Internal Linking */}
-      {/*<InterlinkingGrid links={data.interlinkingGrid} />*/}
+      <SectionWrapper id="links">
+      <InterlinkingGrid links={data.interlinkingGrid} />
+      </SectionWrapper>
 
       {/* 12. Trust Block */}
-      {/*<TrustBlock {...data.trustBlock} />*/}
+      <SectionWrapper id="trustBlock">
+      <TrustBlock {...data.trustBlock} />
+      </SectionWrapper>
     </main>
+    <Footer />
+    </>
   );
 }
