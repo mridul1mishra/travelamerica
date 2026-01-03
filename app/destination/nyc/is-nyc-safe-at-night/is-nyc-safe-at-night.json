@@ -216,9 +216,9 @@
   "emergencyBlock": {
     "call911": "For emergencies requiring immediate police, fire, or medical response.",
     "call311": "For non-emergency city services and complaints.",
-    "nypdPrecinctLocator": "https://www.nyc.gov/site/nypd/bureaus/patrol/find-your-precinct.page",
-    "nearestHospital": "Use Google Maps or NYC Health + Hospitals locator.",
-    "subwayHelpPoints": "Look for Help Point intercoms on platforms.",
+    "nypdPrecinctLocator": "Find your local precinct for quick assistance with lost items or safety concerns.",
+    "nearestHospital": "NYC has multiple 24/7 emergency rooms within 10–15 minutes in Manhattan and Brooklyn.",
+    "subwayHelpPoints": "Blue “Help Point” intercoms on platforms connect you directly to emergency services.",
     "lateNightTransportLinks": ["https://new.mta.info"]
   },
 
