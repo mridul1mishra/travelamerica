@@ -204,6 +204,7 @@ const schema4 = {
           <p className={styles.subheading}>Start with the classics. Today’s about iconic sights and easy wins.</p>
           <ul className={styles.itineraryList}>
               <li className={styles.subheading}>🌅Morning: Central Park(Bethesda Terrace → Strawberry Fields</li>
+            <p>Easy solo-friendly walk, iconic views.</p>
               <li className={styles.subheading}>☀️Afternoon: Rockefeller Center → Top of the Rock</li>
               <li className={styles.subheading}>☀️Midday: The Met to MoMA</li>
               <li className={styles.subheading}>🌙Evening: Dinner at Time Out Market or Eataly Flatiron</li>
