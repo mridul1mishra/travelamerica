@@ -53,26 +53,28 @@ export default function TransitSafety({ subway, bus, rideshare, yellowCabs, walk
                   )}
                 </div>
 
-                <div className={styles.block}>
-                  <h4 className={styles.subheading}>Tips</h4>
-                  <ul className={styles.list}>
-                    {mode.data!.tips.map((tip, i) => (
-                      <li key={i}>{tip}</li>
-                    ))}
-                  </ul>
-                </div>
+                <div className={styles.columns}>
+  <div className={styles.column}>
+    <h4 className={styles.subheading}>Tips</h4>
+    <ul className={styles.list}>
+      {mode.data!.tips.map((tip, i) => (
+        <li key={i}>{tip}</li>
+      ))}
+    </ul>
+  </div>
 
-                {mode.data!.recommendedRoutes && (
-                  <div className={styles.block}>
-                    <h4 className={styles.subheading}>Recommended Routes</h4>
-                    <ul className={styles.list}>
-                      {mode.data!.recommendedRoutes.map((route, i) => (
-                        <li key={i}>{route}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
+  {mode.data!.recommendedRoutes && (
+    <div className={styles.column}>
+      <h4 className={styles.subheading}>Routes</h4>
+      <ul className={styles.list}>
+        {mode.data!.recommendedRoutes.map((route, i) => (
+          <li key={i}>{route}</li>
+        ))}
+      </ul>
+    </div>
+  )}
+</div>
+
             ))}
         </div>
       </div>
