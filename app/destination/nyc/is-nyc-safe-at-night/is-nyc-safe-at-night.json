@@ -191,13 +191,15 @@
       "riskLevel": "Low",
       "bestHours": "Evening",
       "avoidHours": null,
-      "tips": ["Sit near the front", "Use well-lit stops"]
+      "tips": ["Sit near the front", "Use well-lit stops"],
+      "recommendedRoutes": [ "M7/M20 (Manhattan)", "B62 (Brooklyn)", "Q32 (Queens)" ]
     },
     "rideshare": {
       "riskLevel": "Low",
       "bestHours": "Anytime",
-      "avoidHours": null,
-      "tips": ["Verify driver", "Share trip"]
+      "avoidHours": "Late-night intervals with long gaps",
+      "tips": ["Verify driver", "Share trip"],
+      
     }
   },
 
