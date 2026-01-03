@@ -285,7 +285,7 @@
   {
     "question": "Which NYC neighborhoods are safest to walk in at night?",
     "answer": "Midtown, SoHo, Greenwich Village, and Brooklyn Heights stay active and well-lit into the night.",
-    "relatedLinks": ["/destination/nyc/neighborhood-guide"]
+    "relatedLinks": ["/destination/nyc/best-areas-to-stay"]
   },
   {
     "question": "Is the NYC subway safe at night?",
@@ -300,7 +300,7 @@
   {
     "question": "Are NYC tourist spots safe at night?",
     "answer": "Times Square, Rockefeller Center, and DUMBO remain busy and safe for solo travelers.",
-    "relatedLinks": ["/destination/nyc/nyc-night-guide"]
+    "relatedLinks": ["/destination/nyc/neighborhood-guide"]
   },
   {
     "question": "What should solo travelers avoid at night in NYC?",
@@ -311,7 +311,7 @@
 
   "interlinkingGrid": [
     { "title": "Solo Trip to NYC Guide", "url": "/destination/nyc/solo-trip-to-nyc" },
-    { "title": "NYC Subway Safety", "url": "/destination/nyc/nyc-subway-safety" }
+    { "title": "NYC Subway Safety", "url": "/destination/nyc/subway-safety-guide" }
   ],
 
   "trustBlock": {
