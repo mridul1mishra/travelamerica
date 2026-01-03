@@ -202,24 +202,35 @@
   },
 
   "neighborhoodCards": [
-    {
-      "name": "Midtown",
-      "nightVibe": "Bright, busy, tourist-heavy",
-      "safetyRating": "Safe",
-      "safeSpots": ["Times Square", "Bryant Park"],
-      "avoidSpots": ["Empty side streets"],
-      "idealFor": "First-time visitors",
-      "notFor": "People avoiding crowds"
+      {
+        "name": "Midtown",
+        "nightVibe": "Bright, busy, tourist-heavy",
+        "safetyRating": "Safe",
+        "safeSpots": ["Times Square", "Bryant Park"],
+        "avoidSpots": ["Empty side streets"],
+        "idealFor": "First-time visitors",
+        "notFor": "People avoiding crowds",
+        "indicators": {
+          "lighting": "Excellent",
+          "footTraffic": "Very High",
+          "policePresence": "High"
+        }
     },
     {
-      "name": "DUMBO",
-      "nightVibe": "Scenic, lively waterfront with steady foot traffic",
-      "safetyRating": "Safe",
-      "safeSpots": ["Brooklyn Bridge Park", "Main Street Park"],
-      "avoidSpots": ["Very quiet industrial blocks late at night"],
-      "idealFor": "Solo women, photographers, relaxed evening walks",
-      "notFor": "People who dislike touristy areas"
-    }
+        "name": "DUMBO",
+        "nightVibe": "Scenic, lively waterfront with steady foot traffic",
+        "safetyRating": "Safe",
+        "safeSpots": ["Brooklyn Bridge Park", "Main Street Park"],
+        "avoidSpots": ["Very quiet industrial blocks late at night"],
+        "idealFor": "Solo women, photographers, relaxed evening walks",
+        "notFor": "People who dislike touristy areas",
+        "indicators": {
+          "lighting": "Good",
+          "footTraffic": "High",
+          "policePresence": "Moderate"
+        }
+      }
+
   ],
 
   "emergencyBlock": {
