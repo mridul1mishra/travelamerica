@@ -1,6 +1,6 @@
 export const generateMetadata = () => ({
-  title: '3-Day Solo Travel Itinerary for New York | Travel America',
-  description:  'Explore NYC solo with this 3-day itinerary covering landmarks, neighborhoods, and Brooklyn vibes.',
+  title: 'Solo Trip to NYC: 2026 Safety, Budget & 3‑Day Vibe Guide | Travel America',
+  description:  'Explore NYC solo with confidence. This 2026 guide covers safety tips, smart budgeting, local vibes, and a smooth 3‑day plan for first‑time solo travelers',
   robots: {
     index: true,
     follow: true,
