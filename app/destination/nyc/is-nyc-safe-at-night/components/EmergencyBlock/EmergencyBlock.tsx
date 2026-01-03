@@ -5,6 +5,7 @@ export default function EmergencyBlock({
   call911,
   call311,
   nypdPrecinctLocator,
+  nypdPrecinctLocatorText,
   nearestHospital,
   subwayHelpPoints,
   lateNightTransportLinks
