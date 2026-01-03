@@ -1,0 +1,106 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelamerica.work/destination/nyc/is-nyc-safe-at-night",
+      "url": "https://www.travelamerica.work/destination/nyc/is-nyc-safe-at-night",
+      "name": "Is NYC Safe at Night?",
+      "description": "A data-backed, scenario-driven guide to staying safe in NYC at night—built for solo travelers.",
+      "isPartOf": {
+        "@id": "https://www.travelamerica.work/destination/nyc/is-nyc-safe-at-night"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.travelamerica.work/data/metadataimage/nyc-night-hero.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://www.travelamerica.work/destination/nyc/is-nyc-safe-at-night#breadcrumb"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelamerica.work/destination/nyc/is-nyc-safe-at-night#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelamerica.work/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Solo Trip to NYC",
+          "item": "https://www.travelamerica.work/destingation/nyc/solo-trip-to-nyc"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Is NYC Safe at Night?"
+        }
+      ]
+    },
+
+    {
+      "@type": "Article",
+      "@id": "https://www.travelamerica.work/destingation/nyc/is-nyc-safe-at-night#article",
+      "headline": "Is NYC Safe at Night?",
+      "description": "A comprehensive, scenario-driven safety guide for navigating NYC at night as a solo traveler.",
+      "image": "https://www.travelamerica.work/data/metadataimage/nyc-night-hero.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Your Editorial Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Travel America",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.travelamerica.work/logo.png"
+        }
+      },
+      "mainEntityOfPage": "https://www.travelamerica.work/destingation/nyc/is-nyc-safe-at-night"
+    },
+
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelamerica.work/destingation/nyc/is-nyc-safe-at-night#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is NYC safe for solo female travelers at night?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes—especially in busy areas like Midtown, Upper West Side, and Times Square. Avoid empty streets and parks after dark."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the NYC subway safe after midnight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally yes, but trains run less frequently and platforms may be quieter. Stay near the conductor and avoid empty cars."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which areas of NYC should I avoid at night?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Avoid low-footfall areas such as Brownsville, East New York, and isolated industrial zones. Stick to well-lit, busy avenues."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Times Square safe at night?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Times Square remains crowded and heavily patrolled late into the night, making it one of the safest areas for solo travelers."
+          }
+        }
+      ]
+    }
+  ]
+}
