@@ -210,6 +210,15 @@
       "avoidSpots": ["Empty side streets"],
       "idealFor": "First-time visitors",
       "notFor": "People avoiding crowds"
+    },
+    {
+      "name": "DUMBO",
+      "nightVibe": "Scenic, lively waterfront with steady foot traffic",
+      "safetyRating": "Safe",
+      "safeSpots": ["Brooklyn Bridge Park", "Main Street Park"],
+      "avoidSpots": ["Very quiet industrial blocks late at night"],
+      "idealFor": "Solo women, photographers, relaxed evening walks",
+      "notFor": "People who dislike touristy areas"
     }
   ],
 
