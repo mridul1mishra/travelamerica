@@ -203,8 +203,8 @@ const schema4 = {
           <h2 className={styles.heading}>Day 1: NYC Landmarks for Solo Travelers</h2>
           <p className={styles.subheading}>Start with the classics. Today’s about iconic sights and easy wins.</p>
           <ul className={styles.itineraryList}>
-              <li className={styles.subheading}>🌅Morning: Central Park — Bethesda Terrace to Strawberry Fields</li>
-              <li className={styles.subheading}>☀️Afternoon: Rockefeller Center — Top of the Rock</li>
+              <li className={styles.subheading}>🌅Morning: Central Park(Bethesda Terrace → Strawberry Fields</li>
+              <li className={styles.subheading}>☀️Afternoon: Rockefeller Center → Top of the Rock</li>
               <li className={styles.subheading}>☀️Midday: The Met to MoMA</li>
               <li className={styles.subheading}>🌙Evening: Dinner at Time Out Market or Eataly Flatiron</li>
           </ul>
