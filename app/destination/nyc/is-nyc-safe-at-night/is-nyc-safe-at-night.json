@@ -226,32 +226,32 @@
   {
     "question": "Is NYC safe for solo female travelers at night?",
     "answer": "Yes, especially in busy areas like Midtown, SoHo, and the Upper West Side.",
-    "relatedLinks": ["/solo-trip-to-nyc"]
+    "relatedLinks": ["/destination/nyc/solo-trip-to-nyc"]
   },
   {
     "question": "Which NYC neighborhoods are safest to walk in at night?",
     "answer": "Midtown, SoHo, Greenwich Village, and Brooklyn Heights stay active and well-lit into the night.",
-    "relatedLinks": ["/nyc-neighborhood-guide"]
+    "relatedLinks": ["/destination/nyc/neighborhood-guide"]
   },
   {
     "question": "Is the NYC subway safe at night?",
     "answer": "Yes on busy lines, but avoid empty cars and transfer stations late at night.",
-    "relatedLinks": ["/nyc-subway-safety"]
+    "relatedLinks": ["/destination/nyc/subway-safety-guide"]
   },
   {
     "question": "Is it safe to walk alone in NYC after 10 PM?",
     "answer": "Stick to main avenues, avoid isolated parks, and stay in well-lit, busy areas.",
-    "relatedLinks": ["/nyc-safety-tips"]
+    "relatedLinks": ["/destination/nyc/nyc-safety-guide"]
   },
   {
     "question": "Are NYC tourist spots safe at night?",
     "answer": "Times Square, Rockefeller Center, and DUMBO remain busy and safe for solo travelers.",
-    "relatedLinks": ["/nyc-night-guide"]
+    "relatedLinks": ["/destination/nyc/nyc-night-guide"]
   },
   {
     "question": "What should solo travelers avoid at night in NYC?",
     "answer": "Avoid empty subway cars, isolated parks, and quiet industrial areas.",
-    "relatedLinks": ["/nyc-safety-tips"]
+    "relatedLinks": ["/destination/nyc/nyc-female-solo-travel-guide"]
   }
 ],
 
