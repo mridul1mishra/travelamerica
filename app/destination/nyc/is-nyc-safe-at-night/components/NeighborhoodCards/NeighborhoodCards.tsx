@@ -67,6 +67,9 @@ export default function NeighborhoodCards({ neighborhoods }: NeighborhoodCardsPr
             </article>
           ))}
         </div>
+        <a href="/destination/nyc/nyc-safety-guide" class="ctaPrimary"> 
+          See Nighttime Safety Tips → 
+        </a>
       </div>
     </section>
   );
