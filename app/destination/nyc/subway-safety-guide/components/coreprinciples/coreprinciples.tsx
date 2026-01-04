@@ -1,9 +1,19 @@
 import styles from "./coreprinciples.module.css";
 import type { CorePrinciple } from "../types-subwaySafetyGuide";
+import { FaEye, FaMapMarkerAlt, FaLightbulb, FaShieldAlt, FaTools } from "react-icons/fa";
 
 interface Props {
   items: CorePrinciple[];
 }
+
+const iconMap: Record<string, JSX.Element> = {
+  awareness: <FaEye />,
+  positioning: <FaMapMarkerAlt />,
+  instincts: <FaLightbulb />,
+  "minimize-risk": <FaShieldAlt />,
+  tools: <FaTools />
+};
+
 
 export default function CorePrinciples({ items }: Props) {
   return (
@@ -13,7 +23,7 @@ export default function CorePrinciples({ items }: Props) {
       <div className={styles.grid}>
         {items.map((item, index) => (
           <div key={index} className={styles.card}>
-            <div className={styles.icon}>{/* Optional icon logic */}</div>
+            <div className={styles.icon}>{iconMap[item.icon]}</div>
             <h3 className={styles.cardTitle}>{item.title}</h3>
             <p className={styles.description}>{item.description}</p>
           </div>
