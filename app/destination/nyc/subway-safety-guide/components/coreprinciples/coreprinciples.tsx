@@ -6,7 +6,7 @@ interface Props {
   items: CorePrinciple[];
 }
 
-const iconMap: Record<string, JSX.Element> = {
+const iconMap: Record<string, React.ReactNode> = {
   awareness: <FaEye />,
   positioning: <FaMapMarkerAlt />,
   instincts: <FaLightbulb />,
