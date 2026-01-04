@@ -30,7 +30,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
-.list { 
+.list1 { 
   list-style: disc; 
   padding-left: 1.25rem; /* or whatever fits your layout */ 
   margin: 0; 
