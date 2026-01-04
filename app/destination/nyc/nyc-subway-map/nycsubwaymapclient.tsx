@@ -12,7 +12,7 @@ export default function NYCSubwayMapClient() {
     <>
     <Header />
     <HeroBanner {...data.hero}/>
-      <IconCardGrid {...data.quickNav} />
+      <IconCardGrid items={data.quickNav} />
     <Footer />
     </>
   );
