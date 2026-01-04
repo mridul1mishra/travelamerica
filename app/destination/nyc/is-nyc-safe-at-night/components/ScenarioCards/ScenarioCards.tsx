@@ -10,6 +10,8 @@ export default function ScenarioCards({ scenarios }: ScenarioCardsProps) {
         return styles.moderate;
       case "High":
         return styles.high;
+      case "Mixed":
+        return styles.mixed;
       default:
         return "";
     }

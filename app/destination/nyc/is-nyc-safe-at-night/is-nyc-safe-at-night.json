@@ -102,6 +102,14 @@
       "bestTimeToVisit": "Daytime",
       "avoidAfter": "Sunset",
       "notes": null
+    },
+    {
+      "name": "Fordham",
+      "safetyLevel": "Avoid Late",
+      "why": "Busy during the day but quieter and less predictable at night.",
+      "bestTimeToVisit": "Daytime",
+      "avoidAfter": "Sunset",
+      "notes": null
     }
   ],
 
@@ -144,7 +152,22 @@
       ],
       "bestFor": "Nightlife travelers",
       "avoidIf": "You’re on a tight budget"
+    },
+    {
+      "title": "Exploring Nightlife Areas",
+      "riskLevel": "Mixed",
+      "whatToExpect": "Lively streets, crowded bars, and unpredictable late-night behavior.",
+      "howToStaySafe": [
+        "Stay aware in crowded bar zones",
+        "Avoid isolated side streets after leaving venues",
+        "Keep drinks in sight at all times",
+        "Plan your route home before midnight"
+      ],
+      "bestFor": "Nightlife travelers, social explorers",
+      "avoidIf": "You prefer quiet, low-stimulation environments"
     }
+
+
   ],
 
   "personaSafetyBlocks": [

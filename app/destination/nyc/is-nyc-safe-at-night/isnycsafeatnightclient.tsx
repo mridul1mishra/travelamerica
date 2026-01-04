@@ -27,9 +27,8 @@ export default function Page() {
     <Header />
     <main>
       {/* 1. Hero Section */}
-      <SectionWrapper id="hero">
       <HeroSafety {...data.heroSafety} />
-      </SectionWrapper>
+      
 
       {/* 2. Safety Verdict Snapshot */}
       <SectionWrapper id="safetyMeter">

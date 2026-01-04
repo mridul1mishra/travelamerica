@@ -1,15 +1,16 @@
-import styles from "./Sectionwrapper.module.css";
-import { ReactNode } from "react";
+"use client";
 
-interface Props {
-  children: ReactNode;
-  id?: string; // optional anchor for internal links
+import styles from "./Sectionwrapper.module.css";
+
+interface SectionWrapperProps {
+  id: string;
+  children: React.ReactNode;
 }
 
-export default function SectionWrapper({ children, id }: Props) {
+export default function SectionWrapper({ id, children }: SectionWrapperProps) {
   return (
-    <section id={id} className={styles.wrapper}>
-      {children}
+    <section id={id} className={styles.section}>
+      <div className={styles.container}>{children}</div>
     </section>
   );
 }

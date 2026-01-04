@@ -110,3 +110,7 @@
 .meta p {
   margin: 0.25rem 0;
 }
+.mixed { 
+  background-color: #facc15; /* amber / caution */ 
+  color: #1a1a1a; 
+}
