@@ -78,6 +78,9 @@
 .bulletList li {
   margin-bottom: 6px;
 }
+.bulletList li {
+  display: list-item !important;
+}
 
 /* PRO TIP */
 .proTip {
