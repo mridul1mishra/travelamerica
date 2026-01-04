@@ -21,7 +21,7 @@ export default function Etiquette({ data }: Props) {
   <div className={styles.grid}>
     <div className={styles.item}>
       <h3 className={styles.heading}>Platform Etiquette</h3>
-      <ul className={styles.list1}>
+      <ul className={styles.bullet}>
         {platformEtiquetteList.map((item, index) => (
           <li key={index} className={styles.text}>{item}</li>
         ))}
@@ -30,7 +30,7 @@ export default function Etiquette({ data }: Props) {
 
     <div className={styles.item}>
       <h3 className={styles.heading}>Train Etiquette</h3>
-      <ul className={styles.list1}>
+      <ul className={styles.bullet}>
         {trainEtiquetteList.map((item, index) => (
           <li key={index} className={styles.text}>{item}</li>
         ))}
@@ -39,7 +39,7 @@ export default function Etiquette({ data }: Props) {
 
     <div className={styles.item}>
       <h3 className={styles.heading}>Rush Hour Rules</h3>
-      <ul className={styles.list1}>
+      <ul className={styles.bullet}>
         {rushHourRulesList.map((item, index) => (
           <li key={index} className={styles.text}>{item}</li>
         ))}
@@ -48,7 +48,7 @@ export default function Etiquette({ data }: Props) {
 
     <div className={styles.item}>
       <h3 className={styles.heading}>Unspoken Norms</h3>
-      <ul className={styles.list1}>
+      <ul className={styles.bullet}>
         {unspokenNormsList.map((item, index) => (
           <li key={index} className={styles.text}>{item}</li>
         ))}
