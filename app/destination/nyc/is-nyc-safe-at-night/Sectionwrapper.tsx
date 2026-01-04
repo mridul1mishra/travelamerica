@@ -1,6 +1,7 @@
 import styles from "./Sectionwrapper.module.css";
 import { ReactNode } from "react";
 
+
 interface Props {
   children: ReactNode;
   id?: string; // optional anchor for internal links
