@@ -1,0 +1,86 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://yourdomain.com/nyc-subway-map"
+  },
+  "headline": "NYC Subway Map (2025): Simple, Safe & Solo-Traveler Friendly",
+  "description": "View and download the updated 2025 NYC subway map. A beginner-friendly guide with routes, safety tips, and navigation help for solo travelers.",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://yourdomain.com/og/nyc-subway-map.png",
+    "width": 1200,
+    "height": 630
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Your Travel Hub"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Your Travel Hub",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yourdomain.com/logo.png",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "datePublished": "2025-01-01",
+  "dateModified": "2025-01-01",
+  "keywords": "NYC subway map, solo travel NYC, NYC transit guide, NYC subway safety, NYC itinerary",
+  "inLanguage": "en-US",
+
+  "hasPart": [
+    {
+      "@type": "HowTo",
+      "name": "How to Read the NYC Subway Map",
+      "step": [
+        { "@type": "HowToStep", "text": "Colors represent subway lines, not boroughs." },
+        { "@type": "HowToStep", "text": "Letters and numbers indicate specific services." },
+        { "@type": "HowToStep", "text": "Solid dots show local stops; hollow dots show express stops." },
+        { "@type": "HowToStep", "text": "White/black circles indicate transfer points between lines." },
+        { "@type": "HowToStep", "text": "Uptown means northbound; Downtown means southbound." },
+        { "@type": "HowToStep", "text": "Weekend service changes are common—always check the MTA app." }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the NYC subway safe at night for solo travelers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with precautions: stay near the conductor’s car, avoid empty cars, and use well-lit exits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a subway ride cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A single ride is $2.90 with OMNY or MetroCard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Apple Pay or Google Pay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, OMNY supports all major contactless payment methods."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which subway lines run 24/7?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most lines run 24/7, but frequency drops late at night."
+          }
+        }
+      ]
+    }
+  ]
+}
