@@ -11,7 +11,7 @@ export default function Etiquette({ data }: Props) {
   train_etiquette: trainEtiquetteList,
   rush_hour_rules: rushHourRulesList,
   unspoken_norms: unspokenNormsList,
-} = data.etiquette;
+} = data;
 
 
   return (
