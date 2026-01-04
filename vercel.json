@@ -1,4 +1,5 @@
 {
+  "git": { "deploymentEnabled": { "master": true } }, 
   "redirects": [
     {
       "source": "/(.*)",
