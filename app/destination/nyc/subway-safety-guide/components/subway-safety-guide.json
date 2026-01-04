@@ -64,41 +64,44 @@
 },
 
 
+  {
   "personas": [
     {
       "id": "solo_female_traveler",
-      "top_concerns": ["Harassment", "Late-night travel", "Crowded platforms"],
+      "top_concerns": ["Unwanted attention", "Late-night rides", "Crowded platforms"],
       "recommended_behaviors": [
-        "Ride in the conductor car",
+        "Ride near the conductor",
         "Avoid empty cars",
-        "Stand near families or commuters"
+        "Stay close to families or commuters"
       ],
       "avoid_list": ["Isolated platforms", "Late-night transfers"],
-      "confidence_boosters": ["Plan routes ahead", "Use live service alerts"]
+      "confidence_boosters": ["Pre-plan routes", "Use live service alerts"]
     },
     {
       "id": "first_time_visitor",
-      "top_concerns": ["Navigation", "Service changes", "Platform confusion"],
+      "top_concerns": ["Navigation", "Unexpected changes", "Platform mix-ups"],
       "recommended_behaviors": [
         "Use Google Maps or Citymapper",
-        "Follow color-coded lines",
-        "Ask MTA staff for help"
+        "Follow line colors and symbols",
+        "Ask MTA staff when unsure"
       ],
-      "avoid_list": ["Last-minute platform changes"],
-      "confidence_boosters": ["Arrive early", "Screenshot your route"]
+      "avoid_list": ["Last-minute platform switches"],
+      "confidence_boosters": ["Arrive early", "Save your route offline"]
     },
     {
       "id": "late_night_commuter",
-      "top_concerns": ["Low foot traffic", "Empty cars", "Long waits"],
+      "top_concerns": ["Low foot traffic", "Empty cars", "Long gaps between trains"],
       "recommended_behaviors": [
         "Wait near the station booth",
         "Choose cars with riders",
-        "Avoid isolated exits"
+        "Use well-lit exits"
       ],
       "avoid_list": ["Empty platforms", "Sleeping riders"],
       "confidence_boosters": ["Track trains in real time"]
     }
-  ],
+  ]
+},
+
 
   "scenarios": [
     {
