@@ -74,11 +74,18 @@
   line-height: 1.6;
   font-size: 0.95rem;
   list-style-type: disc !important;
+  list-style-position: outside !important;
+  padding-left: 1.25rem !important;
+  display: block !important;
 }
+
+
+
 
 .bulletList li {
   margin-bottom: 6px;
   display: list-item !important;
+  list-style-type: disc !important;
 }
 
 /* PRO TIP */
