@@ -45,6 +45,7 @@
   color: #333;
   font-size: 0.95rem;
   font-weight: 500;
+  cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease;
 }
