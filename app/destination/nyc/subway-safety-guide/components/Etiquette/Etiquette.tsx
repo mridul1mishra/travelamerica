@@ -22,7 +22,7 @@ export default function Etiquette({ data }: Props) {
     <div className={styles.item}>
       <h3 className={styles.heading}>Platform Etiquette</h3>
       <ul className={styles.list}>
-        {platform_etiquette.map((item, index) => (
+        {platformEtiquetteList.map((item, index) => (
           <li key={index} className={styles.text}>{item}</li>
         ))}
       </ul>
@@ -31,7 +31,7 @@ export default function Etiquette({ data }: Props) {
     <div className={styles.item}>
       <h3 className={styles.heading}>Train Etiquette</h3>
       <ul className={styles.list}>
-        {train_etiquette.map((item, index) => (
+        {trainEtiquetteList.map((item, index) => (
           <li key={index} className={styles.text}>{item}</li>
         ))}
       </ul>
@@ -40,7 +40,7 @@ export default function Etiquette({ data }: Props) {
     <div className={styles.item}>
       <h3 className={styles.heading}>Rush Hour Rules</h3>
       <ul className={styles.list}>
-        {rush_hour_rules.map((item, index) => (
+        {rushHourRulesList.map((item, index) => (
           <li key={index} className={styles.text}>{item}</li>
         ))}
       </ul>
@@ -49,7 +49,7 @@ export default function Etiquette({ data }: Props) {
     <div className={styles.item}>
       <h3 className={styles.heading}>Unspoken Norms</h3>
       <ul className={styles.list}>
-        {unspoken_norms.map((item, index) => (
+        {unspokenNormsList.map((item, index) => (
           <li key={index} className={styles.text}>{item}</li>
         ))}
       </ul>
