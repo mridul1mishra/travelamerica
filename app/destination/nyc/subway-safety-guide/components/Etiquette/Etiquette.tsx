@@ -7,11 +7,12 @@ interface Props {
 
 export default function Etiquette({ data }: Props) {
   const {
-    platform_etiquette,
-    train_etiquette,
-    rush_hour_rules,
-    unspoken_norms,
-  } = data;
+  platform_etiquette: platformEtiquetteList,
+  train_etiquette: trainEtiquetteList,
+  rush_hour_rules: rushHourRulesList,
+  unspoken_norms: unspokenNormsList,
+} = data.etiquette;
+
 
   return (
     <section className={styles.wrapper}>
@@ -20,25 +21,42 @@ export default function Etiquette({ data }: Props) {
   <div className={styles.grid}>
     <div className={styles.item}>
       <h3 className={styles.heading}>Platform Etiquette</h3>
-      <p className={styles.text}>{platform_etiquette}</p>
+      <ul className={styles.list}>
+        {platform_etiquette.map((item, index) => (
+          <li key={index} className={styles.text}>{item}</li>
+        ))}
+      </ul>
     </div>
 
     <div className={styles.item}>
       <h3 className={styles.heading}>Train Etiquette</h3>
-      <p className={styles.text}>{train_etiquette}</p>
+      <ul className={styles.list}>
+        {train_etiquette.map((item, index) => (
+          <li key={index} className={styles.text}>{item}</li>
+        ))}
+      </ul>
     </div>
 
     <div className={styles.item}>
       <h3 className={styles.heading}>Rush Hour Rules</h3>
-      <p className={styles.text}>{rush_hour_rules}</p>
+      <ul className={styles.list}>
+        {rush_hour_rules.map((item, index) => (
+          <li key={index} className={styles.text}>{item}</li>
+        ))}
+      </ul>
     </div>
 
     <div className={styles.item}>
       <h3 className={styles.heading}>Unspoken Norms</h3>
-      <p className={styles.text}>{unspoken_norms}</p>
+      <ul className={styles.list}>
+        {unspoken_norms.map((item, index) => (
+          <li key={index} className={styles.text}>{item}</li>
+        ))}
+      </ul>
     </div>
   </div>
 </section>
+
 
   );
 }
