@@ -1,5 +1,6 @@
 import styles from "./ScenarioList.module.css";
 import type { Scenario } from "../types-subwaySafetyGuide";
+import { useState } from "react";
 
 interface Props {
   scenarios: Scenario[];
@@ -19,7 +20,7 @@ export default function ScenarioList({ scenarios }: Props) {
   );
 }
 
-function AccordionCard({ scenario }) {
+function AccordionCard({ scenario }: { scenario: Scenario }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -51,4 +52,3 @@ function AccordionCard({ scenario }) {
     </div>
   );
 }
-
