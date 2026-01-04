@@ -17,6 +17,7 @@ export default function WhyTrustThisGuide({ data }: Props) {
   return (
     <section className={styles.section}>
       <h2 className={styles.sectionTitle}>Why Trust This Guide</h2>
+      
 
       <p className={styles.paragraph}>{author_expertise}</p>
       <p className={styles.paragraph}>{local_insights}</p>
