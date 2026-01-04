@@ -13,7 +13,8 @@ export default function InternalLinks({ items }: Props) {
       <ul className={styles.list}>
         {items.map((link, index) => (
           <li key={index} className={styles.item}>
-            <a href={link.href} className={styles.link}>
+            <a href={link.href}
+              className={`${styles.link} ${activeSection === link.href ? styles.active : ""}`} >
               {link.label}
             </a>
           </li>

@@ -1,37 +1,67 @@
+/* WRAPPER */
 .wrapper {
-  margin-top: 60px;
-  padding: 20px;
+  margin-top: 40px;
+  padding: 24px 20px;
   background: #f9fafb;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 100px; /* optional: makes it a sticky TOC */
 }
 
+/* TITLE */
 .title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 16px;
   color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
+/* LIST */
 .list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+/* EACH ITEM */
 .item {
-  list-style: none;
+  margin: 0;
 }
 
+/* LINK */
 .link {
-  font-size: 1rem;
-  color: #1d4ed8;
-  text-decoration: none;
+  display: block;
+  padding: 10px 12px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ececec;
+  color: #333;
+  font-size: 0.95rem;
   font-weight: 500;
-  transition: color 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
+/* HOVER EFFECT */
 .link:hover {
-  color: #1e40af;
-  text-decoration: underline;
+  background: #eef2ff;
+  border-color: #c7d2fe;
+  color: #1e3a8a;
+  transform: translateX(4px);
+}
+
+/* ACTIVE STATE (when section is in view) */
+.link.active {
+  background: #e0e7ff;
+  border-color: #a5b4fc;
+  color: #1e3a8a;
+  font-weight: 600;
 }

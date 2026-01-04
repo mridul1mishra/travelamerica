@@ -50,52 +50,58 @@
     }
   ],
 
+  {
   "subway_basics": {
-    "how_the_system_works": "NYC’s subway runs 24/7 with 472 stations across four boroughs.",
+    "how_the_system_works": "The subway is the city’s heartbeat — running 24/7 and threading 472 stations across four boroughs. Trains move fast, signs move faster, and everything clicks once you learn the rhythm.",
     "peak_vs_off_peak": {
-      "peak": "7–10 AM and 4–7 PM — crowded but safer due to high foot traffic.",
-      "off_peak": "Late nights and early mornings — quieter, requires more awareness."
+      "peak": "7–10 AM and 4–7 PM — crowded, loud, and full of motion. The rush can feel chaotic, but the constant foot traffic adds a layer of safety.",
+      "off_peak": "Late nights and early mornings — quieter platforms, longer waits, and fewer riders. The city exhales, and you stay a little more aware."
     },
-    "fare_basics": "Use OMNY or a MetroCard. Tap once per ride; transfers within 2 hours are free.",
-    "station_layouts": "Most stations have multiple exits, mezzanines, and platforms. Follow signage closely.",
-    "train_types": "Local trains stop at every station; express trains skip stops and run on center tracks."
-  },
+    "fare_basics": "Tap with OMNY or swipe a MetroCard. One fare covers one ride, and transfers within two hours are free. OMNY tracks your rides automatically so you never overpay.",
+    "station_layouts": "Stations are mini‑mazes with multiple entrances, mezzanines, and exits that lead to very different streets. Follow the signs, and when unsure, choose the exit with more light and foot traffic.",
+    "train_types": "Local trains stop everywhere. Express trains fly past smaller stations and cover long distances fast — great when you’re headed far, but easy to miss if you’re not watching the signs."
+  }
+},
 
+
+  {
   "personas": [
     {
       "id": "solo_female_traveler",
-      "top_concerns": ["Harassment", "Late-night travel", "Crowded platforms"],
+      "top_concerns": ["Unwanted attention", "Late-night rides", "Crowded platforms"],
       "recommended_behaviors": [
-        "Ride in the conductor car",
+        "Ride near the conductor",
         "Avoid empty cars",
-        "Stand near families or commuters"
+        "Stay close to families or commuters"
       ],
       "avoid_list": ["Isolated platforms", "Late-night transfers"],
-      "confidence_boosters": ["Plan routes ahead", "Use live service alerts"]
+      "confidence_boosters": ["Pre-plan routes", "Use live service alerts"]
     },
     {
       "id": "first_time_visitor",
-      "top_concerns": ["Navigation", "Service changes", "Platform confusion"],
+      "top_concerns": ["Navigation", "Unexpected changes", "Platform mix-ups"],
       "recommended_behaviors": [
         "Use Google Maps or Citymapper",
-        "Follow color-coded lines",
-        "Ask MTA staff for help"
+        "Follow line colors and symbols",
+        "Ask MTA staff when unsure"
       ],
-      "avoid_list": ["Last-minute platform changes"],
-      "confidence_boosters": ["Arrive early", "Screenshot your route"]
+      "avoid_list": ["Last-minute platform switches"],
+      "confidence_boosters": ["Arrive early", "Save your route offline"]
     },
     {
       "id": "late_night_commuter",
-      "top_concerns": ["Low foot traffic", "Empty cars", "Long waits"],
+      "top_concerns": ["Low foot traffic", "Empty cars", "Long gaps between trains"],
       "recommended_behaviors": [
         "Wait near the station booth",
         "Choose cars with riders",
-        "Avoid isolated exits"
+        "Use well-lit exits"
       ],
       "avoid_list": ["Empty platforms", "Sleeping riders"],
       "confidence_boosters": ["Track trains in real time"]
     }
-  ],
+  ]
+},
+
 
   "scenarios": [
     {

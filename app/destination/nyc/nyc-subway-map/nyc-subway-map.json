@@ -1,0 +1,217 @@
+{
+  "hero": {
+    "title": "NYC Subway Map: Simple, Safe & Solo‑Traveler Friendly",
+    "subtitle": "Your quick guide to navigating NYC’s subway without confusion.",
+    "ctaPrimary": "View Full Subway Map",
+    "ctaSecondary": "Download PDF Map",
+    "supportingText": "Updated for 2025. Works offline.",
+    "badges": ["Official MTA Source", "Updated January 2025"]
+  },
+
+  "map": {
+    "imageUrl": "/images/nyc-subway-map-2025.png",
+    "alt": "Official MTA NYC Subway Map 2025",
+    "caption": "Official MTA Subway Map — Updated 2025",
+    "downloadLabel": "Download High‑Resolution Map"
+  },
+
+  "quickNav": [
+    { "label": "How to Read the Map", "anchor": "how-to-read" },
+    { "label": "Best Routes for First‑Timers", "anchor": "best-routes" },
+    { "label": "Safest Stations for Solo Travelers", "anchor": "safety" },
+    { "label": "Using Google Maps & MTA App", "anchor": "apps" },
+    { "label": "Late‑Night Subway Tips", "anchor": "late-night" },
+    { "label": "Subway Etiquette 101", "anchor": "etiquette" }
+  ],
+
+  "howToRead": [
+    "Colors represent subway lines, not boroughs.",
+    "Letters and numbers indicate specific services.",
+    "Solid dots show local stops; hollow dots show express stops.",
+    "White/black circles indicate transfer points between lines.",
+    "Uptown = northbound; Downtown = southbound.",
+    "Weekend service changes are common—always check the MTA app."
+  ],
+
+  "routes": [
+    {
+      "title": "JFK → Manhattan",
+      "bullets": [
+        "Take the AirTrain to Jamaica Station.",
+        "Transfer to the E line toward Manhattan.",
+        "Get off at Midtown (34th St–Penn Station).",
+        "Avoid peak hours if carrying luggage."
+      ]
+    },
+    {
+      "title": "Times Square → Brooklyn Bridge",
+      "bullets": [
+        "Take the downtown 4/5/6 line.",
+        "Ride to Brooklyn Bridge–City Hall.",
+        "Follow signs for the pedestrian walkway.",
+        "Best done during daylight for first‑timers."
+      ]
+    },
+    {
+      "title": "Midtown → Central Park",
+      "bullets": [
+        "Take the N/Q/R/W or B/D lines uptown.",
+        "Exit at 57th St or 59th St–Columbus Circle.",
+        "Walk north into the park.",
+        "Great for early morning solo walks."
+      ]
+    },
+    {
+      "title": "Lower Manhattan → Williamsburg",
+      "bullets": [
+        "Take the L train from 14th St–Union Square.",
+        "Ride to Bedford Ave.",
+        "Expect crowds on weekends.",
+        "Stay near conductor car at night."
+      ]
+    },
+    {
+      "title": "LaGuardia → Manhattan (Bus + Subway)",
+      "bullets": [
+        "Take the Q70 SBS to Jackson Heights–Roosevelt Ave.",
+        "Transfer to the E/F/M/R lines.",
+        "Fastest route to Midtown.",
+        "Q70 has luggage racks and runs 24/7."
+      ]
+    }
+  ],
+
+  "safety": [
+    "Stand near the conductor’s car at night.",
+    "Avoid empty subway cars, even if they look convenient.",
+    "Keep your bag in front of you at all times.",
+    "Use Google Maps live navigation for real‑time alerts.",
+    "Choose well‑lit station exits.",
+    "Avoid the last car late at night."
+  ],
+
+  "etiquette": {
+    "do": [
+      "Let riders exit before you board.",
+      "Move to the center of the car.",
+      "Keep your phone volume low.",
+      "Have your OMNY or MetroCard ready."
+    ],
+    "dont": [
+      "Don’t block the doors.",
+      "Don’t eat messy or strong‑smelling food.",
+      "Don’t take photos of strangers.",
+      "Don’t play loud music."
+    ]
+  },
+
+  "apps": [
+    {
+      "name": "MTA Subway Time",
+      "benefit": "Real‑time train arrivals and service changes.",
+      "platforms": ["iOS", "Android"]
+    },
+    {
+      "name": "Google Maps",
+      "benefit": "Best for step‑by‑step subway navigation.",
+      "platforms": ["iOS", "Android"]
+    },
+    {
+      "name": "Citymapper",
+      "benefit": "Great for comparing subway vs bus vs walking.",
+      "platforms": ["iOS", "Android"]
+    },
+    {
+      "name": "Transit App",
+      "benefit": "Live crowding data and delay alerts.",
+      "platforms": ["iOS", "Android"]
+    }
+  ],
+
+  "downloads": [
+    {
+      "label": "PDF Subway Map",
+      "file": "/downloads/nyc-subway-map.pdf"
+    },
+    {
+      "label": "High‑Res PNG",
+      "file": "/downloads/nyc-subway-map.png"
+    },
+    {
+      "label": "Night Service Map",
+      "file": "/downloads/nyc-night-service-map.pdf"
+    },
+    {
+      "label": "Accessibility Map",
+      "file": "/downloads/nyc-accessibility-map.pdf"
+    }
+  ],
+
+  "accessibility": [
+    {
+      "title": "Stations with Elevators",
+      "content": "Major hubs like Times Square, Fulton Center, and 34th St–Hudson Yards offer full accessibility."
+    },
+    {
+      "title": "Wheelchair‑Friendly Routes",
+      "content": "Use the MTA Accessibility Map to plan elevator‑only transfers."
+    },
+    {
+      "title": "Using MTA Accessibility Filters",
+      "content": "Enable 'Accessible Stations Only' in the MTA app for optimized routing."
+    },
+    {
+      "title": "Tips for Mobility Needs",
+      "content": "Avoid older stations without elevators; plan extra time for transfers."
+    }
+  ],
+
+  "mistakes": [
+    "Boarding an express train when you need a local stop.",
+    "Ignoring weekend service changes.",
+    "Confusing Uptown vs Downtown platforms.",
+    "Expecting to tap out—NYC subway only requires tap‑in."
+  ],
+
+  "faq": [
+    {
+      "q": "Is the NYC subway safe at night for solo travelers?",
+      "a": "Yes, with precautions: stay near the conductor’s car, avoid empty cars, and use well‑lit exits."
+    },
+    {
+      "q": "How much does a subway ride cost?",
+      "a": "A single ride is $2.90 with OMNY or MetroCard."
+    },
+    {
+      "q": "Can I use Apple Pay or Google Pay?",
+      "a": "Yes, OMNY supports all major contactless payment methods."
+    },
+    {
+      "q": "Which subway lines run 24/7?",
+      "a": "Most lines run 24/7, but frequency drops late at night."
+    }
+  ],
+
+  "relatedLinks": [
+    {
+      "label": "Solo Trip to NYC (Pillar Guide)",
+      "url": "/solo-trip-to-nyc"
+    },
+    {
+      "label": "NYC Subway Safety Guide",
+      "url": "/nyc-subway-safety"
+    },
+    {
+      "label": "Best Areas to Stay in NYC",
+      "url": "/best-areas-to-stay-in-nyc"
+    },
+    {
+      "label": "NYC 3‑Day Solo Itinerary",
+      "url": "/nyc-3-day-itinerary"
+    },
+    {
+      "label": "How to Use OMNY",
+      "url": "/how-to-use-omny"
+    }
+  ]
+}
