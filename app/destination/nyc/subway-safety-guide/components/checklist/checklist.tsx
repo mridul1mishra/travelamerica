@@ -1,15 +1,4 @@
-import styles from "./checklist.module.css";
-import type { Checklist as ChecklistType } from "../types-subwaySafetyGuide";
-
-interface Props {
-  data: ChecklistType;
-}
-
-export default function Checklist({ data }: Props) {
-  const { essentials, safety_items, digital_tools, what_not_to_carry } = data;
-
-  return (
-    <section className={styles.wrapper}>
+<section className={styles.wrapper}>
   <h2 className={styles.title}>NYC Subway Safety Checklist</h2>
 
   <div className={styles.grid}>
@@ -62,6 +51,3 @@ export default function Checklist({ data }: Props) {
     </div>
   </div>
 </section>
-
-  );
-}
