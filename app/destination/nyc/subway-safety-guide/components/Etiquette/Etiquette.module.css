@@ -8,11 +8,7 @@
   margin-bottom: 28px;
   color: #111;
 }
-.list { 
-  list-style: disc; 
-  padding-left: 1.25rem; /* or whatever fits your layout */ 
-  margin: 0; 
-}
+
 .section {
   margin-bottom: 28px;
 }
@@ -34,7 +30,11 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
-
+.list { 
+  list-style: disc; 
+  padding-left: 1.25rem; /* or whatever fits your layout */ 
+  margin: 0; 
+}
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
