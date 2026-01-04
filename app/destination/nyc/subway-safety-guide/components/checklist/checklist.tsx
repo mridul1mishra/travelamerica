@@ -10,55 +10,58 @@ export default function Checklist({ data }: Props) {
 
   return (
     <section className={styles.wrapper}>
-      <h2 className={styles.title}>NYC Subway Safety Checklist</h2>
+  <h2 className={styles.title}>NYC Subway Safety Checklist</h2>
 
-      <div className={styles.section}>
-        <h3 className={styles.heading}>Essentials</h3>
-        <ul className={styles.list}>
-          {essentials.map((item, i) => (
-            <li key={i} className={styles.item}>
-              <span className={styles.bullet}>•</span>
-              <span className={styles.text}>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+  <div className={styles.grid}>
+    <div className={styles.card}>
+      <h3 className={styles.heading}>Essentials</h3>
+      <ul className={styles.list}>
+        {essentials.map((item, i) => (
+          <li key={i} className={styles.item}>
+            <span className={styles.bullet}>•</span>
+            <span className={styles.text}>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
 
-      <div className={styles.section}>
-        <h3 className={styles.heading}>Safety Items</h3>
-        <ul className={styles.list}>
-          {safety_items.map((item, i) => (
-            <li key={i} className={styles.item}>
-              <span className={styles.bullet}>•</span>
-              <span className={styles.text}>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className={styles.card}>
+      <h3 className={styles.heading}>Safety Items</h3>
+      <ul className={styles.list}>
+        {safety_items.map((item, i) => (
+          <li key={i} className={styles.item}>
+            <span className={styles.bullet}>•</span>
+            <span className={styles.text}>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
 
-      <div className={styles.section}>
-        <h3 className={styles.heading}>Digital Tools</h3>
-        <ul className={styles.list}>
-          {digital_tools.map((item, i) => (
-            <li key={i} className={styles.item}>
-              <span className={styles.bullet}>•</span>
-              <span className={styles.text}>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className={styles.card}>
+      <h3 className={styles.heading}>Digital Tools</h3>
+      <ul className={styles.list}>
+        {digital_tools.map((item, i) => (
+          <li key={i} className={styles.item}>
+            <span className={styles.bullet}>•</span>
+            <span className={styles.text}>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
 
-      <div className={styles.section}>
-        <h3 className={styles.heading}>What Not to Carry</h3>
-        <ul className={styles.list}>
-          {what_not_to_carry.map((item, i) => (
-            <li key={i} className={styles.item}>
-              <span className={styles.bullet}>•</span>
-              <span className={styles.text}>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+    <div className={styles.card}>
+      <h3 className={styles.heading}>What Not to Carry</h3>
+      <ul className={styles.list}>
+        {what_not_to_carry.map((item, i) => (
+          <li key={i} className={styles.item}>
+            <span className={styles.bullet}>•</span>
+            <span className={styles.text}>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
   );
 }
