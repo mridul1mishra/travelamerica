@@ -36,7 +36,7 @@ ul.list {
   padding-left: 1.25rem; 
   margin: 0; 
 }
-
+:global(ul.list) { list-style-type: disc !important; }
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
