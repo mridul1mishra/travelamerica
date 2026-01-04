@@ -25,3 +25,29 @@
   color: #444;
   line-height: 1.65;
 }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.list li {
+  list-style-type: disc !important;
+  display: list-item;
+}
+.list li::marker {
+  content: "• ";
+  color: #111; /* or your body text color */
+}
+.icon { 
+  margin-right: 0.5rem; 
+  font-size: 1.1rem; 
+  color: var(--accent-color); 
+}
+:global(ul.list) { list-style-type: disc !important; }
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -32,7 +32,7 @@ export default function TransitSafety({ subway, bus, rideshare, yellowCabs, walk
           {modes
             .filter((m) => m.data)
             .map((mode, index) => (
-              <div key={index} className={styles.card}>
+              <article key={index} className={styles.card}>
                 <div className={`${styles.riskTag} ${getRiskClass(mode.data!.riskLevel)}`}>
                   {mode.data!.riskLevel}
                 </div>
@@ -41,38 +41,36 @@ export default function TransitSafety({ subway, bus, rideshare, yellowCabs, walk
 
                 <div className={styles.meta}>
                   {mode.data!.bestHours && (
-                    <p>
-                      <strong>Best Hours:</strong> {mode.data!.bestHours}
-                    </p>
+                    <p><strong>Best Hours:</strong> {mode.data!.bestHours}</p>
                   )}
-
                   {mode.data!.avoidHours && (
-                    <p>
-                      <strong>Avoid Hours:</strong> {mode.data!.avoidHours}
-                    </p>
+                    <p><strong>Avoid Hours:</strong> {mode.data!.avoidHours}</p>
                   )}
                 </div>
 
-                <div className={styles.block}>
-                  <h4 className={styles.subheading}>Tips</h4>
-                  <ul className={styles.list}>
-                    {mode.data!.tips.map((tip, i) => (
-                      <li key={i}>{tip}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                {mode.data!.recommendedRoutes && (
-                  <div className={styles.block}>
-                    <h4 className={styles.subheading}>Recommended Routes</h4>
+                {/* Magazine-style 2-column layout */}
+                <div className={styles.columns}>
+                  <div className={styles.column}>
+                    <h4 className={styles.subheading}>Tips</h4>
                     <ul className={styles.list}>
-                      {mode.data!.recommendedRoutes.map((route, i) => (
-                        <li key={i}>{route}</li>
+                      {mode.data!.tips.map((tip, i) => (
+                        <li key={i}>{tip}</li>
                       ))}
                     </ul>
                   </div>
-                )}
-              </div>
+
+                  {mode.data!.recommendedRoutes && (
+                    <div className={styles.column}>
+                      <h4 className={styles.subheading}>Routes</h4>
+                      <ul className={styles.list}>
+                        {mode.data!.recommendedRoutes.map((route, i) => (
+                          <li key={i}>{route}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </article>
             ))}
         </div>
       </div>

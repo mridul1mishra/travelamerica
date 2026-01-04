@@ -29,7 +29,7 @@ export default function SafetyMeter(props: SafetyMeterProps) {
           </div>
 
           <div className={styles.block}>
-            <h3 className={styles.subheading}>Avoid If</h3>
+            <h3 className={styles.subheading}>Less Ideal If</h3>
             <ul className={styles.list}>
               {avoidIf.map((item, i) => (
                 <li key={i}>{item}</li>

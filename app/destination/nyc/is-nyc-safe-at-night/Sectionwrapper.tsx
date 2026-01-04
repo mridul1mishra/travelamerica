@@ -1,6 +1,8 @@
 "use client";
 
 import styles from "./Sectionwrapper.module.css";
+import { ReactNode } from "react";
+
 
 interface SectionWrapperProps {
   id: string;

@@ -27,6 +27,7 @@
 .list {
   margin-left: 20px;
   margin-bottom: 20px;
+  
 }
 
 .listItem {
@@ -34,4 +35,6 @@
   color: #444;
   line-height: 1.6;
   margin-bottom: 6px;
+ list-style-type: disc!important;
+    display: list-item!important;
 }

@@ -245,11 +245,36 @@
   },
 
   "etiquette": {
-    "platform_etiquette": "Stand behind the yellow line and let riders exit first.",
-    "train_etiquette": "Keep bags in front and avoid blocking doors.",
-    "rush_hour_rules": "Expect crowds; move into the center of the car.",
-    "unspoken_norms": "Minimal eye contact, low-volume conversations."
-  },
+  "platform_etiquette": [
+    "Stand behind the yellow line at all times",
+    "Let riders exit fully before you step in",
+    "Form loose lines instead of crowding the doors",
+    "Keep backpacks and bags close to your body",
+    "Avoid standing at the platform edge while distracted"
+  ],
+  "train_etiquette": [
+    "Keep bags in front of you, not on your shoulder",
+    "Don’t block doors — move into the car quickly",
+    "Offer priority seats to seniors, pregnant riders, and people with disabilities",
+    "Keep music and phone volume low",
+    "Avoid eating strong‑smelling food"
+  ],
+  "rush_hour_rules": [
+    "Expect heavy crowds and limited personal space",
+    "Move to the center of the car instead of hovering near doors",
+    "Remove backpacks and hold them low",
+    "Prepare your MetroCard/OMNY before entering",
+    "Step aside quickly when the train arrives"
+  ],
+  "unspoken_norms": [
+    "Minimal eye contact — it’s normal, not rude",
+    "Keep conversations short and low‑volume",
+    "Avoid staring, pointing, or reacting loudly",
+    "Don’t take up extra seats or spread out",
+    "Respect personal space even when crowded"
+  ]
+},
+
 
   "checklist": {
     "essentials": ["MetroCard or OMNY", "Charged phone", "Route screenshot"],

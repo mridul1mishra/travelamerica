@@ -5,8 +5,7 @@ export default function TrustBlock({
   methodology,
   localInsights,
   dataSources,
-  editorialProcess,
-  safetyExpertsConsulted
+  editorialProcess
 }: TrustBlockProps) {
   return (
     <section className={styles.section}>
@@ -38,14 +37,7 @@ export default function TrustBlock({
             <p className={styles.text}>{editorialProcess}</p>
           </div>
 
-          <div className={styles.card}>
-            <h3 className={styles.title}>Safety Experts Consulted</h3>
-            <ul className={styles.list}>
-              {safetyExpertsConsulted.map((expert, i) => (
-                <li key={i}>{expert}</li>
-              ))}
-            </ul>
-          </div>
+          
         </div>
       </div>
     </section>

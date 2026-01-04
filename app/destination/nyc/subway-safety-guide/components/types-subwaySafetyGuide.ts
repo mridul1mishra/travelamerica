@@ -82,10 +82,10 @@ export interface EmergencyPlaybook {
 }
 
 export interface Etiquette {
-  platform_etiquette: string;
-  train_etiquette: string;
-  rush_hour_rules: string;
-  unspoken_norms: string;
+  platform_etiquette: string[];
+  train_etiquette: string[];
+  rush_hour_rules: string[];
+  unspoken_norms: string[];
 }
 
 export interface Checklist {

@@ -101,6 +101,12 @@ export interface TransitSafetyProps {
 /* -------------------------------------------------------
    8. Neighborhood Deep Dives (NeighborhoodCards)
 ------------------------------------------------------- */
+export interface NeighborhoodIndicators {
+  lighting: string;
+  footTraffic: string;
+  policePresence: string;
+}
+
 export interface NeighborhoodCard {
   name: string;
   nightVibe: string;
@@ -109,6 +115,7 @@ export interface NeighborhoodCard {
   avoidSpots: string[];
   idealFor: string;
   notFor: string;
+  indicators: NeighborhoodIndicators; // ← NEW
 }
 
 export interface NeighborhoodCardsProps {
@@ -122,6 +129,7 @@ export interface EmergencyBlockProps {
   call911: string;
   call311: string;
   nypdPrecinctLocator: string;
+  nypdPrecinctLocatorText: string; 
   nearestHospital: string;
   subwayHelpPoints: string;
   lateNightTransportLinks?: string[];
@@ -160,7 +168,7 @@ export interface TrustBlockProps {
   localInsights: string;
   dataSources: string[];
   editorialProcess: string;
-  safetyExpertsConsulted: string[];
+  
 }
 
 /* -------------------------------------------------------

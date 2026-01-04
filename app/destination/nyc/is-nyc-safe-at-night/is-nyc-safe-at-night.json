@@ -3,7 +3,7 @@
     "title": "Is NYC Safe at Night for Solo Travelers?",
     "subtitle": "NYC is generally safe at night in busy, well-lit areas—if you follow smart, local-backed precautions.",
     "heroImage": "/data/metadataimage/nyc-night-hero.jpg",
-    "trustBadges": ["NYPD Data", "Local Insights", "Traveler Patterns"]
+    "trustBadges": ["🛡️NYPD Data", "👣Local Insights", "📊Traveler Patterns"]
   },
 
   "safetyMeter": {
@@ -11,7 +11,7 @@
     "meterScore": 7,
     "quickSummary": "NYC’s busiest areas remain active and well-patrolled at night. Risks increase in quieter neighborhoods and during late-night transit.",
     "bestFor": ["Solo women", "First-time visitors", "Budget travelers"],
-    "avoidIf": ["You dislike crowds", "You avoid late-night transit", "You prefer quiet nightlife-free zones"]
+    "avoidIf": ["Prefer quieter, low‑traffic streets after dark", "Feel uneasy in high‑energy or crowded nighttime areas", "Prefer calm, residential neighborhoods with minimal nightlife"]
   },
 
   "neighborhoodSafetyGrid": [
@@ -186,76 +186,155 @@
   ],
 
   "corePrinciples": [
-    {
-      "title": "Situational Awareness",
-      "description": "Stay alert and aware of your surroundings.",
-      "example": "Avoid wearing noise-canceling headphones at night."
-    },
-    {
-      "title": "Transit Planning",
-      "description": "Know your route before heading out.",
-      "example": "Check subway schedules after midnight."
-    }
-  ],
+  {
+    "title": "Read the Room",
+    "description": "Scan the environment every few minutes to understand the vibe, foot traffic, and exits.",
+    "example": "If a block suddenly gets quiet or lighting drops, switch to a busier avenue."
+  },
+  {
+    "title": "Plan Your Moves",
+    "description": "Know your next 2–3 steps before you start walking — route, transit option, and backup.",
+    "example": "If the subway platform looks empty, pivot to a bus or rideshare instead of waiting alone."
+  },
+  {
+    "title": "Stay in the Flow",
+    "description": "Stick to well‑lit, high‑foot‑traffic streets and avoid sudden detours into quiet blocks.",
+    "example": "Walk along 7th Ave instead of cutting through an empty side street after 11 PM."
+  },
+  {
+    "title": "Signal Confidence",
+    "description": "Walk with purpose, keep your head up, and avoid behaviors that signal distraction.",
+    "example": "Hold your phone at chest level for navigation instead of staring down at it."
+  },
+  {
+    "title": "Trust Micro‑Signals",
+    "description": "If something feels off — a person, a block, a station — change direction immediately.",
+    "example": "If someone starts pacing near you on the platform, move closer to the conductor."
+  }
+],
 
   "transitSafety": {
     "subway": {
-      "riskLevel": "Moderate",
-      "bestHours": "Before midnight",
-      "avoidHours": "2–4 AM",
-      "tips": [
-        "Wait near the conductor",
-        "Avoid empty cars",
-        "Use staffed stations"
-      ],
-      "recommendedRoutes": ["1/2/3", "A/C/E", "N/Q/R"]
-    },
-    "bus": {
-      "riskLevel": "Low",
-      "bestHours": "Evening",
-      "avoidHours": null,
-      "tips": ["Sit near the front", "Use well-lit stops"]
-    },
-    "rideshare": {
-      "riskLevel": "Low",
-      "bestHours": "Anytime",
-      "avoidHours": null,
-      "tips": ["Verify driver", "Share trip"]
-    }
+  "riskLevel": "Moderate",
+  "bestHours": "Before midnight",
+  "avoidHours": "2–4 AM",
+  "tips": [
+    "Wait near the conductor",
+    "Avoid empty cars",
+    "Use staffed stations"
+  ],
+  "recommendedRoutes": ["1/2/3", "A/C/E", "N/Q/R"]
+},
+
+"bus": {
+  "riskLevel": "Low",
+  "bestHours": "Evening",
+  "avoidHours": "Late-night intervals with long gaps",
+  "tips": [
+    "Sit near the front",
+    "Use well-lit stops"
+  ],
+  "recommendedRoutes": [
+    "M7/M20 (Manhattan)",
+    "B62 (Brooklyn)",
+    "Q32 (Queens)"
+  ]
+},
+
+"rideshare": {
+  "riskLevel": "Low",
+  "bestHours": "Anytime",
+  "avoidHours": "None — but stay alert after 2 AM",
+  "tips": [
+    "Verify driver",
+    "Share trip"
+  ],
+  "recommendedRoutes": [
+    "Short hops between neighborhoods",
+    "Late-night trips where transit is sparse"
+  ]
+}
+
   },
 
   "neighborhoodCards": [
+      {
+        "name": "Midtown",
+        "nightVibe": "Bright, busy, tourist-heavy",
+        "safetyRating": "Safe",
+        "safeSpots": ["Times Square", "Bryant Park"],
+        "avoidSpots": ["Empty side streets"],
+        "idealFor": "First-time visitors",
+        "notFor": "People avoiding crowds",
+        "indicators": {
+          "lighting": "Excellent",
+          "footTraffic": "Very High",
+          "policePresence": "High"
+        }
+    },
     {
-      "name": "Midtown",
-      "nightVibe": "Bright, busy, tourist-heavy",
-      "safetyRating": "Safe",
-      "safeSpots": ["Times Square", "Bryant Park"],
-      "avoidSpots": ["Empty side streets"],
-      "idealFor": "First-time visitors",
-      "notFor": "People avoiding crowds"
-    }
+        "name": "DUMBO",
+        "nightVibe": "Scenic, lively waterfront with steady foot traffic",
+        "safetyRating": "Safe",
+        "safeSpots": ["Brooklyn Bridge Park", "Main Street Park"],
+        "avoidSpots": ["Very quiet industrial blocks late at night"],
+        "idealFor": "Solo women, photographers, relaxed evening walks",
+        "notFor": "People who dislike touristy areas",
+        "indicators": {
+          "lighting": "Good",
+          "footTraffic": "High",
+          "policePresence": "Moderate"
+        }
+      }
+
   ],
 
   "emergencyBlock": {
     "call911": "For emergencies requiring immediate police, fire, or medical response.",
     "call311": "For non-emergency city services and complaints.",
-    "nypdPrecinctLocator": "https://www.nyc.gov/site/nypd/bureaus/patrol/find-your-precinct.page",
-    "nearestHospital": "Use Google Maps or NYC Health + Hospitals locator.",
-    "subwayHelpPoints": "Look for Help Point intercoms on platforms.",
+    "nypdPrecinctLocator": "https://www.nyc.gov/site/nypd/bureaus/patrol/find-your-precinct.page", 
+    "nypdPrecinctLocatorText": "Find the precinct responsible for your area — helpful if you lose something or need quick assistance.",
+    "nearestHospital": "NYC has multiple 24/7 emergency rooms within 10–15 minutes in Manhattan and Brooklyn.",
+    "subwayHelpPoints": "Blue “Help Point” intercoms on platforms connect you directly to emergency services.",
     "lateNightTransportLinks": ["https://new.mta.info"]
   },
 
   "faq": [
-    {
-      "question": "Is NYC safe for solo female travelers at night?",
-      "answer": "Yes, especially in busy areas like Midtown and the Upper West Side.",
-      "relatedLinks": ["/solo-trip-to-nyc"]
-    }
-  ],
+  {
+    "question": "Is NYC safe for solo female travelers at night?",
+    "answer": "Yes, especially in busy areas like Midtown, SoHo, and the Upper West Side.",
+    "relatedLinks": ["/destination/nyc/solo-trip-to-nyc"]
+  },
+  {
+    "question": "Which NYC neighborhoods are safest to walk in at night?",
+    "answer": "Midtown, SoHo, Greenwich Village, and Brooklyn Heights stay active and well-lit into the night.",
+    "relatedLinks": ["/destination/nyc/best-areas-to-stay"]
+  },
+  {
+    "question": "Is the NYC subway safe at night?",
+    "answer": "Yes on busy lines, but avoid empty cars and transfer stations late at night.",
+    "relatedLinks": ["/destination/nyc/subway-safety-guide"]
+  },
+  {
+    "question": "Is it safe to walk alone in NYC after 10 PM?",
+    "answer": "Stick to main avenues, avoid isolated parks, and stay in well-lit, busy areas.",
+    "relatedLinks": ["/destination/nyc/nyc-safety-guide"]
+  },
+  {
+    "question": "Are NYC tourist spots safe at night?",
+    "answer": "Times Square, Rockefeller Center, and DUMBO remain busy and safe for solo travelers.",
+    "relatedLinks": ["/destination/nyc/neighborhood-guide"]
+  },
+  {
+    "question": "What should solo travelers avoid at night in NYC?",
+    "answer": "Avoid empty subway cars, isolated parks, and quiet industrial areas.",
+    "relatedLinks": ["/destination/nyc/nyc-female-solo-travel-guide"]
+  }
+],
 
   "interlinkingGrid": [
-    { "title": "Solo Trip to NYC Guide", "url": "/solo-trip-to-nyc" },
-    { "title": "NYC Subway Safety", "url": "/nyc-subway-safety" }
+    { "title": "Solo Trip to NYC Guide", "url": "/destination/nyc/solo-trip-to-nyc" },
+    { "title": "NYC Subway Safety", "url": "/destination/nyc/subway-safety-guide" }
   ],
 
   "trustBlock": {
@@ -263,6 +342,6 @@
     "localInsights": "Built with input from NYC residents and frequent travelers.",
     "dataSources": ["NYPD Crime Stats", "311 Reports", "MTA Data"],
     "editorialProcess": "Every guide is reviewed for accuracy and clarity.",
-    "safetyExpertsConsulted": ["Local security advisors"]
+    "safetyExpertsConsulted": ""
   }
 }
