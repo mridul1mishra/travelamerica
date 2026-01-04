@@ -50,7 +50,6 @@
     }
   ],
 
-  {
   "subway_basics": {
     "how_the_system_works": "The subway is the city’s heartbeat — running 24/7 and threading 472 stations across four boroughs. Trains move fast, signs move faster, and everything clicks once you learn the rhythm.",
     "peak_vs_off_peak": {
@@ -60,11 +59,8 @@
     "fare_basics": "Tap with OMNY or swipe a MetroCard. One fare covers one ride, and transfers within two hours are free. OMNY tracks your rides automatically so you never overpay.",
     "station_layouts": "Stations are mini‑mazes with multiple entrances, mezzanines, and exits that lead to very different streets. Follow the signs, and when unsure, choose the exit with more light and foot traffic.",
     "train_types": "Local trains stop everywhere. Express trains fly past smaller stations and cover long distances fast — great when you’re headed far, but easy to miss if you’re not watching the signs."
-  }
-},
+  },
 
-
-  {
   "personas": [
     {
       "id": "solo_female_traveler",
@@ -99,8 +95,7 @@
       "avoid_list": ["Empty platforms", "Sleeping riders"],
       "confidence_boosters": ["Track trains in real time"]
     }
-  ]
-},
+  ],
 
 
   "scenarios": [
