@@ -15,6 +15,7 @@ export default function NYCSubwayMapClient() {
     <HeroBanner {...data.hero}/>
       <IconCardGrid items={data.quickNav} />
       <StepList steps={data.howToRead} />
+      
     <Footer />
     </>
   );
