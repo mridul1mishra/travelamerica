@@ -39,19 +39,20 @@
   list-style: none; /* we use custom bullets */
 }
 
-/* LIST ITEM */
+/* LIST ITEM (your previous layout) */
 .item {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 10px;
   margin-bottom: 8px;
 }
 
-/* CUSTOM BULLET */
+/* CUSTOM BULLET (your previous style) */
 .bullet {
-  color: #333;
   font-weight: 700;
+  color: #222;
   line-height: 1.4;
+  font-size: 1.1rem;
 }
 
 /* TEXT */
