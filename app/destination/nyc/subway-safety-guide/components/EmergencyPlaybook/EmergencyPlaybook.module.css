@@ -50,3 +50,4 @@
 .list li::marker {
   color: #333;
 }
+.list li { display: list-item !important; list-style-type: disc !important; }
