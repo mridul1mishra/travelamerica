@@ -49,13 +49,14 @@ export const metadata = {
 
 import NYCSubwayMapClient from './nycsubwaymapclient';
 import schema from "./nyc-subway-map.schema.json";
+import Head from "next/head";
 
 export default function Page(){
     return(
         <>
-        <head>
+        <Head>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
-        </head>
+        </Head>
         <NYCSubwayMapClient />
         </>
 

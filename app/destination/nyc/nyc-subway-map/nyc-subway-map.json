@@ -4,13 +4,13 @@
     "subtitle": "Your quick guide to navigating NYC’s subway without confusion.",
     "ctaPrimary": "View Full Subway Map",
     "ctaSecondary": "Download PDF Map",
-    "supportingText": "Updated for 2025. Works offline.",
-    "badges": ["Official MTA Source", "Updated January 2025"]
+    "supportingText": "Updated for 2026. Works offline.",
+    "badges": ["Official MTA Source", "Updated January 2026"]
   },
 
   "map": {
-    "imageUrl": "/images/nyc-subway-map-2025.png",
-    "alt": "Official MTA NYC Subway Map 2025",
+    "imageUrl": "/images/nyc-subway-map-2026.png",
+    "alt": "Official MTA NYC Subway Map 2026",
     "caption": "Official MTA Subway Map — Updated 2025",
     "downloadLabel": "Download High‑Resolution Map"
   },

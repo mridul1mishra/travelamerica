@@ -3,26 +3,26 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://yourdomain.com/nyc-subway-map"
+    "@id": "https://www.travelamerica.work/destination/nyc/nyc-subway-map"
   },
   "headline": "NYC Subway Map (2025): Simple, Safe & Solo-Traveler Friendly",
   "description": "View and download the updated 2025 NYC subway map. A beginner-friendly guide with routes, safety tips, and navigation help for solo travelers.",
   "image": {
     "@type": "ImageObject",
-    "url": "https://yourdomain.com/og/nyc-subway-map.png",
+    "url": "https://www.travelamerica.work/data/metadataimage/nyc-subway-map.png",
     "width": 1200,
     "height": 630
   },
   "author": {
     "@type": "Organization",
-    "name": "Your Travel Hub"
+    "name": "Travel America"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Your Travel Hub",
+    "name": "Travel America",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://yourdomain.com/logo.png",
+      "url": "https://www.travelamerica.work/logo.png",
       "width": 600,
       "height": 60
     }
