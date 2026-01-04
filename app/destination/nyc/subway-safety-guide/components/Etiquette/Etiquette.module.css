@@ -30,10 +30,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
-.bullet { 
-  list-style: disc; 
-  padding-left: 1.25rem; /* or whatever fits your layout */ 
-  margin: 0; 
+.bullet {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: disc outside;
 }
 @media (max-width: 768px) {
   .grid {
