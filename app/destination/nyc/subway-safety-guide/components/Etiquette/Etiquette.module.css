@@ -36,6 +36,15 @@ ul.list {
   padding-left: 1.25rem; 
   margin: 0; 
 }
+.list li {
+  list-style-type: disc !important;
+  display: list-item;
+}
+.list li::marker {
+  content: "• ";
+  color: #111; /* or your body text color */
+}
+
 :global(ul.list) { list-style-type: disc !important; }
 @media (max-width: 768px) {
   .grid {
