@@ -73,12 +73,11 @@
   color: #444;
   line-height: 1.6;
   font-size: 0.95rem;
+  list-style-type: disc !important;
 }
 
 .bulletList li {
   margin-bottom: 6px;
-}
-.bulletList li {
   display: list-item !important;
 }
 
