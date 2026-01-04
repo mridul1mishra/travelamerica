@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./navigationcard.module.css";
-import type { QuickNavItem } from "./nyc-subway-map";
+import type { QuickNavItem } from "../../nyc-subway-map";
 
 interface IconCardGridProps {
   items: QuickNavItem[];
@@ -28,5 +28,6 @@ export default function IconCardGrid({ items }: IconCardGridProps) {
     </section>
   );
 }
+
 
 
