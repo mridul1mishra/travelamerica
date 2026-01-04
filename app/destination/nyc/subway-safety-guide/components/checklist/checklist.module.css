@@ -5,14 +5,26 @@
 .title {
   font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   color: #111;
 }
 
-.section {
-  margin-bottom: 28px;
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
 }
 
+/* CARD */
+.card {
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+/* HEADINGS */
 .heading {
   font-size: 1.2rem;
   font-weight: 600;
@@ -20,30 +32,31 @@
   color: #222;
 }
 
+/* LIST */
 .list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none; /* we use custom bullets */
 }
 
+/* LIST ITEM */
 .item {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  padding: 10px 14px;
-  background: #fafafa;
-  border: 1px solid #e5e5e5;
-  border-radius: 10px;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
+/* CUSTOM BULLET */
 .bullet {
-  font-size: 1.2rem;
-  color: #1f2937;
-  line-height: 1;
+  color: #333;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
+/* TEXT */
 .text {
-  font-size: 1rem;
   color: #444;
-  line-height: 1.55;
+  font-size: 0.98rem;
+  line-height: 1.6;
 }
