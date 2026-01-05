@@ -1,0 +1,18 @@
+import styles from "./SafetyChecklist.module.css";
+
+export function SafetyChecklist({ items, title = "Safety Checklist for Solo Travelers" }: SafetyChecklistProps) {
+  return (
+    <div className={styles.wrapper}>
+      <h2 className={styles.title}>{title}</h2>
+
+      <ul className={styles.list}>
+        {items.map((item, index) => (
+          <li key={index} className={styles.item}>
+            <span className={styles.bullet}>✓</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
