@@ -13,11 +13,12 @@ export default function NYCSubwayMapClient() {
   return (
     <>
     <Header />
+      <div className="page-stack">
     <HeroBanner {...data.hero}/>
       <IconCardGrid items={data.quickNav} />
       <StepList steps={data.howToRead} />
       <ScenarioCards routes={data.routes} />
-      
+      </div>
     <Footer />
     </>
   );
