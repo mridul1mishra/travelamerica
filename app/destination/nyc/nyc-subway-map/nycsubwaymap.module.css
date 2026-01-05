@@ -1,0 +1,11 @@
+.page-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .page-stack {
+    gap: 6rem;
+  }
+}
