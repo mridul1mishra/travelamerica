@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./ScenarioCards.module.css";
-import type { ScenarioCardsProps } from "../../nyc-subway-map";
+import type { RouteScenario } from "../../nyc-subway-map";
 
-export function ScenarioCards(props: ScenarioCardsProps) {
+export function ScenarioCards(props: RouteScenario) {
   const { routes, sectionTitle = "Best Subway Routes for Solo Travelers", className } = props;
 
   return (
@@ -39,4 +39,5 @@ export function ScenarioCards(props: ScenarioCardsProps) {
     </section>
   );
 }
+
 
