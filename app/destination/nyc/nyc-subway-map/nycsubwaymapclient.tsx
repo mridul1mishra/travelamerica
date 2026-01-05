@@ -38,6 +38,11 @@ export default function NYCSubwayMapClient() {
       <ScenarioCards routes={data.routes} />
       </div>
     </div>
+    <div className={styles.section}>
+      <div className={styles.sectioninner}>
+      <ScenarioCards items={data.safety} />
+      </div>
+    </div>
 
   </div>
 </div>
