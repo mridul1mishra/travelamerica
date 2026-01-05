@@ -6,6 +6,7 @@ import IconCardGrid from "./components/naviagtioncard/navigationcard"
 import { StepList } from "./components/steplist/steplist";
 import { ScenarioCards } from "./components/ScenarioCards/ScenarioCards";
 import styles from "./nycsubwaymap.module.css";
+import {SafetyChecklist} from "./components/SafetyChecklist/SafetyChecklist";
 
 const data: HighIntentPageBase = require("./nyc-subway-map.json");
 import type {HighIntentPageBase} from "./nyc-subway-map";
@@ -40,7 +41,7 @@ export default function NYCSubwayMapClient() {
     </div>
     <div className={styles.section}>
       <div className={styles.sectioninner}>
-      <ScenarioCards items={data.safety} />
+      <SafetyChecklist items={data.safety} />
       </div>
     </div>
 
