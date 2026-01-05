@@ -1,3 +1,8 @@
+.pagecontainer { 
+  max-width: 960px; /* or 1040px / 1200px depending on your design */ 
+  margin: 0 auto; 
+  padding: 0 1.5rem; 
+}
 .pagestack {
   display: flex;
   flex-direction: column;
