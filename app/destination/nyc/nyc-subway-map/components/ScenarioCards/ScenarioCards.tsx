@@ -3,7 +3,7 @@ import styles from "./ScenarioCards.module.css";
 import type { RouteScenario } from "../../nyc-subway-map";
 export interface ScenarioCardsProps { routes: RouteScenario[]; sectionTitle?: string; className?: string; }
 
-export function ScenarioCards(props: RouteScenario) {
+export function ScenarioCards(props: ScenarioCardsProps) {
   const { routes, sectionTitle = "Best Subway Routes for Solo Travelers", className } = props;
 
   return (
@@ -40,6 +40,7 @@ export function ScenarioCards(props: RouteScenario) {
     </section>
   );
 }
+
 
 
 
