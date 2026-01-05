@@ -28,11 +28,15 @@ export default function NYCSubwayMapClient() {
     </div>
 
     <div className={styles.section}>
+      <div className={styles.sectioninner}>
       <StepList steps={data.howToRead} />
+      </div>
     </div>
 
     <div className={styles.section}>
+      <div className={styles.sectioninner}>
       <ScenarioCards routes={data.routes} />
+      </div>
     </div>
 
   </div>
