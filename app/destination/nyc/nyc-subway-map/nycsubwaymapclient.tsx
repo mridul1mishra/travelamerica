@@ -22,7 +22,9 @@ export default function NYCSubwayMapClient() {
     </div>
 
     <div className={styles.section}>
-      <IconCardGrid items={data.quickNav} />
+      <div className={styles.sectioninner}>
+        <IconCardGrid items={data.quickNav} />
+      </div>
     </div>
 
     <div className={styles.section}>
