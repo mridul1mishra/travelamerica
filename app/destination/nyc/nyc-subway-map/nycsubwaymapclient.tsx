@@ -17,19 +17,19 @@ export default function NYCSubwayMapClient() {
       <div className="page-container">
   <div className={styles.pagestack}>
     
-    <div className="section">
+    <div className={styles.section}>
       <HeroBanner {...data.hero} />
     </div>
 
-    <div className="section">
+    <div className={styles.section}>
       <IconCardGrid items={data.quickNav} />
     </div>
 
-    <div className="section">
+    <div className={styles.section}>
       <StepList steps={data.howToRead} />
     </div>
 
-    <div className="section">
+    <div className={styles.section}>
       <ScenarioCards routes={data.routes} />
     </div>
 
