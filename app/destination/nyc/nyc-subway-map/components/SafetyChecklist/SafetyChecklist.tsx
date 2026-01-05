@@ -1,7 +1,7 @@
 import styles from "./SafetyChecklist.module.css";
 export interface SafetyChecklistProps { 
   items: string[]; 
-  title: string; 
+  title?: string; 
 }
 
 export function SafetyChecklist({ items, title = "Safety Checklist for Solo Travelers" }: SafetyChecklistProps) {
@@ -20,4 +20,5 @@ export function SafetyChecklist({ items, title = "Safety Checklist for Solo Trav
     </div>
   );
 }
+
 
