@@ -7,15 +7,8 @@ export function ScenarioCards(props: ScenarioCardsProps) {
   const { routes, sectionTitle = "Best Subway Routes for Solo Travelers", className } = props;
 
   return (
-    <section
-      className={[
-        styles.scenarioCardsSection,
-        className ? className : ""
-      ]
-        .filter(Boolean)
-        .join(" ")}
-      aria-label={sectionTitle}
-    >
+    <section id="best-routes" className={[styles.scenarioCardsSection, className ? className : ""].filter(Boolean).join(" ")}
+      aria-label={sectionTitle}>
       <div className={styles.sectionHeader}>
         <h2 className={styles.sectionTitle}>{sectionTitle}</h2>
         <p className={styles.sectionSubtitle}>
@@ -40,6 +33,7 @@ export function ScenarioCards(props: ScenarioCardsProps) {
     </section>
   );
 }
+
 
 
 
