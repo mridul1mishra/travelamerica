@@ -6,7 +6,7 @@ export interface SafetyChecklistProps {
 
 export function SafetyChecklist({ items, title = "Safety Checklist for Solo Travelers" }: SafetyChecklistProps) {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="safety">
       <h2 className={styles.title}>{title}</h2>
 
       <ul className={styles.list}>
