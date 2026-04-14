@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "NYC Safety Guide (2026)",
-  description: "A calm, practical NYC safety guide for solo travelers — covering safe neighborhoods, subway safety, scams, and real-world scenarios.", 
+  title: "New York City Safety Tips for Tourists (2026 NYC Guide)",
+  description: "Planning a trip to New York City 2026? Learn which areas are safe, subway safety tips, common tourist scams, and advice for solo travelers", 
   
   alternates: { 
     canonical: "https://www.travelamerica.work/destination/nyc/nyc-safety-guide"
