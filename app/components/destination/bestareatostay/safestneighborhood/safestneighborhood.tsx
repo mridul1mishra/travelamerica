@@ -37,11 +37,11 @@ export default function SectionSafestNeighborhoods() {
       Avoid empty side streets late at night — stick to avenues with steady foot traffic.
     </WarningBox>
 
-      <a href="/nyc/subway-safety" className={styles.internalLink}>
+{     /* <a href="/nyc/subway-safety" className={styles.internalLink}>
         See subway safety tips →
       </a>
 
-      <TerracottaDivider />
+      <TerracottaDivider /> */}
     </div>
     </section>
   );
