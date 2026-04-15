@@ -82,10 +82,10 @@ export default function NYCSafetyGuide() {
     },
     {
       "@type": "Question",
-      "name": "Which NYC neighborhoods should I avoid at night?",
+      "name": "Which NYC neighborhoods should tourists avoid at night?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Avoid desolate areas in the far west of Midtown, parts of the South Bronx, and isolated industrial zones in Brooklyn. Stick to populated, well-lit areas."
+        "text": "Tourists should be cautious in unfamiliar or poorly lit areas late at night. Popular central neighborhoods are generally safe, but staying in populated areas and following local guidance is recommended"
       }
     },
     {
