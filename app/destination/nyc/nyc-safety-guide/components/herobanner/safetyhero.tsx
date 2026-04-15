@@ -16,7 +16,7 @@ export default function SafetyHero() {
 
         {/* Title + Subtitle */}
         <div className={styles.heroContent}>
-          <h1>Is New York City Safe for Tourists in 2026?</h1>
+          <h1>Is New York City Safe for Tourists in 2026? Complete Safety Guide</h1>
           <p className={styles.subtitle}>
             Honest, practical NYC safety tips for tourists, solo travelers, and first-time visitors- based on real situation you'll face in New York City.
           </p>
