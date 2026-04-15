@@ -74,10 +74,10 @@ export default function NYCSafetyGuide() {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Is New York City safe for solo travelers?",
+      "name": "Is New York City safe for tourists in 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, NYC is generally safe for solo travelers who stay aware and follow basic precautions. Stick to well-lit streets, avoid isolated areas late at night, and trust your instincts."
+        "text": "Yes, NYC is generally safe for tourists in 2026 when basic precautions are followed. Most visitors stay in busy areas, use public transit safetly, and have trouble-free trips."
       }
     },
     {
