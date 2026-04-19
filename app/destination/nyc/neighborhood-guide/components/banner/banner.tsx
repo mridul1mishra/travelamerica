@@ -31,7 +31,7 @@ export default function NeighborhoodBanner() {
 
         {/* Right: Illustration placeholder */}
         <div className={styles.illustration}>
-          NYC map / compass illustration
+          <img src="/destination/nyc-neighborhood-guide-solo-travelers-map.jpg" alt ="Illustration of a New York City neighborhood map with a compass for solo travelers" />
         </div>
       </div>
     </section>
