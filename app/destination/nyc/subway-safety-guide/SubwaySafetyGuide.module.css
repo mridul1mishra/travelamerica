@@ -6,7 +6,12 @@
   color: #1a1a1a;
   line-height: 1.7;
 }
-
+.heroWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
 /* Section spacing */
 .section {
   margin-top: 60px;

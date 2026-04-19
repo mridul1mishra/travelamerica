@@ -11,7 +11,7 @@
   width: 100%;
   padding: 60px 20px 37px;
   text-align: center;
-  background: linear-gradient(135deg, #e8f1ff 0%, #cdddfc 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #0f172a 100%);
   border-radius: 0 0 12px 12px;
   overflow: hidden;
 }
@@ -27,7 +27,7 @@
 }
 
 .breadcrumb a {
-  color: #005bbb;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -39,19 +39,19 @@
 .heroContent h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
-  color: #0d1b2a;
+  color: #fff;
   margin-bottom: 10px;
 }
 
 .subtitle {
   font-size: 1.15rem;
-  color: #33415c;
+  color: #fff;
   margin-bottom: 10px;
 }
 
 .topics {
   font-size: 0.95rem;
-  color: #4f5d75;
+  color: #fff;
   margin-bottom: 40px;
 }
 

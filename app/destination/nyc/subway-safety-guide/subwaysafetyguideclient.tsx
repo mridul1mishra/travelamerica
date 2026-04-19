@@ -15,7 +15,7 @@ import EmergencyPlaybook from "./components/EmergencyPlaybook/EmergencyPlaybook"
 import ToolsAndApps from "./components/Toolsandapps/Toolsandapps";
 import Etiquette from "./components/Etiquette/Etiquette";
 import InternalLinks from "./components/Interlink/Interlink";
-import Footer from "@/app/components/Header/Footer/footer";
+import Footer from "../../../../app/components/Header/Footer/footer";
 import SectionWrapper from "./Sectionwrapper";
 import WhyTrustThisGuide from "./components/whytrustthisguide/whytrustthisguide";
 
@@ -40,10 +40,12 @@ export default function SubwaySafetyGuidePage(){
     } = data;
     return(
         <>
-    <main className={styles.pageWrapper}>
+    
         <Header />
-        
+        <div className={styles.pageWrapper}>
+      <section id="banner">  
         <Hero {...hero} />
+      </section>
         
       <SectionWrapper id="why-trust-this-guide">
         <WhyTrustThisGuide data={data.why_trust_this_guide} />
@@ -82,7 +84,7 @@ export default function SubwaySafetyGuidePage(){
       <SectionWrapper id="scenarios">
       <InternalLinks items={internal_links} />
       </SectionWrapper>
-      </main>
+      </div>
       
       <Footer />
       

@@ -1,3 +1,4 @@
+"use client";
 import router from "next/router";
 import type { HeroSection } from "../../nyc-subway-map";
 import styles from "./herobanner.module.css";
@@ -10,6 +11,7 @@ export default function Hero({
   supportingText,
   badges
 }: HeroSection) {
+  
   return (
     <section className={styles.hero}>
       <div className={styles.content}>
@@ -18,7 +20,7 @@ export default function Hero({
         <p className={styles.subtitle}>{subtitle}</p>
 
         <div className={styles.actions}>
-          <button className={styles.primaryBtn} onClick={() => router.push("/destination/nyc/nyc-subway-map/full")}>{ctaPrimary}</button>
+          <button className={styles.primaryBtn}><a href="/destination/nyc/nyc-subway-map/full">{ctaPrimary}</a></button>
           <a href="/data/majorcities/newyork/assets/map/nyc-subway-map.pdf" download className={styles.secondaryBtn} > {ctaSecondary} </a>
         </div>
 

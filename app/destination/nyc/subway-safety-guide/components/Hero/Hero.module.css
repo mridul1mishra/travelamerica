@@ -1,8 +1,9 @@
-.heroWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 32px;
+.heroContainer {
+  background: #0f172a;
+  color: #fff;
+  padding: 40px 20px;
+  border-radius: 12px;
+  text-align: center;
 }
 
 .breadcrumbs {
@@ -11,7 +12,11 @@
 }
 
 .breadcrumbLink {
-  color: #6b7280;
+  color: #fff;
+  text-decoration: none;
+}
+.currentBreadcrumb {
+  color: #4a4a4a;
   text-decoration: none;
 }
 
@@ -27,7 +32,7 @@
 .title {
   font-size: 2.25rem;
   font-weight: 700;
-  color: #111;
+  color: #fff;
   line-height: 1.2;
 }
 

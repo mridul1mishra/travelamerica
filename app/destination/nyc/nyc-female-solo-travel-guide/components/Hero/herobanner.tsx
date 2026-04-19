@@ -9,9 +9,9 @@ export default function SafetyHero() {
         <nav className={styles.breadcrumb} aria-label="Breadcrumb">
           <a href="/">Home</a>
           <span>›</span>
-          <a href="/destination/solo-trip-to-nyc">Solo Trip to NYC</a>
+          <a href="/destination/nyc/solo-trip-to-nyc">Solo Trip to NYC</a>
           <span>›</span>
-          <span className={styles.current}>NYC Safety Guide</span>
+          <span className={styles.current}>Female Solo Travel Guide</span>
         </nav>
 
         {/* Title + Subtitle */}

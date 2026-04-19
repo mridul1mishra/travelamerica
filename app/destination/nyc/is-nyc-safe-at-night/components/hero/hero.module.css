@@ -4,6 +4,24 @@
   padding: 3rem 1.5rem;
   text-align: center;
 }
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  margin-bottom: 24px;
+}
+
+.breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.current {
+  font-weight: 600;
+}
 @media (min-width: 900px) {
   .heroSection {
     width: 43%;       /* shrink on desktop */
