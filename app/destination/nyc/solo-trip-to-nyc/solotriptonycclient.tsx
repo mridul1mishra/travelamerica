@@ -54,7 +54,7 @@ export default function SoloTripNYCClient() {
         <section className={styles.hero}>
             <div className={styles.herocontainer}>            
                 <div className={styles.herotext}>
-                    <h1>Solo Trip to New York City: A Complete Guide for First-Time Travelers</h1>
+                    <h1>Solo Trip to New York City: First-Time Traveler Guide</h1>
                     <p className={styles.subtext}>Safe, confident, and stress‑free solo travel in NYC.</p>
 
                     <div className={styles.herobuttons}>
