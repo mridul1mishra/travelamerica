@@ -84,8 +84,10 @@
   background: rgba(15, 23, 42, 0.6);
 }
 
-.illustration {
-  display: none;
+.illustration img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 @media (min-width: 768px) {
