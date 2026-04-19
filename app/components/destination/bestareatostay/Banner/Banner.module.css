@@ -9,8 +9,8 @@
   min-height: 520px;                 /* 👈 KEY FIX */
   background: linear-gradient(
     180deg,
-    #d5947d 0%,
-    #cf8b72 100%
+    #0f172a 0%,
+    #0f172a 100%
   );
 
   padding: 60px 20px 30px;          /* more bottom space for envelope */
