@@ -4,6 +4,7 @@
     "subtitle": "A practical, scenario‑driven guide to navigating NYC’s subway confidently and safely.",
     "hero_image": "/data/metadataimage/nyc-subway-generic.jpg",
     "breadcrumbs": [
+      { "label": "Home", "slug": "/" },
       { "label": "Solo Trip to NYC", "slug": "/destination/nyc/solo-trip-to-nyc" },
       { "label": "Subway Safety Guide", "slug": "/destination/nyc/subway-safety-guide" }
     ],

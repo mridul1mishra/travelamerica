@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import HeroBanner from "./components/herobanner/herobanner";

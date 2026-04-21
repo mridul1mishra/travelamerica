@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "NYC Safety Guide (2026)",
-  description: "A calm, practical NYC safety guide for solo travelers — covering safe neighborhoods, subway safety, scams, and real-world scenarios.", 
+  title: "New York City Safety Tips for Tourists (2026 NYC Guide)",
+  description: "Planning a trip to New York City 2026? Learn which areas are safe, subway safety tips, common tourist scams, and advice for solo travelers", 
   
   alternates: { 
     canonical: "https://www.travelamerica.work/destination/nyc/nyc-safety-guide"
@@ -74,18 +74,18 @@ export default function NYCSafetyGuide() {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Is New York City safe for solo travelers?",
+      "name": "Is New York City safe for tourists in 2026?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, NYC is generally safe for solo travelers who stay aware and follow basic precautions. Stick to well-lit streets, avoid isolated areas late at night, and trust your instincts."
+        "text": "Yes, NYC is generally safe for tourists in 2026 when basic precautions are followed. Most visitors stay in busy areas, use public transit safetly, and have trouble-free trips."
       }
     },
     {
       "@type": "Question",
-      "name": "Which NYC neighborhoods should I avoid at night?",
+      "name": "Which NYC neighborhoods should tourists avoid at night?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Avoid desolate areas in the far west of Midtown, parts of the South Bronx, and isolated industrial zones in Brooklyn. Stick to populated, well-lit areas."
+        "text": "Tourists should be cautious in unfamiliar or poorly lit areas late at night. Popular central neighborhoods are generally safe, but staying in populated areas and following local guidance is recommended"
       }
     },
     {

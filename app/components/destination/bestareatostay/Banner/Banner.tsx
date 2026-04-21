@@ -12,7 +12,7 @@ export default function Banner({ content }: Props) {
   <nav className={styles.breadcrumb} aria-label="Breadcrumb">
     <a href="/">Home</a>
     <span>›</span>
-    <a href="/destination/solo-trip-to-nyc">Solo Trip to NYC</a>
+    <a href="/destination/nyc/solo-trip-to-nyc">Solo Trip to NYC</a>
     <span>›</span>
     <span className={styles.current}>Best Areas to Stay</span>
   </nav>

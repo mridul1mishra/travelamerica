@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <>
     <Header />
-    <main>
+    
       {/* 1. Hero Section */}
       <HeroSafety {...data.heroSafety} />
       
@@ -84,7 +84,7 @@ export default function Page() {
       <SectionWrapper id="trustBlock">
       <TrustBlock {...data.trustBlock} />
       </SectionWrapper>
-    </main>
+    
     <Footer />
     </>
   );

@@ -16,9 +16,9 @@ export default function SafetyHero() {
 
         {/* Title + Subtitle */}
         <div className={styles.heroContent}>
-          <h1>NYC Safety Guide</h1>
+          <h1>Is New York City Safe for Tourists in 2026? Complete Safety Guide</h1>
           <p className={styles.subtitle}>
-            Must-know safety tips and solo travel advice for New York City
+            Honest, practical NYC safety tips for tourists, solo travelers, and first-time visitors- based on real situation you'll face in New York City.
           </p>
 
           <p className={styles.topics}>
@@ -30,15 +30,15 @@ export default function SafetyHero() {
         <div className={styles.infoBox}>
           <h2>
             <span className={styles.infoIcon}>ℹ</span>
-            In this guide, you’ll learn:
+            In this NYC safety guide, you’ll learn:
           </h2>
 
           <ul>
-            <li>Neighborhoods to stay in—and ones to avoid at night</li>
-            <li>Proven ways to outsmart common tourist scams</li>
-            <li>How to ride the subway alone (and confidently)</li>
-            <li>Safety best practices for solo female travelers</li>
-            <li>Short videos on New York safety in different scenarios</li>
+            <li>Which New York City neighborhoods are safest for tourists-and which to avoid at night</li>
+            <li>How Safe the NYC subway is in 2026(and how to ride it confidentally)</li>
+            <li>Common tourists scams in New York City-and how to spot them fast</li>
+            <li>Safetytips for solo and solo female travelers visiting NYC</li>
+            <li>Real-world NYC safety scenarios explained with short videos</li>
           </ul>
         </div>
 
