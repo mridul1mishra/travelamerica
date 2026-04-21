@@ -1,8 +1,8 @@
 
 
 export const generateMetadata = () => ({
-  title: 'Best Areas to Stay in NYC 2026: Safest & Most Convenient',
-  description:  'Find the best areas to stay in NYC for safety, convenience, and first‑time visitors. Compare top neighborhoods with pros, cons, and transit tips.',
+  title: 'Best Areas to Stay in NYC (Safe & Central Neighborhoods) – 2026',
+  description:  'Unsure where to stay in NYC? Discover the safest and best areas for tourists, first‑time visitors, and easy transit in New York City.',
   robots: {
     index: true,
     follow: true,
@@ -12,8 +12,8 @@ export const generateMetadata = () => ({
     },
     twitter: {
     card: "summary_large_image",
-    title: 'Best Areas to Stay in NYC 2026: Safest & Most Convenient',
-    description:  'Find the best areas to stay in NYC for safety, convenience, and first‑time visitors. Compare top neighborhoods with pros, cons, and transit tips.',
+    title: 'Best Areas to Stay in NYC (Safe & Central Neighborhoods) – 2026',
+    description:  'Unsure where to stay in NYC? Discover the safest and best areas for tourists, first‑time visitors, and easy transit in New York City.',
     images: ["https://www.travelamerica.work/social/solo-trip-to-nyc-gritty.png"]
   }
 });
@@ -26,7 +26,7 @@ export default async function SoloTripToNYC() {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Best Areas to Stay in NYC (2026): Safest & Most Convenient Neighborhoods",
-  "description": "Find the best areas to stay in NYC for 2026, with safe, convenient neighborhoods ideal for solo and first-time travelers. Compare pros, cons, vibes, and subway access.",
+  "description": "Best Areas to Stay in NYC (Safe & Central Neighborhoods) – 2026",
   "author": {
     "@type": "Person",
     "name": "Mridul"
