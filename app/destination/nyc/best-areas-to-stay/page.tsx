@@ -1,14 +1,14 @@
 
 
 export const generateMetadata = () => ({
-  title: 'Best Areas to Stay in NYC (Safe & Central Neighborhoods) – 2026',
+  title: 'Best Areas to Stay in NYC (Safe and Central Neighborhoods) – 2026',
   description:  'Unsure where to stay in NYC? Discover the safest and best areas for tourists, first‑time visitors, and easy transit in New York City.',
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-      canonical: 'https://www.travelamerica.work/destination/best-areas-to-stay',
+      canonical: 'https://www.travelamerica.work/destination/nyc/best-areas-to-stay',
     },
     twitter: {
     card: "summary_large_image",
