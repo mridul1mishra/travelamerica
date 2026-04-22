@@ -12,7 +12,7 @@ export const generateMetadata = () => ({
     },
     twitter: {
     card: "summary_large_image",
-    title: 'Best Areas to Stay in NYC (Safe & Central Neighborhoods) – 2026',
+    title: 'Best Areas to Stay in NYC (Safe and Central Neighborhoods) – 2026',
     description:  'Unsure where to stay in NYC? Discover the safest and best areas for tourists, first‑time visitors, and easy transit in New York City.',
     images: ["https://www.travelamerica.work/social/solo-trip-to-nyc-gritty.png"]
   }
