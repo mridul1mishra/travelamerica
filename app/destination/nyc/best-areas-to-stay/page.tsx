@@ -24,9 +24,9 @@ import BestAreatoStatyClient from './bestareatostayclientnew';
 export default async function SoloTripToNYC() {
   const schemaObject = {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Best Areas to Stay in NYC (2026): Safest & Most Convenient Neighborhoods",
-  "description": "Best Areas to Stay in NYC (Safe & Central Neighborhoods) – 2026",
+  "@type": "Guide",
+  "headline": "Best Areas to Stay in NYC (2026): Safest and Most Convenient Neighborhoods",
+  "description": "Best Areas to Stay in NYC (Safe and Central Neighborhoods) – 2026",
   "author": {
     "@type": "Person",
     "name": "Mridul"
@@ -143,8 +143,8 @@ const FAQSchema = {
       {/* Schema blocks */}
   <BestAreatoStatyClient />
     <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaObject) }}/>
-    <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQSchema) }}/>
-    <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howto) }}/>
+    <script id="schema-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQSchema) }}/>
+    <script id="schema-howto" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howto) }}/>
   </>
 );
   

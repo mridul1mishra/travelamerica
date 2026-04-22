@@ -22,7 +22,7 @@ export default function Banner({ content }: Props) {
     <h1>Best Areas to Stay in NYC</h1>
     <p>
       A local breakdown of the safest, most convenient
-      neighborhoods for solo travelers.
+      neighborhoods for tourists, first-time visitors and solo travelers.
     </p>
   </div>
   <div className={styles.infobox}>
