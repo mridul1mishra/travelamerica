@@ -20,9 +20,9 @@ export default function Home() {
       <SectionSafestNeighborhoods />
       <NeighborhoodRankingCards />
       <div className={styles.container}>
-      <FAQAccordion faqs={faqData} />
+        <FAQAccordion faqs={faqData} />
       </div>
-      <Footer />
+    <Footer />
     </>
   );
 }

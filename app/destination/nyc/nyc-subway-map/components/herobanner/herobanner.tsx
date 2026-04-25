@@ -20,7 +20,7 @@ export default function Hero({
         <p className={styles.subtitle}>{subtitle}</p>
 
         <div className={styles.actions}>
-          <button className={styles.primaryBtn}><a href="/destination/nyc/nyc-subway-map/full">{ctaPrimary}</a></button>
+          <button className={styles.primaryBtn} onClick={() => router.push("/destination/nyc/nyc-subway-map/full")}>{ctaPrimary}</button>
           <a href="/data/majorcities/newyork/assets/map/nyc-subway-map.pdf" download className={styles.secondaryBtn} > {ctaSecondary} </a>
         </div>
 

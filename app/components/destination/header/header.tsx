@@ -36,10 +36,10 @@ export default function Header() {
             </button>
           </li>
 
-          <li><Link href="/majorcities/newyork">New York</Link></li>
-          <li><Link href="/majorcities/losangeles">Los Angeles</Link></li>
-          <li><Link href="/majorcities/lasvegas">Las Vegas</Link></li>
-          <li><Link href="/majorcities/orlando">Orlando</Link></li>
+          <li><Link href="/destination/nyc/best-areas-to-stay">Best Areas to Stay</Link></li>
+          <li><Link href="/destination/nyc/solo-trip-to-nyc">Solo Trip to NYC</Link></li>
+          <li><Link href="/destination/nyc/is-nyc-safe-at-night">NYC Safety</Link></li>
+          <li><Link href="/destination/nyc/nyc-female-solo-travel-guide">Female Travel Guide</Link></li>
         </ul>
       </nav>
     </header>

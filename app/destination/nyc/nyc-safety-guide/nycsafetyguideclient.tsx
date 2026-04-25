@@ -23,6 +23,7 @@ export default function NYCSafetyGuideClient() {
     <>
         <Header />
         <div className={styles.container}>
+        {/* banner component */}
         <SafetyHero />
         <InfoSection sections={sectionsData.sections}  />
         <ScenarioSection />
@@ -30,8 +31,7 @@ export default function NYCSafetyGuideClient() {
         <NeighborhoodSafetySection />        
         <EmergencyContactBlock />
         <FAQAccordion faqs={faqData}/>
-        <LinkHubGrid />
-        
+        <LinkHubGrid />        
         <WhyTrustThisGuide />
         </div>        
         <Footer />

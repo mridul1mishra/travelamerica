@@ -20,6 +20,7 @@ import { ScenarioSection } from '@/app/components/destination/scenariocard/scena
 import { SubwayAccessSection } from '@/app/components/destination/subwayaccess/subwayaccess';
 import faqData from "@/app/data/destination/solotriptonyc/faqsection.json";
 import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import Link from 'next/link';
 
 
 export default function SoloTripNYCClient() {
@@ -44,10 +45,10 @@ export default function SoloTripNYCClient() {
             <li className={styles.closebtn}>
               <button onClick={closeMenu} aria-label="Close menu">✕</button>
             </li>
-           <li style={{ cursor: "pointer" }}><a href="/majorcities/newyork">New York</a></li>
-           <li style={{ cursor: "pointer" }}><a href="/majorcities/losangeles">Los Angeles</a></li>
-           <li style={{ cursor: "pointer" }}><a href="/majorcities/lasvegas">Las Vegas</a></li>
-           <li style={{ cursor: "pointer" }}><a href="/majorcities/orlando">Orlando</a></li> 
+           <li><Link href="/destination/nyc/best-areas-to-stay">Best Areas to Stay</Link></li>
+          <li><Link href="/destination/nyc/solo-trip-to-nyc">Solo Trip to NYC</Link></li>
+          <li><Link href="/destination/nyc/is-nyc-safe-at-night">NYC Safety</Link></li>
+          <li><Link href="/destination/nyc/nyc-female-solo-travel-guide">Female Travel Guide</Link></li>
           </ul>
         </nav>
         </section>

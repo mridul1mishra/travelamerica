@@ -148,11 +148,7 @@
   display: none;
 }
 
-@media (min-width: 900px) {
-  .brandlogo {
-    margin-left: 562px!important; /* or padding-left */
-  }
-}
+
 
 /* Logo */
 .brandlogo {
@@ -166,9 +162,7 @@
   
 }
 @media (max-width: 900px) {
-  .hamburger {
-    display: block;
-  }
+  
 
   .navlinks {
     flex-direction: column;
@@ -215,8 +209,23 @@
   align-items: center;
 }
 @media (min-width: 900px) {
-  .header {
-    width: 70%;
-    margin: 0 0; /* centers the header nicely */
+  .hamburger {
+    display: none;
+  }
+
+  .navlinks {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    transform: none !important;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .closebtn {
+    display: none;
   }
 }

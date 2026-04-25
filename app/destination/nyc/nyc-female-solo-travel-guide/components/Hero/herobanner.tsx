@@ -38,7 +38,6 @@ export default function SafetyHero() {
             <li>Proven ways to outsmart common tourist scams</li>
             <li>How to ride the subway alone (and confidently)</li>
             <li>Safety best practices for solo female travelers</li>
-            <li>Short videos on New York safety in different scenarios</li>
           </ul>
         </div>
 
