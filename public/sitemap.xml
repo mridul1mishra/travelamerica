@@ -6,6 +6,11 @@
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
+  <url>
+    <loc>https://www.travelamerica.work/destination/nyc</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 
   <url>
     <loc>https://www.travelamerica.work/majorcities/newyork</loc>
