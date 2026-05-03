@@ -1,0 +1,25 @@
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3.25rem 1.5rem;
+}
+
+.heading {
+  font-size: 1.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.copy {
+  max-width: 760px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.subtle {
+  max-width: 760px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #666;
+}

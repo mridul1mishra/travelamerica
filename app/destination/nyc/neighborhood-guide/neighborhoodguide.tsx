@@ -3,7 +3,7 @@ import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from "./neighborhoodguide.module.css";
 import Banner from "./components/banner/banner";
-import { IntroSection } from "./components/introsection/introsection";
+import IntroSection  from "./components/introsection/introsection";
 import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
 import { SafetyGrid } from "./components/safetygrid/safetygrid";
 import { AREAS } from "./components/safetygrid/safetygridData";
@@ -17,21 +17,35 @@ import { CautionAreas } from "./components/cautionarea/cautionarea";
 import {CAUTION_AREAS} from "./components/cautionarea/cautionareadata";
 import { InternalLinks } from "./components/InternalLinks/Internallinks";
 import {INTERNAL_LINKS_DATA} from "./components/InternalLinks/interlinksdata";
+import CityOrganization from "./components/cityorganization/cityorganization";
+import NeighborhoodsByStyle from "./components/Neighborhoodbystyle/Neighborhoodbystyle";
+import PopularNeighborhoods from "./components/PopularNeighborhood/Popularneighborhood";
+import WhereFirstTimersStay from "./components/Wherefirsttimerstay/wherefirsttimestay";
+import GettingAround from "./components/Gettingaround/Gettingaround";
+import SafetyOverview from "./components/SafetyOverview/Safetyoverview";
+import NeighborhoodGuideCTA from "./components/Neighborhoodguidecta/Neighborhoodguidecta";
 
 export default function Neighborhoodguide() {
     return(
         <>
         <Header />
         <div className={styles.container}>
-        <Banner />
+        {/* <Banner />*/}
         <IntroSection />
-        <WhyTrustThisGuide />
+        <CityOrganization />
+        <NeighborhoodsByStyle />
+        <PopularNeighborhoods />
+        <WhereFirstTimersStay />
+        <GettingAround />
+        <SafetyOverview />
+        <NeighborhoodGuideCTA />
+         {/*<WhyTrustThisGuide />
         <SafetyGrid areas={AREAS} />
         <NeighborhoodGrid neighborhoods={NEIGHBORHOODS} />
         <TimeOfDaySafety times={TIME_OF_DAY}/>
         <TransitSafety sections={TRANSIT_SECTIONS} />
         <CautionAreas areas={CAUTION_AREAS} />
-        <InternalLinks links={INTERNAL_LINKS_DATA} />;
+        <InternalLinks links={INTERNAL_LINKS_DATA} />;*/}
 
         </div>
         <Footer />
