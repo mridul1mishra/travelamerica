@@ -22,7 +22,7 @@ export default function NycHubPage() {
       <Header />
       <HeroSection />
       <PlanningIntent />
-      <WhyVisit />
+      {/*<WhyVisit />
       <AttractionsHub />
       <NeighborhoodsHub />
       <ExperiencesHub />
@@ -30,7 +30,7 @@ export default function NycHubPage() {
       <WhereToStay />
       <ItinerariesPreview />
       <TravelTips />
-      <DataCaptureCTA />
+      <DataCaptureCTA />*/}
       <Footer />
     </main>
   );
