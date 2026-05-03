@@ -1,0 +1,59 @@
+.section{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.heading{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.subheading{
+    color: #555;
+    margin-bottom: 2.5rem;
+}
+.group {
+    margin-bottom: 2rem;
+}
+
+.label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.selected {
+    background-color: #000!important;
+    color: #fff;
+    border-color: #000!important;
+}
+
+.options {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.options button {
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.options button:hover {
+    border-color: #000;
+}
+.nextStep{
+    margin-top: 3rem;
+}
+.primaryCta{
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    border-radius: 6px;
+    padding: 0.9rem 1.8rem;
+}
