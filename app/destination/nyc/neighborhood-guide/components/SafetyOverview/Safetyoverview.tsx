@@ -27,7 +27,7 @@ export default function SafetyOverview() {
 
       <div className={styles.linkWrap}>
         <Link
-          href="/destination/nyc-safety-guide"
+          href="/destination/nyc/nyc-safety-guide"
           className={styles.link}
         >
           Read the NYC Safety Guide →
