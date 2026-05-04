@@ -15,7 +15,7 @@ export default function NeighborhoodGuideCTA() {
 
       <div className={styles.actions}>
         <Link
-          href="/destination/new-york-city#planning-intent"
+          href="/destination/nyc#planning-intent"
           className={styles.primary}
         >
           Find the best area for your trip
