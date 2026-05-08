@@ -1,6 +1,11 @@
 import styles from './introsection.module.css';
 
-export default function IntroSection() {
+type IntroSectionProps = {
+  tripType: string;
+  interest: string;
+}
+
+export default function IntroSection({tripType, interest}: IntroSectionProps) {
   return (
     <section className={`${styles.background ?? ''}`}>
       <div className={styles.wrapper}>

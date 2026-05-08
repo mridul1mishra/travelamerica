@@ -20,25 +20,30 @@ import {INTERNAL_LINKS_DATA} from "./components/InternalLinks-notused/interlinks
 import CityOrganization from "./components/cityorganization/cityorganization";
 import NeighborhoodsByStyle from "./components/Neighborhoodbystyle/Neighborhoodbystyle";
 import PopularNeighborhoods from "./components/PopularNeighborhood/Popularneighborhood";
-import WhereFirstTimersStay from "./components/Wherefirsttimerstay-notused/wherefirsttimestay";
+import WhereFirstTimersStay from "./components/Wherefirsttimerstay/wherefirsttimestay";
 import GettingAround from "./components/Gettingaround/Gettingaround";
 import SafetyOverview from "./components/SafetyOverview/Safetyoverview";
 import NeighborhoodGuideCTA from "./components/Neighborhoodguidecta/Neighborhoodguidecta";
 
-export default function Neighborhoodguide() {
+type Props = {
+    tripType?: string;
+    interest?: string;
+    duration?: string;
+}
+export default function Neighborhoodguide({tripType, interest, duration}: Props) {
     return(
         <>
         <Header />
         <div className={styles.container}>
         {/* <Banner />*/}
-        <IntroSection />
+        <IntroSection tripType={tripType} interest={interest}/>
         <CityOrganization />
-        <NeighborhoodsByStyle />
-        <PopularNeighborhoods />
+        <NeighborhoodsByStyle interest={interest}/>
+        <PopularNeighborhoods interest={interest}/>
         <WhereFirstTimersStay />
         <GettingAround />
         <SafetyOverview />
-        <NeighborhoodGuideCTA />
+        <NeighborhoodGuideCTA tripType={tripType} interest={interest} />
          {/*<WhyTrustThisGuide />
         <SafetyGrid areas={AREAS} />
         <NeighborhoodGrid neighborhoods={NEIGHBORHOODS} />

@@ -21,7 +21,7 @@ const linkHubData = [
     id: 4,
     title: "NYC Neighborhood Breakdown",
     description: "Understand the vibe, safety, and layout of major NYC neighborhoods.",
-    href: "/majorcities/newyork/landmark"
+    href: "/destination/nyc/neighborhood-guide"
   }
 ];
 

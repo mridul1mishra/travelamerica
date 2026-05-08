@@ -27,7 +27,16 @@ export const metadata = {
 /* =========================
    Page Component
 ========================= */
-export default function NYCSafetyGuide() {
+type PageProps = {
+      searchParams: {
+        tripType?: string;
+        duration?: string;
+        interest?: string;
+      };  
+};
+
+export default function NYCSafetyGuide({searchParams}: PageProps) {
+  const {tripType, duration, interest} = searchParams;
   return (
     <>
       {/* =========================
@@ -120,7 +129,7 @@ export default function NYCSafetyGuide() {
       {/* =========================
           Page Content
       ========================== */}
-      <NeighborhoodguideClient />
+      <NeighborhoodguideClient tripType={tripType} interest={interest} />
     </>
   );
 }
