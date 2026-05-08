@@ -1,6 +1,10 @@
 import styles from './Neighborhoodbystyle.module.css';
 
-export default function NeighborhoodsByStyle() {
+type NeighborhoodsByStyleProps = {
+  interest?: string;
+}
+
+export default function NeighborhoodsByStyle({interest}: NeighborhoodsByStyleProps) {
   return (
     <section className={styles.section}>
       <h2 className={styles.heading}>Neighborhoods by Travel Style</h2>

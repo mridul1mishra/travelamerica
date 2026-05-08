@@ -1,8 +1,8 @@
 import styles from './introsection.module.css';
 
 type IntroSectionProps = {
-  tripType: string;
-  interest: string;
+  tripType?: string;
+  interest?: string;
 }
 
 export default function IntroSection({tripType, interest}: IntroSectionProps) {

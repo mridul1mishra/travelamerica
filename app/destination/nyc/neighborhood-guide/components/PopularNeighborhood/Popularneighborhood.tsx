@@ -1,6 +1,10 @@
 import styles from './Popularneighborhood.module.css';
 
-export default function PopularNeighborhoods() {
+type PopularNeighborhoodsProps = {
+  interest?: string;
+}
+
+export default function PopularNeighborhoods({interest}: PopularNeighborhoodsProps) {
   return (
     <section className={styles.section}>
       <h2 className={styles.heading}>Popular Neighborhoods for Tourists</h2>
