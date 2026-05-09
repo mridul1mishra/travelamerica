@@ -57,57 +57,6 @@ export default function NycHubPage() {
         }}
       />
 
-      {/* =========================
-          FAQPage Schema
-      ========================== */}
-      <script
-        type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: 'Is this New York City travel guide good for first-time visitors?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text:
-                    'Yes, New York City is an excellent destination for first-time visitors, offering famous landmarks, an easy-to-use subway system, diverse neighborhoods, and world-class attractions.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'How many days do you need to visit New York City?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text:
-                    'Most travelers spend 3 to 5 days in New York City to see major attractions, while 5 to 7 days allows for a more relaxed experience across neighborhoods and museums.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'What is the best time to visit New York City?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text:
-                    'The best time to visit New York City is during spring (April to June) and fall (September to November) when the weather is pleasant and the city hosts many events.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Where should tourists stay in New York City?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text:
-                    'Popular areas for tourists include Midtown Manhattan, Lower Manhattan, and parts of Brooklyn such as Downtown Brooklyn and Williamsburg due to their accessibility and attractions.',
-                },
-              },
-            ],
-          }),
-        }}
-      />
 
       {/* =========================
           Page Content
