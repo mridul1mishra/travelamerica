@@ -3,20 +3,20 @@ import NYCClient from "./nycclient";
 import styles from './nyc.module.css';
 
 /* =========================
-   Metadata (SEO foundation)
+   Metadata (AI Resistant)
 ========================= */
 export const metadata = {
-  title: 'New York City Travel Guide – Things to Do, Neighborhoods & Itineraries',
+  title: 'New York City Travel Guide | Plan your NYC trip',
   description:
-    'Plan your New York City trip with our complete NYC travel guide. Discover neighborhoods, top attractions, itineraries, the best time to visit, and travel tips for first-time visitors.',
+    'Plan your New York City trip by choosing where to stay, what to see, and how to explore. Compare neighborhoods, itineraries, and travel options in one place.',
   alternates: {
-    canonical: 'https://www.travelamerica.work/destination/new-york-city',
+    canonical: 'https://www.travelamerica.work/destination/nyc',
   },
   openGraph: {
     title: 'New York City Travel Guide',
     description:
       'Your complete NYC travel guide with neighborhoods, attractions, itineraries and planning tips.',
-    url: 'https://www.travelamerica.work/destination/new-york-city',
+    url: 'https://www.travelamerica.work/destination/nyc',
     type: 'website',
   },
 };
@@ -37,10 +37,10 @@ export default function NycHubPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': ['TouristDestination', 'WebPage'],
-            name: 'New York City',
+            name: 'New York City Travel Guide',
             description:
               'New York City is one of the world’s most popular travel destinations, known for its iconic landmarks, diverse neighborhoods, museums, food scene, and cultural attractions.',
-            url: 'https://www.travelamerica.work/destination/new-york-city',
+            url: 'https://www.travelamerica.work/destination/nyc',
             touristType: 'Urban tourism',
             geo: {
               '@type': 'GeoCoordinates',
@@ -70,7 +70,7 @@ export default function NycHubPage() {
             mainEntity: [
               {
                 '@type': 'Question',
-                name: 'Is New York City good for first-time visitors?',
+                name: 'Is this New York City travel guide good for first-time visitors?',
                 acceptedAnswer: {
                   '@type': 'Answer',
                   text:
