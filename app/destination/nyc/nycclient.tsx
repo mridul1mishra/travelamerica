@@ -22,9 +22,9 @@ export default function NycHubPage() {
       <Header />
       <HeroSection />
       <PlanningIntent />
-      {/*<WhyVisit />
+      <WhyVisit />
       <AttractionsHub />
-      <NeighborhoodsHub />
+      {/*<NeighborhoodsHub />
       <ExperiencesHub />
       <BestTime />
       <WhereToStay />

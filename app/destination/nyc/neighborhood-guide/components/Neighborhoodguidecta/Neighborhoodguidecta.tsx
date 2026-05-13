@@ -14,8 +14,7 @@ export default function NeighborhoodGuideCTA({tripType, interest}: NeighborhoodG
       </h2>
 
       <p className={styles.copy}>
-        Use our planning tools and itineraries to find neighborhoods and
-        experiences that fit your schedule, interests, and travel style.
+        vvvqqrer7o;'[p'
       </p>
 
       <div className={styles.actions}>
