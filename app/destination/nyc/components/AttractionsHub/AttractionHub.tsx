@@ -8,7 +8,7 @@ export default function AttractionsHub() {
 
       <div className={styles.grid}>
         <Link
-          href="/destination/new-york-city/attractions"
+          href="/destination/nyc/things-to-do"
           className={styles.card}
         >
           Explore top NYC attractions

@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './nycthingstodoclient.module.css';
 import Header from "@/app/components/destination/header/header";
 import Footer from "../../../../app/components/Header/Footer/footer";
@@ -31,37 +32,37 @@ export default function NYCThingsToDoClient() {
 
       {/* Experience Buckets */}
       <section className={styles.grid}>
-        <div className={styles.card}>
+        <Link href="/destination/nyc/neighborhood-guide?interest=sightseeing" className={styles.card} style={{ textDecoration: "none", color: "inherit" }}>
           <h3>Landmarks & Iconic Sights</h3>
           <p>
             Ideal for first‑time visitors who want to experience NYC’s most
             recognizable places with minimal travel between stops.
           </p>
-        </div>
+        </Link>
 
-        <div className={styles.card}>
+        <Link href="/destination/nyc/neighborhood-guide?interest=culture" className={styles.card} style={{ textDecoration: "none", color: "inherit" }}>
           <h3>Culture & Museums</h3>
           <p>
             Best for travelers who enjoy slower exploration, museums, galleries,
             and neighborhoods with strong cultural character.
           </p>
-        </div>
+        </Link>
 
-        <div className={styles.card}>
+        <Link href="/destination/nyc/neighborhood-guide?interest=food" className={styles.card} style={{ textDecoration: "none", color: "inherit" }}>
           <h3>Food & Local Experiences</h3>
           <p>
             Designed for travelers who want dining, neighborhoods, and everyday
             NYC life to be the focus of their trip.
           </p>
-        </div>
+        </Link>
 
-        <div className={styles.card}>
+        <Link href="/destination/nyc/neighborhood-guide?interest=outdoors" className={styles.card} style={{ textDecoration: "none", color: "inherit" }}>
           <h3>Outdoors & Walking</h3>
           <p>
             Works well for visitors who enjoy parks, long walks, and balancing
             busy areas with calmer spaces.
           </p>
-        </div>
+        </Link>
       </section>
 
       {/* Decision Bridge */}
@@ -81,9 +82,9 @@ export default function NYCThingsToDoClient() {
           stay and how to structure your visit.
         </p>
 
-        <button className={styles.primaryCta}>
+        <Link href="/destination/nyc#planning-intent" className={styles.primaryCta}>
           Get help planning my NYC trip
-        </button>
+        </Link>
       </section>
       
     </main>

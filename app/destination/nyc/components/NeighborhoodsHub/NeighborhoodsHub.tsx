@@ -8,7 +8,7 @@ export default function NeighborhoodsHub() {
 
       <div className={styles.grid}>
         <Link
-          href="/destination/new-york-city/neighborhoods"
+          href="/destination/nyc/neighborhood-guide"
           className={styles.card}
         >
           Neighborhood guide

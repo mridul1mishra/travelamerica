@@ -8,7 +8,7 @@ export const generateMetadata = () => ({
     follow: true,
   },
   alternates: {
-      canonical: 'https://www.travelamerica.work/destination/solo-trip-to-nyc',
+      canonical: 'https://www.travelamerica.work/destination/nyc/solo-trip-to-nyc',
     },
     twitter: {
     card: "summary_large_image",
@@ -34,10 +34,10 @@ const articleSchema = {
     "name": "Travel America",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://yourdomain.com/logo.png"
+      "url": "https://www.travelamerica.work/logo.png"
     }
   },
-  "mainEntityOfPage": "https://yourdomain.com/solo-trip-to-nyc"
+  "mainEntityOfPage": "https://www.travelamerica.work/destination/nyc/solo-trip-to-nyc"
 };
 
 const faqSchema = {
@@ -88,8 +88,8 @@ export default async function SoloTripToNYC() {
   <>
       {/* Schema blocks */}
       <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}/>
-      <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
-      <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}/>
+      <script id="schema-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
+      <script id="schema-howto" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}/>
       
   <SoloTripNYCClient />
   </>

@@ -7,7 +7,7 @@ export const metadata = {
   title: "NYC Solo Female Safety Guide 2026 | Tips, Areas & Scenarios",
   description: "A practical NYC safety guide for solo women. Learn safe areas, subway tips, night safety, and what to do in real situations.", 
   alternates: { 
-    canonical: "https://www.travelamerica.work/destination/nyc/nyc-solo-female-travel-safety-guide"
+    canonical: "https://www.travelamerica.work/destination/nyc/nyc-female-solo-travel-guide"
    },
 
   robots: {
@@ -25,7 +25,7 @@ export const metadata = {
   openGraph: { 
     title: "NYC Solo Female Travel Safety Guide (2026)", 
     description: "A calm, practical, scenario-based NYC safety guide for solo female travelers. Learn safe areas, subway safety, night safety, and what to do in real situations.", 
-    url: "https://www.travelamerica.work/destination/nyc/nyc-solo-female-travel-safety-guide", 
+    url: "https://www.travelamerica.work/destination/nyc/nyc-female-solo-travel-guide",
     siteName: "Travel America", 
     type: "article", 
     locale: "en_US", 
@@ -133,13 +133,13 @@ const BreadCrumbList = {
       "@type": "ListItem",
       "position": 2,
       "name": "New York City",
-      "item": "https://www.travelamerica.work/destination/solo-trip-to-nyc"
+      "item": "https://www.travelamerica.work/destination/nyc"
     },
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "NYC Solo Female Travel Safety Guide",
-      "item": "https://www.travelamerica.work/destination/nyc/nyc-solo-female-travel-guide"
+      "name": "NYC Solo Female Travel Guide",
+      "item": "https://www.travelamerica.work/destination/nyc/nyc-female-solo-travel-guide"
     }
   ]
 }

@@ -14,19 +14,20 @@ export default function NeighborhoodGuideCTA({tripType, interest}: NeighborhoodG
       </h2>
 
       <p className={styles.copy}>
-        vvvqqrer7o;'[p'
+        Use our planning tools and itineraries to find neighborhoods and
+        experiences that fit your schedule, interests, and travel style.
       </p>
 
       <div className={styles.actions}>
         <Link
-          href="/destination/nyc#planning-intent"
+          href="/destination/nyc/best-areas-to-stay"
           className={styles.primary}
         >
           Find the best area for your trip
         </Link>
 
         <Link
-          href="/destination/new-york-city/itineraries"
+          href="/majorcities/newyork/solo-itinerary"
           className={styles.secondary}
         >
           View NYC itineraries

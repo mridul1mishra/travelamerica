@@ -24,13 +24,13 @@ export default function NycHubPage() {
       <PlanningIntent />
       <WhyVisit />
       <AttractionsHub />
-      {/*<NeighborhoodsHub />
+      <NeighborhoodsHub />
       <ExperiencesHub />
-      <BestTime />
       <WhereToStay />
       <ItinerariesPreview />
-      <TravelTips />
-      <DataCaptureCTA />*/}
+      <DataCaptureCTA />
+      {/*<BestTime />*/}
+      {/*<TravelTips />*/}
       <Footer />
     </main>
   );
