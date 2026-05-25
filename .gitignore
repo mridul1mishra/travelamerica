@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+Travel America/scripts/README-day1.md
+Travel America/scripts/strip-affiliate-params.mjs
+Travel America/deep-repo-review.md
+Travel America/TravelAmerica-90Day-ExecutionPlan.docx
+Travel America/daily-plan.json
+Travel America/daily-log.md
+scripts/strip-report.json
+scripts/strip-affiliate-params.mjs
+scripts/README-day1.md
+daily-log.md
+Travel America/code-review-and-90-day-plan.md
+Travel America/TravelAmerica-DayWisePlan.docx
