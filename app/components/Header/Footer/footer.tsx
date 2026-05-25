@@ -10,7 +10,7 @@ const Footer = () => {
     <div>
       <h3>Solo Travel</h3>
       <ul className="vertical-list">
-        <li style={{cursor: 'pointer'}}><a href="/majorcities/newyork/solo-travel">Solo Travel Tips</a></li>
+        <li style={{cursor: 'pointer'}}><a href="/destination/nyc/solo-trip-to-nyc">Solo Travel Tips</a></li>
         <li style={{cursor: 'pointer'}}><a href="/majorcities/newyork/solo-itinerary">Solo Travel Itinerary</a></li>
         <li style={{cursor: 'pointer'}}><a href="/destination/nyc/solo-trip-to-nyc">Solo Trip to NYC Guide</a></li>
       </ul>
@@ -26,9 +26,9 @@ const Footer = () => {
     <div>
       <h3>Safety Tips</h3>
       <ul className="vertical-list">
-        <li style={{cursor: 'pointer'}}><a href="/majorcities/newyork/nyc-safety-solo-travelers">Is NYC safe for travel?</a></li>
-        <li style={{cursor: 'pointer'}}><a href="/majorcities/newyork/nyc-safety-solo-travelers-action-guide">Safety Action Guide</a></li>
-        <li style={{cursor: 'pointer'}}><a href="/majorcities/newyork/solo-travel">Solo Travel Safety tips</a></li>
+        <li style={{cursor: 'pointer'}}><a href="/destination/nyc/nyc-safety-guide">Is NYC safe for travel?</a></li>
+        <li style={{cursor: 'pointer'}}><a href="/destination/nyc/nyc-safety-guide">Safety Action Guide</a></li>
+        <li style={{cursor: 'pointer'}}><a href="/destination/nyc/solo-trip-to-nyc">Solo Travel Safety tips</a></li>
       </ul>
     </div>
     

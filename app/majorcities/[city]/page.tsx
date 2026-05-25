@@ -102,7 +102,7 @@ export default async function CityPage({ params }: PageProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Top Attractions",
-        "url": "https://www.travelamerica.work/majorcities/newyork/solo-travel"
+        "url": "https://www.travelamerica.work/majorcities/newyork/landmark"
       },
       {
         "@type": "ListItem",
@@ -114,7 +114,7 @@ export default async function CityPage({ params }: PageProps) {
         "@type": "ListItem",
         "position": 3,
         "name": "Solo Travel Tips",
-        "url": "https://www.travelamerica.work/majorcities/newyork/solo-travel"
+        "url": "https://www.travelamerica.work/destination/nyc/solo-trip-to-nyc"
       }
     ]
   }

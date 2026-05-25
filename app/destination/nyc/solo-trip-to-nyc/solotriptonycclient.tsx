@@ -48,7 +48,7 @@ export default function SoloTripNYCClient() {
             </li>
            <li><Link href="/destination/nyc/best-areas-to-stay">Best Areas to Stay</Link></li>
           <li><Link href="/destination/nyc/solo-trip-to-nyc">Solo Trip to NYC</Link></li>
-          <li><Link href="/destination/nyc/is-nyc-safe-at-night">NYC Safety</Link></li>
+          <li><Link href="/destination/nyc/nyc-safety-guide">NYC Safety</Link></li>
           <li><Link href="/destination/nyc/nyc-female-solo-travel-guide">Female Travel Guide</Link></li>
           </ul>
         </nav>
@@ -60,7 +60,7 @@ export default function SoloTripNYCClient() {
                     <p className={styles.subtext}>Safe, confident, and stress‑free solo travel in NYC.</p>
 
                     <div className={styles.herobuttons}>
-                        <a href="/majorcities/newyork/nyc-safety-solo-travelers" className={`${styles.btn} ${styles.primary}`}>Start with Safety </a>
+                        <a href="/destination/nyc/nyc-safety-guide" className={`${styles.btn} ${styles.primary}`}>Start with Safety </a>
                         <a href="/majorcities/newyork/landmark" className={`${styles.btn} ${styles.secondary}`}>Where to Stay</a>
                     </div>
 

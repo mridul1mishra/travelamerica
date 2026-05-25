@@ -41,7 +41,7 @@ export default function GroupTravelPage() {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.travelamerica.work/majorcities/newyork/solo-travel"
+    "@id": "https://www.travelamerica.work/majorcities/newyork/group-travel"
   },
   "headline": "Group Travel in NYC: Safety Tips, Packing Essentials & Landmark Planning",
   "description": "Explore NYC confidently with our group travel safety guide — smart packing tips, safe itineraries, and must-see landmarks for every explorer.",

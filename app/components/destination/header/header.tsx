@@ -38,7 +38,7 @@ export default function Header() {
 
           <li><Link href="/destination/nyc/best-areas-to-stay">Best Areas to Stay</Link></li>
           <li><Link href="/destination/nyc/solo-trip-to-nyc">Solo Trip to NYC</Link></li>
-          <li><Link href="/destination/nyc/is-nyc-safe-at-night">NYC Safety</Link></li>
+          <li><Link href="/destination/nyc/nyc-safety-guide">NYC Safety</Link></li>
           <li><Link href="/destination/nyc/nyc-female-solo-travel-guide">Female Travel Guide</Link></li>
         </ul>
       </nav>

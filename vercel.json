@@ -1,5 +1,4 @@
 {
-  
   "git": {
     "deploymentEnabled": {
       "master": true
@@ -11,8 +10,6 @@
       "preview": false
     }
   },
-
-
   "redirects": [
     {
       "source": "/(.*)",
@@ -49,6 +46,36 @@
     {
       "source": "/majorcities/losangeles/solo-itinerary",
       "destination": "/majorcities/newyork/solo-itinerary",
+      "permanent": true
+    },
+    {
+      "source": "/destination/nyc/is-nyc-safe-at-night",
+      "destination": "/destination/nyc/nyc-safety-guide",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/newyork/nyc-safety-solo-travelers",
+      "destination": "/destination/nyc/nyc-safety-guide",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/newyork/nyc-safety-solo-travelers-essentials",
+      "destination": "/destination/nyc/nyc-safety-guide",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/newyork/nyc-safety-solo-travelers-action-guide",
+      "destination": "/destination/nyc/nyc-safety-guide",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/newyork/nyc-safety-for-solo-female-travelers",
+      "destination": "/destination/nyc/nyc-female-solo-travel-guide",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/newyork/solo-travel",
+      "destination": "/destination/nyc/solo-trip-to-nyc",
       "permanent": true
     }
   ]

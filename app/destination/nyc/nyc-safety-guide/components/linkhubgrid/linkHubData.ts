@@ -9,13 +9,13 @@ const linkHubData = [
     id: 2,
     title: "NYC Subway Guide",
     description: "Navigate the subway confidently with maps, tips, and safety advice.",
-    href: "/majorcities/newyork/nyc-safety-solo-travelers"
+    href: "/destination/nyc/subway-safety-guide"
   },
   {
     id: 3,
     title: "NYC Solo Travel Guide",
     description: "A complete guide to exploring New York City on your own.",
-    href: "/majorcities/newyork/nyc-safety-solo-travelers-action-guide"
+    href: "/destination/nyc/solo-trip-to-nyc"
   },
   {
     id: 4,

@@ -130,7 +130,7 @@ const city = Array.isArray(cityParam) ? cityParam[0] : cityParam;
               <h3>Travel Smart</h3>
               <ul>
                 <li>
-                  <a href="/majorcities/newyork/solo-travel" style={{ cursor: "pointer" }}><span className="icon">🔐</span> Safety Tips</a>
+                  <a href="/destination/nyc/nyc-safety-guide" style={{ cursor: "pointer" }}><span className="icon">🔐</span> Safety Tips</a>
                 </li>
                 <li>
                   <a href="/majorcities/newyork/landmark" style={{ cursor: "pointer" }}><span className="icon">🧳</span> Solo Travel Advice</a>

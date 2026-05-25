@@ -171,7 +171,7 @@ const schema4 = {
       "@type": "ListItem",
       "position": 3,
       "name": "Solo Travel",
-      "item": "https://www.travelamerica.work/majorcities/newyork/solo-travel"
+      "item": "https://www.travelamerica.work/destination/nyc/solo-trip-to-nyc"
     }
   ]
 };
