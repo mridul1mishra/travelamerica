@@ -17,6 +17,7 @@ import LinkHubGrid from './components/linkhubgrid/LinkHubGrid';
 import InfoSection from './components/infosection/infosection';
 import sectionsData from "./components/infosection/infosection.json";
 import EmergencyContactBlock from './components/emergencycontactblock/EmergencyContactBlock';
+import SafetyNarrative from './components/safetynarrative/SafetyNarrative';
 
 export default function NYCSafetyGuideClient() {
   return (
@@ -26,6 +27,7 @@ export default function NYCSafetyGuideClient() {
         {/* banner component */}
         <SafetyHero />
         <InfoSection sections={sectionsData.sections}  />
+        <SafetyNarrative />
         <ScenarioSection />
         <SafetyTipsGrid />        
         <NeighborhoodSafetySection />        

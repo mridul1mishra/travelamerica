@@ -18,6 +18,7 @@ import faqData from "./components/FAQAccordian/FAQACcordina.json";
 import Footer from "@/app/components/Header/Footer/footer";
 import LinkHubGrid from "./components/linkhubgrid/LinkHubGrid";
 import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import FemaleSafetyNarrative from "./components/safetynarrative/FemaleSafetyNarrative";
 
 
 
@@ -28,6 +29,7 @@ export default function FemaleSoloTravelGuide() {
       <div className={styles.container}>
       <Hero />
       <InfoSection sections={sectionsData.sections}/>
+      <FemaleSafetyNarrative />
       <CoreSafetyPrinciplesGrid />
       <ScenarioSection />
       <ScenarioFilter />
