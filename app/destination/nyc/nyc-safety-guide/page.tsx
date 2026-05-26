@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Is New York City Safe for Tourists in 2026? Safety Tips and What to know",
-  description: "Planning a trip to New York City? Learn how safe New York city is for tourist in 2026, which areas are safest, and practical tips to stay confident while visiting.", 
+  title: "Is NYC Safe in 2026? An Honest, Local's Take",
+  description: "Yes, NYC is safe — but with caveats. Get the real picture: which neighborhoods to trust, subway safety tips, scams to dodge, and what to do in an emergency.", 
   
   alternates: { 
     canonical: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide"
@@ -19,8 +19,8 @@ export const metadata = {
   },
 
   openGraph: { 
-    title: "NYC Safety Guide (2026)", 
-    description: "Navigate NYC confidently with a practical, scenario-based safety guide — neighborhoods, subway tips, scams, and emergency steps.", 
+    title: "Is NYC Safe in 2026? An Honest, Local's Take", 
+    description: "Yes, NYC is safe — but with caveats. Get the real picture: which neighborhoods to trust, subway safety tips, scams to dodge, and what to do in an emergency.", 
     url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide", 
     siteName: "Travels Americas", 
     type: "article", 
@@ -37,8 +37,8 @@ export const metadata = {
 
   twitter: { 
     card: "summary_large_image", 
-    title: "NYC Safety Guide (2026)", 
-    description: "A calm, practical NYC safety guide for solo travelers — neighborhoods, subway safety, scams, and emergency steps.", 
+    title: "Is NYC Safe in 2026? An Honest, Local's Take", 
+    description: "Yes, NYC is safe — but with caveats. Get the real picture: which neighborhoods to trust, subway safety tips, scams to dodge, and what to do in an emergency.", 
     images: [
       "/data/metadataimage/nyc-safety-guide-og.png"
     ] 

@@ -1,8 +1,8 @@
 import Script from "next/script";
 
 export const generateMetadata = () => ({
-  title: 'Solo Trip to New York City: Complete First Timer Guide (2026)',
-  description:  'Planning a solo trip to New York City? This first-timer guide covers safety, neighborhood, costs, itinerary ideas, and essential tips for solo travelers in 2026',
+  title: 'Solo Trip to NYC 2026: What First-Timers Need to Know',
+  description:  'A practical NYC solo travel guide: safest areas, transit tips, daily costs, and a 3-day itinerary. Written for first-timers who want honest answers, not hype.',
   robots: {
     index: true,
     follow: true,
@@ -12,8 +12,8 @@ export const generateMetadata = () => ({
     },
     twitter: {
     card: "summary_large_image",
-    title: 'Solo Trip to NYC (2026 Guide): Safety, Itinerary, Neighborhoods & Tips',
-    description:  'Plan your NYC solo trip with safe areas, smart transit tips, and a simple 3‑day itinerary.',
+    title: 'Solo Trip to NYC 2026: What First-Timers Need to Know',
+    description:  'A practical NYC solo travel guide: safest areas, transit tips, daily costs, and a 3-day itinerary. Written for first-timers who want honest answers, not hype.',
     images: ["https://www.travelsamericas.com/social/solo-trip-to-nyc-gritty.png"]
   }
 });

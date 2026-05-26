@@ -4,8 +4,8 @@ import ClientPage from "./solofemaletravelguideclient";
 
 
 export const metadata = {
-  title: "NYC Solo Female Safety Guide 2026 | Tips, Areas & Scenarios",
-  description: "A practical NYC safety guide for solo women. Learn safe areas, subway tips, night safety, and what to do in real situations.", 
+  title: "New York City Safety for Solo Female Travelers (2026)",
+  description: "A practical NYC safety guide for solo women: safest neighborhoods, subway tips after dark, what to wear, real scenarios, and emergency steps you can use today.", 
   alternates: { 
     canonical: "https://www.travelsamericas.com/destination/nyc/nyc-female-solo-travel-guide"
    },
@@ -23,8 +23,8 @@ export const metadata = {
   },
 
   openGraph: { 
-    title: "NYC Solo Female Travel Safety Guide (2026)", 
-    description: "A calm, practical, scenario-based NYC safety guide for solo female travelers. Learn safe areas, subway safety, night safety, and what to do in real situations.", 
+    title: "New York City Safety for Solo Female Travelers (2026)", 
+    description: "A practical NYC safety guide for solo women: safest neighborhoods, subway tips after dark, what to wear, real scenarios, and emergency steps you can use today.", 
     url: "https://www.travelsamericas.com/destination/nyc/nyc-female-solo-travel-guide",
     siteName: "Travels Americas", 
     type: "article", 
@@ -40,8 +40,8 @@ export const metadata = {
 
   twitter: { 
     card: "summary_large_image", 
-    title: "NYC Solo Female Travel Safety Guide (2026)", 
-    description: "Practical, scenario-based safety advice for solo women navigating New York City confidently.", 
+    title: "New York City Safety for Solo Female Travelers (2026)", 
+    description: "A practical NYC safety guide for solo women: safest neighborhoods, subway tips after dark, what to wear, real scenarios, and emergency steps you can use today.", 
     images: [
     "https://www.travelsamericas.com/data/majorcities/newyork/assets/safety/nyc-safety-guide.png"
   ] 
