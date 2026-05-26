@@ -115,7 +115,7 @@ const Article = {
       "url": "https://www.travelamerica.work/logo.png"
     }
   },
-  "url": "https://www.travelamerica.work/destination/nyc/nyc-solo-female-travel-guide",
+  "url": "https://www.travelamerica.work/destination/nyc/nyc-female-solo-travel-guide",
   "datePublished": "2026-01-01",
   "dateModified": "2026-01-01"
 }

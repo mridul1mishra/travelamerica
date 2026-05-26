@@ -1,10 +1,8 @@
 "use client"
-import { useState, useEffect, ReactNode } from "react";
+import { useState, useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import "./header.css"; // keep your CSS
-import Head from "next/head";
 
 type HeroProps = {
   image: string | StaticImageData; // accept Next.js image imports
@@ -24,40 +22,11 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  // Preload tags were previously emitted via <Head> from next/head, which is a no-op
+  // in the App Router. The logo image already renders below with priority/fetchPriority
+  // set, which is the supported App Router pattern.
   return (
     <>
-    <Head>
-        <link
-          rel="preload"
-          as="image"
-          href="/data/logo.webp"
-          type="image/png"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="/data/logo3.webp"
-          type="image/png"
-        />
-        <link
-    rel="preload"
-    as="image"
-    href="/data/logo-300.webp"
-    type="image/webp"
-  />
-  <link
-    rel="preload"
-    as="image"
-    href="/data/logo3-150.webp"
-    type="image/webp"
-  />
-  <link
-    rel="preload"
-    as="image"
-    href="/data/logo3-300.webp"
-    type="image/webp"
-  />
-      </Head>
     <section className="hero">
         <div style={{ position: "relative", width: "100%", height: "auto", aspectRatio: "1295 / 832", marginTop: "77px" }}>
           <Image src={typeof image === "string" ? image : image.src} alt={bannerText} fill priority fetchPriority="high" decoding="async" style={{ objectFit: "cover", objectPosition: "bottom" }}/>

@@ -1,33 +1,46 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
-module.exports = withBundleAnalyzer({
-  reactStrictMode: true,
-});
 import type { NextConfig } from "next";
+import bundleAnalyzer from "@next/bundle-analyzer";
+
+// Previously this file had both a CommonJS `module.exports = withBundleAnalyzer(...)`
+// block AND an ESM `export default withBundleAnalyzer(nextConfig)`. Next loaded the
+// ESM one, so the headers() function below was the live config, but the CJS block
+// was confusing and double-wrapped the analyzer. ESM-only now.
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
+
+// Tightened CSP and added the standard hardening headers (HSTS, X-Content-Type-Options,
+// Referrer-Policy, Permissions-Policy). img-src now lists the hosts we actually use
+// instead of wildcard `https:`, which previously allowed any HTTPS image host.
+const csp = `
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
+  style-src 'self' 'unsafe-inline';
+  img-src 'self' data: https://www.travelamerica.work https://www.googletagmanager.com https://www.google-analytics.com;
+  font-src 'self' https://fonts.gstatic.com;
+  connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+  frame-src 'none';
+  base-uri 'self';
+  form-action 'self';
+`
+  .replace(/\s{2,}/g, " ")
+  .trim();
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   async headers() {
     return [
       {
-        source: "/(.*)", // applies to all routes
+        source: "/(.*)",
         headers: [
-          {
-            key: "Content-Security-Policy",
-            value: `
-              default-src 'self';
-              script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
-              style-src 'self' 'unsafe-inline';
-              img-src 'self' data: https:;
-              font-src 'self' https://fonts.gstatic.com;
-              connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
-              frame-src 'none';
-            `.replace(/\s{2,}/g, " ").trim(), // compact the header
-          },
-          
+          { key: "Content-Security-Policy", value: csp },
+          { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
         ],
-      }
+      },
     ];
   },
 };

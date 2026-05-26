@@ -6,7 +6,7 @@ export const generateMetadata = () => ({
     follow: true,
   },
   alternates: {
-      canonical: 'https://www.travelamerica.work/majorcities/newyork/nyc-solo-travel-safety',
+      canonical: 'https://www.travelamerica.work/majorcities/newyork/nyc-safety-solo-travelers-essentials',
     },
     twitter: {
     card: "summary_large_image",

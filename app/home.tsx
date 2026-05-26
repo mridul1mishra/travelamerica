@@ -7,8 +7,6 @@ import Footer from './components/Header/Footer/footer';
 
 import FAQ from './components/faq/faq';
 import { getFaq } from './lib/FaqData';
-import Head from 'next/head';
-import Script from 'next/script';
 
 const section: StorySection = mySectionData as StorySection;
 export default async function Home(){

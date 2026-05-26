@@ -27,7 +27,7 @@ export const metadata = {
     locale: "en_US", 
     images: [ 
       { 
-        url: "nyc-safety-guide-og.png", 
+        url: "/data/metadataimage/nyc-safety-guide-og.png", 
         width: 1200, 
         height: 630, 
         alt: "Minimalist NYC skyline with bold title: NYC Safety Guide"
@@ -40,7 +40,7 @@ export const metadata = {
     title: "NYC Safety Guide (2026)", 
     description: "A calm, practical NYC safety guide for solo travelers — neighborhoods, subway safety, scams, and emergency steps.", 
     images: [
-      "\data\metadataimage\nyc-safety-guide-og.png"
+      "/data/metadataimage/nyc-safety-guide-og.png"
     ] 
   }
 };
@@ -56,16 +56,16 @@ export default function NYCSafetyGuide() {
   "@type": "Guide",
   "name": "NYC Safety Guide for Solo Travelers",
   "description": "A practical, scenario-based safety guide for navigating New York City confidently.",
-  "url": "https://yourdomain.com/destination/nyc/nyc-safety-guide",
+  "url": "https://www.travelamerica.work/destination/nyc/nyc-safety-guide",
   "inLanguage": "en-US",
   "isPartOf": {
     "@type": "WebSite",
-    "name": "Your Brand Name",
-    "url": "https://yourdomain.com"
+    "name": "Travel America",
+    "url": "https://www.travelamerica.work"
   },
   "author": {
     "@type": "Organization",
-    "name": "Your Brand Name"
+    "name": "Travel America"
   }
 }
   const FAQSchema = {
@@ -114,7 +114,7 @@ export default function NYCSafetyGuide() {
       "@type": "ListItem",
       "position": 1,
       "name": "Destinations",
-      "item": "https://www.travelamerica.com/majorcities/newyork"
+      "item": "https://www.travelamerica.work/majorcities/newyork"
     },
     {
       "@type": "ListItem",

@@ -23,7 +23,7 @@ export const metadata = {
     description:
       "Download the official 2025 NYC subway map and learn how to navigate the system safely and confidently as a solo traveler.",
     url: "https://www.travelamerica.work/destination/nyc/nyc-subway-map",
-    siteName: "Your Travel Hub",
+    siteName: "Travel America",
     type: "article",
     locale: "en_US",
     images: [
@@ -49,17 +49,16 @@ export const metadata = {
 
 import NYCSubwayMapClient from './nycsubwaymapclient';
 import schema from "./nyc-subway-map.schema.json";
-import Head from "next/head";
 
 export default function Page(){
+    // JSON-LD script lives directly in the JSX (App Router pattern); the previous
+    // <Head> wrapper from next/head was a no-op in App Router and the schema was
+    // never being emitted.
     return(
         <>
-        <Head>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}/>
-        </Head>
-        <NYCSubwayMapClient />
+            <NYCSubwayMapClient />
         </>
-
     )
 
 }

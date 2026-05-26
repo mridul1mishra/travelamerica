@@ -4,7 +4,7 @@ import PlanningIntent from './components/PlanningIntent/PlanningIntent';
 import WhyVisit from './components/WhyVisit/WhyVisit';
 import AttractionsHub from './components/AttractionsHub/AttractionHub';
 import NeighborhoodsHub from './components/NeighborhoodsHub/NeighborhoodsHub';
-import ExperiencesHub from './components/Experiencehub/ExperiencesHub';
+import ExperiencesHub from './components/ExperiencesHub/ExperiencesHub';
 import BestTime from './components/Besttime/BestTime';
 import WhereToStay from './components/WhereToStay/WhereToStay';
 import ItinerariesPreview from './components/ItinerariesPreview/ItinerariesPreview';

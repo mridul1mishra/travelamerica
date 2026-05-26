@@ -1,4 +1,4 @@
-import NYCThingsToDoClient from './nycthingstodclient';
+import NYCThingsToDoClient from './nycthingstodoclient';
 
 export const metadata = {
   title: 'Things to Do in New York City | Plan Your NYC Experience',

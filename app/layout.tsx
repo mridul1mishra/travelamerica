@@ -9,8 +9,12 @@ export const viewport = {
   viewportFit: "cover",
 };
 export const metadata: Metadata = {
+  // metadataBase makes relative URLs in openGraph/twitter image fields resolve
+  // against the production origin, and silences the Next "metadataBase not set"
+  // build warning. Used as the base for any non-absolute metadata URL.
+  metadataBase: new URL("https://www.travelamerica.work"),
   title: {
-    default: "Travel Americas | Discover Iconic Cities to Visit",
+    default: "Travel America | Discover Iconic Cities to Visit",
     template: "%s", // allows page.tsx to inject its own title
   },
   description: "Discover carefully selected city guides for Las Vegas, Orlando, New York, and Los Angeles. Explore culture, food, and attractions with insider insights",

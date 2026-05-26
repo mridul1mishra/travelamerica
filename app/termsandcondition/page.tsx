@@ -1,7 +1,5 @@
-"use client"
 import Footer from "../components/Header/Footer/footer";
 import Header from "../components/Header/header";
-import banner from "../../public/data/termsandcondition.jpeg";
 import styles from "../termsandcondition/termsstyles.module.css";
 
 export default function TermsPage() {
@@ -9,7 +7,7 @@ return (
 <>
 <Header image="" bannerText="" />
  <main className={styles.container}>
-      <h1 className={styles.title}>Terms of Service — Travel Americas</h1>
+      <h1 className={styles.title}>Terms of Service — Travel America</h1>
       
 
       <section className={styles.banner} aria-hidden="true">
@@ -18,7 +16,7 @@ return (
           <h2 style={{ position: 'absolute', left: '-9999px', top: 'auto' }}>Travel site banner</h2>
 
           {/* Decorative SVG illustration — face free, animated shapes */}
-          <img className={styles.imagebanner} src="data\terms-and-condition.png" alt="privacy"></img>
+          <img className={styles.imagebanner} src="/data/terms-and-condition.png" alt="Terms of service banner"></img>
 
         </div>
 

@@ -28,15 +28,15 @@ export const metadata = {
    Page Component
 ========================= */
 type PageProps = {
-      searchParams: {
+      searchParams: Promise<{
         tripType?: string;
         duration?: string;
         interest?: string;
-      };  
+      }>;
 };
 
-export default function NYCSafetyGuide({searchParams}: PageProps) {
-  const {tripType, duration, interest} = searchParams;
+export default async function NYCSafetyGuide({searchParams}: PageProps) {
+  const {tripType, duration, interest} = await searchParams;
   return (
     <>
       {/* =========================

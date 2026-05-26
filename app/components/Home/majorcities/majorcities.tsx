@@ -3,21 +3,15 @@ import React from "react";
 import "./majorcities.css"; // optional if you want to style it
 import { StoriesSectionProps } from "../../../models/story";
 import StoryCard from "./storycard/storycard";
-import Head from "next/head";
 
-interface MajorCitiesProps {
-  section: StoriesSectionProps;
-}
+// Preload links were previously emitted via <Head> from next/head, which is a no-op
+// in the App Router. If preloading is still desired, move these to app/layout.tsx
+// as <link rel="preload"> inside <head>, or use next/font for the Corben font.
 
 export default function Majorcities({ section: { heading, storydescription, stories } }: StoriesSectionProps) {
-  
+
     return (
       <>
-      <Head>
-        <link rel="preload" as="font" href="/data/corben-cdnfonts/Corben-Bold.woff2" type="font/woff2" crossOrigin="anonymous"/>
-        <link rel="preload" as="image" href="/data/logo3.webp" type="image/png"/>
-        
-      </Head>
         <section className="travel-stories">
   <h1  className="section-heading">{heading}</h1>
   <p className="description-text">{storydescription}</p>

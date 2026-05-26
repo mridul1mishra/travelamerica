@@ -1,46 +1,54 @@
-import React, {JSX} from "react";
+import React from "react";
 import Footer from "../../components/Header/Footer/footer";
 import Header from "../../components/Header/header";
 import Placevisit from "../../components/majorcities/placevisitsection/placevisit";
 import CityUI from "./cityui";
 import { getAirportData } from "@/app/lib/getAirportData";
-import Head from "next/head";
+
 type PageProps = {
-  params: { city: string };
+  params: Promise<{ city: string }>;
 };
 
 
 export default async function CityPage({ params }: PageProps) {
   const resolvedParams = await params;
-  
+
   const city = resolvedParams?.city;
-  // optional: lookup table for lat/lng, wiki, etc.
+  // Lookup table for lat/lng, wiki, etc.
+  // If a city isn't in this table, we still render the page but omit the
+  // containedInPlace block from the schema rather than emitting literal `undefined`
+  // values into JSON-LD (Google flags those as invalid structured data).
   const cityData: Record<string, { lat: string; lng: string; wiki: string }> = {
-    newyork: { lat: "40.7128", lng: "-74.0060", wiki: "New_York_City" },
-    chicago: { lat: "41.8781", lng: "-87.6298", wiki: "Chicago" },
-    // add more cities here
+    newyork:    { lat: "40.7128",  lng: "-74.0060",  wiki: "New_York_City" },
+    chicago:    { lat: "41.8781",  lng: "-87.6298",  wiki: "Chicago" },
+    losangeles: { lat: "34.0522",  lng: "-118.2437", wiki: "Los_Angeles" },
+    lasvegas:   { lat: "36.1699",  lng: "-115.1398", wiki: "Las_Vegas" },
+    orlando:    { lat: "28.5383",  lng: "-81.3792",  wiki: "Orlando,_Florida" },
   };
 
   const data = cityData[city];
-  const schema = {"@context": "https://schema.org",
+  const schema: Record<string, unknown> = {
+    "@context": "https://schema.org",
     "@type": "TouristDestination",
     "@id": `https://www.travelamerica.work/majorcities/${city}#destination`,
     "name": `${city.charAt(0).toUpperCase() + city.slice(1)} City`,
     "description": `Discover ${city} City: landmarks, food, and solo travel experiences for travelers in America.`,
     "url": `https://www.travelamerica.work/majorcities/${city}`,
-    "containedInPlace": {
-      "@type": "City",
-      "@id": `https://en.wikipedia.org/wiki/${data?.wiki}`,
-      "name": city,
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": data?.lat,
-        "longitude": data?.lng,
-      },
-    },
     "image": `https://www.travelamerica.work/data/${city}.jpg`,
     "touristType": "Solo Travelers",
   };
+  if (data) {
+    schema.containedInPlace = {
+      "@type": "City",
+      "@id": `https://en.wikipedia.org/wiki/${data.wiki}`,
+      "name": city,
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": data.lat,
+        "longitude": data.lng,
+      },
+    };
+  }
 
   const schema1 = city === "newyork" ? {
   "@context": "https://schema.org",

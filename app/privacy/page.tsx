@@ -1,10 +1,8 @@
-"use client"
 import Footer from "../components/Header/Footer/footer";
 import Header from "../components/Header/header";
-import banner from "../../public/data/termsandcondition.jpeg";
 import styles from "./privacy.module.css";
 
-export default function TermsPage() {
+export default function PrivacyPage() {
 return (
 <>
 <Header image="" bannerText="" />
@@ -16,7 +14,7 @@ return (
         <div className={styles.bannerInner}>
           {/* Accessible hidden heading for screen readers */}
           <h2 style={{ position: 'absolute', left: '-9999px', top: 'auto' }}>Travel site banner</h2>
-          <img className={styles.imagebanner} src="data\majorcities\orlando\assets\privacybolicybanner.png" alt="privacy"></img>
+          <img className={styles.imagebanner} src="/data/majorcities/orlando/assets/privacybolicybanner.png" alt="Privacy policy banner"></img>
 
 
         </div>
