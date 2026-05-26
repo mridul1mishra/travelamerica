@@ -1,5 +1,5 @@
 export const generateMetadata = () => ({
-  title: 'Solo Travel NYC | Top Landmarks & Routes',
+  title: 'Solo Travel NYC | Top Landmarks and Routes',
   description:  'Traveling alone in New York? Explore iconic landmarks confidently with our solo travel safety guide.',
   robots: {
     index: true,
