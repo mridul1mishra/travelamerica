@@ -2,8 +2,8 @@
 // Previously these were fetched over HTTP from https://www.travelamerica.work/data/faq/*.json,
 // which meant SSR made outbound requests to its own production URL — broke local dev and
 // previews. Importing makes the data part of the bundle and avoids the round-trip.
-import travelHubFaq from "@/public/data/faq/travelhubfaq.json";
-import itineraryFaq from "@/public/data/faq/itineraryfaq.json";
+import travelHubFaq from "@/content/faq/travelhubfaq.json";
+import itineraryFaq from "@/content/faq/itineraryfaq.json";
 
 export function getFaq() {
   return { faqTravelHubData: travelHubFaq };

@@ -1,4 +1,4 @@
-import data from "@/app/data/destination/solotriptonyc/subwayAccess.json";
+import data from "@/content/destination/solotriptonyc/subwayAccess.json";
 import { SubwayAccessItem } from "@/app/models/destination/subwayprops";
 import { SubwayRow } from "./subwayrows";
 import "./subwayaccess.css";

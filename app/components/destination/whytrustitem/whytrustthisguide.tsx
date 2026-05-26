@@ -1,4 +1,4 @@
-import data from "@/app/data/destination/solotriptonyc/whyTrustItems.json";
+import data from "@/content/destination/solotriptonyc/whyTrustItems.json";
 import { WhyTrustItem } from "./whytrustitem";
 import "./whytrustitem.css";
 

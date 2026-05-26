@@ -1,4 +1,4 @@
-import data from "@/app/data/destination/solotriptonyc/scenario.json";
+import data from "@/content/destination/solotriptonyc/scenario.json";
 import { ScenarioCard } from "./scenariocard";
 import "./scenariocard.css";
 

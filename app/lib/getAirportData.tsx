@@ -1,75 +1,104 @@
-// Static JSON imports per supported city.
-// Previously these were fetched over HTTP from https://www.travelamerica.work/data/...
-// which broke local dev (it pulled production data) and preview deploys (they fetched
-// production too). Static imports make data part of the build, give us compile-time
-// validation that the JSON parses, and remove 4 HTTP round-trips per city-page render.
+// Static JSON imports per supported city — all the build-time city data the
+// server needs lives here, including the hotel/cruise/placevisit JSON that
+// used to be fetched client-side over HTTP. After this refactor, the
+// Propertylisting and Placevisit client components receive the parsed JSON
+// as props from the [city]/page.tsx server component.
 
 // --- newyork ---
-import nyAirport from "@/public/data/majorcities/newyork/airportsection.json";
-import nyProperty from "@/public/data/majorcities/newyork/propertylisting.json";
-import nyPlantrip from "@/public/data/majorcities/newyork/plantrip.json";
-import nyPlantripContent from "@/public/data/majorcities/newyork/plantripcontent.json";
+import nyAirport from "@/content/cities/newyork/airportsection.json";
+import nyProperty from "@/content/cities/newyork/propertylisting.json";
+import nyPlantrip from "@/content/cities/newyork/plantrip.json";
+import nyPlantripContent from "@/content/cities/newyork/plantripcontent.json";
+import nyHotels from "@/content/cities/newyork/hotels.json";
+import nyCruises from "@/content/cities/newyork/cruises.json";
+import nyPlacevisit from "@/content/cities/newyork/placevisit.json";
 
 // --- losangeles ---
-import laAirport from "@/public/data/majorcities/losangeles/airportsection.json";
-import laProperty from "@/public/data/majorcities/losangeles/propertylisting.json";
-import laPlantrip from "@/public/data/majorcities/losangeles/plantrip.json";
-import laPlantripContent from "@/public/data/majorcities/losangeles/plantripcontent.json";
+import laAirport from "@/content/cities/losangeles/airportsection.json";
+import laProperty from "@/content/cities/losangeles/propertylisting.json";
+import laPlantrip from "@/content/cities/losangeles/plantrip.json";
+import laPlantripContent from "@/content/cities/losangeles/plantripcontent.json";
+import laHotels from "@/content/cities/losangeles/hotels.json";
+import laCruises from "@/content/cities/losangeles/cruises.json";
+import laPlacevisit from "@/content/cities/losangeles/placevisit.json";
 
 // --- lasvegas ---
-import lvAirport from "@/public/data/majorcities/lasvegas/airportsection.json";
-import lvProperty from "@/public/data/majorcities/lasvegas/propertylisting.json";
-import lvPlantrip from "@/public/data/majorcities/lasvegas/plantrip.json";
-import lvPlantripContent from "@/public/data/majorcities/lasvegas/plantripcontent.json";
+import lvAirport from "@/content/cities/lasvegas/airportsection.json";
+import lvProperty from "@/content/cities/lasvegas/propertylisting.json";
+import lvPlantrip from "@/content/cities/lasvegas/plantrip.json";
+import lvPlantripContent from "@/content/cities/lasvegas/plantripcontent.json";
+import lvHotels from "@/content/cities/lasvegas/hotels.json";
+import lvCruises from "@/content/cities/lasvegas/cruises.json";
+import lvPlacevisit from "@/content/cities/lasvegas/placevisit.json";
 
 // --- orlando ---
-import orAirport from "@/public/data/majorcities/orlando/airportsection.json";
-import orProperty from "@/public/data/majorcities/orlando/propertylisting.json";
-import orPlantrip from "@/public/data/majorcities/orlando/plantrip.json";
-import orPlantripContent from "@/public/data/majorcities/orlando/plantripcontent.json";
+import orAirport from "@/content/cities/orlando/airportsection.json";
+import orProperty from "@/content/cities/orlando/propertylisting.json";
+import orPlantrip from "@/content/cities/orlando/plantrip.json";
+import orPlantripContent from "@/content/cities/orlando/plantripcontent.json";
+import orHotels from "@/content/cities/orlando/hotels.json";
+import orCruises from "@/content/cities/orlando/cruises.json";
+import orPlacevisit from "@/content/cities/orlando/placevisit.json";
+
+import type { Cruise } from "@/app/models/propertylisting";
+import type { PlacevisitJson, PlaceVisitSection } from "@/app/models/placevisit";
 
 type CityKey = "newyork" | "losangeles" | "lasvegas" | "orlando";
 
-// NOTE: typed loosely (any) to match the existing call-site shapes (cityui.tsx etc.).
-// The original code did `await res.json()` which also returns `any`, so this preserves
-// behavior. A proper restructure (Phase 3 in the deep review) should replace `any` with
-// PropertyListingModel and friends, then thread the typed values all the way through.
-const cityData: Record<
-  CityKey,
-  {
-    airportsection: any;
-    propertySections: any;
-    personaContent: any;
-    plantripcontentsections: any;
-  }
-> = {
+// NOTE: typed loosely (any) on the older fields to match existing call-sites
+// (cityui.tsx etc.). The hotels/cruises/placevisit slices are typed because
+// the client components depend on those shapes. A proper restructure should
+// replace the remaining `any` with real types.
+type CityData = {
+  airportsection: any;
+  propertySections: any;
+  personaContent: any;
+  plantripcontentsections: any;
+  hotels: Cruise[];
+  cruises: Cruise[];
+  placevisit: PlaceVisitSection;
+};
+
+const cityData: Record<CityKey, CityData> = {
   newyork: {
     airportsection: nyAirport,
     propertySections: nyProperty,
     personaContent: nyPlantrip,
     plantripcontentsections: nyPlantripContent.plantripcontentsection,
+    hotels: nyHotels as Cruise[],
+    cruises: nyCruises as Cruise[],
+    placevisit: (nyPlacevisit as PlacevisitJson).planTripSection,
   },
   losangeles: {
     airportsection: laAirport,
     propertySections: laProperty,
     personaContent: laPlantrip,
     plantripcontentsections: laPlantripContent.plantripcontentsection,
+    hotels: laHotels as Cruise[],
+    cruises: laCruises as Cruise[],
+    placevisit: (laPlacevisit as PlacevisitJson).planTripSection,
   },
   lasvegas: {
     airportsection: lvAirport,
     propertySections: lvProperty,
     personaContent: lvPlantrip,
     plantripcontentsections: lvPlantripContent.plantripcontentsection,
+    hotels: lvHotels as Cruise[],
+    cruises: lvCruises as Cruise[],
+    placevisit: (lvPlacevisit as PlacevisitJson).planTripSection,
   },
   orlando: {
     airportsection: orAirport,
     propertySections: orProperty,
     personaContent: orPlantrip,
     plantripcontentsections: orPlantripContent.plantripcontentsection,
+    hotels: orHotels as Cruise[],
+    cruises: orCruises as Cruise[],
+    placevisit: (orPlacevisit as PlacevisitJson).planTripSection,
   },
 };
 
-export async function getAirportData(city: string) {
+export async function getAirportData(city: string): Promise<CityData> {
   const data = cityData[city as CityKey];
   if (!data) {
     // Fall back to newyork rather than throwing — keeps the page renderable

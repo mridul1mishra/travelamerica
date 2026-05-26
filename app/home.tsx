@@ -2,7 +2,7 @@
 import Header from './components/Header/header';
 import Majorcities from "./components/Home/majorcities/majorcities";
 import { StorySection } from './models/story';
-import mySectionData from "./data/home/mysection.json";
+import mySectionData from "@/content/home/mysection.json";
 import Footer from './components/Header/Footer/footer';
 
 import FAQ from './components/faq/faq';

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import data from "../../data/common/popularplaces.json";
+import data from "@/content/common/popularplaces.json";
 import styles from "../../components/popularplaces/popularstyles.module.css";
 
 export default function SideBar(){
