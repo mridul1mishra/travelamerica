@@ -9,7 +9,7 @@ import FAQ from "@/app/components/faq/faq";
 import { getFaq, getFaqItinerary } from "@/app/lib/FaqData";
 
 interface FaqItem {
-  id: string;
+  id?: string;
   question: string;
   answer: string;
 }

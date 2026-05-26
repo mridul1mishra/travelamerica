@@ -20,6 +20,6 @@ import { getFaqItinerary } from '@/app/lib/FaqData';
 import SoloItineraryClient from './soloitineraryclient';
 
 export default async function SoloItineraryPage() {
-  const { faqTravelHubData } = await getFaqItinerary();
+  const { faqTravelHubData } = getFaqItinerary();
   return <SoloItineraryClient grouped={faqTravelHubData} />;
 }

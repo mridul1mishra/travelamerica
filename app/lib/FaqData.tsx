@@ -5,10 +5,10 @@
 import travelHubFaq from "@/public/data/faq/travelhubfaq.json";
 import itineraryFaq from "@/public/data/faq/itineraryfaq.json";
 
-export async function getFaq() {
+export function getFaq() {
   return { faqTravelHubData: travelHubFaq };
 }
 
-export async function getFaqItinerary() {
+export function getFaqItinerary() {
   return { faqTravelHubData: itineraryFaq };
 }
