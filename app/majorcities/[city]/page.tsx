@@ -30,11 +30,11 @@ export default async function CityPage({ params }: PageProps) {
   const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "TouristDestination",
-    "@id": `https://www.travelamerica.work/majorcities/${city}#destination`,
+    "@id": `https://www.travelsamericas.com/majorcities/${city}#destination`,
     "name": `${city.charAt(0).toUpperCase() + city.slice(1)} City`,
     "description": `Discover ${city} City: landmarks, food, and solo travel experiences for travelers in America.`,
-    "url": `https://www.travelamerica.work/majorcities/${city}`,
-    "image": `https://www.travelamerica.work/data/${city}.jpg`,
+    "url": `https://www.travelsamericas.com/majorcities/${city}`,
+    "image": `https://www.travelsamericas.com/data/${city}.jpg`,
     "touristType": "Solo Travelers",
   };
   if (data) {
@@ -55,7 +55,7 @@ export default async function CityPage({ params }: PageProps) {
   "@type": "WebPage",
   "name": "New York City Travel Hub",
   "description": "Your complete guide to solo travel in New York City — attractions, food, safety tips, and itineraries.",
-  "url": "https://www.travelamerica.work/majorcities/newyork",
+  "url": "https://www.travelsamericas.com/majorcities/newyork",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -63,13 +63,13 @@ export default async function CityPage({ params }: PageProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.travelamerica.work"
+        "item": "https://www.travelsamericas.com"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "New York City",
-        "item": "https://www.travelamerica.work/majorcities/newyork"
+        "item": "https://www.travelsamericas.com/majorcities/newyork"
       }
     ]
   },
@@ -110,19 +110,19 @@ export default async function CityPage({ params }: PageProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Top Attractions",
-        "url": "https://www.travelamerica.work/majorcities/newyork/landmark"
+        "url": "https://www.travelsamericas.com/majorcities/newyork/landmark"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Food & Dining",
-        "url": "https://www.travelamerica.work/majorcities/newyork/food"
+        "url": "https://www.travelsamericas.com/majorcities/newyork/food"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Solo Travel Tips",
-        "url": "https://www.travelamerica.work/destination/nyc/solo-trip-to-nyc"
+        "url": "https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc"
       }
     ]
   }

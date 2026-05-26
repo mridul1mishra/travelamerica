@@ -62,25 +62,25 @@ const BreadcrumbList = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.travelamerica.work/"
+      "item": "https://www.travelsamericas.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Major Cities",
-      "item": "https://www.travelamerica.work/majorcities/"
+      "item": "https://www.travelsamericas.com/majorcities/"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "New York",
-      "item": "https://www.travelamerica.work/majorcities/newyork/"
+      "item": "https://www.travelsamericas.com/majorcities/newyork/"
     },
     {
       "@type": "ListItem",
       "position": 4,
       "name": "Solo Travel",
-      "item": "https://www.travelamerica.work/majorcities/newyork/group-itinerary"
+      "item": "https://www.travelsamericas.com/majorcities/newyork/group-itinerary"
     }
   ]
                 };

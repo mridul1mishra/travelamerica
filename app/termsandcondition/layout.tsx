@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Travel America",
-  description: "Travel America’s Terms: Site usage, U.S. jurisdiction, third‑party duties & user conduct. Protecting content, limiting liability & ensuring compliance.",  
+  title: "Terms of Service | Travels Americas",
+  description: "Travels Americas’s Terms: Site usage, U.S. jurisdiction, third‑party duties & user conduct. Protecting content, limiting liability & ensuring compliance.",  
 };
 
 
@@ -30,23 +30,23 @@ export default function RootLayout({
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Terms and Conditions",
-  "url": "https://www.travelamerica.work/terms",
-  "description": "Terms and Conditions for using Travel America, outlining rules, disclaimers, and user responsibilities.",
+  "url": "https://www.travelsamericas.com/terms",
+  "description": "Terms and Conditions for using Travels Americas, outlining rules, disclaimers, and user responsibilities.",
   "mainEntity": {
     "@type": "Organization",
-    "name": "Travel America",
-    "url": "https://www.travelamerica.work",
-    "logo": "https://www.travelamerica.work/_next/image?url=%2Fdata%2Flogo3.png&w=3840&q=75",
+    "name": "Travels Americas",
+    "url": "https://www.travelsamericas.com",
+    "logo": "https://www.travelsamericas.com/_next/image?url=%2Fdata%2Flogo3.png&w=3840&q=75",
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Customer Support",
-      "email": "support@travelamerica.work"
+      "email": "support@travelsamericas.com"
     }
   },
   "isPartOf": {
     "@type": "WebSite",
-    "name": "Travel America",
-    "url": "https://www.travelamerica.work"
+    "name": "Travels Americas",
+    "url": "https://www.travelsamericas.com"
   }
 };
 

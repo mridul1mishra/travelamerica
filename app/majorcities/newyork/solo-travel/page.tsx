@@ -7,13 +7,13 @@ export const generateMetadata = () => ({
     follow: true,
   },
   alternates: {
-      canonical: 'https://www.travelamerica.work/majorcities/newyork/solo-travel',
+      canonical: 'https://www.travelsamericas.com/majorcities/newyork/solo-travel',
     },
     twitter: {
     card: "summary_large_image",
     title: "Solo Travel NYC: Safety, Itinerary & Neighborhood Tips",
     description: "Plan your NYC solo travel with a 3-day itinerary, safety tips, gear checklist, and smart navigation tools.",
-    images: ["https://www.travelamerica.work/data/majorcities/newyork/assets/safetybanner.png"]
+    images: ["https://www.travelsamericas.com/data/majorcities/newyork/assets/safetybanner.png"]
   }
 });
 

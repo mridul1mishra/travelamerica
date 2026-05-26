@@ -30,12 +30,12 @@ export const metadata = {
     title: "NYC Subway Safety Guide — Practical, Scenario‑Driven, 2026 Edition",
     description:
       "A practical, scenario‑driven NYC Subway Safety Guide covering core principles, personas, emergency steps, etiquette, tools & apps, and neighborhood notes.",
-    url: "https://www.travelamerica.work/destination/nyc/subway-safety-guide",
+    url: "https://www.travelsamericas.com/destination/nyc/subway-safety-guide",
     type: "article",
-    siteName: "Travel America",
+    siteName: "Travels Americas",
     images: [
       {
-        url: "https://www.travelamerica.work/data/metadataimage/nyc-subway-generic.jpg",
+        url: "https://www.travelsamericas.com/data/metadataimage/nyc-subway-generic.jpg",
         width: 1200,
         height: 630,
         alt: "NYC Subway Safety Guide",
@@ -48,11 +48,11 @@ export const metadata = {
     title: "NYC Subway Safety Guide — 2026 Edition",
     description:
       "A complete, scenario‑driven NYC Subway Safety Guide for solo travelers, women, and first‑timers.",
-    images: ["https://www.travelamerica.work/data/metadataimage/nyc-subway-generic.jpg"],
+    images: ["https://www.travelsamericas.com/data/metadataimage/nyc-subway-generic.jpg"],
   },
 
   alternates: {
-    canonical: "https://www.travelamerica.work/destination/nyc/subway-safety-guide",
+    canonical: "https://www.travelsamericas.com/destination/nyc/subway-safety-guide",
   },
 };
 

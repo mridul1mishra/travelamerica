@@ -1,9 +1,9 @@
 import { generateDailyEvents } from '../../../lib/generateDailyEvents';
 export const generateMetadata = () => ({
-  title: '3-Day Group Travel Itinerary for New York | Travel America',
+  title: '3-Day Group Travel Itinerary for New York | Travels Americas',
   description:  'Explore NYC in 3 days with a group-friendly itinerary blending culture, connection, and skyline moments.',
   alternates: {
-      canonical: 'https://www.travelamerica.work/majorcities/newyork/group-itinerary',
+      canonical: 'https://www.travelsamericas.com/majorcities/newyork/group-itinerary',
     },
     robots: {
     index: true,
@@ -13,7 +13,7 @@ export const generateMetadata = () => ({
     card: "summary_large_image",
     title: "3-Day NYC Group Travel Itinerary",
     description: "Plan the perfect 3-day NYC trip for groups with museums, parks, Broadway, and a Hudson River dinner cruise.",
-    images: ["https://www.travelamerica.work/data/majorcities/newyork/assets/group/nyc-group-itinerary-brooklyn-bridge-sunset.jpg"]
+    images: ["https://www.travelsamericas.com/data/majorcities/newyork/assets/group/nyc-group-itinerary-brooklyn-bridge-sunset.jpg"]
   }
 });
 
@@ -23,7 +23,7 @@ export default function GroupItineraryPage() {
   const events = generateDailyEvents({
     name: 'Hudson River Dinner Cruise',
     description: 'Nightly NYC dinner cruise with gourmet dining, live entertainment, and skyline views.',
-    baseImage: 'https://www.travelamerica.work/images/hudson-river-cruise.jpg',
+    baseImage: 'https://www.travelsamericas.com/images/hudson-river-cruise.jpg',
     organizerName: 'Hudson’s by World Yacht',
     organizerUrl: 'https://pier81nyc.com/',
     days: 7, // next 7 days
@@ -38,7 +38,7 @@ export default function GroupItineraryPage() {
       'Plan the perfect 3-day NYC trip for groups with museums, parks, Broadway, and a Hudson River dinner cruise.',
     author: {
       '@type': 'Organization',
-      name: 'Travel America',
+      name: 'Travels Americas',
     },
     mainEntity: {
       '@type': 'ItemList',

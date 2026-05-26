@@ -3,10 +3,10 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.travelamerica.work/" },
-      { "@type": "ListItem", "position": 2, "name": "Major Cities", "item": "https://www.travelamerica.work/majorcities/" },
-      { "@type": "ListItem", "position": 3, "name": "New York", "item": "https://www.travelamerica.work/majorcities/newyork/" },
-      { "@type": "ListItem", "position": 4, "name": "Solo Travel", "item": "https://www.travelamerica.work/majorcities/newyork/solo-travel" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.travelsamericas.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Major Cities", "item": "https://www.travelsamericas.com/majorcities/" },
+      { "@type": "ListItem", "position": 3, "name": "New York", "item": "https://www.travelsamericas.com/majorcities/newyork/" },
+      { "@type": "ListItem", "position": 4, "name": "Solo Travel", "item": "https://www.travelsamericas.com/majorcities/newyork/solo-travel" }
     ]
   },
 
@@ -16,22 +16,22 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "name": "Solo Travel Safety Tips",
-      "@id": "https://www.travelamerica.work/majorcities/newyork/solo-travel"
+      "@id": "https://www.travelsamericas.com/majorcities/newyork/solo-travel"
     },
-    "headline": "3-Day Solo Travel Itinerary for New York | Travel America",
+    "headline": "3-Day Solo Travel Itinerary for New York | Travels Americas",
     "description": "A 3-day solo travel itinerary for NYC with safety tips, local navigation tools, and packing advice.",
     "keywords": ["solo travel NYC", "NYC itinerary", "safe travel tips", "Citymapper", "MetroCard", "NYC solo travel", "things to do alone NYC"],
     "image": {
       "@type": "ImageObject",
-      "url": "https://www.travelamerica.work/data/majorcities/newyork/assets/safetybanner.png",
+      "url": "https://www.travelsamericas.com/data/majorcities/newyork/assets/safetybanner.png",
       "height": 600,
       "width": 1200
     },
-    "author": { "@type": "Organization", "name": "Travel America" },
+    "author": { "@type": "Organization", "name": "Travels Americas" },
     "publisher": {
       "@type": "Organization",
-      "name": "Travel America",
-      "logo": { "@type": "ImageObject", "url": "https://www.travelamerica.work/logo.png" }
+      "name": "Travels Americas",
+      "logo": { "@type": "ImageObject", "url": "https://www.travelsamericas.com/logo.png" }
     },
     "datePublished": "2025-11-01",
     "about": [

@@ -13,13 +13,13 @@ export const metadata = {
     'Explore New York City neighborhoods with our NYC neighborhood guide for tourists. Compare areas by travel style, sightseeing, safety, and convenience to choose where to stay.',
   alternates: {
     canonical:
-      'https://www.travelamerica.work/destination/nyc/neighborhood-guide',
+      'https://www.travelsamericas.com/destination/nyc/neighborhood-guide',
   },
   openGraph: {
     title: 'New York City Neighborhood Guide',
     description:
       'A tourist-friendly guide to NYC neighborhoods, helping you choose the best area to stay and explore based on travel style, location, and ease of getting around.',
-    url: 'https://www.travelamerica.work/destination/nyc/neighborhood-guide',
+    url: 'https://www.travelsamericas.com/destination/nyc/neighborhood-guide',
     type: 'website',
   },
 };
@@ -52,7 +52,7 @@ export default async function NYCSafetyGuide({searchParams}: PageProps) {
             name: 'New York City Neighborhoods',
             description:
               'A guide to New York City neighborhoods designed for tourists, helping visitors understand different areas and choose where to stay and explore.',
-            url: 'https://www.travelamerica.work/destination/nyc/neighborhood-guide',
+            url: 'https://www.travelsamericas.com/destination/nyc/neighborhood-guide',
             touristType: 'Urban tourism',
             geo: {
               '@type': 'GeoCoordinates',
@@ -68,7 +68,7 @@ export default async function NYCSafetyGuide({searchParams}: PageProps) {
             isPartOf: {
               '@type': 'WebPage',
               name: 'New York City Travel Guide',
-              url: 'https://www.travelamerica.work/destination/nyc',
+              url: 'https://www.travelsamericas.com/destination/nyc',
             },
           }),
         }}

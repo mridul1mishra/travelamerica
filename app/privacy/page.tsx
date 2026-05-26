@@ -85,7 +85,7 @@ return (
         </div>
         <div>
             <h2>9. Contact Us</h2>
-            <p>info@travelamerica.work</p>
+            <p>info@travelsamericas.com</p>
         </div>
 
       </article>

@@ -14,25 +14,25 @@ export default function GroupTravelPage() {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.travelamerica.work/"
+      "item": "https://www.travelsamericas.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Major Cities",
-      "item": "https://www.travelamerica.work/majorcities/"
+      "item": "https://www.travelsamericas.com/majorcities/"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "New York",
-      "item": "https://www.travelamerica.work/majorcities/newyork/"
+      "item": "https://www.travelsamericas.com/majorcities/newyork/"
     },
     {
       "@type": "ListItem",
       "position": 4,
       "name": "Group Travel",
-      "item": "https://www.travelamerica.work/majorcities/newyork/group-travel"
+      "item": "https://www.travelsamericas.com/majorcities/newyork/group-travel"
     }
   ]
 };
@@ -41,27 +41,27 @@ export default function GroupTravelPage() {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.travelamerica.work/majorcities/newyork/group-travel"
+    "@id": "https://www.travelsamericas.com/majorcities/newyork/group-travel"
   },
   "headline": "Group Travel in NYC: Safety Tips, Packing Essentials & Landmark Planning",
   "description": "Explore NYC confidently with our group travel safety guide — smart packing tips, safe itineraries, and must-see landmarks for every explorer.",
   "keywords": ["Group travel NYC", "NYC itinerary", "safe travel tips", "Citymapper", "MetroCard", "NYC group travel", "things to do alone NYC"],
   "image": {
     "@type": "ImageObject",
-    "url": "https://www.travelamerica.work/data/majorcities/newyork/assets/safetybanner.png",
+    "url": "https://www.travelsamericas.com/data/majorcities/newyork/assets/safetybanner.png",
     "height": 600,
     "width": 1200
   },
   "author": {
     "@type": "Organization",
-    "name": "Travel America"
+    "name": "Travels Americas"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Travel America",
+    "name": "Travels Americas",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.travelamerica.work/logo.png"
+      "url": "https://www.travelsamericas.com/logo.png"
     }
   },
   "datePublished": "2025-11-29",
@@ -244,4 +244,4 @@ return (
         
     </>
     );
-}
+}

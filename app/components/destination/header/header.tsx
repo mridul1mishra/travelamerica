@@ -12,7 +12,7 @@ export default function Header() {
         <Link href="/">
           <Image
             src="/data/logo.webp"
-            alt="Travel Americas Logo"
+            alt="Travels Americas Logo"
             width={150}
             height={150}
             priority

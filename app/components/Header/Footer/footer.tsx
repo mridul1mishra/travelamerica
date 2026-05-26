@@ -51,7 +51,7 @@ const Footer = () => {
     </div>
   </div>
   <div className="footer-bottom">
-    <p>© 2025 Travel America | Designed with ❤️ for explorers</p>
+    <p>© 2025 Travels Americas | Designed with ❤️ for explorers</p>
   </div>
 </footer>
     )

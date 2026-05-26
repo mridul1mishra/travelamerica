@@ -6,9 +6,9 @@ import type { Metadata } from "next";
 // on /companydetails. The AboutPage schema previously injected here has been
 // moved into page.tsx where it belongs.
 export const metadata: Metadata = {
-  title: "Travel America | USA Destinations, Attractions & Guides",
+  title: "Travels Americas | USA Destinations, Attractions & Guides",
   description:
-    "Discover USA with Travel America: Beauty, culture & adventure. Guides to cities, attractions, stays & experiences for smooth, memorable trips.",
+    "Discover USA with Travels Americas: Beauty, culture & adventure. Guides to cities, attractions, stays & experiences for smooth, memorable trips.",
 };
 
 export default function CompanyDetailsLayout({

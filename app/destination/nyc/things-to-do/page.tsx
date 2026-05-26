@@ -5,13 +5,13 @@ export const metadata = {
   description:
     'Explore the different types of NYC experiences—from landmarks to food, culture, and outdoor activities—and learn how they shape where you should stay and how to plan your trip.',
   alternates: {
-    canonical: 'https://www.travelamerica.work/destination/nyc/things-to-do',
+    canonical: 'https://www.travelsamericas.com/destination/nyc/things-to-do',
   },
   openGraph: {
     title: 'Things to Do in New York City',
     description:
       'Discover the types of NYC experiences that shape your trip—landmarks, culture, food, and outdoor exploration.',
-    url: 'https://www.travelamerica.work/destination/nyc/things-to-do',
+    url: 'https://www.travelsamericas.com/destination/nyc/things-to-do',
     type: 'website',
   },
   twitter: {

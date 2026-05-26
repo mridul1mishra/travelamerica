@@ -17,19 +17,19 @@ export default function GroupLandmarksPage() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.travelamerica.work/"
+          "item": "https://www.travelsamericas.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "New York",
-          "item": "https://www.travelamerica.work/majorcities/newyork/"
+          "item": "https://www.travelsamericas.com/majorcities/newyork/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Group Landmarks",
-          "item": "https://www.travelamerica.work/majorcities/newyork/group-landmarks"
+          "item": "https://www.travelsamericas.com/majorcities/newyork/group-landmarks"
         }
       ]
     },
@@ -37,22 +37,22 @@ export default function GroupLandmarksPage() {
       "@type": "Article",
       "headline": "Group Travel in New York City – Landmark Guide!",
       "description": "Explore Manhattan, Brooklyn, and Bronx landmarks designed for group travelers — from icons like the Statue of Liberty to hidden gems and seasonal celebrations.",
-      "image": "https://www.travelamerica.work/images/group-landmarks-banner.png",
+      "image": "https://www.travelsamericas.com/images/group-landmarks-banner.png",
       "author": {
         "@type": "Organization",
-        "name": "Travel America"
+        "name": "Travels Americas"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "Travel America",
+        "name": "Travels Americas",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.travelamerica.work/images/logo.png"
+          "url": "https://www.travelsamericas.com/images/logo.png"
         }
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://www.travelamerica.work/majorcities/newyork/group-landmarks"
+        "@id": "https://www.travelsamericas.com/majorcities/newyork/group-landmarks"
       },
       "keywords": "Group travel New York City, Manhattan landmarks, Brooklyn skyline, Bronx hidden gems, NYC group tours",
       "touristType": "Group Travelers"
@@ -112,11 +112,11 @@ const article = {
   "description": "A curated guide to group travel in New York City, featuring borough-based landmarks, activities, and seasonal highlights.",
   "author": {
     "@type": "Organization",
-    "name": "Travel America",
-    "url": "https://www.travelamerica.work"
+    "name": "Travels Americas",
+    "url": "https://www.travelsamericas.com"
   },
   "datePublished": "2025-12-01",
-  "image": "https://www.travelamerica.work/data/majorcities/newyork/assets/group-travel-nyc.jpg",
+  "image": "https://www.travelsamericas.com/data/majorcities/newyork/assets/group-travel-nyc.jpg",
   "articleSection": [
     "Manhattan Landmarks & Activities",
     "Brooklyn Seasonal Experiences",

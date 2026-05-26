@@ -20,13 +20,13 @@ export default function NYCsafetyforsolofemaletravelerclient() {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://www.travelamerica.work/majorcities/newyork/nyc-safety-for-solo-female-travelers",
+      "@id": "https://www.travelsamericas.com/majorcities/newyork/nyc-safety-for-solo-female-travelers",
       "name": "NYC Solo Female Traveler Safety Guide",
       "description": "A scenario-based safety guide for solo female travelers navigating New York City, including subway safety, rideshare tips, street awareness, and real-world decision-making.",
       "keywords": "NYC safety, solo female travel, subway safety, NYC travel tips, women travel safety, NYC scenarios, travel safety guide",
-      "url": "https://www.travelamerica.work/majorcities/newyork/nyc-safety-for-solo-female-travelers",
+      "url": "https://www.travelsamericas.com/majorcities/newyork/nyc-safety-for-solo-female-travelers",
       "isPartOf": {
-        "@id": "https://www.travelamerica.work/#organization"
+        "@id": "https://www.travelsamericas.com/#organization"
       }
     },
 
@@ -37,13 +37,13 @@ export default function NYCsafetyforsolofemaletravelerclient() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.travelamerica.work/"
+          "item": "https://www.travelsamericas.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Travel Safety",
-          "item": "https://www.travelamerica.work/majorcities/newyork"
+          "item": "https://www.travelsamericas.com/majorcities/newyork"
         },
         {
           "@type": "ListItem",
@@ -56,12 +56,12 @@ export default function NYCsafetyforsolofemaletravelerclient() {
 
     {
       "@type": "Organization",
-      "@id": "https://www.travelamerica.work/#organization",
+      "@id": "https://www.travelsamericas.com/#organization",
       "name": "Your Brand Name",
-      "url": "https://www.travelamerica.work",
+      "url": "https://www.travelsamericas.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.travelamerica.work/logo.png"
+        "url": "https://www.travelsamericas.com/logo.png"
       }
     },
 

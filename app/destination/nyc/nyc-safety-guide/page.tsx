@@ -3,7 +3,7 @@ export const metadata = {
   description: "Planning a trip to New York City? Learn how safe New York city is for tourist in 2026, which areas are safest, and practical tips to stay confident while visiting.", 
   
   alternates: { 
-    canonical: "https://www.travelamerica.work/destination/nyc/nyc-safety-guide"
+    canonical: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide"
   },
 
   robots: {
@@ -21,8 +21,8 @@ export const metadata = {
   openGraph: { 
     title: "NYC Safety Guide (2026)", 
     description: "Navigate NYC confidently with a practical, scenario-based safety guide — neighborhoods, subway tips, scams, and emergency steps.", 
-    url: "https://www.travelamerica.work/destination/nyc/nyc-safety-guide", 
-    siteName: "Travel America", 
+    url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide", 
+    siteName: "Travels Americas", 
     type: "article", 
     locale: "en_US", 
     images: [ 
@@ -56,16 +56,16 @@ export default function NYCSafetyGuide() {
   "@type": "Guide",
   "name": "NYC Safety Guide for Solo Travelers",
   "description": "A practical, scenario-based safety guide for navigating New York City confidently.",
-  "url": "https://www.travelamerica.work/destination/nyc/nyc-safety-guide",
+  "url": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
   "inLanguage": "en-US",
   "isPartOf": {
     "@type": "WebSite",
-    "name": "Travel America",
-    "url": "https://www.travelamerica.work"
+    "name": "Travels Americas",
+    "url": "https://www.travelsamericas.com"
   },
   "author": {
     "@type": "Organization",
-    "name": "Travel America"
+    "name": "Travels Americas"
   }
 }
   const FAQSchema = {
@@ -114,19 +114,19 @@ export default function NYCSafetyGuide() {
       "@type": "ListItem",
       "position": 1,
       "name": "Destinations",
-      "item": "https://www.travelamerica.work/majorcities/newyork"
+      "item": "https://www.travelsamericas.com/majorcities/newyork"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "New York City",
-      "item": "https://www.travelamerica.work/destination/nyc/solo-trip-to-nyc"
+      "item": "https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "NYC Safety Guide",
-      "item": "https://www.travelamerica.work/destination/nyc/nyc-safety-guide"
+      "item": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide"
     }
   ]
 }
@@ -134,12 +134,12 @@ const WebPage = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "NYC Safety Guide for Solo Travelers",
-  "url": "https://www.travelamerica.work/destination/nyc/nyc-safety-guide",
+  "url": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
   "description": "A calm, practical NYC safety guide for solo travelers with tips, scenarios, and neighborhood insights.",
   "isPartOf": {
     "@type": "WebSite",
-    "name": "Travel America",
-    "url": "https://www.travelamerica.work"
+    "name": "Travels Americas",
+    "url": "https://www.travelsamericas.com"
   }
 }
 

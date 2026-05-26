@@ -17,13 +17,13 @@ export default async function Home(){
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://www.travelamerica.work/travel",
-      "url": "https://www.travelamerica.work/travel",
+      "@id": "https://www.travelsamericas.com/travel",
+      "url": "https://www.travelsamericas.com/travel",
       "name": "Travel Hub",
       "description": "Your ultimate travel hub with guides, itineraries, landmarks, food, and safety tips for major cities.",
       "inLanguage": "en",
       "isPartOf": {
-        "@id": "https://www.travelamerica.work/#organization"
+        "@id": "https://www.travelsamericas.com/#organization"
       },
       "breadcrumb": {
         "@type": "BreadcrumbList",
@@ -32,25 +32,25 @@ export default async function Home(){
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.travelamerica.work/"
+            "item": "https://www.travelsamericas.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Travel Hub",
-            "item": "https://www.travelamerica.work/travel"
+            "item": "https://www.travelsamericas.com/travel"
           }
         ]
       }
     },
     {
       "@type": "Organization",
-      "@id": "https://www.travelamerica.work/#organization",
-      "name": "Travel America",
-      "url": "https://www.travelamerica.work",
+      "@id": "https://www.travelsamericas.com/#organization",
+      "name": "Travels Americas",
+      "url": "https://www.travelsamericas.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.travelamerica.work/data/logo.png"
+        "url": "https://www.travelsamericas.com/data/logo.png"
       },
       "contactPoint": {
         "@type": "ContactPoint",

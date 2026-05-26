@@ -31,19 +31,19 @@ export default async function SoloItineraryClient({ grouped }: SoloItineraryClie
   "mainEntityOfPage": {
     "@type": "WebPage",
     "name": "Solo NYC Travel Itinerary",
-    "url": "https://www.travelamerica.work/majorcities/newyork/solo-itinerary"
+    "url": "https://www.travelsamericas.com/majorcities/newyork/solo-itinerary"
   },
   "image": {
     "@type": "ImageObject",
-    "url": "https://www.travelamerica.work/data/majorcities/newyork/assets/solo-travel-itinerary.png",
+    "url": "https://www.travelsamericas.com/data/majorcities/newyork/assets/solo-travel-itinerary.png",
     "height": 600,
     "width": 1200
   },
   "provider": {
     "@type": "Organization",
-    "name": "Travel America",
-    "url": "https://www.travelamerica.work",
-    "logo": "https://www.travelamerica.work/data/logo3.png"
+    "name": "Travels Americas",
+    "url": "https://www.travelsamericas.com",
+    "logo": "https://www.travelsamericas.com/data/logo3.png"
   }
 };
     const schema1 = {
@@ -159,19 +159,19 @@ const schema4 = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.travelamerica.work/"
+      "item": "https://www.travelsamericas.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "New York",
-      "item": "https://www.travelamerica.work/majorcities/newyork/"
+      "item": "https://www.travelsamericas.com/majorcities/newyork/"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Solo Travel",
-      "item": "https://www.travelamerica.work/destination/nyc/solo-trip-to-nyc"
+      "item": "https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc"
     }
   ]
 };

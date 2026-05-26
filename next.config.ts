@@ -17,7 +17,7 @@ const csp = `
   default-src 'self';
   script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
   style-src 'self' 'unsafe-inline';
-  img-src 'self' data: https://www.travelamerica.work https://www.googletagmanager.com https://www.google-analytics.com;
+  img-src 'self' data: https://www.travelsamericas.com https://www.googletagmanager.com https://www.google-analytics.com;
   font-src 'self' https://fonts.gstatic.com;
   connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
   frame-src 'none';

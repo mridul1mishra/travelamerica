@@ -69,9 +69,9 @@ export default async function nycsafetysolotravelersactionguide () {
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.travelamerica.work/" },
-      { "@type": "ListItem", "position": 2, "name": "Destination Guide", "item": "https://www.travelamerica.work/major-cities/newyork" },
-      { "@type": "ListItem", "position": 3, "name": "NYC Solo Traveler Guide", "item": "https://www.travelamerica.work/major-cities/newyork/nyc-safety-solo-travelers-action-guide" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.travelsamericas.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Destination Guide", "item": "https://www.travelsamericas.com/major-cities/newyork" },
+      { "@type": "ListItem", "position": 3, "name": "NYC Solo Traveler Guide", "item": "https://www.travelsamericas.com/major-cities/newyork/nyc-safety-solo-travelers-action-guide" }
     ]
   }
 };

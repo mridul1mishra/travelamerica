@@ -11,8 +11,8 @@ export default function LandmarkPage() {
   "@type": "LandmarksOrHistoricalBuildings",
   "name": "Statue of Liberty",
   "description": "The Statue of Liberty is a colossal neoclassical sculpture on Liberty Island in New York Harbor.",
-  "image": "https://www.travelamerica.work/data/majorcities/newyork/assets/statue-of-liberty.jpg",
-  "url": "https://www.travelamerica.work/majorcities/newyork/landmark",
+  "image": "https://www.travelsamericas.com/data/majorcities/newyork/assets/statue-of-liberty.jpg",
+  "url": "https://www.travelsamericas.com/majorcities/newyork/landmark",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Liberty Island",
@@ -90,19 +90,19 @@ const breadcrumblist = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.travelamerica.work/"
+      "item": "https://www.travelsamericas.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "New York",
-      "item": "https://www.travelamerica.work/majorcities/newyork/"
+      "item": "https://www.travelsamericas.com/majorcities/newyork/"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Solo Travel",
-      "item": "https://www.travelamerica.work/majorcities/newyork/landmark"
+      "item": "https://www.travelsamericas.com/majorcities/newyork/landmark"
     }
   ]
 };

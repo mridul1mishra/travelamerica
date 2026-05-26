@@ -10,13 +10,13 @@ export const metadata = {
   description:
     'Plan your New York City trip by choosing where to stay, what to see, and how to explore. Compare neighborhoods, itineraries, and travel options in one place.',
   alternates: {
-    canonical: 'https://www.travelamerica.work/destination/nyc',
+    canonical: 'https://www.travelsamericas.com/destination/nyc',
   },
   openGraph: {
     title: 'New York City Travel Guide',
     description:
       'Your complete NYC travel guide with neighborhoods, attractions, itineraries and planning tips.',
-    url: 'https://www.travelamerica.work/destination/nyc',
+    url: 'https://www.travelsamericas.com/destination/nyc',
     type: 'website',
   },
 };
@@ -40,7 +40,7 @@ export default function NycHubPage() {
             name: 'New York City Travel Guide',
             description:
               'New York City is one of the world’s most popular travel destinations, known for its iconic landmarks, diverse neighborhoods, museums, food scene, and cultural attractions.',
-            url: 'https://www.travelamerica.work/destination/nyc',
+            url: 'https://www.travelsamericas.com/destination/nyc',
             touristType: 'Urban tourism',
             geo: {
               '@type': 'GeoCoordinates',

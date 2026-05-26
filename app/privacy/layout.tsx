@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Travel America",
-  description: "Travel America Privacy Policy: How we collect, use & protect data, cookies, third‑party services, and your user rights.",
+  title: "Privacy Policy | Travels Americas",
+  description: "Travels Americas Privacy Policy: How we collect, use & protect data, cookies, third‑party services, and your user rights.",
   
 };
 
@@ -29,23 +29,23 @@ export default function RootLayout({
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Privacy Policy",
-  "url": "https://www.travelamerica.work/privacy",
-  "description": "Privacy Policy for Travel America, explaining how user data is collected, used, and protected.",
+  "url": "https://www.travelsamericas.com/privacy",
+  "description": "Privacy Policy for Travels Americas, explaining how user data is collected, used, and protected.",
   "mainEntity": {
     "@type": "Organization",
-    "name": "Travel America",
-    "url": "https://www.travelamerica.work",
-    "logo": "https://www.travelamerica.work/_next/image?url=%2Fdata%2Flogo3.png&w=3840&q=75",
+    "name": "Travels Americas",
+    "url": "https://www.travelsamericas.com",
+    "logo": "https://www.travelsamericas.com/_next/image?url=%2Fdata%2Flogo3.png&w=3840&q=75",
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Customer Support",
-      "email": "support@travelamerica.work"
+      "email": "support@travelsamericas.com"
     }
   },
   "isPartOf": {
     "@type": "WebSite",
-    "name": "Travel America",
-    "url": "https://www.travelamerica.work"
+    "name": "Travels Americas",
+    "url": "https://www.travelsamericas.com"
   }
 };
   return (

@@ -14,10 +14,10 @@ export default function FoodClientPage() {
   "description": "A curated guide to solo dining in New York City, featuring ramen counters, elegant bars, and local flavor spots.",
   "author": {
     "@type": "Organization",
-    "name": "Travel America"
+    "name": "Travels Americas"
   },
   "datePublished": "2025-10-19",
-  "image": "https://www.travelamerica.work/data/majorcities/assets/nyc-solo-dining.png",
+  "image": "https://www.travelsamericas.com/data/majorcities/assets/nyc-solo-dining.png",
   "articleSection": ["Fast & Flavorful", "Bar Dining", "Local Flavor"],
   "mainEntity": [
     {
@@ -162,25 +162,25 @@ const breadcrumblist = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.travelamerica.work/"
+      "item": "https://www.travelsamericas.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Major Cities",
-      "item": "https://www.travelamerica.work/majorcities/"
+      "item": "https://www.travelsamericas.com/majorcities/"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "New York",
-      "item": "https://www.travelamerica.work/majorcities/newyork/"
+      "item": "https://www.travelsamericas.com/majorcities/newyork/"
     },
     {
       "@type": "ListItem",
       "position": 4,
       "name": "Solo Travel",
-      "item": "https://www.travelamerica.work/majorcities/newyork/food"
+      "item": "https://www.travelsamericas.com/majorcities/newyork/food"
     }
   ]
                 };
@@ -394,4 +394,4 @@ function capitalizeWords(str: string) {
   return str
     .toLowerCase()
     .replace(/\b\w/g, (char) => char.toUpperCase());
-}
+}

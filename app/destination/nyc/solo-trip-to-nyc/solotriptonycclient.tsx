@@ -35,7 +35,7 @@ export default function SoloTripNYCClient() {
         <section className={`${styles.overlayheader} ${styles.scrolled}`}>
         <div className={styles.brandlogo}>          
             <a href="/">                   
-                <Image src="/data/logo.webp" alt="Travel Americas Logo" width={150} height={150}  sizes="(max-width: 768px) 100px, 150px" fetchPriority="high"/>
+                <Image src="/data/logo.webp" alt="Travels Americas Logo" width={150} height={150}  sizes="(max-width: 768px) 100px, 150px" fetchPriority="high"/>
             </a>
         </div>
         <nav className={styles.mainnav}>
@@ -71,7 +71,7 @@ export default function SoloTripNYCClient() {
                 <div className={styles.heroImage}>
                 <div className={styles.imagePlaceholder}>
                     <div className={styles.heroImageWrapper}>
-                        <Image src="/destination/nyc-travel-editorial-collage-new.png" alt="Travel Americas Logo" fill style={{ objectFit: "contain" }} fetchPriority="high"/>
+                        <Image src="/destination/nyc-travel-editorial-collage-new.png" alt="Travels Americas Logo" fill style={{ objectFit: "contain" }} fetchPriority="high"/>
                 
                     </div>
                 </div>

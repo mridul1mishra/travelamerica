@@ -6,13 +6,13 @@ export const generateMetadata = () => ({
     follow: true,
   },
   alternates: {
-      canonical: 'https://www.travelamerica.work/majorcities/newyork/nyc-safety-solo-travelers-essentials',
+      canonical: 'https://www.travelsamericas.com/majorcities/newyork/nyc-safety-solo-travelers-essentials',
     },
     twitter: {
     card: "summary_large_image",
     title: "Is NYC Safe for Solo Travelers? Nightlife, Transport & Neighborhood Tips",
     description: "Solo travelers in NYC: blend in, protect valuables, and use smart tech for a safe adventure.",
-    images: ["https://www.travelamerica.work/data/majorcities/newyork/assets/nyc-solo-travel-safety-banner.png"]
+    images: ["https://www.travelsamericas.com/data/majorcities/newyork/assets/nyc-solo-travel-safety-banner.png"]
   }
 });
 

@@ -60,7 +60,7 @@ export function generateDailyEvents({
       performer: { "@type": "MusicGroup", name: "NYC Jazz Ensemble" },
       offers: {
         "@type": "Offer",
-        url: "https://www.travelamerica.work/book/hudson-river-cruise",
+        url: "https://www.travelsamericas.com/book/hudson-river-cruise",
         price: "120.00",
         priceCurrency: "USD",
         availability: "https://schema.org/InStock"

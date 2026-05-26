@@ -7,7 +7,7 @@ import type { MetadataRoute } from "next";
 // page actually changes, bump its entry's date (or wire to filesystem mtime if you
 // want this fully automatic). Priority/changeFrequency are advisory hints to crawlers.
 
-const SITE = "https://www.travelamerica.work";
+const SITE = "https://www.travelsamericas.com";
 
 type Entry = {
   path: string;

@@ -8,10 +8,10 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
   if (formattedCity === "newyork") {
     title = "Explore NYC Travel: Solo Safety, Group Planning, Dining & Landmark Routes";
   } else {
-    title = `Explore ${formattedCity} | Travel America`;
+    title = `Explore ${formattedCity} | Travels Americas`;
   }
 
-  const canonicalUrl = `https://www.travelamerica.work/majorcities/${city}`;
+  const canonicalUrl = `https://www.travelsamericas.com/majorcities/${city}`;
 
   return {
     

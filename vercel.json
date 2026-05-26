@@ -13,7 +13,29 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "https://www.travelamerica.work/$1",
+      "destination": "https://www.travelsamericas.com/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.travelamerica.work"
+        }
+      ],
+      "statusCode": 308
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://www.travelsamericas.com/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": "travelamerica.work"
+        }
+      ],
+      "statusCode": 308
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://www.travelsamericas.com/$1",
       "has": [
         {
           "type": "host",
@@ -24,11 +46,22 @@
     },
     {
       "source": "/(.*)",
-      "destination": "https://www.travelamerica.work/$1",
+      "destination": "https://www.travelsamericas.com/$1",
       "has": [
         {
           "type": "host",
-          "value": "travelamerica.work"
+          "value": ":subdomain.travelsamericas.com"
+        }
+      ],
+      "statusCode": 308
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://www.travelsamericas.com/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": "travelsamericas.com"
         }
       ],
       "statusCode": 308

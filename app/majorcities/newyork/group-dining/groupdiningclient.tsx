@@ -13,11 +13,11 @@ export default function GroupDiningClientPage() {
   "description": "A curated guide to group dining in New York City, highlighting family-style restaurants, lively communal tables, and festive spots perfect for gatherings.",
   "author": {
     "@type": "Organization",
-    "name": "Travel America",
-    "url": "https://www.travelamerica.work"
+    "name": "Travels Americas",
+    "url": "https://www.travelsamericas.com"
   },
   "datePublished": "2025-10-19",
-  "image": "https://www.travelamerica.work/data/majorcities/assets/nyc-group-dining.png",
+  "image": "https://www.travelsamericas.com/data/majorcities/assets/nyc-group-dining.png",
   "articleSection": ["Family Style", "Communal Tables", "Festive Gatherings"],
   "mainEntity": [
     {
@@ -130,19 +130,19 @@ const breadcrumblist = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.travelamerica.work/"
+      "item": "https://www.travelsamericas.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "New York",
-      "item": "https://www.travelamerica.work/majorcities/newyork/"
+      "item": "https://www.travelsamericas.com/majorcities/newyork/"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Solo Travel",
-      "item": "https://www.travelamerica.work/majorcities/newyork/group-dining"
+      "item": "https://www.travelsamericas.com/majorcities/newyork/group-dining"
     }
   ]
 };

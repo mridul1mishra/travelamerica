@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://www.travelamerica.work/sitemap.xml",
-    host: "https://www.travelamerica.work",
+    sitemap: "https://www.travelsamericas.com/sitemap.xml",
+    host: "https://www.travelsamericas.com",
   };
 }

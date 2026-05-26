@@ -3,37 +3,37 @@
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://www.travelamerica.work/destination/nyc/is-nyc-safe-at-night",
-      "url": "https://www.travelamerica.work/destination/nyc/is-nyc-safe-at-night",
+      "@id": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
+      "url": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
       "name": "Is NYC Safe at Night?",
       "description": "A data-backed, scenario-driven guide to staying safe in NYC at night—built for solo travelers.",
       "isPartOf": {
-        "@id": "https://www.travelamerica.work/destination/nyc/is-nyc-safe-at-night"
+        "@id": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.travelamerica.work/data/metadataimage/nyc-night-hero.jpg"
+        "url": "https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.jpg"
       },
       "breadcrumb": {
-        "@id": "https://www.travelamerica.work/destination/nyc/is-nyc-safe-at-night#breadcrumb"
+        "@id": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night#breadcrumb"
       }
     },
 
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.travelamerica.work/destination/nyc/is-nyc-safe-at-night#breadcrumb",
+      "@id": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.travelamerica.work/"
+          "item": "https://www.travelsamericas.com/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Solo Trip to NYC",
-          "item": "https://www.travelamerica.work/destingation/nyc/solo-trip-to-nyc"
+          "item": "https://www.travelsamericas.com/destingation/nyc/solo-trip-to-nyc"
         },
         {
           "@type": "ListItem",
@@ -45,28 +45,28 @@
 
     {
       "@type": "Article",
-      "@id": "https://www.travelamerica.work/destingation/nyc/is-nyc-safe-at-night#article",
+      "@id": "https://www.travelsamericas.com/destingation/nyc/is-nyc-safe-at-night#article",
       "headline": "Is NYC Safe at Night?",
       "description": "A comprehensive, scenario-driven safety guide for navigating NYC at night as a solo traveler.",
-      "image": "https://www.travelamerica.work/data/metadataimage/nyc-night-hero.jpg",
+      "image": "https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.jpg",
       "author": {
         "@type": "Person",
         "name": "Your Editorial Team"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "Travel America",
+        "name": "Travels Americas",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.travelamerica.work/logo.png"
+          "url": "https://www.travelsamericas.com/logo.png"
         }
       },
-      "mainEntityOfPage": "https://www.travelamerica.work/destingation/nyc/is-nyc-safe-at-night"
+      "mainEntityOfPage": "https://www.travelsamericas.com/destingation/nyc/is-nyc-safe-at-night"
     },
 
     {
       "@type": "FAQPage",
-      "@id": "https://www.travelamerica.work/destingation/nyc/is-nyc-safe-at-night#faq",
+      "@id": "https://www.travelsamericas.com/destingation/nyc/is-nyc-safe-at-night#faq",
       "mainEntity": [
         {
           "@type": "Question",

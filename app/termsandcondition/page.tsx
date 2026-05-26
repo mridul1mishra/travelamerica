@@ -7,7 +7,7 @@ return (
 <>
 <Header image="" bannerText="" />
  <main className={styles.container}>
-      <h1 className={styles.title}>Terms of Service — Travel America</h1>
+      <h1 className={styles.title}>Terms of Service — Travels Americas</h1>
       
 
       <section className={styles.banner} aria-hidden="true">
@@ -50,7 +50,7 @@ return (
         <h2>8. Limitation of liability</h2>
         <p>To the fullest extent permitted under U.S. law, we are not liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of the Site or reliance on any information.</p>
         <h2>9. Contact Us</h2>
-        <p>info@travelamerica.work</p>
+        <p>info@travelsamericas.com</p>
 
       </article>
     </main>

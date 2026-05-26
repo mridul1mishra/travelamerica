@@ -6,13 +6,13 @@ export const generateMetadata = () => ({
     follow: true,
   },
   alternates: {
-      canonical: 'https://www.travelamerica.work/majorcities/newyork/landmark',
+      canonical: 'https://www.travelsamericas.com/majorcities/newyork/landmark',
     },
     twitter: {
     card: "summary_large_image",
     title: "3-Day NYC Group Travel Itinerary",
     description: "Plan the perfect 3-day NYC trip for groups with museums, parks, Broadway, and a Hudson River dinner cruise.",
-    images: ["https://www.travelamerica.work/data/majorcities/newyork/assets/landmark-banner.png"]
+    images: ["https://www.travelsamericas.com/data/majorcities/newyork/assets/landmark-banner.png"]
   }
 });
 

@@ -9,7 +9,7 @@ const webpage = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Is NYC Safe for Solo Travelers?",
-  "url": "https://www.travelamerica.work/majorcities/newyork/nyc-safety-solo-travelers",
+  "url": "https://www.travelsamericas.com/majorcities/newyork/nyc-safety-solo-travelers",
   "description": "A comprehensive guide for solo travelers exploring New York City safely. Covers general safety, neighborhood insights, transport tips, and nightlife & dining safety.",
   "keywords": ["NYC solo travel safety",
   "New York City safety tips",
@@ -25,7 +25,7 @@ const webpage = {
   "isPartOf": {
     "@type": "WebSite",
     "name": "Example Travel Safety Guides",
-    "url": "https://www.travelamerica.work"
+    "url": "https://www.travelsamericas.com"
   },
   "mainEntity": {
     "@type": "FAQPage",
@@ -82,25 +82,25 @@ const webpage = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.travelamerica.work/"
+      "item": "https://www.travelsamericas.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "New York",
-      "item": "https://www.travelamerica.work/majorcities/newyork/"
+      "item": "https://www.travelsamericas.com/majorcities/newyork/"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Solo Travel Safety",
-      "item": "https://www.travelamerica.work/majorcities/newyork/solo-travel"
+      "item": "https://www.travelsamericas.com/majorcities/newyork/solo-travel"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Is NYC Safe for Solo Travelers?",
-      "item": "https://www.travelamerica.work/majorcities/newyork/nyc-safety-solo-travelers"
+      "item": "https://www.travelsamericas.com/majorcities/newyork/nyc-safety-solo-travelers"
     }
   ]
 };

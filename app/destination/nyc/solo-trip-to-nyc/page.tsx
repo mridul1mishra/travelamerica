@@ -8,13 +8,13 @@ export const generateMetadata = () => ({
     follow: true,
   },
   alternates: {
-      canonical: 'https://www.travelamerica.work/destination/nyc/solo-trip-to-nyc',
+      canonical: 'https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc',
     },
     twitter: {
     card: "summary_large_image",
     title: 'Solo Trip to NYC (2026 Guide): Safety, Itinerary, Neighborhoods & Tips',
     description:  'Plan your NYC solo trip with safe areas, smart transit tips, and a simple 3‑day itinerary.',
-    images: ["https://www.travelamerica.work/social/solo-trip-to-nyc-gritty.png"]
+    images: ["https://www.travelsamericas.com/social/solo-trip-to-nyc-gritty.png"]
   }
 });
 
@@ -27,17 +27,17 @@ const articleSchema = {
   "description": "Plan your solo trip to NYC with safe areas, transit tips, a 3‑day itinerary, and what to avoid.",
   "author": {
     "@type": "Person",
-    "name": "Travel America Editorial Team"
+    "name": "Travels Americas Editorial Team"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Travel America",
+    "name": "Travels Americas",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.travelamerica.work/logo.png"
+      "url": "https://www.travelsamericas.com/logo.png"
     }
   },
-  "mainEntityOfPage": "https://www.travelamerica.work/destination/nyc/solo-trip-to-nyc"
+  "mainEntityOfPage": "https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc"
 };
 
 const faqSchema = {
