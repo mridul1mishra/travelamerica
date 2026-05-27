@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./SimpleHeader.module.css";
 
-// Lightweight header for pages that don't need a hero banner: companydetails,
+// Lightweight header for pages that don't need a hero banner: about,
 // privacy, termsandcondition. No useState, no useEffect, no usePathname, no
 // optional image prop — just the logo and nav. Renders as a server component
 // (no "use client"), which means zero JS shipped to the browser for the

@@ -1,75 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 
-import Script from 'next/script';
-
-
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+// Child layouts in the App Router MUST NOT render <html>, <head>, or <body>;
+// that is the exclusive job of the root layout (app/layout.tsx). This used to
+// render its own <html>/<head>/<body> AND re-emit the GA script, which caused:
+//   - double GA pageview firing on /termsandcondition
+//   - a hydration mismatch on the <script type="application/ld+json"> in <head>
+// The WebPage schema previously injected here has been moved into page.tsx.
 export const metadata: Metadata = {
   title: "Terms of Service | Travels Americas",
-  description: "Travels Americas’s Terms: Site usage, U.S. jurisdiction, third‑party duties & user conduct. Protecting content, limiting liability & ensuring compliance.",  
+  description:
+    "Travels Americas’s Terms: Site usage, U.S. jurisdiction, third‑party duties & user conduct. Protecting content, limiting liability & ensuring compliance.",
 };
 
-
-export default function RootLayout({
+export default function TermsAndConditionLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const schema = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Terms and Conditions",
-  "url": "https://www.travelsamericas.com/terms",
-  "description": "Terms and Conditions for using Travels Americas, outlining rules, disclaimers, and user responsibilities.",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "Travels Americas",
-    "url": "https://www.travelsamericas.com",
-    "logo": "https://www.travelsamericas.com/_next/image?url=%2Fdata%2Flogo3.png&w=3840&q=75",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "Customer Support",
-      "email": "support@travelsamericas.com"
-    }
-  },
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Travels Americas",
-    "url": "https://www.travelsamericas.com"
-  }
-};
-
-  return (
-    <html lang="en">
-      <head>
-        <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      </head>
-      
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-         <Script strategy="afterInteractive"  src="https://www.googletagmanager.com/gtag/js?id=G-SM7NC16K21"/>
-<Script  id="ga-script"  strategy="afterInteractive"  dangerouslySetInnerHTML={{
-    __html: `window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-SM7NC16K21');`}}/>
-        {children}
-      </body>
-    </html>
-  );
+}: Readonly<{ children: React.ReactNode }>) {
+  return <>{children}</>;
 }

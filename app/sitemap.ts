@@ -47,7 +47,7 @@ const ROUTES: Entry[] = [
   { path: "/majorcities/newyork/nyc-safety-solo-travelers-action-guide", priority: 0.8, changeFrequency: "weekly" },
   { path: "/majorcities/newyork/nyc-safety-for-solo-female-travelers", priority: 0.8, changeFrequency: "weekly" },
   // legal / about
-  { path: "/companydetails",                                         priority: 0.4, changeFrequency: "yearly" },
+  { path: "/about",                                                  priority: 0.4, changeFrequency: "yearly" },
   { path: "/privacy",                                                priority: 0.3, changeFrequency: "yearly" },
   { path: "/termsandcondition",                                      priority: 0.3, changeFrequency: "yearly" },
 ];

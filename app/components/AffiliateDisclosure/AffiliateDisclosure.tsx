@@ -16,7 +16,7 @@ export default function AffiliateDisclosure() {
         believe are useful to our readers, and affiliate relationships do not
         influence our editorial recommendations. For details on how we test and
         select what we recommend, see our{" "}
-        <Link href="/companydetails">About page</Link>.
+        <Link href="/about">About page</Link>.
       </p>
     </aside>
   );

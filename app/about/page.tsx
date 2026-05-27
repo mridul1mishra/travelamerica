@@ -10,9 +10,9 @@ const aboutPageSchema = {
   "@graph": [
     {
       "@type": "AboutPage",
-      "@id": "https://www.travelsamericas.com/companydetails#aboutpage",
+      "@id": "https://www.travelsamericas.com/about#aboutpage",
       "name": "About Travels Americas",
-      "url": "https://www.travelsamericas.com/companydetails",
+      "url": "https://www.travelsamericas.com/about",
       "description":
         "About Travels Americas — our mission, editorial standards, and the team behind practical, scenario-based US travel guides for solo, group, and first-time travelers.",
       "mainEntity": {
@@ -48,15 +48,12 @@ export default function CompanyDetailsPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }} />
-      <SimpleHeader pageTitle="About Travels Americas" />
+      <SimpleHeader />
 
       <main className={styles.container}>
-
-        <section className={styles.banner} aria-hidden="true">
-          <div className={styles.bannerInner}>
-            <h2 style={{ position: "absolute", left: "-9999px", top: "auto" }}>About Travels Americas</h2>
-            <img className={styles.imagebanner} src="/data/aboutus.jpeg" alt="About Travels Americas" />
-          </div>
+        <section className={styles.banner}>
+          <img className={styles.imagebanner} src="/data/aboutus.jpeg" alt="About Travels Americas" />
+          <h1 className={styles.bannerText}>About Travels Americas</h1>
         </section>
 
         <article className={`prose ${styles.prose}`} aria-label="About Travels Americas">

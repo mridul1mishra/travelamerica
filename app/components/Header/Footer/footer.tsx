@@ -48,7 +48,7 @@ const Footer = () => {
       <ul className="vertical-list">
         <li className="link"><a href="/termsandcondition">Terms of Service</a></li>
         <li className="link"><a href="/privacy">Privacy Policy</a></li>
-        <li className="link"><a href="/companydetails">Company Details</a></li>
+        <li className="link"><a href="/about">About Us</a></li>
       </ul>
     </div>
   </div>

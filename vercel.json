@@ -45,6 +45,11 @@
       "statusCode": 308
     },
     {
+      "source": "/companydetails",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "destination": "https://www.travelsamericas.com/$1",
       "has": [

@@ -2,24 +2,39 @@ import Footer from "../components/Header/Footer/footer";
 import SimpleHeader from "../components/Header/SimpleHeader";
 import styles from "../termsandcondition/termsstyles.module.css";
 
+const termsPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Terms and Conditions",
+  "url": "https://www.travelsamericas.com/termsandcondition",
+  "description": "Terms and Conditions for using Travels Americas, outlining rules, disclaimers, and user responsibilities.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Travels Americas",
+    "url": "https://www.travelsamericas.com",
+    "logo": "https://www.travelsamericas.com/_next/image?url=%2Fdata%2Flogo3.png&w=3840&q=75",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "support@travelsamericas.com",
+    },
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Travels Americas",
+    "url": "https://www.travelsamericas.com",
+  },
+};
+
 export default function TermsPage() {
 return (
 <>
-<SimpleHeader pageTitle="Terms of Service — Travels Americas" />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(termsPageSchema) }} />
+<SimpleHeader />
  <main className={styles.container}>
-      
-
-      <section className={styles.banner} aria-hidden="true">
-        <div className={styles.bannerInner}>
-          {/* Accessible hidden heading for screen readers */}
-          <h2 style={{ position: 'absolute', left: '-9999px', top: 'auto' }}>Travel site banner</h2>
-
-          {/* Decorative SVG illustration — face free, animated shapes */}
-          <img className={styles.imagebanner} src="/data/terms-and-condition.png" alt="Terms of service banner"></img>
-
-        </div>
-
-        
+      <section className={styles.banner}>
+        <img className={styles.imagebanner} src="/data/terms-and-condition.png" alt="Terms of service banner" />
+        <h1 className={styles.bannerText}>Terms of Service — Travels Americas</h1>
       </section>
 
       {/* Terms content (example first sections). Replace with your final terms. */}

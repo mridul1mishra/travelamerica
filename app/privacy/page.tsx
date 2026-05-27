@@ -2,23 +2,39 @@ import Footer from "../components/Header/Footer/footer";
 import SimpleHeader from "../components/Header/SimpleHeader";
 import styles from "./privacy.module.css";
 
+const privacyPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy",
+  "url": "https://www.travelsamericas.com/privacy",
+  "description": "Privacy Policy for Travels Americas, explaining how user data is collected, used, and protected.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Travels Americas",
+    "url": "https://www.travelsamericas.com",
+    "logo": "https://www.travelsamericas.com/_next/image?url=%2Fdata%2Flogo3.png&w=3840&q=75",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "support@travelsamericas.com",
+    },
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Travels Americas",
+    "url": "https://www.travelsamericas.com",
+  },
+};
+
 export default function PrivacyPage() {
 return (
 <>
-<SimpleHeader pageTitle="Privacy Policy" />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(privacyPageSchema) }} />
+<SimpleHeader />
  <main className={styles.container}>
-      
-
-      <section className={styles.banner} aria-hidden="true">
-        <div className={styles.bannerInner}>
-          {/* Accessible hidden heading for screen readers */}
-          <h2 style={{ position: 'absolute', left: '-9999px', top: 'auto' }}>Travel site banner</h2>
-          <img className={styles.imagebanner} src="/data/majorcities/orlando/assets/privacybolicybanner.png" alt="Privacy policy banner"></img>
-
-
-        </div>
-
-        
+      <section className={styles.banner}>
+        <img className={styles.imagebanner} src="/data/majorcities/orlando/assets/privacybolicybanner.png" alt="Privacy policy banner" />
+        <h1 className={styles.bannerText}>Privacy Policy</h1>
       </section>
 
       {/* Terms content (example first sections). Replace with your final terms. */}
