@@ -1,13 +1,12 @@
 import Footer from "../components/Header/Footer/footer";
-import Header from "../components/Header/header";
+import SimpleHeader from "../components/Header/SimpleHeader";
 import styles from "./privacy.module.css";
 
 export default function PrivacyPage() {
 return (
 <>
-<Header image="" bannerText="" />
+<SimpleHeader pageTitle="Privacy Policy" />
  <main className={styles.container}>
-      <h1 className={styles.title}>Privacy Policy</h1>
       
 
       <section className={styles.banner} aria-hidden="true">

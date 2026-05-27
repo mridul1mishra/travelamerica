@@ -4,6 +4,7 @@ import Header from "../../components/Header/header";
 import Placevisit from "../../components/majorcities/placevisitsection/placevisit";
 import CityUI from "./cityui";
 import { getAirportData } from "@/app/lib/getAirportData";
+import NewYorkNarrative from "./components/CityNarrative/NewYorkNarrative";
 
 type PageProps = {
   params: Promise<{ city: string }>;
@@ -143,6 +144,7 @@ export default async function CityPage({ params }: PageProps) {
       <>
       <div className="App">
               <Header image={`/data/majorcities/${city}/assets/${city}.jpeg`} bannerText={`Welcome to ${capitalizeWords(city)}!`} />
+              {city === "newyork" && <NewYorkNarrative />}
               <CityUI
                 airportsection={airportsection}
                 propertySections={propertySections}

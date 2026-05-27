@@ -1,0 +1,89 @@
+.header {
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  gap: 1rem;
+}
+
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logoLink img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav li {
+  margin: 0;
+}
+
+.nav a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1e293b;
+  text-decoration: none;
+  padding: 0.4rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav a:hover {
+  color: #0364A0;
+  border-bottom-color: #0364A0;
+}
+
+.pageTitle {
+  font-family: 'CorbenBold', serif;
+  font-size: 2.25rem;
+  color: #111;
+  text-align: center;
+  margin: 1.5rem auto 1rem;
+  padding: 0 1rem;
+  max-width: 900px;
+  line-height: 1.25;
+}
+
+@media (max-width: 640px) {
+  .bar {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .nav ul {
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 0.9rem;
+  }
+
+  .pageTitle {
+    font-size: 1.5rem;
+    margin: 1rem auto 0.75rem;
+  }
+}

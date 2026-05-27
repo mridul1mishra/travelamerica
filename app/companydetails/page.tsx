@@ -1,93 +1,156 @@
 import Footer from "../components/Header/Footer/footer";
-import Header from "../components/Header/header";
+import SimpleHeader from "../components/Header/SimpleHeader";
 import styles from "./company.module.css";
 
-// AboutPage schema previously lived in companydetails/layout.tsx, which incorrectly
-// rendered its own <html>/<body>. Moved here so the layout can be a plain child.
+// AboutPage + Person schemas. The Person schema specifically helps Google
+// associate this site with a real author (E-E-A-T signal), and is what
+// Booking.com / Awin reviewers look for during affiliate applications.
 const aboutPageSchema = {
   "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "About Us - Travels Americas",
-  "url": "https://www.travelsamericas.com/companydetails",
-  "description":
-    "Learn more about Travels Americas, our mission to provide curated itineraries, travel tips, and resources for solo, group, and couple travelers across major US cities.",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "Travels Americas",
-    "url": "https://www.travelsamericas.com",
-    "logo": "https://www.travelsamericas.com/_next/image?url=%2Fdata%2Flogo3.png&w=3840&q=75",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "Customer Support",
-      "email": "info@travelsamericas.com",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.travelsamericas.com/companydetails#aboutpage",
+      "name": "About Travels Americas",
+      "url": "https://www.travelsamericas.com/companydetails",
+      "description":
+        "About Travels Americas — our mission, editorial standards, and the team behind practical, scenario-based US travel guides for solo, group, and first-time travelers.",
+      "mainEntity": {
+        "@type": "Organization",
+        "@id": "https://www.travelsamericas.com/#organization",
+        "name": "Travels Americas",
+        "url": "https://www.travelsamericas.com",
+        "logo": "https://www.travelsamericas.com/data/logo.png",
+        "foundingDate": "2023",
+        "founder": {
+          "@type": "Person",
+          "@id": "https://www.travelsamericas.com/#founder",
+          "name": "Mridul",
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Editorial",
+          "email": "info@travelsamericas.com",
+        },
+      },
     },
-    "foundingDate": "2023",
-    "founder": { "@type": "Person", "name": "Mridul" },
-  },
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Travels Americas",
-    "url": "https://www.travelsamericas.com",
-  },
+    {
+      "@type": "Person",
+      "@id": "https://www.travelsamericas.com/#founder",
+      "name": "Mridul",
+      "jobTitle": "Founder & Editor",
+      "worksFor": { "@id": "https://www.travelsamericas.com/#organization" },
+    },
+  ],
 };
 
 export default function CompanyDetailsPage() {
-return (
-<>
-<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }} />
-<Header image="" bannerText="" />
- <main className={styles.container}>
-      <h1 className={styles.title}>Travels Americas</h1>
-      
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }} />
+      <SimpleHeader pageTitle="About Travels Americas" />
 
-      <section className={styles.banner} aria-hidden="true">
-        <div className={styles.bannerInner}>
-          {/* Accessible hidden heading for screen readers */}
-          <h2 style={{ position: 'absolute', left: '-9999px', top: 'auto' }}>Comapany Name: </h2>
-          <img className={styles.imagebanner} src="/data/aboutus.jpeg" alt="About Travels Americas"></img>
+      <main className={styles.container}>
 
+        <section className={styles.banner} aria-hidden="true">
+          <div className={styles.bannerInner}>
+            <h2 style={{ position: "absolute", left: "-9999px", top: "auto" }}>About Travels Americas</h2>
+            <img className={styles.imagebanner} src="/data/aboutus.jpeg" alt="About Travels Americas" />
+          </div>
+        </section>
 
-        </div>
+        <article className={`prose ${styles.prose}`} aria-label="About Travels Americas">
 
-        
-      </section>
+          <div className={styles.list}>
+            <h2>What we do</h2>
+            <p>
+              Travels Americas publishes practical, scenario-based travel guides
+              for major US cities &mdash; starting with New York and expanding
+              from there. Our focus is the situations travelers actually face:
+              choosing where to stay, navigating the subway after dark, finding
+              somewhere to eat alone, deciding which landmarks are worth the
+              ticket price, and what to do when something feels off.
+            </p>
+          </div>
 
-      {/* Terms content (example first sections). Replace with your final terms. */}
-      <article className={`prose ${styles.prose}`} aria-label="Terms and conditions">
-        <div className={styles.list}>
-        
-        <p>Travels Americas Travel Co. helps travelers discover the beauty, culture, and adventure of the United States. From New York City’s bustling streets to the scenic national parks of the West, we provide reliable, up‑to‑date travel information to make every journey smooth, memorable, and exciting.</p>
-        </div>
-        <div className={styles.list}>
-            <h2>Our Mission</h2>
-            <p>We inspire and guide travelers with accurate, user‑friendly information about destinations, attractions, accommodations, and experiences across the USA.</p>
-        </div>
-        <div className={styles.list}>
-            <h2>Our Vision</h2>
-            <p>To be the most trusted companion for anyone exploring the United States, offering insights that turn every trip into an unforgettable adventure.</p>
-        </div>
-        <div className={styles.list}>
-            <h2>Services We Provide:</h2>
+          <div className={styles.list}>
+            <h2>Why this site exists</h2>
+            <p>
+              I started Travels Americas after my first trip to New York City,
+              because the travel content I found while planning was either
+              generic enough to be useless or fear-based enough to be misleading.
+              The good information existed &mdash; spread across Reddit threads,
+              old blog posts, and locals&apos; word of mouth &mdash; but nobody
+              had pulled it together in a way that helped a first-time visitor
+              make decisions confidently.
+            </p>
+            <p>
+              That gap has only widened since AI-generated travel content
+              flooded the internet. Travels Americas is my attempt to keep
+              practical, human travel writing alive for US destinations &mdash;
+              with real specifics (addresses, hours, ticket prices, subway lines)
+              instead of paragraphs of marketing fluff.
+            </p>
+          </div>
+
+          <div className={styles.list}>
+            <h2>About the editor</h2>
+            <p>
+              <strong>Mridul</strong> is the founder and editor of Travels
+              Americas. NYC was the first major US city I traveled to alone, and
+              the experience of figuring it out the hard way shaped everything
+              about how this site approaches travel content. Every guide is
+              written from the perspective of someone planning a real trip and
+              wanting answers, not someone selling a fantasy.
+            </p>
+          </div>
+
+          <div className={styles.list}>
+            <h2>How we work (editorial standards)</h2>
             <ul>
-                <li>City and state travel guides</li>
-                <li>Top attractions, parks, museums, and landmarks</li>
-                <li>Transportation tips: flights, trains, buses, car rentals</li>
-                <li>Family, solo, and adventure travel suggestions</li>
-                <li>Seasonal highlights and events</li>
+              <li>
+                <strong>Affiliate independence.</strong> Travels Americas may earn
+                commissions from qualifying bookings made through links on this
+                site, but affiliate relationships do not influence our editorial
+                recommendations. We only recommend hotels, tours, and services we
+                believe are useful to our readers.
+              </li>
+              <li>
+                <strong>No paid editorial placements.</strong> We do not accept
+                payment in exchange for inclusion, ranking, or coverage in our
+                guides. If a venue or service appears in our content, it&apos;s
+                because we think it earns the mention.
+              </li>
+              <li>
+                <strong>Active updates.</strong> Our guides are reviewed and
+                updated based on real visits, reader feedback, and changes to
+                attractions, transit, and city conditions. Stale information
+                gets fixed or removed.
+              </li>
+              <li>
+                <strong>Practical over poetic.</strong> We pick specificity over
+                style. Addresses, subway lines, hours, and price ranges &mdash;
+                not adjectives. If we can&apos;t say something useful in a
+                sentence, we don&apos;t pad it into a paragraph.
+              </li>
             </ul>
-        </div>
-        <div>
-            <h2>Why Choose Us?</h2>
-            <p>We combine accurate information, local insights, and a traveler‑first approach to make exploring the USA hassle‑free and enjoyable. Whether it’s your first trip or a return visit, ExploreUSA Travel Co. guides you every step of the way.</p>
-        </div>
-        <div>
-            <h2>Contact Us</h2>
-            <p>info@travelsamericas.com</p>
-        </div>
+          </div>
 
-      </article>
-    </main>
-<Footer />
-</>
-)
+          <div className={styles.list}>
+            <h2>Get in touch</h2>
+            <p>
+              Spotted something out of date? Have a correction, a question, or
+              an experience to share? Email{" "}
+              <a href="mailto:info@travelsamericas.com">info@travelsamericas.com</a>{" "}
+              and we&apos;ll get back to you. Reader corrections are how the
+              guides stay accurate &mdash; they&apos;re always welcome.
+            </p>
+          </div>
+
+        </article>
+      </main>
+
+      <Footer />
+    </>
+  );
 }

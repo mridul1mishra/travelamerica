@@ -1,11 +1,13 @@
 "use client"
 import React from "react";
+import AffiliateDisclosure from "@/app/components/AffiliateDisclosure/AffiliateDisclosure";
 import "./footer.css"; // optional if you want to style it
 
 
 const Footer = () => {
     return (
         <footer className="travel-footer">
+      <AffiliateDisclosure />
   <div className="footer-top">
     <div>
       <h3>Solo Travel</h3>

@@ -1,0 +1,111 @@
+.narrative {
+  max-width: 820px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  color: #1a1a1a;
+  line-height: 1.7;
+  font-size: 1.0625rem;
+}
+
+.narrative h2 {
+  font-size: 1.875rem;
+  line-height: 1.25;
+  margin: 2.5rem 0 1rem;
+  color: #111;
+  font-weight: 700;
+}
+
+.narrative h3 {
+  font-size: 1.2rem;
+  line-height: 1.35;
+  margin: 1.75rem 0 0.75rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.narrative p {
+  margin: 0 0 1.1rem;
+}
+
+.narrative ul,
+.narrative ol {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.narrative li {
+  margin: 0 0 0.55rem;
+}
+
+.narrative a {
+  color: #0364A0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.narrative a:hover {
+  color: #024871;
+}
+
+.narrative strong {
+  color: #111;
+  font-weight: 600;
+}
+
+.section {
+  scroll-margin-top: 5rem;
+}
+
+.lead {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+.guideGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.guideCard {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  text-decoration: none;
+  background: #fff;
+  transition: all 0.2s ease;
+  display: block;
+}
+
+.guideCard:hover {
+  border-color: #0364A0;
+  background: #f7fafc;
+  transform: translateY(-2px);
+}
+
+.guideCard h3 {
+  font-size: 1.05rem;
+  color: #0364A0;
+  margin: 0 0 0.4rem;
+}
+
+.guideCard p {
+  font-size: 0.9rem;
+  color: #475569;
+  margin: 0;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .narrative {
+    font-size: 1rem;
+    margin: 2rem auto;
+  }
+  .narrative h2 {
+    font-size: 1.5rem;
+    margin-top: 2.25rem;
+  }
+}

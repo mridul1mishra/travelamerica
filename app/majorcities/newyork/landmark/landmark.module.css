@@ -147,3 +147,253 @@
     aspect-ratio: 4 / 3;
   }
 }
+
+
+/* ===== Added for landmark rewrite ===== */
+
+.intro {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem 1rem;
+}
+
+.introLead {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 720px;
+  margin: 1rem auto 2rem;
+  text-align: left;
+}
+
+.jumpnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  justify-content: center;
+  margin: 1.5rem auto 0;
+  max-width: 900px;
+}
+
+.jumpLink {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #0364A0;
+  border-radius: 999px;
+  color: #0364A0;
+  text-decoration: none;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.jumpLink:hover {
+  background: #0364A0;
+  color: #fff;
+}
+
+.landmarkList {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.landmarkCard {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.75rem;
+  background: #fff;
+  scroll-margin-top: 5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.landmarkName {
+  font-family: 'CorbenBold', serif;
+  font-size: 1.65rem;
+  color: #0364A0;
+  margin: 0 0 0.25rem;
+  line-height: 1.25;
+}
+
+.landmarkNeighborhood {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0 0 1.25rem;
+  font-style: italic;
+}
+
+.landmarkMeta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 8px;
+}
+
+.metaRow {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 0.75rem;
+  align-items: baseline;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.metaRow dt {
+  font-weight: 600;
+  color: #475569;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.metaRow dd {
+  color: #1e293b;
+  margin: 0;
+}
+
+.landmarkBody {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #1e293b;
+}
+
+.landmarkSubhead {
+  font-family: 'CorbenBold', serif;
+  font-size: 1.05rem;
+  color: #0364A0;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.landmarkBody p {
+  margin: 0 0 0.75rem;
+}
+
+.routeSection {
+  max-width: 900px;
+  margin: 3rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.routeCard {
+  border-left: 4px solid #0364A0;
+  background: #f8fafc;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.routeCard h3 {
+  font-family: 'CorbenBold', serif;
+  font-size: 1.2rem;
+  color: #0364A0;
+  margin: 0 0 0.75rem;
+}
+
+.routeCard ol {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  padding-left: 1.25rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.routeCard li {
+  list-style: decimal;
+  margin: 0 0 0.4rem;
+}
+
+.faqSection {
+  max-width: 900px;
+  margin: 3rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.faqItem {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1rem 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.faqItem summary {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #0364A0;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+
+.faqItem p {
+  margin: 0.5rem 0;
+  line-height: 1.65;
+  color: #1e293b;
+  padding-left: 0.5rem;
+}
+
+.relatedLinks {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.linkGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.relatedLink {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-decoration: none;
+  background: #fff;
+  transition: all 0.2s ease;
+  display: block;
+}
+
+.relatedLink:hover {
+  border-color: #0364A0;
+  background: #f7fafc;
+  transform: translateY(-2px);
+}
+
+.relatedLink h3 {
+  font-family: 'CorbenBold', serif;
+  font-size: 1.05rem;
+  color: #0364A0;
+  margin: 0 0 0.4rem;
+}
+
+.relatedLink p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #475569;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .metaRow {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+  .landmarkCard {
+    padding: 1.25rem;
+  }
+  .landmarkName {
+    font-size: 1.4rem;
+  }
+}

@@ -22,6 +22,7 @@ import faqData from "@/content/destination/solotriptonyc/faqsection.json";
 import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
 import Link from 'next/link';
 import SoloNycQa from '@/app/components/destination/solotriptonyc/aisnippet/cardqanda';
+import SoloTripNarrative from './components/solotripnarrative/SoloTripNarrative';
 
 
 export default function SoloTripNYCClient() {
@@ -83,6 +84,7 @@ export default function SoloTripNYCClient() {
         <InfoSection sections={sectionsData.sections} />
         <WhyTrustThisGuide />
         <SoloNycQa />
+        <SoloTripNarrative />
         <BestNeighborhoodsGrid  neighborhoods={neighborhoodsData.neighborhoods}  ctaLink="/majorcities/newyork/landmark"/>
         <SubwayAccessSection />
         <InfoSection sections={getaroundData.sections} />

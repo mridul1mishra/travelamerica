@@ -1,13 +1,12 @@
 import Footer from "../components/Header/Footer/footer";
-import Header from "../components/Header/header";
+import SimpleHeader from "../components/Header/SimpleHeader";
 import styles from "../termsandcondition/termsstyles.module.css";
 
 export default function TermsPage() {
 return (
 <>
-<Header image="" bannerText="" />
+<SimpleHeader pageTitle="Terms of Service — Travels Americas" />
  <main className={styles.container}>
-      <h1 className={styles.title}>Terms of Service — Travels Americas</h1>
       
 
       <section className={styles.banner} aria-hidden="true">
