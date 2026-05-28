@@ -33,14 +33,13 @@ const Footer = () => {
         <li style={{cursor: 'pointer'}}><a href="/destination/nyc/solo-trip-to-nyc">Solo Travel Safety tips</a></li>
       </ul>
     </div>
-    
     <div>
-      <h3></h3>
+      <h3>Destinations</h3>
       <ul className="vertical-list">
-       { /* <li><a href="#">Instagram</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">YouTube</a></li>
-        <li><a href="#">Pinterest</a></li> */}
+        <li style={{cursor: 'pointer'}}><a href="/destination/nyc">NYC Travel Hub</a></li>
+        <li style={{cursor: 'pointer'}}><a href="/destination/nyc/best-areas-to-stay">Best Areas to Stay</a></li>
+        <li style={{cursor: 'pointer'}}><a href="/destination/nyc/neighborhood-guide">Neighborhood Guide</a></li>
+        <li style={{cursor: 'pointer'}}><a href="/destination/nyc/things-to-do">Things to Do</a></li>
       </ul>
     </div>
     <div>

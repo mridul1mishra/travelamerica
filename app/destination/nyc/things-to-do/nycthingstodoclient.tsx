@@ -87,6 +87,17 @@ export default function NYCThingsToDoClient() {
         </Link>
       </section>
       
+      {/* Navigation Resource */}
+      <section className={styles.bridge} style={{ marginTop: '2rem' }}>
+        <h3>Navigate NYC with Confidence</h3>
+        <p>
+          Getting around is essential to doing what you want to do in NYC. Check out our{" "}
+          <Link href="/destination/nyc/nyc-subway-map">
+            interactive subway map
+          </Link>
+          {" "}to plan your routes and understand the system.
+        </p>
+      </section>
     </main>
     <Footer />
     </>

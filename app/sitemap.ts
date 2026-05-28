@@ -26,7 +26,6 @@ const ROUTES: Entry[] = [
   { path: "/destination/nyc/neighborhood-guide",                     priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/nyc/subway-safety-guide",                    priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/nyc/nyc-subway-map",                         priority: 0.9, changeFrequency: "weekly" },
-  { path: "/destination/nyc/is-nyc-safe-at-night",                   priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/nyc/things-to-do",                           priority: 0.9, changeFrequency: "weekly" },
   // majorcities hubs
   { path: "/majorcities/newyork",                                    priority: 0.9, changeFrequency: "weekly" },
@@ -35,17 +34,12 @@ const ROUTES: Entry[] = [
   { path: "/majorcities/orlando",                                    priority: 0.9, changeFrequency: "weekly" },
   // newyork sub-pages
   { path: "/majorcities/newyork/solo-itinerary",                     priority: 0.9, changeFrequency: "weekly" },
-  { path: "/majorcities/newyork/solo-travel",                        priority: 0.9, changeFrequency: "weekly" },
   { path: "/majorcities/newyork/food",                               priority: 0.9, changeFrequency: "weekly" },
   { path: "/majorcities/newyork/landmark",                           priority: 0.9, changeFrequency: "weekly" },
   { path: "/majorcities/newyork/group-dining",                       priority: 0.9, changeFrequency: "weekly" },
   { path: "/majorcities/newyork/group-travel",                       priority: 0.9, changeFrequency: "weekly" },
   { path: "/majorcities/newyork/group-itinerary",                    priority: 0.9, changeFrequency: "weekly" },
   { path: "/majorcities/newyork/group-landmarks",                    priority: 0.9, changeFrequency: "weekly" },
-  { path: "/majorcities/newyork/nyc-safety-solo-travelers",          priority: 0.8, changeFrequency: "weekly" },
-  { path: "/majorcities/newyork/nyc-safety-solo-travelers-essentials", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/majorcities/newyork/nyc-safety-solo-travelers-action-guide", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/majorcities/newyork/nyc-safety-for-solo-female-travelers", priority: 0.8, changeFrequency: "weekly" },
   // legal / about
   { path: "/about",                                                  priority: 0.4, changeFrequency: "yearly" },
   { path: "/privacy",                                                priority: 0.3, changeFrequency: "yearly" },

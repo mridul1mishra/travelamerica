@@ -156,6 +156,17 @@ export default function SafetyNarrative() {
           <li>If a platform is completely empty and you&apos;ve been waiting more than 10 minutes, consider a rideshare instead.</li>
           <li>At your destination station, exit with the largest group of other riders.</li>
         </ul>
+        <p className={styles.resourceLink}>
+          For detailed navigation and line-by-line safety information, check our{" "}
+          <a href="/destination/nyc/nyc-subway-map">
+            interactive subway map
+          </a>{" "}
+          and{" "}
+          <a href="/destination/nyc/subway-safety-guide">
+            comprehensive subway safety guide
+          </a>
+          .
+        </p>
       </section>
 
       <section id="common-scams-2026" className={styles.section}>
