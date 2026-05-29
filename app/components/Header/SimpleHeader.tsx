@@ -22,7 +22,7 @@ export default function SimpleHeader({ pageTitle }: SimpleHeaderProps) {
       <div className={styles.bar}>
         <Link href="/" className={styles.logoLink}>
           <Image
-            src="/data/logo.webp"
+            src="/Travels-Americas-logo-horizontal-v3.png"
             alt="Travels Americas"
             width={150}
             height={150}
@@ -34,7 +34,7 @@ export default function SimpleHeader({ pageTitle }: SimpleHeaderProps) {
 
         <nav aria-label="Main navigation" className={styles.nav}>
           <ul>
-            <li><Link href="/majorcities/newyork">New York</Link></li>
+            <li><Link href="/destination/nyc">New York</Link></li>
             <li><Link href="/majorcities/losangeles">Los Angeles</Link></li>
             <li><Link href="/majorcities/lasvegas">Las Vegas</Link></li>
             <li><Link href="/majorcities/orlando">Orlando</Link></li>

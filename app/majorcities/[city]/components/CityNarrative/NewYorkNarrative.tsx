@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./NewYorkNarrative.module.css";
 
-// Editorial narrative for the NYC city hub at /majorcities/newyork.
+// Editorial narrative for the NYC city hub at /destination/nyc.
 // This is THE page Booking.com reviewers and Google rate the site by, so it
 // gets a proper hub-style overview: what NYC is, who it's for, when to go,
 // how long to stay, and what to read next. Internal links route to the
@@ -58,7 +58,7 @@ export default function NewYorkNarrative() {
           <li><strong>Solo travelers:</strong> NYC is one of the easier major cities for solo travel anywhere &mdash; safe transit, dense pedestrian streets, normalized solo dining. See our <Link href="/destination/nyc/solo-trip-to-nyc">Solo Trip to NYC guide</Link> for planning specifics.</li>
           <li><strong>Solo female travelers:</strong> Our <Link href="/destination/nyc/nyc-female-solo-travel-guide">female-solo guide</Link> covers the specifics that differ through that lens &mdash; from accommodation choice to night transit to handling unwanted attention.</li>
           <li><strong>Couples and groups:</strong> Plenty of romantic and group-oriented content. Group travel logistics are easier in NYC than in most US cities because everyone&apos;s on the same transit system.</li>
-          <li><strong>Food-driven travelers:</strong> One of the world&apos;s top food cities, full stop. See <Link href="/majorcities/newyork/food">Solo Dining in NYC</Link>.</li>
+          <li><strong>Food-driven travelers:</strong> One of the world&apos;s top food cities, full stop. See <Link href="/destination/nyc/food">Solo Dining in NYC</Link>.</li>
           <li><strong>Culture / museum / theater enthusiasts:</strong> The single best concentration of museums, Broadway, and live music in the US. A 5-day cultural trip is easy to fill without leaving Midtown.</li>
         </ul>
         <p>
@@ -135,7 +135,7 @@ export default function NewYorkNarrative() {
             <h3>Neighborhood Guide</h3>
             <p>Where to explore (vs where to sleep). Brooklyn, Queens, Manhattan.</p>
           </Link>
-          <Link href="/majorcities/newyork/landmark" className={styles.guideCard}>
+          <Link href="/destination/nyc/landmark" className={styles.guideCard}>
             <h3>NYC Landmarks Guide</h3>
             <p>9 actual landmarks with addresses, hours, ticket info, solo tips.</p>
           </Link>

@@ -3,7 +3,7 @@ import styles from "./FemaleSafetyNarrative.module.css";
 // Long-form narrative for the female-solo NYC safety guide.
 // Targets the highest-impression GSC query ("new york city safety for solo
 // female travelers 2025 2026", 101 impr) and the consolidated intent from
-// the redirected /majorcities/newyork/nyc-safety-for-solo-female-travelers URL.
+// the redirected /destination/nyc/nyc-female-solo-travel-guide URL.
 // Each section has an id so anchor-link references work in JSON-LD and from
 // external content.
 

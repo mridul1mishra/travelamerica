@@ -5,32 +5,32 @@ const attractions = [
   {
     name: "Statue of Liberty & Ellis Island",
     blurb: "Half-day visit; book the first ferry, skip the crown.",
-    href: "/majorcities/newyork/landmark#statue-of-liberty",
+    href: "/destination/nyc/landmark#statue-of-liberty",
   },
   {
     name: "Empire State Building",
     blurb: "Iconic skyline views. Go at 9 PM — sunset is overcrowded.",
-    href: "/majorcities/newyork/landmark#empire-state-building",
+    href: "/destination/nyc/landmark#empire-state-building",
   },
   {
     name: "Top of the Rock",
     blurb: "Better than Empire State for photos — you can see Empire State in the view.",
-    href: "/majorcities/newyork/landmark#top-of-the-rock",
+    href: "/destination/nyc/landmark#top-of-the-rock",
   },
   {
     name: "Central Park",
     blurb: "Free, walkable, essential. The Mall → Bethesda → Bow Bridge in 90 min.",
-    href: "/majorcities/newyork/landmark#central-park",
+    href: "/destination/nyc/landmark#central-park",
   },
   {
     name: "9/11 Memorial & Museum",
     blurb: "Plaza is free; museum is $33. Weekday morning, allow 2-3 hours.",
-    href: "/majorcities/newyork/landmark#911-memorial-museum",
+    href: "/destination/nyc/landmark#911-memorial-museum",
   },
   {
     name: "Brooklyn Bridge",
     blurb: "Walk Manhattan to DUMBO at sunset. 30-45 min one way.",
-    href: "/majorcities/newyork/landmark#brooklyn-bridge",
+    href: "/destination/nyc/landmark#brooklyn-bridge",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function AttractionsHub() {
       </div>
 
       <div style={{ textAlign: "center", marginTop: "1rem" }}>
-        <Link href="/majorcities/newyork/landmark" style={{ color: "#000", fontWeight: 500, textDecoration: "underline" }}>
+        <Link href="/destination/nyc/landmark" style={{ color: "#000", fontWeight: 500, textDecoration: "underline" }}>
           See all 9 landmarks with full details →
         </Link>
       </div>

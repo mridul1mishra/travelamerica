@@ -109,10 +109,10 @@ const Propertylisting: React.FC<SectionsProps> = ({ content, active, hotels, cru
                 <a href="/destination/nyc/nyc-safety-guide" style={{ cursor: "pointer" }}><span className="icon">🔐</span> Safety Tips</a>
               </li>
               <li>
-                <a href="/majorcities/newyork/landmark" style={{ cursor: "pointer" }}><span className="icon">🧳</span> Solo Travel Advice</a>
+                <a href="/destination/nyc/landmark" style={{ cursor: "pointer" }}><span className="icon">🧳</span> Solo Travel Advice</a>
               </li>
               <li>
-                <a href="/majorcities/newyork/food" style={{ cursor: "pointer" }}><span className="icon">🍽️</span> NYC Food Guide: Bagels, Bites & Beyond</a>
+                <a href="/destination/nyc/food" style={{ cursor: "pointer" }}><span className="icon">🍽️</span> NYC Food Guide: Bagels, Bites & Beyond</a>
               </li>
             </ul>
           </aside>

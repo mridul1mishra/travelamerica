@@ -62,7 +62,7 @@ export default function SoloTripNYCClient() {
 
                     <div className={styles.herobuttons}>
                         <a href="/destination/nyc/nyc-safety-guide" className={`${styles.btn} ${styles.primary}`}>Start with Safety </a>
-                        <a href="/majorcities/newyork/landmark" className={`${styles.btn} ${styles.secondary}`}>Where to Stay</a>
+                        <a href="/destination/nyc/landmark" className={`${styles.btn} ${styles.secondary}`}>Where to Stay</a>
                     </div>
 
                     <p className={styles.updated}>Updated for 2025</p>
@@ -84,10 +84,10 @@ export default function SoloTripNYCClient() {
         <WhyTrustThisGuide />
         <SoloNycQa />
         <SoloTripNarrative />
-        <BestNeighborhoodsGrid  neighborhoods={neighborhoodsData.neighborhoods}  ctaLink="/majorcities/newyork/landmark"/>
+        <BestNeighborhoodsGrid  neighborhoods={neighborhoodsData.neighborhoods}  ctaLink="/destination/nyc/landmark"/>
         <SubwayAccessSection />
         <InfoSection sections={getaroundData.sections} />
-        <ThreeDayItinerary days={data.days} ctaLink="/majorcities/newyork/solo-itinerary" />
+        <ThreeDayItinerary days={data.days} ctaLink="/destination/nyc/solo-itinerary" />
         <ScenarioSection />
         <FemaleSoloTiles tiles={femaleSolo.tiles}  ctaLink={femaleSolo.ctaLink} />
         <FAQAccordion faqs={faqData} />

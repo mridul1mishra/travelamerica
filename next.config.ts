@@ -15,11 +15,11 @@ const withBundleAnalyzer = bundleAnalyzer({
 // instead of wildcard `https:`, which previously allowed any HTTPS image host.
 const csp = `
   default-src 'self';
-  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://emrldtp.com;
   style-src 'self' 'unsafe-inline';
-  img-src 'self' data: https://www.travelsamericas.com https://www.googletagmanager.com https://www.google-analytics.com;
+  img-src 'self' data: https://www.travelsamericas.com https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com;
   font-src 'self' https://fonts.gstatic.com;
-  connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+  connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com;
   frame-src 'none';
   base-uri 'self';
   form-action 'self';
@@ -27,6 +27,10 @@ const csp = `
   .replace(/\s{2,}/g, " ")
   .trim();
 
+// NOTE: redirects for the NYC migration (/majorcities/newyork/* ->
+// /destination/nyc/*) live in vercel.json, which is the single source of
+// truth for redirects on this project. Don't add a redirects() here too —
+// duplicating across both files causes confusion.
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   async headers() {

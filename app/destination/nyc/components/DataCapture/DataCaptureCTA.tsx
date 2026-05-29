@@ -5,7 +5,7 @@ const bookmarks = [
   { title: "NYC Safety Guide",     href: "/destination/nyc/nyc-safety-guide" },
   { title: "Solo Trip Planning",   href: "/destination/nyc/solo-trip-to-nyc" },
   { title: "Best Areas to Stay",   href: "/destination/nyc/best-areas-to-stay" },
-  { title: "Landmark Guide",       href: "/majorcities/newyork/landmark" },
+  { title: "Landmark Guide",       href: "/destination/nyc/landmark" },
 ];
 
 export default function DataCaptureCTA() {

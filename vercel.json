@@ -73,22 +73,52 @@
     },
     {
       "source": "/majorcities/lasvegas/solo-itinerary",
-      "destination": "/majorcities/newyork/solo-itinerary",
+      "destination": "/destination/nyc/solo-itinerary",
       "permanent": true
     },
     {
       "source": "/majorcities/orlando/solo-itinerary",
-      "destination": "/majorcities/newyork/solo-itinerary",
+      "destination": "/destination/nyc/solo-itinerary",
       "permanent": true
     },
     {
       "source": "/majorcities/losangeles/solo-itinerary",
-      "destination": "/majorcities/newyork/solo-itinerary",
+      "destination": "/destination/nyc/solo-itinerary",
       "permanent": true
     },
     {
-      "source": "/destination/nyc/is-nyc-safe-at-night",
-      "destination": "/destination/nyc/nyc-safety-guide",
+      "source": "/majorcities/newyork/food",
+      "destination": "/destination/nyc/food",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/newyork/group-dining",
+      "destination": "/destination/nyc/group-dining",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/newyork/group-itinerary",
+      "destination": "/destination/nyc/group-itinerary",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/newyork/group-landmarks",
+      "destination": "/destination/nyc/group-landmarks",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/newyork/group-travel",
+      "destination": "/destination/nyc/group-travel",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/newyork/landmark",
+      "destination": "/destination/nyc/landmark",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/newyork/solo-itinerary",
+      "destination": "/destination/nyc/solo-itinerary",
       "permanent": true
     },
     {

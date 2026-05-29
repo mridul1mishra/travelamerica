@@ -45,7 +45,7 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
             <li className="close-btn">
               <button onClick={closeMenu} aria-label="Close menu">✕</button>
             </li>
-           <li style={{ cursor: "pointer" }}><a href="/majorcities/newyork">New York</a></li>
+           <li style={{ cursor: "pointer" }}><a href="/destination/nyc">New York</a></li>
            <li style={{ cursor: "pointer" }}><a href="/majorcities/losangeles">Los Angeles</a></li>
            <li style={{ cursor: "pointer" }}><a href="/majorcities/lasvegas">Las Vegas</a></li>
            <li style={{ cursor: "pointer" }}><a href="/majorcities/orlando">Orlando</a></li> 

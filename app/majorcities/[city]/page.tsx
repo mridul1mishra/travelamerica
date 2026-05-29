@@ -56,7 +56,7 @@ export default async function CityPage({ params }: PageProps) {
   "@type": "WebPage",
   "name": "New York City Travel Hub",
   "description": "Your complete guide to solo travel in New York City — attractions, food, safety tips, and itineraries.",
-  "url": "https://www.travelsamericas.com/majorcities/newyork",
+  "url": "https://www.travelsamericas.com/destination/nyc",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -70,7 +70,7 @@ export default async function CityPage({ params }: PageProps) {
         "@type": "ListItem",
         "position": 3,
         "name": "New York City",
-        "item": "https://www.travelsamericas.com/majorcities/newyork"
+        "item": "https://www.travelsamericas.com/destination/nyc"
       }
     ]
   },
@@ -111,13 +111,13 @@ export default async function CityPage({ params }: PageProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Top Attractions",
-        "url": "https://www.travelsamericas.com/majorcities/newyork/landmark"
+        "url": "https://www.travelsamericas.com/destination/nyc/landmark"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Food & Dining",
-        "url": "https://www.travelsamericas.com/majorcities/newyork/food"
+        "url": "https://www.travelsamericas.com/destination/nyc/food"
       },
       {
         "@type": "ListItem",

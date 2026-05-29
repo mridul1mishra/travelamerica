@@ -27,7 +27,7 @@ export default function NeighborhoodGuideCTA({tripType, interest}: NeighborhoodG
         </Link>
 
         <Link
-          href="/majorcities/newyork/solo-itinerary"
+          href="/destination/nyc/solo-itinerary"
           className={styles.secondary}
         >
           View NYC itineraries

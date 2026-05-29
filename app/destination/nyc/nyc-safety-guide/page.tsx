@@ -114,7 +114,7 @@ export default function NYCSafetyGuide() {
       "@type": "ListItem",
       "position": 1,
       "name": "Destinations",
-      "item": "https://www.travelsamericas.com/majorcities/newyork"
+      "item": "https://www.travelsamericas.com/destination/nyc"
     },
     {
       "@type": "ListItem",

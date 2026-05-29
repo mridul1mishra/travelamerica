@@ -5,12 +5,12 @@ const itineraries = [
   {
     title: "Solo NYC Itinerary",
     description: "A 3-day plan built for solo travelers — safe neighborhoods, efficient routing, and how to pace each day without burning out.",
-    href: "/majorcities/newyork/solo-itinerary",
+    href: "/destination/nyc/solo-itinerary",
   },
   {
     title: "Group NYC Itinerary",
     description: "A 3-day group plan covering the MET, Central Park, Guggenheim, and Frick Collection with logistics for traveling together.",
-    href: "/majorcities/newyork/group-itinerary",
+    href: "/destination/nyc/group-itinerary",
   },
 ];
 

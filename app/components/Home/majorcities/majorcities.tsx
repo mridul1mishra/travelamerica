@@ -23,7 +23,7 @@ export default function Majorcities({ section: { heading, storydescription, stor
   </div>
 
   <div className="carousel-controls">
-    <a href="/majorcities/newyork" className="view-more-btn">View More</a>
+    <a href="/destination/nyc" className="view-more-btn">View More</a>
   </div>
         </section>
         </>
