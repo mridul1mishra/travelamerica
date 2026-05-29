@@ -25,7 +25,8 @@ const csp = `
   style-src
     'self'
     'unsafe-inline'
-    https://emrldtp.com;
+    https://emrldtp.com
+    https://fonts.googleapis.com;
 
   img-src
     'self'
