@@ -28,8 +28,20 @@ html, body, #__next {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
   margin: 0;
+}
+
+/* Ensure all links and clickable controls show a pointer cursor.
+   a:link / a:visited carry higher specificity than `a { all: unset }`
+   resets used in some components, so the pointer always wins. */
+a,
+a:link,
+a:visited,
+button,
+[role="button"],
+[onclick] {
+  cursor: pointer;
 }

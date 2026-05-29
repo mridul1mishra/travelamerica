@@ -1,5 +1,4 @@
 .flight-section {
-  font-family: Arial, sans-serif;
   max-width: 1120px;
   margin: 20px auto;
   padding: 0 15px;
@@ -98,7 +97,6 @@
     min-width: 260px;
     height: fit-content;
     padding: 20px;
-    font-family: Arial,sans-serif;
     position: sticky;
     top: 40px;
     box-shadow: 0 2px 8px #0000000d

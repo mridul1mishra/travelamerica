@@ -14,7 +14,7 @@
     font-weight: 700; /* strong emphasis */
     text-align: center;
     color: #222; /* dark, high contrast */
-    font-family: 'CorbenBold'; 
+    font-family: var(--font-montserrat); 
     letter-spacing: 0.5px; /* subtle spacing for refinement */
     margin-bottom: 15px;
     margin-top: 10px;
@@ -24,7 +24,7 @@
 }
 /* Heading and subheading */
 .heading {
-  font-family: 'CorbenBold', serif;
+  font-family: var(--font-montserrat);
   font-size: 2rem;
   color: #0364A0;
   margin: 0 0 0.625rem;
@@ -36,24 +36,10 @@
   padding: 0;
 }
 .subheading {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat);
   color: rgb(24, 62, 126);
   font-size: 1.125rem;
   line-height: 1.6;
-}
-@font-face {
-  font-family: 'CorbenBold';
-  src: url('/data/corben-cdnfonts/Corben-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap; 
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/data/corben-cdnfonts/Montserrat-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap; 
 }
 
 /* CSS CARD */
@@ -115,7 +101,7 @@
   width: 100%;
   min-height: 360px;             /* 🔥 match back card height */
 
-  font-family: system-ui, sans-serif;
+  font-family: var(--font-montserrat);
 }
 
 .safety-front-card__footer {
@@ -209,7 +195,7 @@
   padding: 22px;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  font-family: system-ui, sans-serif;
+  font-family: var(--font-montserrat);
   display: flex;
   flex-direction: column;
   gap: 18px;

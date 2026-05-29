@@ -14,7 +14,7 @@
     font-weight: 700; /* strong emphasis */
     text-align: center;
     color: #222; /* dark, high contrast */
-    font-family: 'CorbenBold'; 
+    font-family: var(--font-montserrat); 
     letter-spacing: 0.5px; /* subtle spacing for refinement */
     margin-bottom: 15px;
     margin-top: 10px;
@@ -48,7 +48,7 @@
 
 /* Heading and subheading */
 .heading {
-  font-family: 'CorbenBold', serif;
+  font-family: var(--font-montserrat);
   font-size: 2rem;
   color: #0364A0;
   margin: 0 0 0.625rem;
@@ -59,7 +59,7 @@
   padding: 0;
 }
 .subheading {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat);
   color: rgb(24, 62, 126);
   font-size: 1.125rem;
   line-height: 1.6;
@@ -86,20 +86,7 @@
 .ctaButton:hover {
   background-color: #005bb5;
 }
-@font-face {
-  font-family: 'CorbenBold';
-  src: url('/data/corben-cdnfonts/Corben-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap; 
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/data/corben-cdnfonts/Montserrat-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap; 
-}
+
 /* Responsive layout */
 @media screen and (max-width: 1024px) {
   .splitSection {

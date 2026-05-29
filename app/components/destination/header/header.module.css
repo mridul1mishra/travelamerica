@@ -153,13 +153,11 @@
 /* Logo */
 .brandlogo {
   display: block;
-  max-width: 100px;
+  max-width: 285px;             /* matches horizontal logo aspect ratio (~3.77:1) */
   height: auto;
   margin-left: 0;
   margin-right: 0;
   cursor: pointer;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-  
 }
 @media (max-width: 900px) {
   

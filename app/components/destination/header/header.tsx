@@ -11,10 +11,11 @@ export default function Header() {
       <div className={styles.brandlogo}>
         <Link href="/">
           <Image
-            src="/data/Travels-Americas-logo.png"
+            src="/Travels-Americas-logo-horizontal-v3.png"
             alt="Travels Americas Logo"
-            width={150}
-            height={150}
+            width={285}
+            height={76}
+            sizes="(max-width: 768px) 200px, 285px"
             priority
           />
         </Link>

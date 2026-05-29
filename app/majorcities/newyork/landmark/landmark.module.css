@@ -14,7 +14,7 @@
     font-weight: 700; /* strong emphasis */
     text-align: center;
     color: #222; /* dark, high contrast */
-    font-family: 'CorbenBold'; 
+    font-family: var(--font-montserrat); 
     letter-spacing: 0.5px; /* subtle spacing for refinement */
     margin-bottom: 15px;
     margin-top: 10px;
@@ -47,7 +47,7 @@
 
 /* Heading and subheading */
 .heading {
-  font-family: 'CorbenBold', serif;
+  font-family: var(--font-montserrat);
   font-size: 2rem;
   color: #0364A0;
   margin: 0 0 0.625rem;
@@ -58,7 +58,7 @@
   padding: 0;
 }
 .subheading {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat);
   color: rgb(24, 62, 126);
   font-size: 1.125rem;
   line-height: 1.6;
@@ -85,20 +85,7 @@
 .ctaButton:hover {
   background-color: #005bb5;
 }
-@font-face {
-  font-family: 'CorbenBold';
-  src: url('/data/corben-cdnfonts/Corben-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap; 
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('/data/corben-cdnfonts/Montserrat-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap; 
-}
+
 /* Responsive layout */
 @media screen and (max-width: 1024px) {
   .splitSection {
@@ -148,7 +135,6 @@
   }
 }
 
-
 /* ===== Added for landmark rewrite ===== */
 
 .intro {
@@ -158,7 +144,7 @@
 }
 
 .introLead {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat);
   font-size: 1.1rem;
   line-height: 1.6;
   color: #333;
@@ -177,7 +163,7 @@
 }
 
 .jumpLink {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat);
   font-size: 0.875rem;
   padding: 0.4rem 0.8rem;
   border: 1px solid #0364A0;
@@ -212,7 +198,7 @@
 }
 
 .landmarkName {
-  font-family: 'CorbenBold', serif;
+  font-family: var(--font-montserrat);
   font-size: 1.65rem;
   color: #0364A0;
   margin: 0 0 0.25rem;
@@ -220,7 +206,7 @@
 }
 
 .landmarkNeighborhood {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat);
   font-size: 0.95rem;
   color: #64748b;
   margin: 0 0 1.25rem;
@@ -242,7 +228,7 @@
   grid-template-columns: 130px 1fr;
   gap: 0.75rem;
   align-items: baseline;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat);
   font-size: 0.95rem;
   line-height: 1.45;
 }
@@ -262,14 +248,14 @@
 }
 
 .landmarkBody {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat);
   font-size: 1rem;
   line-height: 1.65;
   color: #1e293b;
 }
 
 .landmarkSubhead {
-  font-family: 'CorbenBold', serif;
+  font-family: var(--font-montserrat);
   font-size: 1.05rem;
   color: #0364A0;
   margin: 1.25rem 0 0.5rem;
@@ -294,14 +280,14 @@
 }
 
 .routeCard h3 {
-  font-family: 'CorbenBold', serif;
+  font-family: var(--font-montserrat);
   font-size: 1.2rem;
   color: #0364A0;
   margin: 0 0 0.75rem;
 }
 
 .routeCard ol {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat);
   font-size: 1rem;
   line-height: 1.7;
   padding-left: 1.25rem;
@@ -323,7 +309,7 @@
 .faqItem {
   border-bottom: 1px solid #e2e8f0;
   padding: 1rem 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat);
 }
 
 .faqItem summary {
@@ -371,14 +357,14 @@
 }
 
 .relatedLink h3 {
-  font-family: 'CorbenBold', serif;
+  font-family: var(--font-montserrat);
   font-size: 1.05rem;
   color: #0364A0;
   margin: 0 0 0.4rem;
 }
 
 .relatedLink p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat);
   font-size: 0.9rem;
   color: #475569;
   margin: 0;

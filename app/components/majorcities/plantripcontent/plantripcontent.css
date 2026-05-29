@@ -13,7 +13,6 @@
     display: block;
   }
 .group-section {
-  font-family: Arial, sans-serif;
   max-width: 1091px;
   margin: 20px auto;
 }
@@ -23,7 +22,6 @@
   margin-bottom: 15px;
 }
 .solo-section {
-  font-family: Arial, sans-serif;
   max-width: 1091px;
   margin: 20px auto;
 }
@@ -33,7 +31,6 @@
   margin-bottom: 15px;
 }
 .couple-section {
-  font-family: Arial, sans-serif;
   max-width: 1091px;
   margin: 20px auto;
 }

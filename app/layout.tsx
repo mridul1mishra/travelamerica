@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import Script from 'next/script';
+import "./globals.css";
 
 export const viewport = {
   width: "device-width",
@@ -29,6 +30,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Montserrat is the site's primary UI/body typeface. It's a variable font on
+// Google Fonts, so next/font self-hosts every weight automatically (no CDN
+// dependency, no layout shift). Exposed as --font-montserrat and consumed in
+// globals.css.
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 
 export default function RootLayout({
   children,
@@ -38,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">      
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}>
         <Script strategy="afterInteractive"  src="https://www.googletagmanager.com/gtag/js?id=G-SM7NC16K21"/>
         <Script id="ga-script"  strategy="afterInteractive"  dangerouslySetInnerHTML={{__html: `window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}

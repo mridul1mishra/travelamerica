@@ -1,3 +1,5 @@
+/* Typeface is inherited from the global Montserrat font set in layout.tsx /
+   globals.css — no per-component @font-face or font-family needed. */
 .narrative {
   max-width: 820px;
   margin: 2.5rem auto;
@@ -77,6 +79,12 @@
   background: #fff;
   transition: all 0.2s ease;
   display: block;
+}
+
+/* Override `.narrative a { text-decoration: underline }` (0,2,0) which
+   otherwise underlines the card. This selector is 0,2,1 so it wins. */
+.narrative a.guideCard {
+  text-decoration: none;
 }
 
 .guideCard:hover {

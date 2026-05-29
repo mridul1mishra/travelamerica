@@ -18,6 +18,7 @@
 }
 a{
   all: unset;
+  cursor: pointer;
 }
 /* Scroll effect */
 .overlay-header.scrolled {

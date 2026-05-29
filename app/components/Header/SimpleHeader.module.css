@@ -40,7 +40,7 @@
 }
 
 .nav a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-montserrat);
   font-size: 0.95rem;
   font-weight: 500;
   color: #1e293b;
@@ -56,7 +56,7 @@
 }
 
 .pageTitle {
-  font-family: 'CorbenBold', serif;
+  font-family: var(--font-montserrat);
   font-size: 2.25rem;
   color: #111;
   text-align: center;
