@@ -10,7 +10,7 @@ export default function GroupDiningClientPage() {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Group Dining in NYC: Shared Tables & Festive Feasts",
-  "description": "A curated guide to group dining in New York City, highlighting family-style restaurants, lively communal tables, and festive spots perfect for gatherings.",
+  "description": "A guide to group dining in New York City: family-style restaurants, communal tables, and places that take reservations for a crowd.",
   "author": {
     "@type": "Organization",
     "name": "Travels Americas",
@@ -282,8 +282,8 @@ const howto = {
         <Header image={`/data/majorcities/newyork/assets/nyc-solo-dining.png`} bannerText="Hero banner showcasing NYC solo dining experience for travelers" />
         <section className={styles.splitSection} style={{textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
-                <h1  className={styles.sectionheading}>Discover Group Dining in NYC!</h1>
-                <p>Discover New York City’s iconic food scene: fresh bagels at sunrise, sizzling Brooklyn steaks, classic foldable pizza slices, and vibrant breweries offering craft beer and group‑friendly experiences across the boroughs.</p>
+                <h1  className={styles.sectionheading}>Where to Eat as a Group in NYC</h1>
+                <p>Feeding a group in New York is easier than it looks if you pick the right kind of place. Family-style restaurants, Korean BBQ, dim sum and steakhouses are all built around shared plates and big tables — and most take reservations for a crowd if you call ahead.</p>
                 </div>
         </section>
         <section className={styles.splitSection}>
@@ -297,11 +297,11 @@ const howto = {
                 />
                 </div>
                 <div className={styles.textWrapper}>
-                <h2 className={styles.heading}>Group Dining, Best steak house Brooklyn</h2>
-                <p>Brooklyn boasts some of the best steak houses.</p>
-                <p className={styles.subheading}>🍜 Peter Luger Ribeye delivers bold flavor, marbling, and tenderness, making it a favorite for group dining travelers. French steak frites Brooklyn at Le Relais de Venise L’Entrecôte brings classic French charm to the borough’s dining scene, perfect for shared experiences.</p>
-                <p className={styles.subheading}>🍷 Brooklyn creamed spinach, truffle baked macaroni, steakhouse potato gratin, and onion rings are classic steak sides preferred by travelers.</p>
-                <p className={styles.subheading}>🥯 Group travelers in Brooklyn savor Junior’s Cheesecake, indulge in Brooklyn Blackout Cake, and share Bananas Foster French Toast after steakhouse dinners.</p>
+                <h2 className={styles.heading}>Steakhouses in Brooklyn</h2>
+                <p>A few of the city's best steakhouses are over the river in Brooklyn.</p>
+                <p className={styles.subheading}>🍜 Peter Luger is the famous one — cash or their own card only, so warn the group before the bill lands. For something simpler, Le Relais de Venise does one thing, steak frites with unlimited fries, which makes ordering for a big table painless.</p>
+                <p className={styles.subheading}>🍷 The sides are the point at a steakhouse. Get the creamed spinach, the mac and cheese and a potato gratin for the table and let people share rather than ordering their own.</p>
+                <p className={styles.subheading}>🥯 For dessert, Junior's cheesecake is the Brooklyn classic, but the Blackout Cake is the one locals argue about. Either way, order a couple for the table — the slices are big enough to split.</p>
                 
                 <Link href="/majorcities/newyork/group-itinerary" className={styles.ctaButton}>
                     Plan Your NYC Itinerary
@@ -311,10 +311,10 @@ const howto = {
         <section className={styles.splitSection}>
                 
                 <div className={styles.textWrapper}>
-                <h2 className={styles.heading}>Slices, Sips, and Stories: New York’s Flavorful Journey</h2>
-                <p className={styles.subheading}>🏙️ New York pizza slice culture defines the city, with every best NYC pizza spot offering an authentic thin crust pie. From Brooklyn pizza legends to the iconic Joe’s Pizza, travelers search for the famous New York style pizza experience that delivers flavor, tradition, and the perfect foldable slice.</p>
-                <p className={styles.subheading}>🍣 NYC’s best mocktails include Beets ’N’ Cream at Bangkok Supper Club, Earhart at Getaway, and Dante’s Virgin Garibaldi — each offering unique flavor profiles that showcase the city’s growing zero‑proof cocktail culture.</p>
-                <p className={styles.subheading}>🥟 In New York City, brewery lovers step into a story where history pours from Brooklyn Brewery’s taps, innovation fizzes at Other Half, and Grimm’s sours swirl like alchemy in East Williamsburg transform the city into a living film reel of neighborhoods, flavors, and community</p>
+                <h2 className={styles.heading}>Pizza, Mocktails and Breweries</h2>
+                <p className={styles.subheading}>🏙️ For a group, pizza by the slice is the cheapest way to feed everyone fast. Joe's in the Village is the reliable standby; if you've got time to sit, a whole pie at a Brooklyn spot like Roberta's is worth the trip. Fold it in half — that's how it's eaten here.</p>
+                <p className={styles.subheading}>🍣 If part of your group isn't drinking, the no-alcohol options have gotten good. Try Beets 'N' Cream at Bangkok Supper Club, the Earhart at Getaway in Greenpoint, or the Virgin Garibaldi at Dante.</p>
+                <p className={styles.subheading}>🥟 The breweries cluster in East Williamsburg, so you can walk between a few. Brooklyn Brewery is the original, Other Half is known for hazy IPAs, and Grimm does sours. Most have long shared tables, which is ideal for a group.</p>
                 
                 <Link href="/majorcities/newyork/group-landmarks" className={styles.ctaButton}>
                    Explore NYC Landmarks Nearby
@@ -340,10 +340,10 @@ const howto = {
                 />
                 </div>
                 <div className={styles.textWrapper}>
-                <h2 className={styles.heading}>Bite Into the Bagel Capital</h2>
-                <p className={styles.subheading}>🥯 <strong>Tradition in Every Bite -</strong>Iconic shops like Murray’s, Ess-a-Bagel, and Absolute Bagels serve traditional, hand-rolled bagels with timeless toppings.</p>
-                <p className={styles.subheading}>🧈 <strong>Artisan Bagels & Inventive Toppings -</strong> Black Seed, Bagel Pub, and Utopia Bagels offer inventive flavors, wood-fired styles, and viral-worthy creations.</p>
-                <p className={styles.subheading}>🗺️ <strong>Solo Bites & Schmear -</strong>Hudson Bagel, Apollo Bagels, and Tompkins Square Bagels provide cozy counters and outdoor seating — perfect for solo snacking.</p>
+                <h2 className={styles.heading}>Bagels for the Group</h2>
+                <p className={styles.subheading}>🥯 <strong>The classics.</strong> Murray's, Ess-a-Bagel and Absolute hand-roll and boil theirs the old way. For a group, order a dozen mixed with a couple of tubs of cream cheese and let people build their own.</p>
+                <p className={styles.subheading}>🧈 <strong>The newer crowd.</strong> Black Seed does wood-fired, Montreal-style bagels, and Apollo has a serious following — expect a line on weekends, so send one person ahead while everyone else gets coffee.</p>
+                <p className={styles.subheading}>🗺️ <strong>Room to sit.</strong> Hudson Bagel and Tompkins Square have counters and a few outdoor seats, which is rare — most NYC bagel shops are grab-and-go.</p>
                 
                 <Link href="/majorcities/newyork/group-travel" className={styles.ctaButton}>
                     Group Travel Safety Tips

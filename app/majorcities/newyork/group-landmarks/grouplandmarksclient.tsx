@@ -36,7 +36,7 @@ export default function GroupLandmarksPage() {
     {
       "@type": "Article",
       "headline": "Group Travel in New York City – Landmark Guide!",
-      "description": "Explore Manhattan, Brooklyn, and Bronx landmarks designed for group travelers — from icons like the Statue of Liberty to hidden gems and seasonal celebrations.",
+      "description": "A guide to New York City landmarks for groups across Manhattan, Brooklyn and the Bronx, with booking tips, group rates and what's worth doing by season.",
       "image": "https://www.travelsamericas.com/images/group-landmarks-banner.png",
       "author": {
         "@type": "Organization",
@@ -109,7 +109,7 @@ const article = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Group Travel Experiences in New York City",
-  "description": "A curated guide to group travel in New York City, featuring borough-based landmarks, activities, and seasonal highlights.",
+  "description": "A guide to group travel in New York City, organized by borough, with landmarks, activities and seasonal highlights.",
   "author": {
     "@type": "Organization",
     "name": "Travels Americas",
@@ -126,52 +126,52 @@ const article = {
     {
       "@type": "TouristAttraction",
       "name": "Statue of Liberty & Ellis Island",
-      "description": "Group travelers share ferries to the Statue of Liberty and reflect together at Ellis Island."
+      "description": "A half-day ferry trip; book the earliest slot to beat the lines."
     },
     {
       "@type": "TouristAttraction",
       "name": "Times Square & Broadway",
-      "description": "Feel the shared pulse of Broadway lights in Times Square with group experiences."
+      "description": "A short walk from Rockefeller Center and easy to keep a group together."
     },
     {
       "@type": "TouristAttraction",
       "name": "Rockefeller Center",
-      "description": "Capture skyline moments and festive group activities at Rockefeller Center."
+      "description": "Observation deck and, in winter, the rink and tree."
     },
     {
       "@type": "TouristAttraction",
       "name": "MoMA & The Met",
-      "description": "Classic museum tours with guided entry for groups in Manhattan."
+      "description": "Both offer guided group entry that skips the ticket line."
     },
     {
       "@type": "TouristAttraction",
       "name": "Hudson River Cruises & High Line",
-      "description": "Groups savor skyline views on river cruises and stroll the High Line’s elevated gardens."
+      "description": "A cruise gives everyone the skyline without walking; the High Line is flat and ends at Chelsea Market."
     },
     {
       "@type": "TouristAttraction",
-      "name": "Brooklyn Skyline & Creative Streets",
-      "description": "Marvels of design and artistry create unforgettable shared stories for groups."
+      "name": "Brooklyn Bridge & DUMBO",
+      "description": "Walk from the Manhattan side toward DUMBO to keep the skyline in front of you."
     },
     {
       "@type": "TouristAttraction",
-      "name": "Brooklyn Seasonal Festivities",
-      "description": "Holiday lights, ice skating, summer rhythms, and brewery toasts transform each season into group celebrations."
+      "name": "Brooklyn by Season",
+      "description": "Ice skating in Prospect Park in winter, cherry blossoms at the Botanic Garden in spring, brewery tours in summer."
     },
     {
       "@type": "TouristAttraction",
-      "name": "Yankee Stadium & Bronx Botanical Garden",
-      "description": "The stadium’s roar and the garden’s bloom unfold Bronx seasons into vivid celebrations."
+      "name": "Yankee Stadium & NY Botanical Garden",
+      "description": "Group tickets are cheap for a home game; the garden nearby has group rates."
     },
     {
       "@type": "TouristAttraction",
-      "name": "Bronx Cultural Streets & Arthur Avenue",
-      "description": "Walk historic streets, taste authentic flavors, and join global connections in the Bronx."
+      "name": "Arthur Avenue",
+      "description": "The Bronx's Little Italy: family-run delis and restaurants. Book ahead for larger groups."
     },
     {
       "@type": "TouristAttraction",
       "name": "Poe’s Cottage & Wave Hill",
-      "description": "Discover hidden gems from literary echoes to natural escapes, offering authentic group experiences."
+      "description": "A quick literary stop and a quiet public garden over the Hudson; good half-day add-ons."
     }
   ]
 };
@@ -357,10 +357,10 @@ const howto = {
           />
         </div>
         <div className={styles.textWrapper}>
-          <h2 className={styles.heading}>Manhattan Together: Icons, Culture, and Skyline Moments for Groups</h2>
-          <p className={styles.subheading}>🚶‍♂️Group travelers exploring Manhattan landmarks share ferries to the Statue of Liberty, reflect together at Ellis Island, feel the shared pulse of Broadway lights in Times Square, and capture skyline moments at Rockefeller Center. 🗽🌆🎭 — New York’s icons shine brightest together.</p>
-          <p className={styles.subheading}>📸 Manhattan group activities range from classic museum tours at MoMA, the Met with guided entry, to Midtown escape rooms that spark teamwork, flavorful food tours weaving through Chinatown and Little Italy, and cutting-edge multisensory attractions in Chelsea—together offering unforgettable experiences for groups.</p>
-          <p  className={styles.subheading}>🧭 Groups in Manhattan can savor Hudson River cruises with sweeping skyline views, stroll the High Line’s elevated gardens and art installations. — scenic, festive, and unforgettable moments across New York City</p>
+          <h2 className={styles.heading}>Manhattan: The Landmarks Worth Doing as a Group</h2>
+          <p className={styles.subheading}>🚶‍♂️ Start with the big ones. The Statue of Liberty and Ellis Island take a half day with the ferry, so book the earliest slot you can — lines are much shorter before 10am. Times Square and Rockefeller Center are short walks apart and work well for a group that wants to stay together.</p>
+          <p className={styles.subheading}>📸 For something more active, MoMA and the Met both offer guided group entry that skips the ticket line. Midtown escape rooms are an easy team activity, and food tours through Chinatown and Little Italy keep everyone moving and fed at the same time.</p>
+          <p  className={styles.subheading}>🧭 To wind down, a Hudson River cruise gives the whole group the skyline without anyone having to walk, and the High Line is a flat, easy stroll that ends right at Chelsea Market if you want lunch after.</p>
           <Link href="/majorcities/newyork/group-itinerary" className={styles.ctaButton}>
             Explore your Group trip plan
           </Link>
@@ -368,10 +368,10 @@ const howto = {
       </section>
       <section className={styles.splitSection}>
         <div className={styles.textWrapper}>
-          <h2 className={styles.heading}>Brooklyn’s Hidden Harmony: Skyline Views, Blossoms, and Festive Belonging</h2>
-          <p className={styles.subheading}>🚶‍♂️Marvels of design inspire awe, Brooklyn's Skyline views meet creative streets. It’s the harmony of ambition meeting artistry, weaving unforgettable shared stories.</p>
-          <p className={styles.subheading}>📸 Season after season, blossoms return, colors deepen, and holiday lights draw us close — group travel experiences that transform time together into lasting connections and shared belonging.</p>
-          <p  className={styles.subheading}>🧭 Festive sensations — laughter on ice, rhythms in summer, toasts in breweries — transform each season into celebrations of belonging and connections.</p>
+          <h2 className={styles.heading}>Brooklyn: Skyline Walks and Things to Do by Season</h2>
+          <p className={styles.subheading}>🚶‍♂️ Walk the Brooklyn Bridge from the Manhattan side toward DUMBO — that direction puts the skyline in front of you the whole way. It's about 25 minutes at a group pace, and you come out near the waterfront parks and cafes.</p>
+          <p className={styles.subheading}>📸 The season changes what's on. In winter there's ice skating at the LeFrak Center in Prospect Park and holiday lights; in spring the Brooklyn Botanic Garden's cherry blossoms are the draw, usually late April.</p>
+          <p  className={styles.subheading}>🧭 Summer brings free concerts and brewery tours around Williamsburg and Bushwick — easy for a group since you can book a tasting ahead and most spots have long shared tables.</p>
           <Link href="/majorcities/newyork/group-travel" className={styles.ctaButton}>
             Group Travel Tips for Exploring Safely
           </Link>
@@ -395,10 +395,10 @@ const howto = {
           />
         </div>
         <div className={styles.textWrapper}>
-          <h2 className={styles.heading}>The Bronx: Heritage, Hidden Gems, and Year‑Round Connections</h2>
-          <p className={styles.subheading}>🗽This stadium’s roar and the garden’s bloom unfold Bronx seasons into vivid, year‑round celebrations for festival‑minded groups of travelers.</p>
-          <p className={styles.subheading}>🚶‍♀️ When travelers land, the Bronx invites them to walk its historic streets, taste its cultural flavors, and join its global connections — culminating in a living heritage shared across every season.</p>
-          <p  className={styles.subheading}>🧭 Discover Bronx hidden gems — from literary echoes at Poe’s Cottage to authentic tastes on Arthur Avenue and natural escapes at Wave Hill. These attractions connect history, culture, and nature, offering group travelers authentic experiences year‑round reasons to visit the Bronx.</p>
+          <h2 className={styles.heading}>The Bronx: Ballgames, Gardens, and a Real Little Italy</h2>
+          <p className={styles.subheading}>🗽 If you can line the trip up with a Yankees home game, group tickets are some of the cheapest in the city. The New York Botanical Garden is a short ride away and has group rates, with the orchid show in spring and a train show around the holidays.</p>
+          <p className={styles.subheading}>🚶‍♀️ Arthur Avenue is the Bronx's Little Italy and, locals will tell you, the better one. It's mostly family-run delis, bakeries and sit-down places — book ahead for a group of more than six since the rooms are small.</p>
+          <p  className={styles.subheading}>🧭 For something quieter, Poe's Cottage is a quick, cheap stop for the literary-minded, and Wave Hill is a public garden overlooking the Hudson that rarely gets crowded. Both are easy add-ons if you've got a half day spare.</p>
           <Link href="/majorcities/newyork/group-dining" className={styles.ctaButton}>
             Best Eats Near These Landmarks
           </Link>
