@@ -188,7 +188,7 @@ const itemlist = {
         {
           "@type": "LandmarksOrHistoricalBuildings",
           "name": "Statue of Liberty",
-          "description": "Iconic neoclassical sculpture on Liberty Island, popular for group tours.",
+          "description": "The copper statue on Liberty Island, reached by ferry — a half-day stop that works well for groups.",
           "touristType": "Group Travelers",
           "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY" }
         },
@@ -255,7 +255,7 @@ const itemlist = {
         {
           "@type": "LandmarksOrHistoricalBuildings",
           "name": "Yankee Stadium",
-          "description": "Iconic sports venue with group ticket packages and tours.",
+          "description": "Home of the Yankees in the Bronx — group tickets here are among the cheapest in the city.",
           "touristType": "Group Travelers",
           "address": { "@type": "PostalAddress", "addressLocality": "Bronx", "addressRegion": "NY" }
         },

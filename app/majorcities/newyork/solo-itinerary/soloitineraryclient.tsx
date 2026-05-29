@@ -201,17 +201,17 @@ const schema4 = {
         </div>
         <div className={styles.textWrapper}>
           <h2 className={styles.heading}>Day 1: NYC Landmarks for Solo Travelers</h2>
-          <p className={styles.subheading}>Start with the classics. Today’s about iconic sights and easy wins.</p>
+          <p className={styles.subheading}>Start with the classics — the big sights and a few easy wins to get your bearings.</p>
           <ul className={styles.itineraryList}>
               <li className={styles.subheading}>🌅Morning: Central Park(Bethesda Terrace → Strawberry Fields
-              <p className={styles.description}>Easy solo-friendly walk, iconic views.</p>
+              <p className={styles.description}>Easy walk on your own, and the views hold up.</p>
               </li>
             
               <li className={styles.subheading}>☀️Afternoon: Rockefeller Center → Top of the Rock
               <p className={styles.description}>Best skyline shots, smooth solo flow.</p>
               </li>
               <li className={styles.subheading}>☀️Midday: The Met to MoMA
-              <p className={styles.description}>Pick one or sample both — world‑class art, simple navigation.</p>
+              <p className={styles.description}>Pick one or do both — great art either way, and easy to get around.</p>
               </li>
               <li className={styles.subheading}>🌙Evening: Dinner at Time Out Market or Eataly Flatiron
               <p className={styles.description}>Great solo dining energy, safe and lively.</p>

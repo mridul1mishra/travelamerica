@@ -170,9 +170,9 @@ const HowTo = {
                 <h2 className={styles.heading}>Day 1: Broadway Nights, Group Delights</h2>
                 <p className={styles.subheading}></p>
                 <ul className={styles.itineraryList}>
-                    <li className={styles.subheading}>🌅Start your 3‑day New York group itinerary in Times Square, where friends grab coffee, snap photos, and soak in the neon buzz. Head to Rockefeller Center’s Top of the Rock for panoramic skyline views — perfect for group shots and planning the day ahead.</li>
-                    <li className={styles.subheading}>☀️Chelsea Market anchors the afternoon with bustling halls, artisan shops, and local flavors. Groups then wander toward the High Line, where elevated paths and skyline views spark playful energy. Friends savor tacos, travelers capture stylish photos, and families pause for street performances—shared laughter and spontaneous moments leave everyone energized for the evening ahead.</li>
-                    <li className={styles.subheading}>🌙Cap off the night with dinner in Hell’s Kitchen. Friends can enjoy hearty meals, shared plates, or cocktails before heading to a  Broadway show. As the lights dim 🎶, anticipation builds, and the shared awe of the performance unifies the group — ending the Day 1 with laughter, wonder, and lasting connection.</li>
+                    <li className={styles.subheading}>🌅Begin in Times Square for coffee and the obligatory photos, then walk over to Top of the Rock at Rockefeller Center. Go up early before the midday crowds — it's a good spot to grab skyline shots and figure out the rest of the day together.</li>
+                    <li className={styles.subheading}>☀️Chelsea Market is an easy lunch stop where everyone can pick something different without a reservation. From there it's a few minutes to the High Line, the old elevated rail line turned walkway. It's flat, it's free, and you can do as much or as little of it as the group wants before heading back down into the city.</li>
+                    <li className={styles.subheading}>🌙Have dinner in Hell's Kitchen — there are plenty of spots that take a group of six or more if you call ahead. Then catch a Broadway show; book seats together in advance, since walk-up group tickets are hard to find. It's the kind of night everyone talks about afterward.</li>
                 </ul>
                 <Link href="/majorcities/newyork/group-travel" className={styles.ctaButton}>
                     NYC group travel safety tips
@@ -184,9 +184,9 @@ const HowTo = {
           <h2 className={styles.heading}>Day 2: Culture, Landmarks & Camaraderie</h2>
           <p className={styles.subheading}></p>
           <ul className={styles.itineraryList}>
-              <li className={styles.subheading}>🌅 Harlem sets the tone with the Apollo Theater and street art celebrating jazz heritage. Chinatown’s markets and park games immerse visitors in tradition, while Little Italy’s churches, shops, and performances add historic charm, weaving culture into a shared group experience.</li>
-              <li className={styles.subheading}>☀️The afternoon highlights New York’s cultural landmarks. At MoMA, groups pause before Starry Night, sharing quiet awe. The Natural History Museum shifts the mood with towering dinosaurs and immersive planetarium shows. The Tenement Museum reveals immigrant resilience, while the Whitney inspires reflection on modern American art, weaving culture into a shared group journey.</li>
-              <li className={styles.subheading}>🌙As night falls, Times Square glows with neon spectacle and street performers. A Broadway show fills the evening with shared awe and applause. The group then drifts into the East Village, where live music and eclectic bars extend the rhythm of discovery, closing Day 2 with camaraderie.</li>
+              <li className={styles.subheading}>🌅Start the morning up in Harlem at the Apollo Theater, then work your way down through Chinatown and Little Italy. The markets and old churches are worth a slow walk, and there's good cheap food the whole way if anyone gets hungry.</li>
+              <li className={styles.subheading}>☀️Spend the afternoon at one or two museums — don't try to do all of them. MoMA has the Van Gogh everyone wants to see; the Natural History Museum is the better pick if there are kids in the group; the Tenement Museum runs guided tours that work well for a small group. Pick what fits your crowd.</li>
+              <li className={styles.subheading}>🌙Head back to Times Square after dark to see it lit up, then catch a Broadway show if you didn't on Day 1. Afterward, the East Village has plenty of bars and live music within a few blocks of each other, so it's easy to keep the group together.</li>
               
           </ul>
           <Link href="/majorcities/newyork/group-landmarks" className={styles.ctaButton}>
@@ -211,9 +211,9 @@ const HowTo = {
                 <h2 className={styles.heading}>Day 3: Culture, Cruise, and Companionship</h2>
                 <p className={styles.subheading}></p>
                 <ul className={styles.itineraryList}>
-                    <li className={styles.subheading}>🌅After the excitement of Broadway and the East Village, Day 3 begins at a gentler pace. Groups step into the Metropolitan Museum of Art, where timeless galleries invite quiet reflection and awe. A short walk into Central Park offers tree‑lined paths and lakeside views, creating a restorative balance of art and nature to ease into the day.</li>
-                    <li className={styles.subheading}>☀️The afternoon continues with New York museums, offering groups a reflective pace after the city’s energy. At the Guggenheim Museum, modern art unfolds within its iconic spiral galleries, while the Frick Collection provides intimate encounters with European masterpieces. Together, these cultural landmarks enrich the group travel itinerary in NYC, balancing discovery with relaxation.</li>
-                    <li className={styles.subheading}>🌙On the third evening in New York, the pace stays gentle. Groups gather at a Hudson River dinner cruise, where city lights shimmer across the water and conversation flows easily. Solo travelers find quiet reflection on deck, couples enjoy intimate skyline views, and larger groups share laughter over shared plates. The evening blends dining, scenery, and calm energy, ensuring the New York group travel itinerary ends with balance and memorable moments.</li>
+                    <li className={styles.subheading}>🌅Take it slower on the last day. Start at the Met when it opens, then walk straight out the back into Central Park — the entrance is right there. An hour by the lake is a nice break before the next stop.</li>
+                    <li className={styles.subheading}>☀️If the group still wants more art, the Guggenheim is close by and the spiral ramp makes it quick to do as a group. The Frick nearby is smaller and quieter if people are museum'd out. Either is an easy afternoon.</li>
+                    <li className={styles.subheading}>🌙End with a Hudson River dinner cruise. You get dinner and the skyline at night in one go, and it's an easy sell for a mixed group — there's deck space if you want air and seating if you want to sit and talk. Book ahead on weekends.</li>
                 </ul>
                 <Link href="/majorcities/newyork/group-dining" className={styles.ctaButton}>
                     Discover NYC steakhouses

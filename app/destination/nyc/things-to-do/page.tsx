@@ -3,14 +3,14 @@ import NYCThingsToDoClient from './nycthingstodoclient';
 export const metadata = {
   title: 'Things to Do in New York City | Plan Your NYC Experience',
   description:
-    'Explore the different types of NYC experiences—from landmarks to food, culture, and outdoor activities—and learn how they shape where you should stay and how to plan your trip.',
+    'A breakdown of the main types of NYC trips, from landmarks to food to parks, and how each one changes where it makes sense to stay.',
   alternates: {
     canonical: 'https://www.travelsamericas.com/destination/nyc/things-to-do',
   },
   openGraph: {
     title: 'Things to Do in New York City',
     description:
-      'Discover the types of NYC experiences that shape your trip—landmarks, culture, food, and outdoor exploration.',
+      'The main types of NYC trips—landmarks, culture, food, and the outdoors—and how each shapes your days.',
     url: 'https://www.travelsamericas.com/destination/nyc/things-to-do',
     type: 'website',
   },
@@ -40,7 +40,7 @@ export default function NYCThingsToDoPage() {
                 acceptedAnswer: {
                   '@type': 'Answer',
                   text:
-                    'NYC offers a wide range of experiences including iconic landmarks, world-class museums, diverse food scenes, and outdoor activities such as parks and walking routes.',
+                    'NYC trips tend to fall into a few types: landmark sightseeing, museums and galleries, eating your way through neighborhoods, or parks and long walks. Most people mix two of these.',
                 },
               },
               {

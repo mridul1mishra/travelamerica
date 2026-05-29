@@ -33,10 +33,10 @@ export default function NYCThingsToDoClient() {
       {/* Experience Buckets */}
       <section className={styles.grid}>
         <Link href="/destination/nyc/neighborhood-guide?interest=sightseeing" className={styles.card} style={{ textDecoration: "none", color: "inherit" }}>
-          <h3>Landmarks & Iconic Sights</h3>
+          <h3>Landmarks & Big Sights</h3>
           <p>
-            Ideal for first‑time visitors who want to experience NYC’s most
-            recognizable places with minimal travel between stops.
+            Good for a first visit, when you want to hit the names everyone
+            knows without spending half the day on the subway between them.
           </p>
         </Link>
 

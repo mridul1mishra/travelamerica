@@ -180,7 +180,7 @@ const itemlist = {
       "@type": "ListItem",
       "position": 5,
       "name": "NYC Pizza Slice Culture",
-      "description": "Authentic thin crust pies from Brooklyn legends to Joe’s Pizza, defining New York’s iconic slice tradition."
+      "description": "Thin-crust pies from Brooklyn standbys to Joe’s in the Village — the foldable New York slice done right."
     },
     {
       "@type": "ListItem",
@@ -192,7 +192,7 @@ const itemlist = {
       "@type": "ListItem",
       "position": 7,
       "name": "NYC Breweries",
-      "description": "Brooklyn Brewery’s history, Other Half’s innovation, and Grimm’s sours in East Williamsburg create a vibrant brewery scene."
+      "description": "Brooklyn Brewery, Other Half’s hazy IPAs, and Grimm’s sours cluster in East Williamsburg, walkable in an afternoon."
     },
     {
       "@type": "ListItem",
@@ -242,7 +242,7 @@ const howto = {
     {
       "@type": "HowToStep",
       "name": "Experience NYC Pizza Slice Culture",
-      "text": "Taste authentic thin crust pies from Brooklyn legends to Joe’s Pizza, embracing the city’s iconic foldable slice tradition."
+      "text": "Grab thin-crust pies from Brooklyn standbys or Joe’s in the Village, and fold the slice in half the way locals do."
     },
     {
       "@type": "HowToStep",

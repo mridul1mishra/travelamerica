@@ -114,7 +114,7 @@ return(
       <section className={styles.splitSection} style={{  textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>Is NYC Safe for Solo Travelers?</h1>
-                <p className={styles.subheading}>From bustling neighborhoods to midnight subway rides, from rooftop nights to hidden corners—Your Solo Traveler’s Compass unfolds NYC’s safety story like a citywide screenplay, giving you the confidence to explore every scene on your own terms.</p>
+                <p className={styles.subheading}>Short answer: yes, with normal city sense. NYC is one of the safer big cities in the U.S., but it's still a big city. This guide covers the practical stuff — which neighborhoods are easy to walk alone, how to handle the subway at night, and where to eat and go out solo without second-guessing yourself.</p>
                 </div>
       </section>  
       <section className={styles.splitSection}>
@@ -136,7 +136,7 @@ return(
       <section className={styles.splitSection}>
           <div className={styles.textWrapper}>
           <h2 className={styles.heading}>Solo Travel NYC: Smart Transport Moves for Every Ride</h2>
-          <p className={styles.subheading}>Every ride in New York tells a story—whether underground, on the streets, or in the choices you make. With a little awareness, each move becomes part of a safer, more confident journey.</p>
+          <p className={styles.subheading}>The subway is the fastest way around and you'll use it constantly. A few habits keep it stress-free: know which line you need before you're on the platform, and stand near other people while you wait late at night.</p>
           <ul className={styles.itineraryList}>
               <li className={styles.subheading}>🚇 Subway: Stick to well‑lit, populated cars; avoid empty ones late at night.</li>
               <li className={styles.subheading}>🚕 Getting around: Ride‑share offers tracking and cashless convenience; taxis remain reliable at airports and busy hubs.</li>
@@ -162,7 +162,7 @@ return(
         </div>
         <div className={styles.textWrapper}>
           <h2 className={styles.heading}>NYC Nightlife for Solo Travelers</h2>
-          <p className={styles.subheading}>New York doesn’t dim after dark — it shifts. For solo travelers, the city’s energy becomes more intimate, more electric, and more yours. Whether you’re chasing rooftop views, jazz rhythms, or a quiet cocktail with skyline glow, this guide maps the safest spots where going solo feels effortless, natural, and unforgettable.</p>
+          <p className={styles.subheading}>Going out alone in NYC is completely normal — plenty of people do. The trick is picking places where solo feels comfortable: a seat at the bar, a show with assigned seating, or a jazz club where the room does the talking. Sort out how you're getting back before the first drink and the rest takes care of itself.</p>
           <ul className={styles.itineraryList}>
               <li className={styles.subheading}>🪑 <b>Choose smart venues & seating</b> → Stick to lively, well‑lit spots like rooftop bars, Broadway shows, and jazz clubs. In food halls or markets, sit near crowds or staff so you feel comfortable and secure.</li>
               <li className={styles.subheading}>🚇 <b>Plan ahead & travel safely</b> → Know your route home before heading out, pair nightlife with safe late‑night transit options, and keep valuables minimal and close at hand.</li>
