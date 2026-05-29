@@ -11,7 +11,7 @@ export default function Header() {
       <div className={styles.brandlogo}>
         <Link href="/">
           <Image
-            src="/data/logo.webp"
+            src="/data/Travels-Americas-logo.png"
             alt="Travels Americas Logo"
             width={150}
             height={150}

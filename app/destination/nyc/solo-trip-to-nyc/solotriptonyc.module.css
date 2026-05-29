@@ -167,12 +167,11 @@
 /* Logo */
 .brandlogo {
   display: block;               /* Prevent inline spacing issues */
-  max-width: 100px;             /* Adjust size as needed */
+  max-width: 285px;             /* matches horizontal logo aspect ratio (~3.77:1) */
   height: auto;                 /* Maintain aspect ratio */
-  margin-left: 0;               
+  margin-left: 0;
   margin-right: auto;
   cursor: pointer;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 /* Header styles */
 @media (max-width: 900px) {

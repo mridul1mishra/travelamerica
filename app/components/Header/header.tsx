@@ -28,16 +28,13 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
   return (
     <>
     <section className="hero">
-        <div style={{ position: "relative", width: "100%", height: "auto", aspectRatio: "1295 / 832", marginTop: "77px" }}>
+        <div style={{ position: "relative", width: "100%", height: "auto", aspectRatio: "1295 / 832", marginTop: "130px" }}>
           <Image src={typeof image === "string" ? image : image.src} alt={bannerText} fill priority fetchPriority="high" decoding="async" style={{ objectFit: "cover", objectPosition: "bottom" }}/>
         </div>
       <header className={`overlay-header scrolled`}>
-        <div className="brand-logo">          
+        <div className="brand-logo">
           <a href="/">
-               
-              <Image src="/data/logo.webp" alt="Travels Americas Logo" width={150} height={150}  sizes="(max-width: 768px) 100px, 150px" fetchPriority="high"/>
-              
-            
+              <Image src="/Travels-Americas-logo-horizontal-v3.png" alt="Travels Americas Logo" fill style={{ objectFit: "contain" }} fetchPriority="high"/>
           </a>
         </div>
         <nav className="main-nav">
