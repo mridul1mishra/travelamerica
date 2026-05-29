@@ -15,18 +15,42 @@ const withBundleAnalyzer = bundleAnalyzer({
 // instead of wildcard `https:`, which previously allowed any HTTPS image host.
 const csp = `
   default-src 'self';
-  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://emrldtp.com;
-  style-src 'self' 'unsafe-inline';
-  img-src 'self' data: https://www.travelsamericas.com https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com;
-  font-src 'self' https://fonts.gstatic.com;
-  style-src 'self' 'unsafe-inline' https://emrldtp.com;
-  connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com;
-  connect-src 'self' https://www.travelpayouts.com;
+
+  script-src
+    'self'
+    'unsafe-inline'
+    https://www.googletagmanager.com
+    https://emrldtp.com;
+
+  style-src
+    'self'
+    'unsafe-inline'
+    https://emrldtp.com;
+
+  img-src
+    'self'
+    data:
+    https://www.travelsamericas.com
+    https://www.googletagmanager.com
+    https://www.google-analytics.com
+    https://emrldtp.com;
+
+  font-src
+    'self'
+    https://fonts.gstatic.com;
+
+  connect-src
+    'self'
+    https://www.googletagmanager.com
+    https://www.google-analytics.com
+    https://emrldtp.com
+    https://www.travelpayouts.com
+    https://sentry.avs.io;
+
   frame-src 'none';
   base-uri 'self';
   form-action 'self';
-`
-  .replace(/\s{2,}/g, " ")
+`.replace(/\s{2,}/g, " ")
   .trim();
 
 // NOTE: redirects for the NYC migration (/majorcities/newyork/* ->
