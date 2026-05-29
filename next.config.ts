@@ -20,6 +20,7 @@ const csp = `
   img-src 'self' data: https://www.travelsamericas.com https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com;
   font-src 'self' https://fonts.gstatic.com;
   connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://emrldtp.com;
+  connect-src 'self' https://www.travelpayouts.com;
   frame-src 'none';
   base-uri 'self';
   form-action 'self';
