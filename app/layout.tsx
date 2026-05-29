@@ -55,8 +55,10 @@ export default function RootLayout({
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', 'G-SM7NC16K21');`}}/>
-        {/* Travelpayouts affiliate/tracking loader — site-wide, async */}
-        <Script id="travelpayouts" strategy="afterInteractive" src="https://emrldtp.com/NTMzNjY5.js?t=533669"/>
+        {/* Travelpayouts (Drive) verification/tracking loader — site-wide.
+            beforeInteractive so Next renders it into the initial <head> HTML,
+            which is what the Travelpayouts verifier looks for. */}
+        <Script id="travelpayouts" strategy="beforeInteractive" src="https://emrldtp.com/NTMzNjY5.js?t=533669"/>
         <div className="full-height">
         {children}
         </div>
