@@ -23,6 +23,7 @@ import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
 import Link from 'next/link';
 import SoloNycQa from '@/app/components/destination/solotriptonyc/aisnippet/cardqanda';
 import SoloTripNarrative from './components/solotripnarrative/SoloTripNarrative';
+import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
 
 
 export default function SoloTripNYCClient() {
@@ -79,6 +80,7 @@ export default function SoloTripNYCClient() {
 
             </div>
         </section>
+        <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=flights&from=solo-trip-to-nyc" label="Book your trip" />
         <QuickActionBar />
         <InfoSection sections={sectionsData.sections} />
         <WhyTrustThisGuide />
@@ -91,6 +93,7 @@ export default function SoloTripNYCClient() {
         <ScenarioSection />
         <FemaleSoloTiles tiles={femaleSolo.tiles}  ctaLink={femaleSolo.ctaLink} />
         <FAQAccordion faqs={faqData} />
+        <BookingCTA variant="full" text="Start your trip: book flights and hotels" href="/destination/nyc/booking?tab=flights&from=solo-trip-to-nyc" label="Book your trip" />
         <Footer></Footer>
 
         </>

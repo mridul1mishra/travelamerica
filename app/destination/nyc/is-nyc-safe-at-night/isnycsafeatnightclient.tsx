@@ -17,6 +17,7 @@ import data from "./is-nyc-safe-at-night.json";
 import type { IsNycSafeAtNightPage } from "./components/typesafeatnight";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
 
 export default function Page() {
     
@@ -25,6 +26,7 @@ export default function Page() {
   return (
     <>
     <Header />
+      <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=is-nyc-safe-at-night" label="See safe-area hotels" />
     
       {/* 1. Hero Section */}
       <HeroSafety {...data.heroSafety} />
@@ -85,6 +87,7 @@ export default function Page() {
       <TrustBlock {...data.trustBlock} />
       </SectionWrapper>
     
+    <BookingCTA variant="full" text="Book a hotel in a safe, well-connected area" href="/destination/nyc/booking?tab=hotels&from=is-nyc-safe-at-night" label="See safe-area hotels" />
     <Footer />
     </>
   );

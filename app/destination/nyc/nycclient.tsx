@@ -12,7 +12,8 @@ import TravelTips from './components/TravelTips/TravelTips';
 import DataCaptureCTA from './components/DataCapture/DataCaptureCTA';
 import Header from "@/app/components/destination/header/header";
 import Footer from "../../../app/components/Header/Footer/footer";
-import styles from './nyc.module.css';
+import styles from './nyc.module.css';
+import BookingCTA from './components/BookingCTA/BookingCTA';
 
 
 
@@ -20,7 +21,8 @@ export default function NycHubPage() {
   return (
     <main className={styles.container}>
       <Header />
-      <HeroSection />
+      <HeroSection />
+      <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=flights&from=nyc-hub" label="Book your NYC trip" />
       <PlanningIntent />
       <WhyVisit />
       <AttractionsHub />
@@ -28,7 +30,8 @@ export default function NycHubPage() {
       <ExperiencesHub />
       <WhereToStay />
       <ItinerariesPreview />
-      <DataCaptureCTA />
+      <DataCaptureCTA />
+      <BookingCTA variant="full" text="Compare flights, hotels and tickets for your trip" href="/destination/nyc/booking?tab=flights&from=nyc-hub" label="Book your NYC trip" />
       {/*<BestTime />*/}
       {/*<TravelTips />*/}
       <Footer />

@@ -19,6 +19,7 @@ import Footer from "@/app/components/Header/Footer/footer";
 import LinkHubGrid from "./components/linkhubgrid/LinkHubGrid";
 import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
 import FemaleSafetyNarrative from "./components/safetynarrative/FemaleSafetyNarrative";
+import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
 
 
 
@@ -26,6 +27,7 @@ export default function FemaleSoloTravelGuide() {
   return (
       <>
       <Header />
+      <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=female-solo" label="See NYC hotels" />
       <div className={styles.container}>
       <Hero />
       <InfoSection sections={sectionsData.sections}/>
@@ -42,6 +44,7 @@ export default function FemaleSoloTravelGuide() {
       <LinkHubGrid />
       <WhyTrustThisGuide />
       </div>
+      <BookingCTA variant="full" text="Book a safe, central hotel for solo travelers" href="/destination/nyc/booking?tab=hotels&from=female-solo" label="See NYC hotels" />
       <Footer />
     </>
   );

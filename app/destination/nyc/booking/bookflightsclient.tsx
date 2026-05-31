@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import "@/app/components/majorcities/flightsection/propertylisting.css";
@@ -44,18 +45,60 @@ type Activity = {
 
 type TabKey = "flights" | "hotels" | "activities";
 
+type RailGuide = { href: string; label: string };
+type RailConfig = { nextStep: { label: string; toTab: TabKey }; guides: RailGuide[] };
+
+const TAB_RAIL: Record<TabKey, RailConfig> = {
+  flights: {
+    nextStep: { label: "Next: book your hotel →", toTab: "hotels" },
+    guides: [
+      { href: "/destination/nyc/nyc-subway-map", label: "Getting from the airport" },
+      { href: "/destination/nyc/solo-itinerary", label: "Plan your days: solo itinerary" },
+      { href: "/destination/nyc/nyc-safety-guide", label: "NYC safety tips" },
+    ],
+  },
+  hotels: {
+    nextStep: { label: "Next: things to do in NYC →", toTab: "activities" },
+    guides: [
+      { href: "/destination/nyc/best-areas-to-stay", label: "Where to stay in NYC" },
+      { href: "/destination/nyc/neighborhood-guide", label: "Compare neighborhoods" },
+      { href: "/destination/nyc/is-nyc-safe-at-night", label: "Safe areas at night" },
+    ],
+  },
+  activities: {
+    nextStep: { label: "Compare return flights →", toTab: "flights" },
+    guides: [
+      { href: "/destination/nyc/things-to-do", label: "Full NYC attractions guide" },
+      { href: "/destination/nyc/landmark", label: "Top NYC landmarks" },
+      { href: "/destination/nyc/food", label: "Where to eat in NYC" },
+    ],
+  },
+};
+
 const TABS: { key: TabKey; label: string; icon: string }[] = [
   { key: "flights", label: "Flights", icon: "✈️" },
   { key: "hotels", label: "Hotels", icon: "🏨" },
   { key: "activities", label: "Things to Do", icon: "🗽" },
 ];
 
+const VALID_TABS = new Set<TabKey>(TABS.map((t) => t.key));
+
+function getInitialTab(param: string | null): TabKey {
+  if (param && VALID_TABS.has(param as TabKey)) {
+    return param as TabKey;
+  }
+  return "flights";
+}
+
 export default function BookFlightsClient() {
   const { title, header, rows } = bookFlights as BookFlights;
   const hotels = hotelsData as Hotel[];
   const activities = thingsToDoData as Activity[];
 
-  const [activeTab, setActiveTab] = useState<TabKey>("flights");
+  const searchParams = useSearchParams();
+  const [activeTab, setActiveTab] = useState<TabKey>(() =>
+    getInitialTab(searchParams.get("tab")?.toLowerCase() ?? null)
+  );
 
   return (
     <div className="App">
@@ -63,6 +106,22 @@ export default function BookFlightsClient() {
         image={`/data/majorcities/newyork/assets/newyork.jpeg`}
         bannerText="Book your New York trip"
       />
+
+      <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
+        <ol className={styles.breadcrumbList}>
+          <li>
+            <a href="/" className={styles.breadcrumbLink}>Home</a>
+          </li>
+          <li aria-hidden="true" className={styles.breadcrumbSep}>›</li>
+          <li>
+            <a href="/destination/nyc" className={styles.breadcrumbLink}>New York</a>
+          </li>
+          <li aria-hidden="true" className={styles.breadcrumbSep}>›</li>
+          <li>
+            <span aria-current="page" className={styles.breadcrumbCurrent}>Book your trip</span>
+          </li>
+        </ol>
+      </nav>
 
       <div className={styles.tabBar} role="tablist" aria-label="Booking options">
         {TABS.map((tab) => (
@@ -143,20 +202,6 @@ export default function BookFlightsClient() {
               </div>
             ))}
           </div>
-          <aside className="travel-smart-sidebar">
-            <h3>Travel Smart</h3>
-            <ul>
-              <li>
-                <a href="/destination/nyc/nyc-safety-guide" style={{ cursor: "pointer" }}><span className="icon">🔐</span> Safety Tips</a>
-              </li>
-              <li>
-                <a href="/destination/nyc/landmark" style={{ cursor: "pointer" }}><span className="icon">🧳</span> Solo Travel Advice</a>
-              </li>
-              <li>
-                <a href="/destination/nyc/food" style={{ cursor: "pointer" }}><span className="icon">🍽️</span> NYC Food Guide: Bagels, Bites & Beyond</a>
-              </li>
-            </ul>
-          </aside>
         </div>
       </section>
       )}
@@ -246,6 +291,63 @@ export default function BookFlightsClient() {
         </div>
       </section>
       )}
+
+      {/* Tab-aware Related + Next-step rail */}
+      {(() => {
+        const rail = TAB_RAIL[activeTab];
+        return (
+          <div className={styles.railContainer}>
+            <button
+              className={styles.railNextStep}
+              onClick={() => setActiveTab(rail.nextStep.toTab)}
+            >
+              {rail.nextStep.label}
+            </button>
+            <p className={styles.railHeadline}>Helpful guides</p>
+            <ul className={styles.railGuides}>
+              {rail.guides.map((g) => (
+                <li key={g.href}>
+                  <a href={g.href}>{g.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      })()}
+
+      {/* Related guides footer */}
+      <section className={styles.relatedGuides} aria-label="Related guides">
+        <div className={styles.relatedGuidesInner}>
+          <h2 className={styles.relatedGuidesHeading}>Plan your New York trip</h2>
+          <div className={styles.relatedGuidesGrid}>
+            <div className={styles.relatedGuidesGroup}>
+              <h3 className={styles.relatedGuidesGroupTitle}>Plan</h3>
+              <ul className={styles.relatedGuidesList}>
+                <li><a href="/destination/nyc/solo-itinerary" className={styles.relatedGuidesLink}>Solo NYC itinerary</a></li>
+                <li><a href="/destination/nyc/group-itinerary" className={styles.relatedGuidesLink}>Group NYC itinerary</a></li>
+                <li><a href="/destination/nyc/neighborhood-guide" className={styles.relatedGuidesLink}>NYC neighborhood guide</a></li>
+                <li><a href="/destination/nyc/best-areas-to-stay" className={styles.relatedGuidesLink}>Best areas to stay</a></li>
+              </ul>
+            </div>
+            <div className={styles.relatedGuidesGroup}>
+              <h3 className={styles.relatedGuidesGroupTitle}>Stay safe &amp; get around</h3>
+              <ul className={styles.relatedGuidesList}>
+                <li><a href="/destination/nyc/is-nyc-safe-at-night" className={styles.relatedGuidesLink}>Is NYC safe at night?</a></li>
+                <li><a href="/destination/nyc/nyc-safety-guide" className={styles.relatedGuidesLink}>NYC safety guide</a></li>
+                <li><a href="/destination/nyc/nyc-subway-map" className={styles.relatedGuidesLink}>NYC subway map</a></li>
+              </ul>
+            </div>
+            <div className={styles.relatedGuidesGroup}>
+              <h3 className={styles.relatedGuidesGroupTitle}>Explore</h3>
+              <ul className={styles.relatedGuidesList}>
+                <li><a href="/destination/nyc/things-to-do" className={styles.relatedGuidesLink}>Things to do in NYC</a></li>
+                <li><a href="/destination/nyc/landmark" className={styles.relatedGuidesLink}>Top NYC landmarks</a></li>
+                <li><a href="/destination/nyc/food" className={styles.relatedGuidesLink}>Where to eat in NYC</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>

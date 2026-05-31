@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './groupitinerary.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
 
 export default function GroupItineraryClient() {
     
@@ -155,6 +156,7 @@ const HowTo = {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BreadcrumbList) }}/>
         <div className="App">
             <Header image={`/data/majorcities/newyork/assets/group/nyc-group-itinerary-brooklyn-bridge-sunset.jpg`} bannerText="Group of friends sharing tacos and coffee on a rooftop terrace overlooking Brooklyn Bridge and East River at sunset in NYC" />
+            <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=group-itinerary" label="Find hotels" />
             <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                     <h1  className={styles.sectionheading}>3 Days in New York City!</h1>
@@ -220,6 +222,7 @@ const HowTo = {
                 </Link>
                 </div>
             </section>
+      <BookingCTA variant="full" text="Find group-friendly hotels for this plan" href="/destination/nyc/booking?tab=hotels&from=group-itinerary" label="Find hotels" />
       <Footer />  
     </div>
     </>

@@ -4,11 +4,13 @@ import Link from 'next/link';
 import styles from './nycthingstodoclient.module.css';
 import Header from "@/app/components/destination/header/header";
 import Footer from "../../../../app/components/Header/Footer/footer";
+import BookingCTA from "@/app/destination/nyc/components/BookingCTA/BookingCTA";
 
 export default function NYCThingsToDoClient() {
   return (
     <>
     <Header />
+    <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=activities&from=things-to-do" label="See tickets & tours" />
     <main className={styles.container}>
       {/* Hero / Visual Header */}
       
@@ -99,6 +101,7 @@ export default function NYCThingsToDoClient() {
         </p>
       </section>
     </main>
+    <BookingCTA variant="full" text="Book skip-the-line tickets and audio tours" href="/destination/nyc/booking?tab=activities&from=things-to-do" label="See tickets & tours" />
     <Footer />
     </>
   );

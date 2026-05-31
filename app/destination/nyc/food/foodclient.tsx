@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './food.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/destination/nyc/components/BookingCTA/BookingCTA";
 export default function FoodClientPage() {
     
     const Article = {
@@ -319,6 +320,7 @@ const howto = {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemlist) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumblist) }}/>
         <Header image={`/data/majorcities/newyork/assets/nyc-solo-dining.png`} bannerText="Hero banner showcasing NYC solo dining experience for travelers" />
+        <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=activities&from=food" label="See food tours" />
         <section className={styles.splitSection} style={{textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>Where to Eat Alone in NYC: Counters, Bars and Food Halls</h1>
@@ -386,6 +388,7 @@ const howto = {
                 </Link>
                 </div>
         </section>
+        <BookingCTA variant="full" text="Book a guided NYC food tour" href="/destination/nyc/booking?tab=activities&from=food" label="See food tours" />
         <Footer />
         </>
     );

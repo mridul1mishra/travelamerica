@@ -12,6 +12,7 @@ import WhereFirstTimersStay from "./components/Wherefirsttimerstay/wherefirsttim
 import GettingAround from "./components/Gettingaround/Gettingaround";
 import SafetyOverview from "./components/SafetyOverview/Safetyoverview";
 import NeighborhoodGuideCTA from "./components/Neighborhoodguidecta/Neighborhoodguidecta";
+import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
 
 type Props = {
     tripType?: string;
@@ -22,6 +23,7 @@ export default function Neighborhoodguide({tripType, interest, duration}: Props)
     return(
         <>
         <Header />
+        <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=neighborhood-guide" label="See NYC hotels" />
         <div className={styles.container}>
         <IntroSection tripType={tripType} interest={interest}/>
         <CityOrganization />
@@ -32,6 +34,7 @@ export default function Neighborhoodguide({tripType, interest, duration}: Props)
         <SafetyOverview />
         <NeighborhoodGuideCTA tripType={tripType} interest={interest} />
         </div>
+        <BookingCTA variant="full" text="See hotels in the best NYC neighborhoods" href="/destination/nyc/booking?tab=hotels&from=neighborhood-guide" label="See NYC hotels" />
         <Footer />
         </>
     )

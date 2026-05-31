@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './SoloItinerary.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
 import FAQ from "@/app/components/faq/faq";
 import { getFaq, getFaqItinerary } from "@/app/lib/FaqData";
 
@@ -185,6 +186,7 @@ const schema4 = {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema2) }}/>
     <div className="App">
       <Header image={`/data/majorcities/newyork/assets/solo-travel-itinerary.png`} bannerText="Solo Travel Itinerary for New York City" />
+      <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=flights&from=solo-itinerary" label="Book this trip" />
       <section className={styles.splitSection} style={{  textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>3-Day Solo Travel Itinerary for New York City</h1>
@@ -269,6 +271,7 @@ const schema4 = {
         </div>
       </section>
       <FAQ groupedFaqs={grouped}/>
+      <BookingCTA variant="full" text="Book the flights and hotels for this itinerary" href="/destination/nyc/booking?tab=flights&from=solo-itinerary" label="Book this trip" />
       <Footer />  
     </div>
     </>       

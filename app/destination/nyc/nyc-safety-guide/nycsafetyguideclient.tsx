@@ -18,11 +18,13 @@ import InfoSection from './components/infosection/infosection';
 import sectionsData from "./components/infosection/infosection.json";
 import EmergencyContactBlock from './components/emergencycontactblock/EmergencyContactBlock';
 import SafetyNarrative from './components/safetynarrative/SafetyNarrative';
+import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
 
 export default function NYCSafetyGuideClient() {
   return (
     <>
         <Header />
+        <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=nyc-safety-guide" label="See NYC hotels" />
         <div className={styles.container}>
         {/* banner component */}
         <SafetyHero />
@@ -36,6 +38,7 @@ export default function NYCSafetyGuideClient() {
         <LinkHubGrid />        
         <WhyTrustThisGuide />
         </div>        
+        <BookingCTA variant="full" text="Choose a hotel in a safe NYC neighborhood" href="/destination/nyc/booking?tab=hotels&from=nyc-safety-guide" label="See NYC hotels" />
         <Footer />
         
     </>

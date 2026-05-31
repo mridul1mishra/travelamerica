@@ -3,6 +3,7 @@ import Header from "../../../components/Header/header";
 import Link from "next/link";
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from "./landmark.module.css";
+import BookingCTA from "@/app/destination/nyc/components/BookingCTA/BookingCTA";
 
 // Each landmark gets a concrete data row instead of paragraphs of fluff.
 // Approximate ticket prices and hours are noted as ranges or guidance only —
@@ -251,6 +252,7 @@ export default function LandmarkPage() {
         image="/data/majorcities/newyork/assets/statue-of-liberty.jpg"
         bannerText="New York City Landmarks Guide"
       />
+      <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=activities&from=landmark" label="See tickets" />
 
       <section className={styles.intro} style={{ textAlign: "center" }}>
         <h1 className={styles.sectionheading}>NYC Landmarks: A Practical Solo Traveler Guide</h1>
@@ -435,6 +437,7 @@ export default function LandmarkPage() {
         </div>
       </section>
 
+      <BookingCTA variant="full" text="Get tickets to NYC's top landmarks" href="/destination/nyc/booking?tab=activities&from=landmark" label="See tickets" />
       <Footer />
     </>
   );

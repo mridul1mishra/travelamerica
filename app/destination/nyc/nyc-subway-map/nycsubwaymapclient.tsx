@@ -7,6 +7,7 @@ import { StepList } from "./components/steplist/steplist";
 import { ScenarioCards } from "./components/ScenarioCards/ScenarioCards";
 import styles from "./nycsubwaymap.module.css";
 import {SafetyChecklist} from "./components/SafetyChecklist/SafetyChecklist";
+import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
 
 const data: HighIntentPageBase = require("./nyc-subway-map.json");
 import type {HighIntentPageBase} from "./nyc-subway-map";
@@ -15,6 +16,7 @@ export default function NYCSubwayMapClient() {
   return (
     <>
     <Header />
+      <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=flights&from=nyc-subway-map" label="Book your trip" />
       <div className="page-container">
   <div className={styles.pagestack}>
     
@@ -48,6 +50,7 @@ export default function NYCSubwayMapClient() {
   </div>
 </div>
 
+    <BookingCTA variant="full" text="Booked your flight? Plan your NYC trip" href="/destination/nyc/booking?tab=flights&from=nyc-subway-map" label="Book your trip" />
     <Footer />
     </>
   );

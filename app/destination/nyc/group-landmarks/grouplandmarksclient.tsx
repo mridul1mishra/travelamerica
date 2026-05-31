@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './grouptravellandmarks.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/destination/nyc/components/BookingCTA/BookingCTA";
 export default function GroupLandmarksPage() {
     
     const breadcrumb = {
@@ -342,6 +343,7 @@ const howto = {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqschema) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}/>
        <Header image={`/data/majorcities/newyork/assets/group/nyc-group-travel-landmarks.png`} bannerText="Solo Travel in New York City – Landmark Guide!" />
+       <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=activities&from=group-landmarks" label="See tickets" />
        <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>Group Travel in New York City – Landmark Guide!</h1>
@@ -404,6 +406,7 @@ const howto = {
           </Link>
         </div>
       </section>
+       <BookingCTA variant="full" text="Book group tickets to these landmarks" href="/destination/nyc/booking?tab=activities&from=group-landmarks" label="See tickets" />
        <Footer />
     </>
   );

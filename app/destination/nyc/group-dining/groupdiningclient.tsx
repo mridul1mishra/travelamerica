@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './groupdining.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/destination/nyc/components/BookingCTA/BookingCTA";
 export default function GroupDiningClientPage() {    
     const Article = {
   "@context": "https://schema.org",
@@ -280,6 +281,7 @@ const howto = {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemlist) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howto) }}/>      
         <Header image={`/data/majorcities/newyork/assets/nyc-solo-dining.png`} bannerText="Hero banner showcasing NYC solo dining experience for travelers" />
+        <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=activities&from=group-dining" label="See food tours" />
         <section className={styles.splitSection} style={{textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>Where to Eat as a Group in NYC</h1>
@@ -350,6 +352,7 @@ const howto = {
                 </Link>
                 </div>
         </section>
+        <BookingCTA variant="full" text="Book a food tour for your group" href="/destination/nyc/booking?tab=activities&from=group-dining" label="See food tours" />
         <Footer />
         </>
     );

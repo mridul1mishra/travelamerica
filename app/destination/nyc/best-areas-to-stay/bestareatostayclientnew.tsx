@@ -10,11 +10,13 @@ import guideContent from '@/content/destination/bestplacetostay/guideContent.jso
 import NeighborhoodRankingCards from '@/app/components/destination/neighborhoodrankingcard/neighborhoodrankingcard';
 import Footer from '@/app/components/Header/Footer/footer';
 import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
 
 export default function Home() {
   return (
     <>
     <Header />
+      <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=best-areas-to-stay" label="See NYC hotels" />
       <Banner content={guideContent.banner} />
       <SoloTripIntro />
       <SectionSafestNeighborhoods />
@@ -22,6 +24,7 @@ export default function Home() {
       <div className={styles.container}>
         <FAQAccordion faqs={faqData} />
       </div>
+    <BookingCTA variant="full" text="Compare live hotel prices in these neighborhoods" href="/destination/nyc/booking?tab=hotels&from=best-areas-to-stay" label="See NYC hotels" />
     <Footer />
     </>
   );

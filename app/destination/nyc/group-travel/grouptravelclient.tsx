@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from '../group-travel/grouptravel.module.css';
+import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
 
 export default function GroupTravelPage() {
   const schema1 = {
@@ -171,6 +172,7 @@ const schema5 = {
 return (
     <>
         <Header image={`/data/majorcities/newyork/assets/group/nyc-group-travel-packing-flatlay-essentials.jpg`} bannerText="Flatlay of NYC group travel essentials including backpack, metro card, sneakers, and city map" />
+        <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=flights&from=group-travel" label="Book your trip" />
         <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>Group Travel in NYC!</h1>
@@ -235,6 +237,7 @@ return (
         </div>
         
         </section>
+        <BookingCTA variant="full" text="Book flights and stays for your group" href="/destination/nyc/booking?tab=flights&from=group-travel" label="Book your trip" />
         <Footer />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema5) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema4) }}/>
