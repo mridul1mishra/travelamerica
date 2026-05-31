@@ -34,7 +34,11 @@ const csp = `
     https://www.travelsamericas.com
     https://www.googletagmanager.com
     https://www.google-analytics.com
-    https://emrldtp.com;
+    https://emrldtp.com
+    https://pics.avs.io
+    https://media-cdn.tripadvisor.com
+    https://dynamic-media-cdn.tripadvisor.com
+    https://wgt-prod-storage.s3.amazonaws.com;
 
   font-src
     'self'

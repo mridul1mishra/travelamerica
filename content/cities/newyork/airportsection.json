@@ -5,13 +5,6 @@
   "label": "Plan your NYC Trip",
   "tabs": [
     {
-      "id": 1,
-      "label": "Flights",
-      "img": "/data/majorcities/lasvegas/assets/departures.svg",
-      "section": "flight-section",
-      "alt": "Flight departure icon"
-    },
-    {
       "id": 2,
       "label": "Stays",
       "img": "/data/majorcities/lasvegas/assets/hotel.svg",

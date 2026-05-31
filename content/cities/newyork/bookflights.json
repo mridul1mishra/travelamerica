@@ -1,0 +1,130 @@
+{
+  "title": "Book Flights to New York",
+  "header": [
+    "Airline",
+    "Departure",
+    "Arrival",
+    "Duration",
+    "Price",
+    ""
+  ],
+  "rows": [
+    {
+      "airline": {
+        "name": "Frontier",
+        "logo": "https://pics.avs.io/100/100/F9.png"
+      },
+      "departure": {
+        "time": "20:53",
+        "date": "Jun 13",
+        "city": "Atlanta (ATL)"
+      },
+      "arrival": {
+        "time": "23:14",
+        "city": "New York (LGA)"
+      },
+      "duration": "2h 21m",
+      "price": "from $69",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/ATL1306NYC1?marker=733422",
+      "highlight": true
+    },
+    {
+      "airline": {
+        "name": "American",
+        "logo": "https://pics.avs.io/100/100/AA.png"
+      },
+      "departure": {
+        "time": "06:30",
+        "date": "Jun 6",
+        "city": "Boston (BOS)"
+      },
+      "arrival": {
+        "time": "08:00",
+        "city": "New York (JFK)"
+      },
+      "duration": "1h 30m",
+      "price": "from $70",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/BOS0606NYC1?marker=733422"
+    },
+    {
+      "airline": {
+        "name": "United",
+        "logo": "https://pics.avs.io/100/100/UA.png"
+      },
+      "departure": {
+        "time": "06:00",
+        "date": "Jun 30",
+        "city": "Washington (DCA)"
+      },
+      "arrival": {
+        "time": "07:19",
+        "city": "New York (EWR)"
+      },
+      "duration": "1h 19m",
+      "price": "from $78",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/DCA3006NYC1?marker=733422",
+      "highlight": true
+    },
+    {
+      "airline": {
+        "name": "Frontier",
+        "logo": "https://pics.avs.io/100/100/F9.png"
+      },
+      "departure": {
+        "time": "13:05",
+        "date": "Jun 17",
+        "city": "Orlando (MCO)"
+      },
+      "arrival": {
+        "time": "16:01",
+        "city": "New York (LGA)"
+      },
+      "duration": "2h 56m",
+      "price": "from $82",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/MCO1706NYC1?marker=733422"
+    },
+    {
+      "airline": {
+        "name": "American",
+        "logo": "https://pics.avs.io/100/100/AA.png"
+      },
+      "departure": {
+        "time": "16:44",
+        "date": "Jun 20",
+        "city": "Chicago (ORD)"
+      },
+      "arrival": {
+        "time": "20:15",
+        "city": "New York (JFK)"
+      },
+      "duration": "2h 31m",
+      "price": "from $84",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/ORD2006NYC1?marker=733422",
+      "highlight": true
+    },
+    {
+      "airline": {
+        "name": "United",
+        "logo": "https://pics.avs.io/100/100/UA.png"
+      },
+      "departure": {
+        "time": "20:40",
+        "date": "Jun 30",
+        "city": "Miami (MIA)"
+      },
+      "arrival": {
+        "time": "23:59",
+        "city": "New York (EWR)"
+      },
+      "duration": "3h 19m",
+      "price": "from $93",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/MIA3006NYC1?marker=733422"
+    }
+  ]
+}

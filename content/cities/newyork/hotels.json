@@ -1,31 +1,110 @@
 [
   {
-    "img": "/majorcities/hotel-edison.jpg",
-    "title": "Hotel Edison Times Square",
-    "route": "Hotel Edison Times Square is a historic Art Deco hotel located in the heart of Manhattan's Theater District, just steps away from Times Square. Established in 1931, the hotel blends classic charm with modern amenities, offering guests a quintessential New York City experience.",
-    "duration": "4.0 (17000 reviews)",
-    "price": "$270 1 night, 2 adults"
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/33/53/19/d2/exterior.jpg",
+    "title": "Motto by Hilton New York City Chelsea",
+    "area": "New York City, New York",
+    "rating": 4.8,
+    "reviews": 2073,
+    "price": "$252 – $750",
+    "url": "https://www.google.com/travel/hotels/Motto%20by%20Hilton%20New%20York%20City%20Chelsea%20New%20York"
   },
   {
-    "img": "/majorcities/Hyatt-place.webp",
-    "title": "Hyatt Place New York City - Times Square",
-    "route": "Hyatt Place New York City / Times Square offers a modern and convenient stay in the heart of Manhattan. Located just a short walk from Times Square, the hotel provides easy access to major attractions, shopping, and dining options.",
-    "duration": "4.3 (400 reviews)",
-    "price": "$208 1 night, 2 adults"
-
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/30/0f/2c/c0/conference-room.jpg",
+    "title": "Crowne Plaza HY36 Midtown Manhattan by IHG",
+    "area": "New York City, New York",
+    "rating": 4.7,
+    "reviews": 2211,
+    "price": "$243 – $763",
+    "url": "https://www.google.com/travel/hotels/Crowne%20Plaza%20HY36%20Midtown%20Manhattan%20by%20IHG%20New%20York"
   },
   {
-    "img": "/majorcities/dsc05742.jpeg",
-    "title": "Pod Times Square",
-    "route": "A modern, budget-friendly hotel offering compact yet efficiently designed rooms in the heart of New York City. Guests can enjoy a rooftop terrace with skyline views, on-site dining options, and easy access to Broadway theaters, Hudson River Park, and Times Square attractions. Ideal for solo travelers, couples, and tourists looking for a stylish stay without a high price tag. The hotel emphasizes clean, functional spaces, modern amenities, and a vibrant social atmosphere.",
-    "duration": "4.0 (3386 reviews)",
-    "price": "$169 1 night, 2 adults"
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/2d/f4/ad/f5/caption.jpg",
+    "title": "The Bryant Park Hotel",
+    "area": "New York City, New York",
+    "rating": 4.8,
+    "reviews": 5501,
+    "price": "$416 – $1,153",
+    "url": "https://www.google.com/travel/hotels/The%20Bryant%20Park%20Hotel%20New%20York"
   },
   {
-    "img": "/majorcities/mariott-nyc.jpg",
-    "title": "Mariot NewYork",
-    "route": "A modern hotel featuring spacious rooms, an M Club lounge with runway views, and a fitness center. It's ideal for both business and leisure travelers seeking comfort and convenience.",
-    "duration": "4.1 (516 reviews)",
-    "price": "$290 1 night, 2 adults"
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/32/68/47/0c/hotel-belleclaire.jpg",
+    "title": "Hotel Belleclaire",
+    "area": "New York City, New York",
+    "rating": 4.2,
+    "reviews": 6074,
+    "price": "$240 – $761",
+    "url": "https://www.google.com/travel/hotels/Hotel%20Belleclaire%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/2c/28/35/d4/luma-hotel-times-square.jpg",
+    "title": "LUMA Hotel Times Square",
+    "area": "New York City, New York",
+    "rating": 4.8,
+    "reviews": 3672,
+    "price": "$350 – $834",
+    "url": "https://www.google.com/travel/hotels/LUMA%20Hotel%20Times%20Square%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/06/56/1e/e1/the-kimberly-hotel.jpg",
+    "title": "The Kimberly Hotel",
+    "area": "New York City, New York",
+    "rating": 4.6,
+    "reviews": 3576,
+    "price": "$416 – $892",
+    "url": "https://www.google.com/travel/hotels/The%20Kimberly%20Hotel%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/2c/28/5c/59/exterior.jpg",
+    "title": "Artezen Hotel",
+    "area": "New York City, New York",
+    "rating": 4.9,
+    "reviews": 876,
+    "price": "$215 – $594",
+    "url": "https://www.google.com/travel/hotels/Artezen%20Hotel%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/32/bc/9b/64/welcome-to-even-hotel.jpg",
+    "title": "EVEN Hotel New York - Times Square South by IHG",
+    "area": "New York City, New York",
+    "rating": 4.7,
+    "reviews": 1989,
+    "price": "$264 – $636",
+    "url": "https://www.google.com/travel/hotels/EVEN%20Hotel%20New%20York%20-%20Times%20Square%20South%20by%20IHG%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/33/65/96/46/soho-rooms-kingterrace.jpg",
+    "title": "Arlo Soho",
+    "area": "New York City, New York",
+    "rating": 4.6,
+    "reviews": 4014,
+    "price": "$268 – $731",
+    "url": "https://www.google.com/travel/hotels/Arlo%20Soho%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/2f/d1/c7/a8/caption.jpg",
+    "title": "The Wallace",
+    "area": "New York City, New York",
+    "rating": 4.8,
+    "reviews": 1016,
+    "price": "$405 – $971",
+    "url": "https://www.google.com/travel/hotels/The%20Wallace%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-s/17/44/ae/66/lobby-lounge-area.jpg",
+    "title": "Concorde Hotel New York",
+    "area": "New York City, New York",
+    "rating": 4.7,
+    "reviews": 693,
+    "price": "$315 – $846",
+    "url": "https://www.google.com/travel/hotels/Concorde%20Hotel%20New%20York%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/33/65/92/d8/exterior.jpg",
+    "title": "The Plaza New York - A Fairmont Managed Hotel",
+    "area": "New York City, New York",
+    "rating": 4.5,
+    "reviews": 5490,
+    "price": "$1,439 – $2,385",
+    "url": "https://www.google.com/travel/hotels/The%20Plaza%20New%20York%20-%20A%20Fairmont%20Managed%20Hotel%20New%20York"
   }
 ]

@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Airportsection: React.FC<Props> = ({ content, onSelect }) => {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(content?.tabs?.[0]?.id ?? 1);
   const handleClick = (id: number) => {    
     setActive(id);
     onSelect(id);

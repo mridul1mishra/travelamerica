@@ -1,0 +1,203 @@
+.tabBar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 24px auto 8px;
+  padding: 0 16px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.tab:hover {
+  background: #e5e7eb;
+}
+
+.tab.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.tab .icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* ---- Flight date ---- */
+.flightDate {
+  display: block;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+/* ---- Things to Do ---- */
+.actSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.actHeading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 20px;
+}
+
+.actGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.actCard {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.actCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.actImageWrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.actImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.actCategory {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  backdrop-filter: blur(2px);
+}
+
+.actBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px 16px;
+  flex: 1;
+}
+
+.actTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.actArea {
+  margin: 0;
+  font-size: 0.84rem;
+  color: #64748b;
+}
+
+.actPriceUnit {
+  font-weight: 500;
+  color: #64748b;
+  font-size: 0.78rem;
+}
+
+.actMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.actRating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #fef3c7;
+  color: #92400e;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.actReviews {
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+.actRanking {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.actDesc {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #475569;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.actFooter {
+  margin-top: auto;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f1f5f9;
+}
+
+.actPrice {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 0.9rem;
+}
+
+.actCta {
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.85rem;
+}

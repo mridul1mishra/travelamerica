@@ -26,7 +26,9 @@ export default function CityUIPage({
   hotels,
   cruises,
 }: CityUIProps) {
-  const [activeSection, setActiveSection] = useState<number | null>(1);
+  const [activeSection, setActiveSection] = useState<number | null>(
+    airportsection?.tabs?.[0]?.id ?? 1
+  );
   const [activeGroup, setActiveGroup] = useState<number | null>(1);
   return (
     <>
