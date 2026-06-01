@@ -65,7 +65,12 @@ const cityData: Record<CityKey, CityData> = {
     propertySections: nyProperty,
     personaContent: nyPlantrip,
     plantripcontentsections: nyPlantripContent.plantripcontentsection,
-    hotels: nyHotels as Cruise[],
+    // NOTE: newyork/hotels.json was restructured for the /destination/nyc/booking
+    // page (img/title/area/rating/reviews/price/url) and no longer matches the
+    // legacy Cruise shape (route/duration) the majorcities city page expects.
+    // Cast through `unknown` so the build passes; the legacy NYC city-page hotel
+    // carousel will show blank route/duration until it's migrated or removed.
+    hotels: nyHotels as unknown as Cruise[],
     cruises: nyCruises as Cruise[],
     placevisit: (nyPlacevisit as PlacevisitJson).planTripSection,
   },

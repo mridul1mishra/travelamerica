@@ -83,6 +83,37 @@ const TABS: { key: TabKey; label: string; icon: string }[] = [
 
 const VALID_TABS = new Set<TabKey>(TABS.map((t) => t.key));
 
+type RelatedLink = { href: string; label: string };
+type RelatedGroup = { heading: string; links: RelatedLink[] };
+
+const RELATED_GUIDE_GROUPS: RelatedGroup[] = [
+  {
+    heading: "Plan",
+    links: [
+      { href: "/destination/nyc/solo-itinerary", label: "Solo NYC itinerary" },
+      { href: "/destination/nyc/group-itinerary", label: "Group NYC itinerary" },
+      { href: "/destination/nyc/neighborhood-guide", label: "NYC neighborhood guide" },
+      { href: "/destination/nyc/best-areas-to-stay", label: "Best areas to stay in NYC" },
+    ],
+  },
+  {
+    heading: "Stay safe & get around",
+    links: [
+      { href: "/destination/nyc/is-nyc-safe-at-night", label: "Is NYC safe at night?" },
+      { href: "/destination/nyc/nyc-safety-guide", label: "NYC safety guide" },
+      { href: "/destination/nyc/nyc-subway-map", label: "NYC subway map" },
+    ],
+  },
+  {
+    heading: "Explore",
+    links: [
+      { href: "/destination/nyc/things-to-do", label: "Things to do in NYC" },
+      { href: "/destination/nyc/landmark", label: "Top NYC landmarks" },
+      { href: "/destination/nyc/food", label: "Where to eat in NYC" },
+    ],
+  },
+];
+
 function getInitialTab(param: string | null): TabKey {
   if (param && VALID_TABS.has(param as TabKey)) {
     return param as TabKey;
@@ -107,17 +138,46 @@ export default function BookFlightsClient() {
         bannerText="Book your New York trip"
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.travelsamericas.com/",
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "New York",
+                "item": "https://www.travelsamericas.com/destination/nyc",
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Book your trip",
+                "item": "https://www.travelsamericas.com/destination/nyc/booking",
+              },
+            ],
+          }),
+        }}
+      />
       <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
         <ol className={styles.breadcrumbList}>
-          <li>
+          <li className={styles.breadcrumbItem}>
             <a href="/" className={styles.breadcrumbLink}>Home</a>
           </li>
           <li aria-hidden="true" className={styles.breadcrumbSep}>›</li>
-          <li>
+          <li className={styles.breadcrumbItem}>
             <a href="/destination/nyc" className={styles.breadcrumbLink}>New York</a>
           </li>
           <li aria-hidden="true" className={styles.breadcrumbSep}>›</li>
-          <li>
+          <li className={styles.breadcrumbItem}>
             <span aria-current="page" className={styles.breadcrumbCurrent}>Book your trip</span>
           </li>
         </ol>
@@ -315,36 +375,23 @@ export default function BookFlightsClient() {
         );
       })()}
 
-      {/* Related guides footer */}
-      <section className={styles.relatedGuides} aria-label="Related guides">
-        <div className={styles.relatedGuidesInner}>
-          <h2 className={styles.relatedGuidesHeading}>Plan your New York trip</h2>
-          <div className={styles.relatedGuidesGrid}>
-            <div className={styles.relatedGuidesGroup}>
-              <h3 className={styles.relatedGuidesGroupTitle}>Plan</h3>
-              <ul className={styles.relatedGuidesList}>
-                <li><a href="/destination/nyc/solo-itinerary" className={styles.relatedGuidesLink}>Solo NYC itinerary</a></li>
-                <li><a href="/destination/nyc/group-itinerary" className={styles.relatedGuidesLink}>Group NYC itinerary</a></li>
-                <li><a href="/destination/nyc/neighborhood-guide" className={styles.relatedGuidesLink}>NYC neighborhood guide</a></li>
-                <li><a href="/destination/nyc/best-areas-to-stay" className={styles.relatedGuidesLink}>Best areas to stay</a></li>
-              </ul>
-            </div>
-            <div className={styles.relatedGuidesGroup}>
-              <h3 className={styles.relatedGuidesGroupTitle}>Stay safe &amp; get around</h3>
-              <ul className={styles.relatedGuidesList}>
-                <li><a href="/destination/nyc/is-nyc-safe-at-night" className={styles.relatedGuidesLink}>Is NYC safe at night?</a></li>
-                <li><a href="/destination/nyc/nyc-safety-guide" className={styles.relatedGuidesLink}>NYC safety guide</a></li>
-                <li><a href="/destination/nyc/nyc-subway-map" className={styles.relatedGuidesLink}>NYC subway map</a></li>
-              </ul>
-            </div>
-            <div className={styles.relatedGuidesGroup}>
-              <h3 className={styles.relatedGuidesGroupTitle}>Explore</h3>
-              <ul className={styles.relatedGuidesList}>
-                <li><a href="/destination/nyc/things-to-do" className={styles.relatedGuidesLink}>Things to do in NYC</a></li>
-                <li><a href="/destination/nyc/landmark" className={styles.relatedGuidesLink}>Top NYC landmarks</a></li>
-                <li><a href="/destination/nyc/food" className={styles.relatedGuidesLink}>Where to eat in NYC</a></li>
-              </ul>
-            </div>
+      {/* Related guides footer — data-driven */}
+      <section className={styles.relatedFooter} aria-label="Related guides">
+        <div className={styles.relatedFooterInner}>
+          <h2 className={styles.relatedHeading}>Plan your New York trip</h2>
+          <div className={styles.relatedGroups}>
+            {RELATED_GUIDE_GROUPS.map((group) => (
+              <div key={group.heading} className={styles.relatedGroup}>
+                <h3 className={styles.relatedGroupTitle}>{group.heading}</h3>
+                <ul className={styles.relatedLinks}>
+                  {group.links.map((link) => (
+                    <li key={link.href}>
+                      <a href={link.href} className={styles.relatedLink}>{link.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
