@@ -1,0 +1,110 @@
+[
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/32/a4/54/cb/meeting-room.jpg",
+    "title": "Cameo Beverly Hills, LXR Hotels & Resorts",
+    "area": "Los Angeles, California",
+    "rating": 4.9,
+    "reviews": 131,
+    "price": "$381 – $793",
+    "url": "https://www.google.com/travel/hotels/Cameo%20Beverly%20Hills%2C%20LXR%20Hotels%20%26%20Resorts%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/2c/1d/33/ff/hotel-lobby.jpg",
+    "title": "Kimpton Everly Hotel",
+    "area": "Los Angeles, California",
+    "rating": 4.5,
+    "reviews": 989,
+    "price": "$285 – $569",
+    "url": "https://www.google.com/travel/hotels/Kimpton%20Everly%20Hotel%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/2f/be/64/10/outdoor-pool.jpg",
+    "title": "Warner Center Marriott Woodland Hills",
+    "area": "Los Angeles, California",
+    "rating": 4.3,
+    "reviews": 1550,
+    "price": "$209 – $333",
+    "url": "https://www.google.com/travel/hotels/Warner%20Center%20Marriott%20Woodland%20Hills%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/32/cb/aa/b6/lobby-bar-restaurant.jpg",
+    "title": "Burton House, Beverly Hills, A Tribute Portfolio Hotel",
+    "area": "Los Angeles, California",
+    "rating": 4.6,
+    "reviews": 334,
+    "price": "$303 – $748",
+    "url": "https://www.google.com/travel/hotels/Burton%20House%2C%20Beverly%20Hills%2C%20A%20Tribute%20Portfolio%20Hotel%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/31/a6/cf/a0/exterior.jpg",
+    "title": "Hotel Figueroa, Unbound Collection by Hyatt",
+    "area": "Los Angeles, California",
+    "rating": 4.6,
+    "reviews": 2743,
+    "price": "$190 – $658",
+    "url": "https://www.google.com/travel/hotels/Hotel%20Figueroa%2C%20Unbound%20Collection%20by%20Hyatt%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/33/62/ed/c4/exterior.jpg",
+    "title": "Hilton Los Angeles/Universal City",
+    "area": "Los Angeles, California",
+    "rating": 4.2,
+    "reviews": 6646,
+    "price": "$256 – $481",
+    "url": "https://www.google.com/travel/hotels/Hilton%20Los%20Angeles%2FUniversal%20City%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/2c/29/a6/6b/lobby.jpg",
+    "title": "The Garland",
+    "area": "Los Angeles, California",
+    "rating": 4.4,
+    "reviews": 4536,
+    "price": "$245 – $425",
+    "url": "https://www.google.com/travel/hotels/The%20Garland%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/32/f1/5e/c3/scenic-hotel-exterior.jpg",
+    "title": "Sheraton Universal Hotel",
+    "area": "Los Angeles, California",
+    "rating": 4.6,
+    "reviews": 2065,
+    "price": "$258 – $518",
+    "url": "https://www.google.com/travel/hotels/Sheraton%20Universal%20Hotel%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/31/e0/f0/4e/18-social.jpg",
+    "title": "Hotel Indigo Los Angeles Downtown By IHG",
+    "area": "Los Angeles, California",
+    "rating": 4.4,
+    "reviews": 1345,
+    "price": "$209 – $668",
+    "url": "https://www.google.com/travel/hotels/Hotel%20Indigo%20Los%20Angeles%20Downtown%20By%20IHG%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/0d/6b/e9/17/ucla-luskin-conference.jpg",
+    "title": "UCLA Meyer & Renee Luskin Conference Center",
+    "area": "Los Angeles, California",
+    "rating": 4.7,
+    "reviews": 1289,
+    "price": "$300 – $554",
+    "url": "https://www.google.com/travel/hotels/UCLA%20Meyer%20%26%20Renee%20Luskin%20Conference%20Center%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/32/3b/72/2e/holiday-inn-express-hollywood.jpg",
+    "title": "Holiday Inn Express & Suites Hollywood Walk of Fame by IHG",
+    "area": "Los Angeles, California",
+    "rating": 4.4,
+    "reviews": 3716,
+    "price": "$262 – $447",
+    "url": "https://www.google.com/travel/hotels/Holiday%20Inn%20Express%20%26%20Suites%20Hollywood%20Walk%20of%20Fame%20by%20IHG%20New%20York"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/0a/2a/3d/d6/photo0jpg.jpg",
+    "title": "Hotel Erwin",
+    "area": "Los Angeles, California",
+    "rating": 4.5,
+    "reviews": 2869,
+    "price": "$300 – $629",
+    "url": "https://www.google.com/travel/hotels/Hotel%20Erwin%20New%20York"
+  }
+]

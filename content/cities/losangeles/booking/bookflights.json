@@ -1,0 +1,63 @@
+{
+  "title": "Book Flights to Los Angeles",
+  "header": ["Airline", "Departure", "Arrival", "Duration", "Price", ""],
+  "rows": [
+    {
+      "airline": { "name": "Frontier", "logo": "https://pics.avs.io/100/100/F9.png" },
+      "departure": { "time": "08:07", "date": "Jul 15", "city": "Las Vegas (LAS)" },
+      "arrival": { "time": "09:25", "city": "Los Angeles (LAX)" },
+      "duration": "1h 18m",
+      "price": "from $33",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/LAS1507LAX1?marker=733422",
+      "highlight": true
+    },
+    {
+      "airline": { "name": "Frontier", "logo": "https://pics.avs.io/100/100/F9.png" },
+      "departure": { "time": "11:13", "date": "Jul 1", "city": "San Francisco (SFO)" },
+      "arrival": { "time": "12:48", "city": "Los Angeles (ONT)" },
+      "duration": "1h 35m",
+      "price": "from $34",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/SFO0107ONT1?marker=733422"
+    },
+    {
+      "airline": { "name": "Frontier", "logo": "https://pics.avs.io/100/100/F9.png" },
+      "departure": { "time": "21:13", "date": "Jul 22", "city": "Chicago (ORD)" },
+      "arrival": { "time": "23:57", "city": "Los Angeles (LAX)" },
+      "duration": "4h 44m",
+      "price": "from $75",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/ORD2207LAX1?marker=733422",
+      "highlight": true
+    },
+    {
+      "airline": { "name": "Frontier", "logo": "https://pics.avs.io/100/100/F9.png" },
+      "departure": { "time": "10:34", "date": "Jul 18", "city": "Seattle (SEA)" },
+      "arrival": { "time": "13:34", "city": "Los Angeles (LAX)" },
+      "duration": "3h 00m",
+      "price": "from $90",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/SEA1807LAX1?marker=733422"
+    },
+    {
+      "airline": { "name": "Frontier", "logo": "https://pics.avs.io/100/100/F9.png" },
+      "departure": { "time": "22:39", "date": "Jul 11", "city": "Denver (DEN)" },
+      "arrival": { "time": "00:11", "city": "Los Angeles (LAX)" },
+      "duration": "2h 32m",
+      "price": "from $96",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/DEN1107LAX1?marker=733422",
+      "highlight": true
+    },
+    {
+      "airline": { "name": "Frontier", "logo": "https://pics.avs.io/100/100/F9.png" },
+      "departure": { "time": "05:18", "date": "Jul 12", "city": "Dallas (DFW)" },
+      "arrival": { "time": "10:04", "city": "Los Angeles (ONT)" },
+      "duration": "6h 46m",
+      "price": "from $135",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/DFW1207ONT1?marker=733422"
+    }
+  ]
+}

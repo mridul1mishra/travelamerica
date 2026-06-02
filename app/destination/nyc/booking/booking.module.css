@@ -38,6 +38,15 @@
   line-height: 1;
 }
 
+/* ---- Empty state (used by city booking pages, e.g. LA) ---- */
+.emptyState {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px 56px;
+  color: #64748b;
+  font-size: 1rem;
+}
+
 /* ---- Flight date ---- */
 .flightDate {
   display: block;

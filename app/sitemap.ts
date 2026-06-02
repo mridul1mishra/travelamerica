@@ -36,10 +36,7 @@ const ROUTES: Entry[] = [
   { path: "/destination/nyc/solo-itinerary",                     priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/nyc/food",                               priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/nyc/landmark",                           priority: 0.9, changeFrequency: "weekly" },
-  { path: "/destination/nyc/group-dining",                       priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/nyc/group-travel",                       priority: 0.9, changeFrequency: "weekly" },
-  { path: "/destination/nyc/group-itinerary",                    priority: 0.9, changeFrequency: "weekly" },
-  { path: "/destination/nyc/group-landmarks",                    priority: 0.9, changeFrequency: "weekly" },
   // legal / about
   { path: "/about",                                                  priority: 0.4, changeFrequency: "yearly" },
   { path: "/privacy",                                                priority: 0.3, changeFrequency: "yearly" },

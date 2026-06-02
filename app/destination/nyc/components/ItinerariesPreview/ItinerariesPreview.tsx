@@ -10,7 +10,7 @@ const itineraries = [
   {
     title: "Group NYC Itinerary",
     description: "A 3-day group plan covering the MET, Central Park, Guggenheim, and Frick Collection with logistics for traveling together.",
-    href: "/destination/nyc/group-itinerary",
+    href: "/destination/nyc/group-travel#itinerary",
   },
 ];
 

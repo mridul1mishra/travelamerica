@@ -91,7 +91,7 @@ const RELATED_GUIDE_GROUPS: RelatedGroup[] = [
     heading: "Plan",
     links: [
       { href: "/destination/nyc/solo-itinerary", label: "Solo NYC itinerary" },
-      { href: "/destination/nyc/group-itinerary", label: "Group NYC itinerary" },
+      { href: "/destination/nyc/group-travel#itinerary", label: "NYC group travel guide" },
       { href: "/destination/nyc/neighborhood-guide", label: "NYC neighborhood guide" },
       { href: "/destination/nyc/best-areas-to-stay", label: "Best areas to stay in NYC" },
     ],

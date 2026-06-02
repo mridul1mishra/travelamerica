@@ -87,23 +87,43 @@
       "permanent": true
     },
     {
+      "source": "/majorcities/newyork",
+      "destination": "/destination/nyc",
+      "permanent": true
+    },
+    {
       "source": "/majorcities/newyork/food",
       "destination": "/destination/nyc/food",
       "permanent": true
     },
     {
+      "source": "/destination/nyc/group-dining",
+      "destination": "/destination/nyc/group-travel#dining",
+      "permanent": true
+    },
+    {
+      "source": "/destination/nyc/group-itinerary",
+      "destination": "/destination/nyc/group-travel#itinerary",
+      "permanent": true
+    },
+    {
+      "source": "/destination/nyc/group-landmarks",
+      "destination": "/destination/nyc/group-travel#landmarks",
+      "permanent": true
+    },
+    {
       "source": "/majorcities/newyork/group-dining",
-      "destination": "/destination/nyc/group-dining",
+      "destination": "/destination/nyc/group-travel#dining",
       "permanent": true
     },
     {
       "source": "/majorcities/newyork/group-itinerary",
-      "destination": "/destination/nyc/group-itinerary",
+      "destination": "/destination/nyc/group-travel#itinerary",
       "permanent": true
     },
     {
       "source": "/majorcities/newyork/group-landmarks",
-      "destination": "/destination/nyc/group-landmarks",
+      "destination": "/destination/nyc/group-travel#landmarks",
       "permanent": true
     },
     {

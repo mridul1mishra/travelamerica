@@ -1,6 +1,6 @@
 export const generateMetadata = () => ({
-  title: 'Group Travel in NYC: Safety Tips, Packing Essentials & Landmark Planning',
-  description:  'Explore NYC confidently with our group travel safety guide — smart packing tips, safe itineraries, and must-see landmarks for every explorer.',
+  title: 'NYC Group Travel Guide 2026: Itinerary, Landmarks & Dining',
+  description: 'The complete NYC group travel guide — a 3-day itinerary, top landmarks by borough (Manhattan, Brooklyn, Bronx), group dining picks, plus safety and packing tips.',
   alternates: {
       canonical: 'https://www.travelsamericas.com/destination/nyc/group-travel',
     },
@@ -10,8 +10,8 @@ export const generateMetadata = () => ({
   },
   twitter: {
     card: "summary_large_image",
-    title: "Group Travel in NYC: Safety Tips, Packing Essentials & Landmark Planning",
-    description: "Explore NYC confidently with our group travel safety guide — smart packing tips, safe itineraries, and must-see landmarks for every explorer.",
+    title: "NYC Group Travel Guide 2026: Itinerary, Landmarks & Dining",
+    description: "The complete NYC group travel guide — a 3-day itinerary, top landmarks by borough (Manhattan, Brooklyn, Bronx), group dining picks, plus safety and packing tips.",
     images: ["https://www.travelsamericas.com/data/majorcities/newyork/assets/group/nyc-group-travel-packing-flatlay-essentials.jpg"]
   }
 });

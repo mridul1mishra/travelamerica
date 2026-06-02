@@ -32,8 +32,8 @@ const Footer = () => {
       <h3>Group Travel</h3>
       <ul className="vertical-list">
         <li className="link"><Link href="/destination/nyc/group-travel">Group Travel Tips</Link></li>
-        <li className="link"><Link href="/destination/nyc/group-itinerary">Group Travel Itinerary</Link></li>
-        <li className="link"><Link href="/destination/nyc/group-dining">Group Dining in NYC</Link></li>
+        <li className="link"><Link href="/destination/nyc/group-travel#itinerary">Group Travel Itinerary</Link></li>
+        <li className="link"><Link href="/destination/nyc/group-travel#dining">Group Dining in NYC</Link></li>
         <li className="link"><Link href="/destination/nyc/landmark">Top NYC Landmarks</Link></li>
       </ul>
     </div>
