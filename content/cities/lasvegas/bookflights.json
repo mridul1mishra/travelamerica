@@ -106,25 +106,6 @@
       "buttonText": "View Prices",
       "buttonUrl": "https://www.aviasales.com/search/DFW2807LAS1?marker=733422",
       "highlight": true
-    },
-    {
-      "airline": {
-        "name": "United",
-        "logo": "https://pics.avs.io/100/100/UA.png"
-      },
-      "departure": {
-        "time": "11:10",
-        "date": "Jul 29",
-        "city": "Atlanta (ATL)"
-      },
-      "arrival": {
-        "time": "17:06",
-        "city": "Las Vegas (LAS)"
-      },
-      "duration": "8h 56m",
-      "price": "from $130",
-      "buttonText": "View Prices",
-      "buttonUrl": "https://www.aviasales.com/search/ATL2907LAS1?marker=733422"
     }
   ]
 }

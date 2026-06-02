@@ -10,8 +10,8 @@ export const generateMetadata = () => ({
     },
     twitter: {
     card: "summary_large_image",
-    title: "3-Day NYC Group Travel Itinerary",
-    description: "Plan the perfect 3-day NYC trip for groups with museums, parks, Broadway, and a Hudson River dinner cruise.",
+    title: "Solo Travel NYC | Top Landmarks and Routes",
+    description: "Explore NYC's iconic landmarks confidently — Statue of Liberty, Empire State Building, Central Park, and more.",
     images: ["https://www.travelsamericas.com/data/majorcities/newyork/assets/statue-of-liberty.jpg"]
   }
 });

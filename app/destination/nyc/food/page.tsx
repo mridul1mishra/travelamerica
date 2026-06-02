@@ -10,8 +10,8 @@ export const generateMetadata = () => ({
     },
     twitter: {
     card: "summary_large_image",
-    title: "3-Day NYC Group Travel Itinerary",
-    description: "Plan the perfect 3-day NYC trip for groups with museums, parks, Broadway, and a Hudson River dinner cruise.",
+    title: "Solo Travel NYC: Best Dining Spots & Food Halls for Exploring Alone",
+    description: "Explore the best solo dining spots in NYC — cozy counters, vibrant food halls, iconic bagels, ramen, and more.",
     images: ["https://www.travelsamericas.com/data/majorcities/newyork/assets/nyc-solo-dining.png"],
     
   }

@@ -106,25 +106,6 @@
       "buttonText": "View Prices",
       "buttonUrl": "https://www.aviasales.com/search/DFW2807MCO1?marker=733422",
       "highlight": true
-    },
-    {
-      "airline": {
-        "name": "Frontier",
-        "logo": "https://pics.avs.io/100/100/F9.png"
-      },
-      "departure": {
-        "time": "15:40",
-        "date": "Jul 29",
-        "city": "Miami (MIA)"
-      },
-      "arrival": {
-        "time": "05:30",
-        "city": "Orlando (MCO)"
-      },
-      "duration": "10h 50m",
-      "price": "from $148",
-      "buttonText": "View Prices",
-      "buttonUrl": "https://www.aviasales.com/search/ONT2907MCO1?marker=733422"
     }
   ]
 }
