@@ -27,16 +27,17 @@ const ROUTES: Entry[] = [
   { path: "/destination/nyc/subway-safety-guide",                    priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/nyc/nyc-subway-map",                         priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/nyc/things-to-do",                           priority: 0.9, changeFrequency: "weekly" },
-  // majorcities hubs
-  { path: "/destination/nyc",                                    priority: 0.9, changeFrequency: "weekly" },
-  { path: "/majorcities/losangeles",                                 priority: 0.9, changeFrequency: "weekly" },
-  { path: "/majorcities/lasvegas",                                   priority: 0.9, changeFrequency: "weekly" },
-  { path: "/majorcities/orlando",                                    priority: 0.9, changeFrequency: "weekly" },
-  // newyork sub-pages
-  { path: "/destination/nyc/solo-itinerary",                     priority: 0.9, changeFrequency: "weekly" },
-  { path: "/destination/nyc/food",                               priority: 0.9, changeFrequency: "weekly" },
-  { path: "/destination/nyc/landmark",                           priority: 0.9, changeFrequency: "weekly" },
-  { path: "/destination/nyc/group-travel",                       priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/nyc/solo-itinerary",                         priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/nyc/food",                                   priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/nyc/landmark",                               priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/nyc/group-travel",                           priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/nyc/booking",                                priority: 0.9, changeFrequency: "weekly" },
+  // destination city hubs
+  { path: "/destination/la",                                         priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/lasvegas",                                   priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/lasvegas/bookings",                          priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/orlando",                                    priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/orlando/bookings",                           priority: 0.9, changeFrequency: "weekly" },
   // legal / about
   { path: "/about",                                                  priority: 0.4, changeFrequency: "yearly" },
   { path: "/privacy",                                                priority: 0.3, changeFrequency: "yearly" },

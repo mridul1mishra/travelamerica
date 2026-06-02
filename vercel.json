@@ -165,6 +165,36 @@
       "source": "/majorcities/newyork/solo-travel",
       "destination": "/destination/nyc/solo-trip-to-nyc",
       "permanent": true
+    },
+    {
+      "source": "/majorcities/losangeles",
+      "destination": "/destination/la",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/losangeles/:path*",
+      "destination": "/destination/la/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/lasvegas",
+      "destination": "/destination/lasvegas",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/lasvegas/:path*",
+      "destination": "/destination/lasvegas/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/orlando",
+      "destination": "/destination/orlando",
+      "permanent": true
+    },
+    {
+      "source": "/majorcities/orlando/:path*",
+      "destination": "/destination/orlando/:path*",
+      "permanent": true
     }
   ]
 }

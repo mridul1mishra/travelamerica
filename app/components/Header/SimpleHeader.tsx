@@ -35,9 +35,9 @@ export default function SimpleHeader({ pageTitle }: SimpleHeaderProps) {
         <nav aria-label="Main navigation" className={styles.nav}>
           <ul>
             <li><Link href="/destination/nyc">New York</Link></li>
-            <li><Link href="/majorcities/losangeles">Los Angeles</Link></li>
-            <li><Link href="/majorcities/lasvegas">Las Vegas</Link></li>
-            <li><Link href="/majorcities/orlando">Orlando</Link></li>
+            <li><Link href="/destination/la">Los Angeles</Link></li>
+            <li><Link href="/destination/lasvegas">Las Vegas</Link></li>
+            <li><Link href="/destination/orlando">Orlando</Link></li>
           </ul>
         </nav>
       </div>

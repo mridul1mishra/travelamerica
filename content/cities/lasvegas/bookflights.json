@@ -1,0 +1,130 @@
+{
+  "title": "Book Flights to Las Vegas",
+  "header": [
+    "Airline",
+    "Departure",
+    "Arrival",
+    "Duration",
+    "Price",
+    ""
+  ],
+  "rows": [
+    {
+      "airline": {
+        "name": "Frontier",
+        "logo": "https://pics.avs.io/100/100/F9.png"
+      },
+      "departure": {
+        "time": "16:13",
+        "date": "Jul 15",
+        "city": "Los Angeles (LAX)"
+      },
+      "arrival": {
+        "time": "17:30",
+        "city": "Las Vegas (LAS)"
+      },
+      "duration": "1h 17m",
+      "price": "from $32",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/LAX1507LAS1?marker=733422",
+      "highlight": true
+    },
+    {
+      "airline": {
+        "name": "Frontier",
+        "logo": "https://pics.avs.io/100/100/F9.png"
+      },
+      "departure": {
+        "time": "21:00",
+        "date": "Jul 30",
+        "city": "San Francisco (SFO)"
+      },
+      "arrival": {
+        "time": "22:48",
+        "city": "Las Vegas (LAS)"
+      },
+      "duration": "1h 48m",
+      "price": "from $75",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/SFO3007LAS1?marker=733422"
+    },
+    {
+      "airline": {
+        "name": "Frontier",
+        "logo": "https://pics.avs.io/100/100/F9.png"
+      },
+      "departure": {
+        "time": "07:15",
+        "date": "Jul 29",
+        "city": "Chicago (ORD)"
+      },
+      "arrival": {
+        "time": "09:23",
+        "city": "Las Vegas (LAS)"
+      },
+      "duration": "4h 08m",
+      "price": "from $102",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/ORD2907LAS1?marker=733422",
+      "highlight": true
+    },
+    {
+      "airline": {
+        "name": "Frontier",
+        "logo": "https://pics.avs.io/100/100/F9.png"
+      },
+      "departure": {
+        "time": "06:10",
+        "date": "Jul 23",
+        "city": "Denver (DEN)"
+      },
+      "arrival": {
+        "time": "07:09",
+        "city": "Las Vegas (LAS)"
+      },
+      "duration": "1h 59m",
+      "price": "from $103",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/DEN2307LAS1?marker=733422"
+    },
+    {
+      "airline": {
+        "name": "Frontier",
+        "logo": "https://pics.avs.io/100/100/F9.png"
+      },
+      "departure": {
+        "time": "11:54",
+        "date": "Jul 28",
+        "city": "Dallas (DFW)"
+      },
+      "arrival": {
+        "time": "15:17",
+        "city": "Las Vegas (LAS)"
+      },
+      "duration": "5h 23m",
+      "price": "from $116",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/DFW2807LAS1?marker=733422",
+      "highlight": true
+    },
+    {
+      "airline": {
+        "name": "United",
+        "logo": "https://pics.avs.io/100/100/UA.png"
+      },
+      "departure": {
+        "time": "11:10",
+        "date": "Jul 29",
+        "city": "Atlanta (ATL)"
+      },
+      "arrival": {
+        "time": "17:06",
+        "city": "Las Vegas (LAS)"
+      },
+      "duration": "8h 56m",
+      "price": "from $130",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.aviasales.com/search/ATL2907LAS1?marker=733422"
+    }
+  ]
+}

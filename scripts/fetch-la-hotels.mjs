@@ -119,10 +119,15 @@ async function getHotels(locationId) {
   // empty data while the auction runs. Poll until progress hits 100 (or we get
   // usable items, or we run out of attempts).
   let json;
-  for (let attempt = 1; attempt <= 8; attempt++) {
-    json = await getJson(url);
+  let auctionKey = null;
+  for (let attempt = 1; attempt <= 12; attempt++) {
+    const pollUrl = auctionKey
+      ? url + "&auction_key=" + encodeURIComponent(auctionKey)
+      : url;
+    json = await getJson(pollUrl);
     const items = (json?.data || []).filter((d) => d?.name);
     const progress = Number(json?.status?.progress ?? 0);
+    auctionKey = json?.status?.auction_key || auctionKey;
     console.log(`  attempt ${attempt}: progress ${progress}%, ${items.length} items`);
     if (items.length) return items;
     if (progress >= 100) break; // search finished with nothing

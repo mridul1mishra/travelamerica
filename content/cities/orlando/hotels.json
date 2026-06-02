@@ -1,42 +1,110 @@
 [
   {
-    "img": "/data/majorcities/orlando/assets/pic-orlando-palms-orlando-28.jpg",
-    "title": "Orlando Palms Hotel",
-    "route": "This budget retreat combines safety, affordability, and convenience with free breakfast, Wi-Fi, a gym, and pool. Located near Florida Mall, it offers easy access to shopping and dining. Bright rooms and a casual atmosphere create a welcoming base, ideal for independent female travelers seeking comfort without overspending.",
-    "duration": "4.0 (2,150 reviews)",
-    "price": "$89 1 night, 2 adults",
-    "url": "https://orlandopalms.mydirectstay.com/"
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/32/49/1f/02/dph-orlds-no-resort-fee.jpg",
+    "title": "Drury Plaza Hotel Orlando - Disney Springs Area",
+    "area": "Orlando, Florida",
+    "rating": 4.8,
+    "reviews": 904,
+    "price": "$166 – $287",
+    "url": "https://www.google.com/travel/hotels/Drury%20Plaza%20Hotel%20Orlando%20-%20Disney%20Springs%20Area%20Orlando"
   },
   {
-    "img": "/data/majorcities/orlando/assets/rco_misc_details_0100_Feature-Hor.jpg",
-    "title": "The Ritz-Carlton Orlando",
-    "route": "This upscale retreat blends indulgence with adventure, offering eco-tours, kayaking, and championship golf alongside gourmet dining and spa luxury. Plush rooms with scenic views ensure refined comfort, while its secluded setting near Orlando's attractions creates the perfect balance of thrill, sophistication, and exclusivity for the discerning explorer.",
-    "duration": "4.7 (3,480 reviews)",
-    "price": "$549 1 night, 2 adults",
-    "url": "https://www.ritzcarlton.com/en/hotels/mcorz-the-ritz-carlton-orlando-grande-lakes/overview/"
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/33/24/54/6c/official-walt-disney.jpg",
+    "title": "Holiday Inn Orlando - Disney Springs Area by IHG",
+    "area": "Orlando, Florida",
+    "rating": 4.5,
+    "reviews": 5294,
+    "price": "$131 – $228",
+    "url": "https://www.google.com/travel/hotels/Holiday%20Inn%20Orlando%20-%20Disney%20Springs%20Area%20by%20IHG%20Orlando"
   },
   {
-    "img": "/data/majorcities/orlando/assets/holiday-inn.jpg",
-    "title": "Holiday Inn Express & Suites",
-    "route": "This affordable retreat offers spacious suites, free breakfast, Wi-Fi, and a pool, making group travel easy and cost-effective. Located on International Drive, it provides walkable access to dining, nightlife, and shopping. Safe, casual, and welcoming, it's ideal for female groups seeking fun, convenience, and value without overspending.",
-    "duration": "4.2 (1,820 reviews)",
-    "price": "$129 1 night, 2 adults",
-    "url": "https://www.ihg.com/holidayinnexpress/hotels/us/en/orlando/mcoea/hoteldetail"
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/32/82/c8/27/cafe.jpg",
+    "title": "Wyndham Grand Orlando Resort Bonnet Creek",
+    "area": "Orlando, Florida",
+    "rating": 4.4,
+    "reviews": 8253,
+    "price": "$172 – $303",
+    "url": "https://www.google.com/travel/hotels/Wyndham%20Grand%20Orlando%20Resort%20Bonnet%20Creek%20Orlando"
   },
   {
-    "img": "/data/majorcities/orlando/assets/jwmariott.jpg",
-    "title": "JW Marriott Orlando",
-    "route": "This refined resort blends upscale indulgence with adventure, offering golf, eco-tours, and kayaking alongside gourmet dining and spa luxury. Spacious suites and social lounges create the perfect setting for male groups, while its secluded location near Orlando's attractions ensures privacy, exclusivity, and a sophisticated retreat for thrill-seeking explorers.",
-    "duration": "4.6 (2,910 reviews)",
-    "price": "$379 1 night, 2 adults",
-    "url": "https://www.marriott.com/en-us/hotels/mcojw-jw-marriott-orlando-grande-lakes/overview/"
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/2f/62/a4/d2/hotel-exterior-and-outdoor.jpg",
+    "title": "Holiday Inn Resort Orlando Lake Buena Vista by IHG",
+    "area": "Orlando, Florida",
+    "rating": 4.2,
+    "reviews": 3364,
+    "price": "$94 – $151",
+    "url": "https://www.google.com/travel/hotels/Holiday%20Inn%20Resort%20Orlando%20Lake%20Buena%20Vista%20by%20IHG%20Orlando"
   },
   {
-    "img": "/data/majorcities/orlando/assets/waldorf.jpg",
-    "title": "Waldorf Astoria Orlando",
-    "route": "This romantic hideaway offers couples a romantic blend of luxury and privacy, with elegant suites, spa indulgence, and fine dining. Secluded yet close to Orlando's attractions, it provides serene pools, champagne brunches, and sunset views - the perfect setting for partners seeking intimacy, relaxation, and unforgettable shared experiences.",
-    "duration": "4.8 (4,260 reviews)",
-    "price": "$529 1 night, 2 adults",
-    "url": "https://www.booking.com/hotel/us/waldorf-astoria-orlando.html"
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/32/99/fb/24/exterior.jpg",
+    "title": "Hampton Inn Orlando/Lake Buena Vista",
+    "area": "Orlando, Florida",
+    "rating": 4.6,
+    "reviews": 5329,
+    "price": "$113 – $165",
+    "url": "https://www.google.com/travel/hotels/Hampton%20Inn%20Orlando%2FLake%20Buena%20Vista%20Orlando"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/2c/1f/a5/43/hotel-monreale-express.jpg",
+    "title": "Hotel Monreale Express I-Drive Orlando",
+    "area": "Orlando, Florida",
+    "rating": 4.6,
+    "reviews": 2878,
+    "price": "$66 – $124",
+    "url": "https://www.google.com/travel/hotels/Hotel%20Monreale%20Express%20I-Drive%20Orlando%20Orlando"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/33/65/71/bc/pool.jpg",
+    "title": "Hilton Orlando",
+    "area": "Orlando, Florida",
+    "rating": 4.5,
+    "reviews": 8002,
+    "price": "$238 – $898",
+    "url": "https://www.google.com/travel/hotels/Hilton%20Orlando%20Orlando"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/2d/dd/c2/d2/exterior.jpg",
+    "title": "Drury Inn & Suites Near Universal Orlando Resort",
+    "area": "Orlando, Florida",
+    "rating": 4.7,
+    "reviews": 3193,
+    "price": "$138 – $215",
+    "url": "https://www.google.com/travel/hotels/Drury%20Inn%20%26%20Suites%20Near%20Universal%20Orlando%20Resort%20Orlando"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/33/2d/e2/81/lobby.jpg",
+    "title": "Holiday Inn Orlando International Dr-ICON by IHG",
+    "area": "Orlando, Florida",
+    "rating": 4.8,
+    "reviews": 519,
+    "price": "$105 – $254",
+    "url": "https://www.google.com/travel/hotels/Holiday%20Inn%20Orlando%20International%20Dr-ICON%20by%20IHG%20Orlando"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/33/65/71/ba/pool.jpg",
+    "title": "Signia By Hilton Orlando - An Official Walt Disney WorldR Hotel",
+    "area": "Orlando, Florida",
+    "rating": 4.5,
+    "reviews": 9099,
+    "price": "$240 – $696",
+    "url": "https://www.google.com/travel/hotels/Signia%20By%20Hilton%20Orlando%20-%20An%20Official%20Walt%20Disney%20WorldR%20Hotel%20Orlando"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/2c/29/ab/14/hall.jpg",
+    "title": "The Delaney Hotel",
+    "area": "Orlando, Florida",
+    "rating": 4.7,
+    "reviews": 285,
+    "price": "$144 – $281",
+    "url": "https://www.google.com/travel/hotels/The%20Delaney%20Hotel%20Orlando"
+  },
+  {
+    "img": "https://media-cdn.tripadvisor.com/media/photo-f/32/3d/c6/6a/pestana-orlando-suites.jpg",
+    "title": "Pestana Orlando Suites Lake Buena Vista",
+    "area": "Orlando, Florida",
+    "rating": 4.8,
+    "reviews": 639,
+    "price": "$96 – $166",
+    "url": "https://www.google.com/travel/hotels/Pestana%20Orlando%20Suites%20Lake%20Buena%20Vista%20Orlando"
   }
 ]
