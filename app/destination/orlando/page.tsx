@@ -1,29 +1,33 @@
-export const generateMetadata = () => ({
-  title: 'Book Your Orlando Trip | Cheap Flights, Hotels & Things to Do',
+import type { Metadata } from 'next';
+import OrlandoHubClient from './orlandohubclient';
+
+export const metadata: Metadata = {
+  title: 'Orlando Travel Guide | Plan Your Orlando Trip',
   description:
-    'Plan and book your Orlando trip in one place — compare the cheapest flights from major US cities, browse top Orlando hotels, and find the best things to do in Orlando.',
-  robots: {
-    index: true,
-    follow: true,
+    'Plan your Orlando trip — Walt Disney World, Universal Studios, Kennedy Space Center, best hotels near the parks, and cheap flights to MCO.',
+  alternates: { canonical: 'https://www.travelsamericas.com/destination/orlando' },
+  openGraph: {
+    title: 'Orlando Travel Guide',
+    description: 'Your complete Orlando travel guide — theme parks, hotels, day trips, and trip planning.',
+    url: 'https://www.travelsamericas.com/destination/orlando',
+    type: 'website',
   },
-  alternates: {
-    canonical: 'https://www.travelsamericas.com/destination/orlando',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Book Your Orlando Trip: Flights, Hotels & Things to Do',
-    description: 'Compare cheap flights, hotels, and activities for your Orlando trip.',
-    images: ['https://www.travelsamericas.com/data/majorcities/orlando/assets/orlando.jpeg'],
-  },
-});
+};
 
-import { Suspense } from "react";
-import OrlandoClient from './orlandoclient';
-
-export default function OrlandoPage() {
+export default function OrlandoHubPage() {
   return (
-    <Suspense fallback={<div>Loading…</div>}>
-      <OrlandoClient />
-    </Suspense>
+    <>
+      <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': ['TouristDestination', 'WebPage'],
+        name: 'Orlando Travel Guide',
+        description: 'Orlando is the theme park capital of the world — home to Walt Disney World, Universal Studios, SeaWorld, and easy access to Florida beaches.',
+        url: 'https://www.travelsamericas.com/destination/orlando',
+        touristType: 'Family tourism',
+        geo: { '@type': 'GeoCoordinates', latitude: '28.5383', longitude: '-81.3792' },
+        address: { '@type': 'PostalAddress', addressLocality: 'Orlando', addressRegion: 'FL', addressCountry: 'US' },
+      }) }} />
+      <OrlandoHubClient />
+    </>
   );
 }

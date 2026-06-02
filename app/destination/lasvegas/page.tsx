@@ -1,29 +1,33 @@
-export const generateMetadata = () => ({
-  title: 'Book Your Las Vegas Trip | Cheap Flights, Hotels & Things to Do',
+import type { Metadata } from 'next';
+import LasVegasHubClient from './lasvegashubclient';
+
+export const metadata: Metadata = {
+  title: 'Las Vegas Travel Guide | Plan Your Las Vegas Trip',
   description:
-    'Plan and book your Las Vegas trip in one place — compare the cheapest flights from major US cities, browse top Las Vegas hotels, and find the best things to do in Las Vegas.',
-  robots: {
-    index: true,
-    follow: true,
+    'Plan your Las Vegas trip — best things to do on the Strip, where to stay, top shows, day trips to the Grand Canyon, and how to book cheap flights to LAS.',
+  alternates: { canonical: 'https://www.travelsamericas.com/destination/lasvegas' },
+  openGraph: {
+    title: 'Las Vegas Travel Guide',
+    description: 'Your complete Las Vegas travel guide — attractions, neighborhoods, shows, and trip planning.',
+    url: 'https://www.travelsamericas.com/destination/lasvegas',
+    type: 'website',
   },
-  alternates: {
-    canonical: 'https://www.travelsamericas.com/destination/lasvegas',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Book Your Las Vegas Trip: Flights, Hotels & Things to Do',
-    description: 'Compare cheap flights, hotels, and activities for your Las Vegas trip.',
-    images: ['https://www.travelsamericas.com/data/majorcities/lasvegas/assets/lasvegas.jpeg'],
-  },
-});
+};
 
-import { Suspense } from "react";
-import LasVegasClient from './lasvegasclient';
-
-export default function LasVegasPage() {
+export default function LasVegasHubPage() {
   return (
-    <Suspense fallback={<div>Loading…</div>}>
-      <LasVegasClient />
-    </Suspense>
+    <>
+      <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': ['TouristDestination', 'WebPage'],
+        name: 'Las Vegas Travel Guide',
+        description: 'Las Vegas is the entertainment capital of the world — iconic casino resorts, world-class shows, fine dining, and easy access to natural wonders.',
+        url: 'https://www.travelsamericas.com/destination/lasvegas',
+        touristType: 'Entertainment tourism',
+        geo: { '@type': 'GeoCoordinates', latitude: '36.1699', longitude: '-115.1398' },
+        address: { '@type': 'PostalAddress', addressLocality: 'Las Vegas', addressRegion: 'NV', addressCountry: 'US' },
+      }) }} />
+      <LasVegasHubClient />
+    </>
   );
 }

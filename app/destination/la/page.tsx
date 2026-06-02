@@ -1,29 +1,33 @@
-export const generateMetadata = () => ({
-  title: 'Book Your Los Angeles Trip | Cheap Flights, Hotels & Things to Do',
+import type { Metadata } from 'next';
+import LAHubClient from './lahubclient';
+
+export const metadata: Metadata = {
+  title: 'Los Angeles Travel Guide | Plan Your LA Trip',
   description:
-    'Plan and book your Los Angeles trip in one place — compare the cheapest flights from major US cities, browse top LA hotels, and find the best things to do in Los Angeles.',
-  robots: {
-    index: true,
-    follow: true,
+    'Plan your Los Angeles trip — Hollywood, Venice Beach, Griffith Observatory, the best neighborhoods to stay in, and cheap flights to LAX.',
+  alternates: { canonical: 'https://www.travelsamericas.com/destination/la' },
+  openGraph: {
+    title: 'Los Angeles Travel Guide',
+    description: 'Your complete LA travel guide — beaches, Hollywood, neighborhoods, and trip planning.',
+    url: 'https://www.travelsamericas.com/destination/la',
+    type: 'website',
   },
-  alternates: {
-    canonical: 'https://www.travelsamericas.com/destination/la',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Book Your Los Angeles Trip: Flights, Hotels & Things to Do',
-    description: 'Compare cheap flights, hotels, and activities for your Los Angeles trip.',
-    images: ['https://www.travelsamericas.com/data/majorcities/losangeles/assets/losangeles.jpeg'],
-  },
-});
+};
 
-import { Suspense } from "react";
-import LAClient from './laclient';
-
-export default function LAPage() {
+export default function LAHubPage() {
   return (
-    <Suspense fallback={<div>Loading…</div>}>
-      <LAClient />
-    </Suspense>
+    <>
+      <script type="application/ld+json" suppressHydrationWarning dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': ['TouristDestination', 'WebPage'],
+        name: 'Los Angeles Travel Guide',
+        description: 'Los Angeles is the entertainment capital of the world — Hollywood, world-class museums, iconic beaches, and a food scene that spans every culture.',
+        url: 'https://www.travelsamericas.com/destination/la',
+        touristType: 'Urban tourism',
+        geo: { '@type': 'GeoCoordinates', latitude: '34.0522', longitude: '-118.2437' },
+        address: { '@type': 'PostalAddress', addressLocality: 'Los Angeles', addressRegion: 'CA', addressCountry: 'US' },
+      }) }} />
+      <LAHubClient />
+    </>
   );
 }

@@ -1,0 +1,166 @@
+"use client";
+import Link from "next/link";
+import Header from "../../components/Header/header";
+import Footer from "@/app/components/Header/Footer/footer";
+import styles from "@/app/destination/city-hub.module.css";
+
+const attractions = [
+  { name: "Griffith Observatory", blurb: "Free entry to the grounds. The best skyline view in LA — especially at sunset. Hike up from the Greek Theatre parking lot (45 min) or drive up.", href: "/destination/la/bookings?tab=activities" },
+  { name: "The Getty Center", blurb: "Free admission (parking $22). World-class art collection + stunning architecture + views over LA. Allow 3 hours minimum.", href: "/destination/la/bookings?tab=activities" },
+  { name: "Venice Beach Boardwalk", blurb: "The quintessential LA beach experience — street performers, Muscle Beach, eclectic shops. Walk south to quieter Marina del Rey for contrast.", href: "/destination/la/bookings?tab=activities" },
+  { name: "Hollywood Walk of Fame & TCL Chinese Theatre", blurb: "Walk it once. The area around it is touristy — Hollywood Blvd has improved but still requires awareness. Hollywood Hills hike is far better.", href: "/destination/la/bookings?tab=activities" },
+  { name: "Santa Monica Pier & 3rd Street Promenade", blurb: "Pacific Park rides on the pier, then walk up 3rd Street for food. Best on a weekday — weekends get crowded fast.", href: "/destination/la/bookings?tab=activities" },
+  { name: "LACMA & Museum Row", blurb: "Los Angeles County Museum of Art plus The Broad, MOCA, and the Natural History Museum — all within a mile or two. Full art day possible.", href: "/destination/la/bookings?tab=activities" },
+];
+
+const neighborhoods = [
+  { name: "Santa Monica", vibe: "Beach city feel, walkable, safe, great restaurants. Pricier hotels but you can do LA without a car if you stay here.", bestFor: "First-time visitors, beach lovers" },
+  { name: "Hollywood / Los Feliz", vibe: "Central location, easy freeway access. Los Feliz is trendier and more local. Hollywood proper is more tourist-facing.", bestFor: "Budget mid-range stays, central access" },
+  { name: "West Hollywood (WeHo)", vibe: "Walkable strip of Sunset Blvd. Great nightlife and dining. Boutique hotels. LGBTQ+ friendly, vibrant, energetic.", bestFor: "Nightlife, dining scene, repeat visitors" },
+  { name: "Silver Lake / Echo Park", vibe: "Indie, creative, very local. Coffee shops, record stores, hiking. Farther from beach but close to DTLA.", bestFor: "Younger travelers, longer stays" },
+  { name: "Manhattan Beach / Hermosa Beach", vibe: "South Bay beach cities. Quieter than Santa Monica, family-friendly. 30 min from LAX.", bestFor: "Beach-focused trips, families" },
+  { name: "Downtown LA (DTLA)", vibe: "Grand Central Market, The Broad, Arts District. Improving but uneven — pick your block carefully.", bestFor: "Art, food, urban exploration" },
+];
+
+const experiences = [
+  { title: "Beaches & Outdoors", blurb: "Santa Monica, Venice, Malibu, El Matador State Beach. The Santa Monica Mountains Conservancy has 500+ miles of hiking trails within the city." },
+  { title: "Film & Pop Culture", blurb: "Warner Bros. Studio Tour ($70+), Paramount Pictures tour, Hollywood Forever Cemetery screenings, TCL Chinese Theatre. Book studio tours in advance." },
+  { title: "Museums & Culture", blurb: "Getty Center (free), LACMA, The Broad, Natural History Museum. Museum Row on Wilshire Blvd alone covers a full day." },
+  { title: "Food & Neighborhoods", blurb: "Grand Central Market, Koreatown, Little Tokyo, Boyle Heights tacos, Erewhon Market culture. LA's food scene is genuinely world-class." },
+];
+
+const whereToStay = [
+  { title: "Santa Monica & the Westside", description: "Walkable beach access, safest area for first-timers, easiest to navigate without a car. Higher nightly rates but worthwhile for short trips.", href: "/destination/la/bookings?tab=hotels" },
+  { title: "Hollywood & Central LA", description: "Lower prices, more central location for freeway access. Los Feliz and Silver Lake have more local character than the Hollywood Blvd strip.", href: "/destination/la/bookings?tab=hotels" },
+];
+
+const itineraries = [
+  { title: "4-Day Los Angeles Itinerary", description: "Day 1: Santa Monica + Venice Beach. Day 2: Hollywood + Griffith Observatory. Day 3: Getty Center + LACMA + WeHo. Day 4: Malibu drive or day trip to Joshua Tree.", href: "/destination/la/bookings" },
+  { title: "LA Without a Car", description: "Stay in Santa Monica. Metro Expo Line to DTLA, Uber to Hollywood Hills. The Westside is genuinely walkable — the rest of LA less so.", href: "/destination/la/bookings?tab=hotels" },
+];
+
+export default function LAHubClient() {
+  return (
+    <main>
+      <Header image="/data/majorcities/losangeles/assets/losangeles.jpeg" bannerText="Los Angeles Travel Guide" />
+
+      {/* Slim booking CTA */}
+      <div className={styles.slimCta}>
+        <span className={styles.slimCtaText}>Compare cheap flights to LAX, LA hotels, and activity tickets →</span>
+        <Link href="/destination/la/bookings?tab=flights" className={styles.slimCtaBtn} aria-label="Book your LA trip">Book your trip</Link>
+      </div>
+
+      {/* Hero */}
+      <section className={styles.hero}>
+        <h1>Los Angeles Travel Guide</h1>
+        <p>For first-timers, solo travelers, and anyone who wants the practical version. Real planning for LA — where to actually stay, how to get around, and what the city is like beyond the Hollywood clichés.</p>
+        <div className={styles.heroCtas}>
+          <Link href="/destination/la/bookings?tab=flights" className={styles.primaryCta}>Compare flights to LAX</Link>
+          <Link href="#neighborhoods" className={styles.secondaryCta}>Where to stay in LA</Link>
+        </div>
+        <p className={styles.updated}>Updated for 2026</p>
+      </section>
+
+      {/* Why LA */}
+      <section className={`${styles.section} ${styles.altBg}`} aria-labelledby="why-la">
+        <h2 id="why-la" className={styles.sectionTitle}>Why Los Angeles Works for So Many Trips</h2>
+        <p className={styles.sectionIntro}>LA is genuinely different from most major cities — sprawling, diverse, and impossible to reduce to a single experience. That's what makes it worth understanding before you go.</p>
+        <div className={styles.whyGrid}>
+          <article className={styles.card}>
+            <h3 className={styles.cardTitle}>Beaches, Mountains, and City in One Place</h3>
+            <p className={styles.cardBody}>You can surf at Santa Monica in the morning, hike the Santa Monica Mountains at noon, and be at a Michelin-starred restaurant in WeHo by evening. The geographic variety within a single metro is remarkable.</p>
+          </article>
+          <article className={styles.card}>
+            <h3 className={styles.cardTitle}>A Food Scene That Rivals Anywhere</h3>
+            <p className={styles.cardBody}>Korean BBQ in Koreatown, Japanese in Little Tokyo, Mexican in Boyle Heights, and cutting-edge restaurants in Silver Lake and WeHo. LA's food culture is quietly one of the world's best.</p>
+          </article>
+          <article className={styles.card}>
+            <h3 className={styles.cardTitle}>Day Trips to World-Class Destinations</h3>
+            <p className={styles.cardBody}>Joshua Tree (2.5 hr), San Diego (2 hr), Santa Barbara (1.5 hr), Malibu (45 min), Big Bear (2 hr). LA is one of the best road-trip hubs in North America.</p>
+          </article>
+        </div>
+      </section>
+
+      {/* Top Attractions */}
+      <section className={styles.section} aria-labelledby="attractions-la">
+        <h2 id="attractions-la" className={styles.sectionTitle}>Top Attractions Worth Your Time</h2>
+        <p className={styles.sectionIntro}>What to prioritize, how long each actually takes, and the tips that matter.</p>
+        <div className={styles.grid}>
+          {attractions.map(({ name, blurb, href }) => (
+            <Link key={name} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
+              <h3 className={styles.cardTitle}>{name}</h3>
+              <p className={styles.cardBody}>{blurb}</p>
+            </Link>
+          ))}
+        </div>
+        <Link href="/destination/la/bookings?tab=activities" className={styles.seeAll}>See all things to do in Los Angeles →</Link>
+      </section>
+
+      {/* Neighborhoods */}
+      <section id="neighborhoods" className={`${styles.section} ${styles.altBg}`} aria-labelledby="neighborhoods-la">
+        <h2 id="neighborhoods-la" className={styles.sectionTitle}>LA Neighborhoods</h2>
+        <p className={styles.sectionIntro}>Where you stay in LA matters enormously — it's a sprawling city and the neighborhoods are genuinely different worlds.</p>
+        <div className={styles.grid}>
+          {neighborhoods.map(({ name, vibe, bestFor }) => (
+            <article key={name} className={styles.card}>
+              <h3 className={styles.cardTitle}>{name}</h3>
+              <p className={styles.cardBody}>{vibe}</p>
+              <p className={styles.cardMeta}>Best for: {bestFor}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Experiences */}
+      <section className={styles.section} aria-labelledby="experiences-la">
+        <h2 id="experiences-la" className={styles.sectionTitle}>What to Do in Los Angeles</h2>
+        <p className={styles.sectionIntro}>LA is far more than Hollywood. The four categories that shape most trips.</p>
+        <div className={styles.grid}>
+          {experiences.map(({ title, blurb }) => (
+            <article key={title} className={styles.card}>
+              <h3 className={styles.cardTitle}>{title}</h3>
+              <p className={styles.cardBody}>{blurb}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Where to Stay */}
+      <section className={`${styles.section} ${styles.altBg}`} aria-labelledby="hotels-la">
+        <h2 id="hotels-la" className={styles.sectionTitle}>Where to Stay in Los Angeles</h2>
+        <p className={styles.sectionIntro}>The Westside vs. Central LA trade-off defines most hotel decisions in LA.</p>
+        <div className={styles.grid}>
+          {whereToStay.map(({ title, description, href }) => (
+            <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
+              <h3 className={styles.cardTitle}>{title}</h3>
+              <p className={styles.cardBody}>{description}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Itineraries */}
+      <section className={styles.section} aria-labelledby="itineraries-la">
+        <h2 id="itineraries-la" className={styles.sectionTitle}>Sample Itineraries</h2>
+        <p className={styles.sectionIntro}>How to structure an LA trip given the city's size and traffic.</p>
+        <div className={styles.grid}>
+          {itineraries.map(({ title, description, href }) => (
+            <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
+              <h3 className={styles.cardTitle}>{title}</h3>
+              <p className={styles.cardBody}>{description}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Full booking CTA */}
+      <div className={styles.bookingStrip}>
+        <h2>Ready to book your Los Angeles trip?</h2>
+        <p>Compare cheap flights to LAX, browse LA hotels by neighborhood, and book activity tickets.</p>
+        <Link href="/destination/la/bookings?tab=flights" className={styles.bookingBtn} aria-label="Book LA trip">Compare flights, hotels &amp; tickets</Link>
+      </div>
+
+      <Footer />
+    </main>
+  );
+}

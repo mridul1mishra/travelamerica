@@ -34,6 +34,7 @@ const ROUTES: Entry[] = [
   { path: "/destination/nyc/booking",                                priority: 0.9, changeFrequency: "weekly" },
   // destination city hubs
   { path: "/destination/la",                                         priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/la/bookings",                                priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/lasvegas",                                   priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/lasvegas/bookings",                          priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/orlando",                                    priority: 0.9, changeFrequency: "weekly" },
