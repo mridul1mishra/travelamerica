@@ -82,19 +82,22 @@ export default function LAHubClient() {
       {/* Why LA */}
       <section className={styles.section} aria-labelledby="why-la">
         <h2 id="why-la" className={styles.sectionTitle}>Why Los Angeles Works for So Many Trips</h2>
-        <p className={styles.sectionIntro}>LA is genuinely different from most major cities — sprawling, diverse, and impossible to reduce to a single experience. That's what makes it worth understanding before you go.</p>
+        <p className={styles.sectionIntro}>Los Angeles attracts travelers with genuinely different goals — beach trips, film industry pilgrimages, food-focused itineraries, outdoor adventures — and still delivers for all of them. That's because LA isn't one city; it's a collection of distinct places that happen to share a metro area. Whether you're visiting for the first time or returning with a specific plan, understanding how it's built makes the difference between a frustrating trip and a great one.</p>
         <div className={styles.whyGrid}>
           <article className={styles.card}>
             <h3 className={styles.cardTitle}>Beaches, Mountains, and City in One Place</h3>
-            <p className={styles.cardBody}>You can surf at Santa Monica in the morning, hike the Santa Monica Mountains at noon, and be at a Michelin-starred restaurant in WeHo by evening. The geographic variety within a single metro is remarkable.</p>
+            <p className={styles.cardBody}>You can surf at Santa Monica in the morning, hike the Santa Monica Mountains at noon, and be at a Michelin-starred restaurant in WeHo by evening. Few cities anywhere in the world compress that range of environments into a single day.</p>
+            <p className={styles.cardBody}>The geographic variety also means you can tailor the trip to your energy. A beach-and-walks week looks completely different from a museums-and-dining trip — both are easy to build without leaving the metro.</p>
           </article>
           <article className={styles.card}>
             <h3 className={styles.cardTitle}>A Food Scene That Rivals Anywhere</h3>
-            <p className={styles.cardBody}>Korean BBQ in Koreatown, Japanese in Little Tokyo, Mexican in Boyle Heights, and cutting-edge restaurants in Silver Lake and WeHo. LA's food culture is quietly one of the world's best.</p>
+            <p className={styles.cardBody}>Korean BBQ in Koreatown, Japanese in Little Tokyo, Oaxacan in Koreatown, tacos in Boyle Heights, and cutting-edge tasting menus in Silver Lake and WeHo. LA's food culture is quietly one of the world's best — and significantly underrated compared to its reputation.</p>
+            <p className={styles.cardBody}>Grand Central Market alone is worth a dedicated visit. The diversity here isn't fusion or novelty — it's the real thing, driven by communities that have shaped the city for generations.</p>
           </article>
           <article className={styles.card}>
-            <h3 className={styles.cardTitle}>Day Trips to World-Class Destinations</h3>
-            <p className={styles.cardBody}>Joshua Tree (2.5 hr), San Diego (2 hr), Santa Barbara (1.5 hr), Malibu (45 min), Big Bear (2 hr). LA is one of the best road-trip hubs in North America.</p>
+            <h3 className={styles.cardTitle}>A Trip You Can Build Around Your Pace</h3>
+            <p className={styles.cardBody}>LA rewards both fast, agenda-driven trips and slower, neighborhood-level exploration. A focused four-day visit can hit Griffith Observatory, the Getty, Venice, and a studio tour without feeling rushed. A longer stay opens up the South Bay, day trips to Joshua Tree or Santa Barbara, and the quieter, more local side of Silver Lake or Eagle Rock.</p>
+            <p className={styles.cardBody}>Where most cities push you toward the same highlights, LA lets your choices — where you stay, how you get around, which neighborhoods you wander — define what the trip actually is. That flexibility is the city's real selling point.</p>
           </article>
         </div>
       </section>

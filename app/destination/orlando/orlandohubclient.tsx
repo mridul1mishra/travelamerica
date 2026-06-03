@@ -85,19 +85,22 @@ export default function OrlandoHubClient() {
       {/* Why Orlando */}
       <section className={styles.section} aria-labelledby="why-orlando">
         <h2 id="why-orlando" className={styles.sectionTitle}>Why Orlando Works for So Many Trips</h2>
-        <p className={styles.sectionIntro}>Orlando is the most-visited city in the United States. The reason is straightforward — it delivers more purpose-built entertainment per square mile than anywhere else on earth.</p>
+        <p className={styles.sectionIntro}>Orlando is the most-visited city in the United States — and the reason isn't just Disney. It's that the city is genuinely built around the visitor experience in a way almost no other destination is. Every major accommodation tier, every budget level, and nearly every travel style has something purpose-built for it here. Understanding how the city is laid out before you book makes a real difference in how smoothly the trip goes.</p>
         <div className={styles.whyGrid}>
           <article className={styles.card}>
             <h3 className={styles.cardTitle}>More Theme Parks Than Anywhere Else</h3>
-            <p className={styles.cardBody}>Disney World alone has 4 full parks. Add Universal's 2 parks, SeaWorld, Busch Gardens (90 min away), and several water parks — you could spend two weeks without repeating a park.</p>
+            <p className={styles.cardBody}>Disney World alone has 4 full parks — Magic Kingdom, EPCOT, Hollywood Studios, and Animal Kingdom. Add Universal's two parks, SeaWorld, Busch Gardens 90 minutes away, and multiple water parks, and you could spend two weeks without repeating a venue.</p>
+            <p className={styles.cardBody}>The competition between parks also keeps the experience quality high. Disney and Universal in particular have both invested heavily in immersive, world-class experiences that genuinely hold up for adult visitors, not just families with young children.</p>
           </article>
           <article className={styles.card}>
-            <h3 className={styles.cardTitle}>Year-Round Sunshine</h3>
-            <p className={styles.cardBody}>Florida averages 233 sunny days per year. The only real consideration is summer humidity and afternoon storms — which are predictable and usually short.</p>
+            <h3 className={styles.cardTitle}>Year-Round Sunshine With a Predictable Pattern</h3>
+            <p className={styles.cardBody}>Florida averages 233 sunny days a year. Summer brings humidity and afternoon thunderstorms — but they're consistent and usually short, clearing by evening. The real consideration is crowd levels, not weather: January through early March and September through November offer the best combination of manageable lines and comfortable temperatures.</p>
+            <p className={styles.cardBody}>For water parks and outdoor days, morning arrivals beat the heat and the afternoon storm window. The parks run efficiently enough that even summer trips work well if you plan around the rhythm.</p>
           </article>
           <article className={styles.card}>
-            <h3 className={styles.cardTitle}>More Than Theme Parks</h3>
-            <p className={styles.cardBody}>Kennedy Space Center, natural springs, Gulf Coast beaches, and the Florida Everglades are all within 90 minutes. Orlando is a better road-trip hub than most visitors realize.</p>
+            <h3 className={styles.cardTitle}>A Better Road-Trip Hub Than It Looks</h3>
+            <p className={styles.cardBody}>Kennedy Space Center (45 min), Canaveral National Seashore, Florida's natural springs — Wekiva, Blue Spring, Silver Springs — Gulf Coast beaches at St. Pete and Clearwater (90 min), and the Everglades (3 hr) are all day-trip distance. Most visitors don't realize how much of Florida is accessible from Orlando.</p>
+            <p className={styles.cardBody}>A well-planned trip can combine 3–4 days of parks with 1–2 day trips and feel like a genuinely varied Florida experience — not just a theme park marathon.</p>
           </article>
         </div>
       </section>

@@ -85,19 +85,22 @@ export default function LasVegasHubClient() {
       {/* Why Las Vegas */}
       <section className={`${styles.section} ${styles.altBg}`} aria-labelledby="why-lv">
         <h2 id="why-lv" className={styles.sectionTitle}>Why Las Vegas Works for So Many Trips</h2>
-        <p className={styles.sectionIntro}>Vegas is one of the few cities that genuinely works for every type of traveler — you just have to plan for the version you actually want.</p>
+        <p className={styles.sectionIntro}>Las Vegas works for an unusually wide range of travelers — couples, solo visitors, groups, people who gamble and people who never touch a table. The city is purpose-built for entertainment at scale, which means the infrastructure is excellent and nearly everything is designed to be easy. The key is deciding which version of Vegas you actually want before you arrive, because the trip you plan around the Strip is very different from the one built around day trips or shows.</p>
         <div className={styles.whyGrid}>
           <article className={styles.card}>
-            <h3 className={styles.cardTitle}>Everything is Walkable from the Strip</h3>
-            <p className={styles.cardBody}>The 4-mile Las Vegas Boulevard puts dozens of casino-resorts, restaurants, and entertainment venues within walking distance. Most visitors spend 80% of their trip in a 10-block radius.</p>
+            <h3 className={styles.cardTitle}>Everything Concentrated on the Strip</h3>
+            <p className={styles.cardBody}>The 4-mile Las Vegas Boulevard puts dozens of casino-resorts, restaurants, bars, pools, and entertainment venues within walking distance of each other. Most visitors spend the majority of their trip in a roughly 10-block radius — which makes it one of the most self-contained travel experiences in the world.</p>
+            <p className={styles.cardBody}>The walkability is deceptive in one direction though: blocks are long and casino floors add time. Budget more time than you think to get between properties, especially mid-Strip on busy weekend evenings.</p>
           </article>
           <article className={styles.card}>
             <h3 className={styles.cardTitle}>World-Class Shows and Dining</h3>
-            <p className={styles.cardBody}>Residency concerts, Cirque du Soleil, comedy, magic, and every major celebrity chef — Vegas has more live entertainment per square mile than almost anywhere else.</p>
+            <p className={styles.cardBody}>Residency concerts, multiple Cirque du Soleil productions, comedy clubs, magic shows, and boxing — Vegas has more live entertainment per square mile than almost anywhere on earth. Shows sell out weeks ahead; booking early is standard practice, not optional.</p>
+            <p className={styles.cardBody}>Dining has genuinely elevated over the past decade. Gordon Ramsay, José Andrés, Joël Robuchon, and nearly every major chef have restaurants on the Strip. The range spans $15 casual to $300+ tasting menus — and the quality at the top end is real.</p>
           </article>
           <article className={styles.card}>
-            <h3 className={styles.cardTitle}>Day Trips to Natural Wonders</h3>
-            <p className={styles.cardBody}>Hoover Dam, Valley of Fire, Red Rock Canyon, and Grand Canyon West are all within 2.5 hours. Vegas is one of the best hubs for Southwest US road trips.</p>
+            <h3 className={styles.cardTitle}>An Underrated Base for the Southwest</h3>
+            <p className={styles.cardBody}>Hoover Dam (30 min), Valley of Fire State Park (1 hr), Red Rock Canyon (30 min), and Grand Canyon West Rim (2.5 hr) are all day-trip distance. Zion National Park is 2.5 hours northeast. Most visitors don't realize how much of the Southwest is accessible without a long drive.</p>
+            <p className={styles.cardBody}>A 4–5 day Vegas trip that mixes two or three day trips with Strip time is one of the best-value travel itineraries in the country — especially if you rent a car for day-trip days and use rideshares on the Strip nights.</p>
           </article>
         </div>
       </section>
