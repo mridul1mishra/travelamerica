@@ -59,7 +59,7 @@ const guides = [
 
 export default function LasVegasHubClient() {
   return (
-    <main>
+    <main className={styles.container}>
       <Header links={navLinks} />
 
       {/* Hero */}
@@ -83,31 +83,35 @@ export default function LasVegasHubClient() {
       <LasVegasPlanningQuiz />
 
       {/* Why Las Vegas */}
-      <section className={`${styles.section} ${styles.altBg}`} aria-labelledby="why-lv">
-        <h2 id="why-lv" className={styles.sectionTitle}>Why Las Vegas Works for So Many Trips</h2>
-        <p className={styles.sectionIntro}>Las Vegas works for an unusually wide range of travelers — couples, solo visitors, groups, people who gamble and people who never touch a table. The city is purpose-built for entertainment at scale, which means the infrastructure is excellent and nearly everything is designed to be easy. The key is deciding which version of Vegas you actually want before you arrive, because the trip you plan around the Strip is very different from the one built around day trips or shows.</p>
-        <div className={styles.whyGrid}>
-          <article className={styles.card}>
-            <h3 className={styles.cardTitle}>Everything Concentrated on the Strip</h3>
-            <p className={styles.cardBody}>The 4-mile Las Vegas Boulevard puts dozens of casino-resorts, restaurants, bars, pools, and entertainment venues within walking distance of each other. Most visitors spend the majority of their trip in a roughly 10-block radius — which makes it one of the most self-contained travel experiences in the world.</p>
-            <p className={styles.cardBody}>The walkability is deceptive in one direction though: blocks are long and casino floors add time. Budget more time than you think to get between properties, especially mid-Strip on busy weekend evenings.</p>
-          </article>
-          <article className={styles.card}>
-            <h3 className={styles.cardTitle}>World-Class Shows and Dining</h3>
-            <p className={styles.cardBody}>Residency concerts, multiple Cirque du Soleil productions, comedy clubs, magic shows, and boxing — Vegas has more live entertainment per square mile than almost anywhere on earth. Shows sell out weeks ahead; booking early is standard practice, not optional.</p>
-            <p className={styles.cardBody}>Dining has genuinely elevated over the past decade. Gordon Ramsay, José Andrés, Joël Robuchon, and nearly every major chef have restaurants on the Strip. The range spans $15 casual to $300+ tasting menus — and the quality at the top end is real.</p>
-          </article>
-          <article className={styles.card}>
-            <h3 className={styles.cardTitle}>An Underrated Base for the Southwest</h3>
-            <p className={styles.cardBody}>Hoover Dam (30 min), Valley of Fire State Park (1 hr), Red Rock Canyon (30 min), and Grand Canyon West Rim (2.5 hr) are all day-trip distance. Zion National Park is 2.5 hours northeast. Most visitors don't realize how much of the Southwest is accessible without a long drive.</p>
-            <p className={styles.cardBody}>A 4–5 day Vegas trip that mixes two or three day trips with Strip time is one of the best-value travel itineraries in the country — especially if you rent a car for day-trip days and use rideshares on the Strip nights.</p>
-          </article>
+      <section aria-labelledby="why-lv" style={{ background: "#ffffff" }}>
+        <div style={{ maxWidth: "960px", margin: "0 auto" }}>
+          <h2 id="why-lv">Why Las Vegas Works for So Many Trips</h2>
+          <p style={{ fontSize: "1rem", lineHeight: "1.6", color: "#444" }}>
+            Las Vegas works for an unusually wide range of travelers — couples, solo visitors, groups, people who gamble and people who never touch a table. The key is deciding which version of Vegas you actually want before you arrive.
+          </p>
+          <div className={styles.whyGrid} style={{ gap: "1.5rem" }}>
+            <article style={{ borderRadius: "0.75rem", border: "1px solid #e5e5e5", padding: "1.25rem 1.5rem", background: "#fafafa" }}>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1.1rem" }}>Everything Concentrated on the Strip</h3>
+              <p style={{ fontSize: "0.95rem", lineHeight: "1.6", color: "#444", margin: "0 0 0.5rem" }}>The 4-mile Las Vegas Boulevard puts dozens of casino-resorts, restaurants, bars, pools, and entertainment venues within walking distance. Most visitors spend the majority of their trip in a roughly 10-block radius.</p>
+              <p style={{ fontSize: "0.95rem", lineHeight: "1.6", color: "#444", margin: 0 }}>The walkability is deceptive though — blocks are long and casino floors add time. Budget more time than you think to get between properties, especially mid-Strip on busy weekend evenings.</p>
+            </article>
+            <article style={{ borderRadius: "0.75rem", border: "1px solid #e5e5e5", padding: "1.25rem 1.5rem", background: "#fafafa" }}>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1.1rem" }}>World-Class Shows and Dining</h3>
+              <p style={{ fontSize: "0.95rem", lineHeight: "1.6", color: "#444", margin: "0 0 0.5rem" }}>Residency concerts, multiple Cirque du Soleil productions, comedy clubs, magic shows, and boxing — Vegas has more live entertainment per square mile than almost anywhere on earth. Shows sell out weeks ahead; booking early is standard practice, not optional.</p>
+              <p style={{ fontSize: "0.95rem", lineHeight: "1.6", color: "#444", margin: 0 }}>Dining has genuinely elevated over the past decade. Gordon Ramsay, José Andrés, Joël Robuchon, and nearly every major chef have restaurants on the Strip — ranging from $15 casual to $300+ tasting menus.</p>
+            </article>
+            <article style={{ borderRadius: "0.75rem", border: "1px solid #e5e5e5", padding: "1.25rem 1.5rem", background: "#fafafa" }}>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1.1rem" }}>An Underrated Base for the Southwest</h3>
+              <p style={{ fontSize: "0.95rem", lineHeight: "1.6", color: "#444", margin: "0 0 0.5rem" }}>Hoover Dam (30 min), Valley of Fire State Park (1 hr), Red Rock Canyon (30 min), and Grand Canyon West Rim (2.5 hr) are all day-trip distance. Zion National Park is 2.5 hours northeast.</p>
+              <p style={{ fontSize: "0.95rem", lineHeight: "1.6", color: "#444", margin: 0 }}>A 4–5 day Vegas trip that mixes two or three day trips with Strip time is one of the best-value travel itineraries in the country — especially if you rent a car for day-trip days and use rideshares on the Strip nights.</p>
+            </article>
+          </div>
         </div>
       </section>
 
       {/* Top Attractions */}
-      <section className={styles.section} aria-labelledby="attractions-lv">
-        <h2 id="attractions-lv" className={styles.sectionTitle}>Top Attractions Worth Your Time</h2>
+      <section aria-labelledby="attractions-lv">
+        <h2 id="attractions-lv">Top Attractions Worth Your Time</h2>
         <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
           6 Las Vegas attractions with practical tips and what to know before you go.
         </p>
@@ -125,44 +129,53 @@ export default function LasVegasHubClient() {
       </section>
 
       {/* Neighborhoods */}
-      <section id="neighborhoods" className={`${styles.section} ${styles.altBg}`} aria-labelledby="neighborhoods-lv">
-        <h2 id="neighborhoods-lv" className={styles.sectionTitle}>Las Vegas Neighborhoods</h2>
-        <p className={styles.sectionIntro}>Where you stay determines how you experience Vegas. The Strip and Downtown are very different trips.</p>
+      <section id="neighborhoods" aria-labelledby="neighborhoods-lv" style={{ textAlign: "center" }}>
+        <h2 id="neighborhoods-lv">Las Vegas Neighborhoods</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
+          Where you stay determines how you experience Vegas. The Strip and Downtown are very different trips. Five areas, who they suit, and why.
+        </p>
         <div className={styles.grid}>
           {neighborhoods.map(({ name, vibe, bestFor }) => (
             <Link key={name} href="/destination/lasvegas/neighborhood-guide" className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-              <h3 className={styles.cardTitle}>{name}</h3>
-              <p className={styles.cardBody}>{vibe}</p>
-              <p className={styles.cardMeta}>Best for: {bestFor}</p>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{name}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: "0 0 0.5rem" }}>{vibe}</p>
+              <p style={{ color: "#333", fontSize: "0.85rem", margin: 0 }}><strong>Best for:</strong> {bestFor}</p>
             </Link>
           ))}
         </div>
-        <Link href="/destination/lasvegas/neighborhood-guide" className={styles.seeAll}>Compare all Vegas areas →</Link>
+        <div style={{ textAlign: "center", marginTop: "1rem" }}>
+          <Link href="/destination/lasvegas/neighborhood-guide" style={{ color: "#000", fontWeight: 500, textDecoration: "underline" }}>Full neighborhood guide →</Link>
+        </div>
       </section>
 
       {/* Experiences */}
-      <section className={styles.section} aria-labelledby="experiences-lv">
-        <h2 id="experiences-lv" className={styles.sectionTitle}>What to Do in Las Vegas</h2>
-        <p className={styles.sectionIntro}>Vegas is much more than casinos. Here are the four categories that shape most trips.</p>
+      <section aria-labelledby="experiences-lv">
+        <h2 id="experiences-lv">Things to Do in Las Vegas</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
+          What you want to do shapes where you should stay. The four categories that define most Vegas trips.
+        </p>
         <div className={styles.grid}>
           {experiences.map(({ title, blurb, href }) => (
             <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{blurb}</p>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{blurb}</p>
             </Link>
           ))}
+        </div>
+        <div style={{ textAlign: "center", marginTop: "1rem" }}>
+          <Link href="/destination/lasvegas/things-to-do" style={{ color: "#000", fontWeight: 500, textDecoration: "underline" }}>See all things to do in Las Vegas</Link>
         </div>
       </section>
 
       {/* Where to Stay */}
-      <section className={`${styles.section} ${styles.altBg}`} aria-labelledby="wheretostay-lv">
-        <h2 id="wheretostay-lv" className={styles.sectionTitle}>Where to Stay in Las Vegas</h2>
+      <section aria-labelledby="wheretostay-lv">
+        <h2 id="wheretostay-lv">Where to Stay in Las Vegas</h2>
         <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
-          Hotel location defines the Vegas trip more than almost any other decision. Mid-Strip puts everything in walking distance; Downtown offers lower prices and a different atmosphere. The right choice depends entirely on what you're there to do.
+          Hotel location defines the Vegas trip more than almost any other decision. Mid-Strip puts everything in walking distance; Downtown offers lower prices and a different atmosphere.
         </p>
         <div className={styles.grid}>
           {whereToStay.map(({ title, description, href }) => (
-            <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block", textAlign: "center" }}>
+            <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
               <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
               <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{description}</p>
             </Link>
@@ -171,35 +184,41 @@ export default function LasVegasHubClient() {
       </section>
 
       {/* Itineraries */}
-      <section className={styles.section} aria-labelledby="itineraries-lv">
-        <h2 id="itineraries-lv" className={styles.sectionTitle}>Sample Itineraries</h2>
-        <p className={styles.sectionIntro}>How to structure a Vegas trip so you actually see and do the things that matter.</p>
+      <section aria-labelledby="itineraries-lv">
+        <h2 id="itineraries-lv">Sample Itineraries</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
+          Not sure how to structure your days? These itineraries show how to pace a Vegas trip so you see and do the things that actually matter.
+        </p>
         <div className={styles.grid}>
           {itineraries.map(({ title, description, href }) => (
             <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{description}</p>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{description}</p>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* Bookmark guides block */}
-      <section className={styles.section} aria-labelledby="guides-lv">
-        <h2 id="guides-lv" className={styles.sectionTitle}>Coming Back to Plan?</h2>
-        <p className={styles.sectionIntro}>Bookmark these guides — they&apos;re updated as Las Vegas changes.</p>
-        <div className={styles.bookmarkGrid}>
+      {/* Guides */}
+      <section aria-labelledby="guides-lv" className={styles.highlight}>
+        <h2 id="guides-lv">Coming Back to Plan?</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
+          Bookmark these guides — they&apos;re updated as Las Vegas changes.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "0.75rem", maxWidth: 720, margin: "0 auto" }}>
           {guides.map(({ title, href }) => (
-            <Link key={href} href={href} className={styles.bookmarkLink}>{title}</Link>
+            <Link key={href} href={href} style={{ display: "block", padding: "1rem 1.25rem", border: "1px solid #e2e8f0", borderRadius: 8, background: "#fff", textDecoration: "none", color: "#0364A0", fontWeight: 600, fontSize: "0.95rem", textAlign: "center" }}>{title}</Link>
           ))}
         </div>
       </section>
 
       {/* Full booking CTA */}
       <div className={styles.bookingStrip}>
-        <h2>Ready to book your Las Vegas trip?</h2>
-        <p>Compare cheap flights to LAS, browse Strip hotels, and book tickets for shows and attractions.</p>
-        <Link href="/destination/lasvegas/bookings?tab=flights" className={styles.bookingBtn} aria-label="Book Las Vegas trip">Compare flights, hotels &amp; tickets</Link>
+        <div className={styles.bookingInner}>
+          <h2>Ready to book your Las Vegas trip?</h2>
+          <p>Compare cheap flights to LAS, browse Strip hotels, and book tickets for shows and attractions.</p>
+          <Link href="/destination/lasvegas/bookings?tab=flights" className={styles.bookingBtn} aria-label="Book Las Vegas trip">Compare flights, hotels &amp; tickets</Link>
+        </div>
       </div>
 
       <Footer />

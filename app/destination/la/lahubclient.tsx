@@ -56,7 +56,7 @@ const guides = [
 
 export default function LAHubClient() {
   return (
-    <main>
+    <main className={styles.container}>
       <Header links={navLinks} />
 
       {/* Hero */}
@@ -80,31 +80,33 @@ export default function LAHubClient() {
       <LAPlanningQuiz />
 
       {/* Why LA */}
-      <section className={styles.section} aria-labelledby="why-la">
-        <h2 id="why-la" className={styles.sectionTitle}>Why Los Angeles Works for So Many Trips</h2>
-        <p className={styles.sectionIntro}>Los Angeles attracts travelers with genuinely different goals — beach trips, film industry pilgrimages, food-focused itineraries, outdoor adventures — and still delivers for all of them. That's because LA isn't one city; it's a collection of distinct places that happen to share a metro area. Whether you're visiting for the first time or returning with a specific plan, understanding how it's built makes the difference between a frustrating trip and a great one.</p>
-        <div className={styles.whyGrid}>
-          <article className={styles.card}>
-            <h3 className={styles.cardTitle}>Beaches, Mountains, and City in One Place</h3>
-            <p className={styles.cardBody}>You can surf at Santa Monica in the morning, hike the Santa Monica Mountains at noon, and be at a Michelin-starred restaurant in WeHo by evening. Few cities anywhere in the world compress that range of environments into a single day.</p>
-            <p className={styles.cardBody}>The geographic variety also means you can tailor the trip to your energy. A beach-and-walks week looks completely different from a museums-and-dining trip — both are easy to build without leaving the metro.</p>
-          </article>
-          <article className={styles.card}>
-            <h3 className={styles.cardTitle}>A Food Scene That Rivals Anywhere</h3>
-            <p className={styles.cardBody}>Korean BBQ in Koreatown, Japanese in Little Tokyo, Oaxacan in Koreatown, tacos in Boyle Heights, and cutting-edge tasting menus in Silver Lake and WeHo. LA's food culture is quietly one of the world's best — and significantly underrated compared to its reputation.</p>
-            <p className={styles.cardBody}>Grand Central Market alone is worth a dedicated visit. The diversity here isn't fusion or novelty — it's the real thing, driven by communities that have shaped the city for generations.</p>
-          </article>
-          <article className={styles.card}>
-            <h3 className={styles.cardTitle}>A Trip You Can Build Around Your Pace</h3>
-            <p className={styles.cardBody}>LA rewards both fast, agenda-driven trips and slower, neighborhood-level exploration. A focused four-day visit can hit Griffith Observatory, the Getty, Venice, and a studio tour without feeling rushed. A longer stay opens up the South Bay, day trips to Joshua Tree or Santa Barbara, and the quieter, more local side of Silver Lake or Eagle Rock.</p>
-            <p className={styles.cardBody}>Where most cities push you toward the same highlights, LA lets your choices — where you stay, how you get around, which neighborhoods you wander — define what the trip actually is. That flexibility is the city's real selling point.</p>
-          </article>
+      <section aria-labelledby="why-la" style={{ background: "#ffffff" }}>
+        <div style={{ maxWidth: "960px", margin: "0 auto" }}>
+          <h2 id="why-la">Why Los Angeles Works for So Many Trips</h2>
+          <p style={{ fontSize: "1rem", lineHeight: "1.6", color: "#444" }}>
+            Los Angeles attracts travelers with genuinely different goals — beach trips, film industry pilgrimages, food-focused itineraries, outdoor adventures — and still delivers for all of them. That's because LA isn't one city; it's a collection of distinct places that happen to share a metro area.
+          </p>
+          <div className={styles.whyGrid} style={{ gap: "1.5rem" }}>
+            <article style={{ borderRadius: "0.75rem", border: "1px solid #e5e5e5", padding: "1.25rem 1.5rem", background: "#fafafa" }}>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1.1rem" }}>Beaches, Mountains, and City in One Place</h3>
+              <p style={{ fontSize: "0.95rem", lineHeight: "1.6", color: "#444", margin: 0 }}>You can surf at Santa Monica in the morning, hike the Santa Monica Mountains at noon, and be at a Michelin-starred restaurant in WeHo by evening. Few cities compress that range of environments into a single day.</p>
+            </article>
+            <article style={{ borderRadius: "0.75rem", border: "1px solid #e5e5e5", padding: "1.25rem 1.5rem", background: "#fafafa" }}>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1.1rem" }}>A Food Scene That Rivals Anywhere</h3>
+              <p style={{ fontSize: "0.95rem", lineHeight: "1.6", color: "#444", margin: 0 }}>Korean BBQ in Koreatown, Japanese in Little Tokyo, tacos in Boyle Heights, and cutting-edge tasting menus in Silver Lake and WeHo. LA's food culture is quietly one of the world's best.</p>
+            </article>
+            <article style={{ borderRadius: "0.75rem", border: "1px solid #e5e5e5", padding: "1.25rem 1.5rem", background: "#fafafa" }}>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1.1rem" }}>A Trip You Can Build Around Your Pace</h3>
+              <p style={{ fontSize: "0.95rem", lineHeight: "1.6", color: "#444", margin: "0 0 0.5rem" }}>A focused four-day visit can hit Griffith Observatory, the Getty, Venice, and a studio tour without feeling rushed. A longer stay opens up day trips to Joshua Tree or Santa Barbara.</p>
+              <p style={{ fontSize: "0.95rem", lineHeight: "1.6", color: "#444", margin: 0 }}>Where you stay, how you get around, which neighborhoods you wander — your choices define what the trip actually is. That flexibility is LA's real selling point.</p>
+            </article>
+          </div>
         </div>
       </section>
 
       {/* Top Attractions */}
-      <section className={`${styles.section} ${styles.altBg}`} aria-labelledby="attractions-la">
-        <h2 id="attractions-la" className={styles.sectionTitle}>Top Attractions Worth Your Time</h2>
+      <section aria-labelledby="attractions-la">
+        <h2 id="attractions-la">Top Attractions Worth Your Time</h2>
         <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
           6 LA landmarks with practical tips, realistic time estimates, and what to know before you go.
         </p>
@@ -117,49 +119,64 @@ export default function LAHubClient() {
           ))}
         </div>
         <div style={{ textAlign: "center", marginTop: "1rem" }}>
-          <Link href="/destination/la/landmark" style={{ color: "#000", fontWeight: 500, textDecoration: "underline" }}>See all LA landmarks with full details →</Link>
+          <Link href="/destination/la/landmark" style={{ color: "#000", fontWeight: 500, textDecoration: "underline" }}>
+            See all LA landmarks with full details →
+          </Link>
         </div>
       </section>
 
       {/* Neighborhoods */}
-      <section id="neighborhoods" className={styles.section} aria-labelledby="neighborhoods-la">
-        <h2 id="neighborhoods-la" className={styles.sectionTitle}>LA Neighborhoods</h2>
-        <p className={styles.sectionIntro}>Where you stay in LA matters enormously — it's a sprawling city and the neighborhoods are genuinely different worlds.</p>
+      <section id="neighborhoods" aria-labelledby="neighborhoods-la" style={{ textAlign: "center" }}>
+        <h2 id="neighborhoods-la">LA Neighborhoods</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
+          Where you stay in LA matters enormously — it's a sprawling city and the neighborhoods are genuinely different worlds. Six areas, who they suit, and why.
+        </p>
         <div className={styles.grid}>
           {neighborhoods.map(({ name, vibe, bestFor }) => (
             <Link key={name} href="/destination/la/neighborhood-guide" className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-              <h3 className={styles.cardTitle}>{name}</h3>
-              <p className={styles.cardBody}>{vibe}</p>
-              <p className={styles.cardMeta}>Best for: {bestFor}</p>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{name}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: "0 0 0.5rem" }}>{vibe}</p>
+              <p style={{ color: "#333", fontSize: "0.85rem", margin: 0 }}><strong>Best for:</strong> {bestFor}</p>
             </Link>
           ))}
         </div>
-        <Link href="/destination/la/neighborhood-guide" className={styles.seeAll}>Compare all LA neighborhoods →</Link>
+        <div style={{ textAlign: "center", marginTop: "1rem" }}>
+          <Link href="/destination/la/neighborhood-guide" style={{ color: "#000", fontWeight: 500, textDecoration: "underline" }}>
+            Full neighborhood guide with maps →
+          </Link>
+        </div>
       </section>
 
       {/* Experiences */}
-      <section className={`${styles.section} ${styles.altBg}`} aria-labelledby="experiences-la">
-        <h2 id="experiences-la" className={styles.sectionTitle}>What to Do in Los Angeles</h2>
-        <p className={styles.sectionIntro}>LA is far more than Hollywood. The four categories that shape most trips.</p>
+      <section aria-labelledby="experiences-la">
+        <h2 id="experiences-la">Things to Do in Los Angeles</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
+          What you want to do shapes where you should stay. The four categories that define most LA trips.
+        </p>
         <div className={styles.grid}>
           {experiences.map(({ title, blurb, href }) => (
             <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{blurb}</p>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{blurb}</p>
             </Link>
           ))}
+        </div>
+        <div style={{ textAlign: "center", marginTop: "1rem" }}>
+          <Link href="/destination/la/things-to-do" style={{ color: "#000", fontWeight: 500, textDecoration: "underline" }}>
+            See all things to do in Los Angeles
+          </Link>
         </div>
       </section>
 
       {/* Where to Stay */}
-      <section className={styles.section} aria-labelledby="hotels-la">
-        <h2 id="hotels-la" className={styles.sectionTitle}>Where to Stay in Los Angeles</h2>
+      <section aria-labelledby="hotels-la">
+        <h2 id="hotels-la">Where to Stay in Los Angeles</h2>
         <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
           Choosing the right area matters more in LA than almost any city — it's sprawling, car-dependent, and neighborhoods feel like different cities. The Westside suits first-timers; Central LA offers better value and location.
         </p>
         <div className={styles.grid}>
           {whereToStay.map(({ title, description, href }) => (
-            <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block", textAlign: "center" }}>
+            <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
               <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
               <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{description}</p>
             </Link>
@@ -168,35 +185,41 @@ export default function LAHubClient() {
       </section>
 
       {/* Itineraries */}
-      <section className={`${styles.section} ${styles.altBg}`} aria-labelledby="itineraries-la">
-        <h2 id="itineraries-la" className={styles.sectionTitle}>Sample Itineraries</h2>
-        <p className={styles.sectionIntro}>How to structure an LA trip given the city's size and traffic.</p>
+      <section aria-labelledby="itineraries-la">
+        <h2 id="itineraries-la">Sample Itineraries</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
+          Not sure how to structure your days? These itineraries show how to pace an LA trip given the city's size and traffic.
+        </p>
         <div className={styles.grid}>
           {itineraries.map(({ title, description, href }) => (
             <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{description}</p>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{description}</p>
             </Link>
           ))}
         </div>
       </section>
 
       {/* Guides / bookmark block */}
-      <section className={styles.section} aria-labelledby="guides-la">
-        <h2 id="guides-la" className={styles.sectionTitle}>Coming Back to Plan?</h2>
-        <p className={styles.sectionIntro}>Bookmark these guides — they&apos;re updated as LA changes.</p>
-        <div className={styles.bookmarkGrid}>
+      <section aria-labelledby="guides-la" className={styles.highlight}>
+        <h2 id="guides-la">Coming Back to Plan?</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
+          Bookmark these guides — they&apos;re updated as LA changes.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "0.75rem", maxWidth: 720, margin: "0 auto" }}>
           {guides.map(({ title, href }) => (
-            <Link key={href} href={href} className={styles.bookmarkLink}>{title}</Link>
+            <Link key={href} href={href} style={{ display: "block", padding: "1rem 1.25rem", border: "1px solid #e2e8f0", borderRadius: 8, background: "#fff", textDecoration: "none", color: "#0364A0", fontWeight: 600, fontSize: "0.95rem", textAlign: "center" }}>{title}</Link>
           ))}
         </div>
       </section>
 
       {/* Full booking CTA */}
       <div className={styles.bookingStrip}>
-        <h2>Ready to book your Los Angeles trip?</h2>
-        <p>Compare cheap flights to LAX, browse LA hotels by neighborhood, and book activity tickets.</p>
-        <Link href="/destination/la/bookings?tab=flights" className={styles.bookingBtn} aria-label="Book LA trip">Compare flights, hotels &amp; tickets</Link>
+        <div className={styles.bookingInner}>
+          <h2>Ready to book your Los Angeles trip?</h2>
+          <p>Compare cheap flights to LAX, browse LA hotels by neighborhood, and book activity tickets.</p>
+          <Link href="/destination/la/bookings?tab=flights" className={styles.bookingBtn} aria-label="Book LA trip">Compare flights, hotels &amp; tickets</Link>
+        </div>
       </div>
 
       <Footer />
