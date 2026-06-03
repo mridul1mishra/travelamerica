@@ -402,4 +402,9 @@ export default function LasVegasBookingsClient() {
                 </ul>
               </div>
             ))}
-          
+                  </div>
+        </div>
+      </section>
+    </div>
+  );
+}

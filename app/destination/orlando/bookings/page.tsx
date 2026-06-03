@@ -46,4 +46,22 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       "position": 3,
-   
+       "name": "Book your trip",
+      "item": "https://www.travelsamericas.com/destination/orlando/bookings",
+    },
+  ],
+};
+
+export default function OrlandoBookingsPage() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <OrlandoBookingsClient />
+      </Suspense>
+    </>
+  );
+}

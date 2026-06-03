@@ -1,10 +1,4 @@
-import type { NextConfig } from "next";
 import bundleAnalyzer from "@next/bundle-analyzer";
-
-// Previously this file had both a CommonJS `module.exports = withBundleAnalyzer(...)`
-// block AND an ESM `export default withBundleAnalyzer(nextConfig)`. Next loaded the
-// ESM one, so the headers() function below was the live config, but the CJS block
-// was confusing and double-wrapped the analyzer. ESM-only now.
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
@@ -62,7 +56,7 @@ const csp = `
 // /destination/nyc/*) live in vercel.json, which is the single source of
 // truth for redirects on this project. Don't add a redirects() here too —
 // duplicating across both files causes confusion.
-const nextConfig: NextConfig = {
+const nextConfig = {
   reactStrictMode: true,
   async headers() {
     return [

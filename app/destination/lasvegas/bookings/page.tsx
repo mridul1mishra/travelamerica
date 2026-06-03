@@ -45,4 +45,23 @@ const breadcrumbSchema = {
     },
     {
       "@type": "ListItem",
-      "position": 
+      "position": 3,
+      "name": "Book your trip",
+      "item": "https://www.travelsamericas.com/destination/lasvegas/bookings",
+    },
+  ],
+};
+
+export default function LasVegasBookingsPage() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LasVegasBookingsClient />
+      </Suspense>
+    </>
+  );
+}

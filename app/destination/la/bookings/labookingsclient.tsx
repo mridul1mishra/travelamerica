@@ -234,4 +234,9 @@ export default function LABookingsClient() {
                 </ul>
               </div>
             ))}
-        
+                </div>
+        </div>
+      </section>
+    </div>
+  );
+}

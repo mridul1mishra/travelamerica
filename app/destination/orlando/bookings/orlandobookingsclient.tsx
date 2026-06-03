@@ -402,4 +402,9 @@ export default function OrlandoBookingsClient() {
                 </ul>
               </div>
             ))}
-          </
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
