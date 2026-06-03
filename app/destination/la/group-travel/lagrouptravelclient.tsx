@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const groupTips = [
@@ -15,12 +15,13 @@ const groupTips = [
 
 export default function LAGroupTravelClient() {
   return (
-    <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Los Angeles Group Travel Guide" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book group tickets, tours and accommodations →</span>
-        <Link href="/destination/la/bookings?tab=activities" className={styles.slimCtaBtn}>Book group activities</Link>
-      </div>
+    <main className={styles.container}>
+      <Header links={[
+        { href: "/destination/la/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/la/solo-trip-to-la", label: "Solo Trip to LA" },
+        { href: "/destination/la/safety-guide", label: "LA Safety" },
+        { href: "/destination/la/la-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Los Angeles Group Travel Guide</h1>
         <p>LA works well for groups — if you plan the logistics. A car-dependent city with no reliable transit means coordination matters. This guide covers transport, accommodation, and the group activities that actually work.</p>
@@ -29,23 +30,31 @@ export default function LAGroupTravelClient() {
           <Link href="/destination/la/itinerary" className={styles.secondaryCta}>See LA itinerary</Link>
         </div>
       </section>
-      <section className={styles.section} aria-labelledby="group-tips-la">
-        <h2 id="group-tips-la" className={styles.sectionTitle}>Planning a Group Trip to LA</h2>
-        <p className={styles.sectionIntro}>Six areas that make or break a group LA trip — covered honestly.</p>
+      <BookingCTA
+        variant="slim"
+        text="Book group tickets, tours and accommodations →"
+        href="/destination/la/bookings?tab=activities"
+        label="Book group activities"
+      />
+      <section aria-labelledby="group-tips-la">
+        <h2 id="group-tips-la">Planning a Group Trip to LA</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>Six areas that make or break a group LA trip — covered honestly.</p>
         <div className={styles.grid}>
           {groupTips.map(({ title, blurb }) => (
             <article key={title} className={styles.card}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{blurb}</p>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{blurb}</p>
             </article>
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Book your LA group trip</h2>
-        <p>Group hotel blocks, bulk activity tickets, and charter transport — all in one place.</p>
-        <Link href="/destination/la/bookings" className={styles.bookingBtn}>Book group travel</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book your LA group trip"
+        text="Group hotel blocks, bulk activity tickets, and charter transport — all in one place."
+        href="/destination/la/bookings"
+        label="Book group travel"
+      />
       <Footer />
     </main>
   );

@@ -2,7 +2,7 @@
 
 import React, { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import Header from "../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import "@/app/components/majorcities/flightsection/propertylisting.css";
 import styles from "@/app/destination/nyc/booking/booking.module.css";
@@ -87,10 +87,12 @@ function OrlandoClientInner() {
 
   return (
     <div className="App">
-      <Header
-        image="/data/majorcities/orlando/assets/orlando.webp"
-        bannerText="Book your Orlando trip"
-      />
+      <Header links={[
+        { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
+        { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
+        { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
 
       <script
         type="application/ld+json"

@@ -1,7 +1,11 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import cityWhyTrustData from "@/content/destination/orlando/is-orlando-safe-at-night/whyTrustItems/whyTrustItems.json";
+import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
+import cityFaqData from "@/content/destination/orlando/is-orlando-safe-at-night/faq/faqsection.json";
 import styles from "@/app/destination/city-hub.module.css";
 
 const nightSafety = [
@@ -16,7 +20,12 @@ const nightSafety = [
 export default function IsOrlandoSafeAtNightClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Is Orlando Safe at Night?" />
+      <Header links={[
+        { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
+        { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
+        { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Is Orlando Safe at Night? Honest 2026 Guide</h1>
         <p>Orlando's tourist areas — Disney, Universal, and I-Drive — are extremely safe at night. The risks are in specific non-tourist corridors that visitors have no reason to visit. This guide gives you the honest breakdown.</p>
@@ -45,6 +54,16 @@ export default function IsOrlandoSafeAtNightClient() {
           <article className={styles.card}><h3 className={styles.cardTitle}>Nearest Trauma Center</h3><p className={styles.cardBody}>Orlando Regional Medical Center: 52 W Underwood St — Level 1 trauma center</p></article>
         </div>
       </section>
+      <WhyTrustThisGuide data={cityWhyTrustData} />
+      <FAQAccordion faqs={cityFaqData} />
+      
+      <BookingCTA
+        variant="full"
+        headline="Plan your safe Orlando trip"
+        text="Book hotels near Disney, Universal, and I-Drive — Orlando's safest and most convenient areas."
+        href="/destination/orlando/bookings?tab=hotels&from=is-orlando-safe-at-night"
+        label="Browse Orlando hotels"
+      />
       <Footer />
     </main>
   );

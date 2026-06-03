@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const foodCategories = [
@@ -16,7 +16,12 @@ const foodCategories = [
 export default function OrlandoFoodClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Best Food in Orlando" />
+      <Header links={[
+        { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
+        { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
+        { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Best Food in Orlando</h1>
         <p>Orlando's food scene extends well beyond theme park food courts. Restaurant Row, Winter Park, and Downtown Orlando have a genuinely strong independent dining scene — this guide covers all of it.</p>
@@ -37,11 +42,13 @@ export default function OrlandoFoodClient() {
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Book Orlando restaurant reservations</h2>
-        <p>Reserve tables at top Orlando restaurants — from Restaurant Row to Disney Springs.</p>
-        <Link href="/destination/orlando/bookings?tab=restaurants" className={styles.bookingBtn}>Browse restaurants</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book Orlando restaurant reservations"
+        text="Reserve tables at top Orlando restaurants — from Restaurant Row to Disney Springs."
+        href="/destination/orlando/bookings?tab=restaurants"
+        label="Browse restaurants"
+      />
       <Footer />
     </main>
   );

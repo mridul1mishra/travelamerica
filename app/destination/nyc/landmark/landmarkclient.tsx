@@ -3,7 +3,7 @@ import Header from "../../../components/Header/header";
 import Link from "next/link";
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from "./landmark.module.css";
-import BookingCTA from "@/app/destination/nyc/components/BookingCTA/BookingCTA";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 
 // Each landmark gets a concrete data row instead of paragraphs of fluff.
 // Approximate ticket prices and hours are noted as ranges or guidance only —

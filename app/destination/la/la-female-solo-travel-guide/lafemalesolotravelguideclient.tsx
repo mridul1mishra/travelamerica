@@ -1,7 +1,11 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import laWhyTrustData from "@/content/destination/la/la-female-solo-travel-guide/whyTrustItems/whyTrustItems.json";
+import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
+import laFaqData from "@/content/destination/la/la-female-solo-travel-guide/faq/faqsection.json";
 import styles from "@/app/destination/city-hub.module.css";
 
 const topics = [
@@ -15,12 +19,13 @@ const topics = [
 
 export default function LAFemaleSoloClient() {
   return (
-    <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="LA Female Solo Travel Guide" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book your solo LA trip — flights, hotels and activities →</span>
-        <Link href="/destination/la/bookings" className={styles.slimCtaBtn}>Book your trip</Link>
-      </div>
+    <main className={styles.container}>
+      <Header links={[
+        { href: "/destination/la/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/la/solo-trip-to-la", label: "Solo Trip to LA" },
+        { href: "/destination/la/safety-guide", label: "LA Safety" },
+        { href: "/destination/la/la-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Los Angeles Female Solo Travel Guide</h1>
         <p>LA is one of the most welcoming cities in America for women traveling alone. The risks are specific and avoidable — this guide covers what actually matters for safety, comfort, and having a great trip.</p>
@@ -29,23 +34,33 @@ export default function LAFemaleSoloClient() {
           <Link href="/destination/la/best-areas-to-stay" className={styles.secondaryCta}>Best areas to stay</Link>
         </div>
       </section>
-      <section className={styles.section} aria-labelledby="female-solo-la">
-        <h2 id="female-solo-la" className={styles.sectionTitle}>What Female Solo Travelers Need to Know</h2>
-        <p className={styles.sectionIntro}>Six topics that cover the practical realities of solo female travel in Los Angeles.</p>
+      <BookingCTA
+        variant="slim"
+        text="Book your solo LA trip — flights, hotels and activities →"
+        href="/destination/la/bookings"
+        label="Book your trip"
+      />
+      <section aria-labelledby="female-solo-la">
+        <h2 id="female-solo-la">What Female Solo Travelers Need to Know</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>Six topics that cover the practical realities of solo female travel in Los Angeles.</p>
         <div className={styles.grid}>
           {topics.map(({ title, blurb }) => (
             <article key={title} className={styles.card}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{blurb}</p>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{blurb}</p>
             </article>
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Plan your solo LA trip</h2>
-        <p>Book solo-friendly hotels, activities, and flights to Los Angeles.</p>
-        <Link href="/destination/la/bookings" className={styles.bookingBtn}>Plan & book your trip</Link>
-      </div>
+      <WhyTrustThisGuide data={laWhyTrustData} />
+      <FAQAccordion faqs={laFaqData} />
+      <BookingCTA
+        variant="full"
+        headline="Plan your solo LA trip"
+        text="Book solo-friendly hotels, activities, and flights to Los Angeles."
+        href="/destination/la/bookings"
+        label="Plan & book your trip"
+      />
       <Footer />
     </main>
   );

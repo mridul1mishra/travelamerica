@@ -1,48 +1,42 @@
 import styles from './solotripintro.module.css';
 
-export default function SoloTripIntro() {
+export interface SoloTripCard {
+  icon: string;
+  title: string;
+  description: string;
+  cta: string;
+}
+
+export interface SoloTripIntroProps {
+  cityName: string;
+  description: string;
+  bullets: string[];
+  cards?: SoloTripCard[];
+}
+
+const DEFAULT_CARDS: SoloTripCard[] = [
+  { icon: "🛡️", title: "For Safety", description: "Find areas with high visibility, foot traffic, and safe streets.", cta: "Safety guide" },
+  { icon: "🌃", title: "For Nightlife", description: "Explore solo-friendly venues with great vibes and easy access.", cta: "Nightlife guide" },
+  { icon: "🍜", title: "For Foodies", description: "Discover local favorites and budget-friendly bites.", cta: "Food guide" },
+  { icon: "💸", title: "On a Budget", description: "Smart picks and free gems — great trips without overspending.", cta: "Budget guide" },
+];
+
+export default function SoloTripIntro({ cityName, description, bullets, cards = DEFAULT_CARDS }: SoloTripIntroProps) {
   return (
     <section className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.textBlock}>
-            <h2 className={styles.title}>About the Solo Trip to NYC Guides</h2>
-
-            <p className={styles.description}>
-            Exploring New York solo can feel thrilling — or overwhelming. These guides help you decode
-            the city’s rhythm, avoid common pitfalls, and navigate confidently. Whether you're seeking
-            safety, fun, food, or budget tips, we’ve got you covered.
-            </p>
-
-            <ul className={styles.bullets}>
-            <li>Safest and most connected neighborhoods</li>
-            <li>How to start your trip with confidence</li>
-            <li>Packing smart for weather and walking</li>
-            </ul>
+          <h2 className={styles.title}>About the Solo Trip to {cityName} Guides</h2>
+          <p className={styles.description}>{description}</p>
+          <ul className={styles.bullets}>
+            {bullets.map((b) => <li key={b}>{b}</li>)}
+          </ul>
         </div>
 
         <div className={styles.grid}>
-          <CategoryCard icon="🛡️" title="For Safety"
-            description="Find subway lines and areas with high visibility and foot traffic."
-            cta="Safety Around, Alone"
-          />
-          <CategoryCard
-            icon="🌃"
-            title="For Nightlife"
-            description="Explore solo-friendly venues with great vibes and easy access."
-            cta="Ways of Fun Alone"
-          />
-          <CategoryCard
-            icon="🍜"
-            title="For Foodies"
-            description="Discover local favorites and budget-friendly bites across boroughs."
-            cta="Useful Cuisine Locals Favor"
-          />
-          <CategoryCard
-            icon="💸"
-            title="On a Budget"
-            description="Experience NYC without overspending — smart picks and free gems."
-            cta="Guide Affordable Locales"
-          />
+          {cards.map((card) => (
+            <CategoryCard key={card.title} {...card} />
+          ))}
         </div>
       </div>
     </section>

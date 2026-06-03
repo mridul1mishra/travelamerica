@@ -1,7 +1,11 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import cityWhyTrustData from "@/content/destination/orlando/neighborhood-guide/whyTrustItems/whyTrustItems.json";
+import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
+import cityFaqData from "@/content/destination/orlando/neighborhood-guide/faq/faqsection.json";
 import styles from "@/app/destination/city-hub.module.css";
 
 const neighborhoods = [
@@ -16,11 +20,18 @@ const neighborhoods = [
 export default function OrlandoNeighborhoodGuideClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Orlando Neighborhood Guide" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Find hotels in your preferred Orlando area →</span>
-        <Link href="/destination/orlando/bookings?tab=hotels" className={styles.slimCtaBtn}>Browse hotels</Link>
-      </div>
+      <Header links={[
+        { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
+        { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
+        { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
+      <BookingCTA
+        variant="slim"
+        text="Find hotels in your preferred Orlando area →"
+        href="/destination/orlando/bookings?tab=hotels"
+        label="Browse hotels"
+      />
       <section className={styles.hero}>
         <h1>Orlando Neighborhood Guide</h1>
         <p>Orlando is built around its theme parks — where you stay relative to Disney, Universal, or SeaWorld determines your transport costs, your morning commute, and your budget. Here is the honest breakdown of every major area.</p>
@@ -42,11 +53,15 @@ export default function OrlandoNeighborhoodGuideClient() {
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Book hotels in the right Orlando area</h2>
-        <p>Compare Lake Buena Vista, I-Drive, Kissimmee, and Universal hotels — live prices.</p>
-        <Link href="/destination/orlando/bookings?tab=hotels" className={styles.bookingBtn}>Browse Orlando hotels</Link>
-      </div>
+      <WhyTrustThisGuide data={cityWhyTrustData} />
+      <FAQAccordion faqs={cityFaqData} />
+      <BookingCTA
+        variant="full"
+        headline="Book hotels in the right Orlando area"
+        text="Compare Lake Buena Vista, I-Drive, Kissimmee, and Universal hotels — live prices."
+        href="/destination/orlando/bookings?tab=hotels"
+        label="Browse Orlando hotels"
+      />
       <Footer />
     </main>
   );

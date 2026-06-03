@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const groupTips = [
@@ -16,11 +16,18 @@ const groupTips = [
 export default function LasVegasGroupTravelClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Las Vegas Group Travel Guide" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book group tickets, shows and accommodation →</span>
-        <Link href="/destination/lasvegas/bookings?tab=activities" className={styles.slimCtaBtn}>Book group activities</Link>
-      </div>
+      <Header links={[
+        { href: "/destination/lasvegas/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/lasvegas/solo-trip-to-lasvegas", label: "Solo Trip to Las Vegas" },
+        { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
+        { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
+      <BookingCTA
+        variant="slim"
+        text="Book group tickets, shows and accommodation →"
+        href="/destination/lasvegas/bookings?tab=activities"
+        label="Book group activities"
+      />
       <section className={styles.hero}>
         <h1>Las Vegas Group Travel Guide</h1>
         <p>Las Vegas is built for groups. The challenge is managing the logistics — hotel negotiations, group activity booking, transport, and cost splitting — without the trip falling apart before it starts. This guide covers all of it.</p>
@@ -41,11 +48,13 @@ export default function LasVegasGroupTravelClient() {
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Book your Las Vegas group trip</h2>
-        <p>Group hotel blocks, bulk show tickets, and charter transport for Las Vegas.</p>
-        <Link href="/destination/lasvegas/bookings" className={styles.bookingBtn}>Book group travel</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book your Las Vegas group trip"
+        text="Group hotel blocks, bulk show tickets, and charter transport for Las Vegas."
+        href="/destination/lasvegas/bookings"
+        label="Book group travel"
+      />
       <Footer />
     </main>
   );

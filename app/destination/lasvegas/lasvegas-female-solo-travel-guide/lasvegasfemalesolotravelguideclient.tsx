@@ -1,7 +1,11 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import cityWhyTrustData from "@/content/destination/lasvegas/lasvegas-female-solo-travel-guide/whyTrustItems/whyTrustItems.json";
+import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
+import cityFaqData from "@/content/destination/lasvegas/lasvegas-female-solo-travel-guide/faq/faqsection.json";
 import styles from "@/app/destination/city-hub.module.css";
 
 const topics = [
@@ -16,11 +20,18 @@ const topics = [
 export default function LasVegasFemaleSoloClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Las Vegas Female Solo Travel Guide" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book your solo Las Vegas trip — flights, hotels and activities →</span>
-        <Link href="/destination/lasvegas/bookings" className={styles.slimCtaBtn}>Book your trip</Link>
-      </div>
+      <Header links={[
+        { href: "/destination/lasvegas/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/lasvegas/solo-trip-to-lasvegas", label: "Solo Trip to Las Vegas" },
+        { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
+        { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
+      <BookingCTA
+        variant="slim"
+        text="Book your solo Las Vegas trip — flights, hotels and activities →"
+        href="/destination/lasvegas/bookings"
+        label="Book your trip"
+      />
       <section className={styles.hero}>
         <h1>Las Vegas Female Solo Travel Guide</h1>
         <p>Las Vegas is an excellent solo destination for women — the Strip is well-monitored, shows and attractions are solo-friendly, and the city never requires a group to have a great time. This guide covers the specific things that matter.</p>
@@ -41,11 +52,15 @@ export default function LasVegasFemaleSoloClient() {
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Plan your solo Las Vegas trip</h2>
-        <p>Book solo-friendly hotels, activities, and flights to Las Vegas.</p>
-        <Link href="/destination/lasvegas/bookings" className={styles.bookingBtn}>Plan & book your trip</Link>
-      </div>
+      <WhyTrustThisGuide data={cityWhyTrustData} />
+      <FAQAccordion faqs={cityFaqData} />
+      <BookingCTA
+        variant="full"
+        headline="Plan your solo Las Vegas trip"
+        text="Book solo-friendly hotels, activities, and flights to Las Vegas."
+        href="/destination/lasvegas/bookings"
+        label="Plan & book your trip"
+      />
       <Footer />
     </main>
   );

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from '../group-travel/grouptravel.module.css';
-import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
+import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
 
 export default function GroupTravelPage() {
   const schema1 = {

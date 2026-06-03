@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const foodCategories = [
@@ -16,7 +16,12 @@ const foodCategories = [
 export default function LasVegasFoodClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Best Food in Las Vegas" />
+      <Header links={[
+        { href: "/destination/lasvegas/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/lasvegas/solo-trip-to-lasvegas", label: "Solo Trip to Las Vegas" },
+        { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
+        { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Best Food in Las Vegas</h1>
         <p>Las Vegas has evolved from buffet city to one of America's most serious dining destinations. The challenge is knowing what is worth the price and what is trading on a famous name. This guide covers both ends of the spectrum.</p>
@@ -37,11 +42,13 @@ export default function LasVegasFoodClient() {
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Book Las Vegas restaurant reservations</h2>
-        <p>Reserve tables at top Las Vegas restaurants before they sell out.</p>
-        <Link href="/destination/lasvegas/bookings?tab=restaurants" className={styles.bookingBtn}>Browse restaurants</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book Las Vegas restaurant reservations"
+        text="Reserve tables at top Las Vegas restaurants before they sell out."
+        href="/destination/lasvegas/bookings?tab=restaurants"
+        label="Browse restaurants"
+      />
       <Footer />
     </main>
   );

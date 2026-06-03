@@ -12,7 +12,7 @@ import WhereFirstTimersStay from "./components/Wherefirsttimerstay/wherefirsttim
 import GettingAround from "./components/Gettingaround/Gettingaround";
 import SafetyOverview from "./components/SafetyOverview/Safetyoverview";
 import NeighborhoodGuideCTA from "./components/Neighborhoodguidecta/Neighborhoodguidecta";
-import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
+import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
 
 type Props = {
     tripType?: string;

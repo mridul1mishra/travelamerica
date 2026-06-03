@@ -1,7 +1,11 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import laWhyTrustData from "@/content/destination/la/neighborhood-guide/whyTrustItems/whyTrustItems.json";
+import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
+import laFaqData from "@/content/destination/la/neighborhood-guide/faq/faqsection.json";
 import styles from "@/app/destination/city-hub.module.css";
 
 const neighborhoods = [
@@ -17,12 +21,13 @@ const neighborhoods = [
 
 export default function LANeighborhoodGuideClient() {
   return (
-    <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Los Angeles Neighborhood Guide" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Find hotels in your preferred LA neighborhood →</span>
-        <Link href="/destination/la/bookings?tab=hotels" className={styles.slimCtaBtn}>Browse hotels</Link>
-      </div>
+    <main className={styles.container}>
+      <Header links={[
+        { href: "/destination/la/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/la/solo-trip-to-la", label: "Solo Trip to LA" },
+        { href: "/destination/la/safety-guide", label: "LA Safety" },
+        { href: "/destination/la/la-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Los Angeles Neighborhood Guide</h1>
         <p>LA is not one city — it is dozens of distinct neighborhoods spread across 500 square miles. This guide explains what each major area is actually like, who it suits, and what it costs.</p>
@@ -31,24 +36,34 @@ export default function LANeighborhoodGuideClient() {
           <Link href="/destination/la/safety-guide" className={styles.secondaryCta}>LA safety guide</Link>
         </div>
       </section>
-      <section className={styles.section} aria-labelledby="neighborhoods-la">
-        <h2 id="neighborhoods-la" className={styles.sectionTitle}>LA Neighborhoods Explained</h2>
-        <p className={styles.sectionIntro}>Eight neighborhoods that cover the full range of what LA offers visitors.</p>
+      <BookingCTA
+        variant="slim"
+        text="Find hotels in your preferred LA neighborhood →"
+        href="/destination/la/bookings?tab=hotels"
+        label="Browse hotels"
+      />
+      <section aria-labelledby="neighborhoods-la">
+        <h2 id="neighborhoods-la">LA Neighborhoods Explained</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>Eight neighborhoods that cover the full range of what LA offers visitors.</p>
         <div className={styles.grid}>
           {neighborhoods.map(({ name, vibe, bestFor }) => (
             <article key={name} className={styles.card}>
-              <h3 className={styles.cardTitle}>{name}</h3>
-              <p className={styles.cardBody}>{vibe}</p>
-              <p className={styles.cardMeta}>Best for: {bestFor}</p>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{name}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: "0 0 0.5rem" }}>{vibe}</p>
+              <p style={{ color: "#333", fontSize: "0.85rem", margin: 0 }}><strong>Best for:</strong> {bestFor}</p>
             </article>
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Book hotels in the right LA neighborhood</h2>
-        <p>Compare neighborhoods by price, location and guest ratings.</p>
-        <Link href="/destination/la/bookings?tab=hotels" className={styles.bookingBtn}>Browse LA hotels</Link>
-      </div>
+      <WhyTrustThisGuide data={laWhyTrustData} />
+      <FAQAccordion faqs={laFaqData} />
+      <BookingCTA
+        variant="full"
+        headline="Book hotels in the right LA neighborhood"
+        text="Compare neighborhoods by price, location and guest ratings."
+        href="/destination/la/bookings?tab=hotels"
+        label="Browse LA hotels"
+      />
       <Footer />
     </main>
   );

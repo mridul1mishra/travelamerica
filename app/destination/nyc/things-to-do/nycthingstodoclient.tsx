@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from './nycthingstodoclient.module.css';
 import Header from "@/app/components/destination/header/header";
 import Footer from "../../../../app/components/Header/Footer/footer";
-import BookingCTA from "@/app/destination/nyc/components/BookingCTA/BookingCTA";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 
 export default function NYCThingsToDoClient() {
   return (

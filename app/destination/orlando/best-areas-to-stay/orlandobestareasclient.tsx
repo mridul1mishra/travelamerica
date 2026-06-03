@@ -1,8 +1,74 @@
-// Server Component — no hooks used.
+"use client"
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from "@/app/destination/city-hub.module.css";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
+import Banner from "@/app/components/destination/bestareatostay/Banner/Banner";
+import SoloTripIntro from "@/app/components/destination/bestareatostay/solotripintro/solotripintro";
+import SectionSafestNeighborhoods from "@/app/components/destination/bestareatostay/safestneighborhood/safestneighborhood";
+import NeighborhoodRankingCards, { Neighborhood } from "@/app/components/destination/neighborhoodrankingcard/neighborhoodrankingcard";
+import faqData from "@/content/destination/orlando/bestplacetostay/faqsection.json";
+
+const orlandoNeighborhoods: Neighborhood[] = [
+  {
+    id: "disney-on-site",
+    rank: "#1 Best for Disney",
+    name: "Disney On-Site Resorts",
+    why: "30-min Early Park Entry every day — the most valuable perk in Orlando for serious Disney visitors.",
+    image: "/data/majorcities/losangeles/assets/bestareas/disney.jpg",
+    color: "var(--tint-blue)",
+    safety: "🟢 Very Safe",
+    vibe: "Family-friendly, immersive, convenient",
+    transit: "Free Skyliner, buses, monorail",
+    bestFor: ["Disney-focused trips", "Families", "Guests maximizing park time"],
+    pros: ["30-min Early Park Entry daily", "Free transport to all Disney parks", "Full Disney experience"],
+    cons: ["Most expensive option ($200–$600+/night)", "Further from Universal"],
+  },
+  {
+    id: "lake-buena-vista",
+    rank: "#2 Best Value Near Disney",
+    name: "Lake Buena Vista / Hotel Plaza",
+    why: "30–50% cheaper than Disney resorts with free Disney shuttle — the smart value play.",
+    image: "/data/majorcities/losangeles/assets/bestareas/lakebuena.jpg",
+    color: "var(--tint-green)",
+    safety: "🟢 Safe",
+    vibe: "Convenient, budget-friendly, family-focused",
+    transit: "Free Disney shuttle, 10-min drive",
+    bestFor: ["Budget-conscious Disney visitors", "Families", "Value seekers"],
+    pros: ["30–50% cheaper than Disney resorts", "Free Disney shuttle", "Good hotel selection"],
+    cons: ["No Early Park Entry perk", "Requires shuttle or car for Universal"],
+  },
+  {
+    id: "universal-on-site",
+    rank: "#3 Best for Universal",
+    name: "Universal On-Site Hotels",
+    why: "1-hour Early Park Admission to Harry Potter areas — genuinely valuable on busy days.",
+    image: "/data/majorcities/losangeles/assets/bestareas/howgart.jpg",
+    color: "var(--tint-purple)",
+    safety: "🟢 Very Safe",
+    vibe: "Themed, fun, walkable to parks",
+    transit: "Walk to Universal parks",
+    bestFor: ["Universal-focused trips", "Harry Potter fans", "Couples"],
+    pros: ["1-hour Early Park Admission", "Walk to Universal's parks", "Great themed hotels"],
+    cons: ["Pricey", "Far from Disney (20+ min)"],
+  },
+  {
+    id: "international-drive",
+    rank: "#4 Best Budget / Flexible",
+    name: "International Drive (I-Drive)",
+    why: "Central location between parks with the best budget hotel density in Orlando.",
+    image: "/data/majorcities/losangeles/assets/bestareas/universal.jpg",
+    color: "var(--tint-yellow)",
+    safety: "🟢 Safe",
+    vibe: "Touristy, central, walkable to dining",
+    transit: "Free shuttle options to both parks",
+    bestFor: ["Budget trips", "Flexible itineraries", "Visitors splitting time across parks"],
+    pros: ["Budget to mid-range hotels", "10 min to Universal, 20 min to Disney", "Walkable to ICON Park and dining"],
+    cons: ["Can feel touristy", "Requires car or shuttle for parks"],
+  },
+];
 
 const areas = [
   { name: "On-Site Disney Resorts (Best for Disney-Only Trips)", vibe: "Disney's Value ($120–$180/night), Moderate ($200–$280), and Deluxe ($350–$600+) resorts. All get 30-min Early Park Entry every day — at Disney's scale this is genuinely valuable. Free Skyliner, buses, and monorail to all parks.", bestFor: "Disney-focused trips, families, guests wanting to maximize park time" },
@@ -14,31 +80,68 @@ const areas = [
 ];
 
 const tips = [
-  "Disney Early Park Entry (30 min) is included with all Disney resort stays — it allows you to ride headliner attractions before queues build. Worth the premium for 4+ day Disney trips.",
-  "Universal's Express Pass (separate purchase, $80–$130/day) lets you skip main queues — it's cheaper than booking an on-site hotel just for Early Entry.",
+  "Disney Early Park Entry (30 min) is included with all Disney resort stays - it allows you to ride headliner attractions before queues build. Worth the premium for 4+ day Disney trips.",
+  "Universal's Express Pass (separate purchase, $80-$130/day) lets you skip main queues - it's cheaper than booking an on-site hotel just for Early Entry.",
   "I-Drive hotels often include free shuttles to both Disney and Universal. Confirm before booking.",
-  "Kissimmee vacation homes average $60–$100/night per bedroom — significantly cheaper than hotels for groups of 4+.",
+  "Kissimmee vacation homes average $60-$100/night per bedroom - significantly cheaper than hotels for groups of 4+.",
 ];
 
 export default function OrlandoBestAreasClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Best Areas to Stay in Orlando" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Compare live hotel prices across all Orlando areas →</span>
-        <Link href="/destination/orlando/bookings?tab=hotels" className={styles.slimCtaBtn}>Browse hotels</Link>
-      </div>
-      <section className={styles.hero}>
-        <h1>Best Areas to Stay in Orlando</h1>
-        <p>Where you stay in Orlando determines your entire logistics. On-site Disney and Universal hotels offer real perks but cost significantly more. This guide explains exactly when those perks are worth it.</p>
-        <div className={styles.heroCtas}>
-          <Link href="/destination/orlando/bookings?tab=hotels" className={styles.primaryCta}>Compare hotel prices</Link>
-          <Link href="/destination/orlando/safety-guide" className={styles.secondaryCta}>Orlando safety guide</Link>
-        </div>
-      </section>
+      <Header links={[
+        { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
+        { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
+        { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
+      <BookingCTA
+        variant="slim"
+        text="Compare live hotel prices across all Orlando areas"
+        href="/destination/orlando/bookings?tab=hotels&from=best-areas-to-stay"
+        label="Browse Orlando hotels"
+      />
+      <Banner
+        cityName="Orlando"
+        cityHref="/destination/orlando"
+        description="Where you stay in Orlando determines your entire logistics. On-site Disney and Universal hotels offer real perks - this guide explains when they are worth it."
+        guideBullets={[
+          "When Disney on-site perks are worth the premium",
+          "Best value hotels near each park",
+          "Universal Early Admission explained",
+          "I-Drive vs. Kissimmee vs. on-site",
+          "Tips to save 30-50% on accommodation",
+        ]}
+      />
+      <SoloTripIntro
+        cityName="Orlando"
+        description="Orlando is a logistics puzzle - the right base saves you hours of transit time and real money. These guides cut through the noise so you can focus on enjoying the parks."
+        bullets={[
+          "On-site vs. off-site - honestly compared",
+          "How to pick your base by park focus",
+          "Budget strategies that actually work",
+        ]}
+        cards={[
+          { icon: "🏰", title: "For Disney", description: "On-site perks, Early Entry, and the best resort tiers explained.", cta: "Disney guide" },
+          { icon: "🧙", title: "For Universal", description: "Harry Potter Early Admission and on-site hotel value compared.", cta: "Universal guide" },
+          { icon: "💸", title: "On a Budget", description: "I-Drive and Kissimmee options - real savings without sacrificing access.", cta: "Budget guide" },
+          { icon: "👨‍👩‍👧", title: "For Families", description: "Which areas work best for kids - parks, pools, and early bedtimes.", cta: "Family guide" },
+        ]}
+      />
+      <SectionSafestNeighborhoods
+        title="Safest Areas in Orlando"
+        paragraphs={[
+          "Orlando's tourist areas - on-site Disney resorts, Universal's CityWalk corridor, and International Drive - are among the safest in Florida for visitors. Hotel security is robust and foot traffic is constant.",
+          "On-site Disney and Universal properties are essentially controlled environments, making them the safest options for families and solo travelers alike.",
+          "I-Drive is generally safe along the main strip, though standard urban awareness applies after dark. Kissimmee varies by specific area - stick to well-reviewed vacation rental communities.",
+        ]}
+        tip="On-site Disney and Universal hotels offer the most controlled, consistently safe environment - ideal for families or solo travelers who prioritize peace of mind."
+        warning="Avoid unreviewed budget motels on the edges of I-Drive or US-192 in Kissimmee - these areas have higher incident rates than the main tourist corridors."
+      />
+      <NeighborhoodRankingCards cityName="Orlando" neighborhoods={orlandoNeighborhoods} />
       <section className={styles.section} aria-labelledby="areas-orl">
-        <h2 id="areas-orl" className={styles.sectionTitle}>Orlando Areas Compared</h2>
-        <p className={styles.sectionIntro}>Six areas — on-site, near-park, and off-park options honestly compared.</p>
+        <h2 id="areas-orl" className={styles.sectionTitle}>All Orlando Areas Compared</h2>
+        <p className={styles.sectionIntro}>Six areas - on-site, near-park, and off-park options honestly compared.</p>
         <div className={styles.grid}>
           {areas.map(({ name, vibe, bestFor }) => (
             <article key={name} className={styles.card}>
@@ -55,11 +158,16 @@ export default function OrlandoBestAreasClient() {
           {tips.map((tip, i) => (<article key={i} className={styles.card}><p className={styles.cardBody}>{tip}</p></article>))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Find the right Orlando hotel</h2>
-        <p>On-site, near-park, and budget options — compare live prices.</p>
-        <Link href="/destination/orlando/bookings?tab=hotels" className={styles.bookingBtn}>Browse Orlando hotels</Link>
+      <div className={styles.section}>
+        <FAQAccordion faqs={faqData} />
       </div>
+      <BookingCTA
+        variant="full"
+        headline="Find the right Orlando hotel"
+        text="On-site, near-park, and budget options - compare live prices."
+        href="/destination/orlando/bookings?tab=hotels&from=best-areas-to-stay"
+        label="Browse Orlando hotels"
+      />
       <Footer />
     </main>
   );

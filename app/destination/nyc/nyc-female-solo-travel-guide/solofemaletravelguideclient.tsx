@@ -19,7 +19,7 @@ import Footer from "@/app/components/Header/Footer/footer";
 import LinkHubGrid from "./components/linkhubgrid/LinkHubGrid";
 import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
 import FemaleSafetyNarrative from "./components/safetynarrative/FemaleSafetyNarrative";
-import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
+import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
 
 
 

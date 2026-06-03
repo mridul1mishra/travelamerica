@@ -18,7 +18,7 @@ import InfoSection from './components/infosection/infosection';
 import sectionsData from "./components/infosection/infosection.json";
 import EmergencyContactBlock from './components/emergencycontactblock/EmergencyContactBlock';
 import SafetyNarrative from './components/safetynarrative/SafetyNarrative';
-import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
+import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
 
 export default function NYCSafetyGuideClient() {
   return (

@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const landmarks = [
@@ -16,11 +16,18 @@ const landmarks = [
 export default function LasVegasLandmarkClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Las Vegas Landmarks" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book skip-the-line tickets and guided Las Vegas tours →</span>
-        <Link href="/destination/lasvegas/bookings?tab=activities" className={styles.slimCtaBtn}>Browse tours</Link>
-      </div>
+      <Header links={[
+        { href: "/destination/lasvegas/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/lasvegas/solo-trip-to-lasvegas", label: "Solo Trip to Las Vegas" },
+        { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
+        { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
+      <BookingCTA
+        variant="slim"
+        text="Book skip-the-line tickets and guided Las Vegas tours →"
+        href="/destination/lasvegas/bookings?tab=activities"
+        label="Browse tours"
+      />
       <section className={styles.hero}>
         <h1>Las Vegas Landmarks</h1>
         <p>Las Vegas has free world-class spectacles alongside paid attractions — knowing which are worth the price is half the battle. This guide covers all six major landmarks with honest costs and the tips that actually matter.</p>
@@ -42,11 +49,13 @@ export default function LasVegasLandmarkClient() {
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Book Las Vegas tours and experiences</h2>
-        <p>Skip-the-line tickets and guided tours for Las Vegas sights.</p>
-        <Link href="/destination/lasvegas/bookings?tab=activities" className={styles.bookingBtn}>Browse Las Vegas activities</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book Las Vegas tours and experiences"
+        text="Skip-the-line tickets and guided tours for Las Vegas sights."
+        href="/destination/lasvegas/bookings?tab=activities"
+        label="Browse Las Vegas activities"
+      />
       <Footer />
     </main>
   );

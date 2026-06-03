@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const days = [
@@ -28,11 +28,18 @@ const days = [
 export default function LasVegasItineraryClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Las Vegas 3-Day Itinerary" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book flights, hotels and activity tickets for your Las Vegas trip →</span>
-        <Link href="/destination/lasvegas/bookings" className={styles.slimCtaBtn}>Book your trip</Link>
-      </div>
+      <Header links={[
+        { href: "/destination/lasvegas/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/lasvegas/solo-trip-to-lasvegas", label: "Solo Trip to Las Vegas" },
+        { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
+        { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
+      <BookingCTA
+        variant="slim"
+        text="Book flights, hotels and activity tickets for your Las Vegas trip →"
+        href="/destination/lasvegas/bookings"
+        label="Book your trip"
+      />
       <section className={styles.hero}>
         <h1>Las Vegas 3-Day Itinerary</h1>
         <p>A practical day-by-day plan covering the Strip, a Hoover Dam day trip, Fremont Street, and the best museums. Built around real logistics — not an aspirational list of everything Vegas has to offer.</p>
@@ -53,11 +60,13 @@ export default function LasVegasItineraryClient() {
           </div>
         </section>
       ))}
-      <div className={styles.bookingStrip}>
-        <h2>Book your Las Vegas trip</h2>
-        <p>Cheap flights to LAS, Strip hotels, and skip-the-line tickets — all in one place.</p>
-        <Link href="/destination/lasvegas/bookings" className={styles.bookingBtn}>Compare flights, hotels & tickets</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book your Las Vegas trip"
+        text="Cheap flights to LAS, Strip hotels, and skip-the-line tickets — all in one place."
+        href="/destination/lasvegas/bookings"
+        label="Compare flights, hotels & tickets"
+      />
       <Footer />
     </main>
   );

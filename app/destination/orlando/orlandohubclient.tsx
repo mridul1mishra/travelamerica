@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import OrlandoPlanningQuiz from "./components/OrlandoPlanningQuiz";
 import styles from "@/app/destination/city-hub.module.css";
 
@@ -74,10 +75,12 @@ export default function OrlandoHubClient() {
       </section>
 
       {/* Slim booking CTA */}
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Compare cheap flights to MCO, park-area hotels, and attraction tickets →</span>
-        <Link href="/destination/orlando/bookings?tab=flights" className={styles.slimCtaBtn} aria-label="Book your Orlando trip">Book your trip</Link>
-      </div>
+      <BookingCTA
+        variant="slim"
+        text="Compare cheap flights to MCO, park-area hotels, and attraction tickets →"
+        href="/destination/orlando/bookings?tab=flights"
+        label="Book your trip"
+      />
 
       {/* Planning quiz */}
       <OrlandoPlanningQuiz />
@@ -213,13 +216,13 @@ export default function OrlandoHubClient() {
       </section>
 
       {/* Full booking CTA */}
-      <div className={styles.bookingStrip}>
-        <div className={styles.bookingInner}>
-          <h2>Ready to book your Orlando trip?</h2>
-          <p>Compare cheap flights to MCO, browse park-area hotels, and book theme park tickets.</p>
-          <Link href="/destination/orlando/bookings?tab=flights" className={styles.bookingBtn} aria-label="Book Orlando trip">Compare flights, hotels &amp; tickets</Link>
-        </div>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Ready to book your Orlando trip?"
+        text="Compare cheap flights to MCO, browse park-area hotels, and book theme park tickets."
+        href="/destination/orlando/bookings?tab=flights"
+        label="Compare flights, hotels &amp; tickets"
+      />
 
       <Footer />
     </main>

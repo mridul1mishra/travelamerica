@@ -1,7 +1,11 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import cityWhyTrustData from "@/content/destination/orlando/orlando-female-solo-travel-guide/whyTrustItems/whyTrustItems.json";
+import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
+import cityFaqData from "@/content/destination/orlando/orlando-female-solo-travel-guide/faq/faqsection.json";
 import styles from "@/app/destination/city-hub.module.css";
 
 const topics = [
@@ -16,11 +20,18 @@ const topics = [
 export default function OrlandoFemaleSoloClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Orlando Female Solo Travel Guide" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book your solo Orlando trip — hotels, park tickets and activities →</span>
-        <Link href="/destination/orlando/bookings" className={styles.slimCtaBtn}>Book your trip</Link>
-      </div>
+      <Header links={[
+        { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
+        { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
+        { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
+      <BookingCTA
+        variant="slim"
+        text="Book your solo Orlando trip — hotels, park tickets and activities →"
+        href="/destination/orlando/bookings"
+        label="Book your trip"
+      />
       <section className={styles.hero}>
         <h1>Orlando Female Solo Travel Guide</h1>
         <p>Orlando is a straightforward and safe destination for solo women — the theme park environments are among the most monitored public spaces in America, and the main tourist corridors are comfortable day and night. Here is what actually matters.</p>
@@ -41,11 +52,15 @@ export default function OrlandoFemaleSoloClient() {
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Plan your solo Orlando trip</h2>
-        <p>Book solo-friendly hotels, park tickets, and flights to Orlando.</p>
-        <Link href="/destination/orlando/bookings" className={styles.bookingBtn}>Plan & book your trip</Link>
-      </div>
+      <WhyTrustThisGuide data={cityWhyTrustData} />
+      <FAQAccordion faqs={cityFaqData} />
+      <BookingCTA
+        variant="full"
+        headline="Plan your solo Orlando trip"
+        text="Book solo-friendly hotels, park tickets, and flights to Orlando."
+        href="/destination/orlando/bookings"
+        label="Plan & book your trip"
+      />
       <Footer />
     </main>
   );

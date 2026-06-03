@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './SoloItinerary.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
-import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
+import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
 import FAQ from "@/app/components/faq/faq";
 import { getFaq, getFaqItinerary } from "@/app/lib/FaqData";
 

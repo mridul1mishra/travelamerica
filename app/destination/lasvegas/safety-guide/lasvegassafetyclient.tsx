@@ -1,7 +1,11 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import cityWhyTrustData from "@/content/destination/lasvegas/safety-guide/whyTrustItems/whyTrustItems.json";
+import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
+import cityFaqData from "@/content/destination/lasvegas/safety-guide/faq/faqsection.json";
 import styles from "@/app/destination/city-hub.module.css";
 
 const safetyTopics = [
@@ -16,7 +20,12 @@ const safetyTopics = [
 export default function LasVegasSafetyClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Las Vegas Safety Guide" />
+      <Header links={[
+        { href: "/destination/lasvegas/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/lasvegas/solo-trip-to-lasvegas", label: "Solo Trip to Las Vegas" },
+        { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
+        { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Is Las Vegas Safe? Honest 2026 Guide</h1>
         <p>Las Vegas is safe for tourists on the Strip and in major tourist areas. The risks are specific — scams, heat, and straying off the beaten path after midnight. This guide tells you exactly what to watch for.</p>
@@ -45,6 +54,16 @@ export default function LasVegasSafetyClient() {
           <article className={styles.card}><h3 className={styles.cardTitle}>Nearest Hospital</h3><p className={styles.cardBody}>University Medical Center: 1800 W Charleston Blvd — Level 1 trauma center</p></article>
         </div>
       </section>
+      <WhyTrustThisGuide data={cityWhyTrustData} />
+      <FAQAccordion faqs={cityFaqData} />
+      
+      <BookingCTA
+        variant="full"
+        headline="Book your Las Vegas trip"
+        text="Hotels on the Strip, Downtown, and off-Strip — live prices with full resort fee totals."
+        href="/destination/lasvegas/bookings?tab=hotels&from=safety-guide"
+        label="Browse Las Vegas hotels"
+      />
       <Footer />
     </main>
   );

@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const landmarks = [
@@ -16,11 +16,18 @@ const landmarks = [
 export default function OrlandoLandmarkClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Orlando Landmarks & Attractions" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book skip-the-line tickets and guided Orlando tours →</span>
-        <Link href="/destination/orlando/bookings?tab=activities" className={styles.slimCtaBtn}>Browse tickets</Link>
-      </div>
+      <Header links={[
+        { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
+        { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
+        { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
+      <BookingCTA
+        variant="slim"
+        text="Book skip-the-line tickets and guided Orlando tours →"
+        href="/destination/orlando/bookings?tab=activities"
+        label="Browse tickets"
+      />
       <section className={styles.hero}>
         <h1>Orlando Landmarks & Attractions</h1>
         <p>Orlando has the world's highest concentration of major theme parks — but also some genuinely overlooked gems. This guide covers the full range with honest costs and the tips that change each experience.</p>
@@ -42,11 +49,13 @@ export default function OrlandoLandmarkClient() {
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Book Orlando attraction tickets</h2>
-        <p>Disney, Universal, Kennedy Space Center and more — compare prices and book in advance.</p>
-        <Link href="/destination/orlando/bookings?tab=activities" className={styles.bookingBtn}>Browse Orlando activities</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book Orlando attraction tickets"
+        text="Disney, Universal, Kennedy Space Center and more — compare prices and book in advance."
+        href="/destination/orlando/bookings?tab=activities"
+        label="Browse Orlando activities"
+      />
       <Footer />
     </main>
   );

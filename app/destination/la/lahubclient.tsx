@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import LAPlanningQuiz from "./components/LAPlanningQuiz";
 import styles from "@/app/destination/city-hub.module.css";
 
@@ -71,10 +72,12 @@ export default function LAHubClient() {
       </section>
 
       {/* Slim booking CTA */}
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Compare cheap flights to LAX, LA hotels, and activity tickets →</span>
-        <Link href="/destination/la/bookings?tab=flights" className={styles.slimCtaBtn} aria-label="Book your LA trip">Book your trip</Link>
-      </div>
+      <BookingCTA
+        variant="slim"
+        text="Compare cheap flights to LAX, LA hotels, and activity tickets →"
+        href="/destination/la/bookings?tab=flights"
+        label="Book your trip"
+      />
 
       {/* Planning quiz */}
       <LAPlanningQuiz />
@@ -214,13 +217,13 @@ export default function LAHubClient() {
       </section>
 
       {/* Full booking CTA */}
-      <div className={styles.bookingStrip}>
-        <div className={styles.bookingInner}>
-          <h2>Ready to book your Los Angeles trip?</h2>
-          <p>Compare cheap flights to LAX, browse LA hotels by neighborhood, and book activity tickets.</p>
-          <Link href="/destination/la/bookings?tab=flights" className={styles.bookingBtn} aria-label="Book LA trip">Compare flights, hotels &amp; tickets</Link>
-        </div>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Ready to book your Los Angeles trip?"
+        text="Compare cheap flights to LAX, browse LA hotels by neighborhood, and book activity tickets."
+        href="/destination/la/bookings?tab=flights"
+        label="Compare flights, hotels & tickets"
+      />
 
       <Footer />
     </main>

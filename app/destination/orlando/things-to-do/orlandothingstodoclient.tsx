@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const categories = [
@@ -16,11 +16,18 @@ const categories = [
 export default function OrlandoThingsToDoClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Things to Do in Orlando" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book theme park tickets, Kennedy Space Center and activity tours →</span>
-        <Link href="/destination/orlando/bookings?tab=activities" className={styles.slimCtaBtn}>See tickets & tours</Link>
-      </div>
+      <Header links={[
+        { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
+        { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
+        { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
+      <BookingCTA
+        variant="slim"
+        text="Book theme park tickets, Kennedy Space Center and activity tours →"
+        href="/destination/orlando/bookings?tab=activities"
+        label="See tickets & tours"
+      />
       <section className={styles.hero}>
         <h1>Things to Do in Orlando</h1>
         <p>Orlando is the most-visited city in the US for good reason — but what you do depends entirely on what kind of trip you want. This guide covers the six categories that shape most Orlando visits, with practical logistics for each.</p>
@@ -41,11 +48,13 @@ export default function OrlandoThingsToDoClient() {
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Book Orlando activities</h2>
-        <p>Skip-the-line tickets for theme parks, Kennedy Space Center, and activity tours.</p>
-        <Link href="/destination/orlando/bookings?tab=activities" className={styles.bookingBtn}>Browse activities</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book Orlando activities"
+        text="Skip-the-line tickets for theme parks, Kennedy Space Center, and activity tours."
+        href="/destination/orlando/bookings?tab=activities"
+        label="Browse activities"
+      />
       <Footer />
     </main>
   );

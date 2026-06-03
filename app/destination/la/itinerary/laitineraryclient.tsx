@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const days = [
@@ -13,7 +13,7 @@ const days = [
   ]},
   { day: "Day 2", title: "Santa Monica, Venice Beach & the Coast", items: [
     "Morning: Santa Monica Pier (free). Bike rental from one of the shops along Ocean Ave — $15–$25/hr. Cycle south toward Venice Beach on the flat coastal path.",
-    "Midday: Venice Beach Boardwalk. Street performers, muscle beach, and the eclectic boardwalk market. Lunch at one of the beachside spots — abbot kinney blvd is one block east and worth the detour.",
+    "Midday: Venice Beach Boardwalk. Street performers, muscle beach, and the eclectic boardwalk market. Lunch at one of the beachside spots — Abbot Kinney Blvd is one block east and worth the detour.",
     "Afternoon: Continue cycling to Manhattan Beach or turn back. The coastal route is 22 miles total — go as far as you like. Sunset from the Santa Monica Pier is spectacular.",
     "Evening: Dinner in Santa Monica. Third Street Promenade is the tourist strip — go one block east to 2nd or 4th Street for better options with fewer crowds.",
   ]},
@@ -27,12 +27,13 @@ const days = [
 
 export default function LAItineraryClient() {
   return (
-    <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Los Angeles 3-Day Itinerary" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book flights, hotels and activity tickets for your LA trip →</span>
-        <Link href="/destination/la/bookings" className={styles.slimCtaBtn}>Book your trip</Link>
-      </div>
+    <main className={styles.container}>
+      <Header links={[
+        { href: "/destination/la/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/la/solo-trip-to-la", label: "Solo Trip to LA" },
+        { href: "/destination/la/safety-guide", label: "LA Safety" },
+        { href: "/destination/la/la-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Los Angeles 3-Day Itinerary</h1>
         <p>A practical day-by-day plan covering Hollywood, Griffith Observatory, Venice Beach, the Getty, and Downtown LA. Built around real travel logistics — driving times, parking costs, and what actually fits in a day.</p>
@@ -41,23 +42,31 @@ export default function LAItineraryClient() {
           <Link href="/destination/la/best-areas-to-stay" className={styles.secondaryCta}>Where to stay</Link>
         </div>
       </section>
+      <BookingCTA
+        variant="slim"
+        text="Book flights, hotels and activity tickets for your LA trip →"
+        href="/destination/la/bookings"
+        label="Book your trip"
+      />
       {days.map(({ day, title, items }) => (
-        <section key={day} className={styles.section} aria-labelledby={`day-la-${day}`}>
-          <h2 id={`day-la-${day}`} className={styles.sectionTitle}>{day}: {title}</h2>
+        <section key={day} aria-labelledby={`day-la-${day}`}>
+          <h2 id={`day-la-${day}`}>{day}: {title}</h2>
           <div className={styles.grid}>
             {items.map((item, i) => (
               <article key={i} className={styles.card}>
-                <p className={styles.cardBody}>{item}</p>
+                <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{item}</p>
               </article>
             ))}
           </div>
         </section>
       ))}
-      <div className={styles.bookingStrip}>
-        <h2>Book your Los Angeles trip</h2>
-        <p>Cheap flights to LAX, LA hotels, and skip-the-line tickets — all in one place.</p>
-        <Link href="/destination/la/bookings" className={styles.bookingBtn}>Compare flights, hotels & tickets</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book your Los Angeles trip"
+        text="Cheap flights to LAX, LA hotels, and skip-the-line tickets — all in one place."
+        href="/destination/la/bookings"
+        label="Compare flights, hotels & tickets"
+      />
       <Footer />
     </main>
   );

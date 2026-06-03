@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import LasVegasPlanningQuiz from "./components/LasVegasPlanningQuiz";
 import styles from "@/app/destination/city-hub.module.css";
 
@@ -74,10 +75,12 @@ export default function LasVegasHubClient() {
       </section>
 
       {/* Slim booking CTA */}
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Ready to book? Compare cheap flights to LAS, hotels, and activities →</span>
-        <Link href="/destination/lasvegas/bookings?tab=flights" className={styles.slimCtaBtn} aria-label="Book your Las Vegas trip">Book your trip</Link>
-      </div>
+      <BookingCTA
+        variant="slim"
+        text="Ready to book? Compare cheap flights to LAS, hotels, and activities →"
+        href="/destination/lasvegas/bookings?tab=flights"
+        label="Book your trip"
+      />
 
       {/* Planning quiz */}
       <LasVegasPlanningQuiz />
@@ -213,13 +216,13 @@ export default function LasVegasHubClient() {
       </section>
 
       {/* Full booking CTA */}
-      <div className={styles.bookingStrip}>
-        <div className={styles.bookingInner}>
-          <h2>Ready to book your Las Vegas trip?</h2>
-          <p>Compare cheap flights to LAS, browse Strip hotels, and book tickets for shows and attractions.</p>
-          <Link href="/destination/lasvegas/bookings?tab=flights" className={styles.bookingBtn} aria-label="Book Las Vegas trip">Compare flights, hotels &amp; tickets</Link>
-        </div>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Ready to book your Las Vegas trip?"
+        text="Compare cheap flights to LAS, browse Strip hotels, and book tickets for shows and attractions."
+        href="/destination/lasvegas/bookings?tab=flights"
+        label="Compare flights, hotels &amp; tickets"
+      />
 
       <Footer />
     </main>

@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const days = [
@@ -38,11 +38,18 @@ const days = [
 export default function OrlandoItineraryClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Orlando 5-Day Itinerary" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book flights to MCO, park-area hotels, and theme park tickets →</span>
-        <Link href="/destination/orlando/bookings" className={styles.slimCtaBtn}>Book your trip</Link>
-      </div>
+      <Header links={[
+        { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
+        { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
+        { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
+      <BookingCTA
+        variant="slim"
+        text="Book flights to MCO, park-area hotels, and theme park tickets →"
+        href="/destination/orlando/bookings"
+        label="Book your trip"
+      />
       <section className={styles.hero}>
         <h1>Orlando 5-Day Itinerary</h1>
         <p>A practical day-by-day plan built around real park logistics — rope drop times, where queues build, and how to pace a week without burning out by day 3.</p>
@@ -61,11 +68,13 @@ export default function OrlandoItineraryClient() {
           </div>
         </section>
       ))}
-      <div className={styles.bookingStrip}>
-        <h2>Book your Orlando trip</h2>
-        <p>Cheap flights to MCO, park-area hotels, and skip-the-line tickets.</p>
-        <Link href="/destination/orlando/bookings" className={styles.bookingBtn}>Compare flights, hotels & tickets</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book your Orlando trip"
+        text="Cheap flights to MCO, park-area hotels, and skip-the-line tickets."
+        href="/destination/orlando/bookings"
+        label="Compare flights, hotels & tickets"
+      />
       <Footer />
     </main>
   );

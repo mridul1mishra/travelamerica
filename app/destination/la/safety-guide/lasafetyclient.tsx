@@ -1,7 +1,11 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import laWhyTrustData from "@/content/destination/la/safety-guide/whyTrustItems/whyTrustItems.json";
+import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
+import laFaqData from "@/content/destination/la/safety-guide/faq/faqsection.json";
 import styles from "@/app/destination/city-hub.module.css";
 
 const safetyTopics = [
@@ -15,8 +19,13 @@ const safetyTopics = [
 
 export default function LASafetyClient() {
   return (
-    <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Los Angeles Safety Guide" />
+    <main className={styles.container}>
+      <Header links={[
+        { href: "/destination/la/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/la/solo-trip-to-la", label: "Solo Trip to LA" },
+        { href: "/destination/la/safety-guide", label: "LA Safety" },
+        { href: "/destination/la/la-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Is Los Angeles Safe? Honest 2026 Guide</h1>
         <p>LA is safe for tourists in the major visitor areas. The risks are specific — car break-ins, a few neighborhoods to avoid on foot, and driving in heavy traffic. This guide tells you exactly what to watch for.</p>
@@ -25,26 +34,44 @@ export default function LASafetyClient() {
           <Link href="/destination/la/bookings" className={styles.secondaryCta}>Book your trip</Link>
         </div>
       </section>
-      <section className={styles.section} aria-labelledby="safety-topics-la">
-        <h2 id="safety-topics-la" className={styles.sectionTitle}>LA Safety: What You Need to Know</h2>
-        <p className={styles.sectionIntro}>Six things that actually matter for tourist safety in Los Angeles.</p>
+      <section aria-labelledby="safety-topics-la">
+        <h2 id="safety-topics-la">LA Safety: What You Need to Know</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>Six things that actually matter for tourist safety in Los Angeles.</p>
         <div className={styles.grid}>
           {safetyTopics.map(({ title, blurb }) => (
             <article key={title} className={styles.card}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{blurb}</p>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{blurb}</p>
             </article>
           ))}
         </div>
       </section>
-      <section className={`${styles.section} ${styles.altBg}`} aria-labelledby="emergency-la">
-        <h2 id="emergency-la" className={styles.sectionTitle}>Emergency Numbers</h2>
+      <section aria-labelledby="emergency-la">
+        <h2 id="emergency-la">Emergency Numbers</h2>
         <div className={styles.grid}>
-          <article className={styles.card}><h3 className={styles.cardTitle}>Emergency</h3><p className={styles.cardBody}>911 — police, fire, ambulance</p></article>
-          <article className={styles.card}><h3 className={styles.cardTitle}>Non-Emergency Police</h3><p className={styles.cardBody}>(877) 275-5273 — LAPD non-emergency line</p></article>
-          <article className={styles.card}><h3 className={styles.cardTitle}>Nearest Trauma Center</h3><p className={styles.cardBody}>Cedars-Sinai Medical Center: 8700 Beverly Blvd, West Hollywood — Level 1 trauma center</p></article>
+          <article className={styles.card}><h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>Emergency</h3><p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>911 — police, fire, ambulance</p></article>
+          <article className={styles.card}><h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>Non-Emergency Police</h3><p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>(877) 275-5273 — LAPD non-emergency line</p></article>
+          <article className={styles.card}><h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>Nearest Trauma Center</h3><p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>Cedars-Sinai Medical Center: 8700 Beverly Blvd, West Hollywood — Level 1 trauma center</p></article>
         </div>
       </section>
+      <WhyTrustThisGuide data={laWhyTrustData} />
+      <FAQAccordion faqs={laFaqData} />
+      
+      <BookingCTA
+        variant="full"
+        headline="Book your safe LA trip"
+        text="Compare hotels in Santa Monica, Beverly Hills, and West Hollywood — LA's safest areas for visitors."
+        href="/destination/la/bookings?tab=hotels&from=safety-guide"
+        label="Browse LA hotels"
+      />
+      
+      <BookingCTA
+        variant="full"
+        headline="Book your safe LA trip"
+        text="Compare hotels in Santa Monica, Beverly Hills, and West Hollywood — LA's safest areas for visitors."
+        href="/destination/la/bookings?tab=hotels&from=safety-guide"
+        label="Browse LA hotels"
+      />
       <Footer />
     </main>
   );

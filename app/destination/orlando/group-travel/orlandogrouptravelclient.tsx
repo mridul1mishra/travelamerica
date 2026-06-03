@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const groupTips = [
@@ -16,11 +16,18 @@ const groupTips = [
 export default function OrlandoGroupTravelClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Orlando Group Travel Guide" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book group park tickets, hotels and activities →</span>
-        <Link href="/destination/orlando/bookings?tab=activities" className={styles.slimCtaBtn}>Book group activities</Link>
-      </div>
+      <Header links={[
+        { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
+        { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
+        { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
+      <BookingCTA
+        variant="slim"
+        text="Book group park tickets, hotels and activities →"
+        href="/destination/orlando/bookings?tab=activities"
+        label="Book group activities"
+      />
       <section className={styles.hero}>
         <h1>Orlando Group Travel Guide</h1>
         <p>Orlando is one of America's most popular group destinations — and one of the most logistically complex. Vacation rentals, park ticket strategies, and transport planning make or break a group trip. This guide covers all of it.</p>
@@ -41,11 +48,13 @@ export default function OrlandoGroupTravelClient() {
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Book your Orlando group trip</h2>
-        <p>Group vacation rentals, bulk park tickets, and transport for Orlando.</p>
-        <Link href="/destination/orlando/bookings" className={styles.bookingBtn}>Book group travel</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book your Orlando group trip"
+        text="Group vacation rentals, bulk park tickets, and transport for Orlando."
+        href="/destination/orlando/bookings"
+        label="Book group travel"
+      />
       <Footer />
     </main>
   );

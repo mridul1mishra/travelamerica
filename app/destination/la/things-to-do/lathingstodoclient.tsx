@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const categories = [
@@ -15,12 +15,13 @@ const categories = [
 
 export default function LAThingsToDoClient() {
   return (
-    <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Things to Do in Los Angeles" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book skip-the-line tickets, tours and activity passes →</span>
-        <Link href="/destination/la/bookings?tab=activities" className={styles.slimCtaBtn}>See tickets & tours</Link>
-      </div>
+    <main className={styles.container}>
+      <Header links={[
+        { href: "/destination/la/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/la/solo-trip-to-la", label: "Solo Trip to LA" },
+        { href: "/destination/la/safety-guide", label: "LA Safety" },
+        { href: "/destination/la/la-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Things to Do in Los Angeles</h1>
         <p>LA rewards the prepared traveler. This guide covers what to prioritize across six categories — from free beach days and hilltop hikes to world-class museums — with realistic time estimates and the tips that actually matter.</p>
@@ -29,23 +30,31 @@ export default function LAThingsToDoClient() {
           <Link href="/destination/la/itinerary" className={styles.secondaryCta}>See 3-day itinerary</Link>
         </div>
       </section>
-      <section className={styles.section} aria-labelledby="categories-la">
-        <h2 id="categories-la" className={styles.sectionTitle}>What to Do in Los Angeles</h2>
-        <p className={styles.sectionIntro}>Six categories that cover the full range of what LA offers — prioritize by what matters most to you.</p>
+      <BookingCTA
+        variant="slim"
+        text="Book skip-the-line tickets, tours and activity passes →"
+        href="/destination/la/bookings?tab=activities"
+        label="See tickets & tours"
+      />
+      <section aria-labelledby="categories-la">
+        <h2 id="categories-la">What to Do in Los Angeles</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>Six categories that cover the full range of what LA offers — prioritize by what matters most to you.</p>
         <div className={styles.grid}>
           {categories.map(({ title, blurb, href }) => (
             <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{blurb}</p>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{blurb}</p>
             </Link>
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Ready to book Los Angeles activities?</h2>
-        <p>Skip-the-line tickets, guided tours, and activity passes — compare prices and book in advance.</p>
-        <Link href="/destination/la/bookings?tab=activities" className={styles.bookingBtn}>Browse activities</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Ready to book Los Angeles activities?"
+        text="Skip-the-line tickets, guided tours, and activity passes — compare prices and book in advance."
+        href="/destination/la/bookings?tab=activities"
+        label="Browse activities"
+      />
       <Footer />
     </main>
   );

@@ -1,7 +1,11 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import cityWhyTrustData from "@/content/destination/lasvegas/neighborhood-guide/whyTrustItems/whyTrustItems.json";
+import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
+import cityFaqData from "@/content/destination/lasvegas/neighborhood-guide/faq/faqsection.json";
 import styles from "@/app/destination/city-hub.module.css";
 
 const neighborhoods = [
@@ -17,11 +21,18 @@ const neighborhoods = [
 export default function LasVegasNeighborhoodGuideClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Las Vegas Neighborhood Guide" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Find hotels in your preferred Las Vegas area →</span>
-        <Link href="/destination/lasvegas/bookings?tab=hotels" className={styles.slimCtaBtn}>Browse hotels</Link>
-      </div>
+      <Header links={[
+        { href: "/destination/lasvegas/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/lasvegas/solo-trip-to-lasvegas", label: "Solo Trip to Las Vegas" },
+        { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
+        { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
+      <BookingCTA
+        variant="slim"
+        text="Find hotels in your preferred Las Vegas area →"
+        href="/destination/lasvegas/bookings?tab=hotels"
+        label="Browse hotels"
+      />
       <section className={styles.hero}>
         <h1>Las Vegas Neighborhood Guide</h1>
         <p>Las Vegas is more than the Strip — but where you stay shapes your entire trip. Mid-Strip is the default for a reason; Downtown is worth understanding; the suburbs exist for everyone else. Here is the full breakdown.</p>
@@ -43,11 +54,15 @@ export default function LasVegasNeighborhoodGuideClient() {
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Book hotels in the right Las Vegas area</h2>
-        <p>Compare Strip, Downtown, and off-Strip hotels — live prices and real reviews.</p>
-        <Link href="/destination/lasvegas/bookings?tab=hotels" className={styles.bookingBtn}>Browse Las Vegas hotels</Link>
-      </div>
+      <WhyTrustThisGuide data={cityWhyTrustData} />
+      <FAQAccordion faqs={cityFaqData} />
+      <BookingCTA
+        variant="full"
+        headline="Book hotels in the right Las Vegas area"
+        text="Compare Strip, Downtown, and off-Strip hotels — live prices and real reviews."
+        href="/destination/lasvegas/bookings?tab=hotels"
+        label="Browse Las Vegas hotels"
+      />
       <Footer />
     </main>
   );

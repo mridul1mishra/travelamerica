@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const landmarks = [
@@ -15,12 +15,13 @@ const landmarks = [
 
 export default function LALandmarkClient() {
   return (
-    <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Los Angeles Landmarks" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book skip-the-line tickets and guided landmark tours →</span>
-        <Link href="/destination/la/bookings?tab=activities" className={styles.slimCtaBtn}>Browse tours</Link>
-      </div>
+    <main className={styles.container}>
+      <Header links={[
+        { href: "/destination/la/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/la/solo-trip-to-la", label: "Solo Trip to LA" },
+        { href: "/destination/la/safety-guide", label: "LA Safety" },
+        { href: "/destination/la/la-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Los Angeles Landmarks</h1>
         <p>LA's most iconic sights — the Hollywood Sign, Griffith Observatory, the Getty, Santa Monica Pier, and more. What to expect at each, the honest cost breakdown, and how to avoid the tourist traps.</p>
@@ -29,24 +30,32 @@ export default function LALandmarkClient() {
           <Link href="/destination/la/itinerary" className={styles.secondaryCta}>See 3-day itinerary</Link>
         </div>
       </section>
-      <section className={styles.section} aria-labelledby="landmarks-la">
-        <h2 id="landmarks-la" className={styles.sectionTitle}>LA's Most Iconic Landmarks</h2>
-        <p className={styles.sectionIntro}>Six landmarks every first-time visitor should know about — with the honest details.</p>
+      <BookingCTA
+        variant="slim"
+        text="Book skip-the-line tickets and guided landmark tours →"
+        href="/destination/la/bookings?tab=activities"
+        label="Browse tours"
+      />
+      <section aria-labelledby="landmarks-la">
+        <h2 id="landmarks-la">LA&apos;s Most Iconic Landmarks</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>Six landmarks every first-time visitor should know about — with the honest details.</p>
         <div className={styles.grid}>
           {landmarks.map(({ title, blurb, cost }) => (
             <article key={title} className={styles.card}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{blurb}</p>
-              <p className={styles.cardMeta}>{cost}</p>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: "0 0 0.5rem" }}>{blurb}</p>
+              <p style={{ color: "#555", fontSize: "0.85rem", margin: 0 }}>{cost}</p>
             </article>
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Book Los Angeles tours and experiences</h2>
-        <p>Skip-the-line tickets and guided tours for LA's top sights.</p>
-        <Link href="/destination/la/bookings?tab=activities" className={styles.bookingBtn}>Browse LA activities</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book Los Angeles tours and experiences"
+        text="Skip-the-line tickets and guided tours for LA&apos;s top sights."
+        href="/destination/la/bookings?tab=activities"
+        label="Browse LA activities"
+      />
       <Footer />
     </main>
   );

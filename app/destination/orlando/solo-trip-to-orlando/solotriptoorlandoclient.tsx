@@ -1,7 +1,11 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import cityWhyTrustData from "@/content/destination/orlando/solo-trip-to-orlando/whyTrustItems/whyTrustItems.json";
+import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
+import cityFaqData from "@/content/destination/orlando/solo-trip-to-orlando/faq/faqsection.json";
 import styles from "@/app/destination/city-hub.module.css";
 
 const topics = [
@@ -16,11 +20,18 @@ const topics = [
 export default function SoloTripToOrlandoClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Solo Trip to Orlando" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book your solo Orlando trip — flights, hotels and park tickets →</span>
-        <Link href="/destination/orlando/bookings" className={styles.slimCtaBtn}>Book your trip</Link>
-      </div>
+      <Header links={[
+        { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
+        { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
+        { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
+      <BookingCTA
+        variant="slim"
+        text="Book your solo Orlando trip — flights, hotels and park tickets →"
+        href="/destination/orlando/bookings"
+        label="Book your trip"
+      />
       <section className={styles.hero}>
         <h1>Solo Trip to Orlando: Complete Guide</h1>
         <p>Orlando solo travel rewards the prepared visitor. Theme parks are objectively better with single-rider queues and no group compromise. Beyond the parks, the city has more to offer solo travelers than most people expect.</p>
@@ -41,11 +52,15 @@ export default function SoloTripToOrlandoClient() {
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Book your solo Orlando trip</h2>
-        <p>Flights to MCO, solo-friendly hotels, and park tickets — compare and book.</p>
-        <Link href="/destination/orlando/bookings" className={styles.bookingBtn}>Plan & book your Orlando trip</Link>
-      </div>
+      <WhyTrustThisGuide data={cityWhyTrustData} />
+      <FAQAccordion faqs={cityFaqData} />
+      <BookingCTA
+        variant="full"
+        headline="Book your solo Orlando trip"
+        text="Flights to MCO, solo-friendly hotels, and park tickets — compare and book."
+        href="/destination/orlando/bookings"
+        label="Plan & book your Orlando trip"
+      />
       <Footer />
     </main>
   );

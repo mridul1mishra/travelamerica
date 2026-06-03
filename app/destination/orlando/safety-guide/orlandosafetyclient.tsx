@@ -1,7 +1,11 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import cityWhyTrustData from "@/content/destination/orlando/safety-guide/whyTrustItems/whyTrustItems.json";
+import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
+import cityFaqData from "@/content/destination/orlando/safety-guide/faq/faqsection.json";
 import styles from "@/app/destination/city-hub.module.css";
 
 const safetyTopics = [
@@ -16,7 +20,12 @@ const safetyTopics = [
 export default function OrlandoSafetyClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Orlando Safety Guide" />
+      <Header links={[
+        { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
+        { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
+        { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Is Orlando Safe for Tourists? Honest 2026 Guide</h1>
         <p>The tourist zones in Orlando are among the safest in Florida. The real risks are heat, driving, and a few specific scams targeting visitors. Here is what you actually need to know.</p>
@@ -44,6 +53,16 @@ export default function OrlandoSafetyClient() {
           <article className={styles.card}><h3 className={styles.cardTitle}>Orlando Health (Main Hospital)</h3><p className={styles.cardBody}>52 W Underwood St — (321) 843-7000</p></article>
         </div>
       </section>
+      <WhyTrustThisGuide data={cityWhyTrustData} />
+      <FAQAccordion faqs={cityFaqData} />
+      
+      <BookingCTA
+        variant="full"
+        headline="Book your safe Orlando trip"
+        text="Hotels near Disney and Universal — Orlando's safest and most convenient areas for visitors."
+        href="/destination/orlando/bookings?tab=hotels&from=safety-guide"
+        label="Browse Orlando hotels"
+      />
       <Footer />
     </main>
   );

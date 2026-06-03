@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const days = [
@@ -27,12 +27,13 @@ const days = [
 
 export default function LASoloItineraryClient() {
   return (
-    <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Los Angeles Solo Travel Itinerary" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book solo travel activities and skip-the-line tickets →</span>
-        <Link href="/destination/la/bookings?tab=activities" className={styles.slimCtaBtn}>Book activities</Link>
-      </div>
+    <main className={styles.container}>
+      <Header links={[
+        { href: "/destination/la/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/la/solo-trip-to-la", label: "Solo Trip to LA" },
+        { href: "/destination/la/safety-guide", label: "LA Safety" },
+        { href: "/destination/la/la-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Solo Trip to Los Angeles: 3-Day Itinerary</h1>
         <p>LA is an excellent solo destination once you understand its geography. This itinerary prioritizes walkable areas, solo-friendly dining, and the sights that reward individual pacing over group logistics.</p>
@@ -41,23 +42,31 @@ export default function LASoloItineraryClient() {
           <Link href="/destination/la/safety-guide" className={styles.secondaryCta}>LA safety guide</Link>
         </div>
       </section>
+      <BookingCTA
+        variant="slim"
+        text="Book solo travel activities and skip-the-line tickets →"
+        href="/destination/la/bookings?tab=activities"
+        label="Book activities"
+      />
       {days.map(({ day, title, items }) => (
-        <section key={day} className={styles.section} aria-labelledby={`day-la-solo-${day}`}>
-          <h2 id={`day-la-solo-${day}`} className={styles.sectionTitle}>{day}: {title}</h2>
+        <section key={day} aria-labelledby={`day-la-solo-${day}`}>
+          <h2 id={`day-la-solo-${day}`}>{day}: {title}</h2>
           <div className={styles.grid}>
             {items.map((item, i) => (
               <article key={i} className={styles.card}>
-                <p className={styles.cardBody}>{item}</p>
+                <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{item}</p>
               </article>
             ))}
           </div>
         </section>
       ))}
-      <div className={styles.bookingStrip}>
-        <h2>Book your solo LA trip</h2>
-        <p>Flights, solo-friendly hotels, and activity tickets for Los Angeles.</p>
-        <Link href="/destination/la/bookings" className={styles.bookingBtn}>Plan & book your trip</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book your solo LA trip"
+        text="Flights, solo-friendly hotels, and activity tickets for Los Angeles."
+        href="/destination/la/bookings"
+        label="Plan & book your trip"
+      />
       <Footer />
     </main>
   );

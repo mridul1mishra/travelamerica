@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const foodCategories = [
@@ -15,8 +15,13 @@ const foodCategories = [
 
 export default function LAFoodClient() {
   return (
-    <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Best Food in Los Angeles" />
+    <main className={styles.container}>
+      <Header links={[
+        { href: "/destination/la/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/la/solo-trip-to-la", label: "Solo Trip to LA" },
+        { href: "/destination/la/safety-guide", label: "LA Safety" },
+        { href: "/destination/la/la-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Best Food in Los Angeles</h1>
         <p>LA has one of the most diverse food cities in the world — but the best spots require knowing where to look. This guide cuts through the tourist traps and covers where locals actually eat.</p>
@@ -25,23 +30,25 @@ export default function LAFoodClient() {
           <Link href="/destination/la/neighborhood-guide" className={styles.secondaryCta}>Explore neighborhoods</Link>
         </div>
       </section>
-      <section className={styles.section} aria-labelledby="food-la">
-        <h2 id="food-la" className={styles.sectionTitle}>Where to Eat in LA</h2>
-        <p className={styles.sectionIntro}>Six categories covering the full range — from $5 street tacos to $100 tasting menus.</p>
+      <section aria-labelledby="food-la">
+        <h2 id="food-la">Where to Eat in LA</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>Six categories covering the full range — from $5 street tacos to $100 tasting menus.</p>
         <div className={styles.grid}>
           {foodCategories.map(({ title, blurb, href }) => (
             <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{blurb}</p>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{blurb}</p>
             </Link>
           ))}
         </div>
       </section>
-      <div className={styles.bookingStrip}>
-        <h2>Book LA restaurant reservations</h2>
-        <p>Reserve tables at top LA restaurants — no more showing up to a two-hour wait.</p>
-        <Link href="/destination/la/bookings?tab=restaurants" className={styles.bookingBtn}>Browse restaurants</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book LA restaurant reservations"
+        text="Reserve tables at top LA restaurants — no more showing up to a two-hour wait."
+        href="/destination/la/bookings?tab=restaurants"
+        label="Browse restaurants"
+      />
       <Footer />
     </main>
   );

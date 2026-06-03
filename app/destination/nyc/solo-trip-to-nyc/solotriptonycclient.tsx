@@ -23,7 +23,7 @@ import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
 import Link from 'next/link';
 import SoloNycQa from '@/app/components/destination/solotriptonyc/aisnippet/cardqanda';
 import SoloTripNarrative from './components/solotripnarrative/SoloTripNarrative';
-import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
+import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
 
 
 export default function SoloTripNYCClient() {

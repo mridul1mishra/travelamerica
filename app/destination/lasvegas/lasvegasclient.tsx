@@ -2,7 +2,7 @@
 
 import React, { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import Header from "../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import "@/app/components/majorcities/flightsection/propertylisting.css";
 import styles from "@/app/destination/nyc/booking/booking.module.css";
@@ -87,10 +87,12 @@ function LasVegasClientInner() {
 
   return (
     <div className="App">
-      <Header
-        image="/data/majorcities/lasvegas/assets/lasvegas.webp"
-        bannerText="Book your Las Vegas trip"
-      />
+      <Header links={[
+        { href: "/destination/lasvegas/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/lasvegas/solo-trip-to-lasvegas", label: "Solo Trip to Las Vegas" },
+        { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
+        { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
 
       <script
         type="application/ld+json"

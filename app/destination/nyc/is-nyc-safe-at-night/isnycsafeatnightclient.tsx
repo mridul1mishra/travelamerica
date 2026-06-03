@@ -17,7 +17,7 @@ import data from "./is-nyc-safe-at-night.json";
 import type { IsNycSafeAtNightPage } from "./components/typesafeatnight";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
-import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
+import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
 
 export default function Page() {
     

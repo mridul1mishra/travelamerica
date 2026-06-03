@@ -1,7 +1,11 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import cityWhyTrustData from "@/content/destination/lasvegas/is-lasvegas-safe-at-night/whyTrustItems/whyTrustItems.json";
+import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
+import cityFaqData from "@/content/destination/lasvegas/is-lasvegas-safe-at-night/faq/faqsection.json";
 import styles from "@/app/destination/city-hub.module.css";
 
 const nightSafety = [
@@ -16,7 +20,12 @@ const nightSafety = [
 export default function IsLasVegasSafeAtNightClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Is Las Vegas Safe at Night?" />
+      <Header links={[
+        { href: "/destination/lasvegas/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/lasvegas/solo-trip-to-lasvegas", label: "Solo Trip to Las Vegas" },
+        { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
+        { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
       <section className={styles.hero}>
         <h1>Is Las Vegas Safe at Night? Honest 2026 Guide</h1>
         <p>The Strip is one of the most monitored and policed public spaces in America. Las Vegas is safe at night for tourists who stay in the main tourist corridors — and riskier in specific off-Strip areas that tourists have no reason to visit.</p>
@@ -45,6 +54,16 @@ export default function IsLasVegasSafeAtNightClient() {
           <article className={styles.card}><h3 className={styles.cardTitle}>University Medical Center</h3><p className={styles.cardBody}>1800 W Charleston Blvd — nearest Level 1 trauma center</p></article>
         </div>
       </section>
+      <WhyTrustThisGuide data={cityWhyTrustData} />
+      <FAQAccordion faqs={cityFaqData} />
+      
+      <BookingCTA
+        variant="full"
+        headline="Book your Las Vegas trip"
+        text="Compare mid-Strip, South Strip, and Downtown hotels — with full nightly cost including resort fees."
+        href="/destination/lasvegas/bookings?tab=hotels&from=is-lasvegas-safe-at-night"
+        label="Browse Las Vegas hotels"
+      />
       <Footer />
     </main>
   );

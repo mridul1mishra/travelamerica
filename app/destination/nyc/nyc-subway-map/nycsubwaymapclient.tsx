@@ -7,7 +7,7 @@ import { StepList } from "./components/steplist/steplist";
 import { ScenarioCards } from "./components/ScenarioCards/ScenarioCards";
 import styles from "./nycsubwaymap.module.css";
 import {SafetyChecklist} from "./components/SafetyChecklist/SafetyChecklist";
-import BookingCTA from '@/app/destination/nyc/components/BookingCTA/BookingCTA';
+import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
 
 const data: HighIntentPageBase = require("./nyc-subway-map.json");
 import type {HighIntentPageBase} from "./nyc-subway-map";

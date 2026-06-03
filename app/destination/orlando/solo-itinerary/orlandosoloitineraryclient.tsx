@@ -1,7 +1,7 @@
-// Server Component — no hooks used.
 import Link from "next/link";
-import Header from "../../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const days = [
@@ -28,11 +28,18 @@ const days = [
 export default function OrlandoSoloItineraryClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Orlando Solo Travel Itinerary" />
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Book solo park tickets, tours and activities →</span>
-        <Link href="/destination/orlando/bookings?tab=activities" className={styles.slimCtaBtn}>Book activities</Link>
-      </div>
+      <Header links={[
+        { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
+        { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
+        { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
+        { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
+      ]} />
+      <BookingCTA
+        variant="slim"
+        text="Book solo park tickets, tours and activities →"
+        href="/destination/orlando/bookings?tab=activities"
+        label="Book activities"
+      />
       <section className={styles.hero}>
         <h1>Orlando Solo Travel Itinerary: 3 Days</h1>
         <p>Orlando is genuinely better solo in some ways — single-rider queues at Universal cut wait times dramatically, and you set the pace at every park. This itinerary makes the most of those advantages.</p>
@@ -53,11 +60,13 @@ export default function OrlandoSoloItineraryClient() {
           </div>
         </section>
       ))}
-      <div className={styles.bookingStrip}>
-        <h2>Book your solo Orlando trip</h2>
-        <p>Flights to MCO, solo-friendly hotels, and park tickets — all in one place.</p>
-        <Link href="/destination/orlando/bookings" className={styles.bookingBtn}>Plan & book your trip</Link>
-      </div>
+      <BookingCTA
+        variant="full"
+        headline="Book your solo Orlando trip"
+        text="Flights to MCO, solo-friendly hotels, and park tickets — all in one place."
+        href="/destination/orlando/bookings"
+        label="Plan & book your trip"
+      />
       <Footer />
     </main>
   );
