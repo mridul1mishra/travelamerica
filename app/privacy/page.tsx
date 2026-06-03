@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Footer from "../components/Header/Footer/footer";
 import SimpleHeader from "../components/Header/SimpleHeader";
 import styles from "./privacy.module.css";
@@ -26,6 +27,16 @@ const privacyPageSchema = {
   },
 };
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Travels Americas",
+  description: "Privacy policy for Travels Americas — how we collect, use, and protect your data on our travel guides site.",
+  alternates: {
+    canonical: "https://www.travelsamericas.com/privacy",
+  },
+};
+
 export default function PrivacyPage() {
 return (
 <>
@@ -33,7 +44,7 @@ return (
 <SimpleHeader />
  <main className={styles.container}>
       <section className={styles.banner}>
-        <img className={styles.imagebanner} src="/data/majorcities/orlando/assets/privacybolicybanner.png" alt="Privacy policy banner" />
+        <Image className={styles.imagebanner} src="/data/majorcities/orlando/assets/privacybolicybanner.webp" alt="Privacy policy banner" width={1200} height={400} />
         <h1 className={styles.bannerText}>Privacy Policy</h1>
       </section>
 

@@ -1,8 +1,8 @@
 
 
 export const generateMetadata = () => ({
-  title: 'Best Areas to Stay in NYC (Safe and Central Neighborhoods) – 2026',
-  description:  'Unsure where to stay in NYC? Discover the safest and best areas for tourists, first‑time visitors, and easy transit in New York City.',
+  title: "Best Areas to Stay in NYC 2026 | Safe & Central",
+  description:  "Unsure where to stay in NYC? Discover the safest and best areas for tourists, first-time visitors, and solo travelers.",
   robots: {
     index: true,
     follow: true,

@@ -8,7 +8,7 @@ import styles from './nyc.module.css';
 export const metadata = {
   title: 'New York City Travel Guide | Plan your NYC trip',
   description:
-    'Plan your New York City trip by choosing where to stay, what to see, and how to explore. Compare neighborhoods, itineraries, and travel options in one place.',
+    "Plan your New York City trip — compare neighborhoods, itineraries, and travel options to choose where to stay and what to see.",
   alternates: {
     canonical: 'https://www.travelsamericas.com/destination/nyc',
   },

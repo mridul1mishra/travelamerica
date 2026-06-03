@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Footer from "../components/Header/Footer/footer";
 import SimpleHeader from "../components/Header/SimpleHeader";
 import styles from "./company.module.css";
@@ -44,6 +45,16 @@ const aboutPageSchema = {
   ],
 };
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Travels Americas | Who We Are",
+  description: "About Travels Americas — our editorial standards, mission, and the team behind practical US city travel guides.",
+  alternates: {
+    canonical: "https://www.travelsamericas.com/about",
+  },
+};
+
 export default function CompanyDetailsPage() {
   return (
     <>
@@ -52,7 +63,7 @@ export default function CompanyDetailsPage() {
 
       <main className={styles.container}>
         <section className={styles.banner}>
-          <img className={styles.imagebanner} src="/data/aboutus.jpeg" alt="About Travels Americas" />
+          <Image className={styles.imagebanner} src="/data/aboutus.webp" alt="About Travels Americas" width={1200} height={400} />
           <h1 className={styles.bannerText}>About Travels Americas</h1>
         </section>
 

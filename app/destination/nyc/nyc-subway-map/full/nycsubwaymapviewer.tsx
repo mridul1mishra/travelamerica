@@ -28,6 +28,8 @@ export default function NYCSubwayMapViewer() {
                 src="/data/majorcities/newyork/assets/map/nyc-subway-map.png"
                 alt="NYC Subway Map"
                 className={styles.mapImage}
+                width={3508}
+                height={2480}
               />
             </TransformComponent>
           </>

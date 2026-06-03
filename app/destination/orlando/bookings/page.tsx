@@ -1,13 +1,20 @@
 export const generateMetadata = () => ({
-  title: 'Book Your Orlando Trip | Cheap Flights to MCO, Hotels & Things to Do',
+  title: "Book Your Orlando Trip | Flights, Hotels & More",
   description:
-    'Plan and book your Orlando trip in one place — compare the cheapest flights to MCO from major US cities, browse top Orlando hotels, and find the best things to do.',
+    "Plan and book your Orlando trip — compare cheap flights to MCO, browse top hotels, and find the best things to do.",
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
     canonical: 'https://www.travelsamericas.com/destination/orlando/bookings',
+  },
+  openGraph: {
+    title: 'Book Your Orlando Trip | Cheap Flights to MCO, Hotels & Things to Do',
+    description: 'Plan and book your Orlando trip — compare the cheapest flights to MCO, browse top Orlando hotels, and find the best things to do.',
+    url: 'https://www.travelsamericas.com/destination/orlando/bookings',
+    type: 'website',
+    images: ['https://www.travelsamericas.com/data/majorcities/orlando/assets/orlando.jpeg'],
   },
   twitter: {
     card: 'summary_large_image',
@@ -39,22 +46,4 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Book your trip",
-      "item": "https://www.travelsamericas.com/destination/orlando/bookings",
-    },
-  ],
-};
-
-export default function OrlandoBookingsPage() {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <Suspense fallback={<div>Loading...</div>}>
-        <OrlandoBookingsClient />
-      </Suspense>
-    </>
-  );
-}
+   

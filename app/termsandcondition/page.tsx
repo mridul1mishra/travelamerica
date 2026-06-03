@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Footer from "../components/Header/Footer/footer";
 import SimpleHeader from "../components/Header/SimpleHeader";
 import styles from "../termsandcondition/termsstyles.module.css";
@@ -26,6 +27,16 @@ const termsPageSchema = {
   },
 };
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | Travels Americas",
+  description: "Terms and conditions for using Travels Americas — rules, disclaimers, and user responsibilities for our travel content.",
+  alternates: {
+    canonical: "https://www.travelsamericas.com/termsandcondition",
+  },
+};
+
 export default function TermsPage() {
 return (
 <>
@@ -33,7 +44,7 @@ return (
 <SimpleHeader />
  <main className={styles.container}>
       <section className={styles.banner}>
-        <img className={styles.imagebanner} src="/data/terms-and-condition.png" alt="Terms of service banner" />
+        <Image className={styles.imagebanner} src="/data/terms-and-condition.webp" alt="Terms of service banner" width={1200} height={400} />
         <h1 className={styles.bannerText}>Terms of Service — Travels Americas</h1>
       </section>
 

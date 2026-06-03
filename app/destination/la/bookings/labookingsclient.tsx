@@ -114,6 +114,8 @@ export default function LABookingsClient() {
         </ol>
       </nav>
 
+      <h1 className={styles.relatedHeading}>Book Your Los Angeles Trip</h1>
+
       <div className={styles.tabBar} role="tablist" aria-label="Booking options">
         {TABS.map((tab) => (
           <button key={tab.key} role="tab" aria-selected={activeTab === tab.key}
@@ -132,14 +134,14 @@ export default function LABookingsClient() {
               <div className="flight-row header">{header.map((h, i) => <div key={i} className="cell">{h}</div>)}</div>
               {rows.length === 0 ? <p className={styles.emptyState}>Live flight prices are being updated — check back soon.</p> : rows.map((row, idx) => (
                 <div key={idx} className={`flight-row ${row.highlight ? "highlight" : ""}`}>
-                  <div className="cell airline"><img src={row.airline.logo} alt={row.airline.name} className="image" /></div>
+                  <div className="cell airline"><img src={row.airline.logo} alt={row.airline.name} className="image" width={32} height={32} /></div>
                   <div className="cell"><div>{row.departure.time}</div><small>{row.departure.city}</small>{row.departure.date && <small className={styles.flightDate}>{row.departure.date}</small>}</div>
                   <div className="cell"><div>{row.arrival.time}</div><small>{row.arrival.city}</small></div>
                   <div className="cell">{row.duration}</div>
                   <div className="cell price">{row.price}</div>
                   <div className="cell"><a href={row.buttonUrl} className="btn">{row.buttonText}</a></div>
                   <div className="cell mobile-flight-stack">
-                    <div className="airline-row"><img src={row.airline.logo} alt={row.airline.name} className="airline-logo" /><span className="airline-name">{row.airline.name}</span></div>
+                    <div className="airline-row"><img src={row.airline.logo} alt={row.airline.name} className="airline-logo" width={32} height={32} /><span className="airline-name">{row.airline.name}</span></div>
                     <div className="time-city-row">
                       <div className="segment"><div className="time">{row.departure.time}</div><small className="city">{row.departure.city}</small>{row.departure.date && <small className={styles.flightDate}>{row.departure.date}</small>}</div>
                       <div className="segment"><div className="time">{row.arrival.time}</div><small className="city">{row.arrival.city}</small></div>
@@ -161,7 +163,7 @@ export default function LABookingsClient() {
             <div className={styles.actGrid}>
               {hotels.map((h, i) => (
                 <a className={styles.actCard} key={i} href={h.url} target="_blank" rel="noopener noreferrer">
-                  <div className={styles.actImageWrap}><img src={h.img} alt={h.title} className={styles.actImage} /><span className={styles.actCategory}>Hotel</span></div>
+                  <div className={styles.actImageWrap}><img src={h.img} alt={h.title} className={styles.actImage} width={300} height={200} /><span className={styles.actCategory}>Hotel</span></div>
                   <div className={styles.actBody}>
                     <h3 className={styles.actTitle}>{h.title}</h3>
                     {h.area && <p className={styles.actArea}>{h.area}</p>}
@@ -188,7 +190,7 @@ export default function LABookingsClient() {
             <div className={styles.actGrid}>
               {activities.map((a, i) => (
                 <a className={styles.actCard} key={i} href={a.url} target="_blank" rel="noopener noreferrer">
-                  <div className={styles.actImageWrap}><img src={a.img} alt={a.title} className={styles.actImage} />{a.category && <span className={styles.actCategory}>{a.category}</span>}</div>
+                  <div className={styles.actImageWrap}><img src={a.img} alt={a.title} className={styles.actImage} width={300} height={200} />{a.category && <span className={styles.actCategory}>{a.category}</span>}</div>
                   <div className={styles.actBody}>
                     <h3 className={styles.actTitle}>{a.title}</h3>
                     <div className={styles.actMeta}>
@@ -232,11 +234,4 @@ export default function LABookingsClient() {
                 </ul>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  );
-}
+        

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./SectionSafestNeighborhoods.module.css";
 import TipBox from "./TipBox";
 import WarningBox from "./warningbox";
@@ -30,7 +31,7 @@ export default function SectionSafestNeighborhoods() {
              <TipBox> Stay on main avenues like Broadway or Amsterdam at night — they’re brighter and have more foot traffic. </TipBox>
         </div>
         <div className={styles.mapCol}>
-            <img src="/destination/bestareatostay/mini-map.png" alt="Mini-map of Upper West Side" className={styles.mapImage} />
+            <Image src="/destination/bestareatostay/mini-map.png" alt="Mini-map of Upper West Side" className={styles.mapImage} width={600} height={400} />
         </div> 
     </div>
     <WarningBox>

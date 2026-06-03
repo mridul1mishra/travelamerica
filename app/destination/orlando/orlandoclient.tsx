@@ -162,7 +162,7 @@ export default function OrlandoClient() {
                 rows.map((row, idx) => (
                   <div key={idx} className={`flight-row ${row.highlight ? "highlight" : ""}`}>
                     <div className="cell airline">
-                      <img src={row.airline.logo} alt={row.airline.name} className="image" />
+                      <img src={row.airline.logo} alt={row.airline.name} className="image" width={32} height={32} />
                     </div>
                     <div className="cell">
                       <div>{row.departure.time}</div>
@@ -180,7 +180,7 @@ export default function OrlandoClient() {
                     </div>
                     <div className="cell mobile-flight-stack">
                       <div className="airline-row">
-                        <img src={row.airline.logo} alt={row.airline.name} className="airline-logo" />
+                        <img src={row.airline.logo} alt={row.airline.name} className="airline-logo" width={32} height={32} />
                         <span className="airline-name">{row.airline.name}</span>
                       </div>
                       <div className="time-city-row">
@@ -228,7 +228,7 @@ export default function OrlandoClient() {
                   rel="noopener noreferrer"
                 >
                   <div className={styles.actImageWrap}>
-                    <img src={h.img} alt={h.title} className={styles.actImage} />
+                    <img src={h.img} alt={h.title} className={styles.actImage} width={300} height={200} />
                     <span className={styles.actCategory}>Hotel</span>
                   </div>
                   <div className={styles.actBody}>
@@ -277,7 +277,7 @@ export default function OrlandoClient() {
                   rel="noopener noreferrer"
                 >
                   <div className={styles.actImageWrap}>
-                    <img src={a.img} alt={a.title} className={styles.actImage} />
+                    <img src={a.img} alt={a.title} className={styles.actImage} width={300} height={200} />
                     {a.category && <span className={styles.actCategory}>{a.category}</span>}
                   </div>
                   <div className={styles.actBody}>

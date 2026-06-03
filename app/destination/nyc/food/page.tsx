@@ -1,6 +1,6 @@
 export const generateMetadata = () => ({
-  title: 'Solo Travel NYC: Best Dining Spots & Food Halls for Exploring Alone',
-  description:  'Plan your solo NYC adventure with tips on safety, packExplore the best solo dining spots in NYC, from cozy counters to vibrant food halls. Savor iconic bagels, ramen, and more for the perfect solo meal!',
+  title: "Best Solo Dining in NYC 2026 | Food Halls & Spots",
+  description:  "Best solo dining spots in NYC — food halls, counter seats, ramen bars, and where to eat alone without awkwardness.",
   robots: {
     index: true,
     follow: true,

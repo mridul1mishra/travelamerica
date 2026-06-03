@@ -8,9 +8,9 @@ import NeighborhoodguideClient from "./neighborhoodguide";
 ========================= */
 export const metadata = {
   title:
-    'NYC Neighborhood Guide – Best Areas to Stay & Explore for Tourists',
+    "NYC Neighborhood Guide 2026 | Best Tourist Areas",
   description:
-    'Explore New York City neighborhoods with our NYC neighborhood guide for tourists. Compare areas by travel style, sightseeing, safety, and convenience to choose where to stay.',
+    "Explore New York City neighborhoods — compare areas by transit, safety, vibe, and price to find where to stay or visit.",
   alternates: {
     canonical:
       'https://www.travelsamericas.com/destination/nyc/neighborhood-guide',

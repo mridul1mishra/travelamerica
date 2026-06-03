@@ -2,7 +2,7 @@ import Script from "next/script";
 
 export const generateMetadata = () => ({
   title: 'Solo Trip to NYC 2026: What First-Timers Need to Know',
-  description:  'A practical NYC solo travel guide: safest areas, transit tips, daily costs, and a 3-day itinerary. Written for first-timers who want honest answers, not hype.',
+  description:  "A practical NYC solo travel guide: safest areas, transit tips, daily costs, and a 3-day itinerary for first-timers.",
   robots: {
     index: true,
     follow: true,

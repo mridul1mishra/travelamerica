@@ -5,7 +5,7 @@ import ClientPage from "./solofemaletravelguideclient";
 
 export const metadata = {
   title: "New York City Safety for Solo Female Travelers (2026)",
-  description: "A practical NYC safety guide for solo women: safest neighborhoods, subway tips after dark, what to wear, real scenarios, and emergency steps you can use today.", 
+  description: "Practical NYC safety guide for solo women: safest neighborhoods, subway tips after dark, and what to watch out for.", 
   alternates: { 
     canonical: "https://www.travelsamericas.com/destination/nyc/nyc-female-solo-travel-guide"
    },

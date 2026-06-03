@@ -1,13 +1,20 @@
 export const generateMetadata = () => ({
-  title: 'Book Your Las Vegas Trip | Cheap Flights to LAS, Hotels & Things to Do',
+  title: "Book Your Las Vegas Trip | Flights, Hotels & More",
   description:
-    'Plan and book your Las Vegas trip in one place — compare the cheapest flights to LAS from major US cities, browse top Las Vegas hotels, and find the best things to do.',
+    "Plan and book your Las Vegas trip — compare cheap flights to LAS, browse top hotels, and find the best things to do.",
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
     canonical: 'https://www.travelsamericas.com/destination/lasvegas/bookings',
+  },
+  openGraph: {
+    title: 'Book Your Las Vegas Trip | Cheap Flights to LAS, Hotels & Things to Do',
+    description: 'Plan and book your Las Vegas trip — compare the cheapest flights to LAS, browse top Las Vegas hotels, and find the best things to do.',
+    url: 'https://www.travelsamericas.com/destination/lasvegas/bookings',
+    type: 'website',
+    images: ['https://www.travelsamericas.com/data/majorcities/lasvegas/assets/lasvegas.jpeg'],
   },
   twitter: {
     card: 'summary_large_image',
@@ -38,23 +45,4 @@ const breadcrumbSchema = {
     },
     {
       "@type": "ListItem",
-      "position": 3,
-      "name": "Book your trip",
-      "item": "https://www.travelsamericas.com/destination/lasvegas/bookings",
-    },
-  ],
-};
-
-export default function LasVegasBookingsPage() {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <Suspense fallback={<div>Loading...</div>}>
-        <LasVegasBookingsClient />
-      </Suspense>
-    </>
-  );
-}
+      "position": 

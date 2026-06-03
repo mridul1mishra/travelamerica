@@ -1,6 +1,6 @@
 export const generateMetadata = () => ({
   title: 'NYC Group Travel Guide 2026: Itinerary, Landmarks & Dining',
-  description: 'The complete NYC group travel guide — a 3-day itinerary, top landmarks by borough (Manhattan, Brooklyn, Bronx), group dining picks, plus safety and packing tips.',
+  description: "The complete NYC group travel guide — a 3-day itinerary, top landmarks by borough, and dining tips for groups.",
   alternates: {
       canonical: 'https://www.travelsamericas.com/destination/nyc/group-travel',
     },

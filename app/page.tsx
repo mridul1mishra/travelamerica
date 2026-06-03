@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Travels Americas | Discover Iconic Cities to Visit",
-  description: "Discover carefully selected city guides for Las Vegas, Orlando, New York, and Los Angeles. Explore culture, food, and attractions with insider insights",
+  description: "Discover curated city guides for Las Vegas, Orlando, New York, and Los Angeles. Explore culture, food, and attractions.",
   alternates: {
     canonical: "https://www.travelsamericas.com/",
   },

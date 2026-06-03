@@ -29,6 +29,8 @@ export default function Hero({ title, subtitle, hero_image, breadcrumbs, updated
         src={hero_image}
         alt="NYC Subway"
         className={styles.heroImage}
+        width={1200}
+        height={630}
       />
 
       <p className={styles.updatedOn}>Updated on {updated_on}</p>

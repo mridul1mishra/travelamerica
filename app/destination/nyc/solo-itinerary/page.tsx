@@ -1,6 +1,6 @@
 export const generateMetadata = () => ({
-  title: 'Solo Trip to NYC: 2026 Safety, Budget & 3‑Day Vibe Guide | Travels Americas',
-  description:  'Explore NYC solo with confidence. This 2026 guide covers safety tips, smart budgeting, local vibes, and a smooth 3‑day plan for first‑time solo travelers',
+  title: "Solo Trip to NYC 2026 | 3-Day Safety & Budget Guide",
+  description:  "Explore NYC solo with confidence. 2026 guide covering safety tips, smart budgeting, local vibes, and a 3-day itinerary.",
   robots: {
     index: true,
     follow: true,

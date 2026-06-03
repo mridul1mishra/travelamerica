@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./neighborhoodrankingcard.module.css";
 
 export default function NeighborhoodRankingCards() {
@@ -6,7 +7,7 @@ export default function NeighborhoodRankingCards() {
     rank: "#1 Safest", 
     name: "Upper West Side", 
     why: "NYC’s safest, calmest, most walkable base for solo travelers.", 
-    image: "/destination/uws.png", 
+    image: "/destination/uws.webp",
     color: "var(--tint-green)", 
     safety: "🟢 Very Safe", 
     vibe: "Calm, residential, museum‑rich", 
@@ -20,7 +21,7 @@ export default function NeighborhoodRankingCards() {
     rank: "#2 Best for First‑Timers", 
     name: "Midtown East", 
     why: "Central, convenient, and perfect for sightseeing without stress.", 
-    image: "/destination/midtown-east.png", 
+    image: "/destination/midtown-east.webp",
     color: "var(--tint-blue)", 
     safety: "🟢 Safe", 
     vibe: "Central, convenient, business-heavy", 
@@ -34,7 +35,7 @@ export default function NeighborhoodRankingCards() {
     rank: "#3 Best Nightlife", 
     name: "Williamsburg", 
     why: "Trendy, social, and packed with food, bars, and waterfront views.", 
-    image: "/destination/williamsburg.png", 
+    image: "/destination/williamsburg.webp",
     color: "var(--tint-purple)", 
     safety: "🟡 Safe but lively", 
     vibe: "Trendy, artsy, nightlife-heavy", 
@@ -48,7 +49,7 @@ export default function NeighborhoodRankingCards() {
     rank: "#4 Best Budget", 
     name: "Long Island City", 
     why: "Modern, quiet, and the best value hotels near Manhattan.", 
-    image: "/destination/lic.png", 
+    image: "/destination/lic.webp",
     color: "var(--tint-yellow)", 
     safety: "🟢 Safe", 
     vibe: "Modern, quiet, budget-friendly", 
@@ -68,7 +69,7 @@ export default function NeighborhoodRankingCards() {
             {neighborhoods.map((n) => ( 
                 <div key={n.id} id={n.id} className={styles.card}>
                     <div className={styles.imageWrapper} style={{ backgroundColor: n.color }}> 
-                        <img src={n.image} alt={n.name} className={styles.image} /> 
+                        <Image src={n.image} alt={n.name} className={styles.image} width={1200} height={800} style={{ objectFit: "cover" }} />
                         <span className={styles.badge}>{n.rank}</span> 
                     </div> 
                     <div className={styles.content}> 

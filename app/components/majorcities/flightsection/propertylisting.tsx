@@ -57,7 +57,7 @@ const Propertylisting: React.FC<SectionsProps> = ({ content, active, hotels, cru
               <div key={idx} className={`flight-row ${row.highlight ? "highlight" : ""}`}>
                 {/* Desktop layout */}
                 <div className="cell airline">
-                  <img src={row.airline.logo} alt={row.airline.name} className="image" />
+                  <img src={row.airline.logo} alt={row.airline.name} className="image" width={32} height={32} />
                 </div>
                 <div className="cell">
                   <div>{row.departure.time}</div>
@@ -75,7 +75,7 @@ const Propertylisting: React.FC<SectionsProps> = ({ content, active, hotels, cru
                 {/* Mobile-only stacked layout */}
                 <div className="cell mobile-flight-stack">
                   <div className="airline-row">
-                    <img src={row.airline.logo} alt={row.airline.name} className="airline-logo" />
+                    <img src={row.airline.logo} alt={row.airline.name} className="airline-logo" width={32} height={32} />
                     <span className="airline-name">{row.airline.name}</span>
                   </div>
 
@@ -137,7 +137,7 @@ const Propertylisting: React.FC<SectionsProps> = ({ content, active, hotels, cru
             {hotels.map((c, i) => (
               <div className="cruise-card" key={i}>
                 <div className="card-image">
-                  <img src={c.img} alt={c.title} />
+                  <img src={c.img} alt={c.title} width={300} height={200} />
                 </div>
                 <div className="card-content">
                   <h3>{c.title}</h3>
@@ -174,7 +174,7 @@ const Propertylisting: React.FC<SectionsProps> = ({ content, active, hotels, cru
           {cruises.map((c, i) => (
             <div className="cruise-card" key={i}>
               <div className="card-image">
-                <img src={c.img} alt={c.title} />
+                <img src={c.img} alt={c.title} width={300} height={200} />
               </div>
               <div className="card-content">
                 <h3>{c.title}</h3>

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "NYC Subway Safety Guide (2026) — Practical Tips for Travelers & Daily Riders", 
-  description: "A clear, scenario‑driven NYC Subway Safety Guide covering core principles, emergency steps, etiquette, tools, and neighborhood insights for 2026.",
+  title: "NYC Subway Safety Guide 2026 | Tips for Travelers", 
+  description: "A practical NYC Subway Safety Guide covering core safety principles, emergency steps, etiquette, and neighborhood tips.",
   keywords: [
     "NYC subway safety",
     "New York subway guide",
@@ -35,7 +35,7 @@ export const metadata = {
     siteName: "Travels Americas",
     images: [
       {
-        url: "https://www.travelsamericas.com/data/metadataimage/nyc-subway-generic.jpg",
+        url: "https://www.travelsamericas.com/data/metadataimage/nyc-subway-generic.webp",
         width: 1200,
         height: 630,
         alt: "NYC Subway Safety Guide",
@@ -48,7 +48,7 @@ export const metadata = {
     title: "NYC Subway Safety Guide — 2026 Edition",
     description:
       "A complete, scenario‑driven NYC Subway Safety Guide for solo travelers, women, and first‑timers.",
-    images: ["https://www.travelsamericas.com/data/metadataimage/nyc-subway-generic.jpg"],
+    images: ["https://www.travelsamericas.com/data/metadataimage/nyc-subway-generic.webp"],
   },
 
   alternates: {
