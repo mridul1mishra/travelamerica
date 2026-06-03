@@ -4,7 +4,16 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 
-export default function Header() {
+type NavLink = { href: string; label: string };
+
+const DEFAULT_LINKS: NavLink[] = [
+  { href: "/destination/nyc/best-areas-to-stay", label: "Best Areas to Stay" },
+  { href: "/destination/nyc/solo-trip-to-nyc", label: "Solo Trip to NYC" },
+  { href: "/destination/nyc/nyc-safety-guide", label: "NYC Safety" },
+  { href: "/destination/nyc/nyc-female-solo-travel-guide", label: "Female Travel Guide" },
+];
+
+export default function Header({ links = DEFAULT_LINKS }: { links?: NavLink[] }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -38,10 +47,9 @@ export default function Header() {
             </button>
           </li>
 
-          <li><Link href="/destination/nyc/best-areas-to-stay">Best Areas to Stay</Link></li>
-          <li><Link href="/destination/nyc/solo-trip-to-nyc">Solo Trip to NYC</Link></li>
-          <li><Link href="/destination/nyc/nyc-safety-guide">NYC Safety</Link></li>
-          <li><Link href="/destination/nyc/nyc-female-solo-travel-guide">Female Travel Guide</Link></li>
+          {links.map((l) => (
+            <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
+          ))}
         </ul>
       </nav>
     </header>

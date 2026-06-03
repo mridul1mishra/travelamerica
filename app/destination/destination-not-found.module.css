@@ -1,0 +1,331 @@
+/* ============================================================
+   app/destination/destination-not-found.module.css
+   Styles for the destination-scoped 404 page.
+   Shown when a visitor hits an unknown route inside /destination/
+   e.g. /destination/miami or /destination/nyc/something-wrong.
+
+   Design tokens match the rest of the site:
+     Font    : var(--font-montserrat)
+     Primary : #2563eb
+     Dark    : #0f172a
+     Muted   : #64748b
+     Border  : #e2e8f0
+   ============================================================ */
+
+/* ── Page shell ─────────────────────────────────────────────── */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background: #f8fafc;
+  font-family: var(--font-montserrat), "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Hero ────────────────────────────────────────────────────── */
+.hero {
+  width: 100%;
+  background: linear-gradient(160deg, #f0f7ff 0%, #ffffff 55%);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 3.5rem 1.5rem 3rem;
+  text-align: center;
+}
+
+/* Compass / map pin icon container */
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #eff6ff;
+  border: 2px solid #bfdbfe;
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  user-select: none;
+}
+
+.headline {
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.9rem;
+  line-height: 1.25;
+}
+
+.subline {
+  font-size: 1rem;
+  color: #64748b;
+  max-width: 520px;
+  margin: 0 auto 0.6rem;
+  line-height: 1.65;
+}
+
+.sublineNote {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  max-width: 460px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+/* ── Back CTA ────────────────────────────────────────────────── */
+.ctaRow {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.8rem 1.75rem;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.975rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.18s ease, transform 0.12s ease;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+.btnPrimary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.8rem 1.75rem;
+  background: transparent;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.975rem;
+  border-radius: 8px;
+  border: 2px solid #2563eb;
+  text-decoration: none;
+  transition: background 0.18s ease, transform 0.12s ease;
+}
+.btnGhost:hover {
+  background: #eff6ff;
+  transform: translateY(-1px);
+}
+
+/* ── "We do cover these" section ────────────────────────────── */
+.section {
+  width: 100%;
+  max-width: 1060px;
+  padding: 2.75rem 1.5rem 1rem;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #2563eb;
+  margin: 0 0 0.4rem;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.35rem;
+  text-align: center;
+}
+
+.sectionSub {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  text-align: center;
+  margin: 0 0 1.75rem;
+}
+
+/* ── City cards ─────────────────────────────────────────────── */
+/* Slightly wider cards than the global 404 because there are only 4
+   and we can afford more breathing room per card. */
+.cityGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.cityCard {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: box-shadow 0.18s ease, transform 0.14s ease, border-color 0.18s ease;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
+}
+.cityCard:hover {
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.13);
+  transform: translateY(-3px);
+  border-color: #93c5fd;
+}
+
+/* Coloured top accent bar — each city gets its own via modifier */
+.cityAccent {
+  height: 5px;
+  width: 100%;
+}
+.accentNYC    { background: linear-gradient(90deg, #1d4ed8, #2563eb); }
+.accentLA     { background: linear-gradient(90deg, #d97706, #f59e0b); }
+.accentVegas  { background: linear-gradient(90deg, #7c3aed, #a855f7); }
+.accentOrlando{ background: linear-gradient(90deg, #059669, #10b981); }
+
+.cityBody {
+  padding: 1.4rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cityEmoji {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.65rem;
+  user-select: none;
+}
+
+.cityName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.3rem;
+}
+
+.cityBlurb {
+  font-size: 0.855rem;
+  color: #64748b;
+  line-height: 1.55;
+  margin: 0 0 1rem;
+  flex: 1;
+}
+
+/* Quick links inside each card */
+.cityLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cityLinks li a {
+  font-size: 0.8rem;
+  color: #2563eb;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.15s;
+}
+.cityLinks li a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.cityHubLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid #f1f5f9;
+  transition: color 0.15s ease;
+}
+.cityHubLink:hover {
+  color: #1d4ed8;
+}
+
+/* ── Help strip ─────────────────────────────────────────────── */
+.helpStrip {
+  width: 100%;
+  background: #0f172a;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.helpStrip p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin: 0 0 0.6rem;
+}
+
+.helpLink {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #93c5fd;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(147, 197, 253, 0.35);
+  padding-bottom: 1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.helpLink:hover {
+  color: #bfdbfe;
+  border-color: rgba(191, 219, 254, 0.65);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 920px) {
+  .cityGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 2.75rem 1rem 2.25rem;
+  }
+
+  .section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .cityGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.875rem;
+  }
+
+  .ctaRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btnPrimary,
+  .btnGhost {
+    width: 100%;
+    justify-content: center;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 420px) {
+  .cityGrid {
+    grid-template-columns: 1fr;
+  }
+}
