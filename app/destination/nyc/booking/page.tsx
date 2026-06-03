@@ -17,12 +17,8 @@ export const generateMetadata = () => ({
   },
 });
 
-import dynamic from "next/dynamic";
+import BookFlightsClient from './bookflightsclient';
 
-const BookFlightsClient = dynamic(() => import('./bookflightsclient'), {
-  ssr: false,
-  loading: () => <div>Loading booking options…</div>,
-});
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",

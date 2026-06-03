@@ -5,7 +5,7 @@
 // lasvegasbookingsclient.tsx, and orlandobookingsclient.tsx (~2,400 lines combined).
 // Now a single component driven by a cityConfig prop.
 
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Header from "@/app/components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -96,7 +96,7 @@ function getInitialTab(param: string | null, validTabs: Set<TabKey>): TabKey {
 
 // ── Shared component ─────────────────────────────────────────────────────────
 
-export default function BookingClient({ config }: { config: CityBookingConfig }) {
+function BookingClientInner({ config }: { config: CityBookingConfig }) {
   const {
     cityName, cityHref, bookingHref, headerImage, bannerText, pageTitle,
     tabs, tabRail, relatedGroups, flights, hotels, activities,
@@ -320,5 +320,23 @@ export default function BookingClient({ config }: { config: CityBookingConfig })
 
       <Footer />
     </div>
+  );
+}
+
+// useSearchParams() must be wrapped in a Suspense boundary for static export.
+export default function BookingClient({ config }: { config: CityBookingConfig }) {
+  return (
+    <Suspense fallback={null}>
+      <BookingClientInner config={config} />
+    </Suspense>
+  );
+}
+
+// useSearchParams() must be wrapped in a Suspense boundary for static export.
+export default function BookingClient({ config }: { config: CityBookingConfig }) {
+  return (
+    <Suspense fallback={null}>
+      <BookingClientInner config={config} />
+    </Suspense>
   );
 }

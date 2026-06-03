@@ -21,12 +21,8 @@ export const generateMetadata = () => ({
   },
 });
 
-import dynamic from "next/dynamic";
+import LABookingsClient from './labookingsclient';
 
-const LABookingsClient = dynamic(() => import('./labookingsclient'), {
-  ssr: false,
-  loading: () => <div>Loading booking options…</div>,
-});
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -44,4 +40,7 @@ export default function LABookingsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <LABookin
+      <LABookingsClient />
+    </>
+  );
+}

@@ -24,12 +24,8 @@ export const generateMetadata = () => ({
   },
 });
 
-import dynamic from "next/dynamic";
+import LasVegasBookingsClient from './lasvegasbookingsclient';
 
-const LasVegasBookingsClient = dynamic(() => import('./lasvegasbookingsclient'), {
-  ssr: false,
-  loading: () => <div>Loading booking options…</div>,
-});
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -63,4 +59,7 @@ export default function LasVegasBookingsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <LasVegasBookin
+      <LasVegasBookingsClient />
+    </>
+  );
+}

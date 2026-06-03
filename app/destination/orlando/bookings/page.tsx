@@ -24,12 +24,8 @@ export const generateMetadata = () => ({
   },
 });
 
-import dynamic from "next/dynamic";
+import OrlandoBookingsClient from './orlandobookingsclient';
 
-const OrlandoBookingsClient = dynamic(() => import('./orlandobookingsclient'), {
-  ssr: false,
-  loading: () => <div>Loading booking options…</div>,
-});
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -63,4 +59,7 @@ export default function OrlandoBookingsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <OrlandoBookin
+      <OrlandoBookingsClient />
+    </>
+  );
+}

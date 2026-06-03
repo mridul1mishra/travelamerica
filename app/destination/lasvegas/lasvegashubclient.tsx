@@ -159,4 +159,7 @@ export default function LasVegasHubClient() {
         <Link href="/destination/lasvegas/bookings?tab=flights" className={styles.bookingBtn} aria-label="Book Las Vegas trip">Compare flights, hotels &amp; tickets</Link>
       </div>
 
-      <Foot
+      <Footer />
+    </main>
+  );
+}

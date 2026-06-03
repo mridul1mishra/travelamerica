@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Header from "../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -75,7 +75,7 @@ function getInitialTab(param: string | null): TabKey {
   return "flights";
 }
 
-export default function OrlandoClient() {
+function OrlandoClientInner() {
   const { title, header, rows } = bookFlights as BookFlights;
   const hotels = hotelsData as Hotel[];
   const activities = thingsToDoData as Activity[] || [];
@@ -322,5 +322,14 @@ export default function OrlandoClient() {
 
       <Footer />
     </div>
+  );
+}
+
+// useSearchParams() must be wrapped in a Suspense boundary for static export.
+export default function OrlandoClient() {
+  return (
+    <Suspense fallback={null}>
+      <OrlandoClientInner />
+    </Suspense>
   );
 }
