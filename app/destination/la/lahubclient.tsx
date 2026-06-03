@@ -59,12 +59,6 @@ export default function LAHubClient() {
     <main>
       <Header links={navLinks} />
 
-      {/* Slim booking CTA */}
-      <div className={styles.slimCta}>
-        <span className={styles.slimCtaText}>Compare cheap flights to LAX, LA hotels, and activity tickets →</span>
-        <Link href="/destination/la/bookings?tab=flights" className={styles.slimCtaBtn} aria-label="Book your LA trip">Book your trip</Link>
-      </div>
-
       {/* Hero */}
       <section className={styles.hero}>
         <h1>Los Angeles Travel Guide</h1>
@@ -75,6 +69,12 @@ export default function LAHubClient() {
         </div>
         <p className={styles.updated}>Updated for 2026</p>
       </section>
+
+      {/* Slim booking CTA */}
+      <div className={styles.slimCta}>
+        <span className={styles.slimCtaText}>Compare cheap flights to LAX, LA hotels, and activity tickets →</span>
+        <Link href="/destination/la/bookings?tab=flights" className={styles.slimCtaBtn} aria-label="Book your LA trip">Book your trip</Link>
+      </div>
 
       {/* Planning quiz */}
       <LAPlanningQuiz />

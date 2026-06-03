@@ -1,16 +1,24 @@
-// Server Component — no hooks used.
+// Server Component — no hooks used. Interactive bits (header, quiz) are client components.
 import Link from "next/link";
-import Header from "../../components/Header/header";
+import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
+import LasVegasPlanningQuiz from "./components/LasVegasPlanningQuiz";
 import styles from "@/app/destination/city-hub.module.css";
 
+const navLinks = [
+  { href: "/destination/lasvegas/best-areas-to-stay", label: "Best Areas to Stay" },
+  { href: "/destination/lasvegas/solo-trip-to-lasvegas", label: "Solo Trip to Vegas" },
+  { href: "/destination/lasvegas/safety-guide", label: "Vegas Safety" },
+  { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
+];
+
 const attractions = [
-  { name: "The Bellagio Fountains", blurb: "Free to watch. Shows every 30 min by day, every 15 min at night. Best viewed from the sidewalk opposite the hotel.", href: "/destination/lasvegas/bookings?tab=activities" },
-  { name: "High Roller Observation Wheel", blurb: "550-ft wheel on the LINQ promenade. Best at sunset. Happy hour cabin available — open bar during your 30-min rotation.", href: "/destination/lasvegas/bookings?tab=activities" },
-  { name: "Fremont Street Experience", blurb: "Downtown's covered LED canopy with free live music nightly. A grittier, older Vegas vibe worth a half-evening.", href: "/destination/lasvegas/bookings?tab=activities" },
-  { name: "Hoover Dam", blurb: "30-min drive from the Strip. Self-guided or guided tours. Combine with a stop at Lake Mead for a full day out.", href: "/destination/lasvegas/bookings?tab=activities" },
-  { name: "Grand Canyon West Rim", blurb: "2.5-hr drive — the closest canyon rim to Las Vegas. The Skywalk glass bridge is the key attraction. Book in advance.", href: "/destination/lasvegas/bookings?tab=activities" },
-  { name: "The Mob Museum", blurb: "Downtown. Genuinely excellent museum on organized crime in America. Allow 2–3 hours. Skip-the-line tickets available.", href: "/destination/lasvegas/bookings?tab=activities" },
+  { name: "The Bellagio Fountains", blurb: "Free to watch. Shows every 30 min by day, every 15 min at night. Best viewed from the sidewalk opposite the hotel.", href: "/destination/lasvegas/things-to-do" },
+  { name: "High Roller Observation Wheel", blurb: "550-ft wheel on the LINQ promenade. Best at sunset. Happy hour cabin available — open bar during your 30-min rotation.", href: "/destination/lasvegas/things-to-do" },
+  { name: "Fremont Street Experience", blurb: "Downtown's covered LED canopy with free live music nightly. A grittier, older Vegas vibe worth a half-evening.", href: "/destination/lasvegas/things-to-do" },
+  { name: "Hoover Dam", blurb: "30-min drive from the Strip. Self-guided or guided tours. Combine with a stop at Lake Mead for a full day out.", href: "/destination/lasvegas/landmark" },
+  { name: "Grand Canyon West Rim", blurb: "2.5-hr drive — the closest canyon rim to Las Vegas. The Skywalk glass bridge is the key attraction. Book in advance.", href: "/destination/lasvegas/landmark" },
+  { name: "The Mob Museum", blurb: "Downtown. Genuinely excellent museum on organized crime in America. Allow 2–3 hours. Skip-the-line tickets available.", href: "/destination/lasvegas/landmark" },
 ];
 
 const neighborhoods = [
@@ -22,26 +30,48 @@ const neighborhoods = [
 ];
 
 const experiences = [
-  { title: "Shows & Entertainment", blurb: "Cirque du Soleil, residency concerts, comedy clubs, magic shows — book early. Prices range from $30 to $200+." },
-  { title: "Day Trips", blurb: "Hoover Dam (30 min), Valley of Fire (1 hr), Grand Canyon West (2.5 hr), Zion National Park (2.5 hr)." },
-  { title: "Dining & Nightlife", blurb: "Every major chef has a restaurant on the Strip. Gordon Ramsay, Guy Fieri, Wolfgang Puck. Buffets still exist but are no longer budget options." },
-  { title: "Casinos & Gaming", blurb: "Table minimums vary widely. Downtown casinos have lower minimums than Strip properties. Set a budget before you arrive." },
+  { title: "Shows & Entertainment", blurb: "Cirque du Soleil, residency concerts, comedy clubs, magic shows — book early. Prices range from $30 to $200+.", href: "/destination/lasvegas/things-to-do" },
+  { title: "Day Trips", blurb: "Hoover Dam (30 min), Valley of Fire (1 hr), Grand Canyon West (2.5 hr), Zion National Park (2.5 hr).", href: "/destination/lasvegas/landmark" },
+  { title: "Dining & Nightlife", blurb: "Every major chef has a restaurant on the Strip. Gordon Ramsay, Guy Fieri, Wolfgang Puck. Buffets still exist but are no longer budget options.", href: "/destination/lasvegas/food" },
+  { title: "Casinos & Gaming", blurb: "Table minimums vary widely. Downtown casinos have lower minimums than Strip properties. Set a budget before you arrive.", href: "/destination/lasvegas/things-to-do" },
 ];
 
 const whereToStay = [
-  { title: "Mid-Strip Hotels", description: "Closest to the majority of attractions, dining and shows. Most expensive but saves on taxis. Best for first-timers.", href: "/destination/lasvegas/bookings?tab=hotels" },
-  { title: "Downtown Las Vegas Hotels", description: "Lower nightly rates, Fremont Street access, more local atmosphere. 15 min from the Strip by car.", href: "/destination/lasvegas/bookings?tab=hotels" },
+  { title: "Mid-Strip Hotels", description: "Closest to the majority of attractions, dining and shows. Most expensive but saves on taxis. Best for first-timers.", href: "/destination/lasvegas/best-areas-to-stay" },
+  { title: "Downtown Las Vegas Hotels", description: "Lower nightly rates, Fremont Street access, more local atmosphere. 15 min from the Strip by car.", href: "/destination/lasvegas/neighborhood-guide" },
 ];
 
 const itineraries = [
-  { title: "3-Day Las Vegas Itinerary", description: "Day 1: Strip walk + Bellagio + shows. Day 2: Day trip to Hoover Dam or Valley of Fire. Day 3: Fremont Street + Museum + late night.", href: "/destination/lasvegas/bookings" },
-  { title: "Las Vegas on a Budget", description: "Free attractions (fountains, hotel lobbies, Fremont canopy), cheap eats, off-Strip casinos, and when to find the best room rates.", href: "/destination/lasvegas/bookings?tab=flights" },
+  { title: "3-Day Las Vegas Itinerary", description: "Day 1: Strip walk + Bellagio + shows. Day 2: Day trip to Hoover Dam or Valley of Fire. Day 3: Fremont Street + Museum + late night.", href: "/destination/lasvegas/itinerary" },
+  { title: "Las Vegas on a Budget", description: "Free attractions (fountains, hotel lobbies, Fremont canopy), cheap eats, off-Strip casinos, and when to find the best room rates.", href: "/destination/lasvegas/solo-itinerary" },
+];
+
+const guides = [
+  { title: "Las Vegas Safety Guide", href: "/destination/lasvegas/safety-guide" },
+  { title: "Solo Trip to Las Vegas", href: "/destination/lasvegas/solo-trip-to-lasvegas" },
+  { title: "Best Areas to Stay", href: "/destination/lasvegas/best-areas-to-stay" },
+  { title: "Neighborhood Guide", href: "/destination/lasvegas/neighborhood-guide" },
+  { title: "Landmark Guide", href: "/destination/lasvegas/landmark" },
+  { title: "Things to Do", href: "/destination/lasvegas/things-to-do" },
+  { title: "Food Guide", href: "/destination/lasvegas/food" },
+  { title: "Group Travel", href: "/destination/lasvegas/group-travel" },
 ];
 
 export default function LasVegasHubClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Las Vegas Travel Guide" />
+      <Header links={navLinks} />
+
+      {/* Hero */}
+      <section className={styles.hero}>
+        <h1>Las Vegas Travel Guide</h1>
+        <p>For first-timers, solo travelers, and anyone who wants to skip the tourist traps. Real planning for a real Vegas trip — where to stay, what the Strip is actually like, and what to do beyond the casinos.</p>
+        <div className={styles.heroCtas}>
+          <Link href="#planning" className={styles.primaryCta}>Start planning your Vegas trip</Link>
+          <Link href="#neighborhoods" className={styles.secondaryCta}>Where to stay in Vegas</Link>
+        </div>
+        <p className={styles.updated}>Updated for 2026</p>
+      </section>
 
       {/* Slim booking CTA */}
       <div className={styles.slimCta}>
@@ -49,16 +79,8 @@ export default function LasVegasHubClient() {
         <Link href="/destination/lasvegas/bookings?tab=flights" className={styles.slimCtaBtn} aria-label="Book your Las Vegas trip">Book your trip</Link>
       </div>
 
-      {/* Hero */}
-      <section className={styles.hero}>
-        <h1>Las Vegas Travel Guide</h1>
-        <p>For first-timers, solo travelers, and anyone who wants to skip the tourist traps. Real planning for a real Vegas trip — where to stay, what the Strip is actually like, and what to do beyond the casinos.</p>
-        <div className={styles.heroCtas}>
-          <Link href="/destination/lasvegas/bookings?tab=flights" className={styles.primaryCta}>Compare flights to LAS</Link>
-          <Link href="#neighborhoods" className={styles.secondaryCta}>Where to stay in Vegas</Link>
-        </div>
-        <p className={styles.updated}>Updated for 2026</p>
-      </section>
+      {/* Planning quiz */}
+      <LasVegasPlanningQuiz />
 
       {/* Why Las Vegas */}
       <section className={`${styles.section} ${styles.altBg}`} aria-labelledby="why-lv">
@@ -92,7 +114,7 @@ export default function LasVegasHubClient() {
             </Link>
           ))}
         </div>
-        <Link href="/destination/lasvegas/bookings?tab=activities" className={styles.seeAll}>See all things to do in Las Vegas →</Link>
+        <Link href="/destination/lasvegas/things-to-do" className={styles.seeAll}>See all things to do in Las Vegas →</Link>
       </section>
 
       {/* Neighborhoods */}
@@ -101,13 +123,14 @@ export default function LasVegasHubClient() {
         <p className={styles.sectionIntro}>Where you stay determines how you experience Vegas. The Strip and Downtown are very different trips.</p>
         <div className={styles.grid}>
           {neighborhoods.map(({ name, vibe, bestFor }) => (
-            <article key={name} className={styles.card}>
+            <Link key={name} href="/destination/lasvegas/neighborhood-guide" className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
               <h3 className={styles.cardTitle}>{name}</h3>
               <p className={styles.cardBody}>{vibe}</p>
               <p className={styles.cardMeta}>Best for: {bestFor}</p>
-            </article>
+            </Link>
           ))}
         </div>
+        <Link href="/destination/lasvegas/neighborhood-guide" className={styles.seeAll}>Compare all Vegas areas →</Link>
       </section>
 
       {/* Experiences */}
@@ -115,11 +138,11 @@ export default function LasVegasHubClient() {
         <h2 id="experiences-lv" className={styles.sectionTitle}>What to Do in Las Vegas</h2>
         <p className={styles.sectionIntro}>Vegas is much more than casinos. Here are the four categories that shape most trips.</p>
         <div className={styles.grid}>
-          {experiences.map(({ title, blurb }) => (
-            <article key={title} className={styles.card}>
+          {experiences.map(({ title, blurb, href }) => (
+            <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
               <h3 className={styles.cardTitle}>{title}</h3>
               <p className={styles.cardBody}>{blurb}</p>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
@@ -148,6 +171,17 @@ export default function LasVegasHubClient() {
               <h3 className={styles.cardTitle}>{title}</h3>
               <p className={styles.cardBody}>{description}</p>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Bookmark guides block */}
+      <section className={styles.section} aria-labelledby="guides-lv">
+        <h2 id="guides-lv" className={styles.sectionTitle}>Coming Back to Plan?</h2>
+        <p className={styles.sectionIntro}>Bookmark these guides — they&apos;re updated as Las Vegas changes.</p>
+        <div className={styles.bookmarkGrid}>
+          {guides.map(({ title, href }) => (
+            <Link key={href} href={href} className={styles.bookmarkLink}>{title}</Link>
           ))}
         </div>
       </section>
