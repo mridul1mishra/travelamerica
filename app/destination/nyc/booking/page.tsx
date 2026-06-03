@@ -17,8 +17,12 @@ export const generateMetadata = () => ({
   },
 });
 
-import { Suspense } from "react";
-import BookFlightsClient from './bookflightsclient';
+import dynamic from "next/dynamic";
+
+const BookFlightsClient = dynamic(() => import('./bookflightsclient'), {
+  ssr: false,
+  loading: () => <div>Loading booking options…</div>,
+});
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -52,9 +56,7 @@ export default function BookFlightsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Suspense fallback={<div>Loading...</div>}>
-        <BookFlightsClient />
-      </Suspense>
+      <BookFlightsClient />
     </>
   );
 }

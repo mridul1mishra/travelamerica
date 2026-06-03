@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const foodCategories = [
 export default function LAFoodClient() {
   return (
     <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.jpeg" bannerText="Best Food in Los Angeles" />
+      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Best Food in Los Angeles" />
       <section className={styles.hero}>
         <h1>Best Food in Los Angeles</h1>
         <p>LA has one of the most diverse food cities in the world — but the best spots require knowing where to look. This guide cuts through the tourist traps and covers where locals actually eat.</p>

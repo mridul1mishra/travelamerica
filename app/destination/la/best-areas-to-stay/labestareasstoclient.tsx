@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -23,7 +23,7 @@ const quickTips = [
 export default function LABestAreasClient() {
   return (
     <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.jpeg" bannerText="Best Areas to Stay in Los Angeles" />
+      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Best Areas to Stay in Los Angeles" />
       <div className={styles.slimCta}>
         <span className={styles.slimCtaText}>Compare live hotel prices across LA neighborhoods →</span>
         <Link href="/destination/la/bookings?tab=hotels" className={styles.slimCtaBtn}>Browse hotels</Link>

@@ -73,17 +73,17 @@
     },
     {
       "source": "/majorcities/lasvegas/solo-itinerary",
-      "destination": "/destination/nyc/solo-itinerary",
+      "destination": "/destination/lasvegas/solo-itinerary",
       "permanent": true
     },
     {
       "source": "/majorcities/orlando/solo-itinerary",
-      "destination": "/destination/nyc/solo-itinerary",
+      "destination": "/destination/orlando/solo-itinerary",
       "permanent": true
     },
     {
       "source": "/majorcities/losangeles/solo-itinerary",
-      "destination": "/destination/nyc/solo-itinerary",
+      "destination": "/destination/la/solo-itinerary",
       "permanent": true
     },
     {

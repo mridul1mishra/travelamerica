@@ -49,7 +49,7 @@ export default function GroupTravelPage() {
   "keywords": ["Group travel NYC", "NYC itinerary", "safe travel tips", "Citymapper", "MetroCard", "NYC group travel", "things to do alone NYC"],
   "image": {
     "@type": "ImageObject",
-    "url": "https://www.travelsamericas.com/data/majorcities/newyork/assets/safetybanner.png",
+    "url": "https://www.travelsamericas.com/data/majorcities/newyork/assets/safetybanner.webp",
     "height": 600,
     "width": 1200
   },
@@ -171,7 +171,7 @@ const schema5 = {
 
 return (
     <>
-        <Header image={`/data/majorcities/newyork/assets/group/nyc-group-travel-packing-flatlay-essentials.jpg`} bannerText="Flatlay of NYC group travel essentials including backpack, metro card, sneakers, and city map" />
+        <Header image={`/data/majorcities/newyork/assets/group/nyc-group-travel-packing-flatlay-essentials.webp`} bannerText="Flatlay of NYC group travel essentials including backpack, metro card, sneakers, and city map" />
         <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=flights&from=group-travel" label="Book your trip" />
         <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
@@ -277,7 +277,7 @@ return (
         <section className={styles.splitSection}>
         <div className={styles.imageWrapper}>
           <Image
-            src="/data/majorcities/newyork/assets/group/group-travel-nyc-small-bronx.png"
+            src="/data/majorcities/newyork/assets/group/group-travel-nyc-small-bronx.webp"
             alt="Group of travelers exploring Bronx seasonal highlights from Yankee Stadium to Wave Hill and Poe's Cottage"
             fill
             className={styles.mapImage}
@@ -404,4 +404,4 @@ return (
         
     </>
     );
-}
+}

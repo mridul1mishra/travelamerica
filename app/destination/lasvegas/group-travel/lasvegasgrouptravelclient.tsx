@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const groupTips = [
 export default function LasVegasGroupTravelClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.jpeg" bannerText="Las Vegas Group Travel Guide" />
+      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Las Vegas Group Travel Guide" />
       <div className={styles.slimCta}>
         <span className={styles.slimCtaText}>Book group tickets, shows and accommodation →</span>
         <Link href="/destination/lasvegas/bookings?tab=activities" className={styles.slimCtaBtn}>Book group activities</Link>

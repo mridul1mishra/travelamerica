@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const safetyTopics = [
 export default function LAMetroSafetyClient() {
   return (
     <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.jpeg" bannerText="LA Metro Safety Guide" />
+      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="LA Metro Safety Guide" />
       <section className={styles.hero}>
         <h1>Is the LA Metro Safe? 2026 Guide for Tourists</h1>
         <p>The LA Metro is safer than its reputation — on the right lines, at the right times. This guide gives you an honest assessment so you can use it confidently when it makes sense and know when Uber is the better call.</p>

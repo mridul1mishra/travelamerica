@@ -14,18 +14,22 @@ export const generateMetadata = () => ({
     description: 'Plan and book your Las Vegas trip — compare the cheapest flights to LAS, browse top Las Vegas hotels, and find the best things to do.',
     url: 'https://www.travelsamericas.com/destination/lasvegas/bookings',
     type: 'website',
-    images: ['https://www.travelsamericas.com/data/majorcities/lasvegas/assets/lasvegas.jpeg'],
+    images: ['https://www.travelsamericas.com/data/majorcities/lasvegas/assets/lasvegas.webp'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Book Your Las Vegas Trip: Cheap Flights to LAS, Hotels & Things to Do',
     description: 'Compare cheap flights to Las Vegas (LAS), hotels, and activities in one place.',
-    images: ['https://www.travelsamericas.com/data/majorcities/lasvegas/assets/lasvegas.jpeg'],
+    images: ['https://www.travelsamericas.com/data/majorcities/lasvegas/assets/lasvegas.webp'],
   },
 });
 
-import { Suspense } from "react";
-import LasVegasBookingsClient from './lasvegasbookingsclient';
+import dynamic from "next/dynamic";
+
+const LasVegasBookingsClient = dynamic(() => import('./lasvegasbookingsclient'), {
+  ssr: false,
+  loading: () => <div>Loading booking options…</div>,
+});
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -59,9 +63,4 @@ export default function LasVegasBookingsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Suspense fallback={<div>Loading...</div>}>
-        <LasVegasBookingsClient />
-      </Suspense>
-    </>
-  );
-}
+      <LasVegasBookin

@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const topics = [
 export default function LAFemaleSoloClient() {
   return (
     <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.jpeg" bannerText="LA Female Solo Travel Guide" />
+      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="LA Female Solo Travel Guide" />
       <div className={styles.slimCta}>
         <span className={styles.slimCtaText}>Book your solo LA trip — flights, hotels and activities →</span>
         <Link href="/destination/la/bookings" className={styles.slimCtaBtn}>Book your trip</Link>

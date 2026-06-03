@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const foodCategories = [
 export default function LasVegasFoodClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.jpeg" bannerText="Best Food in Las Vegas" />
+      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Best Food in Las Vegas" />
       <section className={styles.hero}>
         <h1>Best Food in Las Vegas</h1>
         <p>Las Vegas has evolved from buffet city to one of America's most serious dining destinations. The challenge is knowing what is worth the price and what is trading on a famous name. This guide covers both ends of the spectrum.</p>

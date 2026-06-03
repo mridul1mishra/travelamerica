@@ -8,7 +8,7 @@ interface Props {
 const QuickSummary = ({ points }: Props) => {
   return (
     <section className={styles.summary}>
-      <h3 className={styles.heading}>Quick Summary — You’ll Learn:</h3>
+      <h2 className={styles.heading}>Quick Summary — You’ll Learn:</h2>
       <ul className={styles.list}>
         {points.map((point, idx) => (
           <li key={idx} className={styles.item}>

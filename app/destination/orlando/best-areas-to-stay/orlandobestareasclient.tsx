@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -23,7 +23,7 @@ const tips = [
 export default function OrlandoBestAreasClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.jpeg" bannerText="Best Areas to Stay in Orlando" />
+      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Best Areas to Stay in Orlando" />
       <div className={styles.slimCta}>
         <span className={styles.slimCtaText}>Compare live hotel prices across all Orlando areas →</span>
         <Link href="/destination/orlando/bookings?tab=hotels" className={styles.slimCtaBtn}>Browse hotels</Link>

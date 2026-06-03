@@ -88,7 +88,7 @@ export default function LAClient() {
   return (
     <div className="App">
       <Header
-        image="/data/majorcities/losangeles/assets/losangeles.jpeg"
+        image="/data/majorcities/losangeles/assets/losangeles.webp"
         bannerText="Book your Los Angeles trip"
       />
 

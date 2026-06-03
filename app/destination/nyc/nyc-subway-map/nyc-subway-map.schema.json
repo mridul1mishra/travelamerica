@@ -9,7 +9,7 @@
   "description": "View and download the updated 2025 NYC subway map. A beginner-friendly guide with routes, safety tips, and navigation help for solo travelers.",
   "image": {
     "@type": "ImageObject",
-    "url": "https://www.travelsamericas.com/data/metadataimage/nyc-subway-map.png",
+    "url": "https://www.travelsamericas.com/data/metadataimage/nyc-subway-map.webp",
     "width": 1200,
     "height": 630
   },

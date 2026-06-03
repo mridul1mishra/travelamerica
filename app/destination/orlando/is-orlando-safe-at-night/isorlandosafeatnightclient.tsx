@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const nightSafety = [
 export default function IsOrlandoSafeAtNightClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.jpeg" bannerText="Is Orlando Safe at Night?" />
+      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Is Orlando Safe at Night?" />
       <section className={styles.hero}>
         <h1>Is Orlando Safe at Night? Honest 2026 Guide</h1>
         <p>Orlando's tourist areas — Disney, Universal, and I-Drive — are extremely safe at night. The risks are in specific non-tourist corridors that visitors have no reason to visit. This guide gives you the honest breakdown.</p>

@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const groupTips = [
 export default function OrlandoGroupTravelClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.jpeg" bannerText="Orlando Group Travel Guide" />
+      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Orlando Group Travel Guide" />
       <div className={styles.slimCta}>
         <span className={styles.slimCtaText}>Book group park tickets, hotels and activities →</span>
         <Link href="/destination/orlando/bookings?tab=activities" className={styles.slimCtaBtn}>Book group activities</Link>

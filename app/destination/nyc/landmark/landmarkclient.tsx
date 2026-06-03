@@ -249,7 +249,7 @@ export default function LandmarkPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <Header
-        image="/data/majorcities/newyork/assets/statue-of-liberty.jpg"
+        image="/data/majorcities/newyork/assets/statue-of-liberty.webp"
         bannerText="New York City Landmarks Guide"
       />
       <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=activities&from=landmark" label="See tickets" />

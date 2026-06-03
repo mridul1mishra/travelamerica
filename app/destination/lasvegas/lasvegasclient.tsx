@@ -88,7 +88,7 @@ export default function LasVegasClient() {
   return (
     <div className="App">
       <Header
-        image="/data/majorcities/lasvegas/assets/lasvegas.jpeg"
+        image="/data/majorcities/lasvegas/assets/lasvegas.webp"
         bannerText="Book your Las Vegas trip"
       />
 

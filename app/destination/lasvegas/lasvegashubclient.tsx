@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -41,7 +41,7 @@ const itineraries = [
 export default function LasVegasHubClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.jpeg" bannerText="Las Vegas Travel Guide" />
+      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Las Vegas Travel Guide" />
 
       {/* Slim booking CTA */}
       <div className={styles.slimCta}>
@@ -159,7 +159,4 @@ export default function LasVegasHubClient() {
         <Link href="/destination/lasvegas/bookings?tab=flights" className={styles.bookingBtn} aria-label="Book Las Vegas trip">Compare flights, hotels &amp; tickets</Link>
       </div>
 
-      <Footer />
-    </main>
-  );
-}
+      <Foot

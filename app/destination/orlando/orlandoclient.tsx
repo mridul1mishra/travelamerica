@@ -88,7 +88,7 @@ export default function OrlandoClient() {
   return (
     <div className="App">
       <Header
-        image="/data/majorcities/orlando/assets/orlando.jpeg"
+        image="/data/majorcities/orlando/assets/orlando.webp"
         bannerText="Book your Orlando trip"
       />
 

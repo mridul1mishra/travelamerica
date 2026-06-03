@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const landmarks = [
 export default function LALandmarkClient() {
   return (
     <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.jpeg" bannerText="Los Angeles Landmarks" />
+      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Los Angeles Landmarks" />
       <div className={styles.slimCta}>
         <span className={styles.slimCtaText}>Book skip-the-line tickets and guided landmark tours →</span>
         <Link href="/destination/la/bookings?tab=activities" className={styles.slimCtaBtn}>Browse tours</Link>

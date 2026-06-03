@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const foodCategories = [
 export default function OrlandoFoodClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.jpeg" bannerText="Best Food in Orlando" />
+      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Best Food in Orlando" />
       <section className={styles.hero}>
         <h1>Best Food in Orlando</h1>
         <p>Orlando's food scene extends well beyond theme park food courts. Restaurant Row, Winter Park, and Downtown Orlando have a genuinely strong independent dining scene — this guide covers all of it.</p>

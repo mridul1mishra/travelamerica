@@ -30,7 +30,7 @@ export const metadata = {
     type: "article", 
     locale: "en_US", 
     images: [ { 
-      url: "https://www.travelsamericas.com/data/majorcities/newyork/assets/safety/nyc-safety-guide.png", 
+      url: "https://www.travelsamericas.com/data/majorcities/newyork/assets/safety/nyc-safety-guide.webp", 
       width: 1200, 
       height: 630, 
       alt: "NYC Solo Female Travel Safety Guide" 
@@ -43,7 +43,7 @@ export const metadata = {
     title: "New York City Safety for Solo Female Travelers (2026)", 
     description: "A practical NYC safety guide for solo women: safest neighborhoods, subway tips after dark, what to wear, real scenarios, and emergency steps you can use today.", 
     images: [
-    "https://www.travelsamericas.com/data/majorcities/newyork/assets/safety/nyc-safety-guide.png"
+    "https://www.travelsamericas.com/data/majorcities/newyork/assets/safety/nyc-safety-guide.webp"
   ] 
   }
 };
@@ -102,7 +102,7 @@ const Article = {
   "@type": "Article",
   "headline": "NYC Solo Female Travel Safety Guide (2026)",
   "description": "A practical, scenario-based NYC safety guide for solo female travelers. Includes safe areas, subway tips, night safety, packing essentials, and real-world scenarios.",
-  "image": "https://www.travelsamericas.com/data/majorcities/newyork/assets/safety/nyc-safety-guide.png",
+  "image": "https://www.travelsamericas.com/data/majorcities/newyork/assets/safety/nyc-safety-guide.webp",
   "author": {
     "@type": "Organization",
     "name": "Travels Americas"

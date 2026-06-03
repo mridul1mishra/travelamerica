@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const safetyTopics = [
 export default function OrlandoSafetyClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.jpeg" bannerText="Orlando Safety Guide" />
+      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Orlando Safety Guide" />
       <section className={styles.hero}>
         <h1>Is Orlando Safe for Tourists? Honest 2026 Guide</h1>
         <p>The tourist zones in Orlando are among the safest in Florida. The real risks are heat, driving, and a few specific scams targeting visitors. Here is what you actually need to know.</p>

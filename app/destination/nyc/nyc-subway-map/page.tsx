@@ -28,7 +28,7 @@ export const metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://www.travelsamericas.com/data/metadataimage/nyc-subway-map.png",
+        url: "https://www.travelsamericas.com/data/metadataimage/nyc-subway-map.webp",
         width: 1200,
         height: 630,
         alt: "NYC Subway Map 2026 – Solo Traveler Guide"
@@ -41,7 +41,7 @@ export const metadata = {
     title: "NYC Subway Map (2026): Simple, Safe & Solo‑Traveler Friendly",
     description:
       "Updated NYC subway map with beginner‑friendly routes, safety tips, and offline downloads.",
-    images: ["https://www.travelsamericas.com/data/metadataimage/nyc-subway-map.png"],
+    images: ["https://www.travelsamericas.com/data/metadataimage/nyc-subway-map.webp"],
     
   }
 };

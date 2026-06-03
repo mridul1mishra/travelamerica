@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "Travels Americas",
     images: [
       {
-        url: "https://www.travelsamericas.com/data/home/banner_new.png",
+        url: "https://www.travelsamericas.com/data/home/banner.webp",
         width: 1200,
         height: 630,
         alt: "Travels Americas homepage",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Travels Americas | Discover Iconic Cities to Visit",
     description: "Discover carefully selected city guides for Las Vegas, Orlando, New York, and Los Angeles. Explore culture, food, and attractions with insider insights",
-    images: ["https://www.travelsamericas.com/data/home/banner_new.png"],
+    images: ["https://www.travelsamericas.com/data/home/banner.webp"],
   },
 };
 

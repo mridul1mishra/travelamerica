@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const landmarks = [
 export default function LasVegasLandmarkClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.jpeg" bannerText="Las Vegas Landmarks" />
+      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Las Vegas Landmarks" />
       <div className={styles.slimCta}>
         <span className={styles.slimCtaText}>Book skip-the-line tickets and guided Las Vegas tours →</span>
         <Link href="/destination/lasvegas/bookings?tab=activities" className={styles.slimCtaBtn}>Browse tours</Link>

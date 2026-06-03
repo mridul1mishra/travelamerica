@@ -18,7 +18,7 @@ export default function FoodClientPage() {
     "name": "Travels Americas"
   },
   "datePublished": "2025-10-19",
-  "image": "https://www.travelsamericas.com/data/majorcities/assets/nyc-solo-dining.png",
+  "image": "https://www.travelsamericas.com/data/majorcities/assets/nyc-solo-dining.webp",
   "articleSection": ["Fast & Flavorful", "Bar Dining", "Local Flavor"],
   "mainEntity": [
     {
@@ -319,7 +319,7 @@ const howto = {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howto) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemlist) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumblist) }}/>
-        <Header image={`/data/majorcities/newyork/assets/nyc-solo-dining.png`} bannerText="Hero banner showcasing NYC solo dining experience for travelers" />
+        <Header image={`/data/majorcities/newyork/assets/nyc-solo-dining.webp`} bannerText="Hero banner showcasing NYC solo dining experience for travelers" />
         <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=activities&from=food" label="See food tours" />
         <section className={styles.splitSection} style={{textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
@@ -397,4 +397,4 @@ function capitalizeWords(str: string) {
   return str
     .toLowerCase()
     .replace(/\b\w/g, (char) => char.toUpperCase());
-}
+}

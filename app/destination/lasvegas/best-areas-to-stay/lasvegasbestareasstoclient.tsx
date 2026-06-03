@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -23,7 +23,7 @@ const quickTips = [
 export default function LasVegasBestAreasClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.jpeg" bannerText="Best Areas to Stay in Las Vegas" />
+      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Best Areas to Stay in Las Vegas" />
       <div className={styles.slimCta}>
         <span className={styles.slimCtaText}>Compare live hotel prices across the Strip and Downtown →</span>
         <Link href="/destination/lasvegas/bookings?tab=hotels" className={styles.slimCtaBtn}>Browse hotels</Link>

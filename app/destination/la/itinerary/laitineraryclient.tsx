@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -28,7 +28,7 @@ const days = [
 export default function LAItineraryClient() {
   return (
     <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.jpeg" bannerText="Los Angeles 3-Day Itinerary" />
+      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Los Angeles 3-Day Itinerary" />
       <div className={styles.slimCta}>
         <span className={styles.slimCtaText}>Book flights, hotels and activity tickets for your LA trip →</span>
         <Link href="/destination/la/bookings" className={styles.slimCtaBtn}>Book your trip</Link>

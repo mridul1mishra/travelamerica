@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const lines = [
 export default function LAMetroMapClient() {
   return (
     <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.jpeg" bannerText="LA Metro Guide" />
+      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="LA Metro Guide" />
       <section className={styles.hero}>
         <h1>LA Metro Map & Guide</h1>
         <p>LA has a Metro system — and it is more useful for tourists than most people expect, but far more limited than NYC or Chicago. This guide explains exactly what it does, what it does not do, and when to use it.</p>

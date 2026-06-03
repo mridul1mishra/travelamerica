@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const safetyTopics = [
 export default function LasVegasSafetyClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.jpeg" bannerText="Las Vegas Safety Guide" />
+      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Las Vegas Safety Guide" />
       <section className={styles.hero}>
         <h1>Is Las Vegas Safe? Honest 2026 Guide</h1>
         <p>Las Vegas is safe for tourists on the Strip and in major tourist areas. The risks are specific — scams, heat, and straying off the beaten path after midnight. This guide tells you exactly what to watch for.</p>

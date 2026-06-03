@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -28,7 +28,7 @@ const days = [
 export default function LasVegasSoloItineraryClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.jpeg" bannerText="Las Vegas Solo Travel Itinerary" />
+      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Las Vegas Solo Travel Itinerary" />
       <div className={styles.slimCta}>
         <span className={styles.slimCtaText}>Book solo show tickets, tours and activities →</span>
         <Link href="/destination/lasvegas/bookings?tab=activities" className={styles.slimCtaBtn}>Book activities</Link>

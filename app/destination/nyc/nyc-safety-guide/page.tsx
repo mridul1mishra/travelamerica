@@ -27,7 +27,7 @@ export const metadata = {
     locale: "en_US", 
     images: [ 
       { 
-        url: "/data/metadataimage/nyc-safety-guide-og.png", 
+        url: "/data/metadataimage/nyc-safety-guide-og.webp", 
         width: 1200, 
         height: 630, 
         alt: "Minimalist NYC skyline with bold title: NYC Safety Guide"
@@ -40,7 +40,7 @@ export const metadata = {
     title: "Is NYC Safe in 2026? An Honest, Local's Take", 
     description: "Yes, NYC is safe — but with caveats. Get the real picture: which neighborhoods to trust, subway safety tips, scams to dodge, and what to do in an emergency.", 
     images: [
-      "/data/metadataimage/nyc-safety-guide-og.png"
+      "/data/metadataimage/nyc-safety-guide-og.webp"
     ] 
   }
 };

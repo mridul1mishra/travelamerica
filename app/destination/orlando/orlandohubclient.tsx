@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -41,7 +41,7 @@ const itineraries = [
 export default function OrlandoHubClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.jpeg" bannerText="Orlando Travel Guide" />
+      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Orlando Travel Guide" />
 
       {/* Slim booking CTA */}
       <div className={styles.slimCta}>
@@ -159,7 +159,4 @@ export default function OrlandoHubClient() {
         <Link href="/destination/orlando/bookings?tab=flights" className={styles.bookingBtn} aria-label="Book Orlando trip">Compare flights, hotels &amp; tickets</Link>
       </div>
 
-      <Footer />
-    </main>
-  );
-}
+      <Foot

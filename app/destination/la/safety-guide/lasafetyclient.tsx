@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const safetyTopics = [
 export default function LASafetyClient() {
   return (
     <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.jpeg" bannerText="Los Angeles Safety Guide" />
+      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Los Angeles Safety Guide" />
       <section className={styles.hero}>
         <h1>Is Los Angeles Safe? Honest 2026 Guide</h1>
         <p>LA is safe for tourists in the major visitor areas. The risks are specific — car break-ins, a few neighborhoods to avoid on foot, and driving in heavy traffic. This guide tells you exactly what to watch for.</p>

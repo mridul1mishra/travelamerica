@@ -1,5 +1,3 @@
-'use client';
-
 import styles from './WhyVisit.module.css';
 
 export default function WhyVisit() {

@@ -10,7 +10,7 @@ import { getFaq } from './lib/FaqData';
 
 const section: StorySection = mySectionData as StorySection;
 export default async function Home(){
-  const banner = "/data/home/banner_new.png";
+  const banner = "/data/home/banner.webp";
   const { faqTravelHubData } = await getFaq();
   const schema = {
   "@context": "https://schema.org",

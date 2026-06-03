@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const categories = [
 export default function LAThingsToDoClient() {
   return (
     <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.jpeg" bannerText="Things to Do in Los Angeles" />
+      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Things to Do in Los Angeles" />
       <div className={styles.slimCta}>
         <span className={styles.slimCtaText}>Book skip-the-line tickets, tours and activity passes →</span>
         <Link href="/destination/la/bookings?tab=activities" className={styles.slimCtaBtn}>See tickets & tours</Link>

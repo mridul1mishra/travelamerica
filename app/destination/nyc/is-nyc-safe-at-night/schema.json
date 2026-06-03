@@ -12,7 +12,7 @@
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.jpg"
+        "url": "https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.webp"
       },
       "breadcrumb": {
         "@id": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night#breadcrumb"
@@ -48,7 +48,7 @@
       "@id": "https://www.travelsamericas.com/destingation/nyc/is-nyc-safe-at-night#article",
       "headline": "Is NYC Safe at Night?",
       "description": "A comprehensive, scenario-driven safety guide for navigating NYC at night as a solo traveler.",
-      "image": "https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.jpg",
+      "image": "https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.webp",
       "author": {
         "@type": "Person",
         "name": "Your Editorial Team"

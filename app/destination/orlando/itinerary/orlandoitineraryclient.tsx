@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -38,7 +38,7 @@ const days = [
 export default function OrlandoItineraryClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.jpeg" bannerText="Orlando 5-Day Itinerary" />
+      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Orlando 5-Day Itinerary" />
       <div className={styles.slimCta}>
         <span className={styles.slimCtaText}>Book flights to MCO, park-area hotels, and theme park tickets →</span>
         <Link href="/destination/orlando/bookings" className={styles.slimCtaBtn}>Book your trip</Link>

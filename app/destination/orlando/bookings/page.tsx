@@ -14,18 +14,22 @@ export const generateMetadata = () => ({
     description: 'Plan and book your Orlando trip — compare the cheapest flights to MCO, browse top Orlando hotels, and find the best things to do.',
     url: 'https://www.travelsamericas.com/destination/orlando/bookings',
     type: 'website',
-    images: ['https://www.travelsamericas.com/data/majorcities/orlando/assets/orlando.jpeg'],
+    images: ['https://www.travelsamericas.com/data/majorcities/orlando/assets/orlando.webp'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Book Your Orlando Trip: Cheap Flights to MCO, Hotels & Things to Do',
     description: 'Compare cheap flights to Orlando (MCO), hotels, and activities in one place.',
-    images: ['https://www.travelsamericas.com/data/majorcities/orlando/assets/orlando.jpeg'],
+    images: ['https://www.travelsamericas.com/data/majorcities/orlando/assets/orlando.webp'],
   },
 });
 
-import { Suspense } from "react";
-import OrlandoBookingsClient from './orlandobookingsclient';
+import dynamic from "next/dynamic";
+
+const OrlandoBookingsClient = dynamic(() => import('./orlandobookingsclient'), {
+  ssr: false,
+  loading: () => <div>Loading booking options…</div>,
+});
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -59,9 +63,4 @@ export default function OrlandoBookingsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Suspense fallback={<div>Loading...</div>}>
-        <OrlandoBookingsClient />
-      </Suspense>
-    </>
-  );
-}
+      <OrlandoBookin

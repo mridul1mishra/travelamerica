@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const categories = [
 export default function OrlandoThingsToDoClient() {
   return (
     <main>
-      <Header image="/data/majorcities/orlando/assets/orlando.jpeg" bannerText="Things to Do in Orlando" />
+      <Header image="/data/majorcities/orlando/assets/orlando.webp" bannerText="Things to Do in Orlando" />
       <div className={styles.slimCta}>
         <span className={styles.slimCtaText}>Book theme park tickets, Kennedy Space Center and activity tours →</span>
         <Link href="/destination/orlando/bookings?tab=activities" className={styles.slimCtaBtn}>See tickets & tours</Link>

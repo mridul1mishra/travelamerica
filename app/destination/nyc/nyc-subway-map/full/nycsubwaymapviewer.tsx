@@ -25,7 +25,7 @@ export default function NYCSubwayMapViewer() {
             {/* Map */}
             <TransformComponent>
               <img
-                src="/data/majorcities/newyork/assets/map/nyc-subway-map.png"
+                src="/data/majorcities/newyork/assets/map/nyc-subway-map.webp"
                 alt="NYC Subway Map"
                 className={styles.mapImage}
                 width={3508}

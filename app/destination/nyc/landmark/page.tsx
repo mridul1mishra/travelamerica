@@ -12,7 +12,7 @@ export const generateMetadata = () => ({
     card: "summary_large_image",
     title: "Solo Travel NYC | Top Landmarks and Routes",
     description: "Explore NYC's iconic landmarks confidently — Statue of Liberty, Empire State Building, Central Park, and more.",
-    images: ["https://www.travelsamericas.com/data/majorcities/newyork/assets/statue-of-liberty.jpg"]
+    images: ["https://www.travelsamericas.com/data/majorcities/newyork/assets/statue-of-liberty.webp"]
   }
 });
 

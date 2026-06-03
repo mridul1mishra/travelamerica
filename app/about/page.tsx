@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function CompanyDetailsPage() {
+export default function AboutPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageSchema) }} />

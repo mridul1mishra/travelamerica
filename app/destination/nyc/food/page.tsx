@@ -12,7 +12,7 @@ export const generateMetadata = () => ({
     card: "summary_large_image",
     title: "Solo Travel NYC: Best Dining Spots & Food Halls for Exploring Alone",
     description: "Explore the best solo dining spots in NYC — cozy counters, vibrant food halls, iconic bagels, ramen, and more.",
-    images: ["https://www.travelsamericas.com/data/majorcities/newyork/assets/nyc-solo-dining.png"],
+    images: ["https://www.travelsamericas.com/data/majorcities/newyork/assets/nyc-solo-dining.webp"],
     
   }
 });

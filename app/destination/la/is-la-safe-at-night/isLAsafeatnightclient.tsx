@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const nightSafety = [
 export default function IsLASafeAtNightClient() {
   return (
     <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.jpeg" bannerText="Is LA Safe at Night?" />
+      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Is LA Safe at Night?" />
       <section className={styles.hero}>
         <h1>Is LA Safe at Night? Honest 2026 Guide</h1>
         <p>LA is safe at night in the major tourist areas — and riskier in specific corridors that tourists have no reason to visit. This guide gives you the honest breakdown by neighborhood and situation.</p>

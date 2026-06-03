@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -42,7 +42,7 @@ const itineraries = [
 export default function LAHubClient() {
   return (
     <main>
-      <Header image="/data/majorcities/losangeles/assets/losangeles.jpeg" bannerText="Los Angeles Travel Guide" />
+      <Header image="/data/majorcities/losangeles/assets/losangeles.webp" bannerText="Los Angeles Travel Guide" />
 
       {/* Slim booking CTA */}
       <div className={styles.slimCta}>
@@ -160,7 +160,4 @@ export default function LAHubClient() {
         <Link href="/destination/la/bookings?tab=flights" className={styles.bookingBtn} aria-label="Book LA trip">Compare flights, hotels &amp; tickets</Link>
       </div>
 
-      <Footer />
-    </main>
-  );
-}
+      <Foot

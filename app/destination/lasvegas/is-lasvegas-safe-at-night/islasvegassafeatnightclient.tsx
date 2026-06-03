@@ -1,4 +1,4 @@
-"use client";
+// Server Component — no hooks used.
 import Link from "next/link";
 import Header from "../../../components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -16,7 +16,7 @@ const nightSafety = [
 export default function IsLasVegasSafeAtNightClient() {
   return (
     <main>
-      <Header image="/data/majorcities/lasvegas/assets/lasvegas.jpeg" bannerText="Is Las Vegas Safe at Night?" />
+      <Header image="/data/majorcities/lasvegas/assets/lasvegas.webp" bannerText="Is Las Vegas Safe at Night?" />
       <section className={styles.hero}>
         <h1>Is Las Vegas Safe at Night? Honest 2026 Guide</h1>
         <p>The Strip is one of the most monitored and policed public spaces in America. Las Vegas is safe at night for tourists who stay in the main tourist corridors — and riskier in specific off-Strip areas that tourists have no reason to visit.</p>

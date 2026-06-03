@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "export": "next export",
-    "analyze": "cross-env ANALYZE=true next build --webpack"
+    "analyze": "cross-env ANALYZE=true next build --webpack",
+    "prepare": "cp scripts/pre-commit.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit || true"
   },
   "browserslist": {
     "production": [
@@ -36,7 +37,6 @@
     "react-zoom-pan-pinch": "^3.7.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/pg": "^8.20.0",
     "@types/react": "^19",
@@ -46,7 +46,6 @@
     "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "^16.0.7",
-    "tailwindcss": "^4",
     "typescript": "^5"
   }
 }
