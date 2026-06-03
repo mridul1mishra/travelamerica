@@ -37,8 +37,8 @@ const experiences = [
 ];
 
 const whereToStay = [
-  { title: "Near Walt Disney World", description: "On-site Disney resorts get 30-min early park entry every day. Off-site hotels on Hotel Plaza Blvd are cheaper and still very close.", href: "/destination/orlando/best-areas-to-stay" },
-  { title: "Near Universal Studios", description: "On-site Loews hotels get Early Park Admission to The Wizarding World. I-Drive hotels are 10 min by car and significantly cheaper.", href: "/destination/orlando/best-areas-to-stay" },
+  { title: "Best Areas to Stay in Orlando", description: "Park zones ranked by convenience, price, and who they suit — on-site vs. off-site explained, with picks for families, budget travelers, and first-timers.", href: "/destination/orlando/best-areas-to-stay" },
+  { title: "Orlando Neighborhood Guide", description: "A closer look at each area — Lake Buena Vista, I-Drive, Kissimmee, and Downtown — what they're actually like and which parks they put you closest to.", href: "/destination/orlando/neighborhood-guide" },
 ];
 
 const itineraries = [
@@ -108,16 +108,20 @@ export default function OrlandoHubClient() {
       {/* Top Attractions */}
       <section className={`${styles.section} ${styles.altBg}`} aria-labelledby="attractions-orlando">
         <h2 id="attractions-orlando" className={styles.sectionTitle}>Top Attractions Worth Your Time</h2>
-        <p className={styles.sectionIntro}>What to prioritize, realistic time estimates, and the tips that actually matter.</p>
-        <div className={styles.grid}>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
+          6 Orlando attractions with realistic time estimates and the tips that actually matter.
+        </p>
+        <div className={styles.attractionList}>
           {attractions.map(({ name, blurb, href }) => (
-            <Link key={name} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-              <h3 className={styles.cardTitle}>{name}</h3>
-              <p className={styles.cardBody}>{blurb}</p>
+            <Link key={name} href={href} className={styles.attractionItem} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
+              <h3 style={{ marginBottom: "0.25rem", fontSize: "1rem", fontWeight: 600 }}>{name}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{blurb}</p>
             </Link>
           ))}
         </div>
-        <Link href="/destination/orlando/things-to-do" className={styles.seeAll}>See all things to do in Orlando →</Link>
+        <div style={{ textAlign: "center", marginTop: "1rem" }}>
+          <Link href="/destination/orlando/landmark" style={{ color: "#000", fontWeight: 500, textDecoration: "underline" }}>See all Orlando attractions with full details →</Link>
+        </div>
       </section>
 
       {/* Neighborhoods */}
@@ -152,13 +156,15 @@ export default function OrlandoHubClient() {
 
       {/* Where to Stay detail */}
       <section className={styles.section} aria-labelledby="hotels-orlando">
-        <h2 id="hotels-orlando" className={styles.sectionTitle}>Book Hotels in Orlando</h2>
-        <p className={styles.sectionIntro}>On-site perks vs. off-site savings — the trade-off that defines most Orlando hotel decisions.</p>
+        <h2 id="hotels-orlando" className={styles.sectionTitle}>Where to Stay in Orlando</h2>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
+          In Orlando, where you stay determines your entire trip logistics. On-site Disney and Universal hotels offer real perks — early park entry, no car needed — but off-site options can save hundreds over a week.
+        </p>
         <div className={styles.grid}>
           {whereToStay.map(({ title, description, href }) => (
-            <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{description}</p>
+            <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block", textAlign: "center" }}>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{description}</p>
             </Link>
           ))}
         </div>

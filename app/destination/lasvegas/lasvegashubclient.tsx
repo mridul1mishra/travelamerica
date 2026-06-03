@@ -37,8 +37,8 @@ const experiences = [
 ];
 
 const whereToStay = [
-  { title: "Mid-Strip Hotels", description: "Closest to the majority of attractions, dining and shows. Most expensive but saves on taxis. Best for first-timers.", href: "/destination/lasvegas/best-areas-to-stay" },
-  { title: "Downtown Las Vegas Hotels", description: "Lower nightly rates, Fremont Street access, more local atmosphere. 15 min from the Strip by car.", href: "/destination/lasvegas/neighborhood-guide" },
+  { title: "Best Areas to Stay in Las Vegas", description: "Strip zones and off-Strip options ranked by price, location, and trip type — with honest picks for first-timers, budget travelers, and those who want something quieter.", href: "/destination/lasvegas/best-areas-to-stay" },
+  { title: "Las Vegas Neighborhood Guide", description: "A closer look at the Strip, Downtown Fremont, Henderson, and Summerlin — what each area is actually like and how far they put you from the action.", href: "/destination/lasvegas/neighborhood-guide" },
 ];
 
 const itineraries = [
@@ -108,16 +108,20 @@ export default function LasVegasHubClient() {
       {/* Top Attractions */}
       <section className={styles.section} aria-labelledby="attractions-lv">
         <h2 id="attractions-lv" className={styles.sectionTitle}>Top Attractions Worth Your Time</h2>
-        <p className={styles.sectionIntro}>What to prioritize, what to skip, and how long each actually takes.</p>
-        <div className={styles.grid}>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
+          6 Las Vegas attractions with practical tips and what to know before you go.
+        </p>
+        <div className={styles.attractionList}>
           {attractions.map(({ name, blurb, href }) => (
-            <Link key={name} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-              <h3 className={styles.cardTitle}>{name}</h3>
-              <p className={styles.cardBody}>{blurb}</p>
+            <Link key={name} href={href} className={styles.attractionItem} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
+              <h3 style={{ marginBottom: "0.25rem", fontSize: "1rem", fontWeight: 600 }}>{name}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{blurb}</p>
             </Link>
           ))}
         </div>
-        <Link href="/destination/lasvegas/things-to-do" className={styles.seeAll}>See all things to do in Las Vegas →</Link>
+        <div style={{ textAlign: "center", marginTop: "1rem" }}>
+          <Link href="/destination/lasvegas/landmark" style={{ color: "#000", fontWeight: 500, textDecoration: "underline" }}>See all Las Vegas landmarks with full details →</Link>
+        </div>
       </section>
 
       {/* Neighborhoods */}
@@ -153,12 +157,14 @@ export default function LasVegasHubClient() {
       {/* Where to Stay */}
       <section className={`${styles.section} ${styles.altBg}`} aria-labelledby="wheretostay-lv">
         <h2 id="wheretostay-lv" className={styles.sectionTitle}>Where to Stay in Las Vegas</h2>
-        <p className={styles.sectionIntro}>Hotel choice matters more in Vegas than most cities — proximity to the Strip determines your entire logistics.</p>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
+          Hotel location defines the Vegas trip more than almost any other decision. Mid-Strip puts everything in walking distance; Downtown offers lower prices and a different atmosphere. The right choice depends entirely on what you're there to do.
+        </p>
         <div className={styles.grid}>
           {whereToStay.map(({ title, description, href }) => (
-            <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{description}</p>
+            <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block", textAlign: "center" }}>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{description}</p>
             </Link>
           ))}
         </div>

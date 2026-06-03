@@ -38,8 +38,8 @@ const experiences = [
 ];
 
 const whereToStay = [
-  { title: "Santa Monica & the Westside", description: "Walkable beach access, safest area for first-timers, easiest to navigate without a car. Higher nightly rates but worthwhile for short trips.", href: "/destination/la/best-areas-to-stay" },
-  { title: "Hollywood & Central LA", description: "Lower prices, more central location for freeway access. Los Feliz and Silver Lake have more local character than the Hollywood Blvd strip.", href: "/destination/la/neighborhood-guide" },
+  { title: "Best Areas to Stay in LA", description: "Neighborhoods ranked by safety, walkability, and what type of trip they suit. Includes first-timer picks, beach options, and budget areas.", href: "/destination/la/best-areas-to-stay" },
+  { title: "LA Neighborhood Guide", description: "A deeper look at what each area is actually like — vibe, car dependency, who it's best for, and the Westside vs. Central LA trade-off explained.", href: "/destination/la/neighborhood-guide" },
 ];
 
 const itineraries = [
@@ -105,16 +105,20 @@ export default function LAHubClient() {
       {/* Top Attractions */}
       <section className={`${styles.section} ${styles.altBg}`} aria-labelledby="attractions-la">
         <h2 id="attractions-la" className={styles.sectionTitle}>Top Attractions Worth Your Time</h2>
-        <p className={styles.sectionIntro}>What to prioritize, how long each actually takes, and the tips that matter.</p>
-        <div className={styles.grid}>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
+          6 LA landmarks with practical tips, realistic time estimates, and what to know before you go.
+        </p>
+        <div className={styles.attractionList}>
           {attractions.map(({ name, blurb, href }) => (
-            <Link key={name} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-              <h3 className={styles.cardTitle}>{name}</h3>
-              <p className={styles.cardBody}>{blurb}</p>
+            <Link key={name} href={href} className={styles.attractionItem} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
+              <h3 style={{ marginBottom: "0.25rem", fontSize: "1rem", fontWeight: 600 }}>{name}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{blurb}</p>
             </Link>
           ))}
         </div>
-        <Link href="/destination/la/things-to-do" className={styles.seeAll}>See all things to do in Los Angeles →</Link>
+        <div style={{ textAlign: "center", marginTop: "1rem" }}>
+          <Link href="/destination/la/landmark" style={{ color: "#000", fontWeight: 500, textDecoration: "underline" }}>See all LA landmarks with full details →</Link>
+        </div>
       </section>
 
       {/* Neighborhoods */}
@@ -150,12 +154,14 @@ export default function LAHubClient() {
       {/* Where to Stay */}
       <section className={styles.section} aria-labelledby="hotels-la">
         <h2 id="hotels-la" className={styles.sectionTitle}>Where to Stay in Los Angeles</h2>
-        <p className={styles.sectionIntro}>The Westside vs. Central LA trade-off defines most hotel decisions in LA.</p>
+        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
+          Choosing the right area matters more in LA than almost any city — it's sprawling, car-dependent, and neighborhoods feel like different cities. The Westside suits first-timers; Central LA offers better value and location.
+        </p>
         <div className={styles.grid}>
           {whereToStay.map(({ title, description, href }) => (
-            <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{description}</p>
+            <Link key={title} href={href} className={styles.card} style={{ textDecoration: "none", color: "inherit", display: "block", textAlign: "center" }}>
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{title}</h3>
+              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{description}</p>
             </Link>
           ))}
         </div>
