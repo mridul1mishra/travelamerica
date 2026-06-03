@@ -331,12 +331,3 @@ export default function BookingClient({ config }: { config: CityBookingConfig })
     </Suspense>
   );
 }
-
-// useSearchParams() must be wrapped in a Suspense boundary for static export.
-export default function BookingClient({ config }: { config: CityBookingConfig }) {
-  return (
-    <Suspense fallback={null}>
-      <BookingClientInner config={config} />
-    </Suspense>
-  );
-}
