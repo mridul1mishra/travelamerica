@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Header from "@/app/components/destination/header/header";
+import OrlandoNavHeader from "./components/orlandonavheader/OrlandoNavHeader";
+import HeroSection from "./components/herosection/HeroSection";
 import Footer from "@/app/components/Header/Footer/footer";
 import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
@@ -20,26 +20,14 @@ const topics = [
 export default function SoloTripToOrlandoClient() {
   return (
     <main>
-      <Header links={[
-        { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
-        { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
-        { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
-        { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
-      ]} />
+      <OrlandoNavHeader />
       <BookingCTA
         variant="slim"
         text="Book your solo Orlando trip — flights, hotels and park tickets →"
         href="/destination/orlando/bookings"
         label="Book your trip"
       />
-      <section className={styles.hero}>
-        <h1>Solo Trip to Orlando: Complete Guide</h1>
-        <p>Orlando solo travel rewards the prepared visitor. Theme parks are objectively better with single-rider queues and no group compromise. Beyond the parks, the city has more to offer solo travelers than most people expect.</p>
-        <div className={styles.heroCtas}>
-          <Link href="/destination/orlando/solo-itinerary" className={styles.primaryCta}>See solo itinerary</Link>
-          <Link href="/destination/orlando/safety-guide" className={styles.secondaryCta}>Safety guide</Link>
-        </div>
-      </section>
+      <HeroSection />
       <section className={styles.section} aria-labelledby="solo-or">
         <h2 id="solo-or" className={styles.sectionTitle}>Solo Travel in Orlando</h2>
         <p className={styles.sectionIntro}>Six things every first-time solo traveler to Orlando needs to know.</p>

@@ -1,0 +1,116 @@
+.mainnav {
+  display: flex;
+  align-items: center;
+}
+
+.navlinks {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: Inter-Regular, Helvetica Neue, Arial, sans-serif;
+}
+
+.navlinks li a {
+  color: #7e2b7c;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding-right: 60px;
+}
+
+.navlinks li a:hover {
+  color: #ffd700;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #7e2b7c;
+  cursor: pointer;
+}
+
+.closebtn button {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #222;
+}
+
+.closebtn {
+  display: none;
+}
+
+.overlayheader.scrolled {
+  background: white;
+  color: #7e2b7c !important;
+  display: flex;
+}
+
+.overlayheader.scrolled .hamburger {
+  color: #7e2b7c;
+}
+
+.overlayheader.scrolled .nav-links li a {
+  color: #7e2b7c;
+  padding-right: 60px;
+  cursor: pointer;
+}
+
+.brandlogo {
+  display: block;
+  max-width: 285px;
+  height: auto;
+  margin-left: 0;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 70%;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #7e2b7c;
+  }
+
+  .closebtn {
+    display: block;
+    text-align: right;
+  }
+
+  .mainnav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .brandlogo {
+    flex: 1;
+  }
+}
