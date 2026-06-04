@@ -1,17 +1,17 @@
 export const generateMetadata = () => ({
-  title: 'Solo Travel NYC | Top Landmarks and Routes',
-  description:  'Traveling alone in New York? Explore iconic landmarks confidently with our solo travel safety guide.',
+  title: 'NYC Landmarks Guide: 9 Must-See Sights with Hours, Prices & Tips',
+  description: "Practical guide to NYC's 9 top landmarks — Statue of Liberty, Empire State Building, Central Park, Brooklyn Bridge. Hours, prices, and subway directions.",
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-      canonical: 'https://www.travelsamericas.com/destination/nyc/landmark',
-    },
-    twitter: {
+    canonical: 'https://www.travelsamericas.com/destination/nyc/landmark',
+  },
+  twitter: {
     card: "summary_large_image",
-    title: "Solo Travel NYC | Top Landmarks and Routes",
-    description: "Explore NYC's iconic landmarks confidently — Statue of Liberty, Empire State Building, Central Park, and more.",
+    title: "NYC Landmarks Guide: 9 Must-See Sights with Hours, Prices & Tips",
+    description: "Practical guide to NYC's 9 top landmarks — Statue of Liberty, Empire State Building, Central Park, Brooklyn Bridge. Hours, prices, and subway directions.",
     images: ["https://www.travelsamericas.com/data/majorcities/newyork/assets/statue-of-liberty.webp"]
   }
 });

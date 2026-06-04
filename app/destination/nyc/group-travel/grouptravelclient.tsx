@@ -44,9 +44,9 @@ export default function GroupTravelPage() {
     "@type": "WebPage",
     "@id": "https://www.travelsamericas.com/destination/nyc/group-travel"
   },
-  "headline": "Group Travel in NYC: Safety Tips, Packing Essentials & Landmark Planning",
-  "description": "Explore NYC confidently with our group travel safety guide — smart packing tips, safe itineraries, and must-see landmarks for every explorer.",
-  "keywords": ["Group travel NYC", "NYC itinerary", "safe travel tips", "Citymapper", "MetroCard", "NYC group travel", "things to do alone NYC"],
+  "headline": "NYC Group Travel Guide 2026: Itinerary, Landmarks, Dining & Broadway",
+  "description": "Everything your group needs for New York City — a 3-day itinerary, the best landmarks by borough, where to eat as a crowd, and Broadway group tickets.",
+  "keywords": ["Group travel NYC", "NYC group itinerary", "Broadway group tickets", "NYC group dining", "Citymapper", "OMNY", "NYC group travel"],
   "image": {
     "@type": "ImageObject",
     "url": "https://www.travelsamericas.com/data/majorcities/newyork/assets/safetybanner.webp",
@@ -78,26 +78,26 @@ const schema3 = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Is New York City safe for solo travelers?",
+      "name": "What's the minimum group size for Broadway discounts?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, NYC is generally safe for solo travelers, especially in well-lit areas like Midtown, SoHo, and Brooklyn Heights. Stay alert and avoid isolated zones after dark."
+        "text": "Most Broadway shows define group sales at 10 or more, though minimums vary by show — some run up to 20 (Hamilton's group minimum is 20). Book through Broadway Inbound or the show's Broadway.org page."
       }
     },
     {
       "@type": "Question",
-      "name": "What should I pack for solo travel in NYC?",
+      "name": "Do NYC museums offer group rates?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pack a portable charger, ID/passport copies, MetroCard or OMNY, and a basic first aid kit. NYC demands readiness and smart gear."
+        "text": "Yes — the Met, MoMA, and others offer group entry that skips the ticket line. Book in advance through each museum's group sales page."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I navigate NYC solo?",
+      "name": "Best NYC neighborhoods for a group to stay?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use Citymapper, Transit App, and NYC Ferry. Stay in central hotels with 24/7 security and avoid rush hour subway transfers."
+        "text": "Midtown for transit access and Broadway proximity; Brooklyn (Williamsburg or Downtown Brooklyn) for more space, better food options, and competitive prices."
       }
     }
   ]
@@ -105,26 +105,46 @@ const schema3 = {
 const schema4 = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "NYC Group Travel Safety & Packing Checklist",
+  "name": "NYC Group Travel Checklist",
   "itemListOrder": "Unordered",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Portable chargers for multiple devices" },
     { "@type": "ListItem", "position": 2, "name": "Group ID copies or shared emergency contacts" },
-    { "@type": "ListItem", "position": 3, "name": "MetroCards or OMNY passes for all members" },
+    { "@type": "ListItem", "position": 3, "name": "OMNY passes for all members" },
     { "@type": "ListItem", "position": 4, "name": "Shared first aid kit and basic medicines" },
-    { "@type": "ListItem", "position": 5, "name": "Group coordination apps (WhatsApp, Google Maps, Citymapper)" },
-    { "@type": "ListItem", "position": 6, "name": "Pre-arranged meeting points in busy areas like Times Square or Central Park" },
-    { "@type": "ListItem", "position": 7, "name": "Charter bus or rideshare booking details for large groups" },
-    { "@type": "ListItem", "position": 8, "name": "Stay alert together in crowded zones and avoid isolated areas after dark" }
+    { "@type": "ListItem", "position": 5, "name": "Group coordination apps (WhatsApp, Citymapper, MTA app)" },
+    { "@type": "ListItem", "position": 6, "name": "Pre-arranged meeting points at every stop" },
+    { "@type": "ListItem", "position": 7, "name": "Broadway group booking through Broadway Inbound" },
+    { "@type": "ListItem", "position": 8, "name": "Restaurant reservations for groups of 6+ at least 2 weeks ahead" }
   ]
 };
 
 const schema5 = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Navigate NYC Safely as a Group Traveler",
-  "description": "Step-by-step guide for group travelers to navigate New York City using public transport and other options.",
+  "name": "How to Keep a Group Together in New York City",
+  "description": "Practical steps for group travelers to navigate New York City using public transport, meeting points, and shared apps.",
   "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Set a meeting point at every stop",
+      "text": "Pick a specific corner or subway exit at each location so no one is lost when the group splits."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Put everyone on OMNY",
+      "text": "Each person taps their own card or phone — no more shared MetroCards and no queuing at the machine."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Use the same maps app",
+      "text": "Citymapper or the MTA app — so everyone's directions match and no one is following a different route."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Avoid rush-hour choke points",
+      "text": "Don't move the whole group through Times Square or Penn Station between 7–9 AM or 5–7 PM — that's where groups get separated."
+    },
     {
       "@type": "HowToStep",
       "name": "Plan routes with group-friendly apps",
@@ -132,38 +152,13 @@ const schema5 = {
     },
     {
       "@type": "HowToStep",
-      "name": "Preload MetroCards or OMNY passes",
-      "text": "Prepare group MetroCards or OMNY passes in advance to avoid queues and keep everyone moving together."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Book charter buses or vans",
+      "name": "Book charter buses or vans for large groups",
       "text": "For large groups, reserve charter buses or vans to travel smoothly between major landmarks."
     },
     {
       "@type": "HowToStep",
-      "name": "Use ferries and water taxis",
-      "text": "Take NYC ferries or water taxis for scenic group travel across boroughs and to attractions like the Statue of Liberty."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Coordinate rideshare for smaller groups",
-      "text": "Split into smaller groups and use rideshare services like Uber or Lyft for flexible point-to-point travel."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Walk together in safe areas",
+      "name": "Walk together in safe, central areas",
       "text": "Explore neighborhoods such as Central Park, SoHo, and Brooklyn Heights on foot, staying together and designating meeting points."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Avoid rush hour transfers",
-      "text": "Plan routes to skip crowded subway stations between 7–9 AM and 5–7 PM when traveling as a group."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Stay in safe, central hotels",
-      "text": "Choose accommodations with 24/7 security and easy access to multiple transport options."
     }
   ]
 };
@@ -177,11 +172,12 @@ return (
         <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>NYC Group Travel Guide 2026</h1>
-                <p>Everything your group needs for New York City — a 3-day itinerary, the best landmarks by borough, where to eat as a crowd, plus safety and packing tips so everyone stays connected and has a good time.</p>
+                <p>Everything your group needs for New York City — a 3-day itinerary, the best landmarks by borough, where to eat as a crowd, and how to book Broadway as a group.</p>
                 <nav aria-label="Jump to section" style={{ marginTop: "1rem" }}>
                   <a href="#itinerary" className={styles.ctaButton} style={{ marginRight: "0.5rem" }}>3-Day Itinerary</a>
                   <a href="#landmarks" className={styles.ctaButton} style={{ marginRight: "0.5rem" }}>Landmarks</a>
-                  <a href="#dining" className={styles.ctaButton}>Dining</a>
+                  <a href="#dining" className={styles.ctaButton} style={{ marginRight: "0.5rem" }}>Dining</a>
+                  <a href="#broadway" className={styles.ctaButton}>Broadway</a>
                 </nav>
                 </div>
         </section>
@@ -345,56 +341,76 @@ return (
         </div>
         </section>
 
-        {/* ── SAFETY & PACKING SECTION ── */}
+        {/* ── LOGISTICS SECTION (replaces AI filler) ── */}
         <section className={styles.splitSection}>
+        <div className={styles.textWrapper}>
+          <h2 className={styles.heading}>Keeping a Group Together in NYC</h2>
+          <p className={styles.subheading}>
+            A few things that actually matter with a crowd: pick a <strong>meeting point</strong> at every stop
+            — a subway exit, a specific corner — so no one is lost when the group splits. Put everyone on{" "}
+            <strong>OMNY</strong> (tap your own card or phone — no more shared MetroCards) and the same maps app
+            (<strong>Citymapper</strong> or the <strong>MTA app</strong>) so directions match. Avoid moving the whole
+            group through Times Square or Penn Station at rush hour; that&apos;s where groups get separated. Comfortable
+            shoes — you&apos;ll walk 5–7 miles a day. That&apos;s the whole list.
+          </p>
+        </div>
         <div className={styles.imageWrapper}>
           <Image
-            src="/data/majorcities/newyork/assets/group/nyc-group-travel-safety-navigation-essentials1.png"
-            alt="Illustration of NYC group travel safety essentials including emergency preparedness, smart navigation apps, and urban coordination tools."
-            fill
-            className={styles.mapImage}
-          />
-        </div>
-        <div className={styles.textWrapper}>
-          <h2 className={styles.heading}>Urban Safety and Navigation for Group Explorers</h2>
-          <p className={styles.subheading}><strong>Urban vigilance:</strong> In Union Square and Times Square, group travelers must anticipate sudden urban challenges. Carry compact flashlights, reflective bands, and portable weather gear to stay prepared. Avoid unsafe shortcuts, keep valuables secure, and stay aligned. Share emergency contacts, know local service numbers, and identify nearby medical facilities for quick support.</p>
-          <p className={styles.subheading}><strong>Urban preparedness:</strong> In crowded NYC subway hubs like Times Square, group travelers risk delays or separation. Carry portable chargers, a shared first aid kit, and distribute ID/passport copies. Preload MetroCards or OMNY for smooth entry. These NYC safety tips ensure readiness, coordination, and stress‑free group travel.</p>
-          <p className={styles.subheading}><strong>Smart navigation:</strong> Rush-hour crowds and complex subway hubs like Times Square or Penn Station can overwhelm groups and cause separation. Using tools like Citymapper, Transit App, or the MTA app helps plan routes, avoid congestion, and keep everyone coordinated for smoother, stress-free travel together.</p>
-        </div>
-        </section>
-        <section className={`${styles.splitSection} ${styles.mobileImageFirst}`}>
-        <div className={styles.textWrapper}>
-          <h2 className={styles.heading}>NYC Group Travel Packing Playbook</h2>
-          <p className={styles.subheading}><strong>🧼 Pack Essential</strong>Group travelers in NYC walk 5–7 miles daily, so pack comfortable shoes, portable chargers, and reusable water bottles. Add anti‑theft neck wallets, weather‑ready layers, and hand sanitizer to stay secure, connected, and healthy. These essentials ensure safer, smoother, and more coordinated city exploration.</p>
-          <p className={styles.subheading}><strong>🧥 Pack Comfort</strong>Group travelers in NYC gain extra comfort from reflective wristbands for easy regrouping, compact flashlights for safer night walks, offline maps for stress‑free navigation, foldable seating mats for outdoor breaks, and spray sunscreen for shared protection, with backups like jackets or hotel cards.</p>
-          <p className={styles.subheading}><strong>🎒 Pack Smart</strong>Bluetooth item trackers for bags, offline compass plus waypoint app for orientation, NFC contact tags or QR regroup cards for quick reconnection, shared multi‑port charging cable, and pen‑notebook for addresses, reducing loss, disorientation, and coordination friction.</p>
-        </div>
-        <div className={styles.imageWrappermid}>
-          <Image
-            src="/data/majorcities/newyork/assets/group/nyc-group-travel-gear-guide-essentials-comfort-smart.png"
-            alt="Three-part illustration showing NYC group travel packing tips: essentials like sanitizer and charger, comfort items like layered outfits and umbrella, and smart gear like snacks, journal, and navigation tools."
+            src="/data/majorcities/newyork/assets/group/nyc-group-travel-packing-flatlay-essentials.webp"
+            alt="NYC group travel essentials including metro card, sneakers, and city map"
             fill
             className={styles.mapImage}
           />
         </div>
         </section>
-        <section className={styles.splitSection}>
-          <div className={styles.imageWrapper}>
-          <Image
-            src="/data/majorcities/newyork/assets/group/nyc-group-travel-plan-pack-enjoy-guide.png"
-            alt="Infographic showing NYC group travel essentials across planning, packing, and enjoyment tiers with neutral background"
-            fill
-            className={styles.mapImage}
-          />
-        </div>
-        <div className={styles.textWrapper}>
-          <h2 className={styles.heading}>Group Travel Tips: Planning and Bonding simplified</h2>
-          <p className={styles.subheading}><strong>🎭</strong>Group travel planning requires flexible accommodation, coordinated arrival times, anchor event reservations, and smooth transport. Booking shared spaces, syncing schedules, reserving activities early, and using group passes improve logistics, reduce stress, and deliver memorable, efficient, and enjoyable group travel experiences.</p>
-          <p className={styles.subheading}><strong>🛍️</strong>Packing cubes, shared first‑aid kits, and secure communication apps dominate queries. Solutions streamline luggage, enhance safety, and deliver benefits like reduced stress, smoother coordination, and memorable group travel experiences</p>
-          <p className={styles.subheading}><strong>🎶</strong>Group journeys thrive when inclusive activities, balanced downtime, and early event bookings are prioritized. Coordinating shared meals and cultural outings strengthens bonds, reduces stress, and creates lasting memories. Simple gear like instant cameras or picnic kits enhances these experiences without complicating logistics.</p>
-        </div>
 
+        {/* ── BROADWAY FOR GROUPS SECTION ── */}
+        <section id="broadway" className={styles.splitSection}>
+        <div className={styles.textWrapper}>
+          <h2 className={styles.heading}>Broadway for Groups: Tickets, Timing &amp; the Best Shows for a Mixed Crowd</h2>
+          <p className={styles.subheading}>
+            A Broadway show is the easiest &quot;everyone remembers it&quot; night of a group trip — but group seats need
+            planning, because walk-up blocks are nearly impossible to find for a crowd.
+          </p>
+          <p className={styles.subheading}>
+            <strong>What counts as a group.</strong> Most shows define group sales at <strong>10+</strong>, though
+            minimums vary by show — some run up to about 20.
+          </p>
+          <p className={styles.subheading}>
+            <strong>How to book.</strong> Official group sales go through <strong>Broadway Inbound</strong> (a Shubert
+            Organization division) or the Broadway.org show pages, which list each show&apos;s minimum and contact link.
+            Groups of 10+ can save <strong>up to ~50%</strong> off single-ticket prices — sometimes landing seats
+            around <strong>$35 each</strong>, depending on the show, seats, and date.
+          </p>
+          <p className={styles.subheading}>
+            <strong>How far ahead.</strong> Book early — the discount is bigger the further out you go. Popular titles
+            also sell their best group blocks first, so don&apos;t wait until the week before.
+          </p>
+          <p className={styles.subheading}>
+            <strong>Best shows for a mixed group.</strong> Big, music-driven productions travel best across ages —
+            long-runners and jukebox or family titles over dialogue-heavy dramas. Check the current lineup on
+            Broadway.org when you&apos;re planning.
+          </p>
+          <p className={styles.subheading}>
+            <strong>If you didn&apos;t plan ahead.</strong> The <strong>TKTS</strong> booth at the Times Square red
+            steps sells same-day seats at 20–50% off from ~3 PM — but you usually can&apos;t keep a big group
+            together, so split into pairs and meet at the theater.
+          </p>
+          <p className={styles.subheading}>
+            <strong>Tip:</strong> seat the group together by booking as one block; piecing it together later
+            rarely keeps everyone in the same section.
+          </p>
+        </div>
+        <div className={styles.imageWrapper}>
+          <Image
+            src="/data/majorcities/newyork/assets/group/nyc-group-itinerary-day1-times-square-chelsea-market-broadway.png"
+            alt="Broadway theater district in New York City — Times Square at night"
+            fill
+            className={styles.mapImage}
+          />
+        </div>
         </section>
+
         <BookingCTA variant="full" text="Book flights and stays for your group" href="/destination/nyc/booking?tab=flights&from=group-travel" label="Book your trip" />
         <Footer />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema5) }}/>
@@ -402,7 +418,7 @@ return (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema3) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema2) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema1) }}/>
-        
+
     </>
     );
 }

@@ -226,8 +226,8 @@ export default function LandmarkPage() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "NYC Landmarks Guide: Top Must-See Sights with Hours, Prices & Tips",
-    "description": "Practical guide to New York City\'s top landmarks \u2014 Statue of Liberty, Empire State Building, Central Park, Brooklyn Bridge and more. Hours, prices, and subway directions.",
+    "headline": "NYC Landmarks Guide: 9 Must-See Sights with Hours, Prices & Tips",
+    "description": "Practical guide to New York City\'s 9 top landmarks — Statue of Liberty, Empire State Building, Central Park, Brooklyn Bridge and more. Hours, prices, and subway directions.",
     "url": "https://www.travelsamericas.com/destination/nyc/landmark",
     "inLanguage": "en-US",
     "image": "https://www.travelsamericas.com/data/majorcities/newyork/assets/statue-of-liberty.webp",
@@ -274,13 +274,14 @@ export default function LandmarkPage() {
       <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=activities&from=landmark" label="See tickets" />
 
       <section className={styles.intro} style={{ textAlign: "center" }}>
-        <h1 className={styles.sectionheading}>NYC Landmarks: A Practical Solo Traveler Guide</h1>
+        <h1 className={styles.sectionheading}>NYC Landmarks Guide: 9 Must-See Sights</h1>
         <p className={styles.introLead}>
-          Real visitor information for the 9 New York City landmarks first-time and solo
-          travelers actually want. Each entry includes the address, nearest subway, current
-          hours, approximate ticket price, time to allocate, and a solo-specific tip.
-          Verify hours and ticket prices on the venue&apos;s own site before going &mdash;
-          NYC attractions change schedules seasonally.
+          New York&apos;s landmarks are spread across boroughs, priced all over the map, and some are worth half a day
+          while others are a 20-minute photo stop. This guide gives you the practical details for the nine that
+          matter most &mdash; hours, ticket prices, the nearest subway, how long to budget, and when to go to skip
+          the worst crowds &mdash; so you can fit them into real days. Last updated: June 2026. Verify hours and
+          prices on the venue&apos;s own site before going; NYC attractions change schedules seasonally.
+          (Traveling alone? Each entry includes an insider tip that&apos;s particularly useful for solo visitors too.)
         </p>
 
         <nav aria-label="Jump to landmark" className={styles.jumpnav}>
@@ -327,7 +328,7 @@ export default function LandmarkPage() {
               <h3 className={styles.landmarkSubhead}>What to do</h3>
               <p>{l.whatToDo}</p>
 
-              <h3 className={styles.landmarkSubhead}>Solo traveler tip</h3>
+              <h3 className={styles.landmarkSubhead}>Insider tip</h3>
               <p>{l.soloTip}</p>
             </div>
           </article>
@@ -350,14 +351,14 @@ export default function LandmarkPage() {
         </article>
 
         <article className={styles.routeCard}>
-          <h3>Slow-Paced Solo Route (1 day, low-energy)</h3>
+          <h3>Relaxed Sightseeing Route (1 day, low-energy)</h3>
           <ol>
             <li><strong>10:00 AM</strong> &mdash; The Metropolitan Museum (3 hours, take it room by room)</li>
             <li><strong>1:30 PM</strong> &mdash; Lunch on the Upper East Side</li>
             <li><strong>3:00 PM</strong> &mdash; Walk south through Central Park (Conservatory Garden &rarr; Reservoir &rarr; Bow Bridge &rarr; Bethesda Terrace)</li>
             <li><strong>5:30 PM</strong> &mdash; Exit Central Park at Columbus Circle</li>
             <li><strong>6:30 PM</strong> &mdash; Sunset at Top of the Rock (book the sunset slot in advance)</li>
-            <li><strong>8:30 PM</strong> &mdash; Dinner at a bar in Hell&apos;s Kitchen or Midtown West</li>
+            <li><strong>8:30 PM</strong> &mdash; Dinner in Hell&apos;s Kitchen or Midtown West</li>
           </ol>
         </article>
 
@@ -443,11 +444,11 @@ export default function LandmarkPage() {
           </Link>
           <Link href="/destination/nyc/best-areas-to-stay" className={styles.relatedLink}>
             <h3>Best Areas to Stay</h3>
-            <p>Neighborhood comparison for solo travelers, with safety and transit scoring.</p>
+            <p>Neighborhood comparison with safety and transit scoring.</p>
           </Link>
           <Link href="/destination/nyc/food" className={styles.relatedLink}>
-            <h3>Solo Dining in NYC</h3>
-            <p>Where solo travelers should actually eat, by neighborhood and meal.</p>
+            <h3>Where to Eat in NYC</h3>
+            <p>Best restaurants, food halls, pizza, and bagels by neighborhood.</p>
           </Link>
           <Link href="/destination/nyc/nyc-safety-guide" className={styles.relatedLink}>
             <h3>NYC Safety Guide</h3>

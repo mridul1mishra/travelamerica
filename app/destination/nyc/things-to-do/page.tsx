@@ -1,24 +1,24 @@
 import NYCThingsToDoClient from './nycthingstodoclient';
 
 export const metadata = {
-  title: 'Things to Do in New York City | Plan Your NYC Experience',
+  title: 'The 40 Best Things to Do in New York City (2026 Guide)',
   description:
-    'A breakdown of the main types of NYC trips, from landmarks to food to parks, and how each one changes where it makes sense to stay.',
+    'The best things to do in NYC — landmarks, free activities, museums, food halls, and skyline views, organized by vibe and budget. Updated for 2026.',
   alternates: {
     canonical: 'https://www.travelsamericas.com/destination/nyc/things-to-do',
   },
   openGraph: {
-    title: 'Things to Do in New York City',
+    title: 'The 40 Best Things to Do in New York City (2026 Guide)',
     description:
-      'The main types of NYC trips—landmarks, culture, food, and the outdoors—and how each shapes your days.',
+      'The best things to do in NYC — landmarks, free activities, museums, food halls, and skyline views, organized by vibe and budget.',
     url: 'https://www.travelsamericas.com/destination/nyc/things-to-do',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Things to Do in New York City',
+    title: 'The 40 Best Things to Do in New York City (2026 Guide)',
     description:
-      'Plan your NYC experience with a clear breakdown of what the city offers and how it affects your itinerary.',
+      'The best things to do in NYC — landmarks, free activities, museums, food halls, and skyline views, organized by vibe and budget.',
   },
 };
 
@@ -35,9 +35,9 @@ const breadcrumb = {
 const article = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Things to Do in New York City | Plan Your NYC Experience',
+  headline: 'The 40 Best Things to Do in New York City (2026 Guide)',
   description:
-    'A breakdown of the main types of NYC trips, from landmarks to food to parks, and how each one changes where it makes sense to stay.',
+    'The best things to do in NYC — landmarks, free activities, museums, food halls, and skyline views, organized by vibe and budget. Updated for 2026.',
   url: 'https://www.travelsamericas.com/destination/nyc/things-to-do',
   inLanguage: 'en-US',
   author: { '@type': 'Organization', name: 'Travels Americas', url: 'https://www.travelsamericas.com' },
@@ -63,7 +63,6 @@ export default function NYCThingsToDoPage() {
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}
       />
-      {/* Optional: FAQ Schema for SEO */}
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -74,20 +73,47 @@ export default function NYCThingsToDoPage() {
             mainEntity: [
               {
                 '@type': 'Question',
+                name: 'What are the top free things to do in NYC?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text:
+                    'The Staten Island Ferry, Central Park, the High Line, the Brooklyn Bridge walk, Grand Central Terminal, the 9/11 Memorial plaza, and free museum hours at MoMA (Friday 4–8 PM) and the Whitney (Friday 5–10 PM).',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How many days do you need in New York City?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text:
+                    'Four to five days lets you do the major icons, a couple of museums, two or three neighborhoods, and a Broadway show without rushing.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: "What's the one observation deck to pick if you only do one?",
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text:
+                    'Top of the Rock for the best skyline photo (the Empire State Building is in the frame), or SUMMIT One Vanderbilt for the most novel experience.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: "What's new in NYC for 2026?",
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text:
+                    "America's 250th-anniversary events and Sail250 around July 4, and FIFA World Cup matches at MetLife Stadium. Both draw large crowds, so book early if your trip overlaps.",
+                },
+              },
+              {
+                '@type': 'Question',
                 name: 'What types of experiences does New York City offer?',
                 acceptedAnswer: {
                   '@type': 'Answer',
                   text:
                     'NYC trips tend to fall into a few types: landmark sightseeing, museums and galleries, eating your way through neighborhoods, or parks and long walks. Most people mix two of these.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'How do NYC experiences affect where I should stay?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text:
-                    'Your preferred experiences influence the best neighborhoods to stay in. For example, landmark-focused trips work well in Midtown or Lower Manhattan, while food and culture travelers may prefer Brooklyn or the Village.',
                 },
               },
             ],
