@@ -1,0 +1,72 @@
+<!doctype html><html><head><meta charset="utf-8"><title>LA vs NYC Report</title>
+<style>
+body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:900px;margin:2rem auto;padding:0 1.5rem;line-height:1.6;color:#1a1a1a}
+h1{border-bottom:3px solid #2563eb;padding-bottom:.3rem}
+h2{border-bottom:1px solid #ddd;padding-bottom:.2rem;margin-top:2rem}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border:1px solid #ccc;padding:.5rem .75rem;text-align:left;vertical-align:top}
+th{background:#f1f5f9}
+code{background:#f1f5f9;padding:.1rem .3rem;border-radius:3px;font-size:.9em}
+em{color:#666}
+</style></head><body>
+<h1>LA vs NYC — HTML/CSS Structure Comparison Report</h1>
+<p><em>Generated 2026-06-03. Template direction: <strong>NYC is the source of truth</strong>. Extra/one-city-only sections are <strong>flagged, not removed</strong>.</em></p>
+<h2>Bottom line</h2>
+<p>The two cities are <strong>not</strong> "same structure, different content." They use <strong>two fundamentally different architectures</strong>. Making LA match NYC is a structural rebuild of most LA pages, not a content swap.</p>
+<table><thead><tr><th></th><th><strong>NYC (template)</strong></th><th><strong>LA (current)</strong></th></tr></thead><tbody>
+<tr><td>CSS strategy</td><td>One <strong>page-specific</strong> <code>.module.css</code> per page (<code>food.module.css</code>, <code>landmark.module.css</code>, …)</td><td>One <strong>shared</strong> <code>city-hub.module.css</code> for every page</td></tr>
+<tr><td>Page composition</td><td>Built from many <strong>per-page sub-components</strong> in <code>./components/</code> folders, or large bespoke inline JSX</td><td><strong>Monolithic</strong> single client file using a few shared <code>app/components/destination/*</code> components</td></tr>
+<tr><td>Root wrapper</td><td><code>&lt;&gt;</code> fragment</td><td><code>&lt;main className={styles.container}&gt;</code></td></tr>
+<tr><td>Header</td><td><code>&lt;Header /&gt;</code> (no props)</td><td><code>&lt;Header links={[…]} /&gt;</code> (passes nav links)</td></tr>
+</tbody></table>
+<h2>The shared baseline (already identical for both)</h2>
+<p>Both cities import from <code>app/components/destination/</code>: <code>banner, bestareatostay, BookingCTA, decisionframework, faqsection, header, neighborhoodrankingcard, quicksummarygrid, scenariocard, solotriptonyc, subwayaccess, wherenottostay, whytrustitem</code>. Where both pages use these, the HTML/CSS is genuinely shared — the divergence is only in *which* components each page uses and the wrapper around them.</p>
+<h2>Per-page findings</h2>
+<p><strong>Page count mismatch:</strong> LA has an extra page <strong><code>itinerary/</code></strong> with no NYC equivalent (NYC only has <code>solo-itinerary</code>). Flagged — not removed.</p>
+<h3>Category 1 — Genuinely aligned (1 page)</h3>
+<ul>
+<li><strong>best-areas-to-stay</strong> — Both use the same component set (Banner, SoloTripIntro, SafestNeighborhoods, NeighborhoodRankingCards). Differences are small and fixable:</li>
+<li>LA wraps in <code>&lt;main className={styles.container}&gt;</code>; NYC uses <code>&lt;&gt;</code></li>
+<li>LA uses <code>city-hub.module.css</code>; NYC uses <code>bestareatostay.module.css</code></li>
+<li>LA <code>&lt;Header links=…&gt;</code>; NYC <code>&lt;Header /&gt;</code></li>
+<li>LA <code>SafestNeighborhoods</code> passes <code>title</code>; NYC passes <code>mapImage</code></li>
+<li>LA FAQ wrapped in <code>styles.section</code>; NYC in <code>styles.container</code></li>
+<li><strong>⚠️ LA has 2 extra sections</strong> NYC lacks: "All Los Angeles Areas Compared" + "Hotel Booking Tips" (flagged, not removed)</li>
+</ul>
+<h3>Category 2 — NYC is component-built, LA is monolithic (7 pages — largest gap)</h3>
+<p>NYC builds these from many local sub-components (each with its own CSS module); LA has <strong>zero</strong> local components and renders everything inline via <code>city-hub.module.css</code>:</p>
+<table><thead><tr><th>Page (LA → NYC)</th><th>NYC local components</th><th>LA local components</th></tr></thead><tbody>
+<tr><td>is-la-safe-at-night → is-nyc-safe-at-night</td><td>13</td><td>0</td></tr>
+<tr><td>la-female-solo-travel-guide → nyc-female-solo-travel-guide</td><td>16</td><td>0</td></tr>
+<tr><td>safety-guide → nyc-safety-guide</td><td>13</td><td>0</td></tr>
+<tr><td>metro-safety-guide → subway-safety-guide</td><td>14</td><td>0</td></tr>
+<tr><td>neighborhood-guide → neighborhood-guide</td><td>8</td><td>0</td></tr>
+<tr><td>la-metro-map → nyc-subway-map</td><td>5</td><td>0</td></tr>
+<tr><td>hub (lahubclient → nycclient)</td><td>10</td><td>1</td></tr>
+</tbody></table>
+<p>To match NYC, each LA page here must be split into the same sub-component tree with the same per-component CSS modules.</p>
+<h3>Category 3 — NYC is large bespoke inline, LA is short shared-component (3 pages)</h3>
+<p>NYC uses big custom inline layouts with page-specific CSS modules; LA uses short shared-component pages. Line counts (NYC vs LA): <strong>food</strong> 400 vs 55 · <strong>group-travel</strong> 407 vs 61 · <strong>landmark</strong> 444 vs 62. Completely different markup and class names.</p>
+<h3>Category 4 — Comparable size, still different modules/structure (3 pages)</h3>
+<ul>
+<li><strong>solo-itinerary</strong> (NYC 283 / LA 73) — NYC much richer, <code>SoloItinerary.module.css</code> vs <code>city-hub.module.css</code></li>
+<li><strong>solo-trip</strong> (NYC 100 / LA 67) — both use some shared components; different wrapper/module</li>
+<li><strong>things-to-do</strong> (NYC 107 / LA 61) — different module, NYC richer</li>
+</ul>
+<h3>Odd one out</h3>
+<ul>
+<li><strong>laclient.tsx</strong> imports <code>nyc/booking/booking.module.css</code> — an LA file pulling an NYC page's CSS module. Likely a copy-paste bug worth fixing regardless of direction.</li>
+</ul>
+<h2>What "make them match" actually means</h2>
+<p>Because NYC is the template, aligning LA requires, per page:</p>
+<ol>
+<li>Replace <code>city-hub.module.css</code> with a <strong>per-page CSS module</strong> copied from NYC's.</li>
+<li><strong>Decompose</strong> the monolithic LA client into the same <code>./components/</code> sub-component tree NYC uses (Category 2 — 7 pages).</li>
+<li><strong>Rebuild</strong> Category 3/4 LA pages' markup to NYC's bespoke layout.</li>
+<li>Normalize wrapper (<code>&lt;main&gt;</code> → <code>&lt;&gt;</code>) and <code>&lt;Header /&gt;</code> props.</li>
+<li>Decide what to do with LA-only extras (best-areas sections, <code>itinerary</code> page) — currently flagged.</li>
+</ol>
+<p>This is realistically a page-by-page port. Only content (text, images, neighborhood data, links) would then differ.</p>
+<h2>Suggested next step</h2>
+<p>Go <strong>one page at a time, NYC → LA</strong>, starting with <strong>best-areas-to-stay</strong> (90% there already — clean reference pattern), or start with a heavier Category 2 page (e.g. safety-guide) to prove out the decomposition approach.</p>
+</body></html>

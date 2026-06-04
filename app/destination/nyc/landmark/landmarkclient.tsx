@@ -223,6 +223,24 @@ export default function LandmarkPage() {
     ],
   };
 
+  const article = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "NYC Landmarks Guide: Top Must-See Sights with Hours, Prices & Tips",
+    "description": "Practical guide to New York City\'s top landmarks \u2014 Statue of Liberty, Empire State Building, Central Park, Brooklyn Bridge and more. Hours, prices, and subway directions.",
+    "url": "https://www.travelsamericas.com/destination/nyc/landmark",
+    "inLanguage": "en-US",
+    "image": "https://www.travelsamericas.com/data/majorcities/newyork/assets/statue-of-liberty.webp",
+    "author": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Travels Americas",
+      "logo": { "@type": "ImageObject", "url": "https://www.travelsamericas.com/logo.png" },
+    },
+    "datePublished": "2025-10-05",
+    "dateModified": "2026-06-03",
+  };
+
   const touristAttractions = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -243,6 +261,7 @@ export default function LandmarkPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(touristAttractions) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPage) }} />

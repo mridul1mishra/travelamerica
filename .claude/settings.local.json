@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(Get-ChildItem *)"
+      "Bash(Get-ChildItem *)",
+      "Bash(code --command markdown.showPreview LA_NYC_COMPARISON_REPORT.md)",
+      "Bash(npx next *)",
+      "Bash(grep -E \"destination/la\\(/|$| \\)\")",
+      "Bash(echo \"---exit: $?---\")"
     ]
   }
 }

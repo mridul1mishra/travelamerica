@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
-import styles from "@/app/destination/city-hub.module.css";
+import styles from "./bestareatostay.module.css";
 import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
 import Banner from "@/app/components/destination/bestareatostay/Banner/Banner";
@@ -88,7 +88,7 @@ const quickTips = [
 
 export default function LABestAreasClient() {
   return (
-    <main className={styles.container}>
+    <>
       <Header links={[
         { href: "/destination/la/best-areas-to-stay", label: "Best Areas to Stay" },
         { href: "/destination/la/solo-trip-to-la", label: "Solo Trip to LA" },
@@ -133,7 +133,7 @@ export default function LABestAreasClient() {
         warning="Avoid walking alone in parts of Hollywood east of Vine, areas adjacent to Skid Row in DTLA, or unfamiliar side streets after dark."
       />
       <NeighborhoodRankingCards cityName="Los Angeles" neighborhoods={laNeighborhoods} />
-      <section aria-labelledby="areas-la">
+      <section aria-labelledby="areas-la" className={styles.section}>
         <h2 id="areas-la">All Los Angeles Areas Compared</h2>
         <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>Six distinct neighborhoods - what each is actually like and who it suits.</p>
         <div className={styles.grid}>
@@ -146,7 +146,7 @@ export default function LABestAreasClient() {
           ))}
         </div>
       </section>
-      <section aria-labelledby="tips-la">
+      <section aria-labelledby="tips-la" className={styles.section}>
         <h2 id="tips-la">Hotel Booking Tips for Los Angeles</h2>
         <div className={styles.grid}>
           {quickTips.map((tip, i) => (
@@ -156,7 +156,7 @@ export default function LABestAreasClient() {
           ))}
         </div>
       </section>
-      <div className={styles.section}>
+      <div className={styles.container}>
         <FAQAccordion faqs={faqData} />
       </div>
       <BookingCTA
@@ -167,6 +167,6 @@ export default function LABestAreasClient() {
         label="Browse Los Angeles hotels"
       />
       <Footer />
-    </main>
+    </>
   );
 }

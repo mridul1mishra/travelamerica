@@ -18,6 +18,12 @@ export default function FoodClientPage() {
     "name": "Travels Americas"
   },
   "datePublished": "2025-10-19",
+  "dateModified": "2026-06-03",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Travels Americas",
+    "logo": { "@type": "ImageObject", "url": "https://www.travelsamericas.com/logo.png" }
+  },
   "image": "https://www.travelsamericas.com/data/majorcities/assets/nyc-solo-dining.webp",
   "articleSection": ["Fast & Flavorful", "Bar Dining", "Local Flavor"],
   "mainEntity": [

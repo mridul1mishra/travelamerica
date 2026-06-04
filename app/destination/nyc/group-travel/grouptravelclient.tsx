@@ -66,6 +66,7 @@ export default function GroupTravelPage() {
     }
   },
   "datePublished": "2025-11-29",
+  "dateModified": "2026-06-03",
   "about": [
     { "@type": "Thing", "name": "Group Travel" },
     { "@type": "Place", "name": "New York City" }

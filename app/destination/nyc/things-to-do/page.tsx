@@ -22,9 +22,47 @@ export const metadata = {
   },
 };
 
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.travelsamericas.com/' },
+    { '@type': 'ListItem', position: 2, name: 'New York', item: 'https://www.travelsamericas.com/destination/nyc/' },
+    { '@type': 'ListItem', position: 3, name: 'Things to Do', item: 'https://www.travelsamericas.com/destination/nyc/things-to-do' },
+  ],
+};
+
+const article = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Things to Do in New York City | Plan Your NYC Experience',
+  description:
+    'A breakdown of the main types of NYC trips, from landmarks to food to parks, and how each one changes where it makes sense to stay.',
+  url: 'https://www.travelsamericas.com/destination/nyc/things-to-do',
+  inLanguage: 'en-US',
+  author: { '@type': 'Organization', name: 'Travels Americas', url: 'https://www.travelsamericas.com' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Travels Americas',
+    logo: { '@type': 'ImageObject', url: 'https://www.travelsamericas.com/logo.png' },
+  },
+  datePublished: '2025-09-20',
+  dateModified: '2026-06-03',
+};
+
 export default function NYCThingsToDoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }}
+      />
       {/* Optional: FAQ Schema for SEO */}
       <script
         type="application/ld+json"

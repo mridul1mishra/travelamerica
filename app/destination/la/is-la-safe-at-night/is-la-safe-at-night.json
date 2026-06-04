@@ -1,0 +1,347 @@
+{
+  "heroSafety": {
+    "title": "Is LA Safe at Night for Solo Travelers?",
+    "subtitle": "LA is safe at night in the major tourist areas — and riskier in specific corridors that tourists have no reason to visit. Here's the honest breakdown.",
+    "heroImage": "/data/majorcities/losangeles/assets/losangeles.webp",
+    "trustBadges": ["🛡️LAPD Data", "👣Local Insights", "📊Traveler Patterns"]
+  },
+
+  "safetyMeter": {
+    "overallRating": "Safe in Tourist Areas with Smart Precautions",
+    "meterScore": 7,
+    "quickSummary": "LA's main tourist areas — Santa Monica, West Hollywood, Beverly Hills, and the Hollywood corridor — stay comfortable after dark with normal awareness. Risks increase in specific corridors and when walking residential areas late at night.",
+    "bestFor": ["Solo women", "First-time visitors", "Nightlife travelers"],
+    "avoidIf": ["Prefer walking everywhere instead of using rideshare", "Feel uneasy in spread-out, car-centric cities at night", "Plan to explore unfamiliar residential areas after dark on foot"]
+  },
+
+  "neighborhoodSafetyGrid": [
+    {
+      "name": "Santa Monica",
+      "safetyLevel": "Safe",
+      "why": "Third Street Promenade and the pier area have foot traffic, open businesses, and security presence at night.",
+      "bestTimeToVisit": "Anytime",
+      "avoidAfter": null,
+      "notes": "Tourist-heavy but comfortable after dark."
+    },
+    {
+      "name": "West Hollywood",
+      "safetyLevel": "Safe",
+      "why": "Sunset Strip has consistent foot traffic, good lighting, and visible venue security throughout the night.",
+      "bestTimeToVisit": "Evening",
+      "avoidAfter": null,
+      "notes": "One of LA's safest nightlife areas."
+    },
+    {
+      "name": "Beverly Hills",
+      "safetyLevel": "Safe",
+      "why": "Upscale, well-patrolled, and low crime after dark.",
+      "bestTimeToVisit": "Evening",
+      "avoidAfter": null,
+      "notes": null
+    },
+    {
+      "name": "Hollywood Blvd (Tourist Corridor)",
+      "safetyLevel": "Safe",
+      "why": "The well-lit tourist corridor stays busy with foot traffic and security.",
+      "bestTimeToVisit": "Before midnight",
+      "avoidAfter": "Midnight",
+      "notes": "Stay west of Highland Ave."
+    },
+    {
+      "name": "DTLA Arts District",
+      "safetyLevel": "Safe",
+      "why": "Open businesses and steady foot traffic keep it comfortable after dark.",
+      "bestTimeToVisit": "Evening",
+      "avoidAfter": "1 AM",
+      "notes": null
+    },
+    {
+      "name": "Venice Beach Boardwalk",
+      "safetyLevel": "Mixed",
+      "why": "Lighting is inconsistent and the homeless population increases after dark.",
+      "bestTimeToVisit": "Daytime",
+      "avoidAfter": "10 PM",
+      "notes": "Not recommended for solo walking after 10pm."
+    },
+    {
+      "name": "East Hollywood",
+      "safetyLevel": "Mixed",
+      "why": "Quieter and less predictable east of Highland Ave and north of Sunset.",
+      "bestTimeToVisit": "Daytime",
+      "avoidAfter": "Sunset",
+      "notes": null
+    },
+    {
+      "name": "Malibu Beaches",
+      "safetyLevel": "Mixed",
+      "why": "Isolated at night with little lighting or foot traffic.",
+      "bestTimeToVisit": "Daytime",
+      "avoidAfter": "Sunset",
+      "notes": "Only visit with others and let someone know where you are."
+    },
+    {
+      "name": "Skid Row (DTLA)",
+      "safetyLevel": "Avoid Late",
+      "why": "High-risk area east of Main St between 3rd and 7th. Tourists have no reason to visit.",
+      "bestTimeToVisit": "Daytime",
+      "avoidAfter": "Sunset",
+      "notes": null
+    },
+    {
+      "name": "South LA",
+      "safetyLevel": "Avoid Late",
+      "why": "Many parts south of the 10 freeway have higher crime and low foot traffic at night.",
+      "bestTimeToVisit": "Daytime",
+      "avoidAfter": "Sunset",
+      "notes": null
+    },
+    {
+      "name": "Compton",
+      "safetyLevel": "Avoid Late",
+      "why": "Higher crime rates at night unless you know the area.",
+      "bestTimeToVisit": "Daytime",
+      "avoidAfter": "Sunset",
+      "notes": null
+    },
+    {
+      "name": "Watts / Inglewood",
+      "safetyLevel": "Avoid Late",
+      "why": "Residential areas best avoided at night unless you know them.",
+      "bestTimeToVisit": "Daytime",
+      "avoidAfter": "Sunset",
+      "notes": null
+    }
+  ],
+
+  "scenarioCards": [
+    {
+      "title": "Walking Alone After 10 PM",
+      "riskLevel": "Moderate",
+      "whatToExpect": "Tourist corridors stay active; residential side streets get very quiet in car-centric LA.",
+      "howToStaySafe": [
+        "Stick to well-lit tourist corridors",
+        "Avoid empty residential blocks",
+        "Walk confidently with purpose",
+        "Rideshare to your hotel whenever in doubt"
+      ],
+      "bestFor": "Solo women, first-timers",
+      "avoidIf": "You plan to wander unfamiliar areas on foot"
+    },
+    {
+      "title": "Using Rideshare After 10 PM",
+      "riskLevel": "Low",
+      "whatToExpect": "Fast, reliable, and the standard nighttime choice in LA.",
+      "howToStaySafe": [
+        "Verify license plate before getting in",
+        "Sit in the back seat",
+        "Share your trip with someone",
+        "Use the in-app emergency button if needed"
+      ],
+      "bestFor": "Nightlife travelers",
+      "avoidIf": "You're on a very tight budget"
+    },
+    {
+      "title": "Parking at Night",
+      "riskLevel": "Moderate",
+      "whatToExpect": "Multi-story structures in DTLA and Hollywood can feel isolated late at night.",
+      "howToStaySafe": [
+        "Use the elevator rather than stairwells",
+        "Park near the elevator on well-lit floors",
+        "Never leave anything visible in your car",
+        "Ask venue staff to walk with you if anything feels wrong"
+      ],
+      "bestFor": "Drivers staying late at venues",
+      "avoidIf": "You prefer attended valet only"
+    },
+    {
+      "title": "Exploring Nightlife Areas",
+      "riskLevel": "Mixed",
+      "whatToExpect": "Lively venues on the Sunset Strip and DTLA, with quieter blocks just off the main strips.",
+      "howToStaySafe": [
+        "Stay on the main strips with foot traffic",
+        "Avoid isolated side streets after leaving venues",
+        "Keep drinks in sight at all times",
+        "Plan your rideshare home before you head out"
+      ],
+      "bestFor": "Nightlife travelers, social explorers",
+      "avoidIf": "You prefer quiet, low-stimulation environments"
+    }
+  ],
+
+  "personaSafetyBlocks": [
+    {
+      "personaName": "Solo Female Traveler",
+      "topConcerns": ["Walking alone at night", "Rideshare safety", "Parking structures"],
+      "recommendedNeighborhoods": ["Santa Monica", "West Hollywood", "Beverly Hills"],
+      "avoidZones": ["Skid Row", "South LA", "Venice Boardwalk after 10pm"],
+      "nightTips": [
+        "Rideshare instead of walking unfamiliar areas",
+        "Park near elevators on well-lit floors",
+        "Keep your phone off your lap at red lights",
+        "Let someone know your plans"
+      ]
+    }
+  ],
+
+  "corePrinciples": [
+    {
+      "title": "Default to Rideshare",
+      "description": "The single most effective safety measure in LA at night is using Uber or Lyft instead of walking to unfamiliar areas.",
+      "example": "Rideshare from venue to hotel whenever in doubt — most locals drive or rideshare at night."
+    },
+    {
+      "title": "Read the Block",
+      "description": "Nighttime safety varies block by block in LA. Scan the lighting, foot traffic, and open businesses around you.",
+      "example": "If a block suddenly gets quiet or dark, head back toward the main tourist corridor."
+    },
+    {
+      "title": "Protect Your Car",
+      "description": "Car break-ins are the most common nighttime issue. Never leave anything visible inside your vehicle.",
+      "example": "Take your bag, charger, and jacket with you — even a jacket on the seat invites a break-in."
+    },
+    {
+      "title": "Signal Confidence",
+      "description": "Walk with purpose, keep your head up, and avoid behaviors that signal distraction.",
+      "example": "Hold your phone at chest level for navigation instead of staring down at it."
+    },
+    {
+      "title": "Trust Micro-Signals",
+      "description": "If something feels off — a person, a block, a parking structure — change course immediately.",
+      "example": "If a parking structure feels isolated, go back to the venue and ask staff to walk you out."
+    }
+  ],
+
+  "transitSafety": {
+    "rideshare": {
+      "riskLevel": "Low",
+      "bestHours": "Anytime",
+      "avoidHours": "None — but stay alert after 2 AM",
+      "tips": [
+        "Verify driver and plate",
+        "Share trip",
+        "Use the in-app emergency button if needed"
+      ],
+      "recommendedRoutes": [
+        "Venue to hotel late at night",
+        "Any trip into or out of unfamiliar areas"
+      ]
+    },
+    "subway": {
+      "riskLevel": "Moderate",
+      "bestHours": "Before 10 PM",
+      "avoidHours": "Late night with long gaps",
+      "tips": [
+        "Stay on busier Metro lines",
+        "Avoid empty cars and quiet platforms",
+        "Have a rideshare backup ready"
+      ],
+      "recommendedRoutes": [
+        "Metro B (Red) Line for Hollywood",
+        "Metro E (Expo) Line toward Santa Monica"
+      ]
+    },
+    "walking": {
+      "riskLevel": "Moderate",
+      "bestHours": "Before midnight in tourist corridors",
+      "avoidHours": "Late night in residential or beach areas",
+      "tips": [
+        "Stick to well-lit tourist corridors",
+        "Avoid Venice Boardwalk after 10pm",
+        "Rideshare to your hotel whenever in doubt"
+      ],
+      "recommendedRoutes": [
+        "Third Street Promenade (Santa Monica)",
+        "Sunset Strip (West Hollywood)"
+      ]
+    }
+  },
+
+  "neighborhoodCards": [
+    {
+      "name": "Santa Monica",
+      "nightVibe": "Bright, busy, tourist-friendly waterfront",
+      "safetyRating": "Safe",
+      "safeSpots": ["Third Street Promenade", "Santa Monica Pier area"],
+      "avoidSpots": ["Beach paths away from the pier late at night"],
+      "idealFor": "Solo women, first-time visitors, relaxed evening walks",
+      "notFor": "People who dislike touristy areas",
+      "indicators": {
+        "lighting": "Excellent",
+        "footTraffic": "Very High",
+        "policePresence": "High"
+      }
+    },
+    {
+      "name": "West Hollywood",
+      "nightVibe": "Lively nightlife strip with steady foot traffic",
+      "safetyRating": "Safe",
+      "safeSpots": ["Sunset Strip", "Santa Monica Blvd venues"],
+      "avoidSpots": ["Quiet residential side streets off the strip"],
+      "idealFor": "Nightlife travelers, social explorers",
+      "notFor": "People who want a quiet evening",
+      "indicators": {
+        "lighting": "Good",
+        "footTraffic": "High",
+        "policePresence": "Moderate"
+      }
+    }
+  ],
+
+  "emergencyBlock": {
+    "call911": "For emergencies requiring immediate police, fire, or medical response.",
+    "call311": "For non-emergency city services and complaints in Los Angeles.",
+    "nypdPrecinctLocator": "https://www.lapdonline.org/police-stations/",
+    "nypdPrecinctLocatorText": "Find the LAPD station responsible for your area — helpful if you lose something or need quick assistance. Non-emergency line: (877) 275-5273.",
+    "nearestHospital": "LA has multiple 24/7 emergency rooms within 10–15 minutes of the main tourist areas in Santa Monica, Hollywood, and DTLA.",
+    "subwayHelpPoints": "Both Uber and Lyft have in-app emergency buttons that share your location with 911 — use them if needed.",
+    "lateNightTransportLinks": ["https://www.metro.net"]
+  },
+
+  "faq": [
+    {
+      "question": "Is LA safe to walk around at night?",
+      "answer": "In tourist areas yes — Santa Monica Promenade, Sunset Strip, Beverly Hills, and Hollywood Blvd are all fine with normal awareness. Avoid walking alone east of Highland on Hollywood Blvd or anywhere near Skid Row.",
+      "relatedLinks": ["/destination/la/safety-guide"]
+    },
+    {
+      "question": "Is Venice Beach safe at night?",
+      "answer": "The boardwalk is not recommended for solo walking after 10pm. Lighting is inconsistent and the homeless population increases after dark. Santa Monica Pier area is fine until closing time.",
+      "relatedLinks": ["/destination/la/best-areas-to-stay"]
+    },
+    {
+      "question": "Should I use Uber at night in LA?",
+      "answer": "Yes — rideshare is the standard choice for nighttime travel in LA. Most locals drive or rideshare at night. Pedestrians in residential areas after dark can attract unwanted attention.",
+      "relatedLinks": ["/destination/la/solo-trip-to-la"]
+    },
+    {
+      "question": "Is West Hollywood safe at night?",
+      "answer": "Yes — WeHo is one of LA's safest nightlife areas. The Sunset Strip has consistent foot traffic, good lighting, and visible venue security throughout the night.",
+      "relatedLinks": ["/destination/la/best-areas-to-stay"]
+    },
+    {
+      "question": "What are the most dangerous areas in LA at night?",
+      "answer": "Skid Row, parts of East Hollywood, and residential South LA (Compton, Watts, Inglewood) are the highest-risk areas. Tourists have no reason to visit any of these areas at night.",
+      "relatedLinks": ["/destination/la/safety-guide"]
+    },
+    {
+      "question": "Is parking safe at night in LA?",
+      "answer": "Use attended lots or hotel parking where possible. In multi-story structures, park near the elevator on well-lit floors. Never leave anything in your car — not a bag, jacket, or charger.",
+      "relatedLinks": ["/destination/la/la-female-solo-travel-guide"]
+    }
+  ],
+
+  "interlinkingGrid": [
+    { "title": "Solo Trip to LA Guide", "url": "/destination/la/solo-trip-to-la" },
+    { "title": "LA Safety Guide", "url": "/destination/la/safety-guide" },
+    { "title": "Best Areas to Stay in LA", "url": "/destination/la/best-areas-to-stay" },
+    { "title": "LA Female Solo Travel Guide", "url": "/destination/la/la-female-solo-travel-guide" }
+  ],
+
+  "trustBlock": {
+    "methodology": "We analyze LAPD data, traveler patterns, and on-the-ground local insights.",
+    "localInsights": "Built with input from LA residents and frequent travelers — which venues have good lighting, where rideshare pickup is safest, and what the real risks are after dark.",
+    "dataSources": ["LAPD Crime Stats", "311 Reports", "Metro Data"],
+    "editorialProcess": "Every guide is reviewed for accuracy and clarity.",
+    "safetyExpertsConsulted": ""
+  }
+}

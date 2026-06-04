@@ -1,0 +1,180 @@
+/* GLOBAL SECTION WRAPPER */
+.container section {
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+}
+.neighborhoods {
+  text-align: center;
+}
+
+
+/* HERO */
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 650px;
+  margin: 0.5rem auto 1.5rem;
+}
+
+.heroCtas {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heroCtas a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* PLANNER */
+.planner {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 2.5rem 1.5rem;
+}
+
+.planner h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.plannerGroup {
+  margin-bottom: 1.75rem;
+}
+
+.plannerGroup strong {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.options button {
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.options button:hover {
+  background: #f2f2f2;
+}
+
+.options button.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+/* CARD */
+.card {
+  padding: 1.5rem;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  text-align: center;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: #000;
+  transform: translateY(-3px);
+}
+
+/* PRIMARY BUTTON */
+.primary {
+  background: #000;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.primary.full {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.primary:hover {
+  background: #222;
+}
+
+/* HIGHLIGHTED SECTION */
+.highlight {
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+/* LISTS */
+.list {
+  padding-left: 1.2rem;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+/* FOOTER LINKS */
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  padding-bottom: 3rem;
+}
+
+.footerLinks a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container section {
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .primary.full {
+    font-size: 1rem;
+  }
+}

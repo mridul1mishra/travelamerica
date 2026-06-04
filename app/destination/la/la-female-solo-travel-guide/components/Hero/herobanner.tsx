@@ -1,0 +1,49 @@
+import styles from "./herobanner.module.css";
+
+export default function SafetyHero() {
+  return (
+    <section className={styles.wrapper}>
+      <div className={styles.hero}>
+
+        {/* Breadcrumb */}
+        <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>›</span>
+          <a href="/destination/la/solo-trip-to-la">Solo Trip to LA</a>
+          <span>›</span>
+          <span className={styles.current}>Female Solo Travel Guide</span>
+        </nav>
+
+        {/* Title + Subtitle */}
+        <div className={styles.heroContent}>
+          <h1>Female Solo Travel Guide</h1>
+          <p className={styles.subtitle}>
+            Practical, LA‑specific safety advice for women exploring Los Angeles alone.
+          </p>
+
+          <p className={styles.topics}>
+            Neighborhoods · Scams · Transit · Emergencies · Female Travelers · Videos
+          </p>
+        </div>
+
+        {/* Info Section */}
+        <div className={styles.infoBox}>
+          <h2>
+            <span className={styles.infoIcon}>ℹ</span>
+            In this guide, you’ll learn:
+          </h2>
+
+          <ul>
+            <li>Neighborhoods to stay in—and ones to avoid at night</li>
+            <li>Proven ways to outsmart common tourist scams</li>
+            <li>How to use rideshare and Metro alone (and confidently)</li>
+            <li>Safety best practices for solo female travelers</li>
+          </ul>
+        </div>
+
+        {/* Envelope Bottom */}
+        <div className={styles.envelopeBottom}></div>
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,199 @@
+{
+  "hero": {
+    "title": "LA Metro Map & Guide: Simple, Practical & Tourist‑Friendly",
+    "subtitle": "Your quick guide to navigating LA's Metro Rail without confusion — what it does, what it doesn't, and when to use it.",
+    "ctaPrimary": "View Full Metro Map",
+    "ctaSecondary": "Download PDF Map",
+    "supportingText": "Updated for 2026. Works offline.",
+    "badges": ["Official LA Metro Source", "Updated January 2026"]
+  },
+
+  "map": {
+    "imageUrl": "/data/majorcities/losangeles/assets/map/la-metro-map.webp",
+    "alt": "Official LA Metro Rail Map 2026",
+    "caption": "Official LA Metro Rail Map — Updated 2026",
+    "downloadLabel": "Download High‑Resolution Map"
+  },
+
+  "quickNav": [
+    { "label": "How to Read the Map", "anchor": "how-to-read" },
+    { "label": "Best Lines for Tourists", "anchor": "best-routes" },
+    { "label": "Metro Tips for Solo Travelers", "anchor": "safety" },
+    { "label": "Using Google Maps & TAP App", "anchor": "apps" }
+  ],
+
+  "howToRead": [
+    "Colors represent Metro Rail lines, not neighborhoods.",
+    "Letters (A, B, D, E) indicate specific rail lines and services.",
+    "Solid dots show stations; interchange symbols show transfer points between lines.",
+    "7th Street/Metro Center and Union Station are the main downtown transfer hubs.",
+    "Single fare is $1.75 — always tap in and out with a TAP card.",
+    "Trains run roughly 4:30am–12:30am daily; check the Transit app for live arrivals."
+  ],
+
+  "routes": [
+    {
+      "title": "A Line (Blue) — DTLA to Long Beach",
+      "bullets": [
+        "Runs from 7th Street/Metro Center in DTLA south to Long Beach.",
+        "Useful for visiting Long Beach (Aquarium of the Pacific, Pike Outlets).",
+        "Takes about 60 min end to end.",
+        "Runs 4:30am–12:30am daily."
+      ]
+    },
+    {
+      "title": "B Line (Red) — Hollywood & Universal Studios",
+      "bullets": [
+        "The most useful line for tourists.",
+        "Runs from Union Station through DTLA up to Hollywood/Highland (Walk of Fame, TCL Theatre), Hollywood/Vine, and Universal City.",
+        "Single fare $1.75.",
+        "Takes 25 min from DTLA to Hollywood."
+      ]
+    },
+    {
+      "title": "D Line (Purple) — DTLA & Koreatown",
+      "bullets": [
+        "Runs parallel to the B Line underground from Union Station through DTLA and west to Koreatown.",
+        "Extension to Westwood/UCLA opened 2025.",
+        "Single fare $1.75.",
+        "Useful for reaching Koreatown and the Wilshire corridor."
+      ]
+    },
+    {
+      "title": "E Line (Expo) — DTLA to Santa Monica",
+      "bullets": [
+        "The single most tourist‑useful Metro line.",
+        "Runs from 7th Street/Metro Center in DTLA to Santa Monica (3 blocks from the pier).",
+        "Takes about 45 min and runs frequently.",
+        "$1.75 each way — far cheaper than parking."
+      ]
+    },
+    {
+      "title": "Fares & TAP Card",
+      "bullets": [
+        "Single fare: $1.75. Day pass: $7 (unlimited rides).",
+        "TAP card (reloadable): $2 one‑time fee, available at any Metro station vending machine.",
+        "Download the TAP app to use your phone instead of a card.",
+        "Always tap in and out — inspectors issue $75–$250 fines."
+      ]
+    }
+  ],
+
+  "safety": [
+    "Use Metro for DTLA to Santa Monica (E Line) and DTLA to Hollywood (B Line) — it beats parking costs.",
+    "Use Uber for anything off these corridors, or if you're carrying bags.",
+    "Trains get emptier after 9pm — prefer Uber for late nights.",
+    "Use Google Maps transit mode for real‑time alerts and the right line.",
+    "Stand near other riders and well‑lit station areas after dark.",
+    "Avoid empty cars, even if they look convenient.",
+    "Metro cannot replace a car for most of LA's tourist sights — plan accordingly."
+  ],
+
+  "etiquette": {
+    "do": [
+      "Let riders exit before you board.",
+      "Move into the car and away from the doors.",
+      "Keep your phone volume low.",
+      "Have your TAP card or TAP app ready before the turnstile."
+    ],
+    "dont": [
+      "Don't block the doors.",
+      "Don't eat messy or strong‑smelling food.",
+      "Don't take photos of strangers.",
+      "Don't play loud music."
+    ]
+  },
+
+  "apps": [
+    {
+      "name": "TAP App",
+      "benefit": "Official LA Metro app for loading fares and tapping your phone at turnstiles. Download before arriving.",
+      "platforms": ["iOS", "Android"]
+    },
+    {
+      "name": "Google Maps",
+      "benefit": "Integrates Metro routes — use transit mode to find the right line and departure time.",
+      "platforms": ["iOS", "Android"]
+    },
+    {
+      "name": "Transit App",
+      "benefit": "Real‑time arrivals for all LA Metro lines. More reliable than Metro's own arrivals board.",
+      "platforms": ["iOS", "Android"]
+    }
+  ],
+
+  "downloads": [
+    {
+      "label": "PDF Metro Map",
+      "file": "/data/majorcities/losangeles/assets/map/la-metro-map.pdf"
+    },
+    {
+      "label": "High‑Res Map",
+      "file": "/data/majorcities/losangeles/assets/map/la-metro-map.webp"
+    }
+  ],
+
+  "accessibility": [
+    {
+      "title": "Stations with Elevators",
+      "content": "Major hubs like Union Station and 7th Street/Metro Center offer full accessibility."
+    },
+    {
+      "title": "Wheelchair‑Friendly Routes",
+      "content": "Most LA Metro Rail stations are step‑free; plan elevator‑only transfers at interchanges."
+    },
+    {
+      "title": "Tips for Mobility Needs",
+      "content": "Allow extra time at downtown transfer hubs and use the Transit app to confirm elevator status."
+    }
+  ],
+
+  "mistakes": [
+    "Assuming Metro reaches every LA tourist sight — it doesn't.",
+    "Forgetting to tap out and risking a fine.",
+    "Taking the train late at night when cars get empty.",
+    "Driving and paying for parking at Universal Studios instead of riding the B Line."
+  ],
+
+  "faq": [
+    {
+      "q": "Is the LA Metro useful for tourists?",
+      "a": "Yes for specific corridors: DTLA to Santa Monica (E Line) and DTLA to Hollywood/Universal (B Line). For everything else, a car or Uber is usually faster."
+    },
+    {
+      "q": "How much does a Metro ride cost?",
+      "a": "A single ride is $1.75 with a TAP card, and a day pass is $7 for unlimited rides."
+    },
+    {
+      "q": "Do I need a TAP card?",
+      "a": "Yes — a reloadable TAP card costs a $2 one‑time fee, or you can use the TAP app on your phone."
+    },
+    {
+      "q": "Is the LA Metro safe at night?",
+      "a": "Trains get emptier after 9pm. Stay near other riders and well‑lit areas, or take an Uber for late nights."
+    }
+  ],
+
+  "relatedLinks": [
+    {
+      "label": "Solo Trip to LA (Pillar Guide)",
+      "url": "/destination/la/solo-trip-to-la"
+    },
+    {
+      "label": "LA Metro Safety Guide",
+      "url": "/destination/la/metro-safety-guide"
+    },
+    {
+      "label": "Best Areas to Stay in LA",
+      "url": "/destination/la/best-areas-to-stay"
+    },
+    {
+      "label": "LA Itinerary",
+      "url": "/destination/la/itinerary"
+    },
+    {
+      "label": "LA Safety Guide",
+      "url": "/destination/la/safety-guide"
+    }
+  ]
+}

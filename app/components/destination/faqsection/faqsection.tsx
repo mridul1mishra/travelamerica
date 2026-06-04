@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { FAQItem, FAQAccordionProps } from "@/app/models/destination/faqprops";
 import styles from "./faqsection.module.css";

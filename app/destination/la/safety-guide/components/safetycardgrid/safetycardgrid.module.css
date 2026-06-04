@@ -1,0 +1,55 @@
+.section {
+  background: #f7f9fc;
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0d1b2a;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.05rem;
+  color: #4a5568;
+  margin-bottom: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background: #ffffff;
+  border: 2px solid #d8e2f3;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1b263b;
+  margin-bottom: 12px;
+}
+
+.tipList {
+  padding-left: 20px;
+  color: #2d3748;
+}

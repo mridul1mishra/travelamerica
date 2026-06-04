@@ -1,0 +1,327 @@
+{
+  "hero": {
+    "title": "LA Metro Safety Guide for Solo Travelers",
+    "subtitle": "A practical, scenario-driven guide to riding the LA Metro confidently — on the right lines, at the right times.",
+    "hero_image": "/data/majorcities/losangeles/assets/losangeles.webp",
+    "breadcrumbs": [
+      { "label": "Home", "slug": "/" },
+      { "label": "Solo Trip to LA", "slug": "/destination/la/solo-trip-to-la" },
+      { "label": "Metro Safety Guide", "slug": "/destination/la/metro-safety-guide" }
+    ],
+    "updated_on": "2026-01-02"
+  },
+
+  "why_trust_this_guide": {
+    "author_expertise": "Built from real experience riding the LA Metro across the tourist-relevant lines — knowing which stations feel comfortable, which times are fine, and when rideshare is the smarter choice.",
+    "local_insights": "Line- and station-specific notes based on layout, foot traffic, and time-of-day patterns on the B Line, E Line, and D Line corridors.",
+    "safety_framework": "Structured around honest, proportionate assessments — telling you when the Metro is fine and when a different option is smarter, not blanket fear-based advice.",
+    "data_sources": [
+      "LA Metro service data",
+      "LAPD and Metro security guidance",
+      "Local rider behavior patterns"
+    ],
+    "editorial_standards": "Fact-checked, persona-driven, and updated regularly for accuracy."
+  },
+
+  "core_principles": [
+    {
+      "icon": "awareness",
+      "title": "Stay Aware, Not Afraid",
+      "description": "The LA Metro is safer than its reputation. Confidence comes from understanding your line, station, and the time of day."
+    },
+    {
+      "icon": "positioning",
+      "title": "Position Yourself Strategically",
+      "description": "Sit near other passengers rather than in empty cars, and keep to well-used, well-staffed stations."
+    },
+    {
+      "icon": "instincts",
+      "title": "Trust Your Instincts",
+      "description": "If a car feels uncomfortable, move to another at the next station. Report issues to LAPD or Metro security directly."
+    },
+    {
+      "icon": "minimize-risk",
+      "title": "Minimize Exposure to Risk",
+      "description": "Avoid riding alone after 9pm, and pass through Skid Row–adjacent DTLA stations without lingering."
+    },
+    {
+      "icon": "tools",
+      "title": "Use Tools That Give You Control",
+      "description": "TAP card, transit apps, and rideshare let you stay ahead and switch to the smarter option when it makes sense."
+    }
+  ],
+
+  "metro_basics": {
+    "how_the_system_works": "The LA Metro is a mix of rail and bus serving a huge, spread-out city. For tourists the rail lines matter most — the B Line (Red) to Hollywood, the E Line (Expo) to Santa Monica, and the D Line (Purple) through Koreatown. Most of LA is more than a 10-minute walk from a station, so plan routes around the lines that reach your destination.",
+    "peak_vs_off_peak": {
+      "peak": "Daytime and early evening (before 9pm) are the lowest-risk windows. Trains are well-used and stations are busy, which adds a layer of comfort for visitors.",
+      "off_peak": "Late nights — trains get emptier and some stations have a visible homeless presence. After 9pm, rideshare is the better call on any line."
+    },
+    "fare_basics": "The LA Metro uses an honor system — tap your TAP card on the reader before boarding. Plain-clothes fare inspectors do check tickets and issue fines of $75–$250. Tourists are not exempt. Buy a day pass ($7) if you plan to ride more than twice in a day.",
+    "station_layouts": "7th Street/Metro Center and Union Station are busy, well-staffed hubs. Hollywood/Highland is well-patrolled due to tourist volume. Some DTLA stations adjacent to Skid Row, like Pershing Square and Civic Center/Grand Park, are less comfortable — pass through without lingering.",
+    "train_types": "Rail lines are color- and letter-coded (B, D, E, and others). The B and E Lines are the most tourist-relevant; the D Line through Koreatown is also well-used and generally comfortable. Use Uber for anywhere off the main B and E corridors."
+  },
+
+  "personas": [
+    {
+      "id": "solo_female_traveler",
+      "top_concerns": ["Late-night rides", "Empty cars", "Unwanted attention"],
+      "recommended_behaviors": [
+        "Ride during daylight and early evening on the B and E Lines",
+        "Sit near other passengers, not in empty cars",
+        "Keep your phone in your pocket rather than in your hand"
+      ],
+      "avoid_list": ["Riding alone after 9pm", "Lingering at Skid Row–adjacent stations"],
+      "confidence_boosters": ["Pre-plan routes around the B and E Lines", "Switch to rideshare after 9pm"]
+    },
+    {
+      "id": "first_time_visitor",
+      "top_concerns": ["Navigation", "Which lines to use", "Fare rules"],
+      "recommended_behaviors": [
+        "Stick to the B Line to Hollywood and E Line to Santa Monica",
+        "Tap your TAP card before boarding every time",
+        "Use Google Maps for routing and walking times"
+      ],
+      "avoid_list": ["Riding without tapping a TAP card", "Routes far from the B and E corridors"],
+      "confidence_boosters": ["Buy a day pass if riding more than twice", "Use Uber once walking time outweighs the ride"]
+    },
+    {
+      "id": "late_night_commuter",
+      "top_concerns": ["Emptier trains", "Less staffing", "Station comfort after dark"],
+      "recommended_behaviors": [
+        "Default to rideshare after 9pm",
+        "If on the train, choose cars with other riders",
+        "Stay near busy, well-staffed hubs like 7th/Metro and Union Station"
+      ],
+      "avoid_list": ["Riding alone late at night", "Lingering on quiet platforms"],
+      "confidence_boosters": ["Keep Uber and Lyft ready as the late-night option"]
+    }
+  ],
+
+  "scenarios": [
+    {
+      "scenario_title": "Entering a Station Alone",
+      "what_to_do": [
+        "Use busy, well-staffed hubs like 7th/Metro and Union Station",
+        "Walk with purpose",
+        "Keep valuables out of sight",
+        "Pass through Skid Row–adjacent stations without lingering"
+      ],
+      "pro_tips": "Hollywood/Highland is well-patrolled due to tourist volume — a comfortable entry point."
+    },
+    {
+      "scenario_title": "Choosing the Safest Car",
+      "what_to_do": [
+        "Sit near other passengers",
+        "Avoid empty cars",
+        "Move to another car at the next station if a car feels uncomfortable",
+        "Keep your phone in your pocket"
+      ],
+      "pro_tips": "LAPD and Metro security do patrol the lines — report issues to them directly."
+    },
+    {
+      "scenario_title": "Handling Quiet Platforms",
+      "what_to_do": [
+        "Stay near station staff and other riders",
+        "Stick to well-used hubs",
+        "Avoid isolated corners",
+        "Stay alert to your surroundings"
+      ],
+      "pro_tips": "If the platform is empty after 9pm, switch to rideshare instead."
+    },
+    {
+      "scenario_title": "Navigating Late-Night Trains",
+      "what_to_do": [
+        "Default to Uber or Lyft after 9pm",
+        "If on the train, ride in cars with other passengers",
+        "Avoid empty cars",
+        "Stay near busy stations"
+      ],
+      "pro_tips": "Uber and Lyft are safe, widely available, and often faster once you factor in walking time."
+    },
+    {
+      "scenario_title": "Dealing with Crowded Trains",
+      "what_to_do": [
+        "Keep your backpack in front of you",
+        "Stay balanced",
+        "Avoid confrontations",
+        "Move away from doors"
+      ],
+      "pro_tips": "Crowding is normal on busy daytime trains — stay calm and patient."
+    },
+    {
+      "scenario_title": "Passing Through Skid Row–Adjacent Stations",
+      "what_to_do": [
+        "Pass through Pershing Square and Civic Center/Grand Park without lingering",
+        "Keep your phone in your pocket",
+        "Stay aware but not alarmed",
+        "Continue to a busier hub if you need to wait"
+      ],
+      "pro_tips": "Most tourists have no issues here — awareness matters more than avoidance."
+    },
+    {
+      "scenario_title": "If You Feel Uncomfortable on the Train",
+      "what_to_do": [
+        "Move to another car at the next station",
+        "Sit near other passengers",
+        "Use the emergency intercom at the end of the car",
+        "Exit at a busy, well-staffed station"
+      ],
+      "pro_tips": "Trust your instincts — act early and report issues to LAPD or Metro security."
+    }
+  ],
+
+  "neighborhood_notes": [
+    {
+      "area_name": "Downtown LA (DTLA)",
+      "lines": ["B Line", "D Line", "E Line", "A Line"],
+      "peak_safety_notes": "7th Street/Metro Center and Union Station are busy, well-staffed hubs — safe at most hours.",
+      "late_night_notes": "Quieter after 9pm; rideshare is the better call.",
+      "transfer_complexity": "7th/Metro Center is a major transfer point connecting several lines.",
+      "avoid_times": "Avoid lingering at Pershing Square and Civic Center/Grand Park, which are adjacent to Skid Row."
+    },
+    {
+      "area_name": "Hollywood",
+      "lines": ["B Line"],
+      "peak_safety_notes": "Hollywood/Highland is well-patrolled due to tourist volume.",
+      "late_night_notes": "Stays busier than most stations but still use rideshare alone after midnight.",
+      "transfer_complexity": "Simple — the B Line runs straight to Hollywood."
+    },
+    {
+      "area_name": "Santa Monica",
+      "lines": ["E Line"],
+      "peak_safety_notes": "The E Line (Expo) to Santa Monica is among the safest and most tourist-relevant routes.",
+      "late_night_notes": "Comfortable in the evening; switch to rideshare late at night.",
+      "transfer_complexity": "Easy end-to-end ride; no complex transfers for most visitors."
+    }
+  ],
+
+  "tools_and_apps": [
+    { "name": "Transit App", "description": "Live LA Metro arrivals and routing." },
+    { "name": "Google Maps Transit", "description": "Reliable routing plus realistic walking times to and from stations." },
+    { "name": "TAP LA", "description": "Manage and reload your TAP card for fare compliance." },
+    { "name": "Uber / Lyft", "description": "The smarter call after 9pm or off the main B and E corridors." }
+  ],
+
+  "behavioral_cues": {
+    "green_flags": [
+      "Other passengers nearby",
+      "Busy, well-staffed hubs like 7th/Metro and Union Station",
+      "Visible LAPD or Metro security",
+      "Daytime and early-evening foot traffic"
+    ],
+    "red_flags": [
+      "Empty cars",
+      "Quiet platforms after 9pm",
+      "Skid Row–adjacent stations with little foot traffic",
+      "Anyone watching or following riders"
+    ]
+  },
+
+  "emergency_playbook": {
+    "if_you_feel_unsafe": [
+      "Move to another car at the next station",
+      "Sit near other passengers",
+      "Exit at a busy, well-staffed station"
+    ],
+    "if_someone_harasses_you": [
+      "Create distance and move cars",
+      "Use the emergency intercom at the end of each car to contact the operator",
+      "Call 911 or Metro security at (800) 371-5353"
+    ],
+    "if_you_get_lost": [
+      "Check Google Maps",
+      "Ask staff at a hub like 7th/Metro or Union Station",
+      "Exit to street level and use rideshare if needed"
+    ],
+    "if_your_phone_dies": [
+      "Use station signage and maps",
+      "Ask Metro staff for directions",
+      "Head to a busy station to find help"
+    ],
+    "if_service_stops": [
+      "Stay calm",
+      "Listen for announcements",
+      "Switch to rideshare to reach your destination"
+    ]
+  },
+
+  "etiquette": {
+    "platform_etiquette": [
+      "Stand behind the line and let riders exit before boarding",
+      "Keep backpacks and bags close to your body",
+      "Tap your TAP card before entering the platform",
+      "Avoid lingering at Skid Row–adjacent DTLA stations",
+      "Stay aware of your surroundings while waiting"
+    ],
+    "train_etiquette": [
+      "Keep your backpack in front of you during crowded periods",
+      "Don't block doors — move into the car",
+      "Offer priority seats to seniors, pregnant riders, and people with disabilities",
+      "Keep music and phone volume low",
+      "Keep your phone in your pocket rather than in your hand"
+    ],
+    "rush_hour_rules": [
+      "Expect crowding on busy daytime trains",
+      "Move to the center of the car instead of hovering near doors",
+      "Hold backpacks low and in front",
+      "Have your TAP card ready before boarding",
+      "Step aside as the train arrives"
+    ],
+    "unspoken_norms": [
+      "Awareness matters more than avoidance — most tourists have no issues",
+      "Keep to yourself and keep conversations low-volume",
+      "Don't spread out or take extra seats",
+      "Sit near others rather than in empty cars",
+      "Report issues to LAPD or Metro security rather than confronting people"
+    ]
+  },
+
+  "checklist": {
+    "essentials": ["TAP card (loaded)", "Charged phone", "Route screenshot"],
+    "safety_items": ["Crossbody bag", "Portable charger"],
+    "digital_tools": ["Transit or Google Maps app", "Uber / Lyft app"],
+    "what_not_to_carry": ["Phone visible in hand", "Loose valuables"]
+  },
+
+  "faq": [
+    {
+      "question": "Is the LA Metro safe for tourists?",
+      "answer": "Yes during the day and early evening on the main tourist lines (B to Hollywood, E to Santa Monica). These lines are well-used and generally comfortable for visitors."
+    },
+    {
+      "question": "Which LA Metro stations are safest?",
+      "answer": "7th Street/Metro Center (DTLA), Union Station, and Hollywood/Highland are the busiest and best-staffed. Avoid lingering at Pershing Square or Civic Center stations adjacent to Skid Row."
+    },
+    {
+      "question": "Is the LA Metro safe at night?",
+      "answer": "Less so after 9pm. Trains get emptier and some stations have increased homeless presence. Rideshare is the better choice after 9pm on any line."
+    },
+    {
+      "question": "What should I do if I feel unsafe on the Metro?",
+      "answer": "Move to a different car at the next station. Use the emergency intercom at the end of each car to contact the operator. Call 911 if needed. Metro security number: (800) 371-5353."
+    },
+    {
+      "question": "Do I need to pay fare on the LA Metro?",
+      "answer": "Yes — tap your TAP card before boarding. The Metro uses an honor system but plain-clothes fare inspectors do board and issue $75–250 fines. Buy a day pass ($7) if riding more than twice."
+    },
+    {
+      "question": "Is the LA Metro safe for solo women?",
+      "answer": "Yes during daylight and early evening on the main tourist lines. Sit near other passengers, keep your phone in your pocket, and use rideshare after 9pm for the safest experience."
+    }
+  ],
+
+  "internal_links": [
+    { "label": "Solo Trip to LA", "href": "/destination/la/solo-trip-to-la" },
+    { "label": "LA Metro Map & Lines", "href": "/destination/la/la-metro-map" },
+    { "label": "Full LA Safety Guide", "href": "/destination/la/safety-guide" },
+    { "label": "Is LA Safe at Night?", "href": "/destination/la/is-la-safe-at-night" },
+    { "label": "LA Female Solo Travel Guide", "href": "/destination/la/la-female-solo-travel-guide" }
+  ],
+
+  "footer_cta": {
+    "text": "Plan your LA solo trip with confidence",
+    "button_label": "Explore More Safety Guides",
+    "button_link": "/destination/la/safety-guide"
+  }
+}

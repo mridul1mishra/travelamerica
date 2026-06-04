@@ -1,0 +1,49 @@
+.pageWrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: var(--font-montserrat);
+  color: #1a1a1a;
+  line-height: 1.7;
+}
+.heroWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+/* Section spacing */
+.section {
+  margin-top: 60px;
+}
+
+/* Section titles */
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #111;
+  letter-spacing: -0.3px;
+}
+
+/* Paragraph styling */
+.paragraph {
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Optional subtle divider */
+.section:not(:last-child) {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 40px;
+}
+.wrapper {
+  margin-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    margin-top: 80px;
+  }
+}
