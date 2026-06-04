@@ -1,67 +1,102 @@
-import Link from "next/link";
-import Header from "@/app/components/destination/header/header";
-import Footer from "@/app/components/Header/Footer/footer";
-import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
-import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
-import cityWhyTrustData from "@/content/destination/lasvegas/solo-trip-to-lasvegas/whyTrustItems/whyTrustItems.json";
-import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
-import cityFaqData from "@/content/destination/lasvegas/solo-trip-to-lasvegas/faq/faqsection.json";
-import styles from "@/app/destination/city-hub.module.css";
+"use client";
+import styles from './solotriptolasvegas.module.css';
+import { useState } from "react";
+import Image from "next/image";
+import QuickActionBar from '@/app/components/quickactionbar/quickactionbar';
+import sectionsData from "@/content/destination/lasvegas/solo-trip-to-lasvegas/infosection.json";
+import getaroundData from "@/content/destination/lasvegas/solo-trip-to-lasvegas/gettingaround.json";
+import InfoSection from '@/app/components/infosection/infosection';
+import neighborhoodsData  from "@/content/destination/lasvegas/solo-trip-to-lasvegas/neighborhoods.json";
+import BestNeighborhoodsGrid from '@/app/components/BestNeighborhoodGrid/bestneighborhoodgrid';
+import itineraryData from "@/content/destination/lasvegas/solo-trip-to-lasvegas/itinerary.json";
+import { ItineraryProps } from "@/app/models/itinerary";
+import ThreeDayItinerary from '@/app/components/itinerary/itinerary';
+import femaleSoloData from "@/content/destination/lasvegas/solo-trip-to-lasvegas/femalesolo.json";
+import FemaleSoloTiles from "@/app/components/Solofemaletravel/solofemaletravel";
+import { FemaleSoloData } from "@/app/models/femaleSolo";
+import Footer from '@/app/components/Header/Footer/footer';
+import { WhyTrustThisGuide } from '@/app/components/destination/whytrustitem/whytrustthisguide';
+import lasvegasWhyTrustData from "@/content/destination/lasvegas/solo-trip-to-lasvegas/whyTrustItems/whyTrustItems.json";
+import { ScenarioSection } from './components/scenariocard/scenariosection';
+import { SubwayAccessSection } from './components/subwayaccess/subwayaccess';
+import faqData from "@/content/destination/lasvegas/solo-trip-to-lasvegas/faq/faqsection.json";
+import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import Link from 'next/link';
+import SoloLasVegasQa from './components/aisnippet/cardqanda';
+import SoloTripNarrative from './components/solotripnarrative/SoloTripNarrative';
+import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
 
-const topics = [
-  { title: "Is Vegas Good for Solo Travel?", blurb: "Yes — Las Vegas is exceptionally well-suited to solo travel. The Strip is self-contained and walkable. Single tickets for shows, tours, and activities are easy to secure. Casino floors are social by nature. You set your own pace: no waiting for a group, no compromises on shows or restaurants. Many people visit Vegas solo every year." },
-  { title: "Best Time to Visit Solo", blurb: "March–May and September–November are the sweet spots — comfortable temperatures (65–85°F), lower hotel rates, and smaller crowds than summer. Avoid major holidays (New Year's, Memorial Day, Labor Day) when prices triple and the Strip becomes congested. Weekdays are 30–50% cheaper than weekends year-round." },
-  { title: "Where to Stay Solo", blurb: "Mid-Strip is the best base for solo travelers — Cosmopolitan, Aria, and Vdara have excellent solo amenities and bar seating. The Bellagio is worth the price for solo trips where you'll spend time in the property. Budget solo option: Excalibur or Luxor on the South Strip offer clean rooms under $60/night on weekdays. Avoid the Strat area at night on your first visit." },
-  { title: "Getting Around Solo", blurb: "You do not need a car for anything on the Strip. The Las Vegas Monorail runs along the east side of the Strip ($5/ride, $15 day pass). Uber and Lyft are reliable for off-Strip trips. The Deuce bus ($6 day pass) runs 24 hours along the Strip — useful for budget travelers. Rental cars make sense only for Hoover Dam or Red Rock Canyon day trips." },
-  { title: "Solo-Friendly Activities", blurb: "Shows: single seats are available at most venues — book the cheapest single ticket for Cirque du Soleil or a residency concert. The Mob Museum and Neon Museum are excellent solo museum experiences. The High Roller observation wheel puts you in a pod with other visitors — naturally social. Poker tables are communal by design; blackjack is easier solo than in a group." },
-  { title: "Meeting People Solo", blurb: "Vegas is unusually easy for meeting people solo. Casino bar stools are built for strangers talking. The High Roller shared pods. Pool decks at mid-Strip hotels fill with social groups. Pub crawl tours ($30–$50) are run specifically for solo travelers. Reddit's r/vegas community posts weekly meetup threads if you want to plan ahead." },
-];
 
 export default function SoloTripToLasVegasClient() {
-  return (
-    <main>
-      <Header links={[
-        { href: "/destination/lasvegas/best-areas-to-stay", label: "Best Areas to Stay" },
-        { href: "/destination/lasvegas/solo-trip-to-lasvegas", label: "Solo Trip to Las Vegas" },
-        { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
-        { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
-      ]} />
-      <BookingCTA
-        variant="slim"
-        text="Book your solo Las Vegas trip — flights, hotels and activities →"
-        href="/destination/lasvegas/bookings"
-        label="Book your trip"
-      />
-      <section className={styles.hero}>
-        <h1>Solo Trip to Las Vegas: Complete Guide</h1>
-        <p>Las Vegas is one of the best cities in America for solo travel. It is built for individual visitors — 24-hour entertainment, single-ticket shows, self-paced attractions, and a city that never closes. Here is everything you need to know.</p>
-        <div className={styles.heroCtas}>
-          <Link href="/destination/lasvegas/solo-itinerary" className={styles.primaryCta}>See solo itinerary</Link>
-          <Link href="/destination/lasvegas/safety-guide" className={styles.secondaryCta}>Safety guide</Link>
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const closeMenu = () => setIsMenuOpen(false);
+  const data = itineraryData as ItineraryProps;
+  const femaleSolo = femaleSoloData as FemaleSoloData;
+    return(
+        <>
+        <section className={`${styles.overlayheader} ${styles.scrolled}`}>
+        <div className={styles.brandlogo}>
+            <a href="/">
+                <Image src="/Travels-Americas-logo-horizontal-v3.png" alt="Travels Americas Logo" width={285} height={76}  sizes="(max-width: 768px) 200px, 285px" fetchPriority="high"/>
+            </a>
         </div>
-      </section>
-      <section className={styles.section} aria-labelledby="solo-lv">
-        <h2 id="solo-lv" className={styles.sectionTitle}>Solo Travel in Las Vegas</h2>
-        <p className={styles.sectionIntro}>Six things every first-time solo traveler to Las Vegas needs to know.</p>
-        <div className={styles.grid}>
-          {topics.map(({ title, blurb }) => (
-            <article key={title} className={styles.card}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{blurb}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-      <WhyTrustThisGuide data={cityWhyTrustData} />
-      <FAQAccordion faqs={cityFaqData} />
-      <BookingCTA
-        variant="full"
-        headline="Book your solo Las Vegas trip"
-        text="Flights to LAS, Strip hotels, and solo activity tickets — compare and book."
-        href="/destination/lasvegas/bookings"
-        label="Plan & book your Las Vegas trip"
-      />
-      <Footer />
-    </main>
-  );
+        <nav className={styles.mainnav}>
+          <button className={styles.hamburger} onClick={toggleMenu} aria-label="Toggle menu">
+     ☰
+          </button>
+          <ul className={`${styles.navlinks} ${isMenuOpen ? styles.active : ""}`}>
+            <li className={styles.closebtn}>
+              <button onClick={closeMenu} aria-label="Close menu">✕</button>
+            </li>
+           <li><Link href="/destination/lasvegas/best-areas-to-stay">Best Areas to Stay</Link></li>
+          <li><Link href="/destination/lasvegas/solo-trip-to-lasvegas">Solo Trip to Las Vegas</Link></li>
+          <li><Link href="/destination/lasvegas/safety-guide">Las Vegas Safety</Link></li>
+          <li><Link href="/destination/lasvegas/lasvegas-female-solo-travel-guide">Female Travel Guide</Link></li>
+          </ul>
+        </nav>
+        </section>
+        <section className={styles.hero}>
+            <div className={styles.herocontainer}>
+                <div className={styles.herotext}>
+                    <h1>Solo Trip to Las Vegas: First-Time Traveler Guide</h1>
+                    <p className={styles.subtext}>Safe, confident, and stress‑free solo travel in Las Vegas.</p>
+
+                    <div className={styles.herobuttons}>
+                        <a href="/destination/lasvegas/safety-guide" className={`${styles.btn} ${styles.primary}`}>Start with Safety </a>
+                        <a href="/destination/lasvegas/best-areas-to-stay" className={`${styles.btn} ${styles.secondary}`}>Where to Stay</a>
+                    </div>
+
+                    <p className={styles.updated}>Updated for 2025</p>
+                </div>
+
+
+                <div className={styles.heroImage}>
+                <div className={styles.imagePlaceholder}>
+                    <div className={styles.heroImageWrapper}>
+                        <Image src="/data/majorcities/lasvegas/assets/lasvegas.webp" alt="Las Vegas Strip skyline" fill style={{ objectFit: "contain" }} fetchPriority="high"/>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </section>
+        <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=flights&from=solo-trip-to-lasvegas" label="Book your trip" />
+        <QuickActionBar />
+        <InfoSection sections={sectionsData.sections} />
+        <WhyTrustThisGuide data={lasvegasWhyTrustData} />
+        <SoloLasVegasQa />
+        <SoloTripNarrative />
+        <BestNeighborhoodsGrid  neighborhoods={neighborhoodsData.neighborhoods}  ctaLink="/destination/lasvegas/best-areas-to-stay"/>
+        <SubwayAccessSection />
+        <InfoSection sections={getaroundData.sections} />
+        <ThreeDayItinerary days={data.days} ctaLink="/destination/lasvegas/solo-itinerary" cityName="Las Vegas" />
+        <ScenarioSection />
+        <FemaleSoloTiles tiles={femaleSolo.tiles}  ctaLink={femaleSolo.ctaLink} cityName="Las Vegas" />
+        <FAQAccordion faqs={faqData} />
+        <BookingCTA variant="full" text="Start your trip: book flights and hotels" href="/destination/lasvegas/bookings?tab=flights&from=solo-trip-to-lasvegas" label="Book your trip" />
+        <Footer></Footer>
+
+        </>
+    );
 }

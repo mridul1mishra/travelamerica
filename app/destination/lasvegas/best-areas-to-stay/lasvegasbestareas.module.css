@@ -1,0 +1,36 @@
+body {
+  background-color: #faf7f2;
+}
+.container {
+  max-width: 720px; /* or 800px depending on your editorial width */
+  margin: 0 auto;
+  padding: 0 1rem; /* mobile breathing room */
+  box-sizing: border-box;
+}
+
+/* ── Las Vegas-only sections (All Areas Compared, Booking Tips) ── */
+.section {
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.card:hover {
+  border-color: #000;
+  transform: translateY(-3px);
+}

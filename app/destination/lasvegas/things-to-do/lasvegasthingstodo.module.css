@@ -1,0 +1,134 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.hero {
+  max-width: 720px;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.bridge {
+  max-width: 760px;
+  margin-bottom: 3rem;
+}
+
+.bridge p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.cta {
+  border-top: 1px solid #eee;
+  padding-top: 3rem;
+  max-width: 760px;
+}
+
+.cta h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.cta p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.primaryCta {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.85rem 1.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.primaryCta:hover {
+  opacity: 0.85;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    height: 320px;
+    margin-bottom: 2.5rem;
+    border-radius: 14px;
+    overflow: hidden;
+}
+.bannerImage{
+    object-fit: cover;
+}
+
+/* ---------------------------------------------------------------- */
+/* Las Vegas-only sections (no NYC equivalent)                      */
+/* Preserved from the original Las Vegas things-to-do page: hero    */
+/* action buttons and the detailed practical category grid.         */
+/* ---------------------------------------------------------------- */
+
+.heroCtas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.secondaryCta {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  padding: 0.85rem 1.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.secondaryCta:hover {
+  background: #000;
+  color: #fff;
+}
+
+.sectionIntro {
+  color: #555;
+  max-width: 620px;
+  margin: 0.5rem 0 1.5rem;
+}

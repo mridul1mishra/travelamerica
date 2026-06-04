@@ -1,0 +1,64 @@
+/* ScenarioSection.css */
+
+.scenario-section {
+  padding: 3rem 1.5rem;
+  background: #fff8f6;
+}
+
+.scenario-section__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.scenario-section__heading {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.scenario-section__intro {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.scenario-section__grid {
+  display: grid;
+  gap: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .scenario-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.scenario-card {
+  padding: 1.25rem;
+  border: 1px solid #f3d9d0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.scenario-card__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2b2b2b;
+}
+
+.scenario-card__context,
+.scenario-card__advice {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.scenario-card__cta {
+  font-size: 0.9rem;
+  color: #c93f1b;
+  font-weight: 600;
+  text-decoration: none;
+}

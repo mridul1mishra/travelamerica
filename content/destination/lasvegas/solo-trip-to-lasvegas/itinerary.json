@@ -1,0 +1,28 @@
+{
+  "days": [
+    {
+      "day": "Day 1",
+      "bullets": [
+        "Walk the mid-Strip: Bellagio Conservatory, the fountains, and the Forum Shops",
+        "Lunch at a casual food hall, then ride the High Roller observation wheel",
+        "Catch a Cirque du Soleil or residency show — single tickets are easy to get"
+      ]
+    },
+    {
+      "day": "Day 2",
+      "bullets": [
+        "Morning at the Neon Museum or the Mob Museum downtown",
+        "Stroll Fremont Street and grab a bite at a vintage downtown casino",
+        "Evening at a casino bar or poker table — the most social way to spend a night solo"
+      ]
+    },
+    {
+      "day": "Day 3",
+      "bullets": [
+        "Day trip to Red Rock Canyon or Hoover Dam (rental car or guided tour)",
+        "Back on the Strip for the pool scene or a spa afternoon",
+        "Sunset drinks at a rooftop bar, then explore a casino floor at your own pace"
+      ]
+    }
+  ]
+}

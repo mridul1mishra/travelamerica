@@ -1,0 +1,23 @@
+{
+  "tiles": [
+    {
+      "title": "Safe Areas",
+      "description": "Stay mid-Strip for walkability and 24-hour foot traffic. The Strip and Fremont Street are busy and heavily patrolled day and night.",
+      "icon": "MdLocationCity",
+      "link": "#"
+    },
+    {
+      "title": "Smart Night Tips",
+      "description": "Watch your drink at all times, use Uber or Lyft for off-Strip trips after dark, and set a gambling limit before you head out.",
+      "icon": "FaSubway",
+      "link": "#"
+    },
+    {
+      "title": "Emergency Support",
+      "description": "Know when to call 911, share your live location with someone you trust, and step into a casino lobby or to security if you feel uneasy.",
+      "icon": "FaHandsHelping",
+      "link": "#"
+    }
+  ],
+  "ctaLink": "/destination/lasvegas/lasvegas-female-solo-travel-guide"
+}

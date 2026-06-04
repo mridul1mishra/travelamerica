@@ -1,0 +1,16 @@
+{
+  "sections": [
+    {
+      "id": "transport",
+      "title": "Getting Around Las Vegas",
+      "summary": "There is no subway in Las Vegas, but you rarely need a car. The Strip is walkable end to end, and the Monorail, Deuce bus, and rideshare cover everything else. Save a rental car for day trips to Hoover Dam or Red Rock Canyon.",
+      "bullets": [
+        "Walking: the Strip is one continuous walkable corridor — most nights you won't need anything else.",
+        "Las Vegas Monorail: runs the east side of the Strip ($5/ride, $15 day pass).",
+        "The Deuce bus: 24-hour double-decker along the Strip and to Fremont Street ($6 day pass).",
+        "Uber & Lyft: reliable citywide and the best late-night option for off-Strip trips."
+      ],
+      "link": "/destination/lasvegas/getting-around"
+    }
+  ]
+}

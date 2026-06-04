@@ -1,0 +1,26 @@
+[
+  {
+    "neighborhood": "Mid-Strip",
+    "lines": ["Walk", "Monorail", "Deuce"],
+    "access": "Everything is walkable from a mid-Strip base; the Monorail station on the east side reaches the Convention Center and MGM Grand in minutes.",
+    "night": "The Deuce bus runs 24 hours along the Strip; the Monorail runs until roughly 2–3 AM. Rideshare is the easiest late-night option.",
+    "walk": "Continuous, busy, well-lit pedestrian corridor day and night.",
+    "notes": "No subway exists in Las Vegas — from mid-Strip you can reach most attractions on foot."
+  },
+  {
+    "neighborhood": "South Strip",
+    "lines": ["Walk", "Monorail", "Deuce"],
+    "access": "The Monorail's MGM Grand station and the Deuce both connect the South Strip to the rest of the Strip; walking to the center takes 20–30 minutes.",
+    "night": "Deuce runs 24 hours; use rideshare for late returns to budget hotels like Excalibur or Luxor.",
+    "walk": "Walkable but more spread out — long blocks between mega-resorts.",
+    "notes": "Best for budget rooms with easy Deuce and Monorail access to the action."
+  },
+  {
+    "neighborhood": "Fremont Street (Downtown)",
+    "lines": ["Walk", "Deuce", "Rideshare"],
+    "access": "The Deuce bus links Fremont Street to the Strip in about 20–30 minutes; downtown itself is compact and walkable.",
+    "night": "Deuce runs 24 hours between downtown and the Strip; rideshare is quick and cheap for the same trip.",
+    "walk": "The Fremont Street Experience canopy is a busy, covered pedestrian zone.",
+    "notes": "No Monorail downtown — use the Deuce or rideshare to and from the Strip."
+  }
+]

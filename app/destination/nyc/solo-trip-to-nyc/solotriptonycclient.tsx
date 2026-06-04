@@ -24,6 +24,7 @@ import Link from 'next/link';
 import SoloNycQa from '@/app/components/destination/solotriptonyc/aisnippet/cardqanda';
 import SoloTripNarrative from './components/solotripnarrative/SoloTripNarrative';
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import HeroSection from './components/herosection/HeroSection';
 
 
 export default function SoloTripNYCClient() {
@@ -55,31 +56,7 @@ export default function SoloTripNYCClient() {
           </ul>
         </nav>
         </section>
-        <section className={styles.hero}>
-            <div className={styles.herocontainer}>            
-                <div className={styles.herotext}>
-                    <h1>Solo Trip to New York City: First-Time Traveler Guide</h1>
-                    <p className={styles.subtext}>Safe, confident, and stress‑free solo travel in NYC.</p>
-
-                    <div className={styles.herobuttons}>
-                        <a href="/destination/nyc/nyc-safety-guide" className={`${styles.btn} ${styles.primary}`}>Start with Safety </a>
-                        <a href="/destination/nyc/landmark" className={`${styles.btn} ${styles.secondary}`}>Where to Stay</a>
-                    </div>
-
-                    <p className={styles.updated}>Updated for 2025</p>
-                </div>
-
-                
-                <div className={styles.heroImage}>
-                <div className={styles.imagePlaceholder}>
-                    <div className={styles.heroImageWrapper}>
-                        <Image src="/destination/nyc-travel-editorial-collage-new.png" alt="Travels Americas Logo" fill style={{ objectFit: "contain" }} fetchPriority="high"/>                
-                    </div>
-                </div>
-                </div>
-
-            </div>
-        </section>
+        <HeroSection />
         <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=flights&from=solo-trip-to-nyc" label="Book your trip" />
         <QuickActionBar />
         <InfoSection sections={sectionsData.sections} />

@@ -1,0 +1,331 @@
+{
+  "heroSafety": {
+    "title": "Is Las Vegas Safe at Night for Solo Travelers?",
+    "subtitle": "The Strip is one of the most monitored and policed public spaces in America. Las Vegas is safe at night for tourists who stay in the main corridors — and riskier in specific off-Strip areas tourists have no reason to visit. Here's the honest breakdown.",
+    "heroImage": "/data/majorcities/lasvegas/assets/lasvegas.webp",
+    "trustBadges": ["🛡️LVMPD Data", "👣Local Insights", "📊Traveler Patterns"]
+  },
+
+  "safetyMeter": {
+    "overallRating": "Safe on the Strip with Smart Precautions",
+    "meterScore": 7,
+    "quickSummary": "The main Strip and the covered Fremont Street Experience are heavily surveilled and patrolled 24 hours, staying comfortable after dark with normal awareness. Risks rise on quiet side streets behind casinos, on the connecting roads between the Strip and Downtown, and in off-Strip areas tourists rarely need to visit.",
+    "bestFor": ["Solo women", "First-time visitors", "Nightlife travelers"],
+    "avoidIf": ["Plan to walk long stretches between the Strip and Downtown at night", "Feel uneasy in dense, high-energy crowds", "Want to explore unfamiliar off-Strip residential areas after dark on foot"]
+  },
+
+  "neighborhoodSafetyGrid": [
+    {
+      "name": "The Strip (Las Vegas Blvd)",
+      "safetyLevel": "Safe",
+      "why": "Heavily policed and surveilled 24 hours, with constant foot traffic between Mandalay Bay and the Stratosphere.",
+      "bestTimeToVisit": "Anytime",
+      "avoidAfter": null,
+      "notes": "Stay on the main boulevard — avoid side streets and parking lots behind the casinos late at night."
+    },
+    {
+      "name": "Fremont Street Experience",
+      "safetyLevel": "Safe",
+      "why": "The covered four-block LED canopy is well-lit, busy, and has a visible security presence.",
+      "bestTimeToVisit": "Evening",
+      "avoidAfter": null,
+      "notes": "Safe inside the canopy — do not walk more than 1–2 blocks north or east of it."
+    },
+    {
+      "name": "Casino Resort Properties",
+      "safetyLevel": "Safe",
+      "why": "Floor security, 24-hour surveillance, and uniformed guards make casino interiors among the safest spots in the city.",
+      "bestTimeToVisit": "Anytime",
+      "avoidAfter": null,
+      "notes": "If you ever feel unsafe, step into the nearest casino lobby."
+    },
+    {
+      "name": "Strip-to-Downtown Connecting Roads",
+      "safetyLevel": "Mixed",
+      "why": "Las Vegas Blvd between the Strip and Downtown passes quieter, less-trafficked stretches at night.",
+      "bestTimeToVisit": "Daytime",
+      "avoidAfter": "Dark",
+      "notes": "Rideshare between the Strip and Fremont rather than walking it after dark."
+    },
+    {
+      "name": "Arts District (18b)",
+      "safetyLevel": "Mixed",
+      "why": "Trendy and improving, but lighting and foot traffic drop off sharply on quieter blocks at night.",
+      "bestTimeToVisit": "Evening",
+      "avoidAfter": "Midnight",
+      "notes": "Fine around open venues — rideshare in and out."
+    },
+    {
+      "name": "Side Streets Behind Casinos",
+      "safetyLevel": "Avoid Late",
+      "why": "Service roads, alleys, and parking structures behind resorts are quiet and poorly trafficked late at night.",
+      "bestTimeToVisit": "Daytime",
+      "avoidAfter": "Dark",
+      "notes": null
+    },
+    {
+      "name": "Naked City / North of Downtown",
+      "safetyLevel": "Avoid Late",
+      "why": "Higher crime and low foot traffic; no tourist reason to visit after dark.",
+      "bestTimeToVisit": "Daytime",
+      "avoidAfter": "Sunset",
+      "notes": null
+    },
+    {
+      "name": "West of I-15",
+      "safetyLevel": "Avoid Late",
+      "why": "Not a tourist area; higher crime rates and sparse lighting at night.",
+      "bestTimeToVisit": "Daytime",
+      "avoidAfter": "Sunset",
+      "notes": null
+    },
+    {
+      "name": "East Las Vegas (east of Maryland Pkwy)",
+      "safetyLevel": "Avoid Late",
+      "why": "Residential and commercial areas with higher crime and little tourist activity at night.",
+      "bestTimeToVisit": "Daytime",
+      "avoidAfter": "Sunset",
+      "notes": null
+    },
+    {
+      "name": "Around the Greyhound / Bus Station",
+      "safetyLevel": "Avoid Late",
+      "why": "Transient foot traffic and limited lighting make the blocks around the station best avoided after dark.",
+      "bestTimeToVisit": "Daytime",
+      "avoidAfter": "Sunset",
+      "notes": null
+    }
+  ],
+
+  "scenarioCards": [
+    {
+      "title": "Walking the Strip After 10 PM",
+      "riskLevel": "Low",
+      "whatToExpect": "The main boulevard stays busy and well-lit; side streets and casino back lots get very quiet.",
+      "howToStaySafe": [
+        "Stay on the main Las Vegas Blvd sidewalk and pedestrian bridges",
+        "Avoid side streets and parking lots behind the casinos",
+        "Keep moving past aggressive street performers and card slappers",
+        "Keep your phone and wallet secured in crowds"
+      ],
+      "bestFor": "Solo women, first-timers",
+      "avoidIf": "You dislike dense, high-energy crowds"
+    },
+    {
+      "title": "Fremont Street After Dark",
+      "riskLevel": "Low",
+      "whatToExpect": "The covered canopy is safe and lively; the area immediately beyond it is not.",
+      "howToStaySafe": [
+        "Stay inside the lit canopy area",
+        "Do not walk more than 1–2 blocks north or east of Fremont",
+        "Rideshare back to the Strip rather than walking the connecting roads",
+        "Keep valuables hidden in dense crowds"
+      ],
+      "bestFor": "Nightlife travelers, social explorers",
+      "avoidIf": "You prefer quiet, low-stimulation environments"
+    },
+    {
+      "title": "Using Rideshare Late",
+      "riskLevel": "Low",
+      "whatToExpect": "Fast and reliable; the standard nighttime choice for getting between the Strip and Downtown.",
+      "howToStaySafe": [
+        "Request your ride from inside the casino or hotel lobby, not the street",
+        "Verify the driver's name, plate, and car model before getting in",
+        "Sit in the back seat and share your trip",
+        "Never accept lifts from people approaching you offering transport"
+      ],
+      "bestFor": "Nightlife travelers",
+      "avoidIf": "You're on a very tight budget"
+    },
+    {
+      "title": "Clubbing & Casino Floors",
+      "riskLevel": "Mixed",
+      "whatToExpect": "Crowded clubs and casino floors with free-flowing drinks and occasional pickpocketing on busy weekends.",
+      "howToStaySafe": [
+        "Keep drinks covered and never leave them unattended",
+        "Use bank ATMs or the hotel cashier cage, not off-brand floor ATMs",
+        "Confirm any taxi fare before getting in",
+        "Stay with your group and plan how you'll get back before you head out"
+      ],
+      "bestFor": "Nightlife travelers, groups",
+      "avoidIf": "You prefer a quiet evening"
+    }
+  ],
+
+  "personaSafetyBlocks": [
+    {
+      "personaName": "Solo Female Traveler",
+      "topConcerns": ["Walking off the Strip at night", "Drink safety in clubs", "Rideshare pickups"],
+      "recommendedNeighborhoods": ["The Strip", "Fremont Street Experience", "Casino Resort Properties"],
+      "avoidZones": ["Side streets behind casinos", "Naked City", "West of I-15"],
+      "nightTips": [
+        "Request rideshare from inside the lobby, not the street",
+        "Keep drinks covered at all times",
+        "Stay on the main boulevard and lit canopy areas",
+        "Step into a casino lobby if anything feels wrong"
+      ]
+    }
+  ],
+
+  "corePrinciples": [
+    {
+      "title": "Stay on the Main Corridors",
+      "description": "The Strip's main boulevard and the Fremont canopy are heavily surveilled. Most risk comes from stepping off them onto quiet side streets.",
+      "example": "If a block behind a casino suddenly gets quiet or dark, head back to the main boulevard."
+    },
+    {
+      "title": "Default to Rideshare Between Areas",
+      "description": "The single best safety move at night is taking Uber or Lyft between the Strip and Downtown instead of walking the connecting roads.",
+      "example": "Rideshare from Fremont back to your Strip hotel rather than walking Las Vegas Blvd late at night."
+    },
+    {
+      "title": "Use Casinos as Safe Havens",
+      "description": "Every major casino has 24-hour security and surveillance. Inside a property you are in one of the safest environments in the city.",
+      "example": "If you feel unsafe on the street, walk straight into the nearest casino lobby and find staff."
+    },
+    {
+      "title": "Protect Your Drink and Wallet",
+      "description": "Pickpocketing in dense crowds and drink tampering in clubs are the most common real risks — both are easy to prevent.",
+      "example": "Keep your drink covered, and use a bank ATM or the cashier cage rather than off-brand floor ATMs."
+    },
+    {
+      "title": "Trust Micro-Signals",
+      "description": "If something feels off — a person, a block, an aggressive solicitor — change course immediately.",
+      "example": "If a street performer or card slapper crowds you, keep moving and don't stop to engage."
+    }
+  ],
+
+  "transitSafety": {
+    "rideshare": {
+      "riskLevel": "Low",
+      "bestHours": "Anytime",
+      "avoidHours": "None — but stay alert after 2 AM",
+      "tips": [
+        "Request from inside the casino or hotel lobby",
+        "Verify driver, plate, and car model",
+        "Share your trip and sit in the back"
+      ],
+      "recommendedRoutes": [
+        "Strip to Downtown / Fremont late at night",
+        "Any trip into or out of off-Strip areas"
+      ]
+    },
+    "yellowCabs": {
+      "riskLevel": "Low",
+      "bestHours": "Anytime",
+      "avoidHours": "None",
+      "tips": [
+        "Use official taxi lines at casino entrances",
+        "Confirm the fare or ask for the meter before you set off",
+        "Avoid 'long-hauling' — ask drivers to take the tunnel from the airport"
+      ],
+      "recommendedRoutes": [
+        "Casino taxi stands on the Strip",
+        "Airport to Strip via the I-15 tunnel"
+      ]
+    },
+    "walking": {
+      "riskLevel": "Moderate",
+      "bestHours": "Anytime on the main Strip and Fremont canopy",
+      "avoidHours": "Late night on side streets and connecting roads",
+      "tips": [
+        "Stay on the main boulevard and pedestrian bridges",
+        "Avoid side streets and parking lots behind casinos",
+        "Don't walk the connecting roads between the Strip and Downtown after dark"
+      ],
+      "recommendedRoutes": [
+        "Las Vegas Blvd main sidewalk and pedestrian bridges",
+        "Fremont Street Experience covered canopy"
+      ]
+    }
+  },
+
+  "neighborhoodCards": [
+    {
+      "name": "The Strip (Las Vegas Blvd)",
+      "nightVibe": "Bright, busy, heavily surveilled main boulevard",
+      "safetyRating": "Safe",
+      "safeSpots": ["Main Las Vegas Blvd sidewalk", "Pedestrian bridges between resorts"],
+      "avoidSpots": ["Side streets and parking lots behind casinos late at night"],
+      "idealFor": "Solo women, first-time visitors, nightlife travelers",
+      "notFor": "People who dislike dense crowds",
+      "indicators": {
+        "lighting": "Excellent",
+        "footTraffic": "Very High",
+        "policePresence": "High"
+      }
+    },
+    {
+      "name": "Fremont Street (Downtown)",
+      "nightVibe": "Lively covered canopy with steady foot traffic and security",
+      "safetyRating": "Safe",
+      "safeSpots": ["Fremont Street Experience canopy", "Casino entrances on Fremont"],
+      "avoidSpots": ["Blocks more than 1–2 streets north or east of Fremont"],
+      "idealFor": "Nightlife travelers, social explorers",
+      "notFor": "People who want a quiet evening",
+      "indicators": {
+        "lighting": "Good",
+        "footTraffic": "High",
+        "policePresence": "Moderate"
+      }
+    }
+  ],
+
+  "emergencyBlock": {
+    "call911": "For emergencies requiring immediate police, fire, or medical response.",
+    "call311": "For non-emergency city services and complaints in Las Vegas.",
+    "nypdPrecinctLocator": "https://www.lvmpd.com/en-us/Pages/AreaCommands.aspx",
+    "nypdPrecinctLocatorText": "Find the LVMPD area command responsible for your location — helpful if you lose something or need quick assistance. Non-emergency line: (702) 828-3111.",
+    "nearestHospital": "University Medical Center (1800 W Charleston Blvd) is the nearest Level 1 trauma center; multiple 24/7 ERs serve the Strip and Downtown.",
+    "subwayHelpPoints": "Both Uber and Lyft have in-app emergency buttons that share your location with 911 — and casino security can help you book a ride or taxi from the lobby.",
+    "lateNightTransportLinks": ["https://www.rtcsnv.com"]
+  },
+
+  "faq": [
+    {
+      "question": "Is the Las Vegas Strip safe to walk at night?",
+      "answer": "Yes. The main Las Vegas Blvd corridor between Mandalay Bay and the Stratosphere is heavily policed and surveilled 24 hours and stays busy late. Stay on the main boulevard and pedestrian bridges, and avoid the side streets and parking lots behind the casinos after midnight.",
+      "relatedLinks": ["/destination/lasvegas/safety-guide"]
+    },
+    {
+      "question": "Is Fremont Street safe at night?",
+      "answer": "The covered Fremont Street Experience canopy is safe, well-lit, and has visible security. The problem is what lies beyond it — do not walk more than 1–2 blocks north or east of Fremont after dark, and rideshare between the Strip and Downtown rather than walking the connecting roads.",
+      "relatedLinks": ["/destination/lasvegas/best-areas-to-stay"]
+    },
+    {
+      "question": "Should I use Uber or Lyft at night in Las Vegas?",
+      "answer": "Yes — rideshare is the standard nighttime choice, especially between the Strip and Downtown. Request your ride from inside the casino or hotel lobby, verify the driver's name, plate, and car, and never accept lifts from people approaching you on the street.",
+      "relatedLinks": ["/destination/lasvegas/solo-trip-to-lasvegas"]
+    },
+    {
+      "question": "What should I actually watch out for at night in Vegas?",
+      "answer": "Pickpockets in dense crowds, aggressive street performers and card slappers, taxi or rideshare overcharging, drink tampering in clubs, and skimmers on off-brand casino-floor ATMs. Keep drinks covered, use bank ATMs or the cashier cage, and confirm fares before you ride.",
+      "relatedLinks": ["/destination/lasvegas/safety-guide"]
+    },
+    {
+      "question": "Which Las Vegas areas should tourists avoid at night?",
+      "answer": "Areas west of I-15, the blocks around the Greyhound station, Naked City north of Downtown, and parts of East Las Vegas (east of Maryland Pkwy) have higher crime and no tourist reason to visit after dark. Stick to the Strip, Fremont Street, and the well-lit hotel corridors.",
+      "relatedLinks": ["/destination/lasvegas/best-areas-to-stay"]
+    },
+    {
+      "question": "Is Las Vegas safe for solo female travelers at night?",
+      "answer": "Yes, with normal precautions. The Strip and Fremont canopy are well-monitored. Request rideshare from inside the lobby, keep drinks covered in clubs, stay on the main corridors, and step into a casino lobby if anything ever feels wrong.",
+      "relatedLinks": ["/destination/lasvegas/lasvegas-female-solo-travel-guide"]
+    }
+  ],
+
+  "interlinkingGrid": [
+    { "title": "Solo Trip to Las Vegas Guide", "url": "/destination/lasvegas/solo-trip-to-lasvegas" },
+    { "title": "Las Vegas Safety Guide", "url": "/destination/lasvegas/safety-guide" },
+    { "title": "Best Areas to Stay in Las Vegas", "url": "/destination/lasvegas/best-areas-to-stay" },
+    { "title": "Las Vegas Female Solo Travel Guide", "url": "/destination/lasvegas/lasvegas-female-solo-travel-guide" }
+  ],
+
+  "trustBlock": {
+    "methodology": "We analyze LVMPD data, traveler patterns, and on-the-ground local insights.",
+    "localInsights": "Built with input from Las Vegas residents and frequent visitors — which stretches of the Strip stay busy, where rideshare pickup is safest, and what the real risks are after dark.",
+    "dataSources": ["LVMPD Crime Stats", "311 Reports", "RTC Transit Data"],
+    "editorialProcess": "Every guide is reviewed for accuracy and clarity.",
+    "safetyExpertsConsulted": ""
+  }
+}

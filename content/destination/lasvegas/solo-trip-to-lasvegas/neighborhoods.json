@@ -1,0 +1,24 @@
+{
+  "neighborhoods": [
+    {
+      "name": "Mid-Strip",
+      "reason": "The best base for solo travelers — central, walkable, and steps from the major casinos and shows.",
+      "link": "https://www.travelsamericas.com/destination/lasvegas/best-areas-to-stay#areas-lasvegas"
+    },
+    {
+      "name": "South Strip",
+      "reason": "Budget-friendly rooms at Excalibur and Luxor with easy Strip access — value for solo trips.",
+      "link": "https://www.travelsamericas.com/destination/lasvegas/best-areas-to-stay#areas-lasvegas"
+    },
+    {
+      "name": "Fremont Street (Downtown)",
+      "reason": "Cheaper, more local, and walkable — vintage casinos and a lively pedestrian canopy.",
+      "link": "https://www.travelsamericas.com/destination/lasvegas/best-areas-to-stay#areas-lasvegas"
+    },
+    {
+      "name": "The Arts District",
+      "reason": "Off-Strip and low-key — breweries, galleries, and independent restaurants for a quieter night.",
+      "link": "https://www.travelsamericas.com/destination/lasvegas/best-areas-to-stay#areas-lasvegas"
+    }
+  ]
+}

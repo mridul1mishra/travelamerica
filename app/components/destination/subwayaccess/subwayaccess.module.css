@@ -1,0 +1,118 @@
+/* SubwayAccessSection.css */
+
+/* SECTION LAYOUT */
+.subway-section {
+  padding: 3rem 1.5rem;
+  background: #f7f9ff;
+}
+
+.subway-section__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.subway-section__heading { 
+  font-size: 2rem; 
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.subway-section__intro {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* LIST LAYOUT (VERTICAL STACK) */
+.subway-section__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ROW CONTAINER */
+.subway-row {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  border: 1px solid #dce4ff;
+  border-radius: 10px;
+}
+
+/* HEADER */
+.subway-row__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subway-row__header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #222;
+}
+
+/* BADGES */
+.subway-row__lines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* DETAILS */
+.subway-row__details p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0.4rem 0;
+}
+
+.subway-row__details p strong {
+  font-weight: 600;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .subway-section {
+    padding: 2rem 1rem;
+  }
+  .subway-row {
+    padding: 1rem;
+  }
+  .subway-section__heading {
+    font-size: 1.5rem;
+  }
+  .subway-row__details p {
+    font-size: 0.9rem;
+  }
+}
+
+/* MTA BADGES */
+.line-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* COLORS */
+.line-1, .line-2, .line-3 { background: #EE352E; }
+.line-A, .line-C, .line-E { background: #0039A6; }
+.line-B, .line-D, .line-F, .line-M { background: #FF6319; }
+.line-N, .line-Q, .line-R, .line-W { background: #FCCC0A; }
+.line-7 { background: #B933AD; }
+.line-4, .line-5, .line-6 { background: #00933C; }
+.line-L, .line-S { background: #A7A9AC; }
+.line-J, .line-Z { background: #996633; }

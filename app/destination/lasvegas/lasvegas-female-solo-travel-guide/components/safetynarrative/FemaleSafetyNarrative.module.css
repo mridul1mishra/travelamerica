@@ -1,0 +1,87 @@
+.narrative {
+  max-width: 760px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  color: #1a1a1a;
+  line-height: 1.7;
+  font-size: 1.0625rem;
+}
+
+.narrative h2 {
+  font-size: 1.875rem;
+  line-height: 1.25;
+  margin: 3rem 0 1rem;
+  color: #111;
+  font-weight: 700;
+}
+
+.narrative h3 {
+  font-size: 1.25rem;
+  line-height: 1.35;
+  margin: 2rem 0 0.75rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.narrative p {
+  margin: 0 0 1.1rem;
+}
+
+.narrative ul,
+.narrative ol {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.narrative li {
+  margin: 0 0 0.6rem;
+  padding-left: 0.25rem;
+}
+
+.narrative a {
+  color: #0a66c2;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.narrative a:hover {
+  color: #084a8c;
+}
+
+.narrative strong {
+  color: #111;
+  font-weight: 600;
+}
+
+.section {
+  scroll-margin-top: 5rem;
+}
+
+.lead {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+.decisionList {
+  list-style: decimal;
+  padding-left: 1.5rem;
+}
+
+.decisionList li {
+  margin-bottom: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .narrative {
+    font-size: 1rem;
+    margin: 2rem auto;
+  }
+  .narrative h2 {
+    font-size: 1.5rem;
+    margin-top: 2.25rem;
+  }
+  .narrative h3 {
+    font-size: 1.15rem;
+  }
+}
