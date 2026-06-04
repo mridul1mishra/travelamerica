@@ -14,12 +14,13 @@ const iconMap: Record<string, JSX.Element> = {
 interface Props {
   tiles: FemaleSoloTile[];
   ctaLink: string;
+  cityName?: string;
 }
 
-export default function FemaleSoloTiles({ tiles, ctaLink }: Props) {
+export default function FemaleSoloTiles({ tiles, ctaLink, cityName = "NYC" }: Props) {
   return (
     <section id="female-travel" className={styles.section}>
-      <h2 className={styles.heading}>Solo Female Travel in NYC</h2>
+      <h2 className={styles.heading}>Solo Female Travel in {cityName}</h2>
 
       <div className={styles.grid}>
         {tiles.map((tile, index) => (

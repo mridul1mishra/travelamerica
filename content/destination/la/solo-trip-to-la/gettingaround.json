@@ -1,0 +1,16 @@
+{
+  "sections": [
+    {
+      "id": "transport",
+      "title": "Getting Around LA",
+      "summary": "Los Angeles is car-dependent and spread out, so your transport plan shapes your whole trip. A mix of rental car, rideshare, and the Metro on a few key corridors works best for solo travelers.",
+      "bullets": [
+        "Rental car: the most freedom for exploring beyond the core ($40–$80/day).",
+        "Uber & Lyft: reliable and safe citywide — ideal at night or without a car.",
+        "Metro E Line: connects DTLA to Santa Monica; B Line reaches Hollywood.",
+        "Walking: great within Santa Monica, Silver Lake, and Los Feliz — not between them."
+      ],
+      "link": "/destination/la/la-metro-map"
+    }
+  ]
+}

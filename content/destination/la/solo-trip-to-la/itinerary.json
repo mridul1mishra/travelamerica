@@ -1,0 +1,28 @@
+{
+  "days": [
+    {
+      "day": "Day 1",
+      "bullets": [
+        "Morning at Santa Monica Pier and a walk down the beach to Venice",
+        "Lunch on Abbot Kinney Blvd, then explore the Venice canals",
+        "Sunset drinks at a Santa Monica rooftop bar"
+      ]
+    },
+    {
+      "day": "Day 2",
+      "bullets": [
+        "Self-paced hike up to Griffith Observatory for skyline views",
+        "Afternoon at The Getty (free admission, easy solo museum visit)",
+        "Dinner and people-watching in Los Feliz or Silver Lake"
+      ]
+    },
+    {
+      "day": "Day 3",
+      "bullets": [
+        "Walk the Hollywood Walk of Fame and the TCL Chinese Theatre",
+        "Explore the DTLA Arts District and Grand Central Market",
+        "Evening comedy show on the Sunset Strip"
+      ]
+    }
+  ]
+}

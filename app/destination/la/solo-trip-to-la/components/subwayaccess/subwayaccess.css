@@ -1,0 +1,116 @@
+/* SubwayAccessSection.css */
+
+/* SECTION LAYOUT */
+.subway-section {
+  padding: 3rem 1.5rem;
+  background: #f7f9ff;
+}
+
+.subway-section__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.subway-section__heading { 
+  font-size: 2rem; 
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.subway-section__intro {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* LIST LAYOUT (VERTICAL STACK) */
+.subway-section__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ROW CONTAINER */
+.subway-row {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  border: 1px solid #dce4ff;
+  border-radius: 10px;
+}
+
+/* HEADER */
+.subway-row__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subway-row__header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #222;
+}
+
+/* BADGES */
+.subway-row__lines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* DETAILS */
+.subway-row__details p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0.4rem 0;
+}
+
+.subway-row__details p strong {
+  font-weight: 600;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .subway-section {
+    padding: 2rem 1rem;
+  }
+  .subway-row {
+    padding: 1rem;
+  }
+  .subway-section__heading {
+    font-size: 1.5rem;
+  }
+  .subway-row__details p {
+    font-size: 0.9rem;
+  }
+}
+
+/* METRO BADGES */
+.line-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* LA METRO COLORS */
+.line-A { background: #0072BC; } /* A Line — Blue */
+.line-B { background: #E4002B; } /* B Line — Red */
+.line-C { background: #58A738; } /* C Line — Green */
+.line-D { background: #A05DA5; } /* D Line — Purple */
+.line-E { background: #00A6A0; } /* E Line — Aqua */
+.line-K { background: #E96BB0; } /* K Line — Pink */

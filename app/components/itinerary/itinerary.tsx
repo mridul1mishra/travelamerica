@@ -2,10 +2,10 @@ import Link from "next/link";
 import styles from "./ThreeDayItinerary.module.css";
 import { ItineraryProps } from "@/app/models/itinerary";
 
-export default function ThreeDayItinerary({ days, ctaLink }: ItineraryProps) {
+export default function ThreeDayItinerary({ days, ctaLink, cityName = "NYC" }: ItineraryProps & { cityName?: string }) {
   return (
     <section id="itinerary" className={styles.section}>
-      <h2 className={styles.heading}>3‑Day NYC Itinerary</h2>
+      <h2 className={styles.heading}>3‑Day {cityName} Itinerary</h2>
 
       <div className={styles.timeline}>
         {days.map((day, index) => (

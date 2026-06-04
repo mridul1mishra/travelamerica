@@ -1,0 +1,23 @@
+{
+  "tiles": [
+    {
+      "title": "Safe Neighborhoods",
+      "description": "Base yourself in Santa Monica, West Hollywood, or Los Feliz for comfort, walkability, and well-trafficked streets.",
+      "icon": "MdLocationCity",
+      "link": "#"
+    },
+    {
+      "title": "Smart Transit Tips",
+      "description": "Use Uber or Lyft after dark, keep valuables hidden in your rental car, and avoid empty Metro stations late at night.",
+      "icon": "FaSubway",
+      "link": "#"
+    },
+    {
+      "title": "Emergency Support",
+      "description": "Know when to call 911, share your live location with someone you trust, and step into a busy café or hotel lobby if you feel unsafe.",
+      "icon": "FaHandsHelping",
+      "link": "#"
+    }
+  ],
+  "ctaLink": "/destination/la/la-female-solo-travel-guide"
+}

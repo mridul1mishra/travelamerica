@@ -1,0 +1,24 @@
+{
+  "neighborhoods": [
+    {
+      "name": "Santa Monica",
+      "reason": "Walkable, safe, and beachfront — the easiest base for solo travelers.",
+      "link": "https://www.travelsamericas.com/destination/la/best-areas-to-stay#areas-la"
+    },
+    {
+      "name": "Silver Lake",
+      "reason": "Independent cafés, restaurants, and a relaxed solo-friendly scene.",
+      "link": "https://www.travelsamericas.com/destination/la/best-areas-to-stay#areas-la"
+    },
+    {
+      "name": "West Hollywood",
+      "reason": "Central, lively, and best for nightlife within walking distance.",
+      "link": "https://www.travelsamericas.com/destination/la/best-areas-to-stay#areas-la"
+    },
+    {
+      "name": "Downtown LA",
+      "reason": "Budget value near the Arts District and Grand Ave; Metro-connected.",
+      "link": "https://www.travelsamericas.com/destination/la/best-areas-to-stay#areas-la"
+    }
+  ]
+}

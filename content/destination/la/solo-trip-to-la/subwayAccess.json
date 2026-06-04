@@ -1,0 +1,26 @@
+[
+  {
+    "neighborhood": "Santa Monica",
+    "lines": ["E"],
+    "access": "Metro E (Expo) Line runs straight to Downtown LA in about 50 minutes, no transfers.",
+    "night": "E Line runs until roughly midnight; rideshare is the safer late-night option.",
+    "walk": "Downtown Santa Monica station sits in a busy, well-lit pedestrian core.",
+    "notes": "Best for the DTLA–beach corridor; you'll still want rideshare for everywhere else."
+  },
+  {
+    "neighborhood": "Hollywood",
+    "lines": ["B"],
+    "access": "Metro B (Red) Line connects Hollywood to Downtown LA and Union Station.",
+    "night": "B Line runs frequently into the evening; quieter and best avoided alone very late.",
+    "walk": "Hollywood/Highland and Hollywood/Vine stations are surrounded by foot traffic.",
+    "notes": "Great for reaching Universal City and DTLA without a car."
+  },
+  {
+    "neighborhood": "Downtown LA",
+    "lines": ["A", "B", "D", "E"],
+    "access": "The main interchange — A, B, D, and E lines all meet around 7th St/Metro Center.",
+    "night": "Trains run reliably until midnight; use rideshare for late returns.",
+    "walk": "Stick to the Grand Ave and Arts District corridors; some blocks feel empty at night.",
+    "notes": "7th St/Metro Center is the best-connected hub for solo travelers."
+  }
+]
