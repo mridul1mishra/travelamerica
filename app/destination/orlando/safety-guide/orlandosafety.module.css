@@ -1,0 +1,7 @@
+.container { 
+  max-width: 720px; /* or 800px depending on your editorial width */ 
+  margin: 0 auto; 
+  padding: 0 1rem; /* mobile breathing room */ 
+  box-sizing: border-box;
+}
+body { background-color: #f5f7fa; }

@@ -1,0 +1,163 @@
+{
+  "heroSafety": {
+    "title": "Is Orlando Safe at Night for Solo Travelers?",
+    "subtitle": "Orlando's tourist corridors are safe at night when you stay in well-lit, busy areas and use rideshare for getting around after dark.",
+    "heroImage": "/data/majorcities/orlando/assets/orlando.webp",
+    "trustBadges": ["🛡️Local Insights", "👣Traveler Patterns", "📊Tourist-Area Focus"]
+  },
+
+  "safetyMeter": {
+    "overallRating": "Safe in Tourist Areas with Smart Precautions",
+    "meterScore": 7,
+    "quickSummary": "Orlando's tourist zones — International Drive, Disney Springs, Universal CityWalk, and Downtown's main strips — stay busy and patrolled at night. Risk rises off the beaten path and in quiet parking areas late at night.",
+    "bestFor": ["Solo women", "First-time visitors", "Families"],
+    "avoidIf": ["You plan to walk long distances between areas after dark", "You expect walkable, transit-first nightlife", "You are uneasy in large theme-park crowds"]
+  },
+
+  "neighborhoodSafetyGrid": [
+    { "name": "International Drive (I-Drive)", "safetyLevel": "Safe", "why": "Busy tourist corridor, well-lit, steady foot traffic and security.", "bestTimeToVisit": "Anytime", "avoidAfter": null, "notes": "Stay on the main drive; watch belongings in crowds." },
+    { "name": "Disney Springs / Lake Buena Vista", "safetyLevel": "Safe", "why": "Heavily staffed and surveilled retail-and-dining district.", "bestTimeToVisit": "Anytime", "avoidAfter": null, "notes": null },
+    { "name": "Universal CityWalk", "safetyLevel": "Safe", "why": "Gated entertainment complex with strong security presence.", "bestTimeToVisit": "Anytime", "avoidAfter": null, "notes": null },
+    { "name": "Lake Eola / Thornton Park", "safetyLevel": "Safe", "why": "Walkable downtown park district, popular and well-lit in the evening.", "bestTimeToVisit": "Evening", "avoidAfter": null, "notes": null },
+    { "name": "Winter Park", "safetyLevel": "Safe", "why": "Upscale, quiet, low crime around Park Avenue.", "bestTimeToVisit": "Evening", "avoidAfter": null, "notes": null },
+    { "name": "Downtown Orlando (Church Street)", "safetyLevel": "Mixed", "why": "Lively nightlife; crowds get rowdier after bars close.", "bestTimeToVisit": "Evening", "avoidAfter": "2 AM", "notes": "Plan your ride home before closing time." },
+    { "name": "Mills 50 / Milk District", "safetyLevel": "Mixed", "why": "Trendy local nightlife with quieter, uneven side streets.", "bestTimeToVisit": "Evening", "avoidAfter": "1 AM", "notes": null },
+    { "name": "Kissimmee (US-192)", "safetyLevel": "Mixed", "why": "Long budget-hotel corridor; fine near attractions, quieter stretches less so at night.", "bestTimeToVisit": "Evening", "avoidAfter": "Midnight", "notes": "A car or rideshare is essential here." },
+    { "name": "SoDo / South Orange Ave", "safetyLevel": "Mixed", "why": "Mostly commercial; calm by day, sparse foot traffic at night.", "bestTimeToVisit": "Daytime", "avoidAfter": "Midnight", "notes": null },
+    { "name": "Orange Blossom Trail (OBT) corridor", "safetyLevel": "Avoid Late", "why": "Higher reported crime and low foot traffic; not a tourist area.", "bestTimeToVisit": "Daytime", "avoidAfter": "Sunset", "notes": null },
+    { "name": "Pine Hills", "safetyLevel": "Avoid Late", "why": "Residential area with higher crime statistics; no tourist reason to visit at night.", "bestTimeToVisit": "Daytime", "avoidAfter": "Sunset", "notes": null },
+    { "name": "Parramore (west of downtown)", "safetyLevel": "Avoid Late", "why": "Quiet residential blocks with limited nighttime activity.", "bestTimeToVisit": "Daytime", "avoidAfter": "Sunset", "notes": null }
+  ],
+
+  "scenarioCards": [
+    {
+      "title": "Walking I-Drive or a Park Area After Dark",
+      "riskLevel": "Low",
+      "whatToExpect": "Main tourist strips stay busy and lit; side streets and parking lots get quiet.",
+      "howToStaySafe": ["Stay on the main, lit drive", "Avoid cutting through empty lots", "Walk with purpose", "Keep your phone accessible"],
+      "bestFor": "Solo women, first-timers",
+      "avoidIf": "You need to cover long distances on foot"
+    },
+    {
+      "title": "Driving & Parking at Night",
+      "riskLevel": "Moderate",
+      "whatToExpect": "Orlando is car-centric; you'll use garages and large lots after dark.",
+      "howToStaySafe": ["Park in well-lit, attended garages", "Never leave valuables visible in the car", "Have keys ready before you reach the car", "Note your parking spot to avoid wandering"],
+      "bestFor": "Road-trippers, families",
+      "avoidIf": "You would rather not drive at night"
+    },
+    {
+      "title": "Using Rideshare Late",
+      "riskLevel": "Low",
+      "whatToExpect": "Uber and Lyft are widely available and the easiest way around at night.",
+      "howToStaySafe": ["Verify the plate, car, and driver photo", "Wait inside a lobby until it arrives", "Sit in the back and share your trip", "Confirm who they're picking up before saying your name"],
+      "bestFor": "Nightlife travelers, solo visitors",
+      "avoidIf": "You're on a very tight budget"
+    },
+    {
+      "title": "Exploring Downtown Nightlife",
+      "riskLevel": "Mixed",
+      "whatToExpect": "Church Street and Wall Street Plaza get crowded and rowdier near closing.",
+      "howToStaySafe": ["Keep drinks in sight at all times", "Stay in the busy, staffed venues", "Avoid quiet side streets after leaving a bar", "Arrange your ride home before midnight"],
+      "bestFor": "Social explorers",
+      "avoidIf": "You prefer quiet, low-key evenings"
+    }
+  ],
+
+  "personaSafetyBlocks": [
+    {
+      "personaName": "Solo Female Traveler",
+      "topConcerns": ["Walking between areas at night", "Parking lots and garages", "Crowded nightlife zones"],
+      "recommendedNeighborhoods": ["International Drive", "Disney Springs / Lake Buena Vista", "Winter Park"],
+      "avoidZones": ["Orange Blossom Trail corridor", "Pine Hills"],
+      "nightTips": ["Rideshare instead of walking long distances", "Park in lit, attended garages", "Keep drinks in sight downtown", "Keep your phone charged"]
+    }
+  ],
+
+  "corePrinciples": [
+    { "title": "Read the Room", "description": "Scan the environment regularly to gauge lighting, foot traffic, and exits.", "example": "If a stretch of I-Drive suddenly empties out, move back toward the busier, lit section." },
+    { "title": "Plan Your Moves", "description": "Know your next 2–3 steps — your ride, your route, and a backup.", "example": "If you're leaving a downtown bar at closing, request your rideshare before you walk out." },
+    { "title": "Stay in the Flow", "description": "Stick to well-lit, busy streets and avoid shortcuts through quiet lots.", "example": "Walk the main drive to your hotel rather than cutting behind a closed plaza." },
+    { "title": "Signal Confidence", "description": "Walk with purpose, head up, and avoid looking distracted or lost.", "example": "Hold your phone at chest level for navigation instead of staring down at it." },
+    { "title": "Trust Micro-Signals", "description": "If a person, a block, or a garage feels off, change direction immediately.", "example": "If a parking level feels deserted, walk back and ask security to escort you." }
+  ],
+
+  "transitSafety": {
+    "bus": {
+      "riskLevel": "Low",
+      "bestHours": "Daytime and early evening",
+      "avoidHours": "Late night, when service thins out",
+      "tips": ["Use well-lit, busy stops", "Sit near the front", "Check the last departure time"],
+      "recommendedRoutes": ["I-Ride Trolley (International Drive)", "Lynx routes to the parks", "Disney & Universal resort shuttles"]
+    },
+    "rideshare": {
+      "riskLevel": "Low",
+      "bestHours": "Anytime",
+      "avoidHours": "None — but stay alert after 2 AM",
+      "tips": ["Verify the driver and plate", "Request from inside a lobby", "Share your trip"],
+      "recommendedRoutes": ["Strip-to-hotel hops", "Downtown nightlife trips", "Airport (MCO) transfers"]
+    },
+    "walking": {
+      "riskLevel": "Moderate",
+      "bestHours": "Daytime and early evening on tourist strips",
+      "avoidHours": "Late night between areas",
+      "tips": ["Stay on lit, busy corridors", "Avoid crossing large dark lots on foot", "Use crosswalks — I-Drive traffic is fast"],
+      "recommendedRoutes": ["Within International Drive", "Disney Springs", "Lake Eola loop"]
+    }
+  },
+
+  "neighborhoodCards": [
+    {
+      "name": "International Drive (I-Drive)",
+      "nightVibe": "Bright, busy tourist corridor with restaurants and attractions",
+      "safetyRating": "Safe",
+      "safeSpots": ["ICON Park", "The main I-Drive strip"],
+      "avoidSpots": ["Empty parking lots behind plazas late at night"],
+      "idealFor": "First-time visitors, families, solo travelers",
+      "notFor": "People who want a quiet, local scene",
+      "indicators": { "lighting": "Excellent", "footTraffic": "Very High", "policePresence": "Moderate" }
+    },
+    {
+      "name": "Disney Springs / Lake Buena Vista",
+      "nightVibe": "Polished, staffed retail-and-dining district",
+      "safetyRating": "Safe",
+      "safeSpots": ["Disney Springs waterfront", "Resort-area walkways"],
+      "avoidSpots": ["Unlit stretches of road outside the complex"],
+      "idealFor": "Families, solo women, relaxed evenings",
+      "notFor": "People avoiding tourist crowds",
+      "indicators": { "lighting": "Excellent", "footTraffic": "High", "policePresence": "High (private security)" }
+    }
+  ],
+
+  "emergencyBlock": {
+    "call911": "For emergencies requiring immediate police, fire, or medical response.",
+    "call311": "For non-emergency city services and information in Orlando and Orange County.",
+    "nypdPrecinctLocator": "https://www.orlando.gov/Our-Government/Departments-Offices/Orlando-Police-Department",
+    "nypdPrecinctLocatorText": "Orlando Police Department (city) and Orange County Sheriff (tourist areas like I-Drive) — use the non-emergency line for reports and lost property.",
+    "nearestHospital": "Orlando Health ORMC (downtown) is the area's Level 1 trauma center; AdventHealth and HCA ERs are within 10–15 minutes of most tourist zones.",
+    "subwayHelpPoints": "There is no subway in Orlando — use rideshare (Uber/Lyft), the I-Ride Trolley on International Drive, or Lynx buses, and ask hotel or attraction staff for help.",
+    "lateNightTransportLinks": ["https://www.golynx.com", "https://www.iridetrolley.com"]
+  },
+
+  "faq": [
+    { "question": "Is Orlando safe for solo female travelers at night?", "answer": "Yes, in the tourist corridors — International Drive, Disney Springs, Universal CityWalk, and downtown's main strips stay busy and lit. Use rideshare to move between areas after dark.", "relatedLinks": ["/destination/orlando/orlando-female-solo-travel-guide"] },
+    { "question": "Which Orlando areas are safest at night?", "answer": "International Drive, Disney Springs / Lake Buena Vista, Universal CityWalk, Winter Park, and the Lake Eola / Thornton Park area are the safest, most walkable choices after dark.", "relatedLinks": ["/destination/orlando/best-areas-to-stay"] },
+    { "question": "Is it safe to walk around Orlando at night?", "answer": "On the main tourist strips, yes. Orlando is spread out and car-centric, so use rideshare for longer distances rather than walking between areas or through large parking lots.", "relatedLinks": ["/destination/orlando/safety-guide"] },
+    { "question": "What should I watch for at night in Orlando?", "answer": "Petty theft in crowds, car break-ins in dark lots, the summer heat, and a few non-tourist areas (the OBT corridor, Pine Hills) you have no reason to visit after dark.", "relatedLinks": ["/destination/orlando/safety-guide"] },
+    { "question": "Are the theme park areas safe after closing?", "answer": "Yes — Disney Springs, CityWalk, and resort areas are heavily staffed and surveilled. Take normal care in large parking structures and have your ride or route planned.", "relatedLinks": ["/destination/orlando/neighborhood-guide"] },
+    { "question": "How do I get around Orlando safely at night?", "answer": "Rideshare (Uber/Lyft) is the safest and easiest option after dark. The I-Ride Trolley covers International Drive in the evening, and most resorts run their own shuttles.", "relatedLinks": ["/destination/orlando/solo-trip-to-orlando"] }
+  ],
+
+  "interlinkingGrid": [
+    { "title": "Solo Trip to Orlando Guide", "url": "/destination/orlando/solo-trip-to-orlando" },
+    { "title": "Orlando Safety Guide", "url": "/destination/orlando/safety-guide" }
+  ],
+
+  "trustBlock": {
+    "methodology": "We combine local crime patterns, traveler reports, and tourist-area knowledge.",
+    "localInsights": "Built with input from Orlando residents and frequent park visitors.",
+    "dataSources": ["Local crime reports", "Traveler feedback", "Tourist-board guidance"],
+    "editorialProcess": "Every guide is reviewed for accuracy and clarity.",
+    "safetyExpertsConsulted": ""
+  }
+}
