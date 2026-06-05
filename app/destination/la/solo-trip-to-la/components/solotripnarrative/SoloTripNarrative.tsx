@@ -7,7 +7,7 @@ import styles from "./SoloTripNarrative.module.css";
 // with first-person planning advice that helps users decide.
 // Insertion: between SoloLaQa and BestNeighborhoodsGrid.
 
-export default function SoloTripNarrative() {
+export function SoloTripNarrative() {
   return (
     <article className={styles.narrative} aria-label="Solo trip to LA deep dive">
 

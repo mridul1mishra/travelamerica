@@ -19,9 +19,9 @@ import { SubwayAccessSection } from '@/app/components/destination/subwayaccess/s
 import faqData from "@/content/destination/solotriptonyc/faqsection.json";
 import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
 import SoloNycQa from '@/app/components/destination/solotriptonyc/aisnippet/cardqanda';
-import SoloTripNarrative from './components/solotripnarrative/SoloTripNarrative';
+import { SoloTripNarrative } from './components/solotripnarrative/SoloTripNarrative';
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import HeroSection from './components/herosection/HeroSection';
+import { HeroSection } from './components/herosection/HeroSection';
 
 
 export default function SoloTripNYCClient() {

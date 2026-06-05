@@ -1,6 +1,6 @@
 import styles from './SoloNycQa.module.css';
 
-export default function SoloLaQa() {
+export function SoloLaQa() {
   return (
     <section className={styles.wrapper}>
          <h2 className={styles.heading}>Essential Solo Travel Tips for LA</h2>

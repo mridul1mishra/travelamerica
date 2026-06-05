@@ -19,10 +19,10 @@ import { ScenarioSection } from './components/scenariocard/scenariosection';
 import { SubwayAccessSection } from './components/subwayaccess/subwayaccess';
 import faqData from "@/content/destination/la/solo-trip-to-la/faq/faqsection.json";
 import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
-import SoloLaQa from './components/aisnippet/cardqanda';
-import SoloTripNarrative from './components/solotripnarrative/SoloTripNarrative';
+import { SoloLaQa } from './components/aisnippet/cardqanda';
+import { SoloTripNarrative } from './components/solotripnarrative/SoloTripNarrative';
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import HeroSection from './components/herosection/HeroSection';
+import { HeroSection } from './components/herosection/HeroSection';
 
 
 export default function SoloTripToLAClient() {
