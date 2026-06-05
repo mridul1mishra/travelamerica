@@ -17,9 +17,9 @@ export const SCENARIOS: readonly Scenario[] = [
     id: 1,
     title: "Walking Alone at Night",
     content: [
-      "Stick to well-lit avenues instead of side streets",
-      "Walk with purpose and steady pace",
-      "Cross early if a block feels off",
+      "Stick to the main, well-lit Las Vegas Boulevard",
+      "Walk with purpose and a steady pace",
+      "Cross early if a block or side street feels off",
       "Keep your phone in hand and location shared"
     ],
     category: "Street"
@@ -31,7 +31,7 @@ export const SCENARIOS: readonly Scenario[] = [
       "Keep a neutral expression and avoid prolonged engagement",
       "Use a short line like “Sorry, can’t help”",
       "Maintain your pace — don’t stop walking",
-      "Move toward a store or group if uncomfortable"
+      "Move toward a casino entrance or group if uncomfortable"
     ],
     category: "Street"
   },
@@ -40,20 +40,20 @@ export const SCENARIOS: readonly Scenario[] = [
     title: "Feeling Followed",
     content: [
       "Change direction or cross the street",
-      "Enter a store, café, or well-lit space",
+      "Walk into the nearest casino — staffed and surveilled 24/7",
       "Avoid looking back repeatedly",
-      "Call or pretend to call someone"
+      "Find security or call (or pretend to call) someone"
     ],
     category: "Street"
   },
   {
     id: 4,
-    title: "Navigating Empty Streets",
+    title: "Card Slappers on the Strip",
     content: [
-      "Stay near open businesses or busier corners",
-      "Avoid construction zones and dim blocks",
-      "Walk confidently even if unsure",
-      "Keep valuables out of sight"
+      "Don’t make eye contact or take the cards",
+      "Keep walking — don’t slow down or engage",
+      "Stay toward the center of the busy sidewalk",
+      "Use the elevated pedestrian bridges to skip clusters"
     ],
     category: "Street"
   },
@@ -61,45 +61,45 @@ export const SCENARIOS: readonly Scenario[] = [
   // TRANSIT
   {
     id: 5,
-    title: "Late-Night Subway Platform",
+    title: "Late-Night Walk Down the Strip",
     content: [
-      "Stand near the conductor’s car",
-      "Avoid empty cars even if convenient",
-      "Keep your bag in front",
-      "Screenshot your route + exits"
+      "Stay on the main, well-lit boulevard",
+      "Use the elevated pedestrian bridges to cross",
+      "Keep your bag zipped and in front",
+      "Duck into a casino if anything feels off"
     ],
     category: "Transit"
   },
   {
     id: 6,
-    title: "Confusing Subway Exits",
+    title: "Confusing Casino or Strip Layout",
     content: [
-      "Step aside without blocking flow",
-      "Recheck exits using Live View",
-      "Follow crowds toward main streets",
-      "Avoid asking strangers for directions"
+      "Step aside without blocking the flow",
+      "Recheck your route using Live View",
+      "Follow signs toward the main entrance or Strip",
+      "Ask casino security for directions, not strangers"
     ],
     category: "Transit"
   },
   {
     id: 7,
-    title: "Rideshare Pickup on a Quiet Street",
+    title: "Rideshare Pickup at Night",
     content: [
-      "Match plate, model, and driver photo",
-      "Sit behind the driver",
-      "Share your trip with someone",
-      "Track the route on your phone"
+      "Request it from inside the hotel or casino lobby",
+      "Match the plate, model, and driver photo",
+      "Sit in the back and share your trip",
+      "Ask who they’re picking up before saying your name"
     ],
     category: "Transit"
   },
   {
     id: 8,
-    title: "Bus Stop With Low Foot Traffic",
+    title: "Monorail or Shuttle With Few Riders",
     content: [
       "Stand near other riders or well-lit areas",
       "Keep headphones in but no music",
-      "Avoid isolated shelters",
-      "Move to a busier corner if needed"
+      "Avoid isolated platforms late at night",
+      "Move to a busier car or stop if needed"
     ],
     category: "Transit"
   },
@@ -109,10 +109,10 @@ export const SCENARIOS: readonly Scenario[] = [
     id: 9,
     title: "Hotel Check-In at Night",
     content: [
-      "Ask staff to write your room number",
+      "Let staff write your room number instead of saying it aloud",
       "Wait for an empty elevator if someone feels off",
       "Keep your keycard out of sight",
-      "Stay aware in quiet hallways"
+      "Stay aware in quiet tower hallways"
     ],
     category: "Accommodation"
   },
@@ -121,7 +121,7 @@ export const SCENARIOS: readonly Scenario[] = [
     title: "Entering Your Room",
     content: [
       "Check the peephole before entering",
-      "Lock deadbolt + latch immediately",
+      "Lock the deadbolt and latch immediately",
       "Inspect the room quickly (bathroom, closet)",
       "Keep curtains closed at night"
     ],
@@ -140,10 +140,10 @@ export const SCENARIOS: readonly Scenario[] = [
   },
   {
     id: 12,
-    title: "Airbnb or Rental Stay",
+    title: "Off-Strip Rental Stay",
     content: [
-      "Verify host identity through the app",
-      "Check all locks and windows",
+      "Verify the host identity through the app",
+      "Check all locks and windows on arrival",
       "Avoid sharing your plans with neighbors",
       "Keep valuables in a single secure spot"
     ],
@@ -157,18 +157,18 @@ export const SCENARIOS: readonly Scenario[] = [
     content: [
       "Use short, closed-ended replies",
       "Avoid sharing personal details",
-      "Pivot direction or enter a store",
+      "Pivot direction or step into a casino",
       "Use a neutral exit line like “Running late”"
     ],
     category: "Social"
   },
   {
     id: 14,
-    title: "Persistent Stranger",
+    title: "Persistent Stranger at a Bar",
     content: [
-      "Stop responding and change pace",
-      "Move toward a group or staff member",
-      "Enter a café or store",
+      "Stop responding and change your pace",
+      "Move to a new seat near the bartender",
+      "Ask casino staff to step in",
       "Call someone to create social pressure"
     ],
     category: "Social"
@@ -178,7 +178,7 @@ export const SCENARIOS: readonly Scenario[] = [
     title: "Someone Asking Personal Questions",
     content: [
       "Deflect with vague answers",
-      "Avoid revealing hotel or itinerary",
+      "Avoid revealing your hotel or itinerary",
       "Change the subject or disengage",
       "Walk away confidently"
     ],
@@ -186,11 +186,11 @@ export const SCENARIOS: readonly Scenario[] = [
   },
   {
     id: 16,
-    title: "Social Settings (Bars, Cafés)",
+    title: "Casino Bars & Clubs",
     content: [
       "Choose visible seating",
       "Keep your drink in sight",
-      "Use AirPods as a boundary",
+      "Pace the free casino drinks",
       "Decline invitations with “I’m waiting for someone”"
     ],
     category: "Social"

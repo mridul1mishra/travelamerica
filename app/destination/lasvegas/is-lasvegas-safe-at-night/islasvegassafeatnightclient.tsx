@@ -1,70 +1,88 @@
-import Link from "next/link";
+"use client"
+import HeroSafety from "./components/hero/hero";
+import SafetyMeter from "./components/SafetyMeter/SafetyMeter";
+import NeighborhoodSafetyGrid from "./components/NeighborhoodSafetyGrid/NeighborhoodSafetyGrid";
+import ScenarioCards from "./components/ScenarioCards/ScenarioCards";
+import CorePrinciples from "./components/CorePrinciples/CorePrinciples";
+import TransitSafety from "./components/TransitSafety/TransitSafety";
+import NeighborhoodCards from "./components/NeighborhoodCards/NeighborhoodCards";
+import EmergencyBlock from "./components/EmergencyBlock/EmergencyBlock";
+import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
+import InterlinkingGrid from "./components/InterlinkingGrid/InterlinkingGrid";
+import TrustBlock from "./components/TrustBlock/TrustBlock";
+import SectionWrapper from "./Sectionwrapper";
+import data from "./is-lasvegas-safe-at-night.json";
+
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
-import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
-import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
-import cityWhyTrustData from "@/content/destination/lasvegas/is-lasvegas-safe-at-night/whyTrustItems/whyTrustItems.json";
-import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
-import cityFaqData from "@/content/destination/lasvegas/is-lasvegas-safe-at-night/faq/faqsection.json";
-import styles from "@/app/destination/city-hub.module.css";
-
-const nightSafety = [
-  { title: "The Strip at Night: Generally Safe", blurb: "Las Vegas Blvd between Mandalay Bay and the Stratosphere is heavily policed and surveilled 24 hours. It is one of the most monitored stretches of public space in America. Pickpocketing and aggressive solicitation exist but violent crime against tourists on the main Strip is rare. Stay on the main boulevard — avoid the side streets and parking lots behind the casinos after midnight." },
-  { title: "Fremont Street After Dark", blurb: "The Fremont Street Experience covered area (the four-block LED canopy) is safe, well-lit, and has security presence. The problem is what lies beyond it — do not walk more than 2 blocks north or east of Fremont St at night. Rideshare between the Strip and Downtown rather than walking the connecting roads at night." },
-  { title: "Casino Security Works in Your Favour", blurb: "Every major casino has floor security, surveillance cameras, and uniformed guards. Inside a casino property you are in one of the safest environments in the city. If you feel unsafe at any point, walk into the nearest casino lobby — staff are trained to handle security concerns and the premises are monitored 24 hours." },
-  { title: "What to Actually Watch For", blurb: "Pickpockets in dense crowds (New Year's Eve, major fight weekends). Overly aggressive street performers and card slappers — keep moving. Taxi and rideshare overcharging — always confirm your fare before getting in. Drink spiking is rare but real — keep drinks covered at clubs. ATM skimmers on off-brand casino-floor ATMs — use bank ATMs or the hotel cashier cage." },
-  { title: "Getting Back to Your Hotel Safely", blurb: "Request your Uber or Lyft from inside the casino or hotel lobby, not from the street. Verify the driver's name, plate, and car model before getting in. If you are intoxicated, ask hotel staff to help you get a rideshare or book a taxi through the concierge. Never accept lifts from people approaching you on the street offering transport." },
-  { title: "Off-Strip Areas at Night", blurb: "Areas west of I-15 at night, the blocks around the Greyhound station, and parts of East Las Vegas (east of Maryland Pkwy) are not tourist areas and have higher crime rates. There is no tourist reason to visit these areas after dark. Stick to the Strip, Fremont Street, and the well-lit hotel corridors between them." },
-];
+import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
 
 export default function IsLasVegasSafeAtNightClient() {
   return (
-    <main>
+    <>
       <Header links={[
         { href: "/destination/lasvegas/best-areas-to-stay", label: "Best Areas to Stay" },
         { href: "/destination/lasvegas/solo-trip-to-lasvegas", label: "Solo Trip to Las Vegas" },
         { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
         { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
       ]} />
-      <section className={styles.hero}>
-        <h1>Is Las Vegas Safe at Night? Honest 2026 Guide</h1>
-        <p>The Strip is one of the most monitored and policed public spaces in America. Las Vegas is safe at night for tourists who stay in the main tourist corridors — and riskier in specific off-Strip areas that tourists have no reason to visit.</p>
-        <div className={styles.heroCtas}>
-          <Link href="/destination/lasvegas/safety-guide" className={styles.primaryCta}>Full safety guide</Link>
-          <Link href="/destination/lasvegas/best-areas-to-stay" className={styles.secondaryCta}>Best areas to stay</Link>
-        </div>
-      </section>
-      <section className={styles.section} aria-labelledby="night-safety-lv">
-        <h2 id="night-safety-lv" className={styles.sectionTitle}>Las Vegas Nighttime Safety</h2>
-        <p className={styles.sectionIntro}>Six things to know about safety in Las Vegas after dark.</p>
-        <div className={styles.grid}>
-          {nightSafety.map(({ title, blurb }) => (
-            <article key={title} className={styles.card}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{blurb}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-      <section className={`${styles.section} ${styles.altBg}`} aria-labelledby="emergency-lv-night">
-        <h2 id="emergency-lv-night" className={styles.sectionTitle}>Emergency Numbers</h2>
-        <div className={styles.grid}>
-          <article className={styles.card}><h3 className={styles.cardTitle}>Emergency</h3><p className={styles.cardBody}>911 — police, fire, ambulance</p></article>
-          <article className={styles.card}><h3 className={styles.cardTitle}>Non-Emergency Police</h3><p className={styles.cardBody}>(702) 828-3111 — LVMPD non-emergency line</p></article>
-          <article className={styles.card}><h3 className={styles.cardTitle}>University Medical Center</h3><p className={styles.cardBody}>1800 W Charleston Blvd — nearest Level 1 trauma center</p></article>
-        </div>
-      </section>
-      <WhyTrustThisGuide data={cityWhyTrustData} />
-      <FAQAccordion faqs={cityFaqData} />
-      
-      <BookingCTA
-        variant="full"
-        headline="Book your Las Vegas trip"
-        text="Compare mid-Strip, South Strip, and Downtown hotels — with full nightly cost including resort fees."
-        href="/destination/lasvegas/bookings?tab=hotels&from=is-lasvegas-safe-at-night"
-        label="Browse Las Vegas hotels"
-      />
+      <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=hotels&from=is-lasvegas-safe-at-night" label="See safe-area hotels" />
+
+      {/* 1. Hero Section */}
+      <HeroSafety {...data.heroSafety} />
+
+      {/* 2. Safety Verdict Snapshot */}
+      <SectionWrapper id="safetyMeter">
+        <SafetyMeter {...data.safetyMeter} />
+      </SectionWrapper>
+
+      {/* 3. Neighborhood Safety Grid */}
+      <SectionWrapper id="neighborhoods">
+        <NeighborhoodSafetyGrid neighborhoods={data.neighborhoodSafetyGrid} />
+      </SectionWrapper>
+
+      {/* 4. Night Scenarios */}
+      <SectionWrapper id="scenarios">
+        <ScenarioCards scenarios={data.scenarioCards} />
+      </SectionWrapper>
+
+      {/* 5. Core Safety Principles */}
+      <SectionWrapper id="principles">
+        <CorePrinciples principles={data.corePrinciples} />
+      </SectionWrapper>
+
+      {/* 6. Transit Safety */}
+      <SectionWrapper id="transitSafety">
+        <TransitSafety {...data.transitSafety} />
+      </SectionWrapper>
+
+      {/* 7. Neighborhood Deep Dives */}
+      <SectionWrapper id="neighborhoodCards">
+        <NeighborhoodCards neighborhoods={data.neighborhoodCards} />
+      </SectionWrapper>
+
+      {/* 8. Emergency Resources */}
+      <SectionWrapper id="emergencyBlock">
+        <EmergencyBlock {...data.emergencyBlock} />
+      </SectionWrapper>
+
+      {/* 9. FAQ */}
+      <SectionWrapper id="faq">
+        <FAQAccordion faqs={data.faq} />
+      </SectionWrapper>
+
+      {/* 10. Internal Linking */}
+      <SectionWrapper id="links">
+        <InterlinkingGrid links={data.interlinkingGrid} />
+      </SectionWrapper>
+
+      {/* 11. Trust Block */}
+      <SectionWrapper id="trustBlock">
+        <TrustBlock {...data.trustBlock} />
+      </SectionWrapper>
+
+      <BookingCTA variant="full" text="Book a hotel in a safe, well-connected area" href="/destination/lasvegas/bookings?tab=hotels&from=is-lasvegas-safe-at-night" label="See safe-area hotels" />
       <Footer />
-    </main>
+    </>
   );
 }

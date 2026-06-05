@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "Is Las Vegas safe for tourists in 2026?",
+    "answer": "Yes. The Strip and major tourist corridors are heavily policed and surveilled around the clock, and most visitors have trouble-free trips. The real risks are specific: petty theft in crowds, scams, extreme summer heat, and straying into isolated off-Strip areas after dark."
+  },
+  {
+    "id": 2,
+    "question": "Which Las Vegas areas should I avoid at night?",
+    "answer": "Avoid the side streets and parking lots behind the casinos, the blocks more than a couple of streets off Fremont, and areas west of I-15 and far East Las Vegas after dark. Stick to the main Strip, the Fremont Street Experience canopy, and the lit corridors between them."
+  },
+  {
+    "id": 3,
+    "question": "What are the most common scams in Las Vegas?",
+    "answer": "Card slappers handing out escort cards, CD hustlers who hand you a disc then demand money, rigged street games near Fremont, and taxi or rideshare overcharging. Don't take anything handed to you on the street, and always confirm a fare before getting in."
+  },
+  {
+    "id": 4,
+    "question": "How dangerous is the summer heat?",
+    "answer": "Very — Las Vegas regularly hits 105°F (40°C) or higher from May to September. Drink about a liter of water every two hours outdoors, wear a hat and sunscreen, and avoid extended outdoor sightseeing between 11am and 4pm. Heat exhaustion is a genuine risk."
+  },
+  {
+    "id": 5,
+    "question": "Is it safe to walk the Strip at night?",
+    "answer": "On the main boulevard, yes — it's busy and patrolled 24 hours. Use the elevated pedestrian bridges, stay on the boulevard itself, and rideshare the connector roads to Downtown rather than walking them late at night."
+  },
+  {
+    "id": 6,
+    "question": "What's the safest way to get around?",
+    "answer": "Rideshare (Uber/Lyft) requested from inside a hotel or casino lobby is the safest option after dark — verify the driver's name, plate, and car first. The Monorail is handy for daytime Strip hops, and the Strip is walkable in daylight and early evening."
+  }
+]
