@@ -1,0 +1,19 @@
+{
+  "days": [
+    { "day": "Day 1", "bullets": [
+      "Rope-drop Magic Kingdom and use single-rider where available",
+      "Afternoon heat break at the resort pool",
+      "Evening at Disney Springs for dinner and shops"
+    ]},
+    { "day": "Day 2", "bullets": [
+      "Universal Studios + Islands of Adventure with single-rider lines",
+      "Lunch in The Wizarding World of Harry Potter",
+      "Night out at Universal CityWalk"
+    ]},
+    { "day": "Day 3", "bullets": [
+      "Day trip to Kennedy Space Center (about an hour east)",
+      "Or swim the clear-water springs at Wekiva or Blue Spring",
+      "Sunset and dinner on Sand Lake's Restaurant Row"
+    ]}
+  ]
+}

@@ -1,277 +1,228 @@
 import styles from "./SafetyNarrative.module.css";
 
-// Long-form prose section that adds editorial depth to nyc-safety-guide.
-// Designed to land featured snippets via direct-answer paragraphs after each
-// H2/H3, and to capture consolidated intent from the 4 redirected URLs:
-//   - is-nyc-safe-at-night
-//   - nyc-safety-solo-travelers
-//   - nyc-safety-solo-travelers-essentials
-//   - nyc-safety-solo-travelers-action-guide
+// Long-form prose section that adds editorial depth to the Orlando safety guide.
 // Section IDs match the FAQ schema so in-page anchors can be cited externally.
 
 export default function SafetyNarrative() {
   return (
-    <article className={styles.narrative} aria-label="NYC safety guide deep dive">
+    <article className={styles.narrative} aria-label="Orlando safety guide deep dive">
 
-      <section id="is-nyc-safe-2026" className={styles.section}>
-        <h2>Is NYC Safe for Tourists in 2026?</h2>
+      <section id="is-orlando-safe-2026" className={styles.section}>
+        <h2>Is Orlando Safe for Tourists in 2026?</h2>
         <p className={styles.lead}>
-          <strong>Yes.</strong> New York City is safe for tourists in 2026, and statistically
-          safer than most large American cities for visitors who stay in central
-          neighborhoods. The most realistic risk you face is petty theft &mdash; phone
-          snatching, pickpocketing in crowded subway cars, distraction scams near major
-          attractions &mdash; not violent crime. Almost every safety incident a tourist
-          actually encounters is preventable with three habits: stay aware in crowded
-          places, keep valuables off the table, and don&apos;t walk down empty blocks
-          looking at your phone.
+          <strong>Yes.</strong> Orlando is one of the safest major tourist destinations in
+          the United States for the way most people visit it. The resort corridors &mdash;
+          Walt Disney World, Universal, International Drive, and Lake Buena Vista &mdash; are
+          heavily staffed, well-lit, and security-conscious, and violent crime affecting
+          tourists in these zones is very rare. The realistic risks here aren&apos;t about
+          crime at all: they&apos;re the Florida heat, busy-highway driving, car break-ins
+          in dark lots, and a handful of scams aimed squarely at visitors.
         </p>
         <p>
-          That said, NYC is a real city, not a theme park. It rewards street smarts.
-          The advice in this guide is built around what visitors actually run into &mdash;
-          a subway transfer that feels off, a stranger asking questions you didn&apos;t
-          invite, getting turned around at night in an unfamiliar borough &mdash; not
-          abstract worst-case scenarios. Use it the same way you&apos;d use a map: as
-          orientation, not as a script.
+          Orlando is also spread out and car-centric in a way that big transit-first cities are not.
+          That changes the safety calculus: instead of late-night transit, your decisions
+          are about parking, rideshare, and the distances between resort areas. This guide
+          is built around what visitors actually run into &mdash; not abstract worst cases.
         </p>
       </section>
 
       <section id="crime-data-2026" className={styles.section}>
-        <h2>What the Crime Data Actually Says</h2>
+        <h2>What the Numbers Actually Say</h2>
         <p>
-          Perception lags reality with NYC by about two decades. The city&apos;s
-          violent-crime rate has trended downward for most of the past 30 years, with
-          some post-pandemic volatility on specific crime categories that has since
-          stabilized. For travelers, the data point that matters is the ratio of
-          tourist-affecting incidents to overall tourism volume: with roughly 60+
-          million visitors a year, the absolute number of tourists who experience a
-          serious incident remains very small.
+          Orlando welcomes well over 70 million visitors a year, and the overwhelming
+          majority never experience anything worse than a sunburn. Crime in the metro area
+          is concentrated in specific residential neighborhoods that tourists have no reason
+          to visit &mdash; not in the resort and attraction corridors where you&apos;ll spend
+          your time.
         </p>
         <p>
           Two things to take seriously regardless of the headline numbers:
         </p>
         <ul>
-          <li><strong>Phone theft is the modern pickpocket.</strong> Devices are snatched out of hands at street corners and through closing subway doors. Keep your phone in your front pocket or hand it back to yourself anytime you&apos;re in a doorway, on a platform edge, or stopped at a crosswalk.</li>
-          <li><strong>Distraction scams are real and growing.</strong> Someone bumps you, drops something, asks for the time &mdash; while an accomplice goes for your bag or pocket. The defense is awareness, not aggression: take one step back, look around, then continue.</li>
+          <li><strong>Car break-ins are the most common tourist incident.</strong> Rental cars sitting in large, dark lots are a target. Never leave anything visible &mdash; bags, electronics, even chargers &mdash; and use lit, attended garages where you can.</li>
+          <li><strong>Heat is the genuine health risk.</strong> Far more visitors are hurt by Florida&apos;s summer heat than by crime. Treat hydration and sun protection as safety equipment, not comfort.</li>
         </ul>
-        <p>
-          Beyond that, the everyday baseline is what you&apos;d expect from any major
-          American city: occasional aggressive panhandling, the rare mental-health
-          incident on the subway, late-night noise in certain blocks. None of these
-          require avoidance &mdash; they require the same low-key situational awareness
-          you&apos;d use anywhere unfamiliar.
-        </p>
       </section>
 
       <section id="day-vs-night" className={styles.section}>
-        <h2>Day vs. Night: When Is NYC Safest?</h2>
+        <h2>Day vs. Night: When Is Orlando Safest?</h2>
         <p>
-          <strong>NYC is safest from about 7 a.m. to 10 p.m.</strong> in central tourist
-          neighborhoods. Manhattan below 110th Street, brownstone Brooklyn, and the
-          western waterfront of Queens stay genuinely active until midnight or later,
-          which keeps streets populated and visibility high. The window where solo
-          travelers should add extra care is roughly midnight to 5 a.m., and even
-          then the rule is location-specific rather than blanket.
+          <strong>The tourist corridors are safe day and night.</strong> Disney Springs,
+          Universal CityWalk, and International Drive stay busy and patrolled well into the
+          evening. The window where you add a little extra care is late at night, and even
+          then the rule is location- and parking-specific rather than blanket.
         </p>
-        <h3>Daytime (7 a.m. &mdash; 7 p.m.)</h3>
+        <h3>Daytime</h3>
         <p>
-          Effectively no special precautions beyond normal urban awareness. Use the
-          subway, walk between attractions, sit in parks. The biggest daytime risk is
-          getting your phone snatched while you&apos;re standing on a street corner
-          checking directions &mdash; step inside a shop or under an awning instead.
+          No special precautions beyond heat management. The biggest daytime risk is the
+          sun, not strangers &mdash; pace yourself, hydrate, and take indoor breaks midday in
+          summer.
         </p>
-        <h3>Evening (7 p.m. &mdash; midnight)</h3>
+        <h3>Evening</h3>
         <p>
-          Still safe in tourist-heavy areas. Times Square, Midtown, Greenwich Village,
-          SoHo, the Lower East Side, Williamsburg, and Long Island City stay
-          well-populated. Stick to numbered avenues over numbered streets when walking
-          at night &mdash; avenues run longer and stay busier. Cross-streets in residential
-          blocks can empty out quickly.
+          Still safe across the resort and attraction areas, which stay well-populated.
+          Downtown Orlando&apos;s Church Street and Wall Street Plaza get lively; use the
+          same ordinary urban awareness you would in any city after dark.
         </p>
-        <h3>Late night (midnight &mdash; 5 a.m.)</h3>
+        <h3>Late night</h3>
         <p>
-          This is where you make calls based on location and how you&apos;re moving.
-          Late-night Manhattan from Houston to 96th Street, plus Williamsburg, DUMBO,
-          and Long Island City, are reliable for walking with awareness. Anywhere
-          else, take a rideshare. Don&apos;t wait on empty subway platforms after
-          midnight if you can avoid it &mdash; if you must, stand near the conductor&apos;s
-          car (middle of the platform, marked by a colored zebra-stripe board) where
-          MTA workers can see you.
+          This is where you make calls based on where you are and how you&apos;re getting
+          back. Inside the resort districts you&apos;re fine; between them, take a rideshare
+          rather than walking long, dark stretches. Be deliberate in large parking
+          structures &mdash; have your keys ready and your car located before you set off.
         </p>
       </section>
 
-      <section id="neighborhood-safety" className={styles.section}>
-        <h2>NYC Neighborhood Safety: A Realistic Breakdown</h2>
+      <section id="area-safety" className={styles.section}>
+        <h2>Orlando Area Safety: A Realistic Breakdown</h2>
         <p>
-          Every &ldquo;safe neighborhoods&rdquo; list flattens the picture. The honest
-          version: most tourist-facing neighborhoods are safe at the times tourists
-          are in them. Below is a more useful framing &mdash; where to feel relaxed,
-          where to stay alert, and what specific patterns to watch for in each.
+          Most tourist-facing areas are safe at the times tourists are in them. Here is a
+          more useful framing &mdash; where to feel relaxed, where to stay alert, and what to
+          watch for.
         </p>
         <h3>Reliably safe, day and night</h3>
         <ul>
-          <li><strong>Upper East Side &amp; Upper West Side.</strong> Residential, well-lit, family-heavy. The Museum Mile corridor stays active until 10 p.m. After that, side streets get quiet &mdash; stick to Broadway, Columbus, or Lexington for walking.</li>
-          <li><strong>Midtown East (around Grand Central).</strong> Always populated. Office foot traffic by day, hotel and dining traffic by night. Watch for phone snatchers near Grand Central&apos;s 42nd Street entrance.</li>
-          <li><strong>Brooklyn Heights &amp; DUMBO.</strong> Tourist-dense, well-policed, scenic. Walking the Brooklyn Bridge after sunset is one of the safer late-evening solo activities in the city.</li>
-          <li><strong>Long Island City (Queens).</strong> Increasingly residential; parks are active until late spring/summer evenings. Subway connections to Manhattan are easy.</li>
+          <li><strong>Disney Springs &amp; Lake Buena Vista.</strong> Heavily staffed retail-and-dining district with strong private security. Among the safest places in the metro at any hour.</li>
+          <li><strong>Universal CityWalk.</strong> Gated entertainment complex with constant security presence; safe to enjoy late.</li>
+          <li><strong>International Drive (I-Drive).</strong> Busy, well-lit tourist corridor. Stay on the main drive and watch your belongings in attraction crowds.</li>
+          <li><strong>Winter Park &amp; Lake Eola / Thornton Park.</strong> Upscale, walkable, low-crime areas that are pleasant in the evening.</li>
         </ul>
         <h3>Safe with normal awareness</h3>
         <ul>
-          <li><strong>Times Square &amp; Theater District.</strong> Safe but pickpocket-prone because of crowd density. Keep your bag zipped and in front of you. Costumed characters and street performers can crowd you &mdash; smile, keep walking, don&apos;t engage in conversations you didn&apos;t start.</li>
-          <li><strong>Greenwich Village, SoHo, Lower East Side.</strong> Bar-heavy at night. Stay on main streets &mdash; Houston, Bowery, West Broadway, Avenue A &mdash; rather than the smaller named streets after midnight.</li>
-          <li><strong>Williamsburg, Bushwick (Brooklyn).</strong> Active and trendy. The blocks immediately around the L train stops stay populated; venture two or three blocks deeper and it gets industrial and quiet quickly.</li>
-          <li><strong>Harlem (above 110th).</strong> Safer than its reputation. Use the same rules as anywhere else &mdash; busy avenues, well-lit corners. Sunday gospel-tour traffic during the day, and good food scene around Lenox/Frederick Douglass.</li>
+          <li><strong>Downtown Orlando (Church Street).</strong> Lively nightlife; crowds get rowdier near closing. Stay on the busy, staffed strips and plan your ride home in advance.</li>
+          <li><strong>Kissimmee (US-192).</strong> Fine near the attractions; the long budget-hotel corridor gets quieter and less predictable at night, so a car or rideshare is essential.</li>
         </ul>
-        <h3>Stay extra alert</h3>
+        <h3>Stay extra alert / skip after dark</h3>
         <ul>
-          <li><strong>Far western Midtown after 11 p.m.</strong> The 8th Avenue corridor near the Port Authority quiets down fast. Take a rideshare instead of walking from late shows.</li>
-          <li><strong>Subway transfers in less-trafficked stations.</strong> Atlantic Avenue, 145th Street, certain Queens transfer points. Use Times Square, Union Square, or Grand Central for late-night transfers when possible.</li>
-          <li><strong>Park edges after dark.</strong> Central Park, Prospect Park, Washington Square Park all empty out after 11 p.m. Walk around them, not through them, at night.</li>
+          <li><strong>Orange Blossom Trail (OBT) corridor, south of I-4.</strong> Higher reported crime, not a tourist area. No reason to be here at night.</li>
+          <li><strong>Pine Hills (northwest of downtown).</strong> A residential area with higher crime statistics and nothing tourist-related to visit.</li>
+          <li><strong>Large, empty parking lots late at night.</strong> Anywhere &mdash; resort or mall &mdash; treat a deserted lot as the moment to ask security for an escort.</li>
         </ul>
       </section>
 
-      <section id="subway-safety" className={styles.section}>
-        <h2>NYC Subway Safety in 2026: The Practical Version</h2>
+      <section id="getting-around" className={styles.section}>
+        <h2>Getting Around Orlando Safely</h2>
         <p>
-          <strong>The subway is safer than its reputation suggests</strong> for the
-          vast majority of trips during normal travel hours. It is, however, where
-          the most common tourist incidents (phone snatching, pickpocketing) happen,
-          so apply real attention here.
+          <strong>Orlando is built for cars, so transport safety here is mostly about
+          driving, parking, and rideshare</strong> &mdash; there is no subway, and public
+          transit is limited at night.
         </p>
-        <h3>Five habits that handle 95% of subway risk</h3>
+        <h3>Driving and parking</h3>
         <ul>
-          <li><strong>Stand back from the platform edge.</strong> Especially if you&apos;re looking at your phone. The yellow strip is the absolute minimum &mdash; leave a step behind it.</li>
-          <li><strong>Phone in pocket near doors.</strong> A snatch-and-run at closing doors is the single most common tourist incident. If you must use your phone on a train, sit with your back to a wall.</li>
-          <li><strong>Pick your car deliberately.</strong> The middle car of the train (where the conductor stands) is the busiest and has MTA staff. Avoid an empty car even if it&apos;s convenient.</li>
-          <li><strong>Have your route loaded before you tap in.</strong> Citymapper, Transit App, or Google Maps all work fine offline once you&apos;ve loaded the trip. Standing on a platform actively searching for directions marks you out.</li>
-          <li><strong>Switch cars if a situation feels off.</strong> Walk to the next car at the next station. You don&apos;t need a reason. The train cars connect; just step through the door.</li>
+          <li><strong>I-4 demands defensive driving.</strong> It&apos;s one of the busier, more accident-prone interstate stretches in the country. Leave room, expect sudden slowdowns, and avoid aggressive lane changes.</li>
+          <li><strong>Never leave valuables visible</strong> in a parked rental &mdash; car break-ins are the most common tourist crime.</li>
+          <li><strong>Park in lit, attended garages</strong> and note your spot so you&apos;re not wandering a lot after dark.</li>
         </ul>
-        <h3>Late-night subway specifics</h3>
-        <p>
-          After midnight, ridership drops sharply. The system runs 24/7, but the
-          social density that makes it feel safe in the day is gone. Three changes
-          to your daytime habits:
-        </p>
+        <h3>Rideshare and transit</h3>
         <ul>
-          <li>Wait inside the station agent&apos;s booth area, not at the far end of the platform.</li>
-          <li>If a platform is completely empty and you&apos;ve been waiting more than 10 minutes, consider a rideshare instead.</li>
-          <li>At your destination station, exit with the largest group of other riders.</li>
+          <li><strong>Uber and Lyft</strong> are the easiest and safest option at night &mdash; request from inside a lobby and verify the plate, car, and driver before getting in. They&apos;re often cheaper than parking on a park day.</li>
+          <li><strong>The I-Ride Trolley</strong> covers International Drive in the evening; most resorts run their own shuttles to the parks.</li>
         </ul>
         <p className={styles.resourceLink}>
-          For detailed navigation and line-by-line safety information, check our{" "}
-          <a href="/destination/nyc/nyc-subway-map">
-            interactive subway map
-          </a>{" "}
-          and{" "}
-          <a href="/destination/nyc/subway-safety-guide">
-            comprehensive subway safety guide
-          </a>
-          .
+          For where to base yourself, see our{" "}
+          <a href="/destination/orlando/best-areas-to-stay">best areas to stay guide</a>{" "}
+          and the{" "}
+          <a href="/destination/orlando/is-orlando-safe-at-night">is Orlando safe at night</a>{" "}
+          breakdown.
         </p>
       </section>
 
       <section id="common-scams-2026" className={styles.section}>
-        <h2>Common NYC Scams to Recognize in 2026</h2>
+        <h2>Common Orlando Scams to Recognize in 2026</h2>
         <p>
-          Scams in NYC haven&apos;t changed much in a decade because they still work.
-          Recognition is the entire defense &mdash; once you can name the pattern, it
-          loses almost all power.
+          Orlando&apos;s scams target tourists specifically, and recognition is the whole
+          defense &mdash; once you can name the pattern, it loses its power.
         </p>
         <ul>
-          <li><strong>The CD/mixtape handoff.</strong> A &ldquo;rapper&rdquo; near Times Square or 5th Avenue puts a CD in your hand, asks your name, signs it &mdash; then demands $20. The defense: don&apos;t let them put anything in your hand. Hands in pockets, keep walking.</li>
-          <li><strong>The costumed character photo.</strong> Elmo, Spider-Man, the Statue of Liberty &mdash; smile for a photo, then aggressively demand a tip ($10-20). Either tip a couple of dollars when initially asked, or wave off the photo.</li>
-          <li><strong>Fake monk donations.</strong> Someone in robes hands you a bracelet and a card asking for a temple donation. Hand it back. Keep walking. They&apos;re not affiliated with any temple.</li>
-          <li><strong>&ldquo;Lost tourist&rdquo; asking for help with their phone.</strong> Hands you a phone, then says it&apos;s frozen and asks you to help with their PIN/banking app. Don&apos;t take the phone. Point at a hotel concierge or a uniformed officer instead.</li>
-          <li><strong>Ticket scalpers outside Broadway theaters.</strong> Tickets are real but at 3-5x face value, or expired. Buy from TKTS in Times Square, the theater&apos;s own box office, or Telecharge / Today Tix.</li>
-          <li><strong>&ldquo;Free&rdquo; tour buses or boat tickets.</strong> A flyer-handler steers you to a kiosk that locks you into a non-refundable purchase. Book tours online in advance from the operator&apos;s actual website.</li>
+          <li><strong>Timeshare &ldquo;free ticket&rdquo; pitches.</strong> You&apos;re offered free or deep-discount park tickets in exchange for sitting through a high-pressure presentation. Decline and move on.</li>
+          <li><strong>Unofficial ticket resellers.</strong> Vendors near the parks sell counterfeit or expired tickets. Buy only from the official park websites, gates, or reputable sellers.</li>
+          <li><strong>Fake discount booths.</strong> Some roadside &ldquo;discount ticket&rdquo; stands on I-Drive are legitimate, but verify before paying &mdash; and never hand over a deposit to hold a deal.</li>
+          <li><strong>Vacation-home rental fraud.</strong> Listings that ask for wire transfers or off-platform payment are a red flag. Book through established platforms with buyer protection.</li>
+          <li><strong>Street &ldquo;charity&rdquo; or survey approaches</strong> that turn into a request for cash. A polite &ldquo;no thanks&rdquo; without breaking stride is all you need.</li>
         </ul>
         <p>
-          The thread connecting all of these: someone interrupts you, hands you
-          something, or asks for help on the street. If that pattern triggers, your
-          default move is &ldquo;no thanks, keep walking.&rdquo; You&apos;re not being
-          rude &mdash; you&apos;re using the same heuristic every New Yorker uses.
+          The thread connecting these: someone offers you something that sounds too good,
+          or pressures you to decide now. The default move is &ldquo;no thanks, I&apos;ll
+          book through the official site.&rdquo;
         </p>
       </section>
 
       <section id="solo-traveler-essentials" className={styles.section}>
         <h2>Solo Traveler Essentials</h2>
         <p>
-          Solo travel in NYC works because the city is built for individual movement &mdash;
-          good transit, dense street life, dining counters and bars that welcome
-          single diners, attractions designed to be walked alone. The safety profile
-          for solo travelers is essentially the same as for groups, with two
-          adjustments worth making before you arrive.
+          Solo travel in Orlando works well &mdash; the parks and resort areas are made for
+          individual movement and are heavily supervised. The safety profile is essentially
+          the same as for groups, with a couple of adjustments worth making before you
+          arrive.
         </p>
         <h3>Pre-trip setup</h3>
         <ul>
-          <li><strong>Share live location with one trusted person back home.</strong> Apple Find My, Google Maps location sharing, or Life360 all work. Set it to expire when you fly home so you&apos;re not sharing forever.</li>
-          <li><strong>Save NYPD non-emergency (311) and 911 to favorites.</strong> Add the contact info for your hotel&apos;s front desk too &mdash; useful if you&apos;re ever in a position where you need to be picked up or escorted in.</li>
-          <li><strong>Take a photo of your passport ID page</strong> and email it to yourself. If your wallet gets lifted, you&apos;ll move faster at the consulate or with TSA on the way home.</li>
-          <li><strong>Carry two payment methods in different places.</strong> A card in your front pocket and a backup card in a hotel safe. Cash for tips and small transit needs.</li>
+          <li><strong>Share live location with one trusted person back home.</strong> Apple Find My, Google Maps, or Life360 all work. Set it to expire when you fly home.</li>
+          <li><strong>Save 911 and the Orange County Sheriff non-emergency line to favorites,</strong> along with your hotel front desk.</li>
+          <li><strong>Photograph your passport ID page</strong> and email it to yourself in case your wallet is lost or stolen.</li>
+          <li><strong>Carry two payment methods in different places</strong> &mdash; one on you, a backup in the room safe.</li>
         </ul>
         <h3>While you&apos;re here</h3>
         <ul>
-          <li>Eat dinner at the bar of a restaurant rather than a table for one &mdash; the bar is sociable and you&apos;ll usually get faster service.</li>
-          <li>Walk with purpose even when you&apos;re lost. Step into a hotel lobby, coffee shop, or department store to look at your phone or map.</li>
-          <li>If you&apos;re going to a venue at night, take note of the cross streets and the nearest 24-hour business on the way back &mdash; mental waypoints help if you need to re-route.</li>
-          <li>Trust the &ldquo;something feels off&rdquo; signal. Cross the street, enter a store, change subway cars. You don&apos;t need a reason; New Yorkers do this constantly.</li>
+          <li>Use rideshare between areas at night rather than walking long, dark stretches.</li>
+          <li>Keep a portable phone charger on you &mdash; long park days drain batteries, and your phone is your map, ticket, and lifeline.</li>
+          <li>Build in midday heat breaks; pushing through Florida summer afternoons is how solo travelers end up unwell.</li>
+          <li>Trust the &ldquo;something feels off&rdquo; signal &mdash; head toward a staffed, busy area and reassess.</li>
         </ul>
         <p>
-          If you&apos;re a solo female traveler specifically, the additional context
-          and scenarios in our{" "}
-          <a href="/destination/nyc/nyc-female-solo-travel-guide">
-            NYC Solo Female Travel Safety Guide
+          If you&apos;re a solo female traveler specifically, the additional context in our{" "}
+          <a href="/destination/orlando/orlando-female-solo-travel-guide">
+            Orlando Solo Female Travel Guide
           </a>{" "}
-          may be useful &mdash; it covers night transit, harassment response, and
-          neighborhood patterns specifically through that lens.
+          covers night logistics and harassment response through that lens.
         </p>
       </section>
 
       <section id="decision-tree" className={styles.section}>
         <h2>If Something Feels Off: A Decision Tree</h2>
         <p>
-          Most safety incidents are avoidable with a single early decision. Use this
-          as a mental model for the moment when something pings your awareness.
+          Most safety incidents are avoidable with a single early decision. Use this as a
+          mental model for the moment when something pings your awareness.
         </p>
         <ol className={styles.decisionList}>
-          <li><strong>Am I in immediate physical danger?</strong> Yes &rarr; 911 and move toward the nearest occupied business. No &rarr; continue.</li>
-          <li><strong>Am I in a crowded place or an empty one?</strong> Crowded &rarr; create distance from the person/situation, change direction. Empty &rarr; move toward a populated area, even if it&apos;s the way you came.</li>
-          <li><strong>Do I have line of sight to an open business, hotel, or transit hub?</strong> Yes &rarr; head inside and pause. No &rarr; call a rideshare from your current location.</li>
-          <li><strong>Has my route or plan stopped making sense?</strong> Stop and reroute from inside a safe location. Don&apos;t try to navigate on the street.</li>
+          <li><strong>Am I in immediate physical danger?</strong> Yes &rarr; 911 and move toward the nearest occupied business or security. No &rarr; continue.</li>
+          <li><strong>Am I in a crowded place or an empty one?</strong> Crowded &rarr; create distance and change direction. Empty &rarr; move toward a populated, lit area, even if it&apos;s the way you came.</li>
+          <li><strong>Do I have line of sight to staff or an open business?</strong> Yes &rarr; head inside and pause. No &rarr; call a rideshare from where you are.</li>
+          <li><strong>Has my plan stopped making sense?</strong> Stop and reroute from inside a safe location instead of figuring it out in a parking lot.</li>
         </ol>
         <p>
-          Notice that none of these steps involve confrontation. Solo travel safety
-          in NYC is overwhelmingly about angles of departure, not standing your ground.
+          None of these steps involve confrontation. Safety here is about angles of
+          departure, not standing your ground.
         </p>
       </section>
 
       <section id="emergency-resources" className={styles.section}>
         <h2>Emergency Numbers and Resources</h2>
         <ul>
-          <li><strong>911</strong> &mdash; Police, fire, ambulance. English; Spanish and other languages on request.</li>
-          <li><strong>311</strong> &mdash; Non-emergency city services. Useful for noise complaints, lost-and-found, taxi/rideshare complaints, and routing questions to the right agency.</li>
-          <li><strong>NYC Well: 988</strong> &mdash; 24/7 mental-health crisis support, including for travelers feeling overwhelmed.</li>
-          <li><strong>MTA help points</strong> &mdash; Blue and yellow boxes on every subway platform. Press the red button for emergencies, blue for information &mdash; both connect you to a live person.</li>
-          <li><strong>Hospitals with 24-hour ERs in Manhattan:</strong> Mount Sinai (Upper East Side), NewYork-Presbyterian (Upper East and Upper West), Bellevue (East 28th), Lenox Hill (Upper East Side), NYU Langone (East 34th).</li>
-          <li><strong>Embassy / consulate contacts.</strong> Save your country&apos;s NYC consulate phone number before you land. Most have 24-hour duty officers for lost passports and emergencies.</li>
+          <li><strong>911</strong> &mdash; Police, fire, ambulance.</li>
+          <li><strong>Orange County Sheriff non-emergency: (407) 836-4357</strong> &mdash; for reports and lost property in the tourist areas; Orlando Police covers the city.</li>
+          <li><strong>Poison Control: 1-800-222-1222</strong> &mdash; 24/7 for poisoning, medication, or drink-related concerns.</li>
+          <li><strong>988</strong> &mdash; 24/7 mental-health crisis line, including for travelers feeling overwhelmed.</li>
+          <li><strong>Hospitals with 24-hour ERs:</strong> Orlando Health ORMC (downtown, Level 1 trauma center), AdventHealth Orlando, and AdventHealth ERs near the parks.</li>
+          <li><strong>Park guest services</strong> &mdash; Disney and Universal both have dedicated security and lost-child reunification; find the nearest team member if you need help inside a park.</li>
         </ul>
       </section>
 
       <section id="quick-takeaways" className={styles.section}>
         <h2>The TL;DR</h2>
         <p>
-          NYC in 2026 is safe for tourists who use ordinary urban awareness. Real
-          risks are petty theft, distraction scams, and the occasional uncomfortable
-          subway moment &mdash; not violent crime. Stick to populated avenues at night,
-          keep your phone close near doors and platform edges, trust the &ldquo;something
-          feels off&rdquo; instinct, and you&apos;ll have the trip you came for.
+          Orlando in 2026 is very safe for tourists in the resort and attraction corridors.
+          The real risks are the heat, highway driving, car break-ins, and tourist scams &mdash;
+          not violent crime. Hydrate and protect against the sun, never leave valuables in
+          your car, use rideshare at night, and you&apos;ll have the trip you came for.
         </p>
         <p>
           If you take only three habits from this guide:
         </p>
         <ol>
-          <li>Keep your phone in your pocket or hand, not loose, especially near subway doors and street corners.</li>
-          <li>If a stranger interrupts you on the street, the default response is &ldquo;no thanks&rdquo; without breaking stride.</li>
-          <li>When in doubt, step inside the nearest open business before deciding your next move.</li>
+          <li>Treat the Florida heat as a safety issue &mdash; water and SPF 50 all day.</li>
+          <li>Leave nothing visible in a parked car, and park in lit, attended lots.</li>
+          <li>Rideshare between areas at night instead of walking long, dark stretches.</li>
         </ol>
       </section>
 

@@ -1,0 +1,16 @@
+{
+  "sections": [
+    {
+      "id": "transport",
+      "title": "Getting Around Orlando",
+      "summary": "Orlando is built for driving, not transit. A rental car or rideshare is how most solo visitors get around — there's no subway, and public buses are limited at night.",
+      "bullets": [
+        "Rental car: the most freedom for park-hopping and day trips ($35–60/day).",
+        "Uber & Lyft: reliable and the safest option after dark.",
+        "I-Ride Trolley: cheap and useful along International Drive until about 10:30pm.",
+        "Resort shuttles: free buses, monorail, and boats connect on-site Disney hotels."
+      ],
+      "link": "/destination/orlando/safety-guide"
+    }
+  ]
+}

@@ -91,7 +91,7 @@ export interface TransitModeSafety {
 }
 
 export interface TransitSafetyProps {
-  subway: TransitModeSafety;
+  subway?: TransitModeSafety;
   bus?: TransitModeSafety;
   rideshare?: TransitModeSafety;
   yellowCabs?: TransitModeSafety;

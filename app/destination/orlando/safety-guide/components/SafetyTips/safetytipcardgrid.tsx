@@ -8,7 +8,7 @@ export default function SafetyTipsGrid() {
       <div className={styles.container}>
         <h2 className={styles.title}>Safety Tips</h2>
         <p className={styles.subtitle}>
-          Quick advice for staying safe in New York City.
+          Quick advice for staying safe in Orlando.
         </p>
 
         <div className={styles.grid}>

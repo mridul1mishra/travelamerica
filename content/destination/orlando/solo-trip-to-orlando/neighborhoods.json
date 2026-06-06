@@ -1,0 +1,8 @@
+{
+  "neighborhoods": [
+    { "name": "International Drive (I-Drive)", "reason": "Central solo base near Universal and SeaWorld, with walkable dining and attractions.", "link": "/destination/orlando/best-areas-to-stay" },
+    { "name": "Lake Buena Vista / Disney Springs", "reason": "Closest to Disney's parks, with early-entry perks on-site.", "link": "/destination/orlando/best-areas-to-stay" },
+    { "name": "Universal Area", "reason": "Walk to Universal and CityWalk — great for thrill-seekers.", "link": "/destination/orlando/best-areas-to-stay" },
+    { "name": "Winter Park", "reason": "A walkable, upscale historic town 30 minutes north for a local feel.", "link": "/destination/orlando/best-areas-to-stay" }
+  ]
+}

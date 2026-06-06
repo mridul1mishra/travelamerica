@@ -1,55 +1,43 @@
+"use client";
 import OrlandoNavHeader from "./components/orlandonavheader/OrlandoNavHeader";
 import HeroSection from "./components/herosection/HeroSection";
-import Footer from "@/app/components/Header/Footer/footer";
-import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import { SoloTripNarrative } from "./components/solotripnarrative/SoloTripNarrative";
+import InfoSection from "@/app/components/infosection/infosection";
+import sectionsData from "@/content/destination/orlando/solo-trip-to-orlando/infosection.json";
+import getaroundData from "@/content/destination/orlando/solo-trip-to-orlando/gettingaround.json";
+import neighborhoodsData from "@/content/destination/orlando/solo-trip-to-orlando/neighborhoods.json";
+import BestNeighborhoodsGrid from "@/app/components/BestNeighborhoodGrid/bestneighborhoodgrid";
+import itineraryData from "@/content/destination/orlando/solo-trip-to-orlando/itinerary.json";
+import { ItineraryProps } from "@/app/models/itinerary";
+import ThreeDayItinerary from "@/app/components/itinerary/itinerary";
+import femaleSoloData from "@/content/destination/orlando/solo-trip-to-orlando/femalesolo.json";
+import FemaleSoloTiles from "@/app/components/Solofemaletravel/solofemaletravel";
+import { FemaleSoloData } from "@/app/models/femaleSolo";
 import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
 import cityWhyTrustData from "@/content/destination/orlando/solo-trip-to-orlando/whyTrustItems/whyTrustItems.json";
 import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
 import cityFaqData from "@/content/destination/orlando/solo-trip-to-orlando/faq/faqsection.json";
-import styles from "@/app/destination/city-hub.module.css";
-
-const topics = [
-  { title: "Is Orlando Good for Solo Travel?", blurb: "Yes — with an important caveat. If your goal is theme parks, Orlando is actually better solo in some ways: single-rider queues at Universal and Disney reduce wait times significantly, you control the schedule completely, and there is no group logistics overhead. If your goal is non-park tourism, Orlando's suburban layout and car-dependence require more planning than cities like NYC or LA." },
-  { title: "Best Time to Visit Solo", blurb: "January–February and September–October are the sweet spots — lower park crowds, lower hotel rates, and comfortable temperatures (65–80°F). Avoid US school holidays (spring break in March–April, June–August, Christmas/New Year) when parks hit peak capacity and prices surge 40–80%. A solo Tuesday in January will have shorter queues than a solo Saturday in July." },
-  { title: "Where to Stay Solo", blurb: "I-Drive is the best solo base — central to Universal and SeaWorld, with restaurants and nightlife walkable within the corridor. For Universal-focused trips, an on-site hotel gives early park entry and walking access (worth the premium for solo visitors). Budget option: Kissimmee vacation rentals are cheap but isolated. Avoid Downtown Orlando unless you are not going to parks." },
-  { title: "Getting Around", blurb: "A rental car gives the most freedom ($35–$60/day). Lyft and Uber are reliable. The I-Ride Trolley ($2/ride, runs along I-Drive) covers the tourist corridor cheaply. Free Disney transportation (buses, monorail, boat) connects all Disney properties if you stay on-site. There is no useful public transit between major parks — budget for transport." },
-  { title: "Solo Theme Park Strategy", blurb: "Single-rider queues exist at Universal (most major rides), Disney (select rides), and SeaWorld — always use them. Buy Lightning Lane or Genie+ in advance for Disney if you want to maximize a single day. Arrive at park opening ('rope drop') — the first 90 minutes have the shortest queues of the day. Solo visitors can realistically do twice as many rides as groups in the same time." },
-  { title: "Beyond the Parks: What Solo Travelers Miss", blurb: "Kennedy Space Center (1 hour east) is outstanding and deeply underrated. Wekiva Springs State Park offers clear-water springs swimming in a beautiful natural setting. The local food scene on Sand Lake's Restaurant Row is genuinely excellent. Winter Park (30 min north) is a beautiful walkable historic town with the Cornell Fine Arts Museum and Hannibal Square for coffee and shopping." },
-];
+import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import Footer from "@/app/components/Header/Footer/footer";
 
 export default function SoloTripToOrlandoClient() {
+  const data = itineraryData as ItineraryProps;
+  const femaleSolo = femaleSoloData as FemaleSoloData;
   return (
-    <main>
+    <>
       <OrlandoNavHeader />
-      <BookingCTA
-        variant="slim"
-        text="Book your solo Orlando trip — flights, hotels and park tickets →"
-        href="/destination/orlando/bookings"
-        label="Book your trip"
-      />
       <HeroSection />
-      <section className={styles.section} aria-labelledby="solo-or">
-        <h2 id="solo-or" className={styles.sectionTitle}>Solo Travel in Orlando</h2>
-        <p className={styles.sectionIntro}>Six things every first-time solo traveler to Orlando needs to know.</p>
-        <div className={styles.grid}>
-          {topics.map(({ title, blurb }) => (
-            <article key={title} className={styles.card}>
-              <h3 className={styles.cardTitle}>{title}</h3>
-              <p className={styles.cardBody}>{blurb}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <BookingCTA variant="slim" text="Book your solo Orlando trip →" href="/destination/orlando/bookings?tab=flights&from=solo-trip-to-orlando" label="Book your trip" />
+      <InfoSection sections={sectionsData.sections} />
       <WhyTrustThisGuide data={cityWhyTrustData} />
+      <SoloTripNarrative />
+      <BestNeighborhoodsGrid neighborhoods={neighborhoodsData.neighborhoods} ctaLink="/destination/orlando/best-areas-to-stay" />
+      <InfoSection sections={getaroundData.sections} />
+      <ThreeDayItinerary days={data.days} ctaLink="/destination/orlando/solo-itinerary" />
+      <FemaleSoloTiles tiles={femaleSolo.tiles} ctaLink={femaleSolo.ctaLink} cityName="Orlando" />
       <FAQAccordion faqs={cityFaqData} />
-      <BookingCTA
-        variant="full"
-        headline="Book your solo Orlando trip"
-        text="Flights to MCO, solo-friendly hotels, and park tickets — compare and book."
-        href="/destination/orlando/bookings"
-        label="Plan & book your Orlando trip"
-      />
+      <BookingCTA variant="full" text="Start your trip: book flights and hotels" href="/destination/orlando/bookings?tab=flights&from=solo-trip-to-orlando" label="Book your trip" />
       <Footer />
-    </main>
+    </>
   );
 }

@@ -8,7 +8,7 @@ export default function EmergencyContactBlock() {
       <div className={styles.container}>
         <h2 className={styles.title}>Emergency Contacts</h2>
         <p className={styles.subtitle}>
-          Quick access numbers and resources you may need while traveling in NYC.
+          Quick access numbers and resources you may need while traveling in Orlando.
         </p>
 
         <div className={styles.grid}>

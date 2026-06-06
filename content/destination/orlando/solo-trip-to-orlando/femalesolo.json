@@ -1,0 +1,8 @@
+{
+  "tiles": [
+    { "title": "Safe Areas to Base In", "description": "Stay on I-Drive, Lake Buena Vista, or near Universal for comfort, security, and walkability.", "icon": "MdLocationCity", "link": "/destination/orlando/best-areas-to-stay" },
+    { "title": "Smart Transport Tips", "description": "Rideshare at night, verify your driver, and don't walk long, dark stretches between properties.", "icon": "FaHandsHelping", "link": "/destination/orlando/safety-guide" },
+    { "title": "Emergency Support", "description": "Know when to call 911 or the Orange County Sheriff non-emergency line, and use park guest services.", "icon": "FaHandsHelping", "link": "/destination/orlando/safety-guide" }
+  ],
+  "ctaLink": "/destination/orlando/orlando-female-solo-travel-guide"
+}
