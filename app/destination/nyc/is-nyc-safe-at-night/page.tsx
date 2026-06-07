@@ -3,8 +3,8 @@ import SafeNightClient from "./isnycsafeatnightclient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Is NYC Safe at Night? 2026 Guide for Tourists",
-  description: "Is New York City safe after dark? Honest neighborhood breakdown — Times Square, Brooklyn, Midtown, and what to avoid at night.",
+  title: "Is NYC Safe? 2026 Truth: Neighborhoods, Subways & When to Worry 63 chars",
+  description: "Is NYC safe? Yes—if you stay out of these 3 areas. Honest breakdown of subway safety, neighborhoods to trust, and what tourists get wrong.",
   alternates: {
     canonical: "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
   },

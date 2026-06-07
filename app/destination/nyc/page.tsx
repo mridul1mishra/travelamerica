@@ -6,9 +6,9 @@ import styles from './nyc.module.css';
    Metadata (AI Resistant)
 ========================= */
 export const metadata = {
-  title: 'New York City Travel Guide | Plan your NYC trip',
+  title: 'Is New York Safe? Travel Guide: Safety by Neighborhood + Real Advice68',
   description:
-    "Plan your New York City trip — compare neighborhoods, itineraries, and travel options to choose where to stay and what to see.",
+    "Is New York safe? Yes. Here's the real breakdown: which neighborhoods are actually safe, where tourists get into trouble, and how to avoid it.",
   alternates: {
     canonical: 'https://www.travelsamericas.com/destination/nyc',
   },

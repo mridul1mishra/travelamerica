@@ -8,9 +8,9 @@ import NeighborhoodguideClient from "./neighborhoodguide";
 ========================= */
 export const metadata = {
   title:
-    "NYC Neighborhood Guide 2026 | Best Tourist Areas",
+    "Is Manhattan Safe? Neighborhood Guide: Safe Areas + Neighborhoods to Avoid",
   description:
-    "Explore New York City neighborhoods — compare areas by transit, safety, vibe, and price to find where to stay or visit.",
+    "Is Manhattan safe? Breaks down 15+ neighborhoods by street-level safety, transit access, and vibe. Find your area—from sketchy to totally safe.",
   alternates: {
     canonical:
       'https://www.travelsamericas.com/destination/nyc/neighborhood-guide',

@@ -1,7 +1,6 @@
 export const metadata = {
-  title: "Is NYC Safe in 2026? An Honest, Local's Take",
-  description: "Is NYC safe in 2026? Honest guide covering which neighborhoods to trust, subway safety, common scams, and real tips.", 
-  
+  title: "Is New York Safe to Visit in 2026? Honest Safety Guide + Neighborhood Breakdown",
+  description: "Is NYC safe? Real answer: yes, but here's the breakdown by neighborhood. Skip the tourism board fluff — actual street-level advice for first-time visitors.",
   alternates: { 
     canonical: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide"
   },
