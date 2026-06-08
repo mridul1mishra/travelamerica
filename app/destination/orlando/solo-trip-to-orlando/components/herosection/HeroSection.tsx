@@ -1,14 +1,29 @@
-import Link from "next/link";
-import styles from "@/app/destination/city-hub.module.css";
+import Image from "next/image";
+import styles from "./HeroSection.module.css";
 
 export default function HeroSection() {
   return (
     <section className={styles.hero}>
-      <h1>Solo Trip to Orlando: Complete Guide</h1>
-      <p>Orlando solo travel rewards the prepared visitor. Theme parks are objectively better with single-rider queues and no group compromise. Beyond the parks, the city has more to offer solo travelers than most people expect.</p>
-      <div className={styles.heroCtas}>
-        <Link href="/destination/orlando/solo-itinerary" className={styles.primaryCta}>See solo itinerary</Link>
-        <Link href="/destination/orlando/safety-guide" className={styles.secondaryCta}>Safety guide</Link>
+      <div className={styles.herocontainer}>
+        <div className={styles.herotext}>
+          <h1>Solo Trip to Orlando: First-Time Traveler Guide</h1>
+          <p className={styles.subtext}>Safe, confident, and stress‑free solo travel in Orlando.</p>
+
+          <div className={styles.herobuttons}>
+            <a href="/destination/orlando/safety-guide" className={`${styles.btn} ${styles.primary}`}>Start with Safety</a>
+            <a href="/destination/orlando/best-areas-to-stay" className={`${styles.btn} ${styles.secondary}`}>Where to Stay</a>
+          </div>
+
+          <p className={styles.updated}>Updated for 2025</p>
+        </div>
+
+        <div className={styles.heroImage}>
+          <div className={styles.imagePlaceholder}>
+            <div className={styles.heroImageWrapper}>
+              <Image src="/data/majorcities/orlando/assets/orlando.webp" alt="Orlando skyline" fill style={{ objectFit: "contain" }} fetchPriority="high" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

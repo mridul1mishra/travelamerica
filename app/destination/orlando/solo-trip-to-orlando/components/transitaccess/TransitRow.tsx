@@ -1,0 +1,31 @@
+import { SubwayRowProps } from "@/app/models/destination/subwayprops";
+import { LineBadge } from "./LineBadge";
+import styles from "./transitaccess.module.css";
+
+export function TransitRow({
+  neighborhood,
+  lines,
+  access,
+  night,
+  walk,
+  notes,
+}: SubwayRowProps) {
+  return (
+    <div className={styles["subway-row"]}>
+      <div className={styles["subway-row__header"]}>
+        <h3>{neighborhood}</h3>
+        <div className={styles["subway-row__lines"]}>
+          {lines.map((line, i) => (
+            <LineBadge key={i} line={line} />
+          ))}
+        </div>
+      </div>
+      <div className={styles["subway-row__details"]}>
+        <p><strong>Access:</strong> {access}</p>
+        <p><strong>Night Service:</strong> {night}</p>
+        <p><strong>Walkability:</strong> {walk}</p>
+        <p><strong>Notes:</strong> {notes}</p>
+      </div>
+    </div>
+  );
+}

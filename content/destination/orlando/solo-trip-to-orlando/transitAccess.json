@@ -1,0 +1,34 @@
+[
+  {
+    "neighborhood": "International Drive",
+    "lines": ["Trolley"],
+    "access": "I-Ride Trolley runs the full I-Drive corridor every 20 minutes. SunRail's Meadow Woods station is a short rideshare hop away for downtown trips.",
+    "night": "I-Ride Trolley runs until midnight most nights; Lyft and Uber are plentiful on I-Drive after hours.",
+    "walk": "Walkable within the I-Drive corridor — most attractions, restaurants, and hotels are within a 15-minute stroll of each other.",
+    "notes": "Best base for theme-park visitors who want walkable nightlife. Rental car not needed if you stay on the corridor."
+  },
+  {
+    "neighborhood": "Downtown Orlando",
+    "lines": ["SunRail"],
+    "access": "SunRail commuter rail connects downtown to Orlando Airport (OIA), Lake Mary to the north, and Kissimmee to the south. Central Station is the main hub.",
+    "night": "SunRail runs limited evening service — check schedules. Rideshare is the go-to after 9 PM.",
+    "walk": "Downtown core is walkable; the Milk District and Thornton Park are easy on foot from Central Station.",
+    "notes": "Best for travelers who want a genuine local neighbourhood feel away from the tourist corridor."
+  },
+  {
+    "neighborhood": "Lake Buena Vista / Disney Springs",
+    "lines": ["Disney Bus"],
+    "access": "Free Disney resort buses connect all on-property hotels to the parks and Disney Springs. No rental car needed if you stay on Disney property.",
+    "night": "Disney transport runs until well after park close, though buses can be crowded. Disney's Minnie Van service offers a door-to-door rideshare option.",
+    "walk": "Disney Springs is fully walkable; getting between resorts and parks requires the bus or Minnie Van.",
+    "notes": "Staying on Disney property eliminates almost all transport friction for solo park visitors."
+  },
+  {
+    "neighborhood": "Universal / Vineland",
+    "lines": ["Shuttle"],
+    "access": "The Universal Cabana Bay and on-site hotels offer walking or shuttle access to Universal Orlando. Uber and Lyft are easy from the resort area.",
+    "night": "CityWalk is open late; rideshare pickup is straightforward from the designated zones outside the gates.",
+    "walk": "On-site Universal hotels are walking distance to the parks. Off-site hotels require shuttle or rideshare.",
+    "notes": "Single-rider lines at Universal make solo visits especially efficient — waits can be dramatically shorter."
+  }
+]

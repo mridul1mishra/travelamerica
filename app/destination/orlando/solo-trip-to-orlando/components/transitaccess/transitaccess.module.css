@@ -1,0 +1,106 @@
+/* TransitAccessSection.css */
+
+.subway-section {
+  padding: 3rem 1.5rem;
+  background: #f7f9ff;
+}
+
+.subway-section__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.subway-section__heading {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.subway-section__intro {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.subway-section__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.subway-row {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  border: 1px solid #dce4ff;
+  border-radius: 10px;
+}
+
+.subway-row__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subway-row__header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #222;
+}
+
+.subway-row__lines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.subway-row__details p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0.4rem 0;
+}
+
+.subway-row__details p strong {
+  font-weight: 600;
+  color: #222;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .subway-section {
+    padding: 2rem 1rem;
+  }
+  .subway-row {
+    padding: 1rem;
+  }
+  .subway-section__heading {
+    font-size: 1.5rem;
+  }
+  .subway-row__details p {
+    font-size: 0.9rem;
+  }
+}
+
+.line-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Orlando transit colours */
+.line-Trolley  { background: #E84B37; } /* I-Ride Trolley — red */
+.line-SunRail  { background: #0071BC; } /* SunRail — blue */
+.line-Disney-Bus { background: #1A4A8A; } /* Disney buses — navy */
+.line-Shuttle  { background: #5C6BC0; } /* Universal shuttle — indigo */
