@@ -9,6 +9,7 @@ import NeighborhoodRankingCards, { Neighborhood } from '@/app/components/destina
 import Footer from '@/app/components/Header/Footer/footer';
 import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 import nycNeighborhoodsData from '@/content/destination/nyc/neighborhoodRankings.json';
 
 const nycNeighborhoods = nycNeighborhoodsData as Neighborhood[];
@@ -50,6 +51,7 @@ export default function Home() {
         mapImage={{ src: "/destination/bestareatostay/mini-map.png", alt: "Mini-map of Upper West Side" }}
       />
       <NeighborhoodRankingCards cityName="NYC" neighborhoods={nycNeighborhoods} />
+      <EmailSignup source="best-areas-to-stay" />
       <div className={styles.container}>
         <FAQAccordion faqs={faqData} />
       </div>

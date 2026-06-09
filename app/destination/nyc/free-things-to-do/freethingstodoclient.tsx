@@ -7,6 +7,7 @@ import SeasonalEvents from './components/seasonalevents/SeasonalEvents';
 import SavingsTips from './components/savingstips/SavingsTips';
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
 import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 import Footer from '@/app/components/Header/Footer/footer';
 
 const faqData = [
@@ -31,6 +32,7 @@ export default function FreeThingsToDoClient() {
       />
       <FreeCategories />
       <MuseumTable />
+      <EmailSignup source="free-things-to-do" />
       <SeasonalEvents />
       <SavingsTips />
       <FAQAccordion faqs={faqData} />

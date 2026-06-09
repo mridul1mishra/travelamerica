@@ -6,6 +6,7 @@ import ScamWarning from './components/scamwarning/ScamWarning';
 import ArrivalTips from './components/arrivaltips/ArrivalTips';
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
 import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 import Footer from '@/app/components/Header/Footer/footer';
 
 const faqData = [
@@ -29,6 +30,7 @@ export default function GettingToNYCClient() {
         label="Book your trip"
       />
       <AirportTabs />
+      <EmailSignup source="getting-to-nyc" />
       <ScamWarning />
       <ArrivalTips />
       <FAQAccordion faqs={faqData} />

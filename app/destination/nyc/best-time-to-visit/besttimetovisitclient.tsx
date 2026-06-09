@@ -6,6 +6,7 @@ import MonthGrid from './components/monthgrid/MonthGrid';
 import TravelerTypes from './components/travelertypes/TravelerTypes';
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
 import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 import Footer from '@/app/components/Header/Footer/footer';
 
 const faqData = [
@@ -14,7 +15,7 @@ const faqData = [
   { question: 'Is NYC worth visiting in winter?', answer: 'Yes — especially December (for holiday atmosphere) and January/February (for low prices and thin crowds). Every major museum, Broadway show, and restaurant is open and accessible year-round.' },
   { question: 'How hot does NYC get in summer?', answer: 'July and August regularly reach 28–32°C with high humidity. Heat index can make it feel hotter. Plan indoor breaks around midday and stay hydrated on walking days.' },
   { question: 'When does fall foliage peak in NYC?', answer: 'Fall foliage peaks in Central Park and Prospect Park in mid-to-late October. Riverside Park and Fort Tryon Park are also excellent, often slightly later.' },
-  { question: 'What events should I plan my trip around?', answer: 'Cherry Blossom Festival (April), Fleet Week (May), NYC Pride (June), Macy\'s 4th of July Fireworks, US Open (late August–September), NYC Marathon (first Sunday in November), and the Rockefeller tree lighting (December) are the most popular anchors.' },
+  { question: 'What events should I plan my trip around?', answer: "Cherry Blossom Festival (April), Fleet Week (May), NYC Pride (June), Macy's 4th of July Fireworks, US Open (late August–September), NYC Marathon (first Sunday in November), and the Rockefeller tree lighting (December) are the most popular anchors." },
 ];
 
 export default function BestTimeToVisitClient() {
@@ -30,6 +31,7 @@ export default function BestTimeToVisitClient() {
       />
       <SeasonCards />
       <MonthGrid />
+      <EmailSignup source="best-time-to-visit" />
       <TravelerTypes />
       <FAQAccordion faqs={faqData} />
       <BookingCTA
