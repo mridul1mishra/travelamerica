@@ -1,0 +1,53 @@
+.hero {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 60%, #047857 100%);
+  padding: 48px 40px 60px;
+  color: #fff;
+}
+.heroContainer { max-width: 1440px; margin: 0 auto; }
+
+.breadcrumb { display: flex; gap: 8px; font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 32px; }
+.breadcrumb a { color: rgba(255,255,255,0.65); text-decoration: none; }
+.breadcrumb a:hover { color: #fff; }
+.current { font-weight: 600; color: rgba(255,255,255,0.9); }
+
+.heroContent { display: flex; align-items: center; justify-content: space-between; gap: 60px; }
+.heroText { flex: 1.3; }
+
+.badge {
+  display: inline-block;
+  background: rgba(167, 243, 208, 0.2);
+  border: 1px solid rgba(167, 243, 208, 0.4);
+  color: #a7f3d0;
+  font-size: 0.8rem; font-weight: 700;
+  padding: 5px 14px; border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.heroText h1 { font-size: 52px; font-weight: 700; line-height: 1.1; margin-bottom: 16px; }
+.subtitle { font-size: 18px; color: rgba(255,255,255,0.75); line-height: 1.6; margin-bottom: 32px; max-width: 560px; }
+
+.heroButtons { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+.btn { padding: 12px 22px; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+.btn:hover { opacity: 0.85; }
+.btn.primary { background: #fff; color: #065f46; }
+.btn.secondary { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+.updated { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+/* Highlights */
+.heroHighlights { flex: 0.7; display: flex; flex-direction: column; gap: 14px; }
+.highlightItem {
+  display: flex; align-items: center; gap: 14px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px; padding: 14px 16px;
+  font-size: 14px; color: rgba(255,255,255,0.9); line-height: 1.4;
+}
+.highlightItem span:first-child { font-size: 22px; flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .hero { padding: 32px 20px 40px; }
+  .heroContent { flex-direction: column; }
+  .heroText h1 { font-size: 36px; }
+  .heroHighlights { width: 100%; }
+}
+@media (max-width: 500px) { .heroText h1 { font-size: 30px; } }

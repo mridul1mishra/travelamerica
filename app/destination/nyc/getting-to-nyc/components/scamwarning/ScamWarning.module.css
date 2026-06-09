@@ -1,0 +1,40 @@
+.section { padding: 64px 40px; background: #fff9f0; }
+.container { max-width: 1200px; margin: 0 auto; }
+
+.alertBanner {
+  display: flex;
+  gap: 16px;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  align-items: flex-start;
+}
+.alertIcon { font-size: 28px; flex-shrink: 0; }
+.alertTitle { font-size: 18px; font-weight: 700; color: #856404; margin: 0 0 6px; }
+.alertText { font-size: 15px; color: #664d03; line-height: 1.5; margin: 0; }
+
+.scamsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.scamCard {
+  background: #fff;
+  border: 1px solid #fde8b0;
+  border-radius: 10px;
+  padding: 18px;
+}
+.scamIcon { font-size: 24px; display: block; margin-bottom: 8px; }
+.scamTitle { font-size: 15px; font-weight: 700; color: #1a1a1a; margin: 0 0 8px; }
+.scamDesc { font-size: 13px; color: #666; line-height: 1.5; margin: 0; }
+
+@media (max-width: 768px) {
+  .section { padding: 40px 20px; }
+  .scamsGrid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 500px) {
+  .scamsGrid { grid-template-columns: 1fr; }
+}

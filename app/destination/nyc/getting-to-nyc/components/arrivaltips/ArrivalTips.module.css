@@ -1,0 +1,38 @@
+.section { padding: 64px 40px; background: #f8f9fa; }
+.container { max-width: 1200px; margin: 0 auto; }
+.title { font-size: 34px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
+.subtitle { font-size: 17px; color: #666; margin-bottom: 36px; }
+
+.tipsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tipCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e8e8e8;
+  position: relative;
+  overflow: hidden;
+}
+.tipCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: #1a73e8;
+}
+
+.tipNum { font-size: 13px; font-weight: 700; color: #1a73e8; letter-spacing: 0.08em; display: block; margin-bottom: 8px; }
+.tipTitle { font-size: 15px; font-weight: 700; color: #1a1a1a; margin: 0 0 10px; line-height: 1.4; }
+.tipDetail { font-size: 14px; color: #666; line-height: 1.55; margin: 0; }
+
+@media (max-width: 900px) {
+  .tipsGrid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .section { padding: 40px 20px; }
+  .tipsGrid { grid-template-columns: 1fr; }
+}
