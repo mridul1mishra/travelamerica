@@ -84,10 +84,12 @@ export async function POST(req: NextRequest) {
 
     // Only send the welcome email for genuinely new subscribers
     if (isNew) {
-      // Non-blocking — don't let email failure block the response
-      sendWelcomeEmail(email).catch((err) =>
-        console.error('Welcome email error (non-fatal):', err)
-      );
+      try {
+        await sendWelcomeEmail(email);
+      } catch (err) {
+        console.error('Welcome email error (non-fatal):', err);
+        // Don't fail the subscription — email is best-effort
+      }
     }
 
     return NextResponse.json({ message: 'Subscribed!' }, { status: 200 });
