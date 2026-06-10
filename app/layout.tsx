@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   // against the production origin, and silences the Next "metadataBase not set"
   // build warning. Used as the base for any non-absolute metadata URL.
   metadataBase: new URL("https://www.travelsamericas.com"),
+  // Pinterest website claim — renders <meta name="p:domain_verify" .../> in <head>.
+  verification: {
+    other: {
+      "p:domain_verify": "a1a3fe64a852528625934e4bfde52015",
+    },
+  },
   title: {
     default: "Travels Americas | Discover Iconic Cities to Visit",
     template: "%s", // allows page.tsx to inject its own title
