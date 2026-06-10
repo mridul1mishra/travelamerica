@@ -39,6 +39,21 @@ const migrations = [
       CREATE INDEX IF NOT EXISTS subscribers_email_idx ON subscribers (email);
     `,
   },
+  {
+    name: 'add_drip_columns',
+    sql: `
+      ALTER TABLE subscribers
+        ADD COLUMN IF NOT EXISTS drip_step        INTEGER     NOT NULL DEFAULT 1,
+        ADD COLUMN IF NOT EXISTS last_drip_sent_at TIMESTAMPTZ;
+    `,
+  },
+  {
+    name: 'add_unsubscribed_at',
+    sql: `
+      ALTER TABLE subscribers
+        ADD COLUMN IF NOT EXISTS unsubscribed_at TIMESTAMPTZ;
+    `,
+  },
 ];
 
 async function migrate() {
