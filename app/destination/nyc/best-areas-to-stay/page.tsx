@@ -15,6 +15,14 @@ export const generateMetadata = () => ({
     title: 'Best Areas to Stay in NYC (Safe and Central Neighborhoods) – 2026',
     description:  'Unsure where to stay in NYC? Discover the safest and best areas for tourists, first‑time visitors, and easy transit in New York City.',
     images: ["https://www.travelsamericas.com/social/solo-trip-to-nyc-gritty.png"]
+  },
+  openGraph: {
+    title: "Best Areas to Stay in NYC 2026 | Safe & Central",
+    description: "Unsure where to stay in NYC? Discover the safest and best areas for tourists, first-time visitors, and solo travelers.",
+    url: 'https://www.travelsamericas.com/destination/nyc/best-areas-to-stay',
+    type: 'article',
+    siteName: 'Travels Americas',
+    images: [{ url: "https://www.travelsamericas.com/social/solo-trip-to-nyc-gritty.png", width: 1200, height: 630 }],
   }
 });
 

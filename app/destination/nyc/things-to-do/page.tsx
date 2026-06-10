@@ -12,7 +12,7 @@ export const metadata = {
     description:
       'The best things to do in NYC — landmarks, free activities, museums, food halls, and skyline views, organized by vibe and budget.',
     url: 'https://www.travelsamericas.com/destination/nyc/things-to-do',
-    type: 'website',
+    type: 'article',
   },
   twitter: {
     card: 'summary_large_image',

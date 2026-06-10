@@ -15,6 +15,14 @@ export const generateMetadata = () => ({
     title: 'Solo Trip to NYC 2026: What First-Timers Need to Know',
     description:  'A practical NYC solo travel guide: safest areas, transit tips, daily costs, and a 3-day itinerary. Written for first-timers who want honest answers, not hype.',
     images: ["https://www.travelsamericas.com/social/solo-trip-to-nyc-gritty.png"]
+  },
+  openGraph: {
+    title: 'Solo Travel to NYC: Safe Areas, Solo Itinerary + How Much It Really Costs',
+    description: "Traveling to NYC alone? First-timer guide: safest neighborhoods, how to NOT look lost, solo-friendly food spots, and a realistic 3-day budget.",
+    url: 'https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc',
+    type: 'article',
+    siteName: 'Travels Americas',
+    images: [{ url: "https://www.travelsamericas.com/social/solo-trip-to-nyc-gritty.png", width: 1200, height: 630 }],
   }
 });
 

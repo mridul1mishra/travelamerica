@@ -2,7 +2,7 @@ export const metadata = {
   title: "LA Neighborhood Guide 2026 | Which Area Is Right?",
   description: "Complete guide to LA neighborhoods — Silver Lake, Venice, DTLA, Beverly Hills, Koreatown and more. Which area fits you.",
   alternates: { canonical: 'https://www.travelsamericas.com/destination/la/neighborhood-guide' },
-  openGraph: { title: 'Los Angeles Neighborhood Guide 2026', description: 'What every LA neighborhood is really like — the honest guide for visitors.', url: 'https://www.travelsamericas.com/destination/la/neighborhood-guide', type: 'website' },
+  openGraph: { title: 'Los Angeles Neighborhood Guide 2026', description: 'What every LA neighborhood is really like — the honest guide for visitors.', url: 'https://www.travelsamericas.com/destination/la/neighborhood-guide', type: 'article' },
 };
 import LANeighborhoodGuideClient from './laneighborhoodguideclient';
 

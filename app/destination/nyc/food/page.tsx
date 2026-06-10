@@ -13,6 +13,14 @@ export const generateMetadata = () => ({
     title: "Best Food in NYC 2026: Restaurants, Food Halls & Where to Eat",
     description: "Where to eat in New York City — best restaurants by cuisine and neighborhood, food halls, pizza, bagels, and price ranges.",
     images: ["https://www.travelsamericas.com/data/majorcities/newyork/assets/nyc-solo-dining.webp"],
+  },
+  openGraph: {
+    title: "Best Food in NYC 2026: Restaurants, Food Halls & Where to Eat",
+    description: "Where to eat in New York City — best restaurants by cuisine and neighborhood, food halls, pizza, bagels, and price ranges. A 2026 NYC food guide.",
+    url: 'https://www.travelsamericas.com/destination/nyc/food',
+    type: 'article',
+    siteName: 'Travels Americas',
+    images: [{ url: "https://www.travelsamericas.com/data/majorcities/newyork/assets/nyc-solo-dining.webp", width: 1200, height: 630 }],
   }
 });
 

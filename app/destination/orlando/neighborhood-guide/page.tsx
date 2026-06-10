@@ -2,7 +2,7 @@ export const metadata = {
   title: "Orlando Neighborhood Guide 2026 | Where to Stay",
   description: "Guide to Orlando neighborhoods — International Drive, Lake Buena Vista, Kissimmee, Downtown Orlando, and what each offers.",
   alternates: { canonical: 'https://www.travelsamericas.com/destination/orlando/neighborhood-guide' },
-  openGraph: { title: 'Orlando Neighborhood Guide 2026', description: 'Honest breakdown of every major Orlando neighborhood for visitors.', url: 'https://www.travelsamericas.com/destination/orlando/neighborhood-guide', type: 'website' },
+  openGraph: { title: 'Orlando Neighborhood Guide 2026', description: 'Honest breakdown of every major Orlando neighborhood for visitors.', url: 'https://www.travelsamericas.com/destination/orlando/neighborhood-guide', type: 'article' },
 };
 import OrlandoNeighborhoodGuideClient from './orlandoneighborhoodguideclient';
 

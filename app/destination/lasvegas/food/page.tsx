@@ -2,7 +2,7 @@ export const metadata = {
   title: "Best Food in Las Vegas 2026 | On & Off the Strip",
   description: "Where to eat in Las Vegas — celebrity chef restaurants, cheap eats, best buffets, and the spots locals actually go.",
   alternates: { canonical: 'https://www.travelsamericas.com/destination/lasvegas/food' },
-  openGraph: { title: 'Best Food in Las Vegas 2026', description: 'Honest Las Vegas food guide — celebrity restaurants, best buffets, cheap eats and where to splurge.', url: 'https://www.travelsamericas.com/destination/lasvegas/food', type: 'website' },
+  openGraph: { title: 'Best Food in Las Vegas 2026', description: 'Honest Las Vegas food guide — celebrity restaurants, best buffets, cheap eats and where to splurge.', url: 'https://www.travelsamericas.com/destination/lasvegas/food', type: 'article' },
 };
 import LasVegasFoodClient from './lasvegasfoodclient';
 

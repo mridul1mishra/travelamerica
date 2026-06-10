@@ -2,7 +2,7 @@ export const metadata = {
   title: "Solo Trip to Orlando 2026 | Complete Guide",
   description: "Complete guide to a solo trip to Orlando — when to go, where to stay, theme park tips for solo visitors, and safety.",
   alternates: { canonical: 'https://www.travelsamericas.com/destination/orlando/solo-trip-to-orlando' },
-  openGraph: { title: 'Solo Trip to Orlando 2026 | Complete Guide', description: 'Complete guide for solo travelers visiting Orlando — honest, practical, parks and beyond.', url: 'https://www.travelsamericas.com/destination/orlando/solo-trip-to-orlando', type: 'website' },
+  openGraph: { title: 'Solo Trip to Orlando 2026 | Complete Guide', description: 'Complete guide for solo travelers visiting Orlando — honest, practical, parks and beyond.', url: 'https://www.travelsamericas.com/destination/orlando/solo-trip-to-orlando', type: 'article' },
 };
 import SoloTripToOrlandoClient from './solotriptoorlandoclient';
 

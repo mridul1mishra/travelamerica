@@ -20,7 +20,7 @@ export const metadata = {
     description:
       'A tourist-friendly guide to NYC neighborhoods, helping you choose the best area to stay and explore based on travel style, location, and ease of getting around.',
     url: 'https://www.travelsamericas.com/destination/nyc/neighborhood-guide',
-    type: 'website',
+    type: 'article',
   },
 };
 
