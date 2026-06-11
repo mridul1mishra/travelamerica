@@ -220,7 +220,7 @@ const schema4 = {
               <p className={styles.description}>Great solo dining energy, safe and lively.</p>
               </li>
           </ul>
-          <Link href="/destination/nyc/solo-trip=to-nyc" className={styles.ctaButton}>
+          <Link href="/destination/nyc/solo-trip-to-nyc" className={styles.ctaButton}>
             Solo Trip to NYC Guide
           </Link>
         </div>
