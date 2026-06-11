@@ -2,8 +2,8 @@
   "heading": "",
   "links": [
     { "label": "Newyork", "href": "/destination/nyc" },
-    { "label": "Los Angeles", "href": "/majorcities/losangeles" },
-    { "label": "Orlando", "href": "/majorcities/orlando" },
-    { "label": "Las Vegas", "href": "/majorcities/lasvegas" }
+    { "label": "Los Angeles", "href": "/destination/la" },
+    { "label": "Orlando", "href": "/destination/orlando" },
+    { "label": "Las Vegas", "href": "/destination/lasvegas" }
   ]
 }

@@ -19,6 +19,7 @@ import sectionsData from "./components/infosection/infosection.json";
 import EmergencyContactBlock from './components/emergencycontactblock/EmergencyContactBlock';
 import SafetyNarrative from './components/safetynarrative/SafetyNarrative';
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 
 export default function NYCSafetyGuideClient() {
   return (
@@ -29,6 +30,7 @@ export default function NYCSafetyGuideClient() {
         {/* banner component */}
         <SafetyHero />
         <InfoSection sections={sectionsData.sections}  />
+        <EmailSignup source="nyc-safety-guide" />
         <SafetyNarrative />
         <ScenarioSection />
         <SafetyTipsGrid />        

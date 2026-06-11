@@ -24,10 +24,10 @@ export default function SoloNycQa() {
 
       <article className={styles.card}>
         <h3 className={styles.question}>
-          Is NYC Safe for Solo Female Travelers (2025–2026)?
+          Is NYC Safe for Solo Female Travelers (2026)?
         </h3>
         <p className={styles.answer}>
-          Yes, NYC is generally safe for solo female travelers in 2025–2026,
+          Yes, NYC is generally safe for solo female travelers in 2026,
           especially in busy, well‑lit areas such as Manhattan and central
           Brooklyn. Awareness and smart location choices significantly reduce risk.
         </p>

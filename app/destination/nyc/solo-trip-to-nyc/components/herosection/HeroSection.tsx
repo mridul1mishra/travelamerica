@@ -14,7 +14,7 @@ export function HeroSection() {
             <a href="/destination/nyc/landmark" className={`${styles.btn} ${styles.secondary}`}>Where to Stay</a>
           </div>
 
-          <p className={styles.updated}>Updated for 2025</p>
+          <p className={styles.updated}>Updated for 2026</p>
         </div>
 
         <div className={styles.heroImage}>

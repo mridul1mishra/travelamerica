@@ -21,6 +21,7 @@ import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
 import SoloNycQa from '@/app/components/destination/solotriptonyc/aisnippet/cardqanda';
 import { SoloTripNarrative } from './components/solotripnarrative/SoloTripNarrative';
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 import { HeroSection } from './components/herosection/HeroSection';
 
 
@@ -34,6 +35,7 @@ export default function SoloTripNYCClient() {
         <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=flights&from=solo-trip-to-nyc" label="Book your trip" />
         <QuickActionBar />
         <InfoSection sections={sectionsData.sections} />
+        <EmailSignup source="solo-trip-to-nyc" />
         <WhyTrustThisGuide />
         <SoloNycQa />
         <SoloTripNarrative />

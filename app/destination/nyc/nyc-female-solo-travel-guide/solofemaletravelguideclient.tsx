@@ -20,8 +20,7 @@ import LinkHubGrid from "./components/linkhubgrid/LinkHubGrid";
 import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
 import FemaleSafetyNarrative from "./components/safetynarrative/FemaleSafetyNarrative";
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-
-
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 
 export default function FemaleSoloTravelGuide() {
   return (
@@ -31,6 +30,7 @@ export default function FemaleSoloTravelGuide() {
       <div className={styles.container}>
       <Hero />
       <InfoSection sections={sectionsData.sections}/>
+      <EmailSignup source="nyc-female-solo-travel-guide" />
       <FemaleSafetyNarrative />
       <CoreSafetyPrinciplesGrid />
       <ScenarioSection />
