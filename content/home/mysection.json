@@ -11,19 +11,19 @@
     {
       "title": "Los Angeles, California",
       "description": "Hollywood, Santa Monica Pier, Venice Beach, Universal Studios, vibrant arts scene....",
-      "image": "/data/RobobionicsWebThumbnail05x.jpg",
+      "image": "/data/home/la-card.webp",
       "link": "majorcities/losangeles"
     },
     {
       "title": "Las Vegas, Nevada",
       "description": "Famous casinos and nightlife, the Strip, world-class entertainment, nearby natural attractions like Red Rock Canyon......",
-      "image": "/data/NavalboatsStoryWebThumbnail05x.jpg",
+      "image": "/data/home/lasvegas-card.webp",
       "link": "majorcities/lasvegas"
     },
     {
       "title": "Orlando, Florida",
       "description": "Theme parks including Walt Disney World, Universal Studios, SeaWorld, family-friendly attractions......",
-      "image": "/data/TakacharStoryWebThumbnail05x.jpg",
+      "image": "/data/home/orlando-card.webp",
       "link": "majorcities/orlando"
     }
   ]
