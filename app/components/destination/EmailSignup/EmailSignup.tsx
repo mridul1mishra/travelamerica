@@ -32,6 +32,14 @@ export default function EmailSignup({ source = 'unknown' }: EmailSignupProps) {
         setStatus('error');
       } else {
         setStatus('success');
+        // GA4: fire signup event so it can be marked as a key event.
+        // gtag is loaded globally in layout.tsx; guard for safety.
+        if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+          (window as any).gtag('event', 'email_signup', {
+            method: 'drip_form',
+            source: source,
+          });
+        }
       }
     } catch {
       setErrorMsg('Network error. Please try again.');
