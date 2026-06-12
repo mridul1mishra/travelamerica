@@ -43,3 +43,6 @@ next-env.d.ts
 
 # markdown files
 *.md
+
+# office temp lock files
+.~lock.*#
