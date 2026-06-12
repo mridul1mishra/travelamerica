@@ -1,4 +1,5 @@
 import styles from "./SafetyNarrative.module.css";
+import { SAFETYWING_URL } from "@/app/lib/affiliates";
 
 // Long-form prose section that adds editorial depth to nyc-safety-guide.
 // Designed to land featured snippets via direct-answer paragraphs after each
@@ -207,6 +208,7 @@ export default function SafetyNarrative() {
           <li><strong>Save NYPD non-emergency (311) and 911 to favorites.</strong> Add the contact info for your hotel&apos;s front desk too &mdash; useful if you&apos;re ever in a position where you need to be picked up or escorted in.</li>
           <li><strong>Take a photo of your passport ID page</strong> and email it to yourself. If your wallet gets lifted, you&apos;ll move faster at the consulate or with TSA on the way home.</li>
           <li><strong>Carry two payment methods in different places.</strong> A card in your front pocket and a backup card in a hotel safe. Cash for tips and small transit needs.</li>
+          <li><strong>Sort travel insurance before you fly.</strong> A single ER visit in NYC can run four figures; if you&apos;re visiting from abroad, your home coverage likely won&apos;t apply. <a href={SAFETYWING_URL} target="_blank" rel="sponsored noopener">SafetyWing&apos;s Nomad Insurance</a> is a solid budget option built for travelers &mdash; whichever provider you pick, buy it before departure, not after something happens.</li>
         </ul>
         <h3>While you&apos;re here</h3>
         <ul>

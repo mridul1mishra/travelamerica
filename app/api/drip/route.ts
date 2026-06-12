@@ -199,14 +199,14 @@ const DRIP_SCHEDULE = [
   {
     step: 5,
     daysAfterPrev: 7,
-    subject: 'The 4 things to book before NYC sells out 🗽',
+    subject: 'The 5 things to book before NYC sells out 🗽',
     html: (email: string) => emailShell(
       'Most first-timers miss at least one of these — and regret it on the trip.',
       'https://www.travelsamericas.com/email/Ready-to-book.jpg',
       'Solo traveler on Brooklyn Bridge looking toward Manhattan skyline at golden hour',
       `
       <h2 style="color:#2563eb;margin:0 0 8px;font-size:22px">Don't leave these until the last minute</h2>
-      <p style="margin:0 0 16px;line-height:1.6">You've got the itinerary, the neighbourhood guide, the airport routes. Now let's get you booked — here are the 4 things that sell out or get expensive fast:</p>
+      <p style="margin:0 0 16px;line-height:1.6">You've got the itinerary, the neighborhood guide, the airport routes. Now let's get you booked — here are the 5 things that sell out or get expensive fast:</p>
 
       <div style="display:flex;gap:16px;margin:0 0 20px;align-items:flex-start">
         <div style="background:#2563eb;color:#fff;border-radius:50%;min-width:32px;height:32px;font-weight:700;font-size:15px;line-height:32px;text-align:center">1</div>
@@ -237,6 +237,14 @@ const DRIP_SCHEDULE = [
         <div>
           <p style="margin:0 0 4px;font-weight:700;font-size:15px">🚇 OMNY card — get it at the airport</p>
           <p style="margin:0;color:#374151;font-size:14px;line-height:1.6">Tap your credit card or get an OMNY card at any subway station. The 7-day unlimited pass costs <strong>$34</strong> and pays for itself after 12 rides. Skip the single-ride tickets — they waste time at the machines.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:16px;margin:0 0 24px;align-items:flex-start">
+        <div style="background:#2563eb;color:#fff;border-radius:50%;min-width:32px;height:32px;font-weight:700;font-size:15px;line-height:32px;text-align:center">5</div>
+        <div>
+          <p style="margin:0 0 4px;font-weight:700;font-size:15px">🛡️ Travel insurance — buy before you fly</p>
+          <p style="margin:0;color:#374151;font-size:14px;line-height:1.6">Visiting from outside the US? Your home health plan likely won't cover you here, and even a minor ER visit gets expensive. A traveler policy like <a href="${process.env.NEXT_PUBLIC_SAFETYWING_URL || 'https://safetywing.com/nomad-insurance/'}" style="color:#2563eb;font-weight:600">SafetyWing Nomad Insurance</a> costs a few dollars a day — it only works if you buy it before departure.</p>
         </div>
       </div>
 

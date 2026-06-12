@@ -1,4 +1,5 @@
 import styles from "./SoloTripNarrative.module.css";
+import { SAFETYWING_URL } from "@/app/lib/affiliates";
 
 // Long-form editorial for solo-trip-to-nyc page.
 // Targets top GSC queries: "travel to nyc alone" (162 impressions) and
@@ -74,6 +75,16 @@ export function SoloTripNarrative() {
           The single biggest cost lever is the hotel. The single biggest savings
           lever is eating one meal per day at a counter or bar (vs. a sit-down
           table) and one meal per day from a deli, food hall, or counter spot.
+        </p>
+        <p>
+          One line item these budgets exclude: travel insurance. If you&apos;re
+          visiting from outside the US, add it &mdash; American healthcare costs
+          make even a minor ER visit expensive, and most foreign health plans
+          won&apos;t cover you here. Budget traveler policies like{" "}
+          <a href={SAFETYWING_URL} target="_blank" rel="sponsored noopener">
+            SafetyWing Nomad Insurance
+          </a>{" "}
+          run a few dollars a day and take five minutes to set up before you fly.
         </p>
       </section>
 

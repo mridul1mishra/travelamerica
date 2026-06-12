@@ -1,4 +1,5 @@
 import styles from "./FemaleSafetyNarrative.module.css";
+import { SAFETYWING_URL } from "@/app/lib/affiliates";
 
 // Long-form narrative for the female-solo NYC safety guide.
 // Targets the highest-impression GSC query ("new york city safety for solo
@@ -97,6 +98,17 @@ export default function FemaleSafetyNarrative() {
           <li>Avoid ground-floor rooms with street-accessible windows if you have the option.</li>
           <li>Use the in-room safe for passport, backup cards, and anything you don&apos;t need on your person. Don&apos;t keep everything in your purse.</li>
         </ul>
+        <p>
+          One more pre-arrival item worth handling alongside your booking:
+          travel insurance. Solo, there&apos;s no travel partner to manage
+          logistics if you get sick or hurt, and US medical costs are steep for
+          visitors. A traveler-focused policy like{" "}
+          <a href={SAFETYWING_URL} target="_blank" rel="sponsored noopener">
+            SafetyWing Nomad Insurance
+          </a>{" "}
+          covers medical care and costs a few dollars a day &mdash; set it up
+          before you fly, then forget about it.
+        </p>
       </section>
 
       <section id="getting-around-female-solo" className={styles.section}>
