@@ -32,7 +32,7 @@ export default function SoloTripNYCClient() {
         <>
         <NycNavHeader />
         <HeroSection />
-        <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=flights&from=solo-trip-to-nyc" label="Book your trip" />
+        <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=solo-trip-to-nyc" label="See NYC hotels" />
         <QuickActionBar />
         <InfoSection sections={sectionsData.sections} />
         <EmailSignup source="solo-trip-to-nyc" />
@@ -46,7 +46,7 @@ export default function SoloTripNYCClient() {
         <ScenarioSection />
         <FemaleSoloTiles tiles={femaleSolo.tiles}  ctaLink={femaleSolo.ctaLink} />
         <FAQAccordion faqs={faqData} />
-        <BookingCTA variant="full" text="Start your trip: book flights and hotels" href="/destination/nyc/booking?tab=flights&from=solo-trip-to-nyc" label="Book your trip" />
+        <BookingCTA variant="full" text="Choose a hotel in a safe NYC neighborhood" href="/destination/nyc/booking?tab=hotels&from=solo-trip-to-nyc" label="See NYC hotels" />
         <Footer></Footer>
 
         </>

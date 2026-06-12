@@ -18,7 +18,7 @@ export default function NycHubPage() {
     <main className={styles.container}>
       <Header />
       <HeroSection />
-      <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=flights&from=nyc-hub" label="Book your NYC trip" />
+      <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=nyc-hub" label="Book your NYC trip" />
       <PlanningIntent />
       <WhyVisit />
       <AttractionsHub />
@@ -27,7 +27,7 @@ export default function NycHubPage() {
       <WhereToStay />
       <ItinerariesPreview />
       <DataCaptureCTA />
-      <BookingCTA variant="full" text="Compare flights, hotels and tickets for your trip" href="/destination/nyc/booking?tab=flights&from=nyc-hub" label="Book your NYC trip" />
+      <BookingCTA variant="full" text="Compare flights, hotels and tickets for your trip" href="/destination/nyc/booking?tab=hotels&from=nyc-hub" label="Book your NYC trip" />
       <Footer />
     </main>
   );

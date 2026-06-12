@@ -26,7 +26,7 @@ export default function GettingToNYCClient() {
       <BookingCTA
         variant="slim"
         text="Book your New York trip →"
-        href="/destination/nyc/booking?tab=flights&from=getting-to-nyc"
+        href="/destination/nyc/booking?tab=hotels&from=getting-to-nyc"
         label="Book your trip"
       />
       <AirportTabs />
@@ -37,7 +37,7 @@ export default function GettingToNYCClient() {
       <BookingCTA
         variant="full"
         text="Book flights and hotels for your NYC trip"
-        href="/destination/nyc/booking?tab=flights&from=getting-to-nyc"
+        href="/destination/nyc/booking?tab=hotels&from=getting-to-nyc"
         label="Book your trip"
       />
       <Footer />

@@ -43,7 +43,7 @@ export default function SubwaySafetyGuidePage(){
         <>
     
         <Header />
-        <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=flights&from=subway-safety-guide" label="Book your trip" />
+        <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=subway-safety-guide" label="Book your trip" />
         <div className={styles.pageWrapper}>
       <section id="banner">  
         <Hero {...hero} />
@@ -88,7 +88,7 @@ export default function SubwaySafetyGuidePage(){
       </SectionWrapper>
       </div>
       
-      <BookingCTA variant="full" text="Plan and book your NYC trip" href="/destination/nyc/booking?tab=flights&from=subway-safety-guide" label="Book your trip" />
+      <BookingCTA variant="full" text="Plan and book your NYC trip" href="/destination/nyc/booking?tab=hotels&from=subway-safety-guide" label="Book your trip" />
       <Footer />
       
     </>
