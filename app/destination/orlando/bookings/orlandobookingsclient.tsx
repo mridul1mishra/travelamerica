@@ -2,6 +2,8 @@
 
 // Thin city config wrapper — all booking UI lives in BookingClient.
 import BookingClient, { type CityBookingConfig } from "@/app/components/booking/BookingClient";
+import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import faqData from '@/content/destination/orlando/booking/faq/faqsection.json';
 import bookFlights from "@/content/cities/orlando/bookflights.json";
 import hotelsData from "@/content/cities/orlando/hotels.json";
 import thingsToDoData from "@/content/cities/orlando/thingstodo.json";
@@ -75,6 +77,8 @@ const config: CityBookingConfig = {
   activities: thingsToDoData as CityBookingConfig["activities"],
 };
 
+const orlandoBookingFaq = <FAQAccordion faqs={faqData} />;
+
 export default function OrlandoBookingsClient() {
-  return <BookingClient config={config} />;
+  return <BookingClient config={config} faqSection={orlandoBookingFaq} />;
 }
