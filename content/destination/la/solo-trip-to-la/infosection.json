@@ -11,6 +11,42 @@
         "Trust your instincts and avoid empty Metro stations late at night."
       ],
       "link": "/destination/la/safety-guide"
+    },
+    {
+      "id": "budget",
+      "title": "What a Solo LA Trip Actually Costs in 2026",
+      "summary": "Los Angeles has a wide cost range — you can do it lean or blow the budget easily. Here's what a realistic solo trip costs at three spending levels.",
+      "bullets": [
+        "Budget ($100–150/day): Hostel in Hollywood or Venice ($35–55/night), Metro + one Uber/day, tacos and Grand Central Market meals, free activities (Griffith, Getty, beaches).",
+        "Mid-range ($200–300/day): 3-star hotel in Santa Monica or WeHo ($130–180/night), rental car or daily Uber, one sit-down dinner per day, one paid attraction.",
+        "Splurge ($400+/day): Boutique hotel in Beverly Hills or Malibu ($280–500/night), rental car, Michelin dining, spa day, rooftop bars.",
+        "Hidden costs to plan for: parking ($20–40/day if driving), resort fees ($25–45/night at some hotels), Uber surges in WeHo on weekends ($30–50 per ride)."
+      ],
+      "link": "/destination/la/best-areas-to-stay"
+    },
+    {
+      "id": "transport",
+      "title": "Getting Around LA as a Solo Traveler",
+      "summary": "Transport is the single biggest planning decision in LA. Get this wrong and you spend your trip stuck in traffic or paying $60 Ubers between neighborhoods.",
+      "bullets": [
+        "Rental car gives you the most freedom — $45–80/day from LAX. Essential if your itinerary includes Malibu, Getty, or any day trips. Park smart: hotel parking ($30–45/day) or app-based spots like SpotHero.",
+        "Uber/Lyft works well within a single neighborhood cluster (Santa Monica + Venice, or WeHo + Hollywood) but gets expensive across the city. Budget $25–40 per cross-city ride.",
+        "Metro is underused by tourists but genuinely useful: E Line to Santa Monica ($1.75), B Line to Hollywood, A Line to Long Beach. Download the TAP card app and load $20 before you land.",
+        "Biking works on the Westside only — the Marvin Braude coastal path runs 22 flat miles from Santa Monica to Torrance. Rent from Wheel Fun Rentals ($15–25/hr)."
+      ],
+      "link": "/destination/la/la-metro-map"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit LA Solo",
+      "summary": "LA has year-round appeal but the experience varies significantly by season. Here's the honest breakdown.",
+      "bullets": [
+        "March–May: Best shoulder season. Wildflowers on Griffith trails, comfortable 65–75°F, lower hotel rates than summer, manageable crowds.",
+        "June–August: Peak season. Beach weather is perfect (75–85°F) but marine layer keeps mornings grey until noon. Hotel rates spike 40–60%. Book 6–8 weeks out.",
+        "September–November: The real secret season. Santa Ana winds bring crystal-clear skies and 80°F weather in October. Crowds thin after Labor Day, rates drop. Best views from Griffith and Mulholland.",
+        "December–February: Mild (60–70°F) but the least photogenic. Mountains get snow (good for day trips to Big Bear). Hotels at their cheapest. Right call if budget matters most."
+      ],
+      "link": "/destination/la/solo-itinerary"
     }
   ]
 }

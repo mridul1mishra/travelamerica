@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Americas — Content Review</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f5f5; color: #222; padding: 24px; font-size: 13px; }
+  h1 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .subtitle { font-size: 13px; color: #666; margin-bottom-8px; }
+  .legend { display: flex; gap: 16px; margin: 12px 0 24px; font-size: 12px; }
+  .legend span { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .dot-green { background: #1a7a3d; }
+  .dot-yellow { background: #b8860b; }
+  .dot-red { background: #c0392b; }
+
+  .city-block { margin-bottom: 36px; }
+  .city-title { font-size: 15px; font-weight: 700; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 2px solid #ddd; }
+
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  th { background: #f0f0f0; text-align: left; font-size: 11px; font-weight: 700; color: #555; padding: 9px 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  td { padding: 10px 12px; border-top: 1px solid #f0f0f0; vertical-align: top; line-height: 1.5; }
+  td:first-child { font-weight: 600; white-space: nowrap; width: 200px; color: #333; }
+  td:nth-child(2) { width: 80px; text-align: center; }
+  td:nth-child(3) { width: 80px; text-align: center; }
+
+  .stars { font-size: 14px; letter-spacing: 1px; }
+  .score { font-weight: 700; font-size: 13px; }
+  .score-5  { color: #1a7a3d; }
+  .score-45 { color: #1a7a3d; }
+  .score-4  { color: #2d9e5f; }
+  .score-35 { color: #b8860b; }
+  .score-3  { color: #b8860b; }
+  .score-25 { color: #c0392b; }
+  .score-2  { color: #c0392b; }
+  .score-15 { color: #922b21; }
+
+  .tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; font-weight: 600; margin-right: 4px; white-space: nowrap; }
+  .tag-strong  { background: #d4edda; color: #1a6130; }
+  .tag-thin    { background: #fde8e8; color: #8b1a1a; }
+  .tag-decent  { background: #fff3cd; color: #856404; }
+  .tag-shell   { background: #f3e8fd; color: #5a1a8b; }
+
+  .feedback { font-size: 12px; color: #444; }
+  .priority { font-size: 10px; font-weight: 700; color: #c0392b; margin-top: 3px; }
+
+  .summary-box { background: #fff; border-radius: 8px; padding: 16px 20px; margin-bottom: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .summary-box h2 { font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+  .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .stat { text-align: center; }
+  .stat-num { font-size: 28px; font-weight: 700; }
+  .stat-label { font-size: 11px; color: #888; margin-top: 2px; }
+  .green { color: #1a7a3d; }
+  .yellow { color: #b8860b; }
+  .red { color: #c0392b; }
+</style>
+</head>
+<body>
+
+<h1>Travel Americas — Content Review</h1>
+<p class="subtitle" style="margin-bottom:8px">Reviewed June 14, 2026 · 44 pages across NYC, LA, Las Vegas, Orlando</p>
+<p class="subtitle" style="margin-bottom:16px">Rating criteria: depth, specificity, actionability, structure, internal linking, affiliate integration</p>
+
+<div class="legend">
+  <span><span class="dot dot-green"></span> 4–5 Strong</span>
+  <span><span class="dot dot-yellow"></span> 3–3.5 Decent</span>
+  <span><span class="dot dot-red"></span> 1–2.5 Needs work</span>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-box">
+  <h2>Portfolio Summary</h2>
+  <div class="summary-grid">
+    <div class="stat"><div class="stat-num green">12</div><div class="stat-label">Strong pages (4+)</div></div>
+    <div class="stat"><div class="stat-num yellow">10</div><div class="stat-label">Decent pages (3–3.5)</div></div>
+    <div class="stat"><div class="stat-num red">22</div><div class="stat-label">Thin pages (&lt;3)</div></div>
+    <div class="stat"><div class="stat-num">2.9</div><div class="stat-label">Avg rating / 5</div></div>
+  </div>
+</div>
+
+<!-- NYC -->
+<div class="city-block">
+  <div class="city-title">🗽 New York City — Most developed cluster</div>
+  <table>
+    <tr><th>Page</th><th>Rating</th><th>Tag</th><th>Feedback</th></tr>
+
+    <tr>
+      <td>Hub (/nyc)</td>
+      <td><span class="score score-2">2/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-shell">Shell</span></td>
+      <td class="feedback">34-line component — purely a navigation wrapper with no editorial content. No introduction to NYC, no hook, no reason for Google to rank this. Needs a 400+ word editorial intro covering what makes NYC worth visiting, who it's for, and links to all sub-pages.
+        <div class="priority">⚠ Priority fix — this is your hub page</div></td>
+    </tr>
+
+    <tr>
+      <td>Solo Trip to NYC</td>
+      <td><span class="score score-4">4/5</span><br><span class="stars">★★★★☆</span></td>
+      <td><span class="tag tag-strong">Strong</span></td>
+      <td class="feedback">Well-structured with 15+ components: hero, neighbourhood grid, 3-day itinerary, scenario section, FAQ, female solo tiles. Booking CTAs correctly placed. Weak spot: the narrative component (SoloTripNarrative) needs a word count check — thin prose will hurt this page's ability to rank for "solo trip to nyc" at position 15+.</td>
+    </tr>
+
+    <tr>
+      <td>Best Areas to Stay</td>
+      <td><span class="score score-3">3/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">Has component structure but the client is only 62 lines. No real comparison of neighbourhoods by traveller type (budget vs luxury, solo vs group). Needs neighbourhood comparison table with price ranges, safety notes, and who each area suits.</td>
+    </tr>
+
+    <tr>
+      <td>Booking (/nyc/booking)</td>
+      <td><span class="score score-3">3/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">Functional hotel carousel works. Tab system (flights/hotels/activities) is clean. Missing: editorial copy above the fold explaining why to book through the site, and a trust signal (why these hotels?). Purely transactional right now.</td>
+    </tr>
+
+    <tr>
+      <td>Food</td>
+      <td><span class="score score-45">4.5/5</span><br><span class="stars">★★★★★</span></td>
+      <td><span class="tag tag-strong">Strong</span></td>
+      <td class="feedback">550 lines of specific, neighbourhood-anchored restaurant content. Named dishes, price ranges, booking tips. This is the kind of content that earns backlinks. Minor gap: no seasonal recommendations or budget breakdown by meal type.</td>
+    </tr>
+
+    <tr>
+      <td>Group Travel</td>
+      <td><span class="score score-4">4/5</span><br><span class="stars">★★★★☆</span></td>
+      <td><span class="tag tag-strong">Strong</span></td>
+      <td class="feedback">424 lines covering group logistics, splitting costs, accommodation options, activity planning. Good depth. Could add a "group size calculator" style section (group of 4 vs 10 changes everything about NYC logistics).</td>
+    </tr>
+
+    <tr>
+      <td>Is NYC Safe at Night</td>
+      <td><span class="score score-25">2.5/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">94 lines. Has a placeholder TODO comment in the metadata. No neighbourhood-by-neighbourhood night safety breakdown, no transport safety section, no emergency contacts. Given this query has GSC impressions, this page is leaving clicks on the table.
+        <div class="priority">⚠ High opportunity — impressions but 0 clicks</div></td>
+    </tr>
+
+    <tr>
+      <td>Landmark</td>
+      <td><span class="score score-45">4.5/5</span><br><span class="stars">★★★★★</span></td>
+      <td><span class="tag tag-strong">Strong</span></td>
+      <td class="feedback">464 lines of specific landmark content with practical visit info. One of the strongest pages on the site. Add opening hours and ticket price ranges to make it genuinely useful as a trip-planning reference.</td>
+    </tr>
+
+    <tr>
+      <td>Neighborhood Guide</td>
+      <td><span class="score score-3">3/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">Component structure suggests decent depth (IntroSection, CityOrganization, NeighborhoodsByStyle, PopularNeighborhoods, WhereFirstTimersStay). But content is personalisation-driven (tripType, interest props) which could result in thin default state. Needs to be audited in browser.</td>
+    </tr>
+
+    <tr>
+      <td>Female Solo Travel Guide</td>
+      <td><span class="score score-4">4/5</span><br><span class="stars">★★★★☆</span></td>
+      <td><span class="tag tag-strong">Strong</span></td>
+      <td class="feedback">888 lines across components including FemaleSafetyNarrative (244 lines), ScenarioFilter, microscenarios, packing essentials. Genuinely useful and specific. Add first-person tone — female travellers trust "I've done this" language more than third-person guides.</td>
+    </tr>
+
+    <tr>
+      <td>NYC Safety Guide</td>
+      <td><span class="score score-45">4.5/5</span><br><span class="stars">★★★★★</span></td>
+      <td><span class="tag tag-strong">Strong</span></td>
+      <td class="feedback">700+ lines across components. SafetyNarrative alone is 282 lines. Scenario-based structure is excellent for user engagement. Emergency contacts, neighbourhood safety, FAQ all present. This is your strongest informational page and rightly targets the highest-impression queries.</td>
+    </tr>
+
+    <tr>
+      <td>Solo Itinerary</td>
+      <td><span class="score score-4">4/5</span><br><span class="stars">★★★★☆</span></td>
+      <td><span class="star">★★★★☆</span></td>
+      <td class="feedback">285 lines with day-by-day structure. Good internal links to related pages. Add estimated costs per day and a "what to skip" section — those additions convert skimmers into readers and signal depth to Google.</td>
+    </tr>
+
+    <tr>
+      <td>Subway Safety Guide</td>
+      <td><span class="score score-3">3/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">95-line client with component files. Schema was just fixed (yourdomain.com removed). Content covers core principles but needs a "lines to avoid at night" section and real-time disruption advice (MTA alerts, weekend service changes) to outrank competing guides.</td>
+    </tr>
+
+    <tr>
+      <td>Things To Do</td>
+      <td><span class="score score-35">3.5/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">256 lines of activities but reads like a list rather than editorial. Add budget tiers (free / under $20 / splurge), time estimates per activity, and which activities work solo vs group. That structure alone would differentiate from generic listicles.</td>
+    </tr>
+
+    <tr>
+      <td>NYC Subway Map</td>
+      <td><span class="score score-25">2.5/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">57-line client. Primarily a PDF embed. No editorial content explaining how to read the map, key transfer stations, express vs local lines, or tourist-relevant routes. A map without context is just a file download.</td>
+    </tr>
+  </table>
+</div>
+
+<!-- LA -->
+<div class="city-block">
+  <div class="city-title">🌴 Los Angeles — Decent structure, thin editorial on key pages</div>
+  <table>
+    <tr><th>Page</th><th>Rating</th><th>Tag</th><th>Feedback</th></tr>
+
+    <tr>
+      <td>Hub (/la)</td>
+      <td><span class="score score-15">1.5/5</span><br><span class="stars">★☆☆☆☆</span></td>
+      <td><span class="tag tag-shell">Shell</span></td>
+      <td class="feedback">41-line shell. No editorial content whatsoever — just nav links and CTAs. LA has enormous search volume for solo and group travel. This hub is an SEO dead end.
+        <div class="priority">⚠ Critical — rewrite with 500+ word editorial intro</div></td>
+    </tr>
+
+    <tr>
+      <td>Solo Trip to LA</td>
+      <td><span class="score score-2">2/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">51 lines — a component shell like the NYC version, but NYC's components have 15+ rich sub-sections. LA appears to have fewer content components. No narrative, no itinerary data, no scenario section visible. Needs the same depth treatment as NYC's solo trip page.</td>
+    </tr>
+
+    <tr>
+      <td>Best Areas to Stay</td>
+      <td><span class="score score-35">3.5/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">172 lines with a reasonable neighbourhood breakdown. LA has 10+ distinct areas travellers choose between (Santa Monica, West Hollywood, DTLA, Silver Lake, Venice) — ensure all are covered with price range and vibe notes.</td>
+    </tr>
+
+    <tr>
+      <td>Bookings (/la/bookings)</td>
+      <td><span class="score score-3">3/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">Functional. CTA now correctly points to hotels tab. Same gap as NYC: no editorial trust-building copy above the hotel carousel.</td>
+    </tr>
+
+    <tr>
+      <td>Food</td>
+      <td><span class="score score-4">4/5</span><br><span class="stars">★★★★☆</span></td>
+      <td><span class="tag tag-strong">Strong</span></td>
+      <td class="feedback">406 lines. Specific neighbourhood food coverage. LA's food scene is one of its biggest draws — this page is well positioned. Add a "dietary-friendly" filter section (LA's vegan/gluten-free scene is a real search cluster).</td>
+    </tr>
+
+    <tr>
+      <td>Group Travel</td>
+      <td><span class="score score-4">4/5</span><br><span class="stars">★★★★☆</span></td>
+      <td><span class="tag tag-strong">Strong</span></td>
+      <td class="feedback">406 lines. Strong logistics coverage. LA group travel has a unique problem (car-dependent city + group transport) — make sure this is explicitly addressed as it's a genuine pain point that drives searches.</td>
+    </tr>
+
+    <tr>
+      <td>Is LA Safe at Night</td>
+      <td><span class="score score-25">2.5/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">101 lines. LA's safety question is more nuanced than NYC's — neighbourhood variance is extreme (Beverly Hills vs Skid Row are 2 miles apart). This page needs area-specific night safety data, not generic advice.</td>
+    </tr>
+
+    <tr>
+      <td>Landmark</td>
+      <td><span class="score score-45">4.5/5</span><br><span class="stars">★★★★★</span></td>
+      <td><span class="tag tag-strong">Strong</span></td>
+      <td class="feedback">465 lines — strongest LA page. Specific, well-structured. Add practical access info (parking vs Metro) since LA landmark visits are very transport-dependent.</td>
+    </tr>
+
+    <tr>
+      <td>Neighborhood Guide</td>
+      <td><span class="score score-35">3.5/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">52-line client but rich component structure with personalisation (tripType, interest params). Code has a "FLAGGED" comment — worth auditing in browser to confirm the personalisation renders real content, not empty sections.</td>
+    </tr>
+
+    <tr>
+      <td>Female Solo Travel Guide</td>
+      <td><span class="score score-2">2/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">57 lines with no rich component tree visible. LA female solo travel has specific concerns (car culture means rideshare safety is critical, Hollywood area has different risks than NYC). Generic content won't rank here.
+        <div class="priority">⚠ Needs full rewrite with LA-specific scenarios</div></td>
+    </tr>
+
+    <tr>
+      <td>Safety Guide</td>
+      <td><span class="score score-35">3.5/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">50-line client but mirrors NYC safety structure (SafetyNarrative, ScenarioSection, SafetyTipsGrid, NeighborhoodSafetySection, EmergencyContactBlock, FAQ). If component content is LA-specific and not just NYC content re-skinned, this rates higher.</td>
+    </tr>
+
+    <tr>
+      <td>Solo Itinerary</td>
+      <td><span class="score score-4">4/5</span><br><span class="stars">★★★★☆</span></td>
+      <td><span class="tag tag-strong">Strong</span></td>
+      <td class="feedback">289 lines. Good depth. LA itineraries have a unique challenge — you need a car or good Uber budget. Make sure transport logistics between days are explicit, as this is the #1 reader frustration.</td>
+    </tr>
+
+    <tr>
+      <td>Metro Safety Guide</td>
+      <td><span class="score score-25">2.5/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">96 lines. LA Metro safety is a genuinely high-search topic (Metro crime has been in the news). This should be a detailed guide: which lines are safest, which hours to avoid, TAP card tips, how Metro compares to rideshare for safety.</td>
+    </tr>
+
+    <tr>
+      <td>Things To Do</td>
+      <td><span class="score score-3">3/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">151 lines. Decent but LA has an overwhelming amount of things to do — this page needs curation by traveller type (beach lovers, culture seekers, foodies, hikers) to be useful and differentiated.</td>
+    </tr>
+
+    <tr>
+      <td>LA Metro Map</td>
+      <td><span class="score score-2">2/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">57 lines. Same problem as NYC subway map — map without editorial context. LA Metro is less intuitive than NYC subway so needs more explanation: which lines serve tourist areas, how to buy a TAP card, Metro vs rideshare trade-offs.</td>
+    </tr>
+
+    <tr>
+      <td>Itinerary (legacy)</td>
+      <td><span class="score score-2">2/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">73 lines. Legacy page that duplicates the solo-itinerary. Should either be merged with a 301 redirect into /la/solo-itinerary or expanded into a distinct product (e.g. "LA 5-day itinerary" vs "solo 3-day itinerary").</td>
+    </tr>
+  </table>
+</div>
+
+<!-- LAS VEGAS -->
+<div class="city-block">
+  <div class="city-title">🎰 Las Vegas — Food and landmarks excellent, core pages thin</div>
+  <table>
+    <tr><th>Page</th><th>Rating</th><th>Tag</th><th>Feedback</th></tr>
+
+    <tr>
+      <td>Hub (/lasvegas)</td>
+      <td><span class="score score-15">1.5/5</span><br><span class="stars">★☆☆☆☆</span></td>
+      <td><span class="tag tag-shell">Shell</span></td>
+      <td class="feedback">41-line shell. Las Vegas is one of the most searched US travel destinations. The hub should sell the city — what makes Vegas unique, who should visit, what the site covers. Currently it's just a link list.
+        <div class="priority">⚠ Critical — highest search volume city with weakest hub</div></td>
+    </tr>
+
+    <tr>
+      <td>Solo Trip to Las Vegas</td>
+      <td><span class="score score-2">2/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">54 lines. "Solo trip to Las Vegas" is a high-volume query — Vegas is one of the top solo travel destinations in the US. This page needs the same treatment as NYC: itinerary, budget breakdown, Strip vs off-Strip trade-offs, solo-specific tips (solo dining, solo show tickets, casino etiquette alone).</td>
+    </tr>
+
+    <tr>
+      <td>Best Areas to Stay</td>
+      <td><span class="score score-35">3.5/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">172 lines. Vegas accommodation is unique — on-Strip vs off-Strip is a massive decision with cost/convenience trade-offs. Ensure the guide covers resort fees (a major tourist complaint), casino vs non-casino hotels, and walkability.</td>
+    </tr>
+
+    <tr>
+      <td>Bookings (/lasvegas/bookings)</td>
+      <td><span class="score score-3">3/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">Functional. Hotels correctly display. Vegas bookings are highly seasonal — add a note about when to book to get good Strip rates (mid-week vs weekend, event periods).</td>
+    </tr>
+
+    <tr>
+      <td>Food</td>
+      <td><span class="score score-45">4.5/5</span><br><span class="stars">★★★★★</span></td>
+      <td><span class="tag tag-strong">Strong</span></td>
+      <td class="feedback">552 lines — the best food page on the site. Vegas food is a genuine travel category (celebrity chefs, buffets, off-Strip local spots). Detailed, specific, and well-organised. Add price ranges for each restaurant category to help budget-conscious readers.</td>
+    </tr>
+
+    <tr>
+      <td>Group Travel</td>
+      <td><span class="score score-4">4/5</span><br><span class="stars">★★★★☆</span></td>
+      <td><span class="tag tag-strong">Strong</span></td>
+      <td class="feedback">454 lines. Vegas group travel is a massive category (bachelor/bachelorette parties, corporate trips). If this page doesn't explicitly address those use cases, it's missing the highest-intent group travel searches.</td>
+    </tr>
+
+    <tr>
+      <td>Is Las Vegas Safe at Night</td>
+      <td><span class="score score-25">2.5/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">88 lines. Vegas safety at night has specific patterns (Strip vs Fremont vs off-Strip). Needs explicit section on casino floor safety, scams targeting tourists, drink spiking awareness, and safe rideshare pickup spots.</td>
+    </tr>
+
+    <tr>
+      <td>Landmark</td>
+      <td><span class="score score-45">4.5/5</span><br><span class="stars">★★★★★</span></td>
+      <td><span class="tag tag-strong">Strong</span></td>
+      <td class="feedback">467 lines. Strong. Vegas landmarks have the unique characteristic of being inside casinos or behind paywalls — ensure the page distinguishes free-to-see vs ticketed vs casino-access-only attractions.</td>
+    </tr>
+
+    <tr>
+      <td>Neighborhood Guide</td>
+      <td><span class="score score-25">2.5/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">52 lines. Vegas "neighbourhoods" are not standard (it's resort corridors, not residential areas). The guide needs to re-frame this: Strip North, Strip South, Fremont Street, Henderson, Summerlin — with a clear "which is right for you" decision framework.</td>
+    </tr>
+
+    <tr>
+      <td>Female Solo Travel Guide</td>
+      <td><span class="score score-2">2/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">55 lines. Vegas solo female travel has a specific search intent — safety in casinos, navigating nightlife alone, scam awareness, solo show experiences. Generic female travel advice won't satisfy this intent.</td>
+    </tr>
+
+    <tr>
+      <td>Safety Guide</td>
+      <td><span class="score score-3">3/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">46-line client but mirrors the NYC safety component structure. If the underlying content is Vegas-specific (timeshare scams, pick-pockets on the Strip, fake promoters), this rates higher. Audit to confirm.</td>
+    </tr>
+
+    <tr>
+      <td>Solo Itinerary</td>
+      <td><span class="score score-4">4/5</span><br><span class="stars">★★★★☆</span></td>
+      <td><span class="tag tag-strong">Strong</span></td>
+      <td class="feedback">289 lines. Strong day-by-day structure. Vegas itineraries need to account for late starts (shows end at 2am) — ensure the schedule reflects how people actually visit Vegas, not a standard 9am–6pm structure.</td>
+    </tr>
+
+    <tr>
+      <td>Things To Do</td>
+      <td><span class="score score-35">3.5/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">295 lines. Good base. Vegas has strong "off-Strip" search intent (what to do in Vegas besides gamble) — make sure this cluster is explicitly served with day trips (Grand Canyon, Valley of Fire, Red Rock Canyon).</td>
+    </tr>
+
+    <tr>
+      <td>Itinerary (legacy)</td>
+      <td><span class="score score-2">2/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">73 lines. Same duplicate issue as LA — consolidate with 301 into solo-itinerary or expand into a distinctly different product (e.g. Vegas 4-day trip with day trips).</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ORLANDO -->
+<div class="city-block">
+  <div class="city-title">🎡 Orlando — Least developed city, significant content gaps</div>
+  <table>
+    <tr><th>Page</th><th>Rating</th><th>Tag</th><th>Feedback</th></tr>
+
+    <tr>
+      <td>Hub (/orlando)</td>
+      <td><span class="score score-15">1.5/5</span><br><span class="stars">★☆☆☆☆</span></td>
+      <td><span class="tag tag-shell">Shell</span></td>
+      <td class="feedback">41-line shell. Orlando has strong family and solo travel search volume, especially around theme parks. The hub needs to position the site's Orlando content clearly — "we cover more than Disney."</td>
+    </tr>
+
+    <tr>
+      <td>Solo Trip to Orlando</td>
+      <td><span class="score score-2">2/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">51 lines. "Solo trip to Orlando" is an underserved query — most content assumes groups or families. Strong opportunity to own this niche if the content covers theme park solo tips, solo dining, meeting people in Orlando.</td>
+    </tr>
+
+    <tr>
+      <td>Best Areas to Stay</td>
+      <td><span class="score score-35">3.5/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">174 lines. The best Orlando page. Orlando accommodation is highly complex (on-property Disney vs I-Drive vs Downtown vs International Drive) — ensure the guide maps areas to theme park access and budget levels clearly.</td>
+    </tr>
+
+    <tr>
+      <td>Bookings (/orlando/bookings)</td>
+      <td><span class="score score-3">3/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">Functional. Same editorial gap as other cities above the hotel carousel.</td>
+    </tr>
+
+    <tr>
+      <td>Food</td>
+      <td><span class="score score-3">3/5</span><br><span class="stars">★★★☆☆</span></td>
+      <td><span class="tag tag-decent">Decent</span></td>
+      <td class="feedback">55 lines but high-quality inline content — specific restaurants (The Ravenous Pig, Se7en Bites, Luma on Park), price ranges, genuine local knowledge. The quality is there, the quantity isn't. Expand to 300+ lines with more neighbourhood coverage and add a "beyond theme park dining" angle.</td>
+    </tr>
+
+    <tr>
+      <td>Group Travel</td>
+      <td><span class="score score-2">2/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">61 lines. Orlando group travel is dominated by theme park groups — a major missed opportunity. Needs park strategy for groups, group ticket discounts, multi-generational travel tips.</td>
+    </tr>
+
+    <tr>
+      <td>Is Orlando Safe at Night</td>
+      <td><span class="score score-25">2.5/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">90 lines. Orlando's night safety question is about I-Drive vs resort bubble vs Downtown. Theme park areas feel safe; other parts of Orlando have higher crime. This nuance is absent from most guides and would differentiate the content.</td>
+    </tr>
+
+    <tr>
+      <td>Landmark</td>
+      <td><span class="score score-25">2.5/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">62 lines. Orlando "landmarks" beyond the theme parks are under-covered everywhere online — this is a content gap opportunity. Bok Tower Gardens, Kraft Azalea Garden, Winter Park Chain of Lakes, the Orlando Science Center — specific, local content would rank.</td>
+    </tr>
+
+    <tr>
+      <td>Neighborhood Guide</td>
+      <td><span class="score score-15">1.5/5</span><br><span class="stars">★☆☆☆☆</span></td>
+      <td><span class="tag tag-shell">Shell</span></td>
+      <td class="feedback">41 lines — essentially empty. Orlando's neighbourhoods are confusing to visitors (Kissimmee vs Lake Buena Vista vs I-Drive vs SODO vs Milk District are all "Orlando"). This guide could genuinely help travellers and rank for neighbourhood-specific queries.
+        <div class="priority">⚠ Biggest content gap on the Orlando cluster</div></td>
+    </tr>
+
+    <tr>
+      <td>Female Solo Travel Guide</td>
+      <td><span class="score score-2">2/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">57 lines. Orlando solo female travel is underserved — the Disney solo trip angle in particular has dedicated communities (Solo Disney travellers are a real niche). Cover: solo park days, dining alone at table service, meeting people at Disney/Universal, safety at resort vs off-resort.</td>
+    </tr>
+
+    <tr>
+      <td>Safety Guide</td>
+      <td><span class="score score-2">2/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">48 lines. Orlando's safety profile is split — tourist zones are very safe, but rental car break-ins at attractions and Downtown Orlando have specific risks. Generic safety advice misses what travellers actually search for.</td>
+    </tr>
+
+    <tr>
+      <td>Solo Itinerary</td>
+      <td><span class="score score-25">2.5/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">73 lines. An Orlando solo itinerary needs to answer the core question: do I need a car? And which parks are worth it as a solo adult? These are the decisions that drive searches and this page needs to own them.</td>
+    </tr>
+
+    <tr>
+      <td>Things To Do</td>
+      <td><span class="score score-25">2.5/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">61 lines. "Things to do in Orlando beyond Disney" is a strong search cluster — Kennedy Space Center, Everglades day trips, Clearwater Beach, St. Augustine. This page doesn't go far enough beyond the obvious.</td>
+    </tr>
+
+    <tr>
+      <td>Itinerary (legacy)</td>
+      <td><span class="score score-25">2.5/5</span><br><span class="stars">★★☆☆☆</span></td>
+      <td><span class="tag tag-thin">Thin</span></td>
+      <td class="feedback">81 lines. Same consolidation issue as LA and Las Vegas legacy itinerary pages.</td>
+    </tr>
+  </table>
+</div>
+
+<!-- PRIORITY LIST -->
+<div class="city-block">
+  <div class="city-title">🎯 Top 10 Priority Fixes (highest impact / lowest effort)</div>
+  <table>
+    <tr><th>#</th><th>Page</th><th>Fix</th><th>Why it matters</th></tr>
+    <tr><td>1</td><td>All 4 Hub pages</td><td>Write 500+ word editorial intro for /nyc, /la, /lasvegas, /orlando hubs</td><td>Hub pages are your internal link anchor — thin hubs dilute the whole cluster's authority</td></tr>
+    <tr><td>2</td><td>NYC — Is Safe at Night</td><td>Expand to 400+ lines with neighbourhood-by-neighbourhood breakdown</td><td>GSC already shows impressions with 0 clicks — low-hanging conversion</td></tr>
+    <tr><td>3</td><td>LA + LV + Orlando — Solo Trip pages</td><td>Add itinerary, budget breakdown, and scenario sections matching NYC's depth</td><td>These are the highest-intent pages in each city cluster</td></tr>
+    <tr><td>4</td><td>Orlando — Neighborhood Guide</td><td>Full rewrite from 41 lines to 300+ lines</td><td>Most under-developed page on the site; Orlando neighbourhoods confuse travellers</td></tr>
+    <tr><td>5</td><td>All Female Solo Travel Guides (LA, LV, Orlando)</td><td>Add city-specific scenarios, not generic advice</td><td>Female solo travel is a high-engagement niche — generic content gets bounced</td></tr>
+    <tr><td>6</td><td>NYC + LA Subway/Metro Map pages</td><td>Add editorial layer: key routes, tourist stops, how to buy tickets</td><td>Maps without context are file downloads, not content</td></tr>
+    <tr><td>7</td><td>Legacy Itinerary pages (LA, LV, Orlando)</td><td>301 redirect to solo-itinerary or expand into distinct 5-day product</td><td>Duplicate content signal hurting indexation</td></tr>
+    <tr><td>8</td><td>Orlando — Food</td><td>Expand from 55 to 300+ lines — quality is there, quantity isn't</td><td>Food content earns backlinks and time-on-page</td></tr>
+    <tr><td>9</td><td>All Booking pages</td><td>Add 100-word editorial trust section above hotel carousel</td><td>Purely transactional pages have high bounce rates</td></tr>
+    <tr><td>10</td><td>LV — Neighbourhood Guide</td><td>Reframe from standard neighbourhoods to Strip zones + off-Strip areas</td><td>Vegas geography is unlike other cities — standard guide templates don't work</td></tr>
+  </table>
+</div>
+
+</body>
+</html>

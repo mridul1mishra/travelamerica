@@ -11,6 +11,42 @@
         "Keep to the Strip and Fremont Street at night; both are busy and patrolled."
       ],
       "link": "/destination/lasvegas/safety-guide"
+    },
+    {
+      "id": "budget",
+      "title": "What a Solo Las Vegas Trip Actually Costs in 2026",
+      "summary": "Vegas looks cheap until you add up resort fees, gambling losses, and $30 cocktails. Here's what solo travelers actually spend.",
+      "bullets": [
+        "Budget ($120–180/day): Off-Strip casino hotel ($60–90/night, lower mid-week), $20 gambling limit treated as entertainment, buffet breakfasts, walking the Strip for free shows.",
+        "Mid-range ($250–380/day): Mid-Strip hotel like Park MGM or Vdara ($150–220/night), one show ticket ($80–120), two good meals, moderate gambling budget ($50).",
+        "Splurge ($500+/day): Bellagio, Aria, or Wynn ($300–600/night), Cirque du Soleil or a residency concert, fine dining ($80–150pp), pool club access.",
+        "The resort fee trap: virtually every Strip hotel charges $35–55/night in mandatory resort fees on top of the room rate. Always check the total before booking — the listed price is never the real price."
+      ],
+      "link": "/destination/lasvegas/best-areas-to-stay"
+    },
+    {
+      "id": "transport",
+      "title": "Getting Around Las Vegas as a Solo Traveler",
+      "summary": "Most of Las Vegas is walkable if you're staying on the Strip. But the Strip is 4.2 miles long and the Nevada heat is serious. Know your options before you arrive.",
+      "bullets": [
+        "Walking the Strip works between 9am–11pm in spring and fall. In summer (June–September), midday heat hits 105–115°F — take the casino-to-casino skybridge system between MGM, New York-New York, Park MGM, and Aria to stay cool.",
+        "The Las Vegas Monorail ($5/ride, $15/day pass) runs along the east side of the Strip from MGM Grand to the Sahara. Useful for avoiding foot traffic but doesn't cover Bellagio, Caesars, or the Venetian side.",
+        "Uber and Lyft: use designated rideshare pickup zones at every major casino (marked with app icons). Never get in a car that approaches you outside — Vegas has persistent unlicensed cab scams targeting tourists.",
+        "Fremont Street: 4 miles from the Strip. Take the Deuce bus ($6/2hr pass) or an $8–12 Uber. Don't walk between the Strip and Fremont at night."
+      ],
+      "link": "/destination/lasvegas/solo-itinerary"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Las Vegas Solo",
+      "summary": "Vegas has no real off-season, but crowd and heat levels vary dramatically. Timing affects everything from hotel rates to walkability.",
+      "bullets": [
+        "March–May: Ideal. 75–90°F, comfortable for walking the Strip, no summer heat extremes. Spring break (mid-March to mid-April) spikes crowds and rates — avoid or book 3 months ahead.",
+        "June–September: Extreme heat (105–115°F). Pool season is in full swing — if you're there for pool parties and nightlife, this is the time. Rates are actually lower mid-week despite summer because business travel drops.",
+        "October–November: Best overall. 70–85°F, NFL and NASCAR events bring energy, Halloween at Vegas is a spectacle. Book at least 6 weeks out.",
+        "December–February: Cold nights (40–55°F), quiet mid-week. New Year's Eve is the single most expensive weekend of the year — rates triple and the Strip is dangerously crowded."
+      ],
+      "link": "/destination/lasvegas/safety-guide"
     }
   ]
 }

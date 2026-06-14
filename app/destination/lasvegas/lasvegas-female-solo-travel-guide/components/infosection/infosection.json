@@ -4,10 +4,36 @@
       "id": "safety",
       "title": "Is Las Vegas Safe for Solo Female Travelers?",
       "summary": "A calm, practical overview before we dive into Vegas-specific scenarios.",
-        "bullets": [
-            "Las Vegas is safe for solo female travelers in the main tourist corridors. The Strip is one of the most heavily surveilled and policed stretches in America, and mid-Strip resorts like the Bellagio, Cosmopolitan, Aria, and Wynn have excellent in-house security. The real risks here are specific — over-drinking, drink tampering in crowded clubs, unlicensed cabs outside venues, and isolated blocks off the Strip after midnight — rather than widespread.", "This guide sticks to actual situations: pacing free casino drinks, getting a safe ride home from a club, walking the Strip at night, and choosing a resort where re-entering late feels easy. No scare stories — just what to do when each comes up.", "Whether you're at a rooftop bar, a pool party, a comedy show, or heading back to your room at 2am, the point is the same: keep your drink protected, stay on the busy corridors, and know your move if something feels off."
-    ],
+      "bullets": [
+        "Las Vegas is safe for solo female travelers in the main tourist corridors. The Strip is one of the most heavily surveilled and policed stretches in America, and mid-Strip resorts like the Bellagio, Cosmopolitan, Aria, and Wynn have excellent in-house security. The real risks here are specific — over-drinking, drink tampering in crowded clubs, unlicensed cabs outside venues, and isolated blocks off the Strip after midnight — rather than widespread.",
+        "This guide sticks to actual situations: pacing free casino drinks, getting a safe ride home from a club, walking the Strip at night, and choosing a resort where re-entering late feels easy. No scare stories — just what to do when each comes up.",
+        "Whether you're at a rooftop bar, a pool party, a comedy show, or heading back to your room at 2am, the point is the same: keep your drink protected, stay on the busy corridors, and know your move if something feels off."
+      ],
       "link": "/destination/lasvegas/lasvegas-female-solo-travel-guide"
+    },
+    {
+      "id": "nightlife",
+      "title": "Solo Female Nightlife in Las Vegas: What Actually Works",
+      "summary": "Vegas nightlife as a solo woman is genuinely good — if you approach it correctly. Club cover charges, drink safety, and knowing which venues are solo-friendly changes everything.",
+      "bullets": [
+        "Guest list entry: most major clubs (XS, Omnia, Marquee, Drai's) offer free or discounted entry for women on guest list before a certain time (usually 11pm). Message the club's Instagram or email the promoter. You'll be on the list in 20 minutes — no fee.",
+        "Drink safety is non-negotiable on the Strip: never leave a drink unattended, never accept a drink from a stranger you didn't watch being poured, use a drink cover scrunchie or hand-over-glass. This applies at pools and day clubs too.",
+        "Best solo-friendly venues: Sports betting lounges (Caesars, MGM Grand, Westgate) are low-pressure, social with strangers, and serve drinks while you watch. Comedy clubs (Brad Garrett's, Laugh Factory) seat you at communal tables. Rooftop bars at the Cosmopolitan (Vesper Bar) and NoMad are calm enough for a solo drink without feeling on show.",
+        "Rideshare home: always check the licence plate and driver name before getting in. Use the designated rideshare pickup zones — never get in a car outside a club that approaches you."
+      ],
+      "link": "/destination/lasvegas/lasvegas-female-solo-travel-guide"
+    },
+    {
+      "id": "casinos",
+      "title": "Navigating Casinos Alone as a Solo Female Traveler",
+      "summary": "Casino floors can feel intimidating alone. They shouldn't — here's how to navigate them confidently.",
+      "bullets": [
+        "Set a hard budget before you walk in: treat it as your entertainment spend, not money you expect back. $30–50 is enough to play slots for 2–3 hours at minimum bets.",
+        "Video poker at the bar gives you a seat, a reason to be there, and a drink — all without sitting at a table with strangers. Bartop video poker is the most solo-friendly casino format.",
+        "Table games: blackjack is the lowest-barrier entry. Strip casinos now run $15–25 minimums at most hours — for $10 tables, go off-Strip (Ellis Island, Palms) or to Fremont Street downtown. Dealers will help new players. Avoid tables with large groups of drunk men and move to a quieter table or different time of day.",
+        "Cocktail service on the casino floor is free while you're playing — but tip $1–2 per drink. This is Vegas etiquette, not optional."
+      ],
+      "link": "/destination/lasvegas/safety-guide"
     }
   ]
 }

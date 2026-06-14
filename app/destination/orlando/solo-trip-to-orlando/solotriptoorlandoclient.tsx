@@ -31,7 +31,7 @@ export default function SoloTripToOrlandoClient() {
     <>
       <OrlandoNavHeader />
       <HeroSection />
-      <BookingCTA variant="slim" text="Book your solo Orlando trip →" href="/destination/orlando/bookings?tab=flights&from=solo-trip-to-orlando" label="Book your trip" />
+      <BookingCTA variant="slim" text="Book hotels for your Orlando trip →" href="/destination/orlando/bookings?tab=hotels&from=solo-trip-to-orlando" label="Book your trip" />
       <QuickActionBar />
       <InfoSection sections={sectionsData.sections} />
       <WhyTrustThisGuide data={cityWhyTrustData} />
@@ -44,7 +44,7 @@ export default function SoloTripToOrlandoClient() {
       <ScenarioSection />
       <FemaleSoloTiles tiles={femaleSolo.tiles} ctaLink={femaleSolo.ctaLink} cityName="Orlando" />
       <FAQAccordion faqs={cityFaqData} />
-      <BookingCTA variant="full" text="Start your trip: book flights and hotels" href="/destination/orlando/bookings?tab=flights&from=solo-trip-to-orlando" label="Book your trip" />
+      <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/orlando/bookings?tab=hotels&from=solo-trip-to-orlando" label="Book your trip" />
       <Footer />
     </>
   );

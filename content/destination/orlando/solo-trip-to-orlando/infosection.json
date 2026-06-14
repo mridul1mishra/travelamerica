@@ -10,6 +10,42 @@
         "Treat the Florida heat as a safety issue — water, SPF 50, and midday breaks."
       ],
       "link": "/destination/orlando/safety-guide"
+    },
+    {
+      "id": "budget",
+      "title": "What a Solo Orlando Trip Actually Costs in 2026",
+      "summary": "Theme park tickets are the biggest variable in any Orlando budget. Plan around them first, then fill in accommodation and food.",
+      "bullets": [
+        "Budget ($130–200/day): I-Drive hotel ($80–110/night), date-based park ticket ($109–189/day depending on date and park), quick-service meals ($12–18), skip-the-line Genie+ on peak days ($25–35 extra).",
+        "Mid-range ($280–420/day): On-property Disney or Universal hotel ($200–320/night — includes early park entry and free transport), one park day, one table-service dinner.",
+        "Splurge ($600+/day): Deluxe Disney resort ($400–800/night), Lightning Lane Individual ($15–25/ride on top attractions), fine dining at Disney Springs or Epcot.",
+        "The hidden costs: parking at parks ($30–35/day for non-resort guests), food inside parks ($15–25 per meal), the Genie+ system ($25–35/person/day for skip-the-line), and Memorial Day/holiday date-based pricing that can push a single-day park ticket to $189."
+      ],
+      "link": "/destination/orlando/best-areas-to-stay"
+    },
+    {
+      "id": "transport",
+      "title": "Getting Around Orlando as a Solo Traveler",
+      "summary": "Orlando is car-dependent outside of the Disney and Universal resort bubbles. Your transport plan changes completely based on where you stay.",
+      "bullets": [
+        "On-property Disney hotels: free Disney transport (buses, monorail, Skyliner gondola) covers all Disney parks, Disney Springs, and water parks. You don't need a car if you're staying Disney-only.",
+        "On-property Universal hotels: free shuttle or 5-minute walk to Universal's gates. Uber to Disney takes 20–30 minutes and costs $20–30.",
+        "I-Drive hotels: no resort transport. Rent a car ($35–55/day from MCO) or use Uber. Parking at Disney ($35/day) and Universal ($30/day) adds up fast for non-resort guests.",
+        "From MCO airport: Uber to I-Drive is $25–35, to Disney is $30–45. The Brightline train connects MCO to Downtown Orlando (8 min, $5) but doesn't serve theme park areas directly."
+      ],
+      "link": "/destination/orlando/solo-itinerary"
+    },
+    {
+      "id": "best-time",
+      "title": "Best Time to Visit Orlando Solo",
+      "summary": "Park crowd levels and Florida weather move in opposite directions. The lightest crowds come in summer's brutal heat; the best weather comes in holiday peak periods. Here's how to navigate it.",
+      "bullets": [
+        "January–February (after New Year's): Lowest crowds of the year, lowest hotel rates, comfortable 65–75°F. Best overall window for solo visitors who want to maximize park time without the wait.",
+        "Early September (after Labor Day): Crowd levels drop sharply as US school resumes. Florida's rainy season is still active (afternoon showers most days) but parks are among the quietest all year.",
+        "March–April: Spring break chaos. Parks hit near-capacity from mid-March through mid-April. Avoid unless you book everything 3+ months in advance.",
+        "May–August: Florida summer means daily afternoon thunderstorms (usually 3–5pm, clearing by 6pm) and heat indexes of 95–105°F. Go early, take a midday break at the hotel, return for evening. Epic Universe opened May 2025 — summer 2026 will see peak curiosity crowds."
+      ],
+      "link": "/destination/orlando/safety-guide"
     }
   ]
 }
