@@ -4,6 +4,7 @@ export const metadata = {
   alternates: { canonical: 'https://www.travelsamericas.com/destination/orlando/solo-itinerary' },
   openGraph: { title: 'Orlando Solo Travel Itinerary 2026', description: '3-day solo Orlando itinerary — parks, space center, and the real city beyond the tourist corridor.', url: 'https://www.travelsamericas.com/destination/orlando/solo-itinerary', type: 'article' },
 };
+import orlandoItineraryFaq from '@/content/destination/orlando/solo-itinerary/faq/itineraryfaq.json';
 import OrlandoSoloItineraryClient from './orlandosoloitineraryclient';
 
 export default function OrlandoSoloItineraryPage() {
@@ -30,7 +31,7 @@ export default function OrlandoSoloItineraryPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <OrlandoSoloItineraryClient />
+      <OrlandoSoloItineraryClient grouped={orlandoItineraryFaq} />
     </>
   );
 }

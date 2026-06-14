@@ -4,10 +4,9 @@ export const metadata = {
   alternates: { canonical: 'https://www.travelsamericas.com/destination/la/solo-itinerary' },
   openGraph: { title: 'Solo Trip to Los Angeles: 3-Day Itinerary', description: 'A practical solo travel itinerary for LA — safe areas, solo-friendly activities, and honest logistics.', url: 'https://www.travelsamericas.com/destination/la/solo-itinerary', type: 'article' },
 };
-import { getFaqItinerary } from '@/app/lib/FaqData';
+import laItineraryFaq from '@/content/destination/la/solo-itinerary/faq/itineraryfaq.json';
 import LASoloItineraryClient from './lasoloitineraryclient';
 
 export default async function LASoloItineraryPage() {
-  const { faqTravelHubData } = getFaqItinerary();
-  return <LASoloItineraryClient grouped={faqTravelHubData} />;
+  return <LASoloItineraryClient grouped={laItineraryFaq} />;
 }

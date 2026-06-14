@@ -3,6 +3,16 @@ import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
+import FAQ from "@/app/components/faq/faq";
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface OrlandoSoloItineraryClientProps {
+  grouped: Record<string, FaqItem[]>;
+}
 
 const days = [
   { day: "Day 1", title: "Universal Studios — Solo Park Day", items: [
@@ -25,7 +35,7 @@ const days = [
   ]},
 ];
 
-export default function OrlandoSoloItineraryClient() {
+export default function OrlandoSoloItineraryClient({ grouped }: OrlandoSoloItineraryClientProps) {
   return (
     <main>
       <Header links={[
@@ -67,6 +77,7 @@ export default function OrlandoSoloItineraryClient() {
         href="/destination/orlando/bookings"
         label="Plan & book your trip"
       />
+      <FAQ groupedFaqs={grouped} />
       <Footer />
     </main>
   );

@@ -24,10 +24,9 @@ export const generateMetadata = () => ({
   }
 });
 
-import { getFaqItinerary } from '@/app/lib/FaqData';
+import nycItineraryFaq from '@/content/destination/nyc/solo-itinerary/faq/itineraryfaq.json';
 import SoloItineraryClient from './soloitineraryclient';
 
 export default async function SoloItineraryPage() {
-  const { faqTravelHubData } = getFaqItinerary();
-  return <SoloItineraryClient grouped={faqTravelHubData} />;
+  return <SoloItineraryClient grouped={nycItineraryFaq} />;
 }
