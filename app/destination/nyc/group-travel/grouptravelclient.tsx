@@ -5,6 +5,8 @@ import Image from 'next/image';
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from '../group-travel/grouptravel.module.css';
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import faqData from '@/content/destination/nyc/group-travel/faq/faqsection.json';
 
 export default function GroupTravelPage() {
   const schema1 = {
@@ -412,6 +414,7 @@ return (
         </section>
 
         <BookingCTA variant="full" text="Book flights and stays for your group" href="/destination/nyc/booking?tab=hotels&from=group-travel" label="Book your trip" />
+        <FAQAccordion faqs={faqData} />
         <Footer />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema5) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema4) }}/>

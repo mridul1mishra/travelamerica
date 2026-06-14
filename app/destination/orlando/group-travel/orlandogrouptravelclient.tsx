@@ -1,7 +1,10 @@
+"use client";
 import Link from "next/link";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import faqData from '@/content/destination/orlando/group-travel/faq/faqsection.json';
 import styles from "@/app/destination/city-hub.module.css";
 
 const groupTips = [
@@ -55,6 +58,7 @@ export default function OrlandoGroupTravelClient() {
         href="/destination/orlando/bookings"
         label="Book group travel"
       />
+      <FAQAccordion faqs={faqData} />
       <Footer />
     </main>
   );

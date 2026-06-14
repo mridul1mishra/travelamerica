@@ -76,6 +76,25 @@ const config: CityBookingConfig = {
   activities: thingsToDoData as CityBookingConfig["activities"],
 };
 
+const nycBookingIntro = (
+  <section style={{ maxWidth: '720px', margin: '0 auto 32px', padding: '0 16px' }}>
+    <h2 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '12px' }}>
+      Book your New York City trip
+    </h2>
+    <p style={{ color: '#555', lineHeight: 1.6, marginBottom: '12px' }}>
+      NYC hotels price unpredictably — the same room can swing 40% depending on the week.
+      Avoid booking over major events (UN General Assembly in September, NYC Marathon in
+      November, Fashion Week in February and September). Mid-January through March and
+      late August are the lowest-demand windows; expect 25–35% below peak rates.
+    </p>
+    <ul style={{ color: '#555', lineHeight: 1.8, paddingLeft: '20px', marginBottom: '12px' }}>
+      <li><strong>Flights:</strong> JFK and EWR typically beat LGA on international and long-haul routes. Book 6–8 weeks ahead for domestic, 10–14 weeks for transatlantic.</li>
+      <li><strong>Hotels:</strong> Stay near a subway express stop (1/2/3 on the West Side; 4/5/6 on the East Side; A/C/E for Midtown West) — you'll save time every day.</li>
+      <li><strong>Activities:</strong> Book Empire State Building and Statue of Liberty ferry tickets at least 3–5 days ahead. TKTS in Times Square sells same-day Broadway discounts from 30–50% off.</li>
+    </ul>
+  </section>
+);
+
 export default function BookFlightsClient() {
-  return <BookingClient config={config} />;
+  return <BookingClient config={config} introSection={nycBookingIntro} />;
 }

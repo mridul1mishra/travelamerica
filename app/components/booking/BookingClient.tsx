@@ -96,7 +96,7 @@ function getInitialTab(param: string | null, validTabs: Set<TabKey>): TabKey {
 
 // ── Shared component ─────────────────────────────────────────────────────────
 
-function BookingClientInner({ config }: { config: CityBookingConfig }) {
+function BookingClientInner({ config, introSection }: { config: CityBookingConfig; introSection?: React.ReactNode }) {
   const {
     cityName, cityHref, bookingHref, headerImage, bannerText, pageTitle,
     tabs, tabRail, relatedGroups, flights, hotels, activities,
@@ -129,6 +129,8 @@ function BookingClientInner({ config }: { config: CityBookingConfig }) {
       </nav>
 
       {pageTitle && <h1 className={styles.relatedHeading}>{pageTitle}</h1>}
+
+      {introSection}
 
       {/* Tab bar */}
       <div className={styles.tabBar} role="tablist" aria-label="Booking options">
@@ -324,10 +326,10 @@ function BookingClientInner({ config }: { config: CityBookingConfig }) {
 }
 
 // useSearchParams() must be wrapped in a Suspense boundary for static export.
-export default function BookingClient({ config }: { config: CityBookingConfig }) {
+export default function BookingClient({ config, introSection }: { config: CityBookingConfig; introSection?: React.ReactNode }) {
   return (
     <Suspense fallback={null}>
-      <BookingClientInner config={config} />
+      <BookingClientInner config={config} introSection={introSection} />
     </Suspense>
   );
 }

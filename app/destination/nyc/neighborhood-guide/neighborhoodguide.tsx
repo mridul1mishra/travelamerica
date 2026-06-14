@@ -13,6 +13,9 @@ import GettingAround from "./components/Gettingaround/Gettingaround";
 import SafetyOverview from "./components/SafetyOverview/Safetyoverview";
 import NeighborhoodGuideCTA from "./components/Neighborhoodguidecta/Neighborhoodguidecta";
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import { WhyTrustThisGuide } from '@/app/components/destination/whytrustitem/whytrustthisguide';
+import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import faqData from '@/content/destination/nyc/neighborhood-guide/faq/faqsection.json';
 
 type Props = {
     tripType?: string;
@@ -32,6 +35,8 @@ export default function Neighborhoodguide({tripType, interest, duration}: Props)
         <WhereFirstTimersStay />
         <GettingAround />
         <SafetyOverview />
+        <WhyTrustThisGuide />
+        <FAQAccordion faqs={faqData} />
         <NeighborhoodGuideCTA tripType={tripType} interest={interest} />
         </div>
         <BookingCTA variant="full" text="See hotels in the best NYC neighborhoods" href="/destination/nyc/booking?tab=hotels&from=neighborhood-guide" label="See NYC hotels" />
