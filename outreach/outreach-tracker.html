@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Outreach Tracker — Travels Americas</title>
+<style>
+:root{color-scheme:light}
+*{box-sizing:border-box}
+body{font-family:Segoe UI,Arial,sans-serif;margin:0;background:#fafafa;color:#1a2733;padding:20px}
+h1{font-size:21px;margin:0 0 2px}
+.sub{color:#5f6e7a;font-size:13px;margin:0 0 14px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
+.count{background:#fff;border:1px solid #e3e8ec;border-radius:20px;padding:5px 12px;font-size:12px;font-weight:600}
+.count b{font-size:14px}
+.btns{margin-left:auto;display:flex;gap:8px}
+button{font-family:inherit;font-size:13px;font-weight:600;border:1px solid #14283C;background:#14283C;color:#fff;padding:7px 14px;border-radius:7px;cursor:pointer}
+button.ghost{background:#fff;color:#14283C}
+button:hover{opacity:.9}
+.filterbar{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;font-size:12px;align-items:center}
+.filterbar select,.filterbar input{font-family:inherit;font-size:12px;padding:5px 8px;border:1px solid #cdd5db;border-radius:6px}
+table{border-collapse:collapse;width:100%;background:#fff;font-size:12.5px;border:1px solid #e3e8ec}
+th{background:#14283C;color:#fff;text-align:left;padding:8px 9px;position:sticky;top:0;z-index:2;font-size:12px}
+td{padding:7px 9px;border-bottom:1px solid #eef1f3;vertical-align:top}
+tr:hover td{background:#f6f9fb}
+.name{font-weight:700;color:#14283C;font-size:13px}
+.cat{display:inline-block;font-size:10.5px;color:#5f6e7a;margin-top:2px}
+.contact{font-size:11.5px;color:#1a2733;max-width:200px;word-break:break-word}
+.aud{font-size:11px;color:#5f6e7a;max-width:150px}
+.pitch{font-size:11px;color:#42525e;max-width:230px}
+.info{cursor:help;color:#85540a;font-weight:700;font-size:11px;border:1px solid #e9d9b8;border-radius:4px;padding:0 5px;background:#FAEEDA}
+select.status,input.dt,input.out{font-family:inherit;font-size:12px;padding:5px 6px;border:1px solid #cdd5db;border-radius:6px;width:100%}
+input.out{min-width:120px}
+select.status{font-weight:600}
+.s-verify{background:#FCEBEB;color:#791F1F;border-color:#f1c9c9}
+.s-ready{background:#E8EEF5;color:#14283C}
+.s-sent{background:#FAEEDA;color:#633806;border-color:#e9d9b8}
+.s-replied{background:#E3EEFB;color:#1d4e89}
+.s-yes{background:#E1F5EE;color:#085041;border-color:#b6e2d3}
+.s-no{background:#eceff1;color:#6b7780}
+a{color:#1d4e89;text-decoration:none}a:hover{text-decoration:underline}
+.saved{font-size:11px;color:#085041;font-weight:600;opacity:0;transition:opacity .3s}
+.saved.show{opacity:1}
+</style></head><body>
+<h1>Partnership outreach tracker</h1>
+<p class="sub">travelsamericas.com · 21 targets · edit status, dates &amp; outcomes inline — changes save automatically in this browser. Use <b>Export CSV</b> to keep a saved copy.</p>
+
+<div class="bar" id="counts"></div>
+
+<div class="filterbar">
+  <label>Filter status:
+    <select id="fstatus"><option value="">All</option><option>Verify first</option><option>Ready</option><option>Sent</option><option>Replied</option><option>Yes</option><option>No</option></select>
+  </label>
+  <label>Category:
+    <select id="fcat"><option value="">All</option><option value="A">A – Hostels</option><option value="B">B – Blogs/Newsletters</option><option value="C">C – Platforms/Apps</option></select>
+  </label>
+  <input id="fsearch" placeholder="Search name…" size="16">
+  <span class="saved" id="saved">✓ saved</span>
+  <div class="btns">
+    <button class="ghost" onclick="fillFollowups()">Auto-fill follow-up (+6d)</button>
+    <button class="ghost" onclick="resetAll()">Reset</button>
+    <button onclick="exportCSV()">Export CSV</button>
+  </div>
+</div>
+
+<table id="tbl">
+<thead><tr>
+<th style="width:14%">Target</th><th style="width:16%">Contact</th><th style="width:11%">Audience</th>
+<th style="width:18%">Pitch angle</th><th style="width:11%">Status</th>
+<th style="width:9%">Sent</th><th style="width:9%">Follow-up</th><th style="width:12%">Outcome</th>
+</tr></thead>
+<tbody id="rows"></tbody>
+</table>
+
+<script>
+const SEED=[
+{n:"NY Moore Hostel",c:"A – Hostel",ct:"✅ info@nymoorehostel.com",aud:"~30–60 beds",p:"PDF as check-in welcome resource; QR on reception board",nt:"3- and 6-bed female-only dorms w/ en-suite confirmed.",st:"Ready"},
+{n:"The Local NY",c:"A – Hostel",ct:"✅ info@thelocalny.com · +1-347-738-5251",aud:"Mid-size, LIC",p:"Co-brand PDF for female guests; 'safety guide from NYC travel experts'",nt:"Female-only & mixed dorms confirmed; near subway.",st:"Ready"},
+{n:"Chelsea International Hostel",c:"A – Hostel",ct:"✅ reservations@chelseahostel.com · 212-647-0010",aud:"~150+ beds",p:"PDF to solo female guests; co-brand as Chelsea neighborhood guide",nt:"Dorms confirmed; verify female-only availability directly.",st:"Ready"},
+{n:"Q4 Hotel & Hostel",c:"A – Hostel",ct:"✅ reservations@q4hotel.com · groups@q4hotel.com · 718-706-7700",aud:"~100+ beds, Queens",p:"'Safe NYC guide' for female dorm guests; PDF at reception",nt:"✓ Phone-confirmed open. 4- & 6-bed female-only dorms listed.",st:"Ready"},
+{n:"HI NYC Hostel",c:"A – Hostel",ct:"✅ reserve.newyork@hiusa.org · 212-932-2300",aud:"~580 beds",p:"PDF as pre-arrival download resource; co-brand with HI branding",nt:"6-bed female-only dorms confirmed; email Cloudflare-decoded.",st:"Ready"},
+{n:"Jazz on the Park",c:"A – Hostel",ct:"☎ +1 646-438-9222 (phone-confirmed)",aud:"~50–100 beds, UWS",p:"Central Park location; PDF as guest welcome resource at check-in",nt:"✓ Phone verification done. 'Single Bed in Female Dorm' confirmed.",st:"Ready"},
+{n:"International Student Center",c:"A – Hostel",ct:"✗ Unreachable — site redirects; phone unanswered",aud:"~50–100 beds",p:"First-time NYC visitors = ideal PDF audience; safety resource for first solo trip",nt:"Dropped Jun 2026: contact page redirects elsewhere and phone (212-787-7706) went unanswered. No working contact.",st:"No"},
+{n:"Brooklyn Riviera",c:"A – Hostel",ct:"✗ Website closed",aud:"~20–40 beds, Crown Heights",p:"Brooklyn perspective from safety-first guide; PDF covers all boroughs",nt:"Tested Jun 2026: website is closed/down — likely out of business. Dropped from outreach.",st:"No"},
+{n:"Jessie on a Journey",c:"B – Blog/Newsletter",ct:"✅ Contact form → 'Brand Partnerships'",aud:"~20k–50k email list",p:"NYC-based blogger; PDF complements her guides; offer co-creation credit",nt:"Top Cat B target: NYC-focused, paid email sponsorships, active since 2009.",st:"Ready"},
+{n:"She Is Not Lost",c:"B – Blog/Newsletter",ct:"✅ hello@sheisnotlost.com",aud:"~400k IG (stretch)",p:"Gift PDF to her community; aligns w/ female travel empowerment brand",nt:"Above 50k ceiling but high alignment — stretch target.",st:"Ready"},
+{n:"Absolutely Lucy",c:"B – Blog/Newsletter",ct:"✅ Contact form",aud:"~30–50k (UK)",p:"Covers North America; NYC solo guide directly relevant",nt:"Has 'Work With Me' page; UK-based so NYC content high-value.",st:"Ready"},
+{n:"A Single Woman Traveling",c:"B – Blog/Newsletter",ct:"✅ Contact form",aud:"~10–30k",p:"Boutique itinerary focus matches PDF format; free resource for NYC-bound members",nt:"Runs tours/courses/membership — strong alignment.",st:"Ready"},
+{n:"Adventurous Kate",c:"B – Blog/Newsletter",ct:"✅ Form at /work-with-kate/",aud:"8k+ news (60% open); 140k visits",p:"Readers visit NYC often; 60% open rate makes newsletter placement high-value",nt:"Newsletter squarely 5k–50k; media kit on work-with-kate page. Expect a rate card.",st:"Ready"},
+{n:"Wanderlust and Lipstick",c:"B – Blog/Newsletter",ct:"✅ beth@wanderlustandlipstick.com",aud:"~10–30k (since 2007)",p:"Long-standing authority; NYC top US destination for her audience",nt:"✓ Email confirmed on contact page (Jun 2026).",st:"Ready"},
+{n:"Where Goes Rose",c:"B – Blog/Newsletter",ct:"✅ wheregoesrose@gmail.com (+ form on /work-with-me/)",aud:"~5–20k",p:"Targets first-time solo travelers; NYC top-requested; PDF is exactly what readers want",nt:"Email is written as 'wheregoesrose [at] gmail [dot] com' in plain text on the page — that's why it looked blank. Form also available.",st:"Ready"},
+{n:"Young Adventuress",c:"B – Blog/Newsletter",ct:"✅ liz@youngadventuress.com · IG @youngadventuress",aud:"~30–100k",p:"Strong solo female community; potential newsletter feature",nt:"Liz Carlson (NZ); email listed on /contact-liz. May be above 50k — check audience stats.",st:"Ready"},
+{n:"NomadHer",c:"C – Platform/App",ct:"✅ aloha@nomadher.com · Partnership form (forms.gle)",aud:"400k+ women, 190 countries",p:"Feature as partner resource; PDF as in-app download for NYC-bound users",nt:"Top Cat C target; past partners Airbnb/Google/Park Hyatt.",st:"Ready"},
+{n:"Travel Ladies",c:"C – Platform/App",ct:"✅ support@traveltogether.app",aud:"iOS + Android, women-only",p:"PDF as free resource for women planning NYC trips; feature in-app/email",nt:"Email confirmed from footer; women-only safety-focused app.",st:"Ready"},
+{n:"Host A Sister",c:"C – Platform/App",ct:"✗ Unreachable — no email; phone unanswered; FB no clear contact",aud:"500k+ FB members",p:"PDF natural share in community; propose pinned post or welcome resource",nt:"Dropped Jun 2026: no public email, phone unanswered, Facebook gave no clear contact route. Revisit if an admin contact surfaces.",st:"No"},
+{n:"Tourlina",c:"C – Platform/App",ct:"✅ michael@tourlina.com",aud:"130k+/day reach",p:"Press/editorial partnership or PDF feature in app blog/newsletter",nt:"Paid tiers €9k–€60k/yr exist — approach michael@ for editorial co-content instead.",st:"Ready"},
+{n:"Solo Female Traveler Network (SoFe)",c:"C – Platform/App",ct:"✗ Unreachable — Cloudflare email; phone unanswered; FB no clear contact",aud:"100k+ newsletter",p:"Members organize NYC group trips; PDF as free download for subscribers",nt:"Dropped Jun 2026: email hidden, phone (+1-858-757-7633) unanswered, Facebook gave no clear contact. Revisit if a newsletter reply-to surfaces.",st:"No"},
+];
+const KEY="ta_outreach_tracker_v4";
+const STATUSES=["Verify first","Ready","Sent","Replied","Yes","No"];
+const cls={"Verify first":"s-verify","Ready":"s-ready","Sent":"s-sent","Replied":"s-replied","Yes":"s-yes","No":"s-no"};
+let data=load();
+
+function load(){
+  try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&s.length===SEED.length)return s;}catch(e){}
+  return SEED.map(r=>({...r,sent:"",fu:"",out:""}));
+}
+function save(){localStorage.setItem(KEY,JSON.stringify(data));flash();render(false);}
+function flash(){const e=document.getElementById('saved');e.classList.add('show');clearTimeout(window._t);window._t=setTimeout(()=>e.classList.remove('show'),1200);}
+
+function render(rebuild=true){
+  const fs=document.getElementById('fstatus').value, fc=document.getElementById('fcat').value, fq=document.getElementById('fsearch').value.toLowerCase();
+  // counts
+  const counts={};STATUSES.forEach(s=>counts[s]=0);data.forEach(r=>counts[r.st]=(counts[r.st]||0)+1);
+  document.getElementById('counts').innerHTML=
+    `<span class="count"><b>${data.length}</b> targets</span>`+
+    STATUSES.map(s=>`<span class="count" style="border-color:#e3e8ec"><b>${counts[s]}</b> ${s}</span>`).join('');
+  if(!rebuild)return;
+  const tb=document.getElementById('rows');tb.innerHTML='';
+  data.forEach((r,i)=>{
+    if(fs&&r.st!==fs)return;
+    if(fc&&!r.c.startsWith(fc))return;
+    if(fq&&!r.n.toLowerCase().includes(fq))return;
+    const tr=document.createElement('tr');
+    tr.innerHTML=
+      `<td><span class="name">${r.n}</span><br><span class="cat">${r.c}</span> <span class="info" title="${r.nt.replace(/"/g,'&quot;')}">i</span></td>`+
+      `<td class="contact">${r.ct}</td>`+
+      `<td class="aud">${r.aud}</td>`+
+      `<td class="pitch">${r.p}</td>`+
+      `<td><select class="status ${cls[r.st]}" data-i="${i}" data-f="st">${STATUSES.map(s=>`<option ${s===r.st?'selected':''}>${s}</option>`).join('')}</select></td>`+
+      `<td><input class="dt" type="date" data-i="${i}" data-f="sent" value="${r.sent}"></td>`+
+      `<td><input class="dt" type="date" data-i="${i}" data-f="fu" value="${r.fu}"></td>`+
+      `<td><input class="out" data-i="${i}" data-f="out" value="${r.out.replace(/"/g,'&quot;')}" placeholder="notes…"></td>`;
+    tb.appendChild(tr);
+  });
+}
+document.addEventListener('change',e=>{
+  const t=e.target;if(t.dataset&&t.dataset.f){data[t.dataset.i][t.dataset.f]=t.value;save();}
+});
+['fstatus','fcat'].forEach(id=>document.getElementById(id).addEventListener('change',()=>render(true)));
+document.getElementById('fsearch').addEventListener('input',()=>render(true));
+
+function fillFollowups(){
+  data.forEach(r=>{if(r.sent&&!r.fu){const d=new Date(r.sent);d.setDate(d.getDate()+6);r.fu=d.toISOString().slice(0,10);}});
+  save();render(true);
+}
+function resetAll(){if(confirm("Reset all status, dates and outcomes to the original list?")){localStorage.removeItem(KEY);data=load();render(true);}}
+function exportCSV(){
+  const head=["Name","Category","Contact","Audience","Pitch angle","Notes","Status","Sent date","Follow-up date","Outcome"];
+  const esc=v=>`"${String(v).replace(/"/g,'""')}"`;
+  const rows=data.map(r=>[r.n,r.c,r.ct,r.aud,r.p,r.nt,r.st,r.sent,r.fu,r.out].map(esc).join(','));
+  const csv="﻿"+head.map(esc).join(',')+"\n"+rows.join("\n");
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='outreach-target-list.csv';a.click();
+}
+render(true);
+</script>
+</body></html>

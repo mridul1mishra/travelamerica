@@ -11,7 +11,6 @@ const { Pool } = pg;
 const DATABASE_URL = process.env.DATABASE_URL;
 
 if (!DATABASE_URL) {
-  console.warn('⚠️  DATABASE_URL not set — skipping migration.');
   process.exit(0);
 }
 

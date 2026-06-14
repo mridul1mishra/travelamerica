@@ -2,6 +2,7 @@
   "name": "my-next-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "cross-env NEXT_DISABLE_TURBOPACK=true next dev",
     "build": "node scripts/migrate.mjs && next build",
@@ -41,7 +42,7 @@
     "@types/pg": "^8.20.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "baseline-browser-mapping": "^2.8.32",
+    "baseline-browser-mapping": "^2.10.37",
     "browserslist": "^4.28.0",
     "cross-env": "^10.1.0",
     "eslint": "^9",
