@@ -25,7 +25,7 @@ export default function LAHubClient() {
     <main className={styles.container}>
       <Header links={navLinks} />
       <HeroSection />
-      <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/bookings?tab=flights&from=la-hub" label="Book your LA trip" />
+      <BookingCTA variant="slim" text="Book hotels for your Los Angeles trip →" href="/destination/la/bookings?tab=hotels&from=la-hub" label="Book your LA trip" />
       <PlanningIntent />
       <WhyVisit />
       <AttractionsHub />
@@ -34,7 +34,7 @@ export default function LAHubClient() {
       <WhereToStay />
       <ItinerariesPreview />
       <DataCaptureCTA />
-      <BookingCTA variant="full" text="Compare flights, hotels and tickets for your trip" href="/destination/la/bookings?tab=flights&from=la-hub" label="Book your LA trip" />
+      <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/la/bookings?tab=hotels&from=la-hub" label="Book your LA trip" />
       <Footer />
     </main>
   );

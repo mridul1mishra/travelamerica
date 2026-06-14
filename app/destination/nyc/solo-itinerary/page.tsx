@@ -1,6 +1,6 @@
 export const generateMetadata = () => ({
-  title: "Solo Trip to NYC 2026 | 3-Day Safety & Budget Guide",
-  description:  "Explore NYC solo with confidence. 2026 guide covering safety tips, smart budgeting, local vibes, and a 3-day itinerary.",
+  title: "NYC Solo Itinerary 2026: 3-Day Plan with Safe Areas & Local Tips",
+  description:  "A 3-day NYC solo itinerary for 2026 — where to stay, what to skip, how much to budget, and the neighborhoods that actually work for solo travelers.",
   robots: {
     index: true,
     follow: true,
@@ -10,13 +10,13 @@ export const generateMetadata = () => ({
     },
     twitter: {
     card: "summary_large_image",
-    title: "3-Day Solo Travel Itinerary for New York | Travels Americas",
-    description: "Explore NYC solo with this 3-day itinerary covering landmarks, neighborhoods, and Brooklyn vibes.",
+    title: "NYC Solo Itinerary 2026: 3-Day Plan with Safe Areas & Local Tips",
+    description: "A 3-day NYC solo itinerary for 2026 — where to stay, what to skip, how much to budget, and the neighborhoods that actually work for solo travelers.",
     images: ["https://www.travelsamericas.com/data/majorcities/newyork/assets/solo-travel-itinerary.png"]
   },
   openGraph: {
-    title: "Solo Trip to NYC 2026 | 3-Day Safety & Budget Guide",
-    description: "Explore NYC solo with confidence. 2026 guide covering safety tips, smart budgeting, local vibes, and a 3-day itinerary.",
+    title: "NYC Solo Itinerary 2026: 3-Day Plan with Safe Areas & Local Tips",
+    description: "A 3-day NYC solo itinerary for 2026 — where to stay, what to skip, how much to budget, and the neighborhoods that actually work for solo travelers.",
     url: 'https://www.travelsamericas.com/destination/nyc/solo-itinerary',
     type: 'article',
     siteName: 'Travels Americas',

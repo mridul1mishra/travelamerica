@@ -1,8 +1,8 @@
 import Script from "next/script";
 
 export const generateMetadata = () => ({
-  title: 'Solo Travel to NYC: Safe Areas, Solo Itinerary + How Much It Really Costs',
-  description:  "Traveling to NYC alone? First-timer guide: safest neighborhoods, how to NOT look lost, solo-friendly food spots, and a realistic 3-day budget.",
+  title: 'Solo Trip to NYC in 2026: Safe Areas, Real Costs & 3-Day Itinerary',
+  description:  "Planning a solo trip to NYC in 2026? Here's the honest guide: safest neighborhoods to stay, how to get around without looking lost, and a realistic 3-day budget breakdown.",
   robots: {
     index: true,
     follow: true,
@@ -12,13 +12,13 @@ export const generateMetadata = () => ({
     },
     twitter: {
     card: "summary_large_image",
-    title: 'Solo Trip to NYC 2026: What First-Timers Need to Know',
-    description:  'A practical NYC solo travel guide: safest areas, transit tips, daily costs, and a 3-day itinerary. Written for first-timers who want honest answers, not hype.',
+    title: 'Solo Trip to NYC in 2026: Safe Areas, Real Costs & 3-Day Itinerary',
+    description:  "Planning a solo trip to NYC in 2026? Here's the honest guide: safest neighborhoods to stay, how to get around without looking lost, and a realistic 3-day budget breakdown.",
     images: ["https://www.travelsamericas.com/social/solo-trip-to-nyc-gritty.png"]
   },
   openGraph: {
-    title: 'Solo Travel to NYC: Safe Areas, Solo Itinerary + How Much It Really Costs',
-    description: "Traveling to NYC alone? First-timer guide: safest neighborhoods, how to NOT look lost, solo-friendly food spots, and a realistic 3-day budget.",
+    title: 'Solo Trip to NYC in 2026: Safe Areas, Real Costs & 3-Day Itinerary',
+    description: "Planning a solo trip to NYC in 2026? Here's the honest guide: safest neighborhoods to stay, how to get around without looking lost, and a realistic 3-day budget breakdown.",
     url: 'https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc',
     type: 'article',
     siteName: 'Travels Americas',

@@ -7,22 +7,22 @@
       "description": "A clear, scenario‑driven NYC Subway Safety Guide covering core principles, emergency steps, etiquette, tools, and neighborhood insights for 2026.",
       "author": {
         "@type": "Organization",
-        "name": "YourSiteName"
+        "name": "Travels Americas"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "YourSiteName",
+        "name": "Travels Americas",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://yourdomain.com/logo.png"
+          "url": "https://www.travelsamericas.com/logo.png"
         }
       },
-      "image": "https://yourdomain.com/og/subway-safety-guide.png",
-      "datePublished": "2026-01-01",
-      "dateModified": "2026-01-01",
+      "image": "https://www.travelsamericas.com/data/metadataimage/subway-safety-guide-og.webp",
+      "datePublished": "2026-06-13",
+      "dateModified": "2026-06-13",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://yourdomain.com/subway-safety-guide"
+        "@id": "https://www.travelsamericas.com/destination/nyc/subway-safety-guide"
       }
     },
 
@@ -33,13 +33,13 @@
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://yourdomain.com"
+          "item": "https://www.travelsamericas.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "NYC Subway Safety Guide",
-          "item": "https://yourdomain.com/subway-safety-guide"
+          "item": "https://www.travelsamericas.com/destination/nyc/subway-safety-guide"
         }
       ]
     },

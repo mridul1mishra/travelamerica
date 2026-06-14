@@ -186,7 +186,7 @@ const schema4 = {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema2) }}/>
     <div className="App">
       <Header image={`/data/majorcities/lasvegas/assets/solo-travel-itinerary.png`} bannerText="Solo Travel Itinerary for Las Vegas" />
-      <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=flights&from=solo-itinerary" label="Book this trip" />
+      <BookingCTA variant="slim" text="Book hotels for your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=hotels&from=solo-itinerary" label="Book this trip" />
       <section className={styles.splitSection} style={{  textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>3-Day Solo Travel Itinerary for Las Vegas</h1>
@@ -276,7 +276,7 @@ const schema4 = {
         </div>
       </section>
       <FAQ groupedFaqs={grouped}/>
-      <BookingCTA variant="full" text="Book the flights and hotels for this itinerary" href="/destination/lasvegas/bookings?tab=flights&from=solo-itinerary" label="Book this trip" />
+      <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/lasvegas/bookings?tab=hotels&from=solo-itinerary" label="Book this trip" />
       <Footer />
     </div>
     </>

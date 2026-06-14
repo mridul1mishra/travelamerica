@@ -25,7 +25,7 @@ export default function LasVegasHubClient() {
     <main className={styles.container}>
       <Header links={navLinks} />
       <HeroSection />
-      <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=flights&from=lasvegas-hub" label="Book your Vegas trip" />
+      <BookingCTA variant="slim" text="Book hotels for your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=hotels&from=lasvegas-hub" label="Book your Vegas trip" />
       <PlanningIntent />
       <WhyVisit />
       <AttractionsHub />
@@ -34,7 +34,7 @@ export default function LasVegasHubClient() {
       <WhereToStay />
       <ItinerariesPreview />
       <DataCaptureCTA />
-      <BookingCTA variant="full" text="Compare flights, hotels and tickets for your trip" href="/destination/lasvegas/bookings?tab=flights&from=lasvegas-hub" label="Book your Vegas trip" />
+      <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/lasvegas/bookings?tab=hotels&from=lasvegas-hub" label="Book your Vegas trip" />
       <Footer />
     </main>
   );

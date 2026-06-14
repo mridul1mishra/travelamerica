@@ -173,7 +173,7 @@ const schema5 = {
 return (
     <>
         <Header image={`/data/majorcities/losangeles/assets/group/la-group-travel-packing-flatlay-essentials.webp`} bannerText="Flatlay of LA group travel essentials including backpack, sunglasses, sunscreen, sneakers, and a city map" />
-        <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/bookings?tab=flights&from=group-travel" label="Book your trip" />
+        <BookingCTA variant="slim" text="Book hotels for your Los Angeles trip →" href="/destination/la/bookings?tab=hotels&from=group-travel" label="Book your trip" />
         <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
                 <h1  className={styles.sectionheading}>LA Group Travel Guide 2026</h1>
@@ -395,7 +395,7 @@ return (
         </div>
 
         </section>
-        <BookingCTA variant="full" text="Book flights and stays for your group" href="/destination/la/bookings?tab=flights&from=group-travel" label="Book your trip" />
+        <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/la/bookings?tab=hotels&from=group-travel" label="Book your trip" />
         <Footer />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema5) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema4) }}/>
