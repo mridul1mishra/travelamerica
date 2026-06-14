@@ -6,6 +6,8 @@ import Image from 'next/image';
 import styles from './lasvegasfood.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
 import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import faqData from '@/content/destination/lasvegas/food/faq/faqsection.json';
 export default function LasVegasFoodClient() {
 
     const Article = {
@@ -541,6 +543,7 @@ const howto = {
         </section>
 
         <BookingCTA variant="full" text="Book a guided Las Vegas food tour" href="/destination/lasvegas/bookings?tab=activities&from=food" label="See food tours" />
+        <FAQAccordion faqs={faqData} />
         <Footer />
         </>
     );

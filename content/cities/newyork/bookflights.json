@@ -16,7 +16,7 @@
       },
       "departure": {
         "time": "20:53",
-        "date": "Jun 13",
+        "date": "Jul 13",
         "city": "Atlanta (ATL)"
       },
       "arrival": {
@@ -26,7 +26,7 @@
       "duration": "2h 21m",
       "price": "from $69",
       "buttonText": "View Prices",
-      "buttonUrl": "https://www.aviasales.com/search/ATL1306NYC1?marker=733422",
+      "buttonUrl": "https://www.aviasales.com/search/ATL1307NYC1?marker=733422",
       "highlight": true
     },
     {
@@ -36,7 +36,7 @@
       },
       "departure": {
         "time": "06:30",
-        "date": "Jun 6",
+        "date": "Jul 6",
         "city": "Boston (BOS)"
       },
       "arrival": {
@@ -46,7 +46,7 @@
       "duration": "1h 30m",
       "price": "from $70",
       "buttonText": "View Prices",
-      "buttonUrl": "https://www.aviasales.com/search/BOS0606NYC1?marker=733422"
+      "buttonUrl": "https://www.aviasales.com/search/BOS0607NYC1?marker=733422"
     },
     {
       "airline": {
@@ -55,7 +55,7 @@
       },
       "departure": {
         "time": "06:00",
-        "date": "Jun 30",
+        "date": "Jul 30",
         "city": "Washington (DCA)"
       },
       "arrival": {
@@ -65,7 +65,7 @@
       "duration": "1h 19m",
       "price": "from $78",
       "buttonText": "View Prices",
-      "buttonUrl": "https://www.aviasales.com/search/DCA3006NYC1?marker=733422",
+      "buttonUrl": "https://www.aviasales.com/search/DCA3007NYC1?marker=733422",
       "highlight": true
     },
     {
@@ -75,7 +75,7 @@
       },
       "departure": {
         "time": "13:05",
-        "date": "Jun 17",
+        "date": "Jul 17",
         "city": "Orlando (MCO)"
       },
       "arrival": {
@@ -85,7 +85,7 @@
       "duration": "2h 56m",
       "price": "from $82",
       "buttonText": "View Prices",
-      "buttonUrl": "https://www.aviasales.com/search/MCO1706NYC1?marker=733422"
+      "buttonUrl": "https://www.aviasales.com/search/MCO1707NYC1?marker=733422"
     },
     {
       "airline": {
@@ -94,7 +94,7 @@
       },
       "departure": {
         "time": "16:44",
-        "date": "Jun 20",
+        "date": "Jul 20",
         "city": "Chicago (ORD)"
       },
       "arrival": {
@@ -104,7 +104,7 @@
       "duration": "2h 31m",
       "price": "from $84",
       "buttonText": "View Prices",
-      "buttonUrl": "https://www.aviasales.com/search/ORD2006NYC1?marker=733422",
+      "buttonUrl": "https://www.aviasales.com/search/ORD2007NYC1?marker=733422",
       "highlight": true
     },
     {
@@ -114,7 +114,7 @@
       },
       "departure": {
         "time": "20:40",
-        "date": "Jun 30",
+        "date": "Jul 30",
         "city": "Miami (MIA)"
       },
       "arrival": {
@@ -124,7 +124,7 @@
       "duration": "3h 19m",
       "price": "from $93",
       "buttonText": "View Prices",
-      "buttonUrl": "https://www.aviasales.com/search/MIA3006NYC1?marker=733422"
+      "buttonUrl": "https://www.aviasales.com/search/MIA3007NYC1?marker=733422"
     }
   ]
 }

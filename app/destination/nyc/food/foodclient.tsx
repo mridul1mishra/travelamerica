@@ -6,6 +6,8 @@ import Image from 'next/image';
 import styles from './food.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
 import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import faqData from '@/content/destination/nyc/food/faq/faqsection.json';
 export default function FoodClientPage() {
 
     const Article = {
@@ -539,6 +541,7 @@ const howto = {
         </section>
 
         <BookingCTA variant="full" text="Book a guided NYC food tour" href="/destination/nyc/booking?tab=activities&from=food" label="See food tours" />
+        <FAQAccordion faqs={faqData} />
         <Footer />
         </>
     );

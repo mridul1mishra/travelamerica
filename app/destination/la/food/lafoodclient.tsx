@@ -6,6 +6,8 @@ import Image from 'next/image';
 import styles from './lafood.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
 import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import faqData from '@/content/destination/la/food/faq/faqsection.json';
 export default function LAFoodClient() {
 
     const Article = {
@@ -395,6 +397,7 @@ const howto = {
                 </div>
         </section>
         <BookingCTA variant="full" text="Book a guided LA food tour" href="/destination/la/bookings?tab=restaurants&from=food" label="See food tours" />
+        <FAQAccordion faqs={faqData} />
         <Footer />
         </>
     );

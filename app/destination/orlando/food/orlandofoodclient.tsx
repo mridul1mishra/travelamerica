@@ -3,6 +3,8 @@ import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
+import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import faqData from '@/content/destination/orlando/food/faq/faqsection.json';
 
 const foodCategories = [
   { title: "Sand Lake Restaurant Row", blurb: "The best independent dining in greater Orlando is concentrated on Sand Lake Road between I-4 and Dr. Phillips Blvd. Highlights: The Ravenous Pig (gastropub, local craft beer, excellent burgers), Dragonfly (Japanese robata, $40–$60pp), Bosphorous Turkish (a local institution for 20+ years), and Slate (modern American, worth a special dinner). All have bar seating and take reservations.", href: "/destination/orlando/bookings?tab=restaurants" },
@@ -49,6 +51,7 @@ export default function OrlandoFoodClient() {
         href="/destination/orlando/bookings?tab=restaurants"
         label="Browse restaurants"
       />
+      <FAQAccordion faqs={faqData} />
       <Footer />
     </main>
   );
