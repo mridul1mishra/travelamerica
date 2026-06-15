@@ -77,8 +77,27 @@ const config: CityBookingConfig = {
   activities: thingsToDoData as CityBookingConfig["activities"],
 };
 
+const orlandoBookingIntro = (
+  <section style={{ maxWidth: '720px', margin: '0 auto 32px', padding: '0 16px' }}>
+    <h2 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '12px' }}>
+      Book your Orlando trip
+    </h2>
+    <p style={{ color: '#555', lineHeight: 1.6, marginBottom: '12px' }}>
+      Orlando park crowds follow school calendars closely. Mid-January through early February, late August,
+      and the first two weeks of December are the lowest-demand windows — expect 20–30% lower hotel rates
+      and noticeably shorter wait times. Avoid spring break (mid-March to mid-April), Thanksgiving week,
+      and the week between Christmas and New Year's — these are the most expensive and crowded periods of the year.
+    </p>
+    <ul style={{ color: '#555', lineHeight: 1.8, paddingLeft: '20px', marginBottom: '12px' }}>
+      <li><strong>Airport:</strong> Orlando International (MCO) is the main hub — 25 minutes to Disney, 30 to Universal. Sanford (SFB) is served by Allegiant and a few charters; it's cheaper but much further from the parks (45–55 minutes). Check whether the savings cover the extra transfer cost.</li>
+      <li><strong>Park tickets:</strong> Disney and Universal use date-based pricing — booking the same ticket 60–90 days ahead is typically $20–40 cheaper than buying at the gate. Genie+ and Lightning Lane sell out for popular rides by 7am; buy the moment the park opens.</li>
+      <li><strong>Hotels:</strong> On-site Disney and Universal hotels include early park entry, which pays back in wait time savings on busy days. Off-site hotels on International Drive are 20–30% cheaper and still within 15 minutes of both parks — the right call for shorter trips focused on 2–3 parks.</li>
+    </ul>
+  </section>
+);
+
 const orlandoBookingFaq = <FAQAccordion faqs={faqData} />;
 
 export default function OrlandoBookingsClient() {
-  return <BookingClient config={config} faqSection={orlandoBookingFaq} />;
+  return <BookingClient config={config} introSection={orlandoBookingIntro} faqSection={orlandoBookingFaq} />;
 }

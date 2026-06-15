@@ -77,8 +77,27 @@ const config: CityBookingConfig = {
   activities: thingsToDoData as CityBookingConfig["activities"],
 };
 
+const lvBookingIntro = (
+  <section style={{ maxWidth: '720px', margin: '0 auto 32px', padding: '0 16px' }}>
+    <h2 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '12px' }}>
+      Book your Las Vegas trip
+    </h2>
+    <p style={{ color: '#555', lineHeight: 1.6, marginBottom: '12px' }}>
+      Las Vegas hotel pricing is driven almost entirely by events — the same room can be $80 on a Tuesday
+      and $400 on a Friday. Avoid New Year's Eve, Super Bowl weekend, NFR (early December), CES (January),
+      and major boxing or UFC events. Monday–Thursday stays on non-event weeks are typically 40–60% cheaper
+      than the same hotel on a weekend.
+    </p>
+    <ul style={{ color: '#555', lineHeight: 1.8, paddingLeft: '20px', marginBottom: '12px' }}>
+      <li><strong>Flights:</strong> Harry Reid International (LAS) is the only practical option — it's 10 minutes from the Strip. Book 5–7 weeks ahead for domestic; Las Vegas is one of the most competitive flight routes in the US so prices rarely spike far in advance.</li>
+      <li><strong>Hotels:</strong> On-Strip hotels charge resort fees ($35–50/night) on top of the room rate — factor this in when comparing prices. Off-Strip options like the Palms or Rio have dropped fees and offer 30–40% savings with a $10 Uber to the Strip.</li>
+      <li><strong>Activities:</strong> Book show tickets 2–4 weeks ahead. Sphere and Cirque residencies sell out; most other shows have same-day availability. For clubs and pool parties, Friday and Saturday are always busier — Sunday is the best compromise of crowd size and atmosphere.</li>
+    </ul>
+  </section>
+);
+
 const lvBookingFaq = <FAQAccordion faqs={faqData} />;
 
 export default function LasVegasBookingsClient() {
-  return <BookingClient config={config} faqSection={lvBookingFaq} />;
+  return <BookingClient config={config} introSection={lvBookingIntro} faqSection={lvBookingFaq} />;
 }

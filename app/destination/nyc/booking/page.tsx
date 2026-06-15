@@ -1,5 +1,5 @@
 export const generateMetadata = () => ({
-  title: 'Book Your New York Trip | Cheap Flights, Hotels & Cruises',
+  title: 'Book Your New York Trip | Flights, Hotels & Things to Do',
   description:
     "Plan and book your New York trip — compare cheap flights, browse top hotels, and find the best cruises from NYC.",
   robots: {
