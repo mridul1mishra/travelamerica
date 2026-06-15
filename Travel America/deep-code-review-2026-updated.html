@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travels Americas — Deep Code Review (Updated)</title>
+<style>
+  :root {
+    --blue: #2E75B6;
+    --light-blue: #D5E8F0;
+    --green: #1a7f37;
+    --amber: #b35900;
+    --red: #c0392b;
+    --gray: #666;
+    --border: #ddd;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    line-height: 1.55;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    background: #fff;
+  }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 21px; margin-top: 44px; border-bottom: 2px solid var(--blue); padding-bottom: 6px; }
+  h3 { font-size: 17px; margin-top: 28px; color: #1a3a5c; }
+  .subtitle { color: var(--gray); margin-top: 0; font-size: 14px; }
+  .meta { font-size: 13px; color: var(--gray); margin-bottom: 24px; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 24px; font-size: 14px; }
+  th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--light-blue); }
+  tr:nth-child(even) td { background: #fafafa; }
+  .badge { display: inline-block; padding: 2px 9px; border-radius: 10px; font-size: 12px; font-weight: bold; color: #fff; }
+  .crit { background: var(--red); }
+  .high { background: #d9822b; }
+  .med  { background: #c8a000; }
+  .low  { background: #6b8e23; }
+  .good { background: var(--green); }
+  .resolved-box {
+    background: #eef9f0; border: 1px solid #b8e0c2; border-radius: 6px;
+    padding: 12px 16px; margin: 16px 0; font-size: 14px;
+  }
+  .resolved-box h4 { margin: 0 0 6px; color: var(--green); font-size: 14px; }
+  .new-finding {
+    background: #fff6e6; border: 1px solid #ffd699; border-radius: 6px;
+    padding: 12px 16px; margin: 16px 0; font-size: 14px;
+  }
+  .new-finding h4 { margin: 0 0 6px; color: var(--amber); font-size: 14px; }
+  code { background: #f3f3f3; padding: 1px 5px; border-radius: 3px; font-size: 13px; }
+  ul { margin-top: 6px; }
+  .footer-note { margin-top: 50px; font-size: 12px; color: var(--gray); border-top: 1px solid var(--border); padding-top: 12px; }
+  .summary-table td:first-child, .summary-table th:first-child { width: 16%; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h1>Deep Code Review — Updated</h1>
+<p class="subtitle">Travels Americas — travelsamericas.com<br>Next.js 16 App Router | TypeScript | Vercel</p>
+<p class="meta">
+  Original review: June 2, 2026 &nbsp;|&nbsp; This update: June 15, 2026<br>
+  This report re-verifies every finding from the June 2 review (and the June 14 addendum) directly against the current codebase.
+  Items confirmed already fixed have been removed from the action plan and are listed under <strong>Resolved Since Last Review</strong>.
+  Only items still present in the code remain in the Prioritised Action Plan, plus newly discovered issues.
+</p>
+
+<h2>Executive Summary</h2>
+<table class="summary-table">
+  <tr><th>Area</th><th>Rating</th><th>Notes</th></tr>
+  <tr>
+    <td>Performance</td>
+    <td><span class="badge high">Needs Work</span></td>
+    <td>City hub pages are now server components (fixed). But 110 'use client' files remain (up from 77), 0 loading.tsx files, 0 next/dynamic usage, and 28 images &gt;200KB (~54MB) still unoptimised in /public — worse than the prior count of 20.</td>
+  </tr>
+  <tr>
+    <td>Code Quality</td>
+    <td><span class="badge high">Needs Work</span></td>
+    <td>Shared <code>BookingClient.tsx</code> now exists and the 4 city "bookings" pages are thin wrappers (fixed). However, Hero/FAQ/ScenarioCard duplication has expanded far beyond the original 4–6 implementations — now dozens across all 4 cities. Inline styles grew from 93 to 295. Two orphaned 337-line files found.</td>
+  </tr>
+  <tr>
+    <td>Security &amp; Config</td>
+    <td><span class="badge med">Mostly Good</span></td>
+    <td>vercel.json redirects fixed. .env.example now committed. CSP <code>unsafe-inline</code> on script-src/style-src still present. No pre-commit secret-scanning hook yet.</td>
+  </tr>
+  <tr>
+    <td>SEO &amp; Metadata</td>
+    <td><span class="badge good">Good</span></td>
+    <td>Sitemap now covers 64 routes (was 22) — only 4 newer pages not yet added. Schema markup now present on all indexable pages except the two map-viewer "/full" pages (was 39 pages missing). nyc-safety-guide title is not actually truncated.</td>
+  </tr>
+  <tr>
+    <td>Accessibility</td>
+    <td><span class="badge good">Good</span></td>
+    <td>QuickSummary now uses h2 (fixed). cardqanda.tsx now uses a single h2 with h3 sub-questions (fixed).</td>
+  </tr>
+</table>
+
+<h2>Resolved Since Last Review</h2>
+<p>The following items from the June 2 / June 14 reports were checked against the current code and are confirmed done. No further action needed.</p>
+
+<div class="resolved-box">
+<h4>✓ Critical #1 — vercel.json redirects</h4>
+All three redirects (<code>/majorcities/lasvegas/solo-itinerary</code>, <code>/majorcities/orlando/solo-itinerary</code>, <code>/majorcities/losangeles/solo-itinerary</code>) now correctly point to their respective <code>/destination/&lt;city&gt;/solo-itinerary</code> pages instead of NYC.
+</div>
+
+<div class="resolved-box">
+<h4>✓ Critical #2 — Sitemap coverage</h4>
+sitemap.ts now contains 64 routes covering all LA, Las Vegas, and Orlando content pages plus <code>is-nyc-safe-at-night</code> (was 22 routes / 39 missing). A small follow-up remains — see new finding below.
+</div>
+
+<div class="resolved-box">
+<h4>✓ High — City hub pages no longer force client-side hydration</h4>
+NYC, LA, Las Vegas, and Orlando hub pages (<code>nycclient.tsx</code>, <code>lahubclient.tsx</code>, <code>lasvegashubclient.tsx</code>, <code>orlandohubclient.tsx</code>) are now server components ("Server Component — no hooks used" comments confirm this). The most impactful hydration issue from the original report is resolved.
+</div>
+
+<div class="resolved-box">
+<h4>✓ High — error.tsx / not-found.tsx added</h4>
+<code>app/error.tsx</code>, <code>app/destination/error.tsx</code>, <code>app/not-found.tsx</code>, and <code>app/destination/not-found.tsx</code> all exist now.
+</div>
+
+<div class="resolved-box">
+<h4>✓ High — Booking client duplication (partially, via shared component)</h4>
+A shared <code>app/components/booking/BookingClient.tsx</code> (336 lines) now exists. The four "bookings" pages (<code>labookingsclient.tsx</code>, <code>lasvegasbookingsclient.tsx</code>, <code>orlandobookingsclient.tsx</code>, NYC's <code>bookflightsclient.tsx</code>) are now ~100-line config wrappers around it. <strong>However</strong>, see the new finding below — two old full duplicates were left behind as dead code.
+</div>
+
+<div class="resolved-box">
+<h4>✓ High — Schema markup gap</h4>
+74 files now contain <code>application/ld+json</code> structured data, including LA/Vegas/Orlando pages (48 files) and NYC (18 files plus shared components). Only the two map-viewer "/full" pages lack schema, which is reasonable.
+</div>
+
+<div class="resolved-box">
+<h4>✓ Medium — Tailwind vs CSS Modules decision made</h4>
+Tailwind has been fully removed (not in package.json, zero files use Tailwind utility classes). CSS Modules is now the sole styling system alongside plain CSS files (see remaining item below).
+</div>
+
+<div class="resolved-box">
+<h4>✓ Low — Dead font files removed</h4>
+The Corben/Montserrat-Regular font files in <code>/public/data/corben-cdnfonts/</code> are gone.
+</div>
+
+<div class="resolved-box">
+<h4>✓ Low — CompanyDetailsPage renamed</h4>
+<code>app/about/page.tsx</code> now exports <code>AboutPage()</code>, matching the route.
+</div>
+
+<div class="resolved-box">
+<h4>✓ Performance Medium — banner_new.png reference</h4>
+Homepage now references <code>/data/home/banner_new.webp</code> (and og:image uses the .webp version), not the old 1.4MB PNG.
+</div>
+
+<div class="resolved-box">
+<h4>✓ SEO Low — QuickSummary &amp; cardqanda heading hierarchy</h4>
+<code>quicksummary.tsx</code> now opens with <code>&lt;h2&gt;</code>. <code>cardqanda.tsx</code> (all 4 city copies) now use one <code>&lt;h2&gt;</code> section heading with <code>&lt;h3&gt;</code> for individual Q&amp;A items.
+</div>
+
+<div class="resolved-box">
+<h4>✓ SEO Medium — nyc-safety-guide title</h4>
+The page <code>&lt;title&gt;</code> metadata is the full string ("Is New York Safe to Visit in 2026? Honest Safety Guide + Neighborhood Breakdown"). The shorter string flagged in the prior report is a hero-banner heading, not the page title — not actually truncated.
+</div>
+
+<div class="resolved-box">
+<h4>✓ Security Low — .env.example added</h4>
+<code>.env.example</code> now exists alongside <code>.env.local</code>, easing onboarding.
+</div>
+
+<div class="resolved-box">
+<h4>✓ Monetisation — Affiliate disclosure component shipped</h4>
+<code>app/components/AffiliateDisclosure/AffiliateDisclosure.tsx</code> exists and is used across 9 files — one of the Booking.com direct-application prerequisites is now met.
+</div>
+
+<h2>Prioritised Action Plan — Current State</h2>
+<p>Everything below was verified against the code on June 15, 2026 and is still outstanding. Ranked by impact.</p>
+
+<table>
+  <tr><th>#</th><th>Category</th><th>Severity</th><th>Finding</th><th>Action</th></tr>
+  <tr>
+    <td>1</td><td>Performance</td><td><span class="badge high">High</span></td>
+    <td>28 images in /public are still PNG/JPG &gt; 200KB, totalling ~54MB — larger than the ~25MB/20-file figure from the last review. Worst offenders: statue-of-liberty.jpg (3.6MB), solo-trip-to-nyc-gritty.png (2.9MB), nyc-group-mocktail.png (2.9MB), day2solo.png (2.6MB), nyc-bagel-collage&#8230;.png (2.5MB), group-travel-nyc-brooklyn-1280x853.jpg (2.5MB), and ~20 more in the 1–2.3MB range.</td>
+    <td>Run the Pillow WebP conversion script against all 28 files. Prioritise the NYC "group travel" and "solo" image sets, which account for most of the weight.</td>
+  </tr>
+  <tr>
+    <td>2</td><td>Performance</td><td><span class="badge high">High</span></td>
+    <td>Still zero loading.tsx files anywhere in the app — unchanged from the original review.</td>
+    <td>Add <code>app/loading.tsx</code> and <code>app/destination/loading.tsx</code> at minimum; ideally per-city loading skeletons too.</td>
+  </tr>
+  <tr>
+    <td>3</td><td>Performance</td><td><span class="badge high">High</span></td>
+    <td>Still zero <code>next/dynamic</code> usages — the shared BookingClient and other heavy interactive components still ship in the initial bundle.</td>
+    <td>Wrap <code>BookingClient</code> (and any 300+ line client components) with <code>dynamic(() =&gt; import(...), { ssr: false })</code>.</td>
+  </tr>
+  <tr>
+    <td>4</td><td>Code Quality</td><td><span class="badge high">High</span></td>
+    <td><strong>New finding:</strong> <code>app/destination/lasvegas/lasvegasclient.tsx</code> and <code>app/destination/orlando/orlandoclient.tsx</code> (337 lines each, ~674 lines total) are leftover full duplicates from before the BookingClient migration and are no longer imported anywhere.</td>
+    <td>Delete both files. Confirm no dynamic import path references them first.</td>
+  </tr>
+  <tr>
+    <td>5</td><td>Code Quality</td><td><span class="badge high">High</span></td>
+    <td><strong>Escalated:</strong> Hero/FAQ/ScenarioCard duplication has grown well beyond the 4–6 implementations originally flagged. ScenarioCard-family components now exist in ~40 separate folders across all 4 cities (microscenarios, ScenarioCards, scenariosection, scenariocard, ScenarioFilter, ScenarioList — 6 different naming patterns). FAQ components exist in 18 places, with the "FAQAccordian" typo now duplicated across 8 city folders (LA, Vegas, Orlando, and NYC each have one).</td>
+    <td>This is now the single largest duplication problem in the codebase. Consolidate to the shared components in <code>app/components/destination/</code> (FAQ → ScenarioCard → Hero), and rename all "FAQAccordian" folders to "FAQAccordion" as part of the migration.</td>
+  </tr>
+  <tr>
+    <td>6</td><td>Code Quality</td><td><span class="badge med">Medium</span></td>
+    <td><strong>Escalated:</strong> Inline <code>style={{ }}</code> usage grew from 93 to 295 instances across components — a 3x increase since the last review, moving in the wrong direction.</td>
+    <td>Establish a lint rule (e.g. eslint-plugin-react/forbid-dom-props or a custom rule) to flag new inline styles, and migrate the highest-traffic components to CSS Modules / CSS custom properties first.</td>
+  </tr>
+  <tr>
+    <td>7</td><td>Performance</td><td><span class="badge med">Medium</span></td>
+    <td>'use client' file count keeps climbing: 77 → 100 (June 14) → 110 (June 15), despite the hub-page fix. Net new client components are being added faster than they're being converted to server components.</td>
+    <td>Audit the newest additions (likely the new NYC pages: best-time-to-visit, free-things-to-do, getting-to-nyc) for unnecessary 'use client' directives on static sections.</td>
+  </tr>
+  <tr>
+    <td>8</td><td>SEO/Config</td><td><span class="badge low">Low</span></td>
+    <td><strong>New finding:</strong> 4 pages added since the last review are not yet in sitemap.ts: <code>/destination/nyc/best-time-to-visit</code>, <code>/destination/nyc/free-things-to-do</code>, <code>/destination/nyc/getting-to-nyc</code>, <code>/destination/la/la-metro-map</code>.</td>
+    <td>Add these 4 routes to <code>app/sitemap.ts</code>.</td>
+  </tr>
+  <tr>
+    <td>9</td><td>Code Quality</td><td><span class="badge low">Low</span></td>
+    <td>9 plain (non-module) .css files still sit alongside 333 CSS modules — unchanged from the original review (header.css, faq.css, footer.css, majorcities.css, propertylisting.css, whytrustitem.css, globals.css, and two files under solo-trip-to-lasvegas).</td>
+    <td>Convert remaining plain .css files to .module.css, except globals.css which is intentionally global.</td>
+  </tr>
+  <tr>
+    <td>10</td><td>Security</td><td><span class="badge low">Low</span></td>
+    <td>CSP <code>script-src</code> and <code>style-src</code> still both include <code>'unsafe-inline'</code> — unchanged.</td>
+    <td>Evaluate a nonce-based CSP via middleware (Next 13+) for scripts; reducing the 295 inline styles (item 6) is a prerequisite for removing style-src unsafe-inline.</td>
+  </tr>
+  <tr>
+    <td>11</td><td>Security</td><td><span class="badge low">Low</span></td>
+    <td>No pre-commit secret-scanning hook (only the default git sample hook exists). <code>.env.example</code> was added, but the live <code>TRAVELPAYOUTS_TOKEN</code> / <code>RAPIDAPI_KEY</code> in .env.local have presumably not been rotated.</td>
+    <td>Add detect-secrets or git-secrets as a pre-commit hook. Rotate both keys as a one-time precaution.</td>
+  </tr>
+  <tr>
+    <td>12</td><td>Code Quality</td><td><span class="badge low">Low</span></td>
+    <td>tsconfig.json still has the duplicate <code>.next/dev/types/**/*.ts</code> / <code>.next\dev/types/**/*.ts</code> include entries — unchanged.</td>
+    <td>Remove the backslash-path duplicate entry.</td>
+  </tr>
+  <tr>
+    <td>13</td><td>Code Quality</td><td><span class="badge low">Low</span></td>
+    <td>Hotel/Activity/FlightRow/TabKey type redeclaration across city files — not re-checked this pass (no new evidence either way; carried over from original report as still open).</td>
+    <td>Centralise in <code>app/models/booking.ts</code> as originally recommended, ideally as part of item 5's consolidation work.</td>
+  </tr>
+</table>
+
+<h2>Affiliate &amp; Monetisation Strategy</h2>
+<p>Carried forward from the May/June reviews — these are business/traffic milestones, not code issues, so they weren't re-verified against the repo except where noted.</p>
+
+<h3>Low-barrier programs (can join now)</h3>
+<table>
+  <tr><th>Program</th><th>Best for</th><th>Approval bar</th></tr>
+  <tr><td>Travelpayouts</td><td>Flights (Aviasales), hotels, insurance</td><td>Low — most new sites approved</td></tr>
+  <tr><td>Stay22</td><td>Auto-monetise hotel mentions; smart OTA redirect</td><td>Very low — JS snippet install</td></tr>
+  <tr><td>GetYourGuide / Viator</td><td>Tours, activities, attractions</td><td>Low</td></tr>
+  <tr><td>Trip.com Affiliate</td><td>Hotels + flights, broad coverage</td><td>Low</td></tr>
+  <tr><td>Booking.com via Awin</td><td>Alternative path to Booking.com</td><td>Moderate</td></tr>
+</table>
+
+<h3>Booking.com direct application — remaining prerequisites</h3>
+<ul>
+  <li>200+ organic clicks/month (Google Search Console) — not verifiable from code</li>
+  <li>50+ pages indexed in Google — likely closer now given sitemap now covers 64 routes (was 22)</li>
+  <li>5+ referring domains (backlinks) — not verifiable from code</li>
+  <li>Email list &gt; 50 subscribers — not verifiable from code</li>
+  <li><strong>✓ Done:</strong> Affiliate disclosure component now ships on 9 pages</li>
+  <li><strong>✓ Done:</strong> "About" page exists with a real bio at <code>/about</code> (now <code>AboutPage()</code>)</li>
+</ul>
+
+<div class="footer-note">
+  Updated review based on direct codebase inspection of the repository at <code>/Travel America</code> on June 15, 2026 (latest commit: "Updated the images for the page", 2026-06-15).
+  This document supersedes <code>deep-code-review-2026.docx</code>, which has been removed.
+</div>
+
+</body>
+</html>

@@ -31,7 +31,7 @@ export default function LAThingsToDoClient() {
 
       <section className={styles.banner}>
         <Image
-        src="/data/majorcities/losangeles/images/losangeles.webp"
+        src="/data/majorcities/losangeles/assets/losangeles.webp"
         alt="Experiences and activities in Los Angeles"
         fill
         priority
