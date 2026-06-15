@@ -192,7 +192,7 @@ return (
         <section id="itinerary" className={styles.splitSection}>
         <div className={styles.imageWrapper}>
           <Image
-            src="/data/majorcities/losangeles/assets/group/la-group-itinerary-day1-hollywood-griffith-sunset-strip.png"
+            src="/data/majorcities/losangeles/images/day1_hollywood_highs_group_vibes.png"
             alt="Day 1 LA group itinerary map featuring the Hollywood Walk of Fame, Griffith Observatory, Los Feliz, and the Sunset Strip"
             fill
             className={styles.mapImage}

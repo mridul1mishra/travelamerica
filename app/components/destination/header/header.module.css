@@ -116,7 +116,7 @@
 }
 
 .navlinks li a {
-  color: #B22234;
+  color: #1b263b;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -124,7 +124,7 @@
 }
 
 .navlinks li a:hover {
-  color: #facc15;
+  color: #B22234;
 }
 
 .hamburger {
@@ -132,7 +132,7 @@
   font-size: 28px;
   background: none;
   border: none;
-  color: #B22234;
+  color: #1b263b;
   cursor: pointer;
 }
 
@@ -200,6 +200,7 @@
   padding: 12px 20px;
   width: 100%;
   box-sizing: border-box;
+  border-bottom: 2px solid #B22234;
 }
 
 .nav {

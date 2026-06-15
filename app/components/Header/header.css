@@ -23,16 +23,16 @@ a{
 /* Scroll effect */
 .overlay-header.scrolled {
   background: white;
-  color: #B22234 !important;
+  color: #1b263b;
   border-bottom: 2px solid #B22234;
 }
 
 .overlay-header.scrolled .hamburger {
-  color: #B22234;
+  color: #1b263b;
 }
 
 .overlay-header.scrolled .nav-links li a {
-  color: #B22234;
+  color: #1b263b;
   padding-right: 60px;
   cursor: pointer;
 }
@@ -139,7 +139,7 @@ a{
     width: 70%;
     height: 100vh;
     background: white;
-    color: #B22234;
+    color: #1b263b;
     display: none;
     flex-direction: column;
     justify-content: center;
