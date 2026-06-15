@@ -185,7 +185,7 @@ const schema4 = {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema4) }}/>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema2) }}/>
     <div className="App">
-      <Header image={`/data/majorcities/losangeles/assets/solo-travel-itinerary.png`} bannerText="Solo Travel Itinerary for Los Angeles" />
+      <Header image={`/data/majorcities/losangeles/assets/solo-travel-itinerary.png`} bannerText="Solo Travel Itinerary for Los Angeles" variant="wide" />
       <BookingCTA variant="slim" text="Book hotels for your Los Angeles trip →" href="/destination/la/bookings?tab=hotels&from=solo-itinerary" label="Book this trip" />
       <section className={styles.splitSection} style={{  textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>

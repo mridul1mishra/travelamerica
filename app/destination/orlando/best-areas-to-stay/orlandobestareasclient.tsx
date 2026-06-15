@@ -10,6 +10,7 @@ import SoloTripIntro from "@/app/components/destination/bestareatostay/solotripi
 import SectionSafestNeighborhoods from "@/app/components/destination/bestareatostay/safestneighborhood/safestneighborhood";
 import NeighborhoodRankingCards, { Neighborhood } from "@/app/components/destination/neighborhoodrankingcard/neighborhoodrankingcard";
 import faqData from "@/content/destination/orlando/bestplacetostay/faqsection.json";
+import EmailSignup from "@/app/components/destination/EmailSignup/EmailSignup";
 
 const orlandoNeighborhoods: Neighborhood[] = [
   {
@@ -158,6 +159,7 @@ export default function OrlandoBestAreasClient() {
           {tips.map((tip, i) => (<article key={i} className={styles.card}><p className={styles.cardBody}>{tip}</p></article>))}
         </div>
       </section>
+      <EmailSignup source="best-areas-to-stay" city="Orlando" />
       <div className={styles.section}>
         <FAQAccordion faqs={faqData} />
       </div>

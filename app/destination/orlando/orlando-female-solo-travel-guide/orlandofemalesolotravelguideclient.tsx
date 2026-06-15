@@ -21,6 +21,7 @@ import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/why
 import cityWhyTrustData from "@/content/destination/orlando/orlando-female-solo-travel-guide/whyTrustItems/whyTrustItems.json";
 import FemaleSafetyNarrative from "./components/safetynarrative/FemaleSafetyNarrative";
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 
 const navLinks = [
   { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
@@ -37,6 +38,7 @@ export default function OrlandoFemaleSoloClient() {
       <div className={styles.container}>
       <Hero />
       <InfoSection sections={sectionsData.sections}/>
+      <EmailSignup source="orlando-female-solo-travel-guide" city="Orlando" />
       <FemaleSafetyNarrative />
       <CoreSafetyPrinciplesGrid />
       <ScenarioSection />

@@ -3,6 +3,7 @@ import HeroSafety from "./components/hero/hero";
 import SafetyMeter from "./components/SafetyMeter/SafetyMeter";
 import NeighborhoodSafetyGrid from "./components/NeighborhoodSafetyGrid/NeighborhoodSafetyGrid";
 import ScenarioCards from "./components/ScenarioCards/ScenarioCards";
+import PersonaSafetyBlocks from "./components/PersonaSafetyBlocks/PersonaSafetyBlocks";
 import CorePrinciples from "./components/CorePrinciples/CorePrinciples";
 import TransitSafety from "./components/TransitSafety/TransitSafety";
 import NeighborhoodCards from "./components/NeighborhoodCards/NeighborhoodCards";
@@ -48,7 +49,12 @@ export default function IsOrlandoSafeAtNightClient() {
         <ScenarioCards scenarios={data.scenarioCards} />
       </SectionWrapper>
 
-      {/* 5. Core Safety Principles */}
+      {/* 5. Persona-Driven Safety Advice */}
+      <SectionWrapper id="personas">
+        <PersonaSafetyBlocks personas={data.personaSafetyBlocks} />
+      </SectionWrapper>
+
+      {/* 6. Core Safety Principles */}
       <SectionWrapper id="principles">
         <CorePrinciples principles={data.corePrinciples} />
       </SectionWrapper>

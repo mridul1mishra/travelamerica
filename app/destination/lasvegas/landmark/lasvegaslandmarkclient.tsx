@@ -230,7 +230,7 @@ export default function LasVegasLandmarkClient() {
     "description": "Practical guide to Las Vegas\'s top landmarks — Fountains of Bellagio, the Strip, High Roller, Fremont Street, Sphere, the Neon Museum and more. Hours, prices, and how to get there.",
     "url": "https://www.travelsamericas.com/destination/lasvegas/landmark",
     "inLanguage": "en-US",
-    "image": "https://www.travelsamericas.com/data/majorcities/lasvegas/assets/lasvegas.webp",
+    "image": "https://www.travelsamericas.com/data/majorcities/lasvegas/assets/lasvegas-landmarks-banner.png",
     "author": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },
     "publisher": {
       "@type": "Organization",
@@ -268,8 +268,9 @@ export default function LasVegasLandmarkClient() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <Header
-        image="/data/majorcities/lasvegas/assets/lasvegas.webp"
+        image="/data/majorcities/lasvegas/assets/lasvegas-landmarks-banner.png"
         bannerText="Las Vegas Landmarks Guide"
+        variant="wide"
       />
       <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=activities&from=landmark" label="See tickets" />
 
@@ -461,6 +462,15 @@ export default function LasVegasLandmarkClient() {
       </section>
 
       <BookingCTA variant="full" text="Get tickets to Las Vegas's top landmarks" href="/destination/lasvegas/bookings?tab=activities&from=landmark" label="See tickets" />
+      <button
+        type="button"
+        className={styles.backToTop}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        aria-label="Back to top"
+      >
+        <span className={styles.backToTopIcon} aria-hidden="true">↑</span>
+        <span className={styles.backToTopText}>Back to top</span>
+      </button>
       <Footer />
     </>
   );

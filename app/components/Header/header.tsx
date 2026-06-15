@@ -1,15 +1,17 @@
 "use client"
 import { useState, useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./header.css"; // keep your CSS
 
 type HeroProps = {
   image: string | StaticImageData; // accept Next.js image imports
   bannerText: string;
+  variant?: "default" | "wide";
 };
 
-const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
+const Header: React.FC<HeroProps> = ({ image, bannerText, variant = "default" }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
@@ -27,15 +29,26 @@ const Header: React.FC<HeroProps> = ({ image, bannerText }) => {
   // set, which is the supported App Router pattern.
   return (
     <>
-    <section className="hero">
-        <div style={{ position: "relative", width: "100%", height: "auto", aspectRatio: "1295 / 832", marginTop: "130px" }}>
-          <Image src={typeof image === "string" ? image : image.src} alt={bannerText} fill priority fetchPriority="high" decoding="async" style={{ objectFit: "cover", objectPosition: "bottom" }}/>
+    <section className={`hero ${variant === "wide" ? "hero--wide" : ""}`}>
+        <div className="hero-image-wrapper">
+          <Image
+            src={typeof image === "string" ? image : image.src}
+            alt={bannerText}
+            fill
+            priority
+            fetchPriority="high"
+            decoding="async"
+            style={{
+              objectFit: "cover",
+              objectPosition: variant === "wide" ? "center" : "bottom",
+            }}
+          />
         </div>
       <header className={`overlay-header scrolled`}>
         <div className="brand-logo">
-          <a href="/">
+          <Link href="/">
               <Image src="/Travels-Americas-logo-horizontal-v3.png" alt="Travels Americas Logo" fill style={{ objectFit: "contain" }} fetchPriority="high"/>
-          </a>
+          </Link>
         </div>
         <nav className="main-nav">
           <button className="hamburger" onClick={toggleMenu} aria-label="Toggle menu">

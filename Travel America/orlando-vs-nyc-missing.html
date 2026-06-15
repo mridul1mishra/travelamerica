@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orlando vs NYC — Missing Pages & Components</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#fff; --ink:#1a2230; --muted:#5b6573;
+    --line:#e3e7ee; --red:#c0392b; --redbg:#fdecea; --amber:#b9770e; --amberbg:#fdf3e3;
+    --na:#6b7280; --nabg:#eef1f5; --accent:#2455d6;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       background:var(--bg);color:var(--ink);line-height:1.5;padding:32px 20px}
+  .wrap{max-width:980px;margin:0 auto}
+  h1{font-size:1.6rem;margin:0 0 4px}
+  .sub{color:var(--muted);margin:0 0 24px;font-size:.92rem}
+  .summary{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;flex:1;min-width:150px}
+  .stat .n{font-size:1.7rem;font-weight:700}
+  .stat .l{color:var(--muted);font-size:.82rem}
+  h2{font-size:1.18rem;margin:30px 0 6px;padding-top:10px;border-top:2px solid var(--line)}
+  .note{color:var(--muted);font-size:.88rem;margin:0 0 14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:14px}
+  table{width:100%;border-collapse:collapse;font-size:.9rem}
+  th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:#fafbfc;font-size:.78rem;letter-spacing:.03em;text-transform:uppercase;color:var(--muted)}
+  tr:last-child td{border-bottom:none}
+  code{background:#f0f2f6;padding:1px 6px;border-radius:5px;font-size:.86em}
+  .pill{display:inline-block;font-size:.74rem;font-weight:600;padding:2px 9px;border-radius:20px;white-space:nowrap}
+  .p-red{background:var(--redbg);color:var(--red)}
+  .p-amber{background:var(--amberbg);color:var(--amber)}
+  .p-na{background:var(--nabg);color:var(--na)}
+  .comp{display:inline-block;background:var(--redbg);color:var(--red);border-radius:6px;padding:2px 8px;margin:2px 3px 2px 0;font-size:.82rem;font-weight:600}
+  .comp.na{background:var(--nabg);color:var(--na)}
+  .changed{background:#eaf3ec;border:1px solid #cfe6d4;border-radius:10px;padding:12px 16px;font-size:.88rem;margin-bottom:8px}
+  .changed b{color:#1e7a3d}
+  footer{color:var(--muted);font-size:.8rem;margin-top:34px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Orlando vs NYC — Missing Pages &amp; Components</h1>
+  <p class="sub">Live re-check against the current codebase · updated 2026-06-15 (component gaps now fixed) · supersedes <code>orlando-nyc-components-by-route.xlsx</code> (deleted, was stale)</p>
+
+  <div class="summary">
+    <div class="stat"><div class="n">0</div><div class="l">component gaps remaining on shared routes</div></div>
+    <div class="stat"><div class="n">6</div><div class="l">component gaps fixed this pass</div></div>
+    <div class="stat"><div class="n">3</div><div class="l">content pages NYC has, Orlando lacks</div></div>
+    <div class="stat"><div class="n">2</div><div class="l">transit pages (N/A — Orlando has no metro)</div></div>
+  </div>
+
+  <div class="changed">
+    <b>Update — component gaps closed.</b> <b>EmailSignup</b> has been added to all five Orlando routes (best-areas-to-stay, female-solo-travel-guide, safety-guide, solo-itinerary, solo-trip-to-orlando) at the same position NYC uses, and the shared component is now city-aware (<code>city</code> prop defaults to <code>NYC</code>, Orlando passes <code>"Orlando"</code>). <b>PersonaSafetyBlocks</b> is now wired into <code>is-orlando-safe-at-night</code> between Scenarios and Core Principles. Separately, the thin <code>group-travel</code> stub was rebuilt into the full NYC-style guide. <b>Remaining work is page-level only</b> (Section A): three content pages NYC has that Orlando does not.
+  </div>
+
+  <h2>A. Pages present in NYC but missing entirely in Orlando</h2>
+  <p class="note">These NYC routes have no Orlando equivalent at all. The two transit pages are flagged N/A because Orlando has no subway/metro system.</p>
+  <div class="card">
+    <table>
+      <thead><tr><th>NYC route</th><th>Status</th><th>Components on the NYC page</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>/nyc/best-time-to-visit</code></td>
+          <td><span class="pill p-red">Missing page</span></td>
+          <td><span class="comp">HeroSection</span><span class="comp">SeasonCards</span><span class="comp">MonthGrid</span><span class="comp">TravelerTypes</span><span class="comp">FAQAccordion</span><span class="comp">EmailSignup</span><span class="comp">BookingCTA</span><span class="comp">NycNavHeader</span><span class="comp">Footer</span></td>
+        </tr>
+        <tr>
+          <td><code>/nyc/free-things-to-do</code></td>
+          <td><span class="pill p-red">Missing page</span></td>
+          <td><span class="comp">HeroSection</span><span class="comp">FreeCategories</span><span class="comp">MuseumTable</span><span class="comp">SeasonalEvents</span><span class="comp">SavingsTips</span><span class="comp">FAQAccordion</span><span class="comp">EmailSignup</span><span class="comp">BookingCTA</span><span class="comp">NycNavHeader</span><span class="comp">Footer</span></td>
+        </tr>
+        <tr>
+          <td><code>/nyc/getting-to-nyc</code></td>
+          <td><span class="pill p-red">Missing page</span></td>
+          <td><span class="comp">HeroSection</span><span class="comp">AirportTabs</span><span class="comp">ArrivalTips</span><span class="comp">ScamWarning</span><span class="comp">FAQAccordion</span><span class="comp">EmailSignup</span><span class="comp">BookingCTA</span><span class="comp">NycNavHeader</span><span class="comp">Footer</span></td>
+        </tr>
+        <tr>
+          <td><code>/nyc/nyc-subway-map</code> <span style="color:var(--muted)">(+ <code>/full</code>)</span></td>
+          <td><span class="pill p-na">N/A — no metro</span></td>
+          <td><span class="comp na">HeroBanner</span><span class="comp na">IconCardGrid</span><span class="comp na">StepList</span><span class="comp na">ScenarioCards</span><span class="comp na">SafetyChecklist</span><span class="comp na">BookingCTA</span><span class="comp na">Header</span><span class="comp na">Footer</span></td>
+        </tr>
+        <tr>
+          <td><code>/nyc/subway-safety-guide</code></td>
+          <td><span class="pill p-na">N/A — no metro</span></td>
+          <td><span class="comp na">Hero</span><span class="comp na">SubwayBasics</span><span class="comp na">CorePrinciples</span><span class="comp na">PersonaBlock</span><span class="comp na">ScenarioList</span><span class="comp na">NeighborhoodNotes</span><span class="comp na">EmergencyPlaybook</span><span class="comp na">ToolsAndApps</span><span class="comp na">Etiquette</span><span class="comp na">Checklist</span><span class="comp na">InternalLinks</span><span class="comp na">FAQ</span><span class="comp na">WhyTrustThisGuide</span><span class="comp na">+ Header / BookingCTA / Footer</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>B. Component gaps on routes that exist in both cities <span style="color:#1e7a3d;font-size:1rem">— all fixed ✓</span></h2>
+  <p class="note">City-specific equivalents (e.g. <code>OrlandoNavHeader</code> ↔ <code>NycNavHeader</code>, <code>TransitAccessSection</code> ↔ <code>SubwayAccessSection</code>, <code>SoloOrlandoQa</code> ↔ <code>SoloNycQa</code>) are treated as matches. Every gap below has been resolved in code.</p>
+  <div class="card">
+    <table>
+      <thead><tr><th>Route (Orlando)</th><th>Component</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><code>/orlando/best-areas-to-stay</code></td><td><span class="comp" style="background:#eaf3ec;color:#1e7a3d">EmailSignup</span></td><td><span class="pill" style="background:#eaf3ec;color:#1e7a3d">Added ✓</span></td></tr>
+        <tr><td><code>/orlando/is-orlando-safe-at-night</code></td><td><span class="comp" style="background:#eaf3ec;color:#1e7a3d">PersonaSafetyBlocks</span></td><td><span class="pill" style="background:#eaf3ec;color:#1e7a3d">Wired in ✓</span></td></tr>
+        <tr><td><code>/orlando/orlando-female-solo-travel-guide</code></td><td><span class="comp" style="background:#eaf3ec;color:#1e7a3d">EmailSignup</span></td><td><span class="pill" style="background:#eaf3ec;color:#1e7a3d">Added ✓</span></td></tr>
+        <tr><td><code>/orlando/safety-guide</code></td><td><span class="comp" style="background:#eaf3ec;color:#1e7a3d">EmailSignup</span></td><td><span class="pill" style="background:#eaf3ec;color:#1e7a3d">Added ✓</span></td></tr>
+        <tr><td><code>/orlando/solo-itinerary</code></td><td><span class="comp" style="background:#eaf3ec;color:#1e7a3d">EmailSignup</span></td><td><span class="pill" style="background:#eaf3ec;color:#1e7a3d">Added ✓</span></td></tr>
+        <tr><td><code>/orlando/solo-trip-to-orlando</code></td><td><span class="comp" style="background:#eaf3ec;color:#1e7a3d">EmailSignup</span></td><td><span class="pill" style="background:#eaf3ec;color:#1e7a3d">Added ✓</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>C. Routes fully matched (no gaps)</h2>
+  <p class="note">These shared routes render an equivalent component set in both cities: <code>Home / Hub</code>, <code>bookings</code>, <code>food</code>, <code>group-travel</code>, <code>landmark</code>, <code>neighborhood-guide</code>, <code>things-to-do</code>. Orlando's legacy <code>/orlando/itinerary</code> has no NYC counterpart.</p>
+
+  <footer>EmailSignup component lives at <code>@/app/components/destination/EmailSignup/EmailSignup</code> — adding it to the 5 shared Orlando routes (plus PersonaSafetyBlocks to the safe-at-night page) closes the component-level gap. The 3 missing content pages require building new routes.</footer>
+
+</div>
+</body>
+</html>

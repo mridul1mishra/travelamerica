@@ -16,6 +16,7 @@ import sectionsData from "./components/infosection/infosection.json";
 import EmergencyContactBlock from './components/emergencycontactblock/EmergencyContactBlock';
 import SafetyNarrative from './components/safetynarrative/SafetyNarrative';
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 
 const navLinks = [
   { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
@@ -32,6 +33,7 @@ export default function OrlandoSafetyClient() {
         <div className={styles.container}>
         <SafetyHero />
         <InfoSection sections={sectionsData.sections} />
+        <EmailSignup source="orlando-safety-guide" city="Orlando" />
         <SafetyNarrative />
         <ScenarioSection />
         <SafetyTipsGrid />

@@ -1,0 +1,64 @@
+.section { padding: 64px 40px; background: #f8f9fa; }
+.container { max-width: 1200px; margin: 0 auto; }
+.title { font-size: 36px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
+.subtitle { font-size: 17px; color: #666; margin-bottom: 24px; }
+
+.legend { display: flex; gap: 10px; margin-bottom: 28px; flex-wrap: wrap; }
+.legendItem { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 999px; }
+.best { background: #d1fae5; color: #065f46; }
+.bestValue { background: #e0f2fe; color: #0c4a6e; }
+.good { background: #f3f4f6; color: #374151; }
+.holiday { background: #fce7f3; color: #9d174d; }
+.avoid { background: #fee2e2; color: #991b1b; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Card variants */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  border: 2px solid transparent;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-2px); }
+
+.card.best { border-color: #6ee7b7; }
+.card.best-value { border-color: #7dd3fc; }
+.card.good { border-color: #e5e7eb; }
+.card.holiday { border-color: #f9a8d4; }
+.card.avoid { border-color: #fca5a5; background: #fff9f9; }
+
+.cardTop { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; }
+.emoji { font-size: 26px; flex-shrink: 0; }
+.monthName { font-size: 16px; font-weight: 700; color: #1a1a1a; }
+.temp { font-size: 12px; color: #888; margin-top: 2px; }
+
+.verdictBadge {
+  margin-left: auto; font-size: 10px; font-weight: 700;
+  padding: 3px 8px; border-radius: 999px; white-space: nowrap; align-self: flex-start;
+}
+.bestBadge { background: #d1fae5; color: #065f46; }
+.best-valueBadge { background: #e0f2fe; color: #0c4a6e; }
+.goodBadge { background: #f3f4f6; color: #374151; }
+.holidayBadge { background: #fce7f3; color: #9d174d; }
+.avoidBadge { background: #fee2e2; color: #991b1b; }
+
+.indicators { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+.indicator { display: flex; align-items: center; gap: 8px; }
+.indicatorLabel { font-size: 11px; color: #999; width: 44px; flex-shrink: 0; }
+.dots { display: flex; gap: 4px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+
+.highlight { font-size: 12px; color: #555; line-height: 1.45; margin: 0; }
+
+@media (max-width: 1100px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) {
+  .section { padding: 40px 20px; }
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }

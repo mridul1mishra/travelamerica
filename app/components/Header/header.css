@@ -119,6 +119,22 @@ a{
   padding-bottom: env(safe-area-inset-bottom);
 }
 
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1295 / 832;
+  margin-top: 130px;
+}
+
+.hero--wide {
+  min-height: auto;
+}
+
+.hero--wide .hero-image-wrapper {
+  aspect-ratio: 16 / 5;
+}
+
 
 .hero-text h1 {
   font-size: 48px;

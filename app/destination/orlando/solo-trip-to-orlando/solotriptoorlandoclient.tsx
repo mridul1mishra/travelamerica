@@ -22,6 +22,7 @@ import FemaleSoloTiles from "@/app/components/Solofemaletravel/solofemaletravel"
 import { FemaleSoloData } from "@/app/models/femaleSolo";
 import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
 import cityFaqData from "@/content/destination/orlando/solo-trip-to-orlando/faq/faqsection.json";
+import EmailSignup from "@/app/components/destination/EmailSignup/EmailSignup";
 import Footer from "@/app/components/Header/Footer/footer";
 
 export default function SoloTripToOrlandoClient() {
@@ -34,6 +35,7 @@ export default function SoloTripToOrlandoClient() {
       <BookingCTA variant="slim" text="Book hotels for your Orlando trip →" href="/destination/orlando/bookings?tab=hotels&from=solo-trip-to-orlando" label="Book your trip" />
       <QuickActionBar />
       <InfoSection sections={sectionsData.sections} />
+      <EmailSignup source="solo-trip-to-orlando" city="Orlando" />
       <WhyTrustThisGuide data={cityWhyTrustData} />
       <SoloOrlandoQa />
       <SoloTripNarrative />

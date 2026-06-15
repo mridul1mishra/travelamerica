@@ -327,7 +327,7 @@ const howto = {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howto) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemlist) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumblist) }}/>
-        <Header image={`/data/majorcities/losangeles/assets/la-solo-dining.webp`} bannerText="Hero banner showcasing LA solo dining experience for travelers" />
+        <Header image={`/data/majorcities/losangeles/assets/la-solo-dining.webp`} bannerText="Hero banner showcasing LA solo dining experience for travelers" variant="wide" />
         <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/bookings?tab=restaurants&from=food" label="See food tours" />
         <section className={styles.splitSection} style={{textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>

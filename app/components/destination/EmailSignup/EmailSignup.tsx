@@ -4,9 +4,10 @@ import styles from './EmailSignup.module.css';
 
 interface EmailSignupProps {
   source?: string;
+  city?: string;
 }
 
-export default function EmailSignup({ source = 'unknown' }: EmailSignupProps) {
+export default function EmailSignup({ source = 'unknown', city = 'NYC' }: EmailSignupProps) {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
@@ -54,7 +55,7 @@ export default function EmailSignup({ source = 'unknown' }: EmailSignupProps) {
           <span className={styles.successIcon}>✓</span>
           <div>
             <p className={styles.successHeadline}>Check your inbox!</p>
-            <p className={styles.successSub}>Your free NYC 3-day itinerary PDF is on its way.</p>
+            <p className={styles.successSub}>Your free {city} 3-day itinerary PDF is on its way.</p>
           </div>
         </div>
       </div>
@@ -66,7 +67,7 @@ export default function EmailSignup({ source = 'unknown' }: EmailSignupProps) {
       <div className={styles.card}>
         <div className={styles.pdfIcon} aria-hidden="true">📄</div>
         <div className={styles.copy}>
-          <p className={styles.headline}>Get your free NYC 3-day itinerary</p>
+          <p className={styles.headline}>Get your free {city} 3-day itinerary</p>
           <p className={styles.sub}>Day-by-day plan, packing list, and budget breakdown. Free PDF, sent instantly.</p>
         </div>
         <form className={styles.form} onSubmit={handleSubmit} noValidate>

@@ -4,6 +4,7 @@ import Footer from "@/app/components/Header/Footer/footer";
 import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 import FAQ from "@/app/components/faq/faq";
+import EmailSignup from "@/app/components/destination/EmailSignup/EmailSignup";
 
 interface FaqItem {
   question: string;
@@ -70,6 +71,7 @@ export default function OrlandoSoloItineraryClient({ grouped }: OrlandoSoloItine
           </div>
         </section>
       ))}
+      <EmailSignup source="solo-itinerary" city="Orlando" />
       <BookingCTA
         variant="full"
         headline="Book your solo Orlando trip"

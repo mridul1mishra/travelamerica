@@ -174,7 +174,7 @@ const schema5 = {
 
 return (
     <>
-        <Header image={`/data/majorcities/losangeles/assets/group/la-group-travel-packing-flatlay-essentials.webp`} bannerText="Flatlay of LA group travel essentials including backpack, sunglasses, sunscreen, sneakers, and a city map" />
+        <Header image={`/data/majorcities/losangeles/assets/group/la-group-travel-packing-flatlay-essentials.webp`} bannerText="Flatlay of LA group travel essentials including backpack, sunglasses, sunscreen, sneakers, and a city map" variant="wide" />
         <BookingCTA variant="slim" text="Book hotels for your Los Angeles trip →" href="/destination/la/bookings?tab=hotels&from=group-travel" label="Book your trip" />
         <section className={styles.splitSection} style={{ textAlign: "center" }}>
                 <div style={{ width: "100%", textAlign: "center" }}>
