@@ -9,20 +9,17 @@ export default function SafetyOverview() {
       </h2>
 
       <p className={styles.copy}>
-        Most neighborhoods frequented by visitors in Los Angeles — like Santa
-        Monica, Beverly Hills, and West Hollywood — are busy, well‑lit, and
-        active throughout the day and evening.
+        Santa Monica, West Hollywood, Beverly Hills, and the main Hollywood tourist corridor
+        are safe for solo visitors day and night. These areas have high foot traffic, good lighting,
+        and consistent rideshare availability that makes moving around at any hour straightforward.
       </p>
 
       <p className={styles.copy}>
-        Like any large city, some areas have rough edges. The Venice boardwalk
-        can feel uneasy after dark, and parts of Downtown remain unevenly
-        gentrified, so staying aware of your surroundings goes a long way.
-      </p>
-
-      <p className={styles.subtle}>
-        For a deeper look at safety tips, nighttime travel, and transportation
-        advice, you can explore our dedicated LA safety guide.
+        For solo travelers: the Venice boardwalk shifts in feel after dark — stay on the main
+        boardwalk, not the side streets. Downtown LA is uneven by block; the Arts District and
+        Grand Central Market area are fine, but parts of Skid Row are within a few blocks and
+        worth knowing about. Koreatown, Silver Lake, and Los Feliz are generally comfortable for
+        solo evening dining — active local neighborhoods with good street life.
       </p>
 
       <div className={styles.linkWrap}>

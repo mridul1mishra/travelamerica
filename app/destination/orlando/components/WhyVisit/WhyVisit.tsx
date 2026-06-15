@@ -34,14 +34,16 @@ export default function WhyVisit() {
           </article>
 
           <article className={styles.card}>
-            <h3 className={styles.cardTitle}>A Trip You Can Personalize</h3>
+            <h3 className={styles.cardTitle}>Day Trips in Every Direction</h3>
             <p className={styles.cardBody}>
-              There&apos;s no single &ldquo;right&rdquo; Orlando itinerary. Where you stay, how you pace the parks, and
-              what you prioritize shape the trip far more than ticking off every attraction.
+              Clearwater Beach and St. Pete on the Gulf Coast are 90 minutes west. Cocoa Beach and Cape Canaveral
+              are 60 minutes east — you can watch a rocket launch and be back for a park evening. Springs like
+              Wekiva and Blue Spring are under an hour north for a break from the parks.
             </p>
             <p className={styles.cardBody}>
-              The sheer number of options can feel overwhelming. In Orlando, which park zone you stay near matters,
-              and a little guidance goes a long way toward turning a busy destination into a smooth trip.
+              A 5–6 day trip that mixes two or three park days with a beach day and a springs half-day is one of
+              the best-value Florida itineraries going. Most visitors never leave the resort corridor — and miss
+              what makes the surrounding region genuinely interesting.
             </p>
           </article>
         </div>

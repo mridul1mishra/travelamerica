@@ -11,6 +11,10 @@ import GettingAround from "./components/Gettingaround/Gettingaround";
 import SafetyOverview from "./components/SafetyOverview/Safetyoverview";
 import NeighborhoodGuideCTA from "./components/Neighborhoodguidecta/Neighborhoodguidecta";
 import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import { WhyTrustThisGuide } from '@/app/components/destination/whytrustitem/whytrustthisguide';
+import orlandoWhyTrustData from '@/content/destination/orlando/neighborhood-guide/whyTrustItems/whyTrustItems.json';
+import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import orlandoFaqData from '@/content/destination/orlando/neighborhood-guide/faq/faqsection.json';
 
 const navLinks = [
   { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
@@ -32,6 +36,8 @@ export default function OrlandoNeighborhoodGuideClient() {
         <WhereFirstTimersStay />
         <GettingAround />
         <SafetyOverview />
+        <WhyTrustThisGuide data={orlandoWhyTrustData} />
+        <FAQAccordion faqs={orlandoFaqData} />
         <NeighborhoodGuideCTA />
       </div>
       <BookingCTA variant="full" text="See hotels in the best Orlando areas" href="/destination/orlando/bookings?tab=hotels&from=neighborhood-guide" label="See Orlando hotels" />

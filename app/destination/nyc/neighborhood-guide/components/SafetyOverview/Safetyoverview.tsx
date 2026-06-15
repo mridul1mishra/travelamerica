@@ -9,20 +9,17 @@ export default function SafetyOverview() {
       </h2>
 
       <p className={styles.copy}>
-        Most neighborhoods frequented by visitors in New York City are busy,
-        well‑lit, and active throughout the day and evening, especially in
-        central and residential areas.
+        Midtown, the Upper West and East Sides, Greenwich Village, Brooklyn Heights, and Williamsburg
+        are safe to walk day and night. Crime in these areas is low relative to most major US cities,
+        and foot traffic keeps the streets active well past midnight.
       </p>
 
       <p className={styles.copy}>
-        Like any large city, staying aware of your surroundings and choosing
-        well‑connected areas goes a long way toward feeling comfortable while
-        exploring.
-      </p>
-
-      <p className={styles.subtle}>
-        For a deeper look at safety tips, nighttime travel, and transportation
-        advice, you can explore our dedicated NYC safety guide.
+        For solo travelers: the subway after midnight is fine on busy platforms. Use the marked
+        "Off-Hours Waiting Area" on the platform, stay near the conductor's car, and avoid
+        isolated stations on unfamiliar lines late at night. The blocks just west of Times Square
+        (8th and 9th Avenues in the 30s and 40s) can feel rough after dark — these are the main
+        areas to bypass.
       </p>
 
       <div className={styles.linkWrap}>

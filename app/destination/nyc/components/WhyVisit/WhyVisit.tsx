@@ -18,32 +18,36 @@ export default function WhyVisit() {
 
         <div className={styles.grid}>
           <article className={styles.card}>
-            <h3 className={styles.cardTitle}>Variety Without Relocation</h3>
+            <h3 className={styles.cardTitle}>Five Boroughs, Completely Different Worlds</h3>
             <p className={styles.cardBody}>
-              Few cities offer such a wide range of experiences without requiring you to move locations. Different
-              neighborhoods deliver entirely different moods—from fast‑paced and iconic to calm and residential—often
-              just minutes apart.
+              Midtown Manhattan puts you within walking distance of Times Square, Central Park, and the Empire State
+              Building. Brooklyn Heights gives you skyline views and a quieter pace. Williamsburg has the best
+              independent restaurant and nightlife scene outside Manhattan — and it&apos;s 20 minutes on the L train.
+              You can move between entirely different versions of the city in under half an hour.
             </p>
           </article>
 
           <article className={styles.card}>
-            <h3 className={styles.cardTitle}>Depth for Short or Long Stays</h3>
+            <h3 className={styles.cardTitle}>A Food Scene That Goes Far Beyond Manhattan</h3>
             <p className={styles.cardBody}>
-              New York City works just as well for a focused three‑day visit as it does for a longer, more immersive
-              stay. The city rewards both efficient planning and slower exploration, depending on how much time you
-              have.
+              Jackson Heights in Queens has some of the best South Asian and Latin food in the country. Flushing is
+              the place for dim sum and hand-pulled noodles. Arthur Avenue in the Bronx is old-school Italian done
+              properly. The best meals in NYC are often $15 at a counter with no tourists in sight — you just need
+              to know which borough to head to.
             </p>
           </article>
 
           <article className={styles.card}>
-            <h3 className={styles.cardTitle}>A Trip You Can Personalize</h3>
+            <h3 className={styles.cardTitle}>Three Days or Ten — the City Scales</h3>
             <p className={styles.cardBody}>
-              NYC isn’t about doing one “right” itinerary. It’s a city where your choices—where you stay, how you get
-              around, what you prioritize—shape the experience far more than checking off a list of sights.
+              A focused three-day trip covers essential Manhattan landmarks, a Brooklyn afternoon, and a proper
+              dinner without feeling rushed. A longer stay opens up day trips — the Hudson Valley is 90 minutes
+              north by train, the Jersey Shore is under an hour, and the Catskills are two hours if you rent a car.
             </p>
             <p className={styles.cardBody}>
-              That said, the sheer number of options can feel overwhelming. In New York City, where you stay matters,
-              and a little guidance goes a long way toward turning a busy destination into a smooth, enjoyable trip.
+              Where you stay shapes the whole trip. Midtown is convenient but expensive. The Upper West Side is
+              calmer and better value. Long Island City and Williamsburg are the best budget picks with fast subway
+              access to Manhattan.
             </p>
           </article>
         </div>

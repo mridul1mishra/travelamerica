@@ -9,20 +9,18 @@ export default function SafetyOverview() {
       </h2>
 
       <p className={styles.copy}>
-        Most areas frequented by visitors in Las Vegas — the Strip, Summerlin,
-        and Henderson — are busy, well‑lit, and heavily patrolled throughout the
-        day and evening.
+        The Strip, Summerlin, and Henderson are heavily patrolled and camera-covered. The main
+        Strip pedestrian corridor is among the most watched public spaces in the US — security
+        presence is visible around the clock. Las Vegas doesn't have quiet hours; the Strip is
+        busy and well-lit at 3am as much as at 3pm.
       </p>
 
       <p className={styles.copy}>
-        Like any large city, some areas have rough edges. The blocks just off the
-        north end of the Strip and parts of Downtown away from Fremont Street can
-        feel uneasy after dark, so staying aware of your surroundings goes a long way.
-      </p>
-
-      <p className={styles.subtle}>
-        For a deeper look at safety tips, nighttime travel, and transportation
-        advice, you can explore our dedicated Las Vegas safety guide.
+        For solo travelers: the main risk on the Strip is street promoters, timeshare solicitors,
+        and aggressive flyer-distributors — not physical safety. Ignore them and keep walking.
+        The area immediately north of the Stratosphere (north end of the Strip) and the blocks
+        east of the Strip around Koval Lane are the main spots to avoid after dark.
+        Downtown/Fremont Street itself is safe; the surrounding blocks are not.
       </p>
 
       <div className={styles.linkWrap}>

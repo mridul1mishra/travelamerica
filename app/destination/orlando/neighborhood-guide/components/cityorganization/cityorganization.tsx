@@ -6,13 +6,23 @@ export default function CityOrganization() {
       <div className={styles.wrapper}>
       <h2 className={styles.heading}>How Orlando Is Organized</h2>
       <p className={styles.copy}>
-        Greater Orlando is spread out, and for visitors it's easiest to think in terms of
-        park zones rather than traditional neighborhoods.
+        Greater Orlando is a car city spread across 40+ miles. For visitors, it helps to think
+        in four zones: the Disney Corridor (Lake Buena Vista, Kissimmee), International Drive
+        (Universal, ICON Park, I-Drive attractions), Downtown Orlando, and Winter Park and
+        College Park (local neighborhoods north of downtown).
       </p>
       <p className={styles.copy}>
-        Most travelers base themselves near Walt Disney World (Lake Buena Vista), near
-        Universal and International Drive, or in Kissimmee — because those zones offer the
-        easiest access to the parks, dining, and attractions.
+        Most first-time visitors stay in the Disney Corridor or along International Drive because
+        those zones have the highest concentration of hotels and park proximity. They're different
+        in feel — the Disney Corridor is quieter and resort-centric; International Drive is busier
+        and more mixed, with walkable blocks around ICON Park and Sand Lake Road.
+      </p>
+      <p className={styles.copy}>
+        For solo travelers: Orlando is harder to navigate without a car than most US tourist
+        destinations. If you're not renting a car, base yourself on International Drive — it has
+        walkable stretches, consistent rideshare coverage, and the most dining and entertainment
+        within walking distance. Downtown Orlando and Winter Park are worth day trips for anyone
+        wanting a break from the resort corridor.
       </p>
       </div>
     </section>

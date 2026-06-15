@@ -6,9 +6,9 @@ import styles from './nyc.module.css';
    Metadata (AI Resistant)
 ========================= */
 export const metadata = {
-  title: 'Is New York Safe? Travel Guide: Safety by Neighborhood + Real Advice68',
+  title: 'New York City Travel Guide 2026 | Neighborhoods, Attractions & Trip Planning',
   description:
-    "Is New York safe? Yes. Here's the real breakdown: which neighborhoods are actually safe, where tourists get into trouble, and how to avoid it.",
+    'Plan your NYC trip — best neighborhoods to stay in, top attractions with real tips, solo and group itineraries, and how to get around. Built from actual visits.',
   alternates: {
     canonical: 'https://www.travelsamericas.com/destination/nyc',
   },
