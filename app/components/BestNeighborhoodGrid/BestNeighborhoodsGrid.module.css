@@ -37,7 +37,7 @@
 .details {
   margin-top: auto;
   font-weight: 600;
-  color: #1a73e8;
+  color: #2563eb;
   text-decoration: none;
 }
 
@@ -53,7 +53,7 @@
 .cta {
   display: inline-block;
   padding: 12px 20px;
-  background: #1a73e8;
+  background: #2563eb;
   color: white;
   border-radius: 8px;
   font-weight: 600;

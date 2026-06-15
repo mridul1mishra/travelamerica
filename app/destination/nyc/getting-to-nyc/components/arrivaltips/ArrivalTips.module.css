@@ -22,10 +22,10 @@
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: #1a73e8;
+  background: #2563eb;
 }
 
-.tipNum { font-size: 13px; font-weight: 700; color: #1a73e8; letter-spacing: 0.08em; display: block; margin-bottom: 8px; }
+.tipNum { font-size: 13px; font-weight: 700; color: #2563eb; letter-spacing: 0.08em; display: block; margin-bottom: 8px; }
 .tipTitle { font-size: 15px; font-weight: 700; color: #1a1a1a; margin: 0 0 10px; line-height: 1.4; }
 .tipDetail { font-size: 14px; color: #666; line-height: 1.55; margin: 0; }
 

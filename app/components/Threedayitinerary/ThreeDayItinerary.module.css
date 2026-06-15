@@ -29,7 +29,7 @@
 }
 
 .dayLabel {
-  background: #1a73e8;
+  background: #2563eb;
   color: white;
   padding: 8px 14px;
   border-radius: 20px;
@@ -63,7 +63,7 @@
 .cta {
   display: inline-block;
   padding: 12px 20px;
-  background: #1a73e8;
+  background: #2563eb;
   color: white;
   border-radius: 8px;
   font-weight: 600;

@@ -55,7 +55,7 @@ export default function BestTime() {
               background: "#fff",
             }}
           >
-            <div style={{ fontSize: "0.8rem", color: "#0364A0", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.25rem" }}>
+            <div style={{ fontSize: "0.8rem", color: "#1d4ed8", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.25rem" }}>
               {label}
             </div>
             <h3 style={{ margin: "0 0 0.5rem 0", fontSize: "1.1rem", fontWeight: 700 }}>{when}</h3>

@@ -29,7 +29,7 @@
 .heroButtons { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
 .btn { padding: 12px 22px; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
 .btn:hover { opacity: 0.85; }
-.btn.primary { background: #1a73e8; color: #fff; }
+.btn.primary { background: #2563eb; color: #fff; }
 .btn.secondary { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2); }
 .updated { font-size: 13px; color: rgba(255,255,255,0.4); }
 

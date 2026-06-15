@@ -49,7 +49,7 @@
 .heading {
   font-family: var(--font-montserrat);
   font-size: 2rem;
-  color: #0364A0;
+  color: #1d4ed8;
   margin: 0 0 0.625rem;
 }
 :global(li) {
@@ -69,7 +69,7 @@
   display: inline-block;
   margin-top: 0.75rem;
   padding: 0.4rem 0.8rem;
-  background-color: #0070f3;
+  background-color: #2563eb;
   color: white;
   border-radius: 999px;
   font-size: 0.875rem;
@@ -166,16 +166,16 @@
   font-family: var(--font-montserrat);
   font-size: 0.875rem;
   padding: 0.4rem 0.8rem;
-  border: 1px solid #0364A0;
+  border: 1px solid #1d4ed8;
   border-radius: 999px;
-  color: #0364A0;
+  color: #1d4ed8;
   text-decoration: none;
   background: #fff;
   transition: all 0.2s ease;
 }
 
 .jumpLink:hover {
-  background: #0364A0;
+  background: #1d4ed8;
   color: #fff;
 }
 
@@ -200,7 +200,7 @@
 .landmarkName {
   font-family: var(--font-montserrat);
   font-size: 1.65rem;
-  color: #0364A0;
+  color: #1d4ed8;
   margin: 0 0 0.25rem;
   line-height: 1.25;
 }
@@ -257,7 +257,7 @@
 .landmarkSubhead {
   font-family: var(--font-montserrat);
   font-size: 1.05rem;
-  color: #0364A0;
+  color: #1d4ed8;
   margin: 1.25rem 0 0.5rem;
 }
 
@@ -272,7 +272,7 @@
 }
 
 .routeCard {
-  border-left: 4px solid #0364A0;
+  border-left: 4px solid #1d4ed8;
   background: #f8fafc;
   padding: 1.25rem 1.5rem;
   margin: 1.5rem 0;
@@ -282,7 +282,7 @@
 .routeCard h3 {
   font-family: var(--font-montserrat);
   font-size: 1.2rem;
-  color: #0364A0;
+  color: #1d4ed8;
   margin: 0 0 0.75rem;
 }
 
@@ -315,7 +315,7 @@
 .faqItem summary {
   font-weight: 600;
   font-size: 1.05rem;
-  color: #0364A0;
+  color: #1d4ed8;
   cursor: pointer;
   padding: 0.5rem 0;
 }
@@ -351,7 +351,7 @@
 }
 
 .relatedLink:hover {
-  border-color: #0364A0;
+  border-color: #1d4ed8;
   background: #f7fafc;
   transform: translateY(-2px);
 }
@@ -359,7 +359,7 @@
 .relatedLink h3 {
   font-family: var(--font-montserrat);
   font-size: 1.05rem;
-  color: #0364A0;
+  color: #1d4ed8;
   margin: 0 0 0.4rem;
 }
 

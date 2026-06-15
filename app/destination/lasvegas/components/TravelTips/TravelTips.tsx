@@ -54,7 +54,7 @@ export default function TravelTips() {
               background: "#fff",
             }}
           >
-            <h3 style={{ margin: "0 0 0.5rem 0", fontSize: "1.05rem", fontWeight: 700, color: "#0364A0" }}>{title}</h3>
+            <h3 style={{ margin: "0 0 0.5rem 0", fontSize: "1.05rem", fontWeight: 700, color: "#1d4ed8" }}>{title}</h3>
             <p style={{ color: "#1e293b", fontSize: "0.9rem", margin: 0, lineHeight: 1.6 }}>{body}</p>
           </article>
         ))}

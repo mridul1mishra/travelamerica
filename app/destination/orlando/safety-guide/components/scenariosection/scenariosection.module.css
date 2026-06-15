@@ -1,6 +1,6 @@
 .card {
   background: #ffffff;
-  border: 2px solid #5b8def; /* blue outline */
+  border: 2px solid #3b82f6; /* blue outline */
   border-radius: 10px;
   overflow: hidden;
 }
@@ -20,7 +20,7 @@
 
 .icon {
   font-size: 1.2rem;
-  color: #5b8def;
+  color: #3b82f6;
   font-weight: bold;
 }
 

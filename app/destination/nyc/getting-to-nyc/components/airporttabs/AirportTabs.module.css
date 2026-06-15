@@ -48,7 +48,7 @@
 .tab:hover { background: #eef2ff; }
 
 .activeTab {
-  background: #1a73e8;
+  background: #2563eb;
   color: #fff;
 }
 .activeTab .tabCode { color: #fff; }
@@ -120,7 +120,7 @@
   white-space: nowrap;
 }
 .badge.green { background: #e6f4ea; color: #1e7e34; }
-.badge.blue { background: #e8f0fe; color: #1a73e8; }
+.badge.blue { background: #e8f0fe; color: #2563eb; }
 .badge.yellow { background: #fef9e7; color: #9a6700; }
 
 /* Meta row */

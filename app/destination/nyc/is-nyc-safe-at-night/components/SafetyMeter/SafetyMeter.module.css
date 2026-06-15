@@ -28,7 +28,7 @@
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #4ade80, #22c55e);
+  background: linear-gradient(135deg, #22c55e, #22c55e);
   display: flex;
   align-items: center;
   justify-content: center;

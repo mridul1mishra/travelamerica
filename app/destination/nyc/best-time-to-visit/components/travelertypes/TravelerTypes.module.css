@@ -19,7 +19,7 @@
 .label { font-size: 15px; font-weight: 700; color: #1a1a1a; margin: 0 0 8px; }
 .monthsBadge {
   display: inline-block;
-  background: #e8f0fe; color: #1a73e8;
+  background: #e8f0fe; color: #2563eb;
   font-size: 13px; font-weight: 700;
   padding: 4px 14px; border-radius: 999px;
   margin-bottom: 12px;

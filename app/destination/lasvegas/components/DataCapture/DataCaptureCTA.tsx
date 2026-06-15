@@ -36,7 +36,7 @@ export default function DataCaptureCTA() {
               borderRadius: 8,
               background: "#fff",
               textDecoration: "none",
-              color: "#0364A0",
+              color: "#1d4ed8",
               fontWeight: 600,
               fontSize: "0.95rem",
               textAlign: "center",

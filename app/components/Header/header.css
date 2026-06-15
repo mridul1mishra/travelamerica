@@ -23,15 +23,16 @@ a{
 /* Scroll effect */
 .overlay-header.scrolled {
   background: white;
-  color: #7e2b7c !important;
+  color: #B22234 !important;
+  border-bottom: 2px solid #B22234;
 }
 
 .overlay-header.scrolled .hamburger {
-  color: #7e2b7c;
+  color: #B22234;
 }
 
 .overlay-header.scrolled .nav-links li a {
-  color: #7e2b7c;
+  color: #B22234;
   padding-right: 60px;
   cursor: pointer;
 }
@@ -78,7 +79,7 @@ a{
 }
 
 .nav-links li a:hover {
-  color: #ffd700;
+  color: #facc15;
 }
 /* Hamburger & Close Buttons */
 .hamburger {
@@ -138,7 +139,7 @@ a{
     width: 70%;
     height: 100vh;
     background: white;
-    color: #7e2b7c;
+    color: #B22234;
     display: none;
     flex-direction: column;
     justify-content: center;

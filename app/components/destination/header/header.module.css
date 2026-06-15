@@ -48,7 +48,7 @@
 }
 
 .btn.primary {
-  background: #1a73e8;
+  background: #2563eb;
   color: white;
 }
 
@@ -116,7 +116,7 @@
 }
 
 .navlinks li a {
-  color: #7e2b7c;
+  color: #B22234;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -124,7 +124,7 @@
 }
 
 .navlinks li a:hover {
-  color: #ffd700;
+  color: #facc15;
 }
 
 .hamburger {
@@ -132,7 +132,7 @@
   font-size: 28px;
   background: none;
   border: none;
-  color: #7e2b7c;
+  color: #B22234;
   cursor: pointer;
 }
 
