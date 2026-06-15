@@ -3,7 +3,7 @@ import styles from './WhyVisit.module.css';
 export default function WhyVisit() {
   return (
     <section className={styles.section} aria-labelledby="why-visit-la-heading">
-      <div className={styles.container}>
+<div className={styles.container}>
         <header className={styles.header}>
           <h2 id="why-visit-la-heading" className={styles.title}>
             Why Los Angeles Works for So Many Trips
