@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
-import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import BookingCTA from "./components/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 
 const days = [

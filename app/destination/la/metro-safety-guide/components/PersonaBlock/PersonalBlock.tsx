@@ -1,3 +1,4 @@
+import SectionWrapper from '../../Sectionwrapper';
 import styles from "./PersonaBlock.module.css";
 import type { Persona } from "../types-metroSafetyGuide";
 
@@ -7,6 +8,7 @@ interface Props {
 
 export default function PersonaBlock({ personas }: Props) {
   return (
+    <SectionWrapper id="personas">
     <section className={styles.wrapper}>
       <h2 className={styles.title}>Persona‑Based Safety Tips</h2>
 
@@ -56,5 +58,6 @@ export default function PersonaBlock({ personas }: Props) {
         ))}
       </div>
     </section>
+    </SectionWrapper>
   );
 }

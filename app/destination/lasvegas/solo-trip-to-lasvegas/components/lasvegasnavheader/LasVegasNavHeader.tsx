@@ -12,7 +12,7 @@ export default function LasVegasNavHeader() {
   return (
     <section className={`${styles.overlayheader} ${styles.scrolled}`}>
       <div className={styles.brandlogo}>
-        <a href="/">
+        <Link href="/">
           <Image
             src="/Travels-Americas-logo-horizontal-v3.png"
             alt="Travels Americas Logo"
@@ -21,7 +21,7 @@ export default function LasVegasNavHeader() {
             sizes="(max-width: 768px) 200px, 285px"
             fetchPriority="high"
           />
-        </a>
+        </Link>
       </div>
       <nav className={styles.mainnav}>
         <button className={styles.hamburger} onClick={toggleMenu} aria-label="Toggle menu">

@@ -1,3 +1,4 @@
+import SectionWrapper from '../../Sectionwrapper';
 import styles from "./checklist.module.css";
 import type { Checklist as ChecklistType } from "../types-metroSafetyGuide";
 
@@ -9,6 +10,7 @@ export default function Checklist({ data }: Props) {
   const { essentials, safety_items, digital_tools, what_not_to_carry } = data;
 
   return (
+    <SectionWrapper id="checklist">
     <section className={styles.wrapper}>
   <h2 className={styles.title}>LA Metro Safety Checklist</h2>
 
@@ -64,5 +66,6 @@ export default function Checklist({ data }: Props) {
 </section>
 
 
+    </SectionWrapper>
   );
 }

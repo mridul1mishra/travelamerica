@@ -1,3 +1,4 @@
+import SectionWrapper from '../../Sectionwrapper';
 import styles from "./Etiquette.module.css";
 import type { Etiquette as EtiquetteType } from "../types-metroSafetyGuide";
 import { FaSubway, FaUserFriends, FaClock, FaEyeSlash } from "react-icons/fa";
@@ -16,6 +17,7 @@ export default function Etiquette({ data }: Props) {
 
 
   return (
+    <SectionWrapper id="etiquette">
     <section className={styles.wrapper}>
   <h2 className={styles.title}>Metro Etiquette</h2>
 
@@ -59,5 +61,6 @@ export default function Etiquette({ data }: Props) {
 </section>
 
 
+    </SectionWrapper>
   );
 }

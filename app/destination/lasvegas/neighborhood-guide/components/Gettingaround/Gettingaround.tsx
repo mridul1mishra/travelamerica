@@ -20,9 +20,9 @@ export default function GettingAround() {
       </p>
 
       <p className={styles.subtle}>
-        You don't need to stay next to every attraction to get around easily —
+        You don&rsquo;t need to stay next to every attraction to get around easily —
         choosing a central Strip or Downtown location matters far more than
-        staying "close" on a map in a city this spread out.
+        staying &ldquo;close&rdquo; on a map in a city this spread out.
       </p>
     </section>
   );

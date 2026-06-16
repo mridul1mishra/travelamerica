@@ -1,6 +1,6 @@
 "use client"
 import Header from "@/app/components/destination/header/header";
-import Hero from "./components/Hero/Hero";
+import MetroBanner from "./components/MetroBanner/MetroBanner";
 import type { MetroSafetyGuide } from "./components/types-metroSafetyGuide";
 const data: MetroSafetyGuide = require("./components/metro-safety-guide.json");
 import styles from "./MetroSafetyGuide.module.css";
@@ -16,7 +16,6 @@ import ToolsAndApps from "./components/Toolsandapps/Toolsandapps";
 import Etiquette from "./components/Etiquette/Etiquette";
 import InternalLinks from "./components/Interlink/Interlink";
 import Footer from "../../../../app/components/Header/Footer/footer";
-import SectionWrapper from "./Sectionwrapper";
 import WhyTrustThisGuide from "./components/whytrustthisguide/whytrustthisguide";
 import BookingCTA from './components/BookingCTA/BookingCTA';
 
@@ -45,47 +44,21 @@ export default function LAMetroSafetyClient(){
         <Header />
         <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/bookings?tab=flights&from=metro-safety-guide" label="Book your trip" />
         <div className={styles.pageWrapper}>
-      <section id="banner">
-        <Hero {...hero} />
-      </section>
+      <MetroBanner hero={hero} />
 
-      <SectionWrapper id="why-trust-this-guide">
-        <WhyTrustThisGuide data={data.why_trust_this_guide} />
-      </SectionWrapper>
+      <WhyTrustThisGuide data={data.why_trust_this_guide} />
 
-      <SectionWrapper id="core-principles">
-        <CorePrinciples items={core_principles} />
-      </SectionWrapper>
-      <SectionWrapper id="metro_basics">
+      <CorePrinciples items={core_principles} />
       <MetroBasics data={metro_basics} />
-      </SectionWrapper>
-      <SectionWrapper id="personas">
       <PersonaBlock personas={personas} />
-      </SectionWrapper>
-      <SectionWrapper id="scenarios">
       <ScenarioList scenarios={scenarios} />
-      </SectionWrapper>
-      <SectionWrapper id="scenarios">
       <NeighborhoodNotes items={neighborhood_notes} />
-      </SectionWrapper>
-      <SectionWrapper id="scenarios">
       <FAQ items={faq} />
-      </SectionWrapper>
-      <SectionWrapper id="scenarios">
       <Checklist data={checklist} />
-      </SectionWrapper>
-      <SectionWrapper id="scenarios">
       <EmergencyPlaybook data={emergency_playbook} />
-      </SectionWrapper>
-      <SectionWrapper id="scenarios">
       <ToolsAndApps items={tools_and_apps} />
-      </SectionWrapper>
-      <SectionWrapper id="scenarios">
       <Etiquette data={etiquette} />
-      </SectionWrapper>
-      <SectionWrapper id="scenarios">
       <InternalLinks items={internal_links} />
-      </SectionWrapper>
       </div>
 
       <BookingCTA variant="full" text="Plan and book your LA trip" href="/destination/la/bookings?tab=flights&from=metro-safety-guide" label="Book your trip" />

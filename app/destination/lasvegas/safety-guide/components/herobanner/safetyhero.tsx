@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./safetyhero.module.css";
 
 export default function SafetyHero() {
@@ -7,7 +8,7 @@ export default function SafetyHero() {
 
         {/* Breadcrumb */}
         <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-          <a href="/">Home</a>
+          <Link href="/">Home</Link>
           <span>›</span>
           <a href="/destination/lasvegas/solo-trip-to-lasvegas">Solo Trip to Las Vegas</a>
           <span>›</span>
@@ -18,7 +19,7 @@ export default function SafetyHero() {
         <div className={styles.heroContent}>
           <h1>Is Las Vegas Safe for Tourists in 2026? Complete Safety Guide</h1>
           <p className={styles.subtitle}>
-            Honest, practical Las Vegas safety tips for tourists, solo travelers, and first-time visitors- based on real situations you'll face on and off the Strip.
+            Honest, practical Las Vegas safety tips for tourists, solo travelers, and first-time visitors- based on real situations you&rsquo;ll face on and off the Strip.
           </p>
 
           <p className={styles.topics}>
@@ -30,7 +31,7 @@ export default function SafetyHero() {
         <div className={styles.infoBox}>
           <h2>
             <span className={styles.infoIcon}>ℹ</span>
-            In this Las Vegas safety guide, you'll learn:
+            In this Las Vegas safety guide, you&rsquo;ll learn:
           </h2>
 
           <ul>

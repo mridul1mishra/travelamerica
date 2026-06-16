@@ -1,10 +1,10 @@
 "use client";
-import HeroBanner from "../../../components/Header/HeroBanner";
-import NavigationHeader from "../../../components/Header/NavigationHeader";
+import HeroBanner from "./components/HeroBanner/HeroBanner";
+import NavigationHeader from "./components/NavigationHeader/NavigationHeader";
 import Link from "next/link";
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from "./lasvegaslandmark.module.css";
-import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import BookingCTA from "./components/BookingCTA/BookingCTA";
 
 // Each landmark gets a concrete data row instead of paragraphs of fluff.
 // Approximate ticket prices and hours are noted as ranges or guidance only —

@@ -1,3 +1,4 @@
+import SectionWrapper from '../../Sectionwrapper';
 import styles from "./whytrustthisguide.module.css";
 import type { WhyTrustThisGuide as WhyTrustThisGuideType } from "../types-metroSafetyGuide";
 
@@ -15,6 +16,7 @@ export default function WhyTrustThisGuide({ data }: Props) {
   } = data;
 
   return (
+    <SectionWrapper id="why-trust-this-guide">
     <section className={styles.section}>
       <h2 className={styles.sectionTitle}>Why Trust This Guide</h2>
       <p className={styles.paragraph}>{author_expertise}</p>
@@ -32,5 +34,6 @@ export default function WhyTrustThisGuide({ data }: Props) {
 
       <p className={styles.paragraph}>{editorial_standards}</p>
     </section>
+    </SectionWrapper>
   );
 }

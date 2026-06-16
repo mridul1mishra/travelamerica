@@ -1,3 +1,4 @@
+import SectionWrapper from '../../Sectionwrapper';
 import { useState } from "react";
 import styles from "./FAQ.module.css";
 import type { FAQ as FAQType } from "../types-metroSafetyGuide";
@@ -14,6 +15,7 @@ export default function FAQ({ items }: Props) {
   };
 
   return (
+    <SectionWrapper id="faq">
     <section className={styles.wrapper}>
       <h2 className={styles.title}>Frequently Asked Questions</h2>
 
@@ -40,5 +42,6 @@ export default function FAQ({ items }: Props) {
         ))}
       </div>
     </section>
+    </SectionWrapper>
   );
 }

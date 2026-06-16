@@ -1,11 +1,11 @@
 "use client";
-import HeroBanner from "../../../components/Header/HeroBanner";
-import NavigationHeader from "../../../components/Header/NavigationHeader";
+import HeroBanner from "./components/HeroBanner/HeroBanner";
+import NavigationHeader from "./components/NavigationHeader/NavigationHeader";
 import Image from 'next/image';
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from "./lasvegasgrouptravel.module.css";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import BookingCTA from './components/BookingCTA/BookingCTA';
+import FAQAccordion from './components/FAQAccordion/FAQAccordion';
 import faqData from '@/content/destination/lasvegas/group-travel/faq/faqsection.json';
 
 export default function LasVegasGroupTravelClient() {

@@ -15,7 +15,7 @@ import data from "./is-lasvegas-safe-at-night.json";
 
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import BookingCTA from './components/BookingCTA/BookingCTA';
 
 export default function IsLasVegasSafeAtNightClient() {
   return (

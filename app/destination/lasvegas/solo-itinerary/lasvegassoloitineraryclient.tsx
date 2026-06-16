@@ -1,11 +1,11 @@
 "use client";
-import HeroBanner from "../../../components/Header/HeroBanner";
-import NavigationHeader from "../../../components/Header/NavigationHeader";
+import HeroBanner from "./components/HeroBanner/HeroBanner";
+import NavigationHeader from "./components/NavigationHeader/NavigationHeader";
 import Image from 'next/image';
 import styles from './lasvegassoloitinerary.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import FAQ from "@/app/components/faq/faq";
+import BookingCTA from './components/BookingCTA/BookingCTA';
+import FAQ from "./components/FAQ/FAQ";
 
 interface FaqItem {
   id?: string;

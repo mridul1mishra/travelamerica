@@ -1,3 +1,4 @@
+import SectionWrapper from '../../Sectionwrapper';
 import styles from "./coreprinciples.module.css";
 import type { CorePrinciple } from "../types-metroSafetyGuide";
 import { FaEye, FaMapMarkerAlt, FaLightbulb, FaShieldAlt, FaTools } from "react-icons/fa";
@@ -17,6 +18,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function CorePrinciples({ items }: Props) {
   return (
+    <SectionWrapper id="core-principles">
     <section className={styles.wrapper}>
       <h2 className={styles.title}>Core Safety Principles</h2>
 
@@ -30,5 +32,6 @@ export default function CorePrinciples({ items }: Props) {
         ))}
       </div>
     </section>
+    </SectionWrapper>
   );
 }

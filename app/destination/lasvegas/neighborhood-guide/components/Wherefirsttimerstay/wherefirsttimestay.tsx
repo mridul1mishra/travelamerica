@@ -14,7 +14,7 @@ export default function WhereFirstTimersStay() {
 
       <p className={styles.copy}>
         For solo travelers: Mid-Strip hotel bars are genuinely welcoming for solo guests. The
-        Cosmopolitan's Chandelier Bar, Wynn's casino floor bars, and the bar programs at most
+        Cosmopolitan&rsquo;s Chandelier Bar, Wynn&rsquo;s casino floor bars, and the bar programs at most
         Aria restaurants have counter seating built for one. Solo bar dining at a celebrity-chef
         room is one of the best value moves on the Strip — often same-day availability and no
         group minimum.

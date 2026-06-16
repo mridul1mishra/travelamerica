@@ -1,28 +1,28 @@
 "use client";
 import styles from './solotriptolasvegas.module.css';
-import QuickActionBar from '@/app/components/quickactionbar/quickactionbar';
+import QuickActionBar from './components/QuickActionBar/QuickActionBar';
 import LasVegasNavHeader from './components/lasvegasnavheader/LasVegasNavHeader';
 import sectionsData from "@/content/destination/lasvegas/solo-trip-to-lasvegas/infosection.json";
 import getaroundData from "@/content/destination/lasvegas/solo-trip-to-lasvegas/gettingaround.json";
-import InfoSection from '@/app/components/infosection/infosection';
+import InfoSection from './components/InfoSection/InfoSection';
 import neighborhoodsData  from "@/content/destination/lasvegas/solo-trip-to-lasvegas/neighborhoods.json";
-import BestNeighborhoodsGrid from '@/app/components/BestNeighborhoodGrid/bestneighborhoodgrid';
+import BestNeighborhoodsGrid from './components/BestNeighborhoodsGrid/BestNeighborhoodsGrid';
 import itineraryData from "@/content/destination/lasvegas/solo-trip-to-lasvegas/itinerary.json";
 import { ItineraryProps } from "@/app/models/itinerary";
-import ThreeDayItinerary from '@/app/components/itinerary/itinerary';
+import ThreeDayItinerary from './components/ThreeDayItinerary/ThreeDayItinerary';
 import femaleSoloData from "@/content/destination/lasvegas/solo-trip-to-lasvegas/femalesolo.json";
-import FemaleSoloTiles from "@/app/components/Solofemaletravel/solofemaletravel";
+import FemaleSoloTiles from './components/FemaleSoloTiles/FemaleSoloTiles';
 import { FemaleSoloData } from "@/app/models/femaleSolo";
 import Footer from '@/app/components/Header/Footer/footer';
-import { WhyTrustThisGuide } from '@/app/components/destination/whytrustitem/whytrustthisguide';
+import { WhyTrustThisGuide } from './components/WhyTrustThisGuide/WhyTrustThisGuide';
 import lasvegasWhyTrustData from "@/content/destination/lasvegas/solo-trip-to-lasvegas/whyTrustItems/whyTrustItems.json";
 import { ScenarioSection } from './components/scenariocard/scenariosection';
 import { SubwayAccessSection } from './components/subwayaccess/subwayaccess';
 import faqData from "@/content/destination/lasvegas/solo-trip-to-lasvegas/faq/faqsection.json";
-import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import FAQAccordion from './components/FAQAccordion/FAQAccordion';
 import SoloLasVegasQa from './components/aisnippet/cardqanda';
 import SoloTripNarrative from './components/solotripnarrative/SoloTripNarrative';
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import BookingCTA from './components/BookingCTA/BookingCTA';
 import HeroSection from './components/herosection/HeroSection';
 
 

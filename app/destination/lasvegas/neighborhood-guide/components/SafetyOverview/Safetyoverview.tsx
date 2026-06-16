@@ -11,7 +11,7 @@ export default function SafetyOverview() {
       <p className={styles.copy}>
         The Strip, Summerlin, and Henderson are heavily patrolled and camera-covered. The main
         Strip pedestrian corridor is among the most watched public spaces in the US — security
-        presence is visible around the clock. Las Vegas doesn't have quiet hours; the Strip is
+        presence is visible around the clock. Las Vegas doesn&rsquo;t have quiet hours; the Strip is
         busy and well-lit at 3am as much as at 3pm.
       </p>
 

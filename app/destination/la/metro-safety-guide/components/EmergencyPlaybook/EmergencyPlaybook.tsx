@@ -1,3 +1,4 @@
+import SectionWrapper from '../../Sectionwrapper';
 import styles from "./EmergencyPlaybook.module.css";
 import type { EmergencyPlaybook as EmergencyPlaybookType } from "../types-metroSafetyGuide";
 
@@ -7,6 +8,7 @@ interface Props {
 
 export default function EmergencyPlaybook({ data }: Props) {
   return (
+    <SectionWrapper id="emergency-playbook">
     <section className={styles.wrapper}>
   <h2 className={styles.title}>Emergency Playbook</h2>
 
@@ -58,5 +60,6 @@ export default function EmergencyPlaybook({ data }: Props) {
   </div>
 </section>
 
+    </SectionWrapper>
   );
 }

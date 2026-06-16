@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, Suspense } from "react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -97,7 +98,7 @@ function LasVegasClientInner() {
       <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
         <ol className={styles.breadcrumbList}>
           <li className={styles.breadcrumbItem}>
-            <a href="/" className={styles.breadcrumbLink}>Home</a>
+            <Link href="/" className={styles.breadcrumbLink}>Home</Link>
           </li>
           <li aria-hidden="true" className={styles.breadcrumbSep}>›</li>
           <li className={styles.breadcrumbItem}>

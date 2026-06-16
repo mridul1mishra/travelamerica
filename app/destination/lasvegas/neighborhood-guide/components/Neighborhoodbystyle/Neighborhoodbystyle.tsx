@@ -45,7 +45,7 @@ export default function NeighborhoodsByStyle({interest}: NeighborhoodsByStylePro
           </p>
           <p>
             Independent galleries, craft cocktail bars, the First Friday art walk,
-            and the city's deepest Asian dining scene.
+            and the city&rsquo;s deepest Asian dining scene.
           </p>
         </div>
 

@@ -13,7 +13,7 @@ export default function CityOrganization() {
         center of gravity — the Bellagio fountains are the de facto anchor point.
       </p>
       <p className={styles.copy}>
-        Beyond the resort core: Spring Mountain Road (Chinatown) has the city's best off-Strip dining
+        Beyond the resort core: Spring Mountain Road (Chinatown) has the city&rsquo;s best off-Strip dining
         and runs parallel to the Strip about a mile west. Summerlin and Henderson are residential suburbs
         with good hotel value but require a rideshare to reach Strip attractions.
       </p>

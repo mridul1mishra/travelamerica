@@ -2,12 +2,12 @@
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from "./lasvegasbestareas.module.css";
-import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
-import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
-import Banner from "@/app/components/destination/bestareatostay/Banner/Banner";
-import SoloTripIntro from "@/app/components/destination/bestareatostay/solotripintro/solotripintro";
-import SectionSafestNeighborhoods from "@/app/components/destination/bestareatostay/safestneighborhood/safestneighborhood";
-import NeighborhoodRankingCards, { Neighborhood } from "@/app/components/destination/neighborhoodrankingcard/neighborhoodrankingcard";
+import BookingCTA from "./components/BookingCTA/BookingCTA";
+import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
+import Banner from "./components/Banner/Banner";
+import SoloTripIntro from "./components/SoloTripIntro/SoloTripIntro";
+import SectionSafestNeighborhoods from "./components/SectionSafestNeighborhoods/SectionSafestNeighborhoods";
+import NeighborhoodRankingCards, { Neighborhood } from "./components/NeighborhoodRankingCards/NeighborhoodRankingCards";
 import faqData from "@/content/destination/lasvegas/bestplacetostay/faqsection.json";
 
 const lasvegasNeighborhoods: Neighborhood[] = [

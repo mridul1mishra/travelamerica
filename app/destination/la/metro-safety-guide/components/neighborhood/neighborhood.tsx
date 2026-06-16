@@ -1,3 +1,4 @@
+import SectionWrapper from '../../Sectionwrapper';
 import { useState } from "react";
 import styles from "./neighborhood.module.css";
 import type { NeighborhoodNote } from "../types-metroSafetyGuide";
@@ -14,6 +15,7 @@ export default function NeighborhoodNotes({ items }: Props) {
   };
 
   return (
+    <SectionWrapper id="neighborhood-notes">
     <section className={styles.wrapper}>
       <h2 className={styles.title}>Neighborhood‑Specific Notes</h2>
 
@@ -57,5 +59,6 @@ export default function NeighborhoodNotes({ items }: Props) {
         ))}
       </div>
     </section>
+    </SectionWrapper>
   );
 }

@@ -1,3 +1,4 @@
+import SectionWrapper from '../../Sectionwrapper';
 import styles from "./Toolsandapps.module.css";
 import type { ToolApp } from "../types-metroSafetyGuide";
 
@@ -7,6 +8,7 @@ interface Props {
 
 export default function ToolsAndApps({ items }: Props) {
   return (
+    <SectionWrapper id="tools-and-apps">
     <section className={styles.wrapper}>
       <h2 className={styles.title}>Tools & Apps</h2>
 
@@ -23,5 +25,6 @@ export default function ToolsAndApps({ items }: Props) {
         ))}
       </div>
     </section>
+    </SectionWrapper>
   );
 }

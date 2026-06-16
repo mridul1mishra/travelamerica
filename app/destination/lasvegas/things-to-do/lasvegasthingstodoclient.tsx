@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from './lasvegasthingstodo.module.css';
 import LasVegasNavHeader from '../solo-trip-to-lasvegas/components/lasvegasnavheader/LasVegasNavHeader';
 import Footer from '../../../../app/components/Header/Footer/footer';
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import BookingCTA from './components/BookingCTA/BookingCTA';
 
 const categories = [
   { title: 'Shows & Residencies', blurb: 'Cirque du Soleil is the headline act — "O" at Bellagio (water stage, ~$110+) and "Mystère" at Treasure Island are the picks. Pop residencies rotate through the Colosseum at Caesars Palace, Dolby Live at Park MGM, and the Sphere. Book 3–5 days ahead; same-day Tix4Tonight booths sell discounted seats from ~$30.', href: '/destination/lasvegas/bookings?tab=activities&from=things-to-do' },

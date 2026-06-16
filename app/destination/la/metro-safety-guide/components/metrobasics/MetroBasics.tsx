@@ -1,3 +1,4 @@
+import SectionWrapper from '../../Sectionwrapper';
 import styles from "./MetroBasics.module.css";
 import type { MetroBasics as MetroBasicsType } from "../types-metroSafetyGuide";
 
@@ -15,6 +16,7 @@ export default function MetroBasics({ data }: Props) {
   } = data;
 
   return (
+    <SectionWrapper id="metro-basics">
     <section className={styles.wrapper}>
       <h2 className={styles.title}>Metro Basics</h2>
 
@@ -54,5 +56,6 @@ export default function MetroBasics({ data }: Props) {
         <p className={styles.text}>{train_types}</p>
       </div>
     </section>
+    </SectionWrapper>
   );
 }

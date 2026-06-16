@@ -1,3 +1,4 @@
+import SectionWrapper from '../../Sectionwrapper';
 import styles from "./Interlink.module.css";
 import type { InternalLink } from "../types-metroSafetyGuide";
 import { useState } from "react";
@@ -9,6 +10,7 @@ interface Props {
 export default function InternalLinks({ items }: Props) {
   const [activeSection, setActiveSection] = useState("");
   return (
+    <SectionWrapper id="internal-links">
     <nav className={styles.wrapper} aria-label="Page Navigation">
       <h2 className={styles.title}>On This Page</h2>
 
@@ -26,5 +28,6 @@ export default function InternalLinks({ items }: Props) {
         ))}
       </ul>
     </nav>
+    </SectionWrapper>
   );
 }

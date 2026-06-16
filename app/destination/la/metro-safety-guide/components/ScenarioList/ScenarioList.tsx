@@ -1,3 +1,4 @@
+import SectionWrapper from '../../Sectionwrapper';
 import styles from "./ScenarioList.module.css";
 import type { Scenario } from "../types-metroSafetyGuide";
 import { useState } from "react";
@@ -8,6 +9,7 @@ interface Props {
 
 export default function ScenarioList({ scenarios }: Props) {
   return (
+    <SectionWrapper id="scenarios">
     <section className={styles.wrapper}>
       <h2 className={styles.title}>Real‑World Scenarios</h2>
 
@@ -17,6 +19,7 @@ export default function ScenarioList({ scenarios }: Props) {
         ))}
       </div>
     </section>
+    </SectionWrapper>
   );
 }
 

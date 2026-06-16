@@ -17,10 +17,10 @@ import FAQAccordion from "./components/FAQAccordian/faqsection";
 import faqData from "./components/FAQAccordian/FAQACcordina.json";
 import Footer from "@/app/components/Header/Footer/footer";
 import LinkHubGrid from "./components/linkhubgrid/LinkHubGrid";
-import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import { WhyTrustThisGuide } from "./components/WhyTrustThisGuide/WhyTrustThisGuide";
 import cityWhyTrustData from "@/content/destination/lasvegas/lasvegas-female-solo-travel-guide/whyTrustItems/whyTrustItems.json";
 import FemaleSafetyNarrative from "./components/safetynarrative/FemaleSafetyNarrative";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import BookingCTA from './components/BookingCTA/BookingCTA';
 
 export default function LasVegasFemaleSoloClient() {
   return (
