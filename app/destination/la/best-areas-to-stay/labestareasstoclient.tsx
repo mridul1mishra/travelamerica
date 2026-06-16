@@ -3,12 +3,14 @@ import Link from "next/link";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from "./bestareatostay.module.css";
-import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
-import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
-import Banner from "@/app/components/destination/bestareatostay/Banner/Banner";
-import SoloTripIntro from "@/app/components/destination/bestareatostay/solotripintro/solotripintro";
-import SectionSafestNeighborhoods from "@/app/components/destination/bestareatostay/safestneighborhood/safestneighborhood";
-import NeighborhoodRankingCards, { Neighborhood } from "@/app/components/destination/neighborhoodrankingcard/neighborhoodrankingcard";
+import BookingCTA from "./components/BookingCTA/BookingCTA";
+import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
+import Banner from "./components/Banner/Banner";
+import SoloTripIntro from "./components/SoloTripIntro/SoloTripIntro";
+import SectionSafestNeighborhoods from "./components/SectionSafestNeighborhoods/SectionSafestNeighborhoods";
+import NeighborhoodRankingCards, { Neighborhood } from "./components/NeighborhoodRankingCards/NeighborhoodRankingCards";
+import AreasCompared from "./components/AreasCompared/AreasCompared";
+import HotelBookingTips from "./components/HotelBookingTips/HotelBookingTips";
 import faqData from "@/content/destination/la/bestplacetostay/faqsection.json";
 
 const laNeighborhoods: Neighborhood[] = [
@@ -70,21 +72,6 @@ const laNeighborhoods: Neighborhood[] = [
   },
 ];
 
-const areas = [
-  { name: "Santa Monica (Best Overall for First-Timers)", vibe: "Beach access, walkable Third Street Promenade, the famous pier, and a safe, well-lit grid. Closest LA gets to a walkable city. Expensive ($200–$400/night for hotels), but you trade car dependency for convenience.", bestFor: "First-timers, couples, anyone wanting beach + walkability" },
-  { name: "West Hollywood (WeHo)", vibe: "Sunset Strip, lively nightlife, excellent restaurants, walkable between bars and clubs. LGBTQ+ friendly and very social. Mid-range to expensive hotels ($150–$300). Quieter during the day, buzzing at night.", bestFor: "Nightlife, dining, LGBTQ+ travelers, social trips" },
-  { name: "Hollywood", vibe: "Walk of Fame, TCL Chinese Theatre, Griffith Observatory access. Central location. Very touristy and congested. Quality varies wildly by block — stick to hotels on Hollywood Blvd or above. Budget to mid-range ($100–$200).", bestFor: "Sightseeing-focused trips, budget travelers wanting central access" },
-  { name: "Silver Lake / Los Feliz", vibe: "Hip, local neighborhood with excellent coffee shops, independent restaurants, and a reservoir walk. No beach access. Requires a car or Uber for most attractions. Airbnbs dominate — hotels are scarce.", bestFor: "Repeat visitors, digital nomads, food and culture travelers" },
-  { name: "Downtown LA (DTLA)", vibe: "Grand Central Market, The Broad, Staples Center events, Arts District galleries. Rapidly gentrified with excellent hotel value ($120–$180). Some blocks still rough — stay near Grand Ave or the Arts District, not Skid Row adjacent.", bestFor: "Budget travelers, arts and food focus, concert-goers" },
-  { name: "Beverly Hills / Bel Air", vibe: "Rodeo Drive, Mulholland Drive views, ultra-luxury hotels. The safest and most manicured area in LA. Very expensive ($350–$700+/night). Nothing is walkable — you need a car for everything for everything.", bestFor: "Luxury travel, business travel, special occasions" },
-];
-
-const quickTips = [
-  "LA has no reliable public transit for most tourist attractions. Budget $15-$30/day for Uber or a rental car on top of hotel costs.",
-  "Parking in Santa Monica and Beverly Hills can be $25-$40/day. Factor this into hotel cost comparisons.",
-  "Weekday rates are typically 20-30% cheaper. Avoid arriving during major awards season (Jan-Mar) when prices spike.",
-  "Resort fees are less common than Vegas but do exist - check the full nightly total, not just the base rate.",
-];
 
 export default function LABestAreasClient() {
   return (
@@ -133,29 +120,8 @@ export default function LABestAreasClient() {
         warning="Avoid walking alone in parts of Hollywood east of Vine, areas adjacent to Skid Row in DTLA, or unfamiliar side streets after dark."
       />
       <NeighborhoodRankingCards cityName="Los Angeles" neighborhoods={laNeighborhoods} />
-      <section aria-labelledby="areas-la" className={styles.section}>
-        <h2 id="areas-la">All Los Angeles Areas Compared</h2>
-        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>Six distinct neighborhoods - what each is actually like and who it suits.</p>
-        <div className={styles.grid}>
-          {areas.map(({ name, vibe, bestFor }) => (
-            <article key={name} className={styles.card}>
-              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{name}</h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", margin: "0 0 0.5rem" }}>{vibe}</p>
-              <p style={{ color: "#333", fontSize: "0.85rem", margin: 0 }}><strong>Best for:</strong> {bestFor}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-      <section aria-labelledby="tips-la" className={styles.section}>
-        <h2 id="tips-la">Hotel Booking Tips for Los Angeles</h2>
-        <div className={styles.grid}>
-          {quickTips.map((tip, i) => (
-            <article key={i} className={styles.card}>
-              <p style={{ color: "#555", fontSize: "0.9rem", margin: 0 }}>{tip}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <AreasCompared />
+      <HotelBookingTips />
       <div className={styles.container}>
         <FAQAccordion faqs={faqData} />
       </div>

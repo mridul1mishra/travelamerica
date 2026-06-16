@@ -1,0 +1,46 @@
+/* ── Slim variant ── */
+.slim {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+  flex-wrap: wrap;
+}
+.slimText { font-size: 0.95rem; color: #1e3a5f; flex: 1; }
+.slimButton {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.slimButton:hover { background: #1d4ed8; }
+/* ── Full card variant ── */
+.full { background: #2563eb; padding: 3rem 1.5rem; text-align: center; }
+.fullInner { max-width: 680px; margin: 0 auto; }
+.fullHeadline { font-size: 1.6rem; font-weight: 700; color: #fff; margin: 0 0 0.6rem; }
+.fullText { font-size: 1rem; color: #dbeafe; margin: 0 0 1.4rem; }
+.fullButton {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #fff;
+  color: #2563eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.fullButton:hover { background: #dbeafe; color: #1d4ed8; }
+@media (max-width: 600px) {
+  .slim { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+  .fullHeadline { font-size: 1.25rem; }
+}

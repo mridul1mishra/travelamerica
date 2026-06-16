@@ -1,6 +1,6 @@
 "use client"
-import Header from "@/app/components/destination/header/header";
-import Footer from "@/app/components/Header/Footer/footer";
+import Header from "./components/Header/header";
+import Footer from "./components/Footer/footer";
 import styles from "./neighborhoodguide.module.css";
 import IntroSection from "./components/introsection/introsection";
 import CityOrganization from "./components/cityorganization/cityorganization";
@@ -10,10 +10,10 @@ import WhereFirstTimersStay from "./components/Wherefirsttimerstay/wherefirsttim
 import GettingAround from "./components/Gettingaround/Gettingaround";
 import SafetyOverview from "./components/SafetyOverview/Safetyoverview";
 import NeighborhoodGuideCTA from "./components/Neighborhoodguidecta/Neighborhoodguidecta";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import { WhyTrustThisGuide } from '@/app/components/destination/whytrustitem/whytrustthisguide';
+import BookingCTA from './components/BookingCTA/BookingCTA';
+import { WhyTrustThisGuide } from './components/WhyTrustThisGuide/whytrustthisguide';
 import orlandoWhyTrustData from '@/content/destination/orlando/neighborhood-guide/whyTrustItems/whyTrustItems.json';
-import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import FAQAccordion from './components/FAQAccordion/faqsection';
 import orlandoFaqData from '@/content/destination/orlando/neighborhood-guide/faq/faqsection.json';
 
 const navLinks = [
@@ -27,7 +27,7 @@ export default function OrlandoNeighborhoodGuideClient() {
   return (
     <>
       <Header links={navLinks} />
-      <BookingCTA variant="slim" text="Book your Orlando trip →" href="/destination/orlando/bookings?tab=hotels&from=neighborhood-guide" label="See Orlando hotels" />
+      <BookingCTA variant="slim" text="Book your Orlando trip â†’" href="/destination/orlando/bookings?tab=hotels&from=neighborhood-guide" label="See Orlando hotels" />
       <div className={styles.container}>
         <IntroSection />
         <CityOrganization />

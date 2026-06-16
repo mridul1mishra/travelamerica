@@ -1,27 +1,27 @@
 "use client";
-import QuickActionBar from '@/app/components/quickactionbar/quickactionbar';
+import QuickActionBar from './components/QuickActionBar/QuickActionBar';
 import LaNavHeader from './components/lanavheader/LaNavHeader';
 import sectionsData from "@/content/destination/la/solo-trip-to-la/infosection.json";
 import getaroundData from "@/content/destination/la/solo-trip-to-la/gettingaround.json";
-import InfoSection from '@/app/components/infosection/infosection';
+import InfoSection from './components/InfoSection/InfoSection';
 import neighborhoodsData  from "@/content/destination/la/solo-trip-to-la/neighborhoods.json";
-import BestNeighborhoodsGrid from '@/app/components/BestNeighborhoodGrid/bestneighborhoodgrid';
+import BestNeighborhoodsGrid from './components/BestNeighborhoodsGrid/BestNeighborhoodsGrid';
 import itineraryData from "@/content/destination/la/solo-trip-to-la/itinerary.json";
 import { ItineraryProps } from "@/app/models/itinerary";
-import ThreeDayItinerary from '@/app/components/itinerary/itinerary';
+import ThreeDayItinerary from './components/ThreeDayItinerary/ThreeDayItinerary';
 import femaleSoloData from "@/content/destination/la/solo-trip-to-la/femalesolo.json";
-import FemaleSoloTiles from "@/app/components/Solofemaletravel/solofemaletravel";
+import FemaleSoloTiles from "./components/FemaleSoloTiles/FemaleSoloTiles";
 import { FemaleSoloData } from "@/app/models/femaleSolo";
 import Footer from '@/app/components/Header/Footer/footer';
-import { WhyTrustThisGuide } from '@/app/components/destination/whytrustitem/whytrustthisguide';
+import { WhyTrustThisGuide } from './components/WhyTrustThisGuide/WhyTrustThisGuide';
 import laWhyTrustData from "@/content/destination/la/solo-trip-to-la/whyTrustItems/whyTrustItems.json";
 import { ScenarioSection } from './components/scenariocard/scenariosection';
 import { SubwayAccessSection } from './components/subwayaccess/subwayaccess';
 import faqData from "@/content/destination/la/solo-trip-to-la/faq/faqsection.json";
-import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import FAQAccordion from './components/FAQAccordion/FAQAccordion';
 import { SoloLaQa } from './components/aisnippet/cardqanda';
 import { SoloTripNarrative } from './components/solotripnarrative/SoloTripNarrative';
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import BookingCTA from './components/BookingCTA/BookingCTA';
 import { HeroSection } from './components/herosection/HeroSection';
 
 

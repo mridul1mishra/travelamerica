@@ -18,7 +18,7 @@ import InternalLinks from "./components/Interlink/Interlink";
 import Footer from "../../../../app/components/Header/Footer/footer";
 import SectionWrapper from "./Sectionwrapper";
 import WhyTrustThisGuide from "./components/whytrustthisguide/whytrustthisguide";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import BookingCTA from './components/BookingCTA/BookingCTA';
 
 
 export default function LAMetroSafetyClient(){

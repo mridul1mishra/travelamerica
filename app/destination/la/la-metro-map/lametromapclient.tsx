@@ -7,7 +7,7 @@ import { StepList } from "./components/steplist/steplist";
 import { ScenarioCards } from "./components/ScenarioCards/ScenarioCards";
 import styles from "./lametromap.module.css";
 import {SafetyChecklist} from "./components/SafetyChecklist/SafetyChecklist";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import BookingCTA from './components/BookingCTA/BookingCTA';
 
 const data: HighIntentPageBase = require("./la-metro-map.json");
 import type {HighIntentPageBase} from "./la-metro-map";

@@ -5,8 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from './lagrouptravel.module.css';
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import BookingCTA from './components/BookingCTA/BookingCTA';
+import FAQAccordion from './components/FAQAccordion/FAQAccordion';
 import faqData from '@/content/destination/la/group-travel/faq/faqsection.json';
 
 export default function LAGroupTravelClient() {

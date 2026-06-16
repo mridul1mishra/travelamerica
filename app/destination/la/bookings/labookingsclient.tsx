@@ -2,7 +2,7 @@
 
 // Thin city config wrapper — all booking UI lives in BookingClient.
 import BookingClient, { type CityBookingConfig } from "@/app/components/booking/BookingClient";
-import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import FAQAccordion from './components/FAQAccordion/FAQAccordion';
 import faqData from '@/content/destination/la/booking/faq/faqsection.json';
 import bookFlights from "@/content/cities/losangeles/booking/bookflights.json";
 import hotelsData from "@/content/cities/losangeles/booking/hotels.json";

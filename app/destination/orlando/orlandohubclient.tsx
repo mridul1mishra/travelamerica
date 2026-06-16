@@ -1,4 +1,4 @@
-// Server Component — no hooks used. Interactive bits (header, planning intent) are client components.
+// Server Component â€” no hooks used. Interactive bits (header, planning intent) are client components.
 import HeroSection from './components/Hero/HeroSection';
 import PlanningIntent from './components/PlanningIntent/PlanningIntent';
 import WhyVisit from './components/WhyVisit/WhyVisit';
@@ -8,10 +8,10 @@ import ExperiencesHub from './components/ExperiencesHub/ExperiencesHub';
 import WhereToStay from './components/WhereToStay/WhereToStay';
 import ItinerariesPreview from './components/ItinerariesPreview/ItinerariesPreview';
 import DataCaptureCTA from './components/DataCapture/DataCaptureCTA';
-import Header from "@/app/components/destination/header/header";
-import Footer from "@/app/components/Header/Footer/footer";
+import Header from "./components/Header/header";
+import Footer from "./components/Footer/footer";
 import styles from './orlando.module.css';
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import BookingCTA from './components/BookingCTA/BookingCTA';
 
 const navLinks = [
   { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
@@ -25,7 +25,7 @@ export default function OrlandoHubClient() {
     <main className={styles.container}>
       <Header links={navLinks} />
       <HeroSection />
-      <BookingCTA variant="slim" text="Book hotels for your Orlando trip →" href="/destination/orlando/bookings?tab=hotels&from=orlando-hub" label="Book your Orlando trip" />
+      <BookingCTA variant="slim" text="Book hotels for your Orlando trip â†’" href="/destination/orlando/bookings?tab=hotels&from=orlando-hub" label="Book your Orlando trip" />
       <PlanningIntent />
       <WhyVisit />
       <AttractionsHub />

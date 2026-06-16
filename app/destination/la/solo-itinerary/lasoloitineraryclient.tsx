@@ -6,8 +6,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './lasoloitinerary.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import FAQ from "@/app/components/faq/faq";
+import BookingCTA from './components/BookingCTA/BookingCTA';
+import FAQ from "./components/FAQ/FAQ";
 import { getFaq, getFaqItinerary } from "@/app/lib/FaqData";
 
 interface FaqItem {

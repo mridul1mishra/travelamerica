@@ -16,9 +16,9 @@ import data from "./is-la-safe-at-night.json";
 
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import BookingCTA from './components/BookingCTA/BookingCTA';
 // LA-ONLY EXTRA (kept from original LA page — NYC template has no equivalent section)
-import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import { WhyTrustThisGuide } from "./components/WhyTrustThisGuide/WhyTrustThisGuide";
 import laWhyTrustData from "@/content/destination/la/is-la-safe-at-night/whyTrustItems/whyTrustItems.json";
 
 export default function Page() {

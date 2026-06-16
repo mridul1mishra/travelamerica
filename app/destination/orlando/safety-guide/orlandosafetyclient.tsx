@@ -1,10 +1,10 @@
 "use client"
-import Header from '@/app/components/destination/header/header';
+import Header from './components/Header/header';
 import SafetyHero from './components/herobanner/safetyhero';
-import Footer from '@/app/components/Header/Footer/footer';
+import Footer from './components/Footer/footer';
 import ScenarioSection from './components/scenariosection/scenariosection';
 import NeighborhoodSafetySection from './components/neighborhoodsection/neighborhoodsafetysection';
-import { WhyTrustThisGuide } from '@/app/components/destination/whytrustitem/whytrustthisguide';
+import { WhyTrustThisGuide } from './components/WhyTrustThisGuide/whytrustthisguide';
 import cityWhyTrustData from "@/content/destination/orlando/safety-guide/whyTrustItems/whyTrustItems.json";
 import SafetyTipsGrid from './components/SafetyTips/safetytipcardgrid';
 import FAQAccordion from './components/FAQAccordian/faqsection';
@@ -15,8 +15,8 @@ import InfoSection from './components/infosection/infosection';
 import sectionsData from "./components/infosection/infosection.json";
 import EmergencyContactBlock from './components/emergencycontactblock/EmergencyContactBlock';
 import SafetyNarrative from './components/safetynarrative/SafetyNarrative';
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
+import BookingCTA from './components/BookingCTA/BookingCTA';
+import EmailSignup from './components/EmailSignup/EmailSignup';
 
 const navLinks = [
   { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
@@ -29,7 +29,7 @@ export default function OrlandoSafetyClient() {
   return (
     <>
         <Header links={navLinks} />
-        <BookingCTA variant="slim" text="Book your Orlando trip →" href="/destination/orlando/bookings?tab=hotels&from=safety-guide" label="See Orlando hotels" />
+        <BookingCTA variant="slim" text="Book your Orlando trip â†’" href="/destination/orlando/bookings?tab=hotels&from=safety-guide" label="See Orlando hotels" />
         <div className={styles.container}>
         <SafetyHero />
         <InfoSection sections={sectionsData.sections} />

@@ -10,11 +10,11 @@ import WhereFirstTimersStay from "./components/Wherefirsttimerstay/wherefirsttim
 import GettingAround from "./components/Gettingaround/Gettingaround";
 import SafetyOverview from "./components/SafetyOverview/Safetyoverview";
 import NeighborhoodGuideCTA from "./components/Neighborhoodguidecta/Neighborhoodguidecta";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import BookingCTA from './components/BookingCTA/BookingCTA';
 // LA-only extras (no NYC equivalent) — preserved from original LA page. FLAGGED.
-import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import { WhyTrustThisGuide } from "./components/WhyTrustThisGuide/WhyTrustThisGuide";
 import laWhyTrustData from "@/content/destination/la/neighborhood-guide/whyTrustItems/whyTrustItems.json";
-import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
+import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
 import laFaqData from "@/content/destination/la/neighborhood-guide/faq/faqsection.json";
 
 type Props = {

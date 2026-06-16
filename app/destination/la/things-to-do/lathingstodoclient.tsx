@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from './lathingstodo.module.css';
 import Header from "@/app/components/destination/header/header";
 import Footer from "../../../../app/components/Header/Footer/footer";
-import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import BookingCTA from "./components/BookingCTA/BookingCTA";
 
 // LA-only: detailed practical categories preserved from the original LA page.
 const categories = [

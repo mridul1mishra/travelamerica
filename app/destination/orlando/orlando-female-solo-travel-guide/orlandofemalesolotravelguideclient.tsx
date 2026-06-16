@@ -1,5 +1,5 @@
 "use client"
-import Header from "@/app/components/destination/header/header";
+import Header from "./components/Header/header";
 import Hero from "./components/Hero/herobanner";
 import styles from "./page.module.css";
 import InfoSection from "./components/infosection/infosection";
@@ -15,13 +15,13 @@ import { packingEssentials } from "./components/packingessential/packingEssentia
 import PackingEssentials from "./components/packingessential/packingEssential";
 import FAQAccordion from "./components/FAQAccordian/faqsection";
 import faqData from "./components/FAQAccordian/FAQACcordina.json";
-import Footer from "@/app/components/Header/Footer/footer";
+import Footer from "./components/Footer/footer";
 import LinkHubGrid from "./components/linkhubgrid/LinkHubGrid";
-import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import { WhyTrustThisGuide } from "./components/WhyTrustThisGuide/whytrustthisguide";
 import cityWhyTrustData from "@/content/destination/orlando/orlando-female-solo-travel-guide/whyTrustItems/whyTrustItems.json";
 import FemaleSafetyNarrative from "./components/safetynarrative/FemaleSafetyNarrative";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
+import BookingCTA from './components/BookingCTA/BookingCTA';
+import EmailSignup from './components/EmailSignup/EmailSignup';
 
 const navLinks = [
   { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
@@ -34,7 +34,7 @@ export default function OrlandoFemaleSoloClient() {
   return (
       <>
       <Header links={navLinks} />
-      <BookingCTA variant="slim" text="Book your Orlando trip →" href="/destination/orlando/bookings?tab=hotels&from=female-solo" label="See Orlando hotels" />
+      <BookingCTA variant="slim" text="Book your Orlando trip â†’" href="/destination/orlando/bookings?tab=hotels&from=female-solo" label="See Orlando hotels" />
       <div className={styles.container}>
       <Hero />
       <InfoSection sections={sectionsData.sections}/>

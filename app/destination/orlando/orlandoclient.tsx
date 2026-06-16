@@ -2,9 +2,10 @@
 
 import React, { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import Header from "@/app/components/destination/header/header";
-import Footer from "@/app/components/Header/Footer/footer";
-import "@/app/components/majorcities/flightsection/propertylisting.css";
+import Link from "next/link";
+import Header from "./components/Header/header";
+import Footer from "./components/Footer/footer";
+import "./components/propertylisting.css";
 import styles from "@/app/destination/nyc/booking/booking.module.css";
 import bookFlights from "@/content/cities/orlando/bookflights.json";
 import hotelsData from "@/content/cities/orlando/hotels.json";
@@ -50,20 +51,20 @@ type RailConfig = { nextStep: NextStep };
 
 const TAB_RAIL: Record<TabKey, RailConfig> = {
   flights: {
-    nextStep: { label: "Next: book your hotel →", toTab: "hotels" },
+    nextStep: { label: "Next: book your hotel â†’", toTab: "hotels" },
   },
   hotels: {
-    nextStep: { label: "Next: things to do in Orlando →", toTab: "activities" },
+    nextStep: { label: "Next: things to do in Orlando â†’", toTab: "activities" },
   },
   activities: {
-    nextStep: { label: "Compare return flights →", toTab: "flights" },
+    nextStep: { label: "Compare return flights â†’", toTab: "flights" },
   },
 };
 
 const TABS: { key: TabKey; label: string; icon: string }[] = [
-  { key: "flights", label: "Flights", icon: "✈️" },
-  { key: "hotels", label: "Hotels", icon: "🏨" },
-  { key: "activities", label: "Things to Do", icon: "🌴" },
+  { key: "flights", label: "Flights", icon: "âœˆï¸" },
+  { key: "hotels", label: "Hotels", icon: "ðŸ¨" },
+  { key: "activities", label: "Things to Do", icon: "ðŸŒ´" },
 ];
 
 const VALID_TABS = new Set<TabKey>(TABS.map((t) => t.key));
@@ -97,9 +98,9 @@ function OrlandoClientInner() {
       <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
         <ol className={styles.breadcrumbList}>
           <li className={styles.breadcrumbItem}>
-            <a href="/" className={styles.breadcrumbLink}>Home</a>
+            <Link href="/" className={styles.breadcrumbLink}>Home</Link>
           </li>
-          <li aria-hidden="true" className={styles.breadcrumbSep}>›</li>
+          <li aria-hidden="true" className={styles.breadcrumbSep}>â€º</li>
           <li className={styles.breadcrumbItem}>
             <span aria-current="page" className={styles.breadcrumbCurrent}>Orlando</span>
           </li>
@@ -134,7 +135,7 @@ function OrlandoClientInner() {
 
               {rows.length === 0 ? (
                 <p className={styles.emptyState}>
-                  Live flight prices are being updated — check back soon.
+                  Live flight prices are being updated â€” check back soon.
                 </p>
               ) : (
                 rows.map((row, idx) => (
@@ -193,7 +194,7 @@ function OrlandoClientInner() {
           <h2 className={styles.actHeading}>Book Hotels in Orlando</h2>
           {hotels.length === 0 ? (
             <p className={styles.emptyState}>
-              Live hotel prices are being updated — check back soon.
+              Live hotel prices are being updated â€” check back soon.
             </p>
           ) : (
             <div className={styles.actGrid}>
@@ -214,7 +215,7 @@ function OrlandoClientInner() {
                     {h.area && <p className={styles.actArea}>{h.area}</p>}
                     <div className={styles.actMeta}>
                       {h.rating != null && (
-                        <span className={styles.actRating}>★ {h.rating}</span>
+                        <span className={styles.actRating}>â˜… {h.rating}</span>
                       )}
                       {h.reviews != null && (
                         <span className={styles.actReviews}>
@@ -227,7 +228,7 @@ function OrlandoClientInner() {
                         {h.price}
                         <span className={styles.actPriceUnit}> / night</span>
                       </span>
-                      <span className={styles.actCta}>View hotel →</span>
+                      <span className={styles.actCta}>View hotel â†’</span>
                     </div>
                   </div>
                 </a>
@@ -242,7 +243,7 @@ function OrlandoClientInner() {
           <h2 className={styles.actHeading}>Things to Do in Orlando</h2>
           {activities.length === 0 ? (
             <p className={styles.emptyState}>
-              Activities are being updated — check back soon.
+              Activities are being updated â€” check back soon.
             </p>
           ) : (
             <div className={styles.actGrid}>
@@ -262,7 +263,7 @@ function OrlandoClientInner() {
                     <h3 className={styles.actTitle}>{a.title}</h3>
                     <div className={styles.actMeta}>
                       {a.rating != null && (
-                        <span className={styles.actRating}>★ {a.rating}</span>
+                        <span className={styles.actRating}>â˜… {a.rating}</span>
                       )}
                       {a.reviews != null && (
                         <span className={styles.actReviews}>
@@ -274,7 +275,7 @@ function OrlandoClientInner() {
                     {a.description && <p className={styles.actDesc}>{a.description}</p>}
                     <div className={styles.actFooter}>
                       <span className={styles.actPrice}>{a.priceLevel || "See prices"}</span>
-                      <span className={styles.actCta}>View tour →</span>
+                      <span className={styles.actCta}>View tour â†’</span>
                     </div>
                   </div>
                 </a>

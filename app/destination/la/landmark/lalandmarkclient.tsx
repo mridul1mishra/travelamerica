@@ -4,7 +4,7 @@ import NavigationHeader from "../../../components/Header/NavigationHeader";
 import Link from "next/link";
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from "./lalandmark.module.css";
-import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import BookingCTA from "./components/BookingCTA/BookingCTA";
 
 // Each landmark gets a concrete data row instead of paragraphs of fluff.
 // Approximate ticket prices and hours are noted as ranges or guidance only —

@@ -14,9 +14,9 @@ import TrustBlock from "./components/TrustBlock/TrustBlock";
 import SectionWrapper from "./Sectionwrapper";
 import data from "./is-orlando-safe-at-night.json";
 
-import Header from "@/app/components/destination/header/header";
-import Footer from "@/app/components/Header/Footer/footer";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import Header from "./components/Header/header";
+import Footer from "./components/Footer/footer";
+import BookingCTA from './components/BookingCTA/BookingCTA';
 
 const navLinks = [
   { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
@@ -29,7 +29,7 @@ export default function IsOrlandoSafeAtNightClient() {
   return (
     <>
       <Header links={navLinks} />
-      <BookingCTA variant="slim" text="Book your Orlando trip →" href="/destination/orlando/bookings?tab=hotels&from=is-orlando-safe-at-night" label="See safe-area hotels" />
+      <BookingCTA variant="slim" text="Book your Orlando trip â†’" href="/destination/orlando/bookings?tab=hotels&from=is-orlando-safe-at-night" label="See safe-area hotels" />
 
       {/* 1. Hero Section */}
       <HeroSafety {...data.heroSafety} />

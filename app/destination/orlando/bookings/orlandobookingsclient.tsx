@@ -1,8 +1,8 @@
 "use client";
 
-// Thin city config wrapper — all booking UI lives in BookingClient.
-import BookingClient, { type CityBookingConfig } from "@/app/components/booking/BookingClient";
-import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+// Thin city config wrapper â€” all booking UI lives in BookingClient.
+import BookingClient, { type CityBookingConfig } from "./components/BookingClient/BookingClient";
+import FAQAccordion from './components/FAQAccordion/faqsection';
 import faqData from '@/content/destination/orlando/booking/faq/faqsection.json';
 import bookFlights from "@/content/cities/orlando/bookflights.json";
 import hotelsData from "@/content/cities/orlando/hotels.json";
@@ -16,13 +16,13 @@ const config: CityBookingConfig = {
   bannerText: "Book your Orlando trip",
   pageTitle: "Book Your Orlando Trip",
   tabs: [
-    { key: "flights",    label: "Flights",       icon: "✈️" },
-    { key: "hotels",     label: "Hotels",        icon: "🏨" },
-    { key: "activities", label: "Things to Do",  icon: "🎡" },
+    { key: "flights",    label: "Flights",       icon: "âœˆï¸" },
+    { key: "hotels",     label: "Hotels",        icon: "ðŸ¨" },
+    { key: "activities", label: "Things to Do",  icon: "ðŸŽ¡" },
   ],
   tabRail: {
     flights: {
-      nextStep: { label: "Next: book your hotel →", toTab: "hotels" },
+      nextStep: { label: "Next: book your hotel â†’", toTab: "hotels" },
       guides: [
         { href: "/destination/orlando/things-to-do",   label: "Top things to do in Orlando" },
         { href: "/destination/orlando/neighborhood-guide", label: "Orlando neighborhood guide" },
@@ -30,7 +30,7 @@ const config: CityBookingConfig = {
       ],
     },
     hotels: {
-      nextStep: { label: "Next: things to do in Orlando →", toTab: "activities" },
+      nextStep: { label: "Next: things to do in Orlando â†’", toTab: "activities" },
       guides: [
         { href: "/destination/orlando/best-areas-to-stay", label: "Best areas to stay in Orlando" },
         { href: "/destination/orlando/neighborhood-guide",  label: "Orlando neighborhood guide" },
@@ -38,7 +38,7 @@ const config: CityBookingConfig = {
       ],
     },
     activities: {
-      nextStep: { label: "Compare return flights →", toTab: "flights" },
+      nextStep: { label: "Compare return flights â†’", toTab: "flights" },
       guides: [
         { href: "/destination/orlando/things-to-do", label: "Full Orlando attractions guide" },
         { href: "/destination/orlando/landmark",     label: "Top Orlando landmarks" },
@@ -84,14 +84,14 @@ const orlandoBookingIntro = (
     </h2>
     <p style={{ color: '#555', lineHeight: 1.6, marginBottom: '12px' }}>
       Orlando park crowds follow school calendars closely. Mid-January through early February, late August,
-      and the first two weeks of December are the lowest-demand windows — expect 20–30% lower hotel rates
+      and the first two weeks of December are the lowest-demand windows â€” expect 20â€“30% lower hotel rates
       and noticeably shorter wait times. Avoid spring break (mid-March to mid-April), Thanksgiving week,
-      and the week between Christmas and New Year's — these are the most expensive and crowded periods of the year.
+      and the week between Christmas and New Year&apos;s â€” these are the most expensive and crowded periods of the year.
     </p>
     <ul style={{ color: '#555', lineHeight: 1.8, paddingLeft: '20px', marginBottom: '12px' }}>
-      <li><strong>Airport:</strong> Orlando International (MCO) is the main hub — 25 minutes to Disney, 30 to Universal. Sanford (SFB) is served by Allegiant and a few charters; it's cheaper but much further from the parks (45–55 minutes). Check whether the savings cover the extra transfer cost.</li>
-      <li><strong>Park tickets:</strong> Disney and Universal use date-based pricing — booking the same ticket 60–90 days ahead is typically $20–40 cheaper than buying at the gate. Genie+ and Lightning Lane sell out for popular rides by 7am; buy the moment the park opens.</li>
-      <li><strong>Hotels:</strong> On-site Disney and Universal hotels include early park entry, which pays back in wait time savings on busy days. Off-site hotels on International Drive are 20–30% cheaper and still within 15 minutes of both parks — the right call for shorter trips focused on 2–3 parks.</li>
+      <li><strong>Airport:</strong> Orlando International (MCO) is the main hub â€” 25 minutes to Disney, 30 to Universal. Sanford (SFB) is served by Allegiant and a few charters; it&apos;s cheaper but much further from the parks (45â€“55 minutes). Check whether the savings cover the extra transfer cost.</li>
+      <li><strong>Park tickets:</strong> Disney and Universal use date-based pricing â€” booking the same ticket 60â€“90 days ahead is typically $20â€“40 cheaper than buying at the gate. Genie+ and Lightning Lane sell out for popular rides by 7am; buy the moment the park opens.</li>
+      <li><strong>Hotels:</strong> On-site Disney and Universal hotels include early park entry, which pays back in wait time savings on busy days. Off-site hotels on International Drive are 20â€“30% cheaper and still within 15 minutes of both parks â€” the right call for shorter trips focused on 2â€“3 parks.</li>
     </ul>
   </section>
 );

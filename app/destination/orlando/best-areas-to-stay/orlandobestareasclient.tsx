@@ -1,54 +1,54 @@
 "use client"
 import Link from "next/link";
-import Header from "@/app/components/destination/header/header";
-import Footer from "@/app/components/Header/Footer/footer";
+import Header from "./components/Header/header";
+import Footer from "./components/Footer/footer";
 import styles from "@/app/destination/city-hub.module.css";
-import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
-import FAQAccordion from "@/app/components/destination/faqsection/faqsection";
-import Banner from "@/app/components/destination/bestareatostay/Banner/Banner";
-import SoloTripIntro from "@/app/components/destination/bestareatostay/solotripintro/solotripintro";
-import SectionSafestNeighborhoods from "@/app/components/destination/bestareatostay/safestneighborhood/safestneighborhood";
-import NeighborhoodRankingCards, { Neighborhood } from "@/app/components/destination/neighborhoodrankingcard/neighborhoodrankingcard";
+import BookingCTA from "./components/BookingCTA/BookingCTA";
+import FAQAccordion from "./components/FAQAccordion/faqsection";
+import Banner from "./components/Banner/Banner";
+import SoloTripIntro from "./components/SoloTripIntro/solotripintro";
+import SectionSafestNeighborhoods from "./components/SectionSafestNeighborhoods/safestneighborhood";
+import NeighborhoodRankingCards, { Neighborhood } from "./components/NeighborhoodRankingCards/neighborhoodrankingcard";
 import faqData from "@/content/destination/orlando/bestplacetostay/faqsection.json";
-import EmailSignup from "@/app/components/destination/EmailSignup/EmailSignup";
+import EmailSignup from "./components/EmailSignup/EmailSignup";
 
 const orlandoNeighborhoods: Neighborhood[] = [
   {
     id: "disney-on-site",
     rank: "#1 Best for Disney",
     name: "Disney On-Site Resorts",
-    why: "30-min Early Park Entry every day — the most valuable perk in Orlando for serious Disney visitors.",
+    why: "30-min Early Park Entry every day â€” the most valuable perk in Orlando for serious Disney visitors.",
     image: "/data/majorcities/losangeles/assets/bestareas/disney.jpg",
     color: "var(--tint-blue)",
-    safety: "🟢 Very Safe",
+    safety: "ðŸŸ¢ Very Safe",
     vibe: "Family-friendly, immersive, convenient",
     transit: "Free Skyliner, buses, monorail",
     bestFor: ["Disney-focused trips", "Families", "Guests maximizing park time"],
     pros: ["30-min Early Park Entry daily", "Free transport to all Disney parks", "Full Disney experience"],
-    cons: ["Most expensive option ($200–$600+/night)", "Further from Universal"],
+    cons: ["Most expensive option ($200â€“$600+/night)", "Further from Universal"],
   },
   {
     id: "lake-buena-vista",
     rank: "#2 Best Value Near Disney",
     name: "Lake Buena Vista / Hotel Plaza",
-    why: "30–50% cheaper than Disney resorts with free Disney shuttle — the smart value play.",
+    why: "30â€“50% cheaper than Disney resorts with free Disney shuttle â€” the smart value play.",
     image: "/data/majorcities/losangeles/assets/bestareas/lakebuena.jpg",
     color: "var(--tint-green)",
-    safety: "🟢 Safe",
+    safety: "ðŸŸ¢ Safe",
     vibe: "Convenient, budget-friendly, family-focused",
     transit: "Free Disney shuttle, 10-min drive",
     bestFor: ["Budget-conscious Disney visitors", "Families", "Value seekers"],
-    pros: ["30–50% cheaper than Disney resorts", "Free Disney shuttle", "Good hotel selection"],
+    pros: ["30â€“50% cheaper than Disney resorts", "Free Disney shuttle", "Good hotel selection"],
     cons: ["No Early Park Entry perk", "Requires shuttle or car for Universal"],
   },
   {
     id: "universal-on-site",
     rank: "#3 Best for Universal",
     name: "Universal On-Site Hotels",
-    why: "1-hour Early Park Admission to Harry Potter areas — genuinely valuable on busy days.",
+    why: "1-hour Early Park Admission to Harry Potter areas â€” genuinely valuable on busy days.",
     image: "/data/majorcities/losangeles/assets/bestareas/howgart.jpg",
     color: "var(--tint-purple)",
-    safety: "🟢 Very Safe",
+    safety: "ðŸŸ¢ Very Safe",
     vibe: "Themed, fun, walkable to parks",
     transit: "Walk to Universal parks",
     bestFor: ["Universal-focused trips", "Harry Potter fans", "Couples"],
@@ -62,7 +62,7 @@ const orlandoNeighborhoods: Neighborhood[] = [
     why: "Central location between parks with the best budget hotel density in Orlando.",
     image: "/data/majorcities/losangeles/assets/bestareas/universal.jpg",
     color: "var(--tint-yellow)",
-    safety: "🟢 Safe",
+    safety: "ðŸŸ¢ Safe",
     vibe: "Touristy, central, walkable to dining",
     transit: "Free shuttle options to both parks",
     bestFor: ["Budget trips", "Flexible itineraries", "Visitors splitting time across parks"],
@@ -72,11 +72,11 @@ const orlandoNeighborhoods: Neighborhood[] = [
 ];
 
 const areas = [
-  { name: "On-Site Disney Resorts (Best for Disney-Only Trips)", vibe: "Disney's Value ($120–$180/night), Moderate ($200–$280), and Deluxe ($350–$600+) resorts. All get 30-min Early Park Entry every day — at Disney's scale this is genuinely valuable. Free Skyliner, buses, and monorail to all parks.", bestFor: "Disney-focused trips, families, guests wanting to maximize park time" },
-  { name: "Hotel Plaza Blvd / Lake Buena Vista (Best Value Near Disney)", vibe: "8 hotels directly on Disney property (Hilton, Marriott, etc.) but not Disney-owned. Free Disney shuttle. 10-min drive to parks. 30–50% cheaper than Disney resorts. No Early Entry perk.", bestFor: "Budget-conscious Disney visitors, families wanting good value" },
-  { name: "Universal On-Site Hotels (Best for Universal Trips)", vibe: "Loews Hard Rock, Portofino Bay, Royal Pacific. All get 1-hour Early Park Admission to Harry Potter and other select attractions — this is highly valuable on busy days. Walk to Universal's parks.", bestFor: "Universal-focused trips, Harry Potter fans, couples" },
+  { name: "On-Site Disney Resorts (Best for Disney-Only Trips)", vibe: "Disney's Value ($120â€“$180/night), Moderate ($200â€“$280), and Deluxe ($350â€“$600+) resorts. All get 30-min Early Park Entry every day â€” at Disney's scale this is genuinely valuable. Free Skyliner, buses, and monorail to all parks.", bestFor: "Disney-focused trips, families, guests wanting to maximize park time" },
+  { name: "Hotel Plaza Blvd / Lake Buena Vista (Best Value Near Disney)", vibe: "8 hotels directly on Disney property (Hilton, Marriott, etc.) but not Disney-owned. Free Disney shuttle. 10-min drive to parks. 30â€“50% cheaper than Disney resorts. No Early Entry perk.", bestFor: "Budget-conscious Disney visitors, families wanting good value" },
+  { name: "Universal On-Site Hotels (Best for Universal Trips)", vibe: "Loews Hard Rock, Portofino Bay, Royal Pacific. All get 1-hour Early Park Admission to Harry Potter and other select attractions â€” this is highly valuable on busy days. Walk to Universal's parks.", bestFor: "Universal-focused trips, Harry Potter fans, couples" },
   { name: "International Drive (I-Drive)", vibe: "Dense hotel corridor with restaurants, mini-golf, Icon Park. 10 min by car to Universal, 20 min to Disney. Budget to mid-range options. Walkable to dining and ICON Park. Can feel touristy.", bestFor: "Budget trips, flexible itineraries, visitors splitting time across parks" },
-  { name: "Kissimmee", vibe: "South of Disney — vacation homes and budget hotels. Perfect for large groups or families renting a house with a pool. Requires a car. 15 min to Disney World gates.", bestFor: "Large families, groups, budget vacation rentals" },
+  { name: "Kissimmee", vibe: "South of Disney â€” vacation homes and budget hotels. Perfect for large groups or families renting a house with a pool. Requires a car. 15 min to Disney World gates.", bestFor: "Large families, groups, budget vacation rentals" },
   { name: "Downtown Orlando", vibe: "30 min from Disney, 25 min from Universal. Local restaurants, Lake Eola park, craft bars. No theme park convenience but authentic city character.", bestFor: "Repeat visitors, longer trips, guests spending time beyond the parks" },
 ];
 
@@ -123,10 +123,10 @@ export default function OrlandoBestAreasClient() {
           "Budget strategies that actually work",
         ]}
         cards={[
-          { icon: "🏰", title: "For Disney", description: "On-site perks, Early Entry, and the best resort tiers explained.", cta: "Disney guide" },
-          { icon: "🧙", title: "For Universal", description: "Harry Potter Early Admission and on-site hotel value compared.", cta: "Universal guide" },
-          { icon: "💸", title: "On a Budget", description: "I-Drive and Kissimmee options - real savings without sacrificing access.", cta: "Budget guide" },
-          { icon: "👨‍👩‍👧", title: "For Families", description: "Which areas work best for kids - parks, pools, and early bedtimes.", cta: "Family guide" },
+          { icon: "ðŸ°", title: "For Disney", description: "On-site perks, Early Entry, and the best resort tiers explained.", cta: "Disney guide" },
+          { icon: "ðŸ§™", title: "For Universal", description: "Harry Potter Early Admission and on-site hotel value compared.", cta: "Universal guide" },
+          { icon: "ðŸ’¸", title: "On a Budget", description: "I-Drive and Kissimmee options - real savings without sacrificing access.", cta: "Budget guide" },
+          { icon: "ðŸ‘¨â€ðŸ‘©â€ðŸ‘§", title: "For Families", description: "Which areas work best for kids - parks, pools, and early bedtimes.", cta: "Family guide" },
         ]}
       />
       <SectionSafestNeighborhoods

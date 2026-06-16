@@ -5,7 +5,7 @@ import Header from '@/app/components/destination/header/header';
 import SafetyHero from './components/herobanner/safetyhero';
 import Footer from '@/app/components/Header/Footer/footer';
 import NeighborhoodSafetySection from './components/neighborhoodsection/neighborhoodsafetysection';
-import { WhyTrustThisGuide } from '@/app/components/destination/whytrustitem/whytrustthisguide';
+import { WhyTrustThisGuide } from './components/WhyTrustThisGuide/WhyTrustThisGuide';
 import SafetyTipsGrid from './components/SafetyTips/safetytipcardgrid';
 import ScenarioSection from './components/scenariosection/scenariosection';
 import FAQAccordion from './components/FAQAccordian/faqsection';
@@ -16,7 +16,7 @@ import InfoSection from './components/infosection/infosection';
 import sectionsData from "./components/infosection/infosection.json";
 import EmergencyContactBlock from './components/emergencycontactblock/EmergencyContactBlock';
 import SafetyNarrative from './components/safetynarrative/SafetyNarrative';
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import BookingCTA from './components/BookingCTA/BookingCTA';
 import laWhyTrustData from "@/content/destination/la/safety-guide/whyTrustItems/whyTrustItems.json";
 
 export default function LASafetyClient() {

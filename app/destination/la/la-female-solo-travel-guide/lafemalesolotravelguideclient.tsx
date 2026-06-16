@@ -17,10 +17,10 @@ import FAQAccordion from "./components/FAQAccordian/faqsection";
 import faqData from "./components/FAQAccordian/FAQACcordina.json";
 import Footer from "@/app/components/Header/Footer/footer";
 import LinkHubGrid from "./components/linkhubgrid/LinkHubGrid";
-import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import { WhyTrustThisGuide } from "./components/WhyTrustThisGuide/WhyTrustThisGuide";
 import laWhyTrustData from "@/content/destination/la/la-female-solo-travel-guide/whyTrustItems/whyTrustItems.json";
 import FemaleSafetyNarrative from "./components/safetynarrative/FemaleSafetyNarrative";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import BookingCTA from './components/BookingCTA/BookingCTA';
 
 const headerLinks = [
   { href: "/destination/la/best-areas-to-stay", label: "Best Areas to Stay" },
