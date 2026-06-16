@@ -8,8 +8,8 @@ import ExperiencesHub from './components/ExperiencesHub/ExperiencesHub';
 import WhereToStay from './components/WhereToStay/WhereToStay';
 import ItinerariesPreview from './components/ItinerariesPreview/ItinerariesPreview';
 import DataCaptureCTA from './components/DataCapture/DataCaptureCTA';
-import Header from "@/app/components/destination/header/header";
-import Footer from "../../../app/components/Header/Footer/footer";
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import styles from './nyc.module.css';
 import BookingCTA from './components/BookingCTA/BookingCTA';
 

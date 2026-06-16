@@ -1,6 +1,6 @@
 "use client"
-import Header from "@/app/components/destination/header/header";
-import Footer from "@/app/components/Header/Footer/footer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import styles from "./neighborhoodguide.module.css";
 // Dead imports for -notused/ folders removed. Their JSX usages below were already
 // commented out, and the folders themselves were deleted during this cleanup pass.
@@ -12,9 +12,9 @@ import WhereFirstTimersStay from "./components/Wherefirsttimerstay/wherefirsttim
 import GettingAround from "./components/Gettingaround/Gettingaround";
 import SafetyOverview from "./components/SafetyOverview/Safetyoverview";
 import NeighborhoodGuideCTA from "./components/Neighborhoodguidecta/Neighborhoodguidecta";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import { WhyTrustThisGuide } from '@/app/components/destination/whytrustitem/whytrustthisguide';
-import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import BookingCTA from "./components/BookingCTA/BookingCTA";
+import { WhyTrustThisGuide } from "./components/WhyTrustThisGuide/WhyTrustThisGuide";
+import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
 import faqData from '@/content/destination/nyc/neighborhood-guide/faq/faqsection.json';
 
 type Props = {

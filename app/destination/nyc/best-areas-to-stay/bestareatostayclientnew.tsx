@@ -1,15 +1,15 @@
 "use client"
 import styles from './bestareatostay.module.css';
-import Banner from '@/app/components/destination/bestareatostay/Banner/Banner';
-import SectionSafestNeighborhoods from '@/app/components/destination/bestareatostay/safestneighborhood/safestneighborhood';
-import SoloTripIntro from '@/app/components/destination/bestareatostay/solotripintro/solotripintro';
-import Header from '@/app/components/destination/header/header';
+import Banner from "./components/Banner/Banner";
+import SectionSafestNeighborhoods from "./components/SectionSafestNeighborhoods/SectionSafestNeighborhoods";
+import SoloTripIntro from "./components/SoloTripIntro/SoloTripIntro";
+import Header from "./components/Header/Header";
 import faqData from "@/content/destination/bestplacetostay/faqsection.json";
-import NeighborhoodRankingCards, { Neighborhood } from '@/app/components/destination/neighborhoodrankingcard/neighborhoodrankingcard';
-import Footer from '@/app/components/Header/Footer/footer';
-import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
+import NeighborhoodRankingCards, { type Neighborhood } from "./components/NeighborhoodRankingCards/NeighborhoodRankingCards";
+import Footer from "./components/Footer/Footer";
+import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
+import BookingCTA from "./components/BookingCTA/BookingCTA";
+import EmailSignup from "./components/EmailSignup/EmailSignup";
 import nycNeighborhoodsData from '@/content/destination/nyc/neighborhoodRankings.json';
 
 const nycNeighborhoods = nycNeighborhoodsData as Neighborhood[];

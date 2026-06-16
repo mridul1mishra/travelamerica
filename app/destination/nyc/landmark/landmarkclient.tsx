@@ -1,10 +1,10 @@
 "use client";
-import HeroBanner from "../../../components/Header/HeroBanner";
-import NavigationHeader from "../../../components/Header/NavigationHeader";
+import HeroBanner from "./components/HeroBanner/HeroBanner";
+import NavigationHeader from "./components/NavigationHeader/NavigationHeader";
 import Link from "next/link";
-import Footer from "@/app/components/Header/Footer/footer";
+import Footer from "./components/Footer/Footer";
 import styles from "./landmark.module.css";
-import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import BookingCTA from "./components/BookingCTA/BookingCTA";
 
 import { LANDMARKS } from './landmarks-data';
 

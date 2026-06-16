@@ -1,14 +1,14 @@
 'use client';
-import NycNavHeader from '../solo-trip-to-nyc/components/nycnavheader/NycNavHeader';
+import NycNavHeader from "./components/NycNavHeader/NycNavHeader";
 import HeroSection from './components/herosection/HeroSection';
 import FreeCategories from './components/freecategories/FreeCategories';
 import MuseumTable from './components/museumtable/MuseumTable';
 import SeasonalEvents from './components/seasonalevents/SeasonalEvents';
 import SavingsTips from './components/savingstips/SavingsTips';
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
-import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
-import Footer from '@/app/components/Header/Footer/footer';
+import BookingCTA from "./components/BookingCTA/BookingCTA";
+import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
+import EmailSignup from "./components/EmailSignup/EmailSignup";
+import Footer from "./components/Footer/Footer";
 
 const faqData = [
   { question: 'What is the best free thing to do in NYC?', answer: 'The Staten Island Ferry — free 24/7, runs every 30 minutes, and gives you a 25-minute harbour cruise with unobstructed Statue of Liberty and lower Manhattan skyline views from the water.' },

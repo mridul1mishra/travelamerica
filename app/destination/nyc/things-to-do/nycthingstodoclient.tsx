@@ -2,9 +2,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './nycthingstodoclient.module.css';
-import Header from "@/app/components/destination/header/header";
-import Footer from "../../../../app/components/Header/Footer/footer";
-import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import BookingCTA from "./components/BookingCTA/BookingCTA";
 
 export default function NYCThingsToDoClient() {
   return (

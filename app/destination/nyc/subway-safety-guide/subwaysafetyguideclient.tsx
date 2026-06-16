@@ -1,5 +1,5 @@
 "use client"
-import Header from "@/app/components/destination/header/header";
+import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import type { SubwaySafetyGuide } from "./components/types-subwaySafetyGuide";
 const data: SubwaySafetyGuide = require("./components/subway-safety-guide.json");
@@ -15,40 +15,40 @@ import EmergencyPlaybook from "./components/EmergencyPlaybook/EmergencyPlaybook"
 import ToolsAndApps from "./components/Toolsandapps/Toolsandapps";
 import Etiquette from "./components/Etiquette/Etiquette";
 import InternalLinks from "./components/Interlink/Interlink";
-import Footer from "../../../../app/components/Header/Footer/footer";
-import SectionWrapper from "./Sectionwrapper";
+import Footer from "./components/Footer/Footer";
+import SectionWrapper from "./components/SectionWrapper/SectionWrapper";
 import WhyTrustThisGuide from "./components/whytrustthisguide/whytrustthisguide";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import BookingCTA from "./components/BookingCTA/BookingCTA";
 
 
 export default function SubwaySafetyGuidePage(){
-    const { 
-        hero, 
-        why_trust_this_guide, 
-        core_principles, 
-        subway_basics, 
-        personas, 
-        scenarios, 
-        neighborhood_notes, 
-        tools_and_apps, 
-        behavioral_cues, 
-        emergency_playbook, 
-        etiquette, 
-        checklist, 
-        faq, 
+    const {
+        hero,
+        why_trust_this_guide,
+        core_principles,
+        subway_basics,
+        personas,
+        scenarios,
+        neighborhood_notes,
+        tools_and_apps,
+        behavioral_cues,
+        emergency_playbook,
+        etiquette,
+        checklist,
+        faq,
         internal_links,
-        footer_cta 
+        footer_cta
     } = data;
     return(
         <>
-    
+
         <Header />
         <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=subway-safety-guide" label="Book your trip" />
         <div className={styles.pageWrapper}>
-      <section id="banner">  
+      <section id="banner">
         <Hero {...hero} />
       </section>
-        
+
       <SectionWrapper id="why-trust-this-guide">
         <WhyTrustThisGuide data={data.why_trust_this_guide} />
       </SectionWrapper>
@@ -87,10 +87,10 @@ export default function SubwaySafetyGuidePage(){
       <InternalLinks items={internal_links} />
       </SectionWrapper>
       </div>
-      
+
       <BookingCTA variant="full" text="Plan and book your NYC trip" href="/destination/nyc/booking?tab=hotels&from=subway-safety-guide" label="Book your trip" />
       <Footer />
-      
+
     </>
     );
 }

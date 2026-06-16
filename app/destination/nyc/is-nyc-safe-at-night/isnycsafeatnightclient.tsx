@@ -11,26 +11,26 @@ import EmergencyBlock from "./components/EmergencyBlock/EmergencyBlock";
 import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
 import InterlinkingGrid from "./components/InterlinkingGrid/InterlinkingGrid";
 import TrustBlock from "./components/TrustBlock/TrustBlock";
-import SectionWrapper from "./Sectionwrapper";
+import SectionWrapper from "./components/SectionWrapper/SectionWrapper";
 import data from "./is-nyc-safe-at-night.json";
 
 import type { IsNycSafeAtNightPage } from "./components/typesafeatnight";
-import Header from "@/app/components/destination/header/header";
-import Footer from "@/app/components/Header/Footer/footer";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import BookingCTA from "./components/BookingCTA/BookingCTA";
 
 export default function Page() {
-    
+
   // Load JSON content
-  
+
   return (
     <>
     <Header />
       <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=is-nyc-safe-at-night" label="See safe-area hotels" />
-    
+
       {/* 1. Hero Section */}
       <HeroSafety {...data.heroSafety} />
-      
+
 
       {/* 2. Safety Verdict Snapshot */}
       <SectionWrapper id="safetyMeter">
@@ -47,7 +47,7 @@ export default function Page() {
       <ScenarioCards scenarios={data.scenarioCards} />
       </SectionWrapper>
 
-      {/* 5. Persona Safety Blocks 
+      {/* 5. Persona Safety Blocks
       <SectionWrapper id="personas">
       <PersonaSafetyBlocks personas={data.personaSafetyBlocks} />
       </SectionWrapper>*/}
@@ -86,7 +86,7 @@ export default function Page() {
       <SectionWrapper id="trustBlock">
       <TrustBlock {...data.trustBlock} />
       </SectionWrapper>
-    
+
     <BookingCTA variant="full" text="Book a hotel in a safe, well-connected area" href="/destination/nyc/booking?tab=hotels&from=is-nyc-safe-at-night" label="See safe-area hotels" />
     <Footer />
     </>

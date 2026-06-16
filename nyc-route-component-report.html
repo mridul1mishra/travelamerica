@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NYC Route Component Report</title>
+    <style>
+      :root { --text: #111827; --muted: #4b5563; --border: #d1d5db; --brand: #1d4ed8; --soft: #f8fafc; }
+      body { margin: 0; padding: 32px; font-family: Arial, Helvetica, sans-serif; color: var(--text); background: #fff; }
+      h1 { margin: 0 0 8px; color: var(--brand); font-size: 28px; }
+      p { margin: 0 0 24px; color: var(--muted); }
+      table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 13px; }
+      th, td { border: 1px solid var(--border); padding: 12px; text-align: left; vertical-align: top; }
+      th { background: var(--brand); color: #fff; }
+      tbody tr:nth-child(even) { background: var(--soft); }
+      th:nth-child(1), td:nth-child(1) { width: 16%; }
+      th:nth-child(2), td:nth-child(2) { width: 15%; }
+      th:nth-child(3), td:nth-child(3) { width: 8%; text-align: center; }
+      th:nth-child(4), td:nth-child(4) { width: 10%; }
+      th:nth-child(5), td:nth-child(5) { width: 21%; }
+      th:nth-child(6), td:nth-child(6) { width: 30%; }
+      code { font-family: Consolas, "Courier New", monospace; color: #1f2937; word-break: break-word; }
+      .items { display: grid; gap: 6px; }
+    </style>
+  </head>
+  <body>
+    <h1>NYC Route Component Report</h1>
+    <p>Routes under <code>app/destination/nyc</code>. CSS, JSON, data, framework imports, and type-only/model imports are excluded from the component columns. <strong>Client has section JSX</strong> is marked Yes only when the client file contains a native JSX <code>&lt;section&gt;</code> tag. Line numbers list each detected opening <code>&lt;section&gt;</code>.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Route path</th>
+          <th>Client TSX file name</th>
+          <th>Client has section JSX</th>
+          <th>Section line number</th>
+          <th>Component list</th>
+          <th>Component path</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>/destination/nyc/best-areas-to-stay</code></td>
+          <td><code>bestareatostayclientnew.tsx</code></td>
+          <td>No</td>
+          <td></td>
+          <td><div class="items">Banner<br>SectionSafestNeighborhoods<br>SoloTripIntro<br>Header<br>NeighborhoodRankingCards<br>Footer<br>FAQAccordion<br>BookingCTA<br>EmailSignup</div></td>
+          <td><div class="items"><code>app/destination/nyc/best-areas-to-stay/components/Banner/Banner.tsx</code><br><code>app/destination/nyc/best-areas-to-stay/components/SectionSafestNeighborhoods/SectionSafestNeighborhoods.tsx</code><br><code>app/destination/nyc/best-areas-to-stay/components/SoloTripIntro/SoloTripIntro.tsx</code><br><code>app/destination/nyc/best-areas-to-stay/components/Header/Header.tsx</code><br><code>app/destination/nyc/best-areas-to-stay/components/NeighborhoodRankingCards/NeighborhoodRankingCards.tsx</code><br><code>app/destination/nyc/best-areas-to-stay/components/Footer/Footer.tsx</code><br><code>app/destination/nyc/best-areas-to-stay/components/FAQAccordion/FAQAccordion.tsx</code><br><code>app/destination/nyc/best-areas-to-stay/components/BookingCTA/BookingCTA.tsx</code><br><code>app/destination/nyc/best-areas-to-stay/components/EmailSignup/EmailSignup.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/best-time-to-visit</code></td>
+          <td><code>besttimetovisitclient.tsx</code></td>
+          <td>No</td>
+          <td></td>
+          <td><div class="items">NycNavHeader<br>HeroSection<br>SeasonCards<br>MonthGrid<br>BookingCTA<br>FAQAccordion<br>EmailSignup<br>Footer</div></td>
+          <td><div class="items"><code>app/destination/nyc/best-time-to-visit/components/NycNavHeader/NycNavHeader.tsx</code><br><code>app/destination/nyc/best-time-to-visit/components/herosection/HeroSection.tsx</code><br><code>app/destination/nyc/best-time-to-visit/components/seasoncards/SeasonCards.tsx</code><br><code>app/destination/nyc/best-time-to-visit/components/monthgrid/MonthGrid.tsx</code><br><code>app/destination/nyc/best-time-to-visit/components/BookingCTA/BookingCTA.tsx</code><br><code>app/destination/nyc/best-time-to-visit/components/FAQAccordion/FAQAccordion.tsx</code><br><code>app/destination/nyc/best-time-to-visit/components/EmailSignup/EmailSignup.tsx</code><br><code>app/destination/nyc/best-time-to-visit/components/Footer/Footer.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/booking</code></td>
+          <td><code>bookflightsclient.tsx</code></td>
+          <td>Yes</td>
+          <td><code>82</code></td>
+          <td><div class="items">BookingClient<br>FAQAccordion</div></td>
+          <td><div class="items"><code>app/destination/nyc/booking/components/BookingClient/BookingClient.tsx</code><br><code>app/destination/nyc/booking/components/FAQAccordion/FAQAccordion.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/food</code></td>
+          <td><code>foodclient.tsx</code></td>
+          <td>Yes</td>
+          <td><code>24</code>, <code>38</code>, <code>60</code>, <code>98</code>, <code>120</code>, <code>143</code>, <code>167</code>, <code>187</code>, <code>210</code>, <code>232</code></td>
+          <td><div class="items">HeroBanner<br>NavigationHeader<br>Footer<br>BookingCTA<br>FAQAccordion</div></td>
+          <td><div class="items"><code>app/destination/nyc/food/components/HeroBanner/HeroBanner.tsx</code><br><code>app/destination/nyc/food/components/NavigationHeader/NavigationHeader.tsx</code><br><code>app/destination/nyc/food/components/Footer/Footer.tsx</code><br><code>app/destination/nyc/food/components/BookingCTA/BookingCTA.tsx</code><br><code>app/destination/nyc/food/components/FAQAccordion/FAQAccordion.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/free-things-to-do</code></td>
+          <td><code>freethingstodoclient.tsx</code></td>
+          <td>No</td>
+          <td></td>
+          <td><div class="items">NycNavHeader<br>HeroSection<br>FreeCategories<br>MuseumTable<br>SeasonalEvents<br>SavingsTips<br>BookingCTA<br>FAQAccordion<br>EmailSignup<br>Footer</div></td>
+          <td><div class="items"><code>app/destination/nyc/free-things-to-do/components/NycNavHeader/NycNavHeader.tsx</code><br><code>app/destination/nyc/free-things-to-do/components/herosection/HeroSection.tsx</code><br><code>app/destination/nyc/free-things-to-do/components/freecategories/FreeCategories.tsx</code><br><code>app/destination/nyc/free-things-to-do/components/museumtable/MuseumTable.tsx</code><br><code>app/destination/nyc/free-things-to-do/components/seasonalevents/SeasonalEvents.tsx</code><br><code>app/destination/nyc/free-things-to-do/components/savingstips/SavingsTips.tsx</code><br><code>app/destination/nyc/free-things-to-do/components/BookingCTA/BookingCTA.tsx</code><br><code>app/destination/nyc/free-things-to-do/components/FAQAccordion/FAQAccordion.tsx</code><br><code>app/destination/nyc/free-things-to-do/components/EmailSignup/EmailSignup.tsx</code><br><code>app/destination/nyc/free-things-to-do/components/Footer/Footer.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/getting-to-nyc</code></td>
+          <td><code>gettingtonyclient.tsx</code></td>
+          <td>No</td>
+          <td></td>
+          <td><div class="items">NycNavHeader<br>HeroSection<br>AirportTabs<br>ScamWarning<br>ArrivalTips<br>BookingCTA<br>FAQAccordion<br>EmailSignup<br>Footer</div></td>
+          <td><div class="items"><code>app/destination/nyc/getting-to-nyc/components/NycNavHeader/NycNavHeader.tsx</code><br><code>app/destination/nyc/getting-to-nyc/components/herosection/HeroSection.tsx</code><br><code>app/destination/nyc/getting-to-nyc/components/airporttabs/AirportTabs.tsx</code><br><code>app/destination/nyc/getting-to-nyc/components/scamwarning/ScamWarning.tsx</code><br><code>app/destination/nyc/getting-to-nyc/components/arrivaltips/ArrivalTips.tsx</code><br><code>app/destination/nyc/getting-to-nyc/components/BookingCTA/BookingCTA.tsx</code><br><code>app/destination/nyc/getting-to-nyc/components/FAQAccordion/FAQAccordion.tsx</code><br><code>app/destination/nyc/getting-to-nyc/components/EmailSignup/EmailSignup.tsx</code><br><code>app/destination/nyc/getting-to-nyc/components/Footer/Footer.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/group-travel</code></td>
+          <td><code>grouptravelclient.tsx</code></td>
+          <td>Yes</td>
+          <td><code>22</code>, <code>36</code>, <code>54</code>, <code>72</code>, <code>92</code>, <code>108</code>, <code>124</code>, <code>142</code>, <code>160</code>, <code>177</code>, <code>195</code>, <code>218</code></td>
+          <td><div class="items">HeroBanner<br>NavigationHeader<br>Footer<br>BookingCTA<br>FAQAccordion</div></td>
+          <td><div class="items"><code>app/destination/nyc/group-travel/components/HeroBanner/HeroBanner.tsx</code><br><code>app/destination/nyc/group-travel/components/NavigationHeader/NavigationHeader.tsx</code><br><code>app/destination/nyc/group-travel/components/Footer/Footer.tsx</code><br><code>app/destination/nyc/group-travel/components/BookingCTA/BookingCTA.tsx</code><br><code>app/destination/nyc/group-travel/components/FAQAccordion/FAQAccordion.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/is-nyc-safe-at-night</code></td>
+          <td><code>isnycsafeatnightclient.tsx</code></td>
+          <td>No</td>
+          <td></td>
+          <td><div class="items">HeroSafety<br>SafetyMeter<br>NeighborhoodSafetyGrid<br>ScenarioCards<br>PersonaSafetyBlocks<br>CorePrinciples<br>TransitSafety<br>NeighborhoodCards<br>EmergencyBlock<br>FAQAccordion<br>InterlinkingGrid<br>TrustBlock<br>SectionWrapper<br>Header<br>Footer<br>BookingCTA</div></td>
+          <td><div class="items"><code>app/destination/nyc/is-nyc-safe-at-night/components/hero/hero.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/SafetyMeter/SafetyMeter.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/NeighborhoodSafetyGrid/NeighborhoodSafetyGrid.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/ScenarioCards/ScenarioCards.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/PersonaSafetyBlocks/PersonaSafetyBlocks.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/CorePrinciples/CorePrinciples.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/TransitSafety/TransitSafety.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/NeighborhoodCards/NeighborhoodCards.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/EmergencyBlock/EmergencyBlock.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/FAQAccordion/FAQAccordion.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/InterlinkingGrid/InterlinkingGrid.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/TrustBlock/TrustBlock.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/SectionWrapper/SectionWrapper.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/Header/Header.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/Footer/Footer.tsx</code><br><code>app/destination/nyc/is-nyc-safe-at-night/components/BookingCTA/BookingCTA.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/landmark</code></td>
+          <td><code>landmarkclient.tsx</code></td>
+          <td>Yes</td>
+          <td><code>30</code>, <code>48</code>, <code>92</code>, <code>134</code>, <code>192</code></td>
+          <td><div class="items">HeroBanner<br>NavigationHeader<br>Footer<br>BookingCTA</div></td>
+          <td><div class="items"><code>app/destination/nyc/landmark/components/HeroBanner/HeroBanner.tsx</code><br><code>app/destination/nyc/landmark/components/NavigationHeader/NavigationHeader.tsx</code><br><code>app/destination/nyc/landmark/components/Footer/Footer.tsx</code><br><code>app/destination/nyc/landmark/components/BookingCTA/BookingCTA.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/neighborhood-guide</code></td>
+          <td><code>neighborhoodguide.tsx</code></td>
+          <td>No</td>
+          <td></td>
+          <td><div class="items">Header<br>Footer<br>IntroSection<br>CityOrganization<br>NeighborhoodsByStyle<br>PopularNeighborhoods<br>WhereFirstTimersStay<br>GettingAround<br>SafetyOverview<br>NeighborhoodGuideCTA<br>BookingCTA<br>WhyTrustThisGuide<br>FAQAccordion</div></td>
+          <td><div class="items"><code>app/destination/nyc/neighborhood-guide/components/Header/Header.tsx</code><br><code>app/destination/nyc/neighborhood-guide/components/Footer/Footer.tsx</code><br><code>app/destination/nyc/neighborhood-guide/components/introsection/introsection.tsx</code><br><code>app/destination/nyc/neighborhood-guide/components/cityorganization/cityorganization.tsx</code><br><code>app/destination/nyc/neighborhood-guide/components/Neighborhoodbystyle/Neighborhoodbystyle.tsx</code><br><code>app/destination/nyc/neighborhood-guide/components/PopularNeighborhood/Popularneighborhood.tsx</code><br><code>app/destination/nyc/neighborhood-guide/components/Wherefirsttimerstay/wherefirsttimestay.tsx</code><br><code>app/destination/nyc/neighborhood-guide/components/Gettingaround/Gettingaround.tsx</code><br><code>app/destination/nyc/neighborhood-guide/components/SafetyOverview/Safetyoverview.tsx</code><br><code>app/destination/nyc/neighborhood-guide/components/Neighborhoodguidecta/Neighborhoodguidecta.tsx</code><br><code>app/destination/nyc/neighborhood-guide/components/BookingCTA/BookingCTA.tsx</code><br><code>app/destination/nyc/neighborhood-guide/components/WhyTrustThisGuide/WhyTrustThisGuide.tsx</code><br><code>app/destination/nyc/neighborhood-guide/components/FAQAccordion/FAQAccordion.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/nyc-female-solo-travel-guide</code></td>
+          <td><code>solofemaletravelguideclient.tsx</code></td>
+          <td>No</td>
+          <td></td>
+          <td><div class="items">Header<br>Hero<br>InfoSection<br>CoreSafetyPrinciplesGrid<br>ScenarioSection<br>ScenarioFilter<br>SafetySection<br>MicroScenarios<br>PackingEssentials<br>FAQAccordion<br>Footer<br>LinkHubGrid<br>WhyTrustThisGuide<br>FemaleSafetyNarrative<br>BookingCTA<br>EmailSignup</div></td>
+          <td><div class="items"><code>app/destination/nyc/nyc-female-solo-travel-guide/components/Header/Header.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/Hero/herobanner.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/infosection/infosection.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/coresafetyprinciples/CoreSafetyPrinciplesGrid.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/scenariosection/scenariosection.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/scenariocard/ScenarioFilter.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/safetysection/SafetySection.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/microscenarios/microscenario.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/packingessential/packingEssential.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/FAQAccordian/faqsection.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/Footer/Footer.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/linkhubgrid/LinkHubGrid.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/WhyTrustThisGuide/WhyTrustThisGuide.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/safetynarrative/FemaleSafetyNarrative.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/BookingCTA/BookingCTA.tsx</code><br><code>app/destination/nyc/nyc-female-solo-travel-guide/components/EmailSignup/EmailSignup.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/nyc-safety-guide</code></td>
+          <td><code>nycsafetyguideclient.tsx</code></td>
+          <td>No</td>
+          <td></td>
+          <td><div class="items">Header<br>SafetyHero<br>Footer<br>ScenarioCard<br>ScenarioSection<br>NeighborhoodSafetySection<br>WhyTrustThisGuide<br>SafetyCardGrid<br>SafetyTipsGrid<br>FAQAccordion<br>LinkHubGrid<br>InfoSection<br>EmergencyContactBlock<br>SafetyNarrative<br>BookingCTA<br>EmailSignup</div></td>
+          <td><div class="items"><code>app/destination/nyc/nyc-safety-guide/components/Header/Header.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/herobanner/safetyhero.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/Footer/Footer.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/scenariosection/scenariocard.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/scenariosection/scenariosection.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/neighborhoodsection/neighborhoodsafetysection.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/WhyTrustThisGuide/WhyTrustThisGuide.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/safetycardgrid/safetycardgrid.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/SafetyTips/safetytipcardgrid.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/FAQAccordian/faqsection.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/linkhubgrid/LinkHubGrid.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/infosection/infosection.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/emergencycontactblock/EmergencyContactBlock.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/safetynarrative/SafetyNarrative.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/BookingCTA/BookingCTA.tsx</code><br><code>app/destination/nyc/nyc-safety-guide/components/EmailSignup/EmailSignup.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/nyc-subway-map/full</code></td>
+          <td><code>nycsubwaymapviewer.tsx</code></td>
+          <td>No</td>
+          <td></td>
+          <td><div class="items">None</div></td>
+          <td><div class="items">No local/shared component imports detected after excluding third-party libraries.</div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/nyc-subway-map</code></td>
+          <td><code>nycsubwaymapclient.tsx</code></td>
+          <td>No</td>
+          <td></td>
+          <td><div class="items">Header<br>Footer<br>HeroBanner<br>IconCardGrid<br>StepList<br>ScenarioCards<br>SafetyChecklist<br>BookingCTA</div></td>
+          <td><div class="items"><code>app/destination/nyc/nyc-subway-map/components/Header/Header.tsx</code><br><code>app/destination/nyc/nyc-subway-map/components/Footer/Footer.tsx</code><br><code>app/destination/nyc/nyc-subway-map/components/herobanner/herobanner.tsx</code><br><code>app/destination/nyc/nyc-subway-map/components/naviagtioncard/navigationcard.tsx</code><br><code>app/destination/nyc/nyc-subway-map/components/steplist/steplist.tsx</code><br><code>app/destination/nyc/nyc-subway-map/components/ScenarioCards/ScenarioCards.tsx</code><br><code>app/destination/nyc/nyc-subway-map/components/SafetyChecklist/SafetyChecklist.tsx</code><br><code>app/destination/nyc/nyc-subway-map/components/BookingCTA/BookingCTA.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc</code></td>
+          <td><code>nycclient.tsx</code></td>
+          <td>No</td>
+          <td></td>
+          <td><div class="items">HeroSection<br>PlanningIntent<br>WhyVisit<br>AttractionsHub<br>NeighborhoodsHub<br>ExperiencesHub<br>WhereToStay<br>ItinerariesPreview<br>DataCaptureCTA<br>Header<br>Footer<br>BookingCTA</div></td>
+          <td><div class="items"><code>app/destination/nyc/components/Hero/HeroSection.tsx</code><br><code>app/destination/nyc/components/PlanningIntent/PlanningIntent.tsx</code><br><code>app/destination/nyc/components/WhyVisit/WhyVisit.tsx</code><br><code>app/destination/nyc/components/AttractionsHub/AttractionHub.tsx</code><br><code>app/destination/nyc/components/NeighborhoodsHub/NeighborhoodsHub.tsx</code><br><code>app/destination/nyc/components/ExperiencesHub/ExperiencesHub.tsx</code><br><code>app/destination/nyc/components/WhereToStay/WhereToStay.tsx</code><br><code>app/destination/nyc/components/ItinerariesPreview/ItinerariesPreview.tsx</code><br><code>app/destination/nyc/components/DataCapture/DataCaptureCTA.tsx</code><br><code>app/destination/nyc/components/Header/Header.tsx</code><br><code>app/destination/nyc/components/Footer/Footer.tsx</code><br><code>app/destination/nyc/components/BookingCTA/BookingCTA.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/solo-itinerary</code></td>
+          <td><code>soloitineraryclient.tsx</code></td>
+          <td>Yes</td>
+          <td><code>34</code>, <code>39</code>, <code>72</code>, <code>95</code></td>
+          <td><div class="items">HeroBanner<br>NavigationHeader<br>Footer<br>BookingCTA<br>EmailSignup<br>FAQ</div></td>
+          <td><div class="items"><code>app/destination/nyc/solo-itinerary/components/HeroBanner/HeroBanner.tsx</code><br><code>app/destination/nyc/solo-itinerary/components/NavigationHeader/NavigationHeader.tsx</code><br><code>app/destination/nyc/solo-itinerary/components/Footer/Footer.tsx</code><br><code>app/destination/nyc/solo-itinerary/components/BookingCTA/BookingCTA.tsx</code><br><code>app/destination/nyc/solo-itinerary/components/EmailSignup/EmailSignup.tsx</code><br><code>app/destination/nyc/solo-itinerary/components/FAQ/FAQ.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/solo-trip-to-nyc</code></td>
+          <td><code>solotriptonycclient.tsx</code></td>
+          <td>No</td>
+          <td></td>
+          <td><div class="items">QuickActionBar<br>NycNavHeader<br>InfoSection<br>BestNeighborhoodsGrid<br>ThreeDayItinerary<br>FemaleSoloTiles<br>Footer<br>WhyTrustThisGuide<br>ScenarioSection<br>SubwayAccessSection<br>FAQAccordion<br>SoloNycQa<br>SoloTripNarrative<br>BookingCTA<br>EmailSignup<br>HeroSection</div></td>
+          <td><div class="items"><code>app/destination/nyc/solo-trip-to-nyc/components/QuickActionBar/QuickActionBar.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/nycnavheader/NycNavHeader.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/InfoSection/InfoSection.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/BestNeighborhoodsGrid/BestNeighborhoodsGrid.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/ThreeDayItinerary/ThreeDayItinerary.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/FemaleSoloTiles/FemaleSoloTiles.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/Footer/Footer.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/WhyTrustThisGuide/WhyTrustThisGuide.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/ScenarioSection/ScenarioSection.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/SubwayAccessSection/SubwayAccessSection.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/FAQAccordion/FAQAccordion.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/SoloNycQa/SoloNycQa.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/solotripnarrative/SoloTripNarrative.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/BookingCTA/BookingCTA.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/EmailSignup/EmailSignup.tsx</code><br><code>app/destination/nyc/solo-trip-to-nyc/components/herosection/HeroSection.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/subway-safety-guide</code></td>
+          <td><code>subwaysafetyguideclient.tsx</code></td>
+          <td>Yes</td>
+          <td><code>48</code></td>
+          <td><div class="items">Header<br>Hero<br>CorePrinciples<br>SubwayBasics<br>PersonaBlock<br>ScenarioList<br>NeighborhoodNotes<br>FAQ<br>Checklist<br>EmergencyPlaybook<br>ToolsAndApps<br>Etiquette<br>InternalLinks<br>Footer<br>SectionWrapper<br>WhyTrustThisGuide<br>BookingCTA</div></td>
+          <td><div class="items"><code>app/destination/nyc/subway-safety-guide/components/Header/Header.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/Hero/Hero.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/coreprinciples/coreprinciples.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/subwaybasics/SubwayBasics.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/PersonaBlock/PersonalBlock.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/ScenarioList/ScenarioList.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/neighborhood/neighborhood.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/FAQ/FAQ.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/checklist/checklist.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/EmergencyPlaybook/EmergencyPlaybook.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/Toolsandapps/Toolsandapps.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/Etiquette/Etiquette.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/Interlink/Interlink.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/Footer/Footer.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/SectionWrapper/SectionWrapper.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/whytrustthisguide/whytrustthisguide.tsx</code><br><code>app/destination/nyc/subway-safety-guide/components/BookingCTA/BookingCTA.tsx</code></div></td>
+        </tr>
+        <tr>
+          <td><code>/destination/nyc/things-to-do</code></td>
+          <td><code>nycthingstodoclient.tsx</code></td>
+          <td>Yes</td>
+          <td><code>16</code>, <code>25</code>, <code>39</code>, <code>65</code>, <code>91</code>, <code>108</code>, <code>124</code>, <code>136</code>, <code>148</code>, <code>183</code>, <code>213</code>, <code>222</code>, <code>234</code></td>
+          <td><div class="items">Header<br>Footer<br>BookingCTA</div></td>
+          <td><div class="items"><code>app/destination/nyc/things-to-do/components/Header/Header.tsx</code><br><code>app/destination/nyc/things-to-do/components/Footer/Footer.tsx</code><br><code>app/destination/nyc/things-to-do/components/BookingCTA/BookingCTA.tsx</code></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

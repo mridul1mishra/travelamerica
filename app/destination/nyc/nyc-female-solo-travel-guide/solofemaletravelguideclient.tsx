@@ -1,5 +1,5 @@
 "use client"
-import Header from "@/app/components/destination/header/header";
+import Header from "./components/Header/Header";
 import Hero from "./components/Hero/herobanner";
 import styles from "./page.module.css";
 import InfoSection from "./components/infosection/infosection";
@@ -15,12 +15,12 @@ import { packingEssentials } from "./components/packingessential/packingEssentia
 import PackingEssentials from "./components/packingessential/packingEssential";
 import FAQAccordion from "./components/FAQAccordian/faqsection";
 import faqData from "./components/FAQAccordian/FAQACcordina.json";
-import Footer from "@/app/components/Header/Footer/footer";
+import Footer from "./components/Footer/Footer";
 import LinkHubGrid from "./components/linkhubgrid/LinkHubGrid";
-import { WhyTrustThisGuide } from "@/app/components/destination/whytrustitem/whytrustthisguide";
+import { WhyTrustThisGuide } from "./components/WhyTrustThisGuide/WhyTrustThisGuide";
 import FemaleSafetyNarrative from "./components/safetynarrative/FemaleSafetyNarrative";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
+import BookingCTA from './components/BookingCTA/BookingCTA';
+import EmailSignup from './components/EmailSignup/EmailSignup';
 
 export default function FemaleSoloTravelGuide() {
   return (

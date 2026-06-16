@@ -1,13 +1,13 @@
 'use client';
-import NycNavHeader from '../solo-trip-to-nyc/components/nycnavheader/NycNavHeader';
+import NycNavHeader from "./components/NycNavHeader/NycNavHeader";
 import HeroSection from './components/herosection/HeroSection';
 import SeasonCards from './components/seasoncards/SeasonCards';
 import MonthGrid from './components/monthgrid/MonthGrid';
 import TravelerTypes from './components/travelertypes/TravelerTypes';
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
-import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
-import Footer from '@/app/components/Header/Footer/footer';
+import BookingCTA from "./components/BookingCTA/BookingCTA";
+import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
+import EmailSignup from "./components/EmailSignup/EmailSignup";
+import Footer from "./components/Footer/Footer";
 
 const faqData = [
   { question: 'What is the best month to visit New York City?', answer: 'April–May and September–October are the best overall months: mild weather, manageable crowds, and hotel rates 20–30% below peak summer levels. May is arguably the single best month for a first visit.' },

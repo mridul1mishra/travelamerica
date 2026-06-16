@@ -1,13 +1,13 @@
 'use client';
-import NycNavHeader from '../solo-trip-to-nyc/components/nycnavheader/NycNavHeader';
+import NycNavHeader from "./components/NycNavHeader/NycNavHeader";
 import HeroSection from './components/herosection/HeroSection';
 import AirportTabs from './components/airporttabs/AirportTabs';
 import ScamWarning from './components/scamwarning/ScamWarning';
 import ArrivalTips from './components/arrivaltips/ArrivalTips';
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
-import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
-import Footer from '@/app/components/Header/Footer/footer';
+import BookingCTA from "./components/BookingCTA/BookingCTA";
+import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
+import EmailSignup from "./components/EmailSignup/EmailSignup";
+import Footer from "./components/Footer/Footer";
 
 const faqData = [
   { question: 'What is the cheapest way to get from JFK to Manhattan?', answer: 'The AirTrain + subway is the cheapest at around $10.40 per person (50–70 min to Midtown). Take the AirTrain to Jamaica station, then the E train into Midtown.' },

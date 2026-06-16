@@ -1,13 +1,13 @@
 "use client";
 import { useParams } from "next/navigation";
-import HeroBanner from "../../../components/Header/HeroBanner";
-import NavigationHeader from "../../../components/Header/NavigationHeader";
+import HeroBanner from "./components/HeroBanner/HeroBanner";
+import NavigationHeader from "./components/NavigationHeader/NavigationHeader";
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './food.module.css';
-import Footer from "@/app/components/Header/Footer/footer";
-import BookingCTA from "@/app/components/destination/BookingCTA/BookingCTA";
-import FAQAccordion from '@/app/components/destination/faqsection/faqsection';
+import Footer from "./components/Footer/Footer";
+import BookingCTA from "./components/BookingCTA/BookingCTA";
+import FAQAccordion from './components/FAQAccordion/FAQAccordion';
 import faqData from '@/content/destination/nyc/food/faq/faqsection.json';
 export default function FoodClientPage() {
 

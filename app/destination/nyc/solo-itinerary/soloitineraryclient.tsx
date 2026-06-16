@@ -1,14 +1,14 @@
 "use client";
 import { useParams } from "next/navigation";
-import HeroBanner from "../../../components/Header/HeroBanner";
-import NavigationHeader from "../../../components/Header/NavigationHeader";
+import HeroBanner from "./components/HeroBanner/HeroBanner";
+import NavigationHeader from "./components/NavigationHeader/NavigationHeader";
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './SoloItinerary.module.css';
-import Footer from "@/app/components/Header/Footer/footer";
-import BookingCTA from '@/app/components/destination/BookingCTA/BookingCTA';
-import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
-import FAQ from "@/app/components/faq/faq";
+import Footer from "./components/Footer/Footer";
+import BookingCTA from "./components/BookingCTA/BookingCTA";
+import EmailSignup from "./components/EmailSignup/EmailSignup";
+import FAQ from "./components/FAQ/FAQ";
 import { getFaq, getFaqItinerary } from "@/app/lib/FaqData";
 
 interface FaqItem {
