@@ -1,0 +1,133 @@
+export type Landmark = {
+  id: string;
+  name: string;
+  neighborhood: string;
+  address: string;
+  subway: string;
+  hours: string;
+  ticket: string;
+  timeNeeded: string;
+  whatToDo: string;
+  soloTip: string;
+  bestTime: string;
+};
+
+export const LANDMARKS: Landmark[] = [
+  {
+    id: "bellagio-fountains",
+    name: "Fountains of Bellagio",
+    neighborhood: "Center Strip",
+    address: "3600 S Las Vegas Blvd, Las Vegas, NV 89109",
+    subway: "Las Vegas Monorail to Bally's/Paris station, then walk; or the free Bellagio tram and the Strip's pedestrian bridges. RTC Deuce bus stops directly out front.",
+    hours: "Shows every 30 min from 3:00 PM - 8:00 PM weekdays (from noon on weekends), then every 15 min from 8:00 PM - midnight.",
+    ticket: "Free.",
+    timeNeeded: "15 - 30 min (one or two shows)",
+    whatToDo: "Watch the choreographed water, light, and music show on the 8-acre lake in front of Bellagio. The best viewing is from the sidewalk and bridge on Las Vegas Blvd directly in front, or from the Bellagio terrace. Don't pay for a 'fountain view' restaurant table - the public sidewalk is the better seat.",
+    soloTip: "The later night shows (every 15 min after 8 PM) are the most dramatic and the crowds thin between songs. Pair it with the free Conservatory & Botanical Gardens inside Bellagio, which changes with the seasons and is open 24/7.",
+    bestTime: "After dark for the full light effect; weeknights are far less crowded than weekends.",
+  },
+  {
+    id: "the-strip",
+    name: "The Las Vegas Strip",
+    neighborhood: "Las Vegas Boulevard South",
+    address: "Las Vegas Blvd S, between Mandalay Bay and the STRAT",
+    subway: "RTC Deuce double-decker bus runs the full length 24/7; the Las Vegas Monorail parallels the east side. Most of it is walkable via elevated pedestrian bridges.",
+    hours: "Always open; the casinos, lights, and people-watching run 24/7.",
+    ticket: "Free to walk. Individual attractions, casinos, and shows are paid.",
+    timeNeeded: "An evening to a full day, depending on how much you stop",
+    whatToDo: "Walk the 4-mile boulevard of mega-resorts: the Bellagio, Caesars Palace, the Venetian's canals, Paris's half-scale Eiffel Tower, and the LINQ Promenade. The free spectacles (Bellagio fountains, the Venetian) string together into a self-guided night walk. Use the air-conditioned casino interiors and pedestrian bridges to beat the heat between stops.",
+    soloTip: "The Strip is one of the easiest places to wander solo - it's crowded, well-lit, and you can duck into any casino. Walking the whole length is longer than it looks (the resorts are enormous); hop the Deuce bus or a rideshare for the long gaps near the south end.",
+    bestTime: "After sunset when the lights and crowds peak; early morning for quiet photos with no foot traffic.",
+  },
+  {
+    id: "high-roller",
+    name: "High Roller Observation Wheel",
+    neighborhood: "The LINQ Promenade, Center Strip",
+    address: "3545 S Las Vegas Blvd, Las Vegas, NV 89109",
+    subway: "Las Vegas Monorail to Harrah's/The LINQ station, then walk through the LINQ Promenade to the wheel at the back.",
+    hours: "Daily, typically 2:00 PM - midnight (hours vary seasonally; check before going).",
+    ticket: "~$25 daytime / ~$35-40 night for a standard 30-min rotation. Open-bar 'Happy Half Hour' pods ~$50+. Booking online ahead saves a few dollars over the walk-up window.",
+    timeNeeded: "45 min - 1 hour including the queue and the 30-min rotation",
+    whatToDo: "Ride the 550-foot observation wheel - one of the tallest in the world - for 360-degree views over the Strip and the valley to the mountains. Each glass pod holds up to 40 people. The night ride over the neon is the headline; the open-bar pod option turns the rotation into a moving cocktail lounge.",
+    soloTip: "Solo riders just share a pod with others, so there's no premium to pay. Book the slot 30-40 minutes before sunset to catch daylight, the sunset, and the lights coming on all in one rotation - the single best value window.",
+    bestTime: "Right around sunset for the day-to-night transition; weeknights for shorter lines.",
+  },
+  {
+    id: "fremont-street",
+    name: "Fremont Street Experience",
+    neighborhood: "Downtown Las Vegas",
+    address: "425 Fremont St, Las Vegas, NV 89101",
+    subway: "RTC Deuce bus from the Strip to the Downtown Transit Center (~20-30 min), then a short walk. Rideshare is faster late at night.",
+    hours: "Open 24/7. The Viva Vision canopy light shows run hourly from dusk to midnight or later.",
+    ticket: "Free to walk and watch the light shows. SlotZilla zip line ~$49 (lower 'Zipline') to ~$69 (upper 'Zoomline').",
+    timeNeeded: "1.5 - 2.5 hours",
+    whatToDo: "Walk the five covered blocks of old downtown under the 1,500-foot Viva Vision LED canopy, with free hourly light-and-music shows overhead, live bands on street stages, and the historic neon of the original casino corridor (the Golden Nugget, the Plaza). The SlotZilla zip line launches riders right down the middle under the canopy.",
+    soloTip: "This is the gritter, cheaper, more local-feeling counterpart to the Strip - and it's free entertainment for hours. Friday and Saturday nights have the most energy. Keep your wits and your wallet secure in the late-night crowds; it's busy but watch for pickpockets.",
+    bestTime: "After dark for the canopy shows and live music; weekend nights for the biggest crowds and best bands.",
+  },
+  {
+    id: "sphere",
+    name: "Sphere",
+    neighborhood: "East of the Strip (behind the Venetian)",
+    address: "255 Sphere Way, Las Vegas, NV 89169",
+    subway: "Connected to the Venetian/Palazzo by a pedestrian bridge; Las Vegas Monorail to Las Vegas Convention Center station, or rideshare to the dedicated drop-off.",
+    hours: "Varies by event/show schedule; the 'Sphere Experience' daytime attraction runs throughout the day. Check Sphere's site for showtimes.",
+    ticket: "'Sphere Experience' (includes the 'Postcard from Earth' film) ~$79-129 depending on seat and time. Concerts and residencies are separately priced and far higher.",
+    timeNeeded: "1.5 - 2 hours for the Sphere Experience; a full evening for a concert",
+    whatToDo: "See the world's largest spherical structure - the exterior 'Exosphere' is the largest LED screen on Earth and is free to view from outside (great from the Venetian bridge or Strip rooftops). Inside, the wrap-around 16K screen and haptic seats make the 'Postcard from Earth' film a full sensory experience. Concert residencies here are a destination in themselves.",
+    soloTip: "You don't need a ticket to enjoy the best part - the animated exterior is free and stunning from the surrounding bridges and high floors. If you do go in, the daytime Sphere Experience is much cheaper than a concert and gives you the full immersive-screen effect solo.",
+    bestTime: "After dark to see the Exosphere lit up; book the Sphere Experience for off-peak afternoon slots to avoid the busiest sessions.",
+  },
+  {
+    id: "neon-museum",
+    name: "The Neon Museum",
+    neighborhood: "Downtown Las Vegas (north of Fremont St)",
+    address: "770 Las Vegas Blvd N, Las Vegas, NV 89101",
+    subway: "Rideshare is the practical option; it's about a 10-minute drive from the Strip or a short ride from Fremont Street. Limited bus service via the Downtown Transit Center.",
+    hours: "Open daily, typically 9:00 AM - midnight, with timed-entry slots; exact hours shift seasonally. Reservations strongly recommended.",
+    ticket: "Daytime general admission ~$20; evening 'Brilliant!' / illuminated experience ~$28-35. Book a timed slot ahead - it sells out.",
+    timeNeeded: "1 - 1.5 hours",
+    whatToDo: "Wander the outdoor 'Neon Boneyard,' a two-acre field of rescued, decommissioned casino signs - the old Stardust, Moulin Rouge, the Hard Rock guitar, and dozens of vintage motel and casino marquees. The after-dark experiences re-light select signs. It's the most photogenic, history-rich stop in the city and a true counterpoint to the Strip.",
+    soloTip: "Go at golden hour or book an evening slot - the low light (and the relit signs after dark) make for the best photos and a quieter, more contemplative visit. Daytime in summer is brutally hot with little shade, so bring water and sun protection.",
+    bestTime: "Late afternoon into evening for cooler temperatures and the best light; reserve ahead in peak season.",
+  },
+  {
+    id: "the-strat",
+    name: "The STRAT Tower (SkyPod & Thrill Rides)",
+    neighborhood: "North Strip",
+    address: "2000 S Las Vegas Blvd, Las Vegas, NV 89104",
+    subway: "RTC Deuce bus to the north Strip stop out front; rideshare is quick from the central Strip.",
+    hours: "SkyPod observation deck daily ~10:00 AM - 1:00 AM (later on weekends). Thrill rides operate seasonally and weather-permitting.",
+    ticket: "SkyPod observation deck ~$20-30. Add-on for the thrill rides (Big Shot, X-Scream, Insanity, SkyJump) ~$25-30 each or a combo pass.",
+    timeNeeded: "1 - 1.5 hours (more if you do multiple rides)",
+    whatToDo: "Ride to the top of the 1,149-foot tower - the tallest observation tower in the U.S. - for 360-degree views over the whole valley. The open-air deck hosts the world's highest thrill rides, including the Big Shot and the SkyJump controlled descent off the side. Even just the observation decks (indoor and outdoor) are worth the elevator ride.",
+    soloTip: "It's at the quieter north end, so lines are shorter than the High Roller. Solo travelers can do the rides without coordinating with anyone. Sunset on the open-air deck is spectacular and far less crowded than the Strip's center.",
+    bestTime: "Sunset for the views; weekdays and the off-season for short ride queues.",
+  },
+  {
+    id: "welcome-sign",
+    name: "Welcome to Fabulous Las Vegas Sign",
+    neighborhood: "South Strip",
+    address: "5100 S Las Vegas Blvd, Las Vegas, NV 89119",
+    subway: "RTC Deuce bus south to the last Strip stops, or rideshare; there's a small free parking lot beside the sign in the median.",
+    hours: "Always accessible; lit at night. Daytime has the shortest photo lines.",
+    ticket: "Free.",
+    timeNeeded: "20 - 30 min (mostly the photo queue)",
+    whatToDo: "Get your photo at the iconic 1959 neon sign that marks the south entrance to the Strip. It sits on a median island with its own free parking lot and a marked walkway. An attendant often helps line people up; on busy days there's an orderly queue. The back of the sign reads 'Drive Carefully - Come Back Soon.'",
+    soloTip: "Early morning is the move for a solo visit - little to no line and soft light. There are usually friendly people in the queue happy to take your photo, or use the timer on a small tripod. It's a quick stop best combined with the south Strip (Mandalay Bay, the airport area).",
+    bestTime: "Early morning for no queue, or after dark to catch the sign lit up (longer waits at night).",
+  },
+  {
+    id: "hoover-dam",
+    name: "Hoover Dam & Red Rock Canyon (Day Trips)",
+    neighborhood: "Outside the city",
+    address: "Hoover Dam: US-93, Boulder City, NV 89005. Red Rock Canyon: 1000 Scenic Loop Dr, Las Vegas, NV 89161",
+    subway: "No transit; both require a car, rideshare, or guided tour. Hoover Dam is ~45 min southeast via US-93; Red Rock Canyon is ~30 min west of the Strip.",
+    hours: "Hoover Dam: visitor center daily ~9:00 AM - 5:00 PM; the walkway/exterior is free and accessible longer. Red Rock Canyon: Scenic Loop daily ~6:00 AM - dusk (timed-entry reservation required Oct-May).",
+    ticket: "Hoover Dam: exterior and Memorial Bridge walkway free; powerplant tour ~$15, full dam tour ~$30; parking garage ~$10. Red Rock Canyon: ~$20 per vehicle entry plus a small timed-entry reservation fee in season.",
+    timeNeeded: "Half day each (allow driving time)",
+    whatToDo: "Hoover Dam: walk the dam and the Mike O'Callaghan-Pat Tillman Memorial Bridge for the classic overhead view; the powerplant/dam tours go inside the structure. Red Rock Canyon: drive or cycle the 13-mile one-way Scenic Loop past red sandstone cliffs, with trailheads for short hikes and overlooks - a complete escape from the neon.",
+    soloTip: "These are the easiest way to break up a Strip-heavy trip. If you don't have a car, half-day guided tours from the Strip cover Hoover Dam (and often combine it with Red Rock or Lake Mead). For Red Rock, reserve the timed entry online in advance during the Oct-May window or you'll be turned away at the gate.",
+    bestTime: "Early morning to beat the desert heat and the crowds; cooler months (fall through spring) for comfortable hiking at Red Rock.",
+  },
+];

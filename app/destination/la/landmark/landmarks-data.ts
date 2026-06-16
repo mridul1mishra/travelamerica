@@ -1,0 +1,133 @@
+export type Landmark = {
+  id: string;
+  name: string;
+  neighborhood: string;
+  address: string;
+  subway: string;
+  hours: string;
+  ticket: string;
+  timeNeeded: string;
+  whatToDo: string;
+  soloTip: string;
+  bestTime: string;
+};
+
+export const LANDMARKS: Landmark[] = [
+  {
+    id: "griffith-observatory",
+    name: "Griffith Observatory",
+    neighborhood: "Los Feliz / Griffith Park",
+    address: "2800 E Observatory Rd, Los Angeles, CA 90027",
+    subway: "Metro B (Red) Line to Vermont/Sunset, then DASH Observatory bus (weekends/holidays) or rideshare up the hill",
+    hours: "Tuesday-Friday 12:00 PM - 10:00 PM; Saturday-Sunday 10:00 AM - 10:00 PM; closed Monday.",
+    ticket: "Free admission to the building and grounds. Samuel Oschin Planetarium shows ~$10 adults. Parking on-site and on the road is metered.",
+    timeNeeded: "2 - 3 hours",
+    whatToDo: "Take in the panorama of the entire LA basin from downtown to the ocean, with the Hollywood Sign on the hillside behind you. Look through the public telescopes on clear evenings (free, when staffed), see the Foucault pendulum and the Tesla coil, and catch a planetarium show. The lawn at dusk is the best free sunset-into-skyline view in the city.",
+    soloTip: "Parking near the top fills fast - arrive before 10 AM or after 5 PM, or hike up the Charlie Turner Trail from the Greek Theatre lot (about 30-40 min). Going solo at night for the city lights and the telescopes is one of LA's easiest and safest solo evenings.",
+    bestTime: "Weekday evening near sunset for the skyline-to-lights transition; avoid weekend midday crowds and parking gridlock.",
+  },
+  {
+    id: "hollywood-sign",
+    name: "Hollywood Sign",
+    neighborhood: "Mount Lee, Griffith Park",
+    address: "Mount Lee Dr, Los Angeles, CA 90068 (sign is fenced; viewpoints vary)",
+    subway: "No direct transit. Metro B (Red) Line to Hollywood/Highland, then rideshare to a trailhead.",
+    hours: "Viewable in daylight hours; the sign itself is fenced off and cannot be reached on foot.",
+    ticket: "Free to view. No paid access to the sign.",
+    timeNeeded: "1 - 3 hours depending on whether you hike",
+    whatToDo: "You cannot walk up to the letters - they are fenced and monitored. The best views are from Griffith Observatory (free), the Lake Hollywood Park lawn, or the Mt. Hollywood / Mt. Lee trails for the closest legal vantage. The Hollywood & Highland complex frames a clean distant shot at street level.",
+    soloTip: "Skip the overpriced 'Hollywood Sign tour' vans. For a solo hike, the Brush Canyon (Canyon Drive) trail to the back of the sign is the most rewarding - about 6 miles round trip, bring water and sun protection, there is no shade.",
+    bestTime: "Early morning for clear air and cool hiking temps; the marine layer can hide the sign until mid-morning.",
+  },
+  {
+    id: "hollywood-walk-of-fame",
+    name: "Hollywood Walk of Fame & TCL Chinese Theatre",
+    neighborhood: "Hollywood",
+    address: "6925 Hollywood Blvd, Los Angeles, CA 90028",
+    subway: "Metro B (Red) Line to Hollywood/Highland - exits directly onto the Walk.",
+    hours: "Walk of Fame is a public sidewalk, open 24/7. TCL Chinese Theatre tours run roughly 10:00 AM - 6:00 PM.",
+    ticket: "Free to walk. TCL Chinese Theatre guided tour ~$18; movies screen at standard ticket prices. The forecourt handprints are free to see.",
+    timeNeeded: "1 - 1.5 hours",
+    whatToDo: "Find your favorite stars set into the terrazzo sidewalk, see the celebrity handprints and footprints in the TCL Chinese Theatre forecourt, and look up at the Dolby Theatre (home of the Oscars). The Egyptian Theatre a block east is the other historic movie palace worth a look.",
+    soloTip: "This stretch is heavily touristed and a little gritty - keep your phone secure and don't engage with the costumed characters unless you want to pay for a photo. Daytime is fine solo; it is the quick 'I saw it' stop, not an afternoon. Better food is one block off the boulevard.",
+    bestTime: "Weekday late morning. Avoid evenings on the boulevard itself if you want a calmer visit.",
+  },
+  {
+    id: "getty-center",
+    name: "The Getty Center",
+    neighborhood: "Brentwood",
+    address: "1200 Getty Center Dr, Los Angeles, CA 90049",
+    subway: "Metro E (Expo) / bus connections to Westwood, then Metro bus 761 to the Getty Center stop; a hilltop tram carries you up from the parking structure.",
+    hours: "Tuesday-Sunday 10:00 AM - 5:30 PM (Saturday until 8:00 PM); closed Monday.",
+    ticket: "Free admission. Parking is $25 (lower after 3 PM / 4 PM and on Saturday evenings).",
+    timeNeeded: "Half day (3 - 4 hours)",
+    whatToDo: "World-class European paintings (Van Gogh's 'Irises', Rembrandt, Monet), the Richard Meier travertine architecture, and the Central Garden. Ride the automated tram up from the parking structure - it's part of the experience. The terraces have sweeping views from the ocean to downtown on clear days.",
+    soloTip: "The Getty is one of the most solo-friendly outings in LA - free entry, no pressure, easy to wander at your own pace. Reserve parking online in advance for weekends. Pack a light layer; the hilltop is breezier than the basin.",
+    bestTime: "Weekday mornings, or Saturday evening (open till 8 PM) for sunset over the city from the terraces.",
+  },
+  {
+    id: "santa-monica-pier",
+    name: "Santa Monica Pier",
+    neighborhood: "Santa Monica",
+    address: "200 Santa Monica Pier, Santa Monica, CA 90401",
+    subway: "Metro E (Expo) Line to Downtown Santa Monica, then a ~10-15 minute walk toward the ocean.",
+    hours: "Pier open 24/7. Pacific Park rides typically run 11:00 AM - 9:00 PM (later in summer, reduced in winter).",
+    ticket: "Free to walk the pier. Pacific Park rides ~$6-$12 each, or an unlimited wristband ~$40+. Aquarium under the pier is donation-suggested.",
+    timeNeeded: "1.5 - 2.5 hours",
+    whatToDo: "Walk out to the end past the solar-powered Ferris wheel, ride the historic carousel, see the 'End of Route 66' sign, and watch the surfers and street performers. The beach path connects south toward Venice. Sunset from the pier railing is the classic LA postcard.",
+    soloTip: "Weekday mornings are calm and great for photos; weekends and summer evenings get packed. The Metro E Line drops you a flat walk away, so you can skip the brutal beach parking entirely - the best move for a solo visitor.",
+    bestTime: "Weekday morning for quiet, or any day at sunset for the lights and the ocean.",
+  },
+  {
+    id: "venice-beach-boardwalk",
+    name: "Venice Beach Boardwalk",
+    neighborhood: "Venice",
+    address: "Ocean Front Walk, Venice, CA 90291",
+    subway: "Metro E (Expo) to Downtown Santa Monica then Metro bus 1, or rideshare directly to Windward Ave.",
+    hours: "Boardwalk open 24/7; vendors and Muscle Beach gym most active 9:00 AM - sunset.",
+    ticket: "Free.",
+    timeNeeded: "1.5 - 2 hours",
+    whatToDo: "Stroll the 2.5-mile oceanfront walk past skaters at the Venice Skatepark, the outdoor Muscle Beach gym, artists, and vendors. Detour one block inland to the Venice Canals (quiet, residential, free) and to Abbot Kinney Blvd for shops and cafes. The basketball courts and graffiti walls are local landmarks.",
+    soloTip: "Daytime is lively and fine solo; the boardwalk thins out and gets sketchier after dark, so wrap up by sunset. Keep valuables minimal. Start at the quieter north end near the canals and walk south into the action.",
+    bestTime: "Weekend daytime for the full carnival atmosphere; weekday mornings for a mellow walk.",
+  },
+  {
+    id: "broad-lacma",
+    name: "The Broad & LACMA (Museum Row)",
+    neighborhood: "Downtown LA (The Broad) / Miracle Mile (LACMA)",
+    address: "The Broad: 221 S Grand Ave, Los Angeles, CA 90012; LACMA: 5905 Wilshire Blvd, Los Angeles, CA 90036",
+    subway: "The Broad: Metro B/D Line to Civic Center/Grand Park. LACMA: Metro to Wilshire/Western, then bus along Wilshire (Metro D Line extension toward the area is in progress).",
+    hours: "The Broad: Tuesday-Sunday 11:00 AM - 5:00 PM (closed Monday). LACMA: Monday/Tuesday/Thursday 11:00 AM - 6:00 PM, Friday 11:00 AM - 8:00 PM, weekends 10:00 AM - 7:00 PM; closed Wednesday.",
+    ticket: "The Broad: free general admission (reserve a timed slot online; Yayoi Kusama Infinity Mirror Rooms are a separate timed ticket). LACMA: ~$28 adults; LA County residents free after 3 PM on weekdays.",
+    timeNeeded: "2 - 3 hours per museum",
+    whatToDo: "The Broad holds contemporary heavyweights (Koons, Basquiat, Warhol) and the famous Infinity Mirror Rooms - book those the moment slots open. LACMA's 'Urban Light' lamppost installation out front is free and photographed day and night; inside spans antiquity to modern. Walt Disney Concert Hall (Gehry's stainless-steel sails) is right by The Broad.",
+    soloTip: "Both are ideal solo activities - free or low-cost, self-paced, no awkwardness. Reserve The Broad's free timed entry in advance; walk-up availability is unreliable. Pair The Broad with a stroll past Disney Concert Hall and Grand Central Market for lunch.",
+    bestTime: "Weekday mornings for The Broad; LACMA on a weekday after 3 PM if you qualify for the LA County resident free entry.",
+  },
+  {
+    id: "rodeo-drive",
+    name: "Rodeo Drive & Beverly Hills",
+    neighborhood: "Beverly Hills",
+    address: "Rodeo Dr, Beverly Hills, CA 90210",
+    subway: "Metro E (Expo) toward the Westside then bus, or rideshare; the Metro D Line extension toward Beverly Hills is opening in phases.",
+    hours: "Street open 24/7; boutiques typically 10:00 AM - 6:00 PM.",
+    ticket: "Free to walk and window-shop.",
+    timeNeeded: "1 - 1.5 hours",
+    whatToDo: "Window-shop the luxury flagships, photograph the curving cobblestone Two Rodeo lane, and find the Beverly Hills sign at the Beverly Gardens Park lily pond on Santa Monica Blvd. Greystone Mansion (a free public park about two miles north) offers gardens and city views. The Wallis Annenberg Center hosts free public events.",
+    soloTip: "This is a low-cost stop if you treat it as a walk rather than a shopping spree. Combine it with the gardens at Beverly Gardens Park for the classic sign photo, then head to a cafe off the main drag where prices are saner.",
+    bestTime: "Weekday late morning for window light and fewer crowds.",
+  },
+  {
+    id: "union-station-olvera",
+    name: "Union Station & Olvera Street",
+    neighborhood: "Downtown LA",
+    address: "800 N Alameda St, Los Angeles, CA 90012",
+    subway: "Metro B/D Line and the LA Metro / Metrolink / Amtrak hub - Union Station is itself the transit center.",
+    hours: "Union Station open daily ~4:00 AM - 1:00 AM. Olvera Street shops roughly 10:00 AM - 7:00 PM.",
+    ticket: "Free to visit both.",
+    timeNeeded: "1 - 1.5 hours",
+    whatToDo: "Union Station is a 1939 Mission Revival / Art Deco landmark - tiled floors, leather seats, and the historic waiting room are worth seeing even if you aren't catching a train. Across Alameda St, Olvera Street is the city's oldest block: a Mexican marketplace with food stalls, crafts, and the Avila Adobe (LA's oldest standing house, free).",
+    soloTip: "This is the easiest car-free landmark in LA because every Metro line converges here. Grab taquitos on Olvera Street, then use Union Station as your launch point for the rest of downtown (The Broad, Grand Central Market, Little Tokyo are all a short ride or walk).",
+    bestTime: "Weekday midday; Olvera Street is liveliest around lunch.",
+  },
+];

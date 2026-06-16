@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Schema Script Audit</title>
+  <style>
+    body { font-family: sans-serif; font-size: 13px; padding: 24px; }
+    h2 { margin-bottom: 4px; }
+    p.sub { color: #555; margin: 0 0 16px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 7px 10px; text-align: left; }
+    th { background: #f0f0f0; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; }
+    tr:nth-child(even) { background: #fafafa; }
+    .bad { color: #c00; font-weight: 600; }
+    .ok  { color: #060; }
+    .num { text-align: center; }
+    .summary { margin-top: 16px; font-size: 12px; color: #555; }
+  </style>
+</head>
+<body>
+  <h2>Schema (ld+json) Script Audit</h2>
+  <p class="sub">Flags <code>&lt;script type="application/ld+json"&gt;</code> in client components — these must be moved to <code>page.tsx</code>.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Page Route</th>
+        <th>File Name</th>
+        <th class="num">Scripts</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>/</td><td>home.tsx</td><td class="num">1</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>2</td><td>/</td><td>not-found.tsx</td><td class="num">1</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>3</td><td>/about</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>4</td><td>/destination</td><td>not-found.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>5</td><td>/destination/la</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>6</td><td>/destination/la/best-areas-to-stay</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>7</td><td>/destination/la/bookings</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>8</td><td>/destination/la/food</td><td>lafoodclient.tsx</td><td class="num">5</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>9</td><td>/destination/la/food</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>10</td><td>/destination/la/group-travel</td><td>lagrouptravelclient.tsx</td><td class="num">5</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>11</td><td>/destination/la/is-la-safe-at-night</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>12</td><td>/destination/la/itinerary</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>13</td><td>/destination/la/la-female-solo-travel-guide</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>14</td><td>/destination/la/la-metro-map</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>15</td><td>/destination/la/landmark</td><td>lalandmarkclient.tsx</td><td class="num">5</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>16</td><td>/destination/la/metro-safety-guide</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>17</td><td>/destination/la/neighborhood-guide</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>18</td><td>/destination/la/safety-guide</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>19</td><td>/destination/la/solo-itinerary</td><td>lasoloitineraryclient.tsx</td><td class="num">5</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>20</td><td>/destination/la/solo-trip-to-la</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>21</td><td>/destination/la/things-to-do</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>22</td><td>/destination/lasvegas</td><td>lasvegasclient.tsx</td><td class="num">1</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>23</td><td>/destination/lasvegas</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>24</td><td>/destination/lasvegas/best-areas-to-stay</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>25</td><td>/destination/lasvegas/bookings</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>26</td><td>/destination/lasvegas/food</td><td>lasvegasfoodclient.tsx</td><td class="num">5</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>27</td><td>/destination/lasvegas/food</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>28</td><td>/destination/lasvegas/group-travel</td><td>lasvegasgrouptravelclient.tsx</td><td class="num">5</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>29</td><td>/destination/lasvegas/is-lasvegas-safe-at-night</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>30</td><td>/destination/lasvegas/itinerary</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>31</td><td>/destination/lasvegas/landmark</td><td>lasvegaslandmarkclient.tsx</td><td class="num">5</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>32</td><td>/destination/lasvegas/lasvegas-female-solo-travel-guide</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>33</td><td>/destination/lasvegas/neighborhood-guide</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>34</td><td>/destination/lasvegas/safety-guide</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>35</td><td>/destination/lasvegas/solo-itinerary</td><td>lasvegassoloitineraryclient.tsx</td><td class="num">5</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>36</td><td>/destination/lasvegas/solo-trip-to-lasvegas</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>37</td><td>/destination/lasvegas/things-to-do</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>38</td><td>/destination/nyc</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>39</td><td>/destination/nyc/best-areas-to-stay</td><td>page.tsx</td><td class="num">3</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>40</td><td>/destination/nyc/best-time-to-visit</td><td>page.tsx</td><td class="num">3</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>41</td><td>/destination/nyc/booking</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>42</td><td>/destination/nyc/food</td><td>foodclient.tsx</td><td class="num">5</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>43</td><td>/destination/nyc/free-things-to-do</td><td>page.tsx</td><td class="num">3</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>44</td><td>/destination/nyc/getting-to-nyc</td><td>page.tsx</td><td class="num">3</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>45</td><td>/destination/nyc/group-travel</td><td>grouptravelclient.tsx</td><td class="num">5</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>46</td><td>/destination/nyc/is-nyc-safe-at-night</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>47</td><td>/destination/nyc/landmark</td><td>landmarkclient.tsx</td><td class="num">5</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>48</td><td>/destination/nyc/neighborhood-guide</td><td>page.tsx</td><td class="num">2</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>49</td><td>/destination/nyc/nyc-female-solo-travel-guide</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>50</td><td>/destination/nyc/nyc-safety-guide</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>51</td><td>/destination/nyc/nyc-subway-map</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>52</td><td>/destination/nyc/solo-itinerary</td><td>soloitineraryclient.tsx</td><td class="num">5</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>53</td><td>/destination/nyc/solo-trip-to-nyc</td><td>page.tsx</td><td class="num">3</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>54</td><td>/destination/nyc/subway-safety-guide</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>55</td><td>/destination/nyc/things-to-do</td><td>page.tsx</td><td class="num">3</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>56</td><td>/destination/orlando</td><td>orlandoclient.tsx</td><td class="num">1</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>57</td><td>/destination/orlando</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>58</td><td>/destination/orlando/best-areas-to-stay</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>59</td><td>/destination/orlando/best-time-to-visit</td><td>page.tsx</td><td class="num">3</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>60</td><td>/destination/orlando/bookings</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>61</td><td>/destination/orlando/food</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>62</td><td>/destination/orlando/free-things-to-do</td><td>page.tsx</td><td class="num">3</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>63</td><td>/destination/orlando/getting-to-orlando</td><td>page.tsx</td><td class="num">3</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>64</td><td>/destination/orlando/group-travel</td><td>orlandogrouptravelclient.tsx</td><td class="num">5</td><td class="bad">Client component ⚠ Move to page.tsx</td></tr>
+      <tr><td>65</td><td>/destination/orlando/is-orlando-safe-at-night</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>66</td><td>/destination/orlando/itinerary</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>67</td><td>/destination/orlando/landmark</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>68</td><td>/destination/orlando/neighborhood-guide</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>69</td><td>/destination/orlando/orlando-female-solo-travel-guide</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>70</td><td>/destination/orlando/safety-guide</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>71</td><td>/destination/orlando/solo-itinerary</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>72</td><td>/destination/orlando/solo-trip-to-orlando</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>73</td><td>/destination/orlando/things-to-do</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>74</td><td>/privacy</td><td>layout.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>75</td><td>/privacy</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>76</td><td>/termsandcondition</td><td>layout.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+      <tr><td>77</td><td>/termsandcondition</td><td>page.tsx</td><td class="num">1</td><td class="ok">page.tsx ✓</td></tr>
+    </tbody>
+  </table>
+
+  <p class="summary">
+    77 files total &nbsp;|&nbsp;
+    <span class="bad">16 client components need fixing</span> &nbsp;|&nbsp;
+    <span class="ok">61 correctly in page.tsx or server file</span>
+  </p>
+</body>
+</html>

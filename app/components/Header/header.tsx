@@ -1,80 +1,33 @@
-"use client"
-import { useState, useEffect } from "react";
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import "./header.css"; // keep your CSS
+"use client";
 
-type HeroProps = {
-  image: string | StaticImageData; // accept Next.js image imports
-  bannerText: string;
-  variant?: "default" | "wide";
+import { StaticImageData } from "next/image";
+import HeroBanner, { HeroBannerVariant } from "./HeroBanner";
+import NavigationHeader, { HeaderLink } from "./NavigationHeader";
+import "./header.css";
+
+type HeaderProps = {
+  image?: string | StaticImageData;
+  bannerText?: string;
+  variant?: HeroBannerVariant;
+  links?: HeaderLink[];
 };
 
-const Header: React.FC<HeroProps> = ({ image, bannerText, variant = "default" }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
-  const closeMenu = () => setIsMenuOpen(false);
-  const pathname = usePathname();
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  // Preload tags were previously emitted via <Head> from next/head, which is a no-op
-  // in the App Router. The logo image already renders below with priority/fetchPriority
-  // set, which is the supported App Router pattern.
+const Header: React.FC<HeaderProps> = ({
+  image,
+  bannerText,
+  variant = "default",
+  links,
+}) => {
   return (
     <>
-    <section className={`hero ${variant === "wide" ? "hero--wide" : ""}`}>
-        <div className="hero-image-wrapper">
-          <Image
-            src={typeof image === "string" ? image : image.src}
-            alt={bannerText}
-            fill
-            priority
-            fetchPriority="high"
-            decoding="async"
-            style={{
-              objectFit: "cover",
-              objectPosition: variant === "wide" ? "center" : "bottom",
-            }}
-          />
-        </div>
-      <header className={`overlay-header scrolled`}>
-        <div className="brand-logo">
-          <Link href="/">
-              <Image src="/Travels-Americas-logo-horizontal-v3.png" alt="Travels Americas Logo" fill style={{ objectFit: "contain" }} fetchPriority="high"/>
-          </Link>
-        </div>
-        <nav className="main-nav">
-          <button className="hamburger" onClick={toggleMenu} aria-label="Toggle menu">
-     ☰
-          </button>
-          <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-            <li className="close-btn">
-              <button onClick={closeMenu} aria-label="Close menu">✕</button>
-            </li>
-           <li style={{ cursor: "pointer" }}><a href="/destination/nyc">New York</a></li>
-           <li style={{ cursor: "pointer" }}><a href="/destination/la">Los Angeles</a></li>
-           <li style={{ cursor: "pointer" }}><a href="/destination/lasvegas">Las Vegas</a></li>
-           <li style={{ cursor: "pointer" }}><a href="/destination/orlando">Orlando</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <div className="hero-text">
-        {
-        pathname.includes("about") ? null : (
-          <h1 className="hero-heading">{bannerText}</h1>
-        )}
-      </div>
-    </section>
+      <NavigationHeader links={links} />
+      {image ? (
+        <HeroBanner image={image} bannerText={bannerText} variant={variant} />
+      ) : null}
     </>
   );
 };
 
+export { HeroBanner, NavigationHeader };
+export type { HeaderLink, HeaderProps };
 export default Header;

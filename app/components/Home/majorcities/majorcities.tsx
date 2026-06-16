@@ -13,18 +13,14 @@ export default function Majorcities({ section: { heading, storydescription, stor
     return (
       <>
         <section className="travel-stories">
-  <h1  className="section-heading">{heading}</h1>
-  <p className="description-text">{storydescription}</p>
+          <h1  className="section-heading">{heading}</h1>
+          <p className="description-text">{storydescription}</p>
 
-  <div className="story-cards">
-    {stories.map((story, index) => (
-          <StoryCard key={index} story={story} />
-        ))}
-  </div>
-
-  <div className="carousel-controls">
-    <a href="/destination/nyc" className="view-more-btn">View More</a>
-  </div>
+          <div className="story-cards">
+            {stories.map((story, index) => (
+                  <StoryCard key={index} story={story} />
+                ))}
+          </div>
         </section>
         </>
     );

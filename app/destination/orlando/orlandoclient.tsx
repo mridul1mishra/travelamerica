@@ -94,30 +94,6 @@ function OrlandoClientInner() {
         { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
       ]} />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.travelsamericas.com/",
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Orlando",
-                "item": "https://www.travelsamericas.com/destination/orlando",
-              },
-            ],
-          }),
-        }}
-      />
-
       <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
         <ol className={styles.breadcrumbList}>
           <li className={styles.breadcrumbItem}>

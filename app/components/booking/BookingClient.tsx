@@ -8,7 +8,8 @@
 import React, { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import Header from "@/app/components/Header/header";
+import HeroBanner from "@/app/components/Header/HeroBanner";
+import NavigationHeader from "@/app/components/Header/NavigationHeader";
 import Footer from "@/app/components/Header/Footer/footer";
 import "@/app/components/majorcities/flightsection/propertylisting.css";
 import styles from "@/app/destination/nyc/booking/booking.module.css";
@@ -137,7 +138,8 @@ function BookingClientInner({ config, introSection, faqSection }: { config: City
 
   return (
     <div className="App">
-      <Header image={headerImage} bannerText={bannerText} variant={headerVariant} />
+      <NavigationHeader />
+      <HeroBanner image={headerImage} bannerText={bannerText} variant={headerVariant} />
 
       <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
         <ol className={styles.breadcrumbList}>
