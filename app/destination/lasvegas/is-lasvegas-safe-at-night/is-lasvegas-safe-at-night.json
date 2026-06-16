@@ -2,7 +2,7 @@
   "heroSafety": {
     "title": "Is Las Vegas Safe at Night for Solo Travelers?",
     "subtitle": "The Strip is one of the most monitored and policed public spaces in America. Las Vegas is safe at night for tourists who stay in the main corridors — and riskier in specific off-Strip areas tourists have no reason to visit. Here's the honest breakdown.",
-    "heroImage": "/data/majorcities/lasvegas/assets/lasvegas.webp",
+    "heroImage": "/data/majorcities/lasvegas/assets/lasvegas-landmarks-banner.png",
     "trustBadges": ["🛡️LVMPD Data", "👣Local Insights", "📊Traveler Patterns"]
   },
 
@@ -326,6 +326,6 @@
     "localInsights": "Built with input from Las Vegas residents and frequent visitors — which stretches of the Strip stay busy, where rideshare pickup is safest, and what the real risks are after dark.",
     "dataSources": ["LVMPD Crime Stats", "311 Reports", "RTC Transit Data"],
     "editorialProcess": "Every guide is reviewed for accuracy and clarity.",
-    "safetyExpertsConsulted": ""
+    "safetyExpertsConsulted": "LVMPD Community Relations, Nevada hotel security professionals"
   }
 }

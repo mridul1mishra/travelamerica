@@ -460,17 +460,7 @@ export default function LasVegasLandmarkClient() {
           </Link>
         </div>
       </section>
-
-      <BookingCTA variant="full" text="Get tickets to Las Vegas's top landmarks" href="/destination/lasvegas/bookings?tab=activities&from=landmark" label="See tickets" />
-      <button
-        type="button"
-        className={styles.backToTop}
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        aria-label="Back to top"
-      >
-        <span className={styles.backToTopIcon} aria-hidden="true">↑</span>
-        <span className={styles.backToTopText}>Back to top</span>
-      </button>
+      <BookingCTA variant="full" text="Book tickets to Las Vegas landmarks" href="/destination/lasvegas/bookings?tab=activities&from=landmark" label="Book tickets" />
       <Footer />
     </>
   );

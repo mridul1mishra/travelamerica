@@ -1,5 +1,4 @@
 "use client"
-import Link from "next/link";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from "./lasvegasbestareas.module.css";
@@ -71,12 +70,54 @@ const lasvegasNeighborhoods: Neighborhood[] = [
 ];
 
 const areas = [
-  { name: "Mid-Strip (Best Overall)", vibe: "Cosmopolitan, Aria, Bellagio, and Park MGM. Walking distance to the majority of shows, restaurants, and the Bellagio fountains. Most expensive ($150–$400/night) but zero logistics — you can leave the car behind.", bestFor: "First-timers, short trips, anyone wanting maximum convenience" },
-  { name: "South Strip", vibe: "Mandalay Bay, Luxor, and MGM Grand. Cheaper than mid-Strip ($90–$220). A 15-min walk or short tram ride to the center action. Good for budget-conscious travelers who don't mind a little distance.", bestFor: "Budget travelers, groups, families" },
-  { name: "North Strip", vibe: "Resorts World, the SAHARA, and the Strat. The quietest and cheapest stretch of the Strip ($70–$150). Further from the action — a 25-min walk or short cab to mid-Strip. Rapidly redeveloping.", bestFor: "Very budget stays, travelers who plan to Uber everywhere" },
-  { name: "Downtown / Fremont Street", vibe: "Low nightly rates ($40–$80 cheaper than Strip equivalents). The Fremont Street Experience canopy is the centerpiece. Older, grittier, and more local. About 15 min by car from the Strip.", bestFor: "Repeat visitors, budget travelers, those wanting a different Vegas vibe" },
-  { name: "Henderson", vibe: "A suburb roughly 20 min from the Strip. Residential, family-friendly, with Lake Las Vegas nearby. Requires a car. Much quieter, with green-felt-free evenings.", bestFor: "Families, outdoor activities, week-long stays" },
-  { name: "Summerlin (West Las Vegas)", vibe: "Upscale master-planned suburb with Red Rock Canyon access. Peaceful, away from casino energy. The Downtown Summerlin outdoor mall and Red Rock Resort anchor the area. A car is essential.", bestFor: "Hiking, nature, quieter and more upscale stays" },
+  {
+    name: "Mid-Strip",
+    label: "Best overall",
+    price: "$150-$400/night",
+    summary: "Closest to the core shows, restaurants, Bellagio fountains, Aria, Cosmo, and Park MGM.",
+    tradeoff: "Highest hotel rates, lowest logistics.",
+    bestFor: "First-timers, short trips, maximum convenience",
+  },
+  {
+    name: "South Strip",
+    label: "Best value on Strip",
+    price: "$90-$220/night",
+    summary: "Mandalay Bay, Luxor, Excalibur, and MGM Grand with easier prices than mid-Strip.",
+    tradeoff: "A longer walk or tram ride to the center action.",
+    bestFor: "Budget travelers, groups, families",
+  },
+  {
+    name: "North Strip",
+    label: "Cheapest Strip base",
+    price: "$70-$150/night",
+    summary: "Resorts World, SAHARA, and the Strat. Quieter, cheaper, and still technically Strip.",
+    tradeoff: "Far from the main action; plan on cabs or rideshare.",
+    bestFor: "Very budget stays, Uber-heavy trips",
+  },
+  {
+    name: "Downtown / Fremont",
+    label: "Best alternate Vegas",
+    price: "$40-$80 less than Strip",
+    summary: "Older, louder, more local, and centered around the Fremont Street Experience canopy.",
+    tradeoff: "Grittier edges; stay near the canopy at night.",
+    bestFor: "Repeat visitors, nightlife, budget trips",
+  },
+  {
+    name: "Henderson",
+    label: "Best quiet base",
+    price: "Usually lower than Strip",
+    summary: "Residential, family-friendly, and close to Lake Las Vegas with calmer evenings.",
+    tradeoff: "A car is basically required.",
+    bestFor: "Families, outdoor time, week-long stays",
+  },
+  {
+    name: "Summerlin",
+    label: "Best nature access",
+    price: "Varies by resort",
+    summary: "Upscale west-side base near Red Rock Canyon, Downtown Summerlin, and Red Rock Resort.",
+    tradeoff: "Peaceful, but far from classic Strip energy.",
+    bestFor: "Hiking, quieter upscale stays",
+  },
 ];
 
 const quickTips = [
@@ -95,12 +136,7 @@ export default function LasVegasBestAreasClient() {
         { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
         { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
       ]} />
-      <BookingCTA
-        variant="slim"
-        text="Compare live hotel prices across the Strip and Downtown"
-        href="/destination/lasvegas/bookings?tab=hotels&from=best-areas-to-stay"
-        label="Browse Las Vegas hotels"
-      />
+
       <Banner
         cityName="Las Vegas"
         cityHref="/destination/lasvegas"
@@ -112,6 +148,12 @@ export default function LasVegasBestAreasClient() {
           "How to decode resort fees and true nightly cost",
           "Local tips most first-timers miss",
         ]}
+      />
+      <BookingCTA
+        variant="slim"
+        text="Compare live hotel prices across the Strip and Downtown"
+        href="/destination/lasvegas/bookings?tab=hotels&from=best-areas-to-stay"
+        label="Browse Las Vegas hotels"
       />
       <SoloTripIntro
         cityName="Las Vegas"
@@ -135,13 +177,22 @@ export default function LasVegasBestAreasClient() {
       <NeighborhoodRankingCards cityName="Las Vegas" neighborhoods={lasvegasNeighborhoods} />
       <section aria-labelledby="areas-lv" className={styles.section}>
         <h2 id="areas-lv">All Las Vegas Areas Compared</h2>
-        <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>Six distinct areas - what each is actually like and who it suits.</p>
-        <div className={styles.grid}>
-          {areas.map(({ name, vibe, bestFor }) => (
-            <article key={name} className={styles.card}>
-              <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{name}</h3>
-              <p style={{ color: "#555", fontSize: "0.9rem", margin: "0 0 0.5rem" }}>{vibe}</p>
-              <p style={{ color: "#333", fontSize: "0.85rem", margin: 0 }}><strong>Best for:</strong> {bestFor}</p>
+        <p className={styles.sectionIntro}>Six distinct bases, compared by cost, convenience, and who should actually stay there.</p>
+        <div className={styles.areaList}>
+          {areas.map(({ name, label, price, summary, tradeoff, bestFor }) => (
+            <article key={name} className={styles.areaItem}>
+              <div className={styles.areaTopline}>
+                <div>
+                  <p className={styles.areaEyebrow}>{label}</p>
+                  <h3>{name}</h3>
+                </div>
+                <span className={styles.pricePill}>{price}</span>
+              </div>
+              <p className={styles.areaSummary}>{summary}</p>
+              <div className={styles.areaMeta}>
+                <p><strong>Best for</strong>{bestFor}</p>
+                <p><strong>Tradeoff</strong>{tradeoff}</p>
+              </div>
             </article>
           ))}
         </div>
@@ -159,14 +210,7 @@ export default function LasVegasBestAreasClient() {
       <div className={styles.container}>
         <FAQAccordion faqs={faqData} />
       </div>
-      <BookingCTA
-        variant="full"
-        headline="Find the right Las Vegas hotel"
-        text="Compare Strip, Downtown, and off-Strip hotels - live prices and real reviews."
-        href="/destination/lasvegas/bookings?tab=hotels&from=best-areas-to-stay"
-        label="Browse Las Vegas hotels"
-      />
-      <Footer />
+      <BookingCTA variant="full" text="Find the right hotel in Las Vegas for your stay" href="/destination/lasvegas/bookings?tab=hotels&from=best-areas-to-stay" label="Book your trip" />
     </>
   );
 }

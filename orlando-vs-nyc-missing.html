@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orlando vs NYC — Page Coverage & Missing Routes</title>
+<style>
+  :root {
+    --green: #16a34a;
+    --green-bg: #dcfce7;
+    --red: #dc2626;
+    --red-bg: #fee2e2;
+    --blue: #2563eb;
+    --blue-bg: #dbeafe;
+    --amber: #d97706;
+    --amber-bg: #fef3c7;
+    --gray: #6b7280;
+    --gray-bg: #f3f4f6;
+    --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    color: #111;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    background: #fff;
+    line-height: 1.55;
+  }
+  h1 { font-size: 26px; margin-bottom: 4px; }
+  h2 { font-size: 19px; margin-top: 44px; border-bottom: 2px solid #2563eb; padding-bottom: 6px; color: #1e3a5c; }
+  h3 { font-size: 15px; margin-top: 28px; color: #374151; }
+  .meta { font-size: 13px; color: var(--gray); margin: 4px 0 28px; }
+
+  /* Status badges */
+  .badge {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    padding: 2px 9px; border-radius: 999px; white-space: nowrap;
+  }
+  .done   { background: var(--green-bg); color: var(--green); }
+  .miss   { background: var(--red-bg);   color: var(--red); }
+  .new    { background: var(--blue-bg);  color: var(--blue); }
+  .na     { background: var(--gray-bg);  color: var(--gray); }
+  .warn   { background: var(--amber-bg); color: var(--amber); }
+
+  /* Summary cards */
+  .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 20px 0 32px; }
+  .card { border-radius: 10px; padding: 18px 20px; border: 1px solid var(--border); }
+  .card.green  { background: var(--green-bg);  border-color: #86efac; }
+  .card.red    { background: var(--red-bg);    border-color: #fca5a5; }
+  .card.blue   { background: var(--blue-bg);   border-color: #93c5fd; }
+  .card.amber  { background: var(--amber-bg);  border-color: #fcd34d; }
+  .card .num   { font-size: 36px; font-weight: 800; line-height: 1; }
+  .card .label { font-size: 13px; margin-top: 4px; color: #374151; }
+  .card.green .num { color: var(--green); }
+  .card.red   .num { color: var(--red); }
+  .card.blue  .num { color: var(--blue); }
+  .card.amber .num { color: var(--amber); }
+
+  /* Main matrix table */
+  table { border-collapse: collapse; width: 100%; font-size: 13px; margin: 12px 0 28px; }
+  th, td { border: 1px solid var(--border); padding: 9px 12px; text-align: left; vertical-align: middle; }
+  th { background: #f8fafc; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #374151; }
+  tr:hover td { background: #fafafa; }
+  .route { font-family: 'Courier New', monospace; font-size: 12px; color: #374151; }
+  .check { text-align: center; }
+
+  /* Alert boxes */
+  .box { border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 14px; }
+  .box.info    { background: var(--blue-bg);  border: 1px solid #93c5fd; }
+  .box.success { background: var(--green-bg); border: 1px solid #86efac; }
+  .box.warn    { background: var(--amber-bg); border: 1px solid #fcd34d; }
+  .box.danger  { background: var(--red-bg);   border: 1px solid #fca5a5; }
+  .box h4 { margin: 0 0 8px; font-size: 14px; }
+  .box.info    h4 { color: var(--blue); }
+  .box.success h4 { color: var(--green); }
+  .box.warn    h4 { color: var(--amber); }
+  .box.danger  h4 { color: var(--red); }
+  .box ul { margin: 6px 0 0; padding-left: 18px; }
+  .box li { margin-bottom: 4px; }
+  code { background: rgba(0,0,0,0.06); padding: 1px 5px; border-radius: 3px; font-size: 12px; font-family: 'Courier New', monospace; }
+
+  .footer { margin-top: 56px; font-size: 12px; color: var(--gray); border-top: 1px solid var(--border); padding-top: 14px; }
+</style>
+</head>
+<body>
+
+<h1>Orlando vs NYC — Page Coverage &amp; Missing Routes</h1>
+<p class="meta">travelsamericas.com &nbsp;|&nbsp; Generated June 15, 2026 &nbsp;|&nbsp; Includes all 4 cities for full picture</p>
+
+<!-- Summary cards -->
+<div class="cards">
+  <div class="card green">
+    <div class="num">17</div>
+    <div class="label">Orlando pages built</div>
+  </div>
+  <div class="card blue">
+    <div class="num">3</div>
+    <div class="label">Built this session<br>(June 15)</div>
+  </div>
+  <div class="card amber">
+    <div class="num">7</div>
+    <div class="label">Pages missing from sitemap.ts</div>
+  </div>
+  <div class="card red">
+    <div class="num">5</div>
+    <div class="label">Unbuilt pages across LA &amp; Vegas (vs NYC template)</div>
+  </div>
+</div>
+
+<!-- What was just built -->
+<div class="box success">
+  <h4>✅ Built this session — now live in codebase</h4>
+  <ul>
+    <li><code>/destination/orlando/best-time-to-visit</code> — 10 files (HeroSection, SeasonCards, MonthGrid, TravelerTypes)</li>
+    <li><code>/destination/orlando/free-things-to-do</code> — 12 files (HeroSection, FreeCategories, MuseumTable, SeasonalEvents, SavingsTips)</li>
+    <li><code>/destination/orlando/getting-to-orlando</code> — 10 files (HeroSection, AirportTabs, ArrivalTips, ScamWarning)</li>
+  </ul>
+  All verified: zero NYC leakage · <code>city="Orlando"</code> on every EmailSignup · <code>OrlandoNavHeader</code> throughout · correct booking links · zero new TS errors.
+</div>
+
+<!-- Sitemap gap -->
+<div class="box warn">
+  <h4>⚠️ Sitemap gap — add these 7 routes to app/sitemap.ts immediately</h4>
+  <ul>
+    <li><code>/destination/orlando/best-time-to-visit</code> &nbsp;<span class="badge new">just built</span></li>
+    <li><code>/destination/orlando/free-things-to-do</code> &nbsp;<span class="badge new">just built</span></li>
+    <li><code>/destination/orlando/getting-to-orlando</code> &nbsp;<span class="badge new">just built</span></li>
+    <li><code>/destination/nyc/best-time-to-visit</code></li>
+    <li><code>/destination/nyc/free-things-to-do</code></li>
+    <li><code>/destination/nyc/getting-to-nyc</code></li>
+    <li><code>/destination/la/la-metro-map</code></li>
+  </ul>
+  Suggested: <code>priority: 0.9</code>, <code>changeFrequency: "weekly"</code> for all — matching existing entries in their city block.
+</div>
+
+<h2>Page-by-Page Matrix — All 4 Cities</h2>
+<p style="font-size:13px;color:var(--gray)">NYC is the template city. Each row maps to the equivalent page in other cities.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Page / Route pattern</th>
+      <th style="text-align:center">NYC</th>
+      <th style="text-align:center">Orlando</th>
+      <th style="text-align:center">LA</th>
+      <th style="text-align:center">Las Vegas</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="route">/{city} hub</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td>All 4 cities ✓</td>
+    </tr>
+    <tr>
+      <td class="route">/booking(s)</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td>NYC uses singular <code>/booking</code>; others use <code>/bookings</code></td>
+    </tr>
+    <tr>
+      <td class="route">/best-areas-to-stay</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td>All 4 cities ✓</td>
+    </tr>
+    <tr>
+      <td class="route">/best-time-to-visit</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge new">✓ new</span></td>
+      <td class="check"><span class="badge miss">✗ missing</span></td>
+      <td class="check"><span class="badge miss">✗ missing</span></td>
+      <td>Built for Orlando June 15. LA + Vegas still need this.</td>
+    </tr>
+    <tr>
+      <td class="route">/food</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td>All 4 cities ✓</td>
+    </tr>
+    <tr>
+      <td class="route">/free-things-to-do</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge new">✓ new</span></td>
+      <td class="check"><span class="badge miss">✗ missing</span></td>
+      <td class="check"><span class="badge miss">✗ missing</span></td>
+      <td>Built for Orlando June 15. LA + Vegas still need this.</td>
+    </tr>
+    <tr>
+      <td class="route">/getting-to-{city}</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge new">✓ new</span></td>
+      <td class="check"><span class="badge miss">✗ missing</span></td>
+      <td class="check"><span class="badge miss">✗ missing</span></td>
+      <td>Built for Orlando June 15. LA + Vegas still need this.</td>
+    </tr>
+    <tr>
+      <td class="route">/group-travel</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td>All 4 cities ✓</td>
+    </tr>
+    <tr>
+      <td class="route">/is-{city}-safe-at-night</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td>All 4 cities ✓</td>
+    </tr>
+    <tr>
+      <td class="route">/itinerary</td>
+      <td class="check"><span class="badge miss">✗ missing</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td>NYC is the only city without a general <code>/itinerary</code> page.</td>
+    </tr>
+    <tr>
+      <td class="route">/landmark</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td>All 4 cities ✓</td>
+    </tr>
+    <tr>
+      <td class="route">/neighborhood-guide</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td>All 4 cities ✓</td>
+    </tr>
+    <tr>
+      <td class="route">/{city}-female-solo-travel-guide</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td>All 4 cities ✓</td>
+    </tr>
+    <tr>
+      <td class="route">/{city}-safety-guide</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td>All 4 cities ✓</td>
+    </tr>
+    <tr>
+      <td class="route">/solo-itinerary</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td>All 4 cities ✓</td>
+    </tr>
+    <tr>
+      <td class="route">/solo-trip-to-{city}</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td>All 4 cities ✓</td>
+    </tr>
+    <tr>
+      <td class="route">/things-to-do</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td>All 4 cities ✓</td>
+    </tr>
+    <tr>
+      <td class="route">/transit-map (subway / metro)</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge na">N/A</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge na">N/A</span></td>
+      <td>NYC = <code>nyc-subway-map</code>; LA = <code>la-metro-map</code>. Orlando &amp; Vegas have no city rail network — intentionally omitted.</td>
+    </tr>
+    <tr>
+      <td class="route">/transit-safety-guide</td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge na">N/A</span></td>
+      <td class="check"><span class="badge done">✓</span></td>
+      <td class="check"><span class="badge na">N/A</span></td>
+      <td>NYC = <code>subway-safety-guide</code>; LA = <code>metro-safety-guide</code>. Intentionally absent for Orlando &amp; Vegas.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Orlando: Current State After This Session</h2>
+
+<div class="box success">
+  <h4>What's done ✅</h4>
+  <ul>
+    <li>17 pages live — fully covers every NYC template page that's applicable to Orlando (transit-map and transit-safety-guide are intentionally N/A)</li>
+    <li>3 new pages built June 15: <code>best-time-to-visit</code>, <code>free-things-to-do</code>, <code>getting-to-orlando</code></li>
+    <li>Architecture correct: <code>page.tsx</code> server components + client orchestrators + local section components + CSS modules</li>
+    <li>All shared component conventions respected: <code>OrlandoNavHeader</code>, <code>city="Orlando"</code> on EmailSignup, <code>/destination/orlando/bookings</code> links</li>
+    <li>JSON-LD schemas (Article + FAQPage + HowTo/ItemList) on all 3 new pages</li>
+  </ul>
+</div>
+
+<div class="box warn">
+  <h4>What's still pending for Orlando ⚠️</h4>
+  <ul>
+    <li><strong>Sitemap</strong> — Add 3 routes to <code>app/sitemap.ts</code>: <code>/destination/orlando/best-time-to-visit</code>, <code>/destination/orlando/free-things-to-do</code>, <code>/destination/orlando/getting-to-orlando</code></li>
+    <li><strong>Internal linking</strong> — <code>orlandohubclient.tsx</code> has no links to the 3 new pages. Add cards/links on the Orlando hub so users (and Google) can discover them.</li>
+    <li><strong>Verify conservative facts before publishing</strong> — see section below</li>
+    <li><strong>No loading.tsx</strong> — shared site-wide gap (not Orlando-specific), but the new pages are also unprotected</li>
+    <li><strong>No images</strong> — the 3 new pages are copy/component driven (no images), matching their NYC counterparts. Add images if NYC pages gain them.</li>
+  </ul>
+</div>
+
+<div class="box danger">
+  <h4>Facts to verify before publishing the 3 new Orlando pages</h4>
+  Written conservatively with "verify before travel" caveats in copy — but confirm these before going live:
+  <ul>
+    <li><strong>Mears Connect pricing</strong> (~$39–45/person shared) — check <code>mearstransportation.com</code> for current rates; pricing changes regularly</li>
+    <li><strong>Brightline schedule &amp; pricing</strong> — service from South Florida to MCO; check <code>brightline.com</code> for current timetable and fares</li>
+    <li><strong>Morse Museum free Fridays</strong> — currently Nov–Apr, 4–8pm; confirm on <code>morsemuseum.org</code></li>
+    <li><strong>Orlando Museum of Art Third Thursday</strong> — confirm current free-hours policy on <code>omart.org</code></li>
+    <li><strong>Harry P. Leu Gardens First Monday</strong> — confirm free-day policy is still active</li>
+    <li><strong>EPCOT festival dates</strong> — Food &amp; Wine, Festival of the Arts, Flower &amp; Garden dates shift each year; copy uses named events, not specific dates, so low risk</li>
+    <li><strong>Disney Springs parking</strong> — currently free but policy may change; copy says "free" — verify</li>
+  </ul>
+</div>
+
+<h2>What's Next — LA &amp; Las Vegas</h2>
+
+<div class="box info">
+  <h4>5 pages still unbuilt across LA and Las Vegas (vs NYC template)</h4>
+  Now that Orlando is caught up, these are the remaining cross-city gaps:
+  <ul>
+    <li><code>/destination/la/best-time-to-visit</code> &nbsp;<span class="badge miss">missing</span></li>
+    <li><code>/destination/la/free-things-to-do</code> &nbsp;<span class="badge miss">missing</span></li>
+    <li><code>/destination/la/getting-to-la</code> &nbsp;<span class="badge miss">missing</span></li>
+    <li><code>/destination/lasvegas/best-time-to-visit</code> &nbsp;<span class="badge miss">missing</span></li>
+    <li><code>/destination/lasvegas/free-things-to-do</code> &nbsp;<span class="badge miss">missing</span></li>
+    <li><code>/destination/lasvegas/getting-to-lasvegas</code> &nbsp;<span class="badge miss">missing</span></li>
+  </ul>
+  Note: Las Vegas has no city rail network — <code>getting-to-lasvegas</code> would cover Harry Reid International (LAS) transport options only (no transit-map or transit-safety-guide equivalent needed).
+  <br><br>
+  Additionally, <strong>NYC is missing an <code>/itinerary</code> page</strong> — all 3 other cities have one.
+</div>
+
+<h2>Quick Sitemap Fix — Copy-Paste Ready</h2>
+<p style="font-size:13px;color:var(--gray)">Add these 7 entries to <code>app/sitemap.ts</code> in the appropriate city blocks:</p>
+<pre style="background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:16px;font-size:12px;overflow-x:auto;line-height:1.7">
+<span style="color:#16a34a">// Orlando — add after existing Orlando entries</span>
+{ path: "/destination/orlando/best-time-to-visit",  priority: 0.9, changeFrequency: "weekly" },
+{ path: "/destination/orlando/free-things-to-do",   priority: 0.9, changeFrequency: "weekly" },
+{ path: "/destination/orlando/getting-to-orlando",  priority: 0.9, changeFrequency: "weekly" },
+
+<span style="color:#2563eb">// NYC — add after existing NYC entries</span>
+{ path: "/destination/nyc/best-time-to-visit",      priority: 0.9, changeFrequency: "weekly" },
+{ path: "/destination/nyc/free-things-to-do",       priority: 0.9, changeFrequency: "weekly" },
+{ path: "/destination/nyc/getting-to-nyc",          priority: 0.9, changeFrequency: "weekly" },
+
+<span style="color:#7c3aed">// LA — add after existing LA entries</span>
+{ path: "/destination/la/la-metro-map",             priority: 0.8, changeFrequency: "monthly" },
+</pre>
+
+<div class="footer">
+  Generated June 15, 2026 · travelsamericas.com codebase inspection ·
+  Orlando build session complete: 30 new files across 3 routes, all guardrails verified.
+</div>
+
+</body>
+</html>

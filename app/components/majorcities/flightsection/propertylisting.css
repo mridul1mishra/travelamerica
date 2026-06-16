@@ -1,18 +1,23 @@
 .flight-section {
   max-width: 1120px;
-  margin: 20px auto;
-  padding: 0 15px;
+  margin: 0 auto;
+  padding: 24px 16px 42px;
 }
 
 .flight-section h2 {
-  font-size: 20px;
-  margin-bottom: 15px;
+  margin: 0 0 20px;
+  color: #111827;
+  font-family: var(--font-montserrat);
+  font-size: clamp(1.65rem, 2.4vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
 }
 
 .flight-layout {
-    align-items: flex-start;
-    gap: 102px;
-    display: flex;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
 }
 
 .flight-table-wrapper {
@@ -21,16 +26,21 @@
 }
 
 .flight-table {
-  border-radius: 6px;
+  width: 100%;
   overflow: hidden;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
 }
 
 .flight-row {
   display: grid;
   grid-template-columns: 2fr 2fr 2fr 1fr 1fr 1.5fr;
   align-items: center;
-  padding: 12px 15px;
-  border-bottom: 1px solid #eee;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid #eef2f7;
 }
 
 .flight-row:last-child {
@@ -38,17 +48,29 @@
 }
 
 .flight-row.header {
-  background: #f9f9f9;
-  font-weight: bold;
-  font-size: 14px;
+  color: #64748b;
+  background: #f8fafc;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .flight-row.highlight {
-  background: #f2f7fc;
+  background: #eff6ff;
 }
 
 .cell {
-  font-size: 14px;
+  color: #334155;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.cell small {
+  display: block;
+  margin-top: 2px;
+  color: #64748b;
+  font-size: 0.78rem;
 }
 
 .airline {
@@ -59,33 +81,35 @@
 }
 
 .image {
-  height: 48px;
-  width: 48px;
+  height: 42px;
+  width: 42px;
   object-fit: contain;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .price {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 0.98rem;
+  color: #111827;
 }
 
 .btn {
-    color: #fff;
-    text-align: center;
-    cursor: pointer;
-    background: #0066d4;
-    border: 2px solid #0000;
-    border-radius: 20px;
-    padding: 6px 14px;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    display: inline-block;
+  display: inline-block;
+  padding: 8px 14px;
+  color: #fff;
+  background: #1d4ed8;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .btn:hover {
-  background: #0053a8;
+  background: #1e40af;
 }
 
 .travel-smart-sidebar {
@@ -289,12 +313,14 @@
 /* Mobile view: show stacked layout, hide desktop cells */
 @media (max-width: 768px) {
   .flight-row {
-    flex-direction: column;
+    display: block;
     padding: 16px;
   }
-.flight-layout {
+
+  .flight-layout {
     flex-direction: column;
   }
+
   .flight-row .cell:not(.mobile-flight-stack) {
     display: none;
   }
@@ -319,12 +345,14 @@
     object-fit: contain;
     border-radius: 4px;
   }
-.price{
-  color: #28a745
-}
+  .price{
+    color: #111827;
+  }
+
   .time-city-row {
     display: flex;
-    gap: 226px;
+    justify-content: space-between;
+    gap: 24px;
   }
 
   .segment {
@@ -338,8 +366,8 @@
 
   .duration-price-row {
     display: flex;
-    gap: 245px;
-    
+    justify-content: space-between;
+    gap: 24px;
   }
 
   .button-row {
@@ -348,12 +376,13 @@
   }
 
   .btn {
-    padding: 8px 20px;
-    background: #0066d4;
+    width: 100%;
+    padding: 10px 20px;
+    background: #1d4ed8;
     color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    border-radius: 999px;
     text-decoration: none;
     border: none;
     cursor: pointer;

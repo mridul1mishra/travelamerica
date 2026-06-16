@@ -68,9 +68,9 @@ const Header: React.FC<HeroProps> = ({ image, bannerText, variant = "default" })
 
       <div className="hero-text">
         {
-        pathname.includes("about") || pathname.includes("privacy") || pathname.includes("termsandcondition") ?
-        <h1>{bannerText}</h1> : ""
-        }
+        pathname.includes("about") ? null : (
+          <h1 className="hero-heading">{bannerText}</h1>
+        )}
       </div>
     </section>
     </>

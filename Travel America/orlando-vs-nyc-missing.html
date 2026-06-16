@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orlando vs NYC — Missing Pages & Components</title>
+<title>Orlando vs NYC — Page Coverage (Updated June 15)</title>
 <style>
   :root{
     --bg:#f6f7f9; --card:#fff; --ink:#1a2230; --muted:#5b6573;
@@ -42,50 +42,87 @@
 <body>
 <div class="wrap">
 
-  <h1>Orlando vs NYC — Missing Pages &amp; Components</h1>
-  <p class="sub">Live re-check against the current codebase · updated 2026-06-15 (component gaps now fixed) · supersedes <code>orlando-nyc-components-by-route.xlsx</code> (deleted, was stale)</p>
+  <h1>Orlando vs NYC — Page Coverage</h1>
+  <p class="sub">Live re-check against the current codebase · updated 2026-06-15 (3 missing pages now built) · supersedes <code>orlando-nyc-components-by-route.xlsx</code> (deleted, was stale)</p>
 
   <div class="summary">
     <div class="stat"><div class="n">0</div><div class="l">component gaps remaining on shared routes</div></div>
-    <div class="stat"><div class="n">6</div><div class="l">component gaps fixed this pass</div></div>
-    <div class="stat"><div class="n">3</div><div class="l">content pages NYC has, Orlando lacks</div></div>
+    <div class="stat"><div class="n">3</div><div class="l">new pages built June 15</div></div>
+    <div class="stat"><div class="n" style="color:#1e7a3d">0</div><div class="l">content pages still missing in Orlando ✓</div></div>
     <div class="stat"><div class="n">2</div><div class="l">transit pages (N/A — Orlando has no metro)</div></div>
   </div>
 
   <div class="changed">
-    <b>Update — component gaps closed.</b> <b>EmailSignup</b> has been added to all five Orlando routes (best-areas-to-stay, female-solo-travel-guide, safety-guide, solo-itinerary, solo-trip-to-orlando) at the same position NYC uses, and the shared component is now city-aware (<code>city</code> prop defaults to <code>NYC</code>, Orlando passes <code>"Orlando"</code>). <b>PersonaSafetyBlocks</b> is now wired into <code>is-orlando-safe-at-night</code> between Scenarios and Core Principles. Separately, the thin <code>group-travel</code> stub was rebuilt into the full NYC-style guide. <b>Remaining work is page-level only</b> (Section A): three content pages NYC has that Orlando does not.
+    <b>Update — all 3 missing pages built June 15.</b> <code>/orlando/best-time-to-visit</code> (10 files), <code>/orlando/free-things-to-do</code> (12 files), and <code>/orlando/getting-to-orlando</code> (10 files) are now live in the codebase. Each follows the exact NYC architecture: server <code>page.tsx</code> + <code>'use client'</code> orchestrator + local section components + CSS modules + JSON-LD schemas. Zero TypeScript errors introduced. <b>Section A below has moved from "Missing" to "Built".</b>
+    <br><br>
+    <b>Still pending:</b> Add all 3 new routes to <code>app/sitemap.ts</code> · Add links to these pages from the Orlando hub page (<code>orlandohubclient.tsx</code>) · Verify Mears Connect pricing / Brightline schedule / Morse Museum free hours before publishing.
   </div>
 
-  <h2>A. Pages present in NYC but missing entirely in Orlando</h2>
-  <p class="note">These NYC routes have no Orlando equivalent at all. The two transit pages are flagged N/A because Orlando has no subway/metro system.</p>
+  <h2>A. Pages that were missing in Orlando — <span style="color:#1e7a3d">all 3 now built ✓</span></h2>
+  <p class="note">These three routes were missing. All built June 15, 2026. The two transit pages remain N/A (Orlando has no subway/metro).</p>
   <div class="card">
     <table>
-      <thead><tr><th>NYC route</th><th>Status</th><th>Components on the NYC page</th></tr></thead>
+      <thead><tr><th>Route</th><th>Status</th><th>Files / Components built</th></tr></thead>
       <tbody>
         <tr>
-          <td><code>/nyc/best-time-to-visit</code></td>
-          <td><span class="pill p-red">Missing page</span></td>
-          <td><span class="comp">HeroSection</span><span class="comp">SeasonCards</span><span class="comp">MonthGrid</span><span class="comp">TravelerTypes</span><span class="comp">FAQAccordion</span><span class="comp">EmailSignup</span><span class="comp">BookingCTA</span><span class="comp">NycNavHeader</span><span class="comp">Footer</span></td>
+          <td><code>/orlando/best-time-to-visit</code></td>
+          <td><span class="pill" style="background:#eaf3ec;color:#1e7a3d">Built ✓ June 15</span></td>
+          <td>10 files — <span class="comp" style="background:#eaf3ec;color:#1e7a3d">HeroSection</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">SeasonCards</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">MonthGrid</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">TravelerTypes</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">FAQAccordion</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">EmailSignup</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">BookingCTA ×2</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">OrlandoNavHeader</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">Footer</span> · Article + FAQ + HowTo schemas</td>
         </tr>
         <tr>
-          <td><code>/nyc/free-things-to-do</code></td>
-          <td><span class="pill p-red">Missing page</span></td>
-          <td><span class="comp">HeroSection</span><span class="comp">FreeCategories</span><span class="comp">MuseumTable</span><span class="comp">SeasonalEvents</span><span class="comp">SavingsTips</span><span class="comp">FAQAccordion</span><span class="comp">EmailSignup</span><span class="comp">BookingCTA</span><span class="comp">NycNavHeader</span><span class="comp">Footer</span></td>
+          <td><code>/orlando/free-things-to-do</code></td>
+          <td><span class="pill" style="background:#eaf3ec;color:#1e7a3d">Built ✓ June 15</span></td>
+          <td>12 files — <span class="comp" style="background:#eaf3ec;color:#1e7a3d">HeroSection</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">FreeCategories</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">MuseumTable</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">SeasonalEvents</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">SavingsTips</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">FAQAccordion</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">EmailSignup</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">BookingCTA ×2</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">OrlandoNavHeader</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">Footer</span> · Article + FAQ + ItemList schemas</td>
         </tr>
         <tr>
-          <td><code>/nyc/getting-to-nyc</code></td>
-          <td><span class="pill p-red">Missing page</span></td>
-          <td><span class="comp">HeroSection</span><span class="comp">AirportTabs</span><span class="comp">ArrivalTips</span><span class="comp">ScamWarning</span><span class="comp">FAQAccordion</span><span class="comp">EmailSignup</span><span class="comp">BookingCTA</span><span class="comp">NycNavHeader</span><span class="comp">Footer</span></td>
+          <td><code>/orlando/getting-to-orlando</code></td>
+          <td><span class="pill" style="background:#eaf3ec;color:#1e7a3d">Built ✓ June 15</span></td>
+          <td>10 files — <span class="comp" style="background:#eaf3ec;color:#1e7a3d">HeroSection</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">AirportTabs (MCO/SFB/Brightline)</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">ArrivalTips</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">ScamWarning</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">FAQAccordion</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">EmailSignup</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">BookingCTA ×2</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">OrlandoNavHeader</span><span class="comp" style="background:#eaf3ec;color:#1e7a3d">Footer</span> · Article + FAQ + HowTo schemas</td>
         </tr>
         <tr>
-          <td><code>/nyc/nyc-subway-map</code> <span style="color:var(--muted)">(+ <code>/full</code>)</span></td>
+          <td><code>/nyc/nyc-subway-map</code> equivalent</td>
           <td><span class="pill p-na">N/A — no metro</span></td>
-          <td><span class="comp na">HeroBanner</span><span class="comp na">IconCardGrid</span><span class="comp na">StepList</span><span class="comp na">ScenarioCards</span><span class="comp na">SafetyChecklist</span><span class="comp na">BookingCTA</span><span class="comp na">Header</span><span class="comp na">Footer</span></td>
+          <td>Orlando has no city rail network. Intentionally omitted.</td>
         </tr>
         <tr>
-          <td><code>/nyc/subway-safety-guide</code></td>
+          <td><code>/nyc/subway-safety-guide</code> equivalent</td>
           <td><span class="pill p-na">N/A — no metro</span></td>
-          <td><span class="comp na">Hero</span><span class="comp na">SubwayBasics</span><span class="comp na">CorePrinciples</span><span class="comp na">PersonaBlock</span><span class="comp na">ScenarioList</span><span class="comp na">NeighborhoodNotes</span><span class="comp na">EmergencyPlaybook</span><span class="comp na">ToolsAndApps</span><span class="comp na">Etiquette</span><span class="comp na">Checklist</span><span class="comp na">InternalLinks</span><span class="comp na">FAQ</span><span class="comp na">WhyTrustThisGuide</span><span class="comp na">+ Header / BookingCTA / Footer</span></td>
+          <td>Orlando has no city rail network. Intentionally omitted.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>A2. Pending follow-up for the 3 new pages</h2>
+  <p class="note">The pages are built and error-free. These items are needed before they're fully production-ready.</p>
+  <div class="card">
+    <table>
+      <thead><tr><th>Item</th><th>Action</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Add to <code>app/sitemap.ts</code></td>
+          <td>3 new routes missing from sitemap: <code>/orlando/best-time-to-visit</code>, <code>/orlando/free-things-to-do</code>, <code>/orlando/getting-to-orlando</code> — use <code>priority: 0.9, changeFrequency: "weekly"</code></td>
+          <td><span class="pill p-red">High</span></td>
+        </tr>
+        <tr>
+          <td>Internal links on Orlando hub</td>
+          <td><code>orlandohubclient.tsx</code> has no links to the 3 new pages. Add cards so users (and Google) can discover them.</td>
+          <td><span class="pill p-red">High</span></td>
+        </tr>
+        <tr>
+          <td>Verify Mears Connect pricing</td>
+          <td>Copy says ~$39–45/person. Confirm at <code>mearstransportation.com</code> — pricing changes frequently.</td>
+          <td><span class="pill p-amber">Medium</span></td>
+        </tr>
+        <tr>
+          <td>Verify Brightline fares &amp; schedule</td>
+          <td>Service from South Florida to MCO. Confirm at <code>brightline.com</code> before publishing.</td>
+          <td><span class="pill p-amber">Medium</span></td>
+        </tr>
+        <tr>
+          <td>Verify free museum days</td>
+          <td>Morse Museum (Fri 4–8pm, Nov–Apr) · OMA Third Thursday · Leu Gardens First Monday — confirm each is still current.</td>
+          <td><span class="pill p-amber">Medium</span></td>
         </tr>
       </tbody>
     </table>
@@ -110,7 +147,7 @@
   <h2>C. Routes fully matched (no gaps)</h2>
   <p class="note">These shared routes render an equivalent component set in both cities: <code>Home / Hub</code>, <code>bookings</code>, <code>food</code>, <code>group-travel</code>, <code>landmark</code>, <code>neighborhood-guide</code>, <code>things-to-do</code>. Orlando's legacy <code>/orlando/itinerary</code> has no NYC counterpart.</p>
 
-  <footer>EmailSignup component lives at <code>@/app/components/destination/EmailSignup/EmailSignup</code> — adding it to the 5 shared Orlando routes (plus PersonaSafetyBlocks to the safe-at-night page) closes the component-level gap. The 3 missing content pages require building new routes.</footer>
+  <footer>Orlando is now at full parity with NYC for applicable pages. The only intentional gaps are the two transit pages (subway map, subway safety guide — N/A for Orlando). Remaining work: sitemap.ts + internal hub links + fact verification before publish.</footer>
 
 </div>
 </body>

@@ -1,7 +1,13 @@
+.narrativeSection {
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 64px 40px;
+}
+
 .narrative {
-  max-width: 760px;
-  margin: 3rem auto;
-  padding: 0 1rem;
+  max-width: 860px;
+  margin: 0 auto;
   color: #1a1a1a;
   line-height: 1.7;
   font-size: 1.0625rem;
@@ -13,6 +19,10 @@
   margin: 3rem 0 1rem;
   color: #111;
   font-weight: 700;
+}
+
+.narrative h2:first-of-type {
+  margin-top: 0;
 }
 
 .narrative h3 {
@@ -67,10 +77,15 @@
   color: #1a1a1a;
 }
 
+@media (max-width: 768px) {
+  .narrativeSection {
+    padding: 48px 20px;
+  }
+}
+
 @media (max-width: 640px) {
   .narrative {
     font-size: 1rem;
-    margin: 2rem auto;
   }
   .narrative h2 {
     font-size: 1.5rem;

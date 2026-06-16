@@ -1,5 +1,4 @@
 "use client";
-import { useParams } from "next/navigation";
 import Header from "../../../components/Header/header";
 import Link from 'next/link';
 import Image from 'next/image';
@@ -26,7 +25,7 @@ export default function LasVegasFoodClient() {
     "name": "Travels Americas",
     "logo": { "@type": "ImageObject", "url": "https://www.travelsamericas.com/logo.png" }
   },
-  "image": "https://www.travelsamericas.com/data/majorcities/lasvegas/assets/lasvegas.webp",
+  "image": "https://www.travelsamericas.com/data/majorcities/lasvegas/assets/group/food/lasvegas-group-food.png",
   "articleSection": ["Celebrity Chefs", "Buffets", "Off-Strip", "Food Halls", "Cheap Eats"],
   "mainEntity": [
     {
@@ -317,14 +316,14 @@ const howto = {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howto) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemlist) }}/>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumblist) }}/>
-        <Header image={`/data/majorcities/lasvegas/assets/lasvegas.webp`} bannerText="Hero banner showcasing Las Vegas food and dining experiences for travelers" />
+        <Header image={`/data/majorcities/lasvegas/assets/group/food/lasvegas-group-food.png`} bannerText="Hero banner showcasing Las Vegas food and dining experiences for travelers" variant="wide" />
         <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=activities&from=food" label="See food tours" />
 
         {/* H1 / Intro */}
-        <section className={styles.splitSection} style={{textAlign: "center" }}>
-                <div style={{ width: "100%", textAlign: "center" }}>
+        <section className={`${styles.splitSection} ${styles.introSection}`}>
+                <div className={styles.introContent}>
                 <h1 className={styles.sectionheading}>Where to Eat in Las Vegas: The 2026 Food Guide</h1>
-                <p className={styles.subheading}>
+                <p className={styles.introText}>
                   Las Vegas has gone from buffet town to one of America&apos;s most serious eating cities, and the hard part
                   isn&apos;t finding good food — it&apos;s knowing what&apos;s worth the price and what&apos;s trading on a
                   famous name. This guide covers where to eat in Las Vegas across every budget: the celebrity-chef rooms,
@@ -339,8 +338,8 @@ const howto = {
         <section className={styles.splitSection}>
                 <div className={styles.imageWrapper}>
                 <Image
-                    src="/data/majorcities/lasvegas/assets/lasvegas.webp"
-                    alt="Las Vegas Strip skyline at dusk over a city known for celebrity-chef restaurants, buffets, and late-night dining"
+                    src="/data/majorcities/lasvegas/assets/food-must-eat-card.png"
+                    alt="Las Vegas must-eat dishes including pizza, buffet plates, fine dining, tacos, shrimp cocktail, and Asian skewers"
                     fill
                     className={styles.mapImage}
                 />
@@ -388,8 +387,8 @@ const howto = {
                 </div>
                 <div className={styles.imageWrapper}>
                 <Image
-                    src="/data/majorcities/lasvegas/assets/Bellagio-Exterior-Cooler.webp"
-                    alt="Bellagio on the Las Vegas Strip, home to fine-dining and celebrity-chef restaurants"
+                    src="/data/majorcities/lasvegas/assets/food-fine-dining-card.png"
+                    alt="Fine dining table in Las Vegas with steak, sushi, pasta, and Strip views"
                     fill
                     className={styles.mapImage}
                 />
@@ -400,8 +399,8 @@ const howto = {
         <section className={styles.splitSection}>
                 <div className={styles.imageWrapper}>
                 <Image
-                    src="/data/majorcities/lasvegas/assets/cosmo-balcony.jpg"
-                    alt="View from a Cosmopolitan balcony over the Las Vegas Strip, near food halls and neighborhood eats"
+                    src="/data/majorcities/lasvegas/assets/food-neighborhoods-card.png"
+                    alt="Las Vegas neighborhood food spread representing the Strip, Chinatown, Arts District, Downtown, and off-Strip casinos"
                     fill
                     className={styles.mapImage}
                 />
@@ -433,8 +432,8 @@ const howto = {
                 </div>
                 <div className={styles.imageWrapper}>
                 <Image
-                    src="/data/majorcities/lasvegas/assets/lasvegas.png"
-                    alt="Las Vegas at night — neon lights over a city full of cheap eats and late-night food"
+                    src="/data/majorcities/lasvegas/assets/food-cheap-eats-card.png"
+                    alt="Late-night Las Vegas cheap eats with pizza, tacos, burger, fries, and soda"
                     fill
                     className={styles.mapImage}
                 />
@@ -445,8 +444,8 @@ const howto = {
         <section className={styles.splitSection}>
                 <div className={styles.imageWrapper}>
                 <Image
-                    src="/data/majorcities/lasvegas/assets/Venetian-hotel.webp"
-                    alt="The Venetian on the Las Vegas Strip, home to Block 16 Urban Food Hall"
+                    src="/data/majorcities/lasvegas/assets/food-hall-card.png"
+                    alt="Modern Las Vegas food hall table with ramen, pasta, sandwich, dessert, and gelato"
                     fill
                     className={styles.mapImage}
                 />
@@ -469,17 +468,17 @@ const howto = {
         <section className={styles.splitSection}>
                 <div className={styles.imageWrapper}>
                 <Image
-                    src="/data/majorcities/lasvegas/assets/flamingo.jpg"
-                    alt="The Flamingo on the Las Vegas Strip, a classic stop for solo travelers seeking counters and casual dining"
+                    src="/data/majorcities/lasvegas/assets/food-solo-counter-card.png"
+                    alt="Solo Las Vegas counter dining with pizza, tacos, breakfast sandwich, and a quiet bar seat"
                     fill
                     className={styles.mapImage}
                 />
                 </div>
                 <div className={styles.textWrapper}>
                 <h2 className={styles.heading}>Eating Solo in Las Vegas: Counters and Quiet Bars</h2>
-                <p className={styles.subheading}>🍕 <strong>Quick and easy when you&apos;re on your own.</strong> Secret Pizza at The Cosmopolitan is built for a slice on the go, Eggslut is a counter breakfast, and Eataly&apos;s stations let you grab pasta or a panino without a table. Nobody blinks at a solo order at any of them.</p>
-                <p className={styles.subheading}>🥃 <strong>Bar seats beat a table for one.</strong> At Bavette&apos;s, Carson Kitchen and Raku, the bar is the best seat in the house when you&apos;re solo — you can order the full menu and you&apos;re not stuck staring across an empty chair.</p>
-                <p className={styles.subheading}>🌮 <strong>Late and easy.</strong> The Peppermill (24 hours since 1972), Secret Pizza until 3am, and Tacos El Gordo until 4am on weekends all work for a fast bite after a show or a late one after the tables.</p>
+                <p className={styles.subheading}><strong>Quick and easy when you&apos;re on your own.</strong> Secret Pizza at The Cosmopolitan is built for a slice on the go, Eggslut is a counter breakfast, and Eataly&apos;s stations let you grab pasta or a panino without a table. Nobody blinks at a solo order at any of them.</p>
+                <p className={styles.subheading}><strong>Bar seats beat a table for one.</strong> At Bavette&apos;s, Carson Kitchen and Raku, the bar is the best seat in the house when you&apos;re solo — you can order the full menu and you&apos;re not stuck staring across an empty chair.</p>
+                <p className={styles.subheading}><strong>Late and easy.</strong> The Peppermill (24 hours since 1972), Secret Pizza until 3am, and Tacos El Gordo until 4am on weekends all work for a fast bite after a show or a late one after the tables.</p>
 
                 <Link href="/destination/lasvegas/solo-trip-to-lasvegas" className={styles.ctaButton}>
                     Las Vegas Solo Traveler Tips
@@ -490,9 +489,9 @@ const howto = {
 
                 <div className={styles.textWrapper}>
                 <h2 className={styles.heading}>Three Off-Strip Stops Worth a Solo Visit</h2>
-                <p className={styles.subheading}>🍜 <strong>Spring Mountain Road, for the real food.</strong> Chinatown is where Vegas chefs eat after their shifts — Raku for robata, Lotus of Siam for northern Thai, dozens more open past midnight. Rideshare in; it&apos;s a 10-minute hop off the Strip and the counter seats are easy for one.</p>
-                <p className={styles.subheading}>🎨 <strong>The Arts District (18b).</strong> Esther&apos;s Kitchen for house-made pasta, craft breweries within a block, and indie coffee — a walkable, local neighborhood that feels nothing like the Strip.</p>
-                <p className={styles.subheading}>🃏 <strong>Downtown / Fremont.</strong> Carson Kitchen for sharable small plates, Downtown Container Park&apos;s 20+ vendors, and Hugo&apos;s Cellar for an old-Vegas supper-club splurge ($60–$80pp).</p>
+                <p className={styles.subheading}><strong>Spring Mountain Road, for the real food.</strong> Chinatown is where Vegas chefs eat after their shifts — Raku for robata, Lotus of Siam for northern Thai, dozens more open past midnight. Rideshare in; it&apos;s a 10-minute hop off the Strip and the counter seats are easy for one.</p>
+                <p className={styles.subheading}><strong>The Arts District (18b).</strong> Esther&apos;s Kitchen for house-made pasta, craft breweries within a block, and indie coffee — a walkable, local neighborhood that feels nothing like the Strip.</p>
+                <p className={styles.subheading}><strong>Downtown / Fremont.</strong> Carson Kitchen for sharable small plates, Downtown Container Park&apos;s 20+ vendors, and Hugo&apos;s Cellar for an old-Vegas supper-club splurge ($60–$80pp).</p>
 
                 <Link href="/destination/lasvegas/solo-itinerary" className={styles.ctaButton}>
                    Plan Your Las Vegas Itinerary
@@ -500,8 +499,8 @@ const howto = {
                 </div>
                 <div className={styles.imageWrapper}>
                 <Image
-                    src="/data/majorcities/lasvegas/assets/excaliberresorts.webp"
-                    alt="Las Vegas resort architecture, a short rideshare from the off-Strip food scene in Chinatown and the Arts District."
+                    src="/data/majorcities/lasvegas/assets/food-offstrip-card.png"
+                    alt="Off-Strip Las Vegas counter dining with ramen, skewers, pasta, and a craft drink"
                     fill
                     className={styles.mapImage}
                 />
@@ -512,17 +511,17 @@ const howto = {
         <section className={styles.splitSection}>
                 <div className={styles.imageWrapper}>
                 <Image
-                    src="/data/majorcities/lasvegas/assets/Venetian-hotel.jpg"
-                    alt="The Venetian, one of the Las Vegas resorts known for large buffets and dining halls."
+                    src="/data/majorcities/lasvegas/assets/group/lasvegas-buffet-collage-group-dining.png"
+                    alt="Buffet spread with prime rib, sushi, crab legs, and desserts in Las Vegas"
                     fill
                     className={styles.mapImage}
                 />
                 </div>
                 <div className={styles.textWrapper}>
                 <h2 className={styles.heading}>Where to Find a Buffet Still Worth It</h2>
-                <p className={styles.subheading}>🍤 <strong>The quality picks.</strong> Wicked Spoon at The Cosmopolitan ($32–$50) leans on better ingredients and individually portioned plates. Bacchanal Buffet at Caesars ($50–$70) is the most famous spread in town — go early to beat the line.</p>
-                <p className={styles.subheading}>💵 <strong>The old-Vegas value.</strong> The $10–$15 buffets at off-Strip casinos like Palace Station and Gold Coast are closer to what the classic Vegas buffet actually was — no frills, plenty of plates.</p>
-                <p className={styles.subheading}>🗺️ <strong>The honest take.</strong> The era of great cheap Strip buffets is mostly over; treat the buffet as one fun experience, not your every-meal plan, and put the savings toward one celebrity-chef dinner.</p>
+                <p className={styles.subheading}><strong>The quality picks.</strong> Wicked Spoon at The Cosmopolitan ($32–$50) leans on better ingredients and individually portioned plates. Bacchanal Buffet at Caesars ($50–$70) is the most famous spread in town — go early to beat the line.</p>
+                <p className={styles.subheading}><strong>The old-Vegas value.</strong> The $10–$15 buffets at off-Strip casinos like Palace Station and Gold Coast are closer to what the classic Vegas buffet actually was — no frills, plenty of plates.</p>
+                <p className={styles.subheading}><strong>The honest take.</strong> The era of great cheap Strip buffets is mostly over; treat the buffet as one fun experience, not your every-meal plan, and put the savings toward one celebrity-chef dinner.</p>
 
                 <Link href="/destination/lasvegas/solo-trip-to-lasvegas" className={styles.ctaButton}>
                     Solo Travel Tips for Dining Out
@@ -531,8 +530,8 @@ const howto = {
         </section>
 
         {/* Price ranges */}
-        <section className={styles.splitSection} style={{textAlign: "center"}}>
-                <div style={{ width: "100%", textAlign: "left" }}>
+        <section className={styles.splitSection}>
+                <div className={styles.fullWidthContent}>
                 <h2 className={styles.heading}>Price ranges &amp; reservations</h2>
                 <ul>
                   <li className={styles.subheading}><strong>Cheap (under ~$15):</strong> Secret Pizza, In-N-Out, Tacos El Gordo, a slice or taco at any hour.</li>
@@ -547,9 +546,4 @@ const howto = {
         <Footer />
         </>
     );
-}
-function capitalizeWords(str: string) {
-  return str
-    .toLowerCase()
-    .replace(/\b\w/g, (char) => char.toUpperCase());
 }

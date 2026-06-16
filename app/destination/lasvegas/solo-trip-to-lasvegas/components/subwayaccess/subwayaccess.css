@@ -2,7 +2,7 @@
 
 /* SECTION LAYOUT */
 .subway-section {
-  padding: 3rem 1.5rem;
+  padding: 64px 40px;
   background: #f7f9ff;
 }
 
@@ -78,9 +78,14 @@
 }
 
 /* MOBILE */
+@media (max-width: 768px) {
+  .subway-section {
+    padding: 48px 20px;
+  }
+}
 @media (max-width: 600px) {
   .subway-section {
-    padding: 2rem 1rem;
+    padding: 40px 16px;
   }
   .subway-row {
     padding: 1rem;

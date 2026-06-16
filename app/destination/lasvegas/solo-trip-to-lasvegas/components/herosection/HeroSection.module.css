@@ -2,6 +2,7 @@
 .hero {
   width: 100%;
   background: #ffffff;
+  padding: 60px 0;
 }
 
 .herocontainer {
@@ -67,56 +68,56 @@
 .heroImage {
   flex: 1;
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
-/* Keep this as the ONLY sizing box */
+/* Sizing container for Next.js Image fill — must have position:relative + defined height */
 .heroImageWrapper {
   position: relative;
   width: 100%;
   height: 371px;
-  object-fit: cover;
-  display: block;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
+/* imagePlaceholder kept for backwards-compat but now just a passthrough */
 .imagePlaceholder {
-  background: #eaeaea;
-  border-radius: 12px;
-  padding: 0; /* optional */
   width: 100%;
-  height: 100%; /* match wrapper */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
+  .hero {
+    padding: 40px 0;
+  }
+
   .herocontainer {
     flex-direction: column;
     text-align: center;
+    gap: 32px;
   }
 
   .heroImage {
-    flex: unset; /* Prevent collapse */
+    flex: unset;
     width: 100%;
   }
 
   .heroImageWrapper {
-    height: auto; /* Let image define height */
-    min-height: 260px; /* Prevent collapse */
-    width: 100%;
-  }
-
-  .heroImageWrapper img {
-    width: 100%;
-    height: auto;
-    object-fit: contain; /* Keeps full image visible */
-    display: block;
-    border-radius: 12px;
+    height: 260px;
   }
 
   .herobuttons {
     justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .herotext h1 {
+    font-size: 36px;
+  }
+
+  .heroImageWrapper {
+    height: 220px;
   }
 }

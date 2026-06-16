@@ -10,9 +10,30 @@ body {
 
 /* ── Las Vegas-only sections (All Areas Compared, Booking Tips) ── */
 .section {
-  padding: 3rem 1.5rem;
-  max-width: 1100px;
+  padding: 60px 1rem;
+  max-width: 720px;
   margin: auto;
+  box-sizing: border-box;
+}
+
+.section h2 {
+  margin: 0 0 12px;
+  color: #111827;
+  font-family: var(--font-montserrat);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.sectionIntro {
+  max-width: 700px;
+  margin: 0 0 40px;
+  color: #555;
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
 }
 
 .grid {
@@ -33,4 +54,119 @@ body {
 .card:hover {
   border-color: #000;
   transform: translateY(-3px);
+}
+
+.areaList {
+  display: grid;
+  gap: 1rem;
+}
+
+.areaItem {
+  padding: 1.35rem;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.areaItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+.areaTopline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.areaTopline h3 {
+  margin: 0;
+  color: #111827;
+  font-family: var(--font-montserrat);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.areaEyebrow {
+  margin: 0 0 0.35rem;
+  color: #1d4ed8;
+  font-family: var(--font-montserrat);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.pricePill {
+  flex: 0 0 auto;
+  padding: 0.4rem 0.65rem;
+  color: #111827;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  font-family: var(--font-montserrat);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.areaSummary {
+  margin: 0;
+  color: #374151;
+  font-family: var(--font-montserrat);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.areaMeta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.areaMeta p {
+  margin: 0;
+  color: #4b5563;
+  font-family: var(--font-montserrat);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.areaMeta strong {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: #111827;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 48px 1rem;
+  }
+
+  .areaItem {
+    padding: 1.1rem;
+  }
+
+  .areaTopline {
+    flex-direction: column;
+  }
+
+  .areaMeta {
+    grid-template-columns: 1fr;
+  }
 }

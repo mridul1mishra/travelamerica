@@ -43,8 +43,7 @@ export default function OrlandoSafetyClient() {
         <LinkHubGrid />
         <WhyTrustThisGuide data={cityWhyTrustData} />
         </div>
-        <BookingCTA variant="full" text="Choose a hotel in a safe Orlando area" href="/destination/orlando/bookings?tab=hotels&from=safety-guide" label="See Orlando hotels" />
-        <Footer />
-    </>
+        <BookingCTA variant="full" text="Choose a hotel in a safe neighbourhood in Orlando" href="/destination/orlando/bookings?tab=hotels&from=safety-guide" label="Book your trip" />
+      </>
   );
 }

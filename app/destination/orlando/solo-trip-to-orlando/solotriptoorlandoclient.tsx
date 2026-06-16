@@ -46,7 +46,7 @@ export default function SoloTripToOrlandoClient() {
       <ScenarioSection />
       <FemaleSoloTiles tiles={femaleSolo.tiles} ctaLink={femaleSolo.ctaLink} cityName="Orlando" />
       <FAQAccordion faqs={cityFaqData} />
-      <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/orlando/bookings?tab=hotels&from=solo-trip-to-orlando" label="Book your trip" />
+      <BookingCTA variant="full" text="Find the right hotel for your Orlando stay" href="/destination/orlando/bookings?tab=hotels&from=solo-trip-to-orlando" label="Book your trip" />
       <Footer />
     </>
   );

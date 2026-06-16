@@ -7,6 +7,7 @@
 
 import React, { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import Header from "@/app/components/Header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import "@/app/components/majorcities/flightsection/propertylisting.css";
@@ -71,6 +72,8 @@ export interface CityBookingConfig {
   headerImage: string;
   /** Header banner text */
   bannerText: string;
+  /** Header sizing variant */
+  headerVariant?: "default" | "wide";
   /** Page h1 */
   pageTitle: string;
   /** Tab definitions (allows city-specific icon, e.g. 🗽 vs 🌴) */
@@ -94,11 +97,35 @@ function getInitialTab(param: string | null, validTabs: Set<TabKey>): TabKey {
   return "flights";
 }
 
+function BookingTabIcon({ type }: { type: TabKey }) {
+  if (type === "flights") {
+    return (
+      <svg className={styles.icon} viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21 16.2 3.7 21l-.7-1.7 7.2-4.9-5.4-5.3.9-1.5 7.2 3.4 4.8-7.8c.6-1 1.9-1.3 2.8-.6.9.6 1.2 1.8.6 2.7l-4.8 7.8 5.4 2.1-.7 1Z" />
+      </svg>
+    );
+  }
+
+  if (type === "hotels") {
+    return (
+      <svg className={styles.icon} viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 20V5.8C4 4.8 4.8 4 5.8 4h6.4c1 0 1.8.8 1.8 1.8V9h4.2c1 0 1.8.8 1.8 1.8V20h-2v-3H6v3H4Zm2-5h12v-3.8c0-.1-.1-.2-.2-.2H14v2h-2V6.2c0-.1-.1-.2-.2-.2H6.2c-.1 0-.2.1-.2.2V15Zm2-6h2V7H8v2Zm0 4h2v-2H8v2Z" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg className={styles.icon} viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M5 20v-7.2l-2-1.1V9.6l4 1.5 3.3-2.1L6.5 5.2l1.7-1.1 5 3.2 4.2-2.7c.8-.5 1.9-.3 2.4.5s.3 1.8-.5 2.3l-4.1 2.7 1 5.9-1.9.9-2.4-4.7-3.4 2.2V20H5Z" />
+    </svg>
+  );
+}
+
 // ── Shared component ─────────────────────────────────────────────────────────
 
 function BookingClientInner({ config, introSection, faqSection }: { config: CityBookingConfig; introSection?: React.ReactNode; faqSection?: React.ReactNode }) {
   const {
-    cityName, cityHref, bookingHref, headerImage, bannerText, pageTitle,
+    cityName, cityHref, headerImage, bannerText, headerVariant, pageTitle,
     tabs, tabRail, relatedGroups, flights, hotels, activities,
   } = config;
 
@@ -110,16 +137,16 @@ function BookingClientInner({ config, introSection, faqSection }: { config: City
 
   return (
     <div className="App">
-      <Header image={headerImage} bannerText={bannerText} />
+      <Header image={headerImage} bannerText={bannerText} variant={headerVariant} />
 
       <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
         <ol className={styles.breadcrumbList}>
           <li className={styles.breadcrumbItem}>
-            <a href="/" className={styles.breadcrumbLink}>Home</a>
+            <Link href="/" className={styles.breadcrumbLink}>Home</Link>
           </li>
           <li aria-hidden="true" className={styles.breadcrumbSep}>›</li>
           <li className={styles.breadcrumbItem}>
-            <a href={cityHref} className={styles.breadcrumbLink}>{cityName}</a>
+            <Link href={cityHref} className={styles.breadcrumbLink}>{cityName}</Link>
           </li>
           <li aria-hidden="true" className={styles.breadcrumbSep}>›</li>
           <li className={styles.breadcrumbItem}>
@@ -128,7 +155,7 @@ function BookingClientInner({ config, introSection, faqSection }: { config: City
         </ol>
       </nav>
 
-      {pageTitle && <h1 className={styles.relatedHeading}>{pageTitle}</h1>}
+      {pageTitle && <h1 className={styles.pageHeading}>{pageTitle}</h1>}
 
       {introSection}
 
@@ -142,7 +169,7 @@ function BookingClientInner({ config, introSection, faqSection }: { config: City
             className={`${styles.tab} ${activeTab === tab.key ? styles.active : ""}`}
             onClick={() => setActiveTab(tab.key)}
           >
-            <span className={styles.icon}>{tab.icon}</span>
+            <BookingTabIcon type={tab.key} />
             {tab.label}
           </button>
         ))}
@@ -303,34 +330,17 @@ function BookingClientInner({ config, introSection, faqSection }: { config: City
       <section className={styles.relatedFooter} aria-label="Related guides">
         <div className={styles.relatedFooterInner}>
           <h2 className={styles.relatedHeading}>Plan your {cityName} trip</h2>
-          <div className={styles.relatedGroups}>
-            {relatedGroups.map((group) => (
-              <div key={group.heading} className={styles.relatedGroup}>
-                <h3 className={styles.relatedGroupTitle}>{group.heading}</h3>
-                <ul className={styles.relatedLinks}>
-                  {group.links.map((link) => (
-                    <li key={link.href}>
-                      <a href={link.href} className={styles.relatedLink}>{link.label}</a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          <div className={styles.relatedGrid}></div>
         </div>
       </section>
-
-      {faqSection}
-      <Footer />
     </div>
   );
 }
 
-// useSearchParams() must be wrapped in a Suspense boundary for static export.
-export default function BookingClient({ config, introSection, faqSection }: { config: CityBookingConfig; introSection?: React.ReactNode; faqSection?: React.ReactNode }) {
+export default function BookingClient(props: { config: CityBookingConfig; introSection?: React.ReactNode; faqSection?: React.ReactNode }) {
   return (
-    <Suspense fallback={null}>
-      <BookingClientInner config={config} introSection={introSection} faqSection={faqSection} />
+    <Suspense>
+      <BookingClientInner {...props} />
     </Suspense>
   );
 }

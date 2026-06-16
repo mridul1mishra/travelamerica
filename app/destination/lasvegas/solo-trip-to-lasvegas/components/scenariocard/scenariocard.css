@@ -1,8 +1,14 @@
 /* ScenarioSection.css */
 
 .scenario-section {
-  padding: 3rem 1.5rem;
+  padding: 64px 40px;
   background: #fff8f6;
+}
+
+@media (max-width: 768px) {
+  .scenario-section {
+    padding: 48px 20px;
+  }
 }
 
 .scenario-section__inner {

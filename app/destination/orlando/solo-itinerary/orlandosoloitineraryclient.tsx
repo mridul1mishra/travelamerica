@@ -76,10 +76,7 @@ export default function OrlandoSoloItineraryClient({ grouped }: OrlandoSoloItine
         variant="full"
         headline="Book your solo Orlando trip"
         text="Flights to MCO, solo-friendly hotels, and park tickets — all in one place."
-        href="/destination/orlando/bookings"
-        label="Plan & book your trip"
-      />
-      <FAQ groupedFaqs={grouped} />
+        href="/destination/orlando/bookings?tab=hotels&from=solo-itinerary" label="Book your trip" />
       <Footer />
     </main>
   );

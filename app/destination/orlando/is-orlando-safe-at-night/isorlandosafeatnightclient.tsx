@@ -88,8 +88,7 @@ export default function IsOrlandoSafeAtNightClient() {
       <SectionWrapper id="trustBlock">
         <TrustBlock {...data.trustBlock} />
       </SectionWrapper>
-
-      <BookingCTA variant="full" text="Book a hotel in a safe, central Orlando area" href="/destination/orlando/bookings?tab=hotels&from=is-orlando-safe-at-night" label="See safe-area hotels" />
+      <BookingCTA variant="full" text="Book a safe, centrally located hotel in Orlando" href="/destination/orlando/bookings?tab=hotels&from=is-safe-at-night" label="Book your trip" />
       <Footer />
     </>
   );

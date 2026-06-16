@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./hero.module.css";
 import type { HeroSafetyProps } from "../typesafeatnight";
 
@@ -9,9 +10,9 @@ export default function HeroSafety(props: HeroSafetyProps) {
     <section className={styles.heroSection}>
       <div className={styles.heroContainer}>
         <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-                  <a href="/">Home</a>
+                  <Link href="/">Home</Link>
                   <span>›</span>
-                  <a href="/destination/lasvegas/solo-trip-to-lasvegas">Solo Trip to Las Vegas</a>
+                  <Link href="/destination/lasvegas/solo-trip-to-lasvegas">Solo Trip to Las Vegas</Link>
                   <span>›</span>
                   <span className={styles.current}>Is Las Vegas Safe at Night</span>
         </nav>
@@ -23,7 +24,7 @@ export default function HeroSafety(props: HeroSafetyProps) {
             src={heroImage}
             alt="Las Vegas Strip at night"
             fill
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover", objectPosition: "center 54%" }}
             priority
           />
         </div>

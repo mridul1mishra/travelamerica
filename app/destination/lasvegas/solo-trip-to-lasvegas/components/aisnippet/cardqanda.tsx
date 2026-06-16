@@ -2,7 +2,8 @@ import styles from './SoloNycQa.module.css';
 
 export default function SoloLasVegasQa() {
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.section}>
+      <div className={styles.wrapper}>
       <h2 className={styles.heading}>Essential Solo Travel Tips for Las Vegas</h2>
       <article className={styles.card}>
         <h3 className={styles.question}>Can You Travel to Las Vegas Alone?</h3>
@@ -45,7 +46,7 @@ export default function SoloLasVegasQa() {
           shows alone is completely normal.
         </p>
       </article>
-
+      </div>
     </section>
   );
 }

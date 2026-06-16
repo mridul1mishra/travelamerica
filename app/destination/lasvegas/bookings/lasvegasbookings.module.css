@@ -1,0 +1,81 @@
+.introCard {
+  max-width: 1120px;
+  margin: 0 auto 28px;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+}
+
+.eyebrow {
+  margin: 0 0 0.45rem;
+  color: #1d4ed8;
+  font-family: var(--font-montserrat);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.introCard h2 {
+  max-width: 780px;
+  margin: 0 0 0.75rem;
+  color: #111827;
+  font-family: var(--font-montserrat);
+  font-size: clamp(1.7rem, 3vw, 2.45rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+}
+
+.introText {
+  max-width: 880px;
+  margin: 0;
+  color: #4b5563;
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.tipGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+  margin-top: 1.25rem;
+}
+
+.tipGrid article {
+  padding: 1rem;
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+  border-radius: 16px;
+}
+
+.tipGrid span {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #111827;
+  font-family: var(--font-montserrat);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.tipGrid p {
+  margin: 0;
+  color: #4b5563;
+  font-family: var(--font-montserrat);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .introCard {
+    margin-inline: 1rem;
+  }
+
+  .tipGrid {
+    grid-template-columns: 1fr;
+  }
+}

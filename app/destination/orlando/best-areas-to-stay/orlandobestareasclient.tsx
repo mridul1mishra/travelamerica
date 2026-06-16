@@ -168,9 +168,8 @@ export default function OrlandoBestAreasClient() {
         headline="Find the right Orlando hotel"
         text="On-site, near-park, and budget options - compare live prices."
         href="/destination/orlando/bookings?tab=hotels&from=best-areas-to-stay"
-        label="Browse Orlando hotels"
+        label="Book your trip"
       />
-      <Footer />
     </main>
   );
 }

@@ -52,8 +52,7 @@ export default function OrlandoFemaleSoloClient() {
       <LinkHubGrid />
       <WhyTrustThisGuide data={cityWhyTrustData} />
       </div>
-      <BookingCTA variant="full" text="Book a safe, central hotel for solo travelers" href="/destination/orlando/bookings?tab=hotels&from=female-solo" label="See Orlando hotels" />
-      <Footer />
-    </>
+      <BookingCTA variant="full" text="Find solo-friendly hotels for your Orlando trip" href="/destination/orlando/bookings?tab=hotels&from=female-solo" label="Book your trip" />
+      </>
   );
 }

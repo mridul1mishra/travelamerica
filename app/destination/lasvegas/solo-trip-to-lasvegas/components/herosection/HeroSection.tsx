@@ -19,11 +19,9 @@ export default function HeroSection() {
 
 
                 <div className={styles.heroImage}>
-                <div className={styles.imagePlaceholder}>
                     <div className={styles.heroImageWrapper}>
-                        <Image src="/data/majorcities/lasvegas/assets/lasvegas.webp" alt="Las Vegas Strip skyline" fill style={{ objectFit: "contain" }} fetchPriority="high"/>
+                        <Image src="/data/majorcities/lasvegas/assets/lasvegas.webp" alt="Las Vegas Strip skyline" fill style={{ objectFit: "cover", objectPosition: "center" }} fetchPriority="high"/>
                     </div>
-                </div>
                 </div>
 
             </div>

@@ -276,7 +276,7 @@ const schema4 = {
         </div>
       </section>
       <FAQ groupedFaqs={grouped}/>
-      <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/la/bookings?tab=hotels&from=solo-itinerary" label="Book this trip" />
+      <BookingCTA variant="full" text="Find the right hotel for your LA stay" href="/destination/la/bookings?tab=hotels&from=solo-itinerary" label="Book your trip" />
       <Footer />
     </div>
     </>

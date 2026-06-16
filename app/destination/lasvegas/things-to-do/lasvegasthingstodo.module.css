@@ -1,134 +1,326 @@
-.container {
+/* ── Shared inner container ── */
+.inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
 }
 
-.hero {
-  max-width: 720px;
-  margin-bottom: 3rem;
+/* ── Banner — full-width hero image ── */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
 }
 
-.hero h1 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+.bannerImage {
+  object-fit: cover;
+  object-position: center;
 }
 
-.hero p {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #444;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.card {
-  border: 1px solid #e6e6e6;
-  border-radius: 10px;
-  padding: 1.5rem;
+/* ── Hero text block ── */
+.heroSection {
   background: #fff;
+  padding: 56px 40px 48px;
 }
 
-.card h3 {
-  font-size: 1.15rem;
-  margin-bottom: 0.5rem;
+.heroSection h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 16px;
+  max-width: 720px;
 }
 
-.card p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #555;
-}
-
-.bridge {
-  max-width: 760px;
-  margin-bottom: 3rem;
-}
-
-.bridge p {
-  font-size: 1rem;
-  line-height: 1.6;
+.heroSection p {
+  font-size: 1.05rem;
+  line-height: 1.65;
   color: #444;
+  max-width: 720px;
+  margin: 0;
 }
-
-.cta {
-  border-top: 1px solid #eee;
-  padding-top: 3rem;
-  max-width: 760px;
-}
-
-.cta h2 {
-  font-size: 1.6rem;
-  margin-bottom: 0.75rem;
-}
-
-.cta p {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 1.5rem;
-}
-
-.primaryCta {
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 0.85rem 1.75rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.primaryCta:hover {
-  opacity: 0.85;
-}
-.banner{
-    position: relative;
-    width: 100%;
-    height: 320px;
-    margin-bottom: 2.5rem;
-    border-radius: 14px;
-    overflow: hidden;
-}
-.bannerImage{
-    object-fit: cover;
-}
-
-/* ---------------------------------------------------------------- */
-/* Las Vegas-only sections (no NYC equivalent)                      */
-/* Preserved from the original Las Vegas things-to-do page: hero    */
-/* action buttons and the detailed practical category grid.         */
-/* ---------------------------------------------------------------- */
 
 .heroCtas {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.primaryCta {
+  background: #2563eb;
+  color: #fff;
+  padding: 13px 26px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.primaryCta:hover {
+  background: #1d4ed8;
 }
 
 .secondaryCta {
   background: #fff;
-  color: #000;
-  border: 1px solid #000;
-  padding: 0.85rem 1.75rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
+  color: #1a1a1a;
+  border: 1.5px solid #d1d5db;
+  padding: 13px 26px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 7px;
   text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .secondaryCta:hover {
-  background: #000;
-  color: #fff;
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+/* ── White text section ── */
+.textSection {
+  background: #fff;
+  padding: 64px 40px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.textSection h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #111;
+  max-width: 760px;
+}
+
+.textSection h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 28px 0 8px;
+  color: #1a1a1a;
+}
+
+.textSection p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #444;
+  margin: 0 0 16px;
+  max-width: 760px;
+}
+
+.textSection ul,
+.textSection ol {
+  padding-left: 1.25rem;
+  margin: 0 0 20px;
+  max-width: 760px;
+}
+
+.textSection li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* ── Tinted (alternate) text section ── */
+.tintSection {
+  background: #f7f9ff;
+  padding: 64px 40px;
+}
+
+.tintSection h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #111;
+  max-width: 760px;
+}
+
+.tintSection h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 28px 0 8px;
+  color: #1a1a1a;
+}
+
+.tintSection p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #444;
+  margin: 0 0 16px;
+  max-width: 760px;
+}
+
+.tintSection ul,
+.tintSection ol {
+  padding-left: 1.25rem;
+  margin: 0 0 20px;
+  max-width: 760px;
+}
+
+.tintSection li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* ── Grid section ── */
+.gridSection {
+  background: #f7f9ff;
+  padding: 64px 40px;
+}
+
+.gridSection h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #111;
 }
 
 .sectionIntro {
+  font-size: 1rem;
+  line-height: 1.55;
   color: #555;
-  max-width: 620px;
-  margin: 0.5rem 0 1.5rem;
+  max-width: 640px;
+  margin: 0 0 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e9f0;
+  border-radius: 10px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
+  border-color: #93c5fd;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #111;
+}
+
+.card p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #555;
+  margin: 0;
+}
+
+/* ── FAQ section ── */
+.faqSection {
+  background: #fff;
+  padding: 64px 40px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.faqSection h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 32px;
+  color: #111;
+}
+
+.faqSection h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 28px 0 8px;
+  color: #1a1a1a;
+}
+
+.faqSection h3:first-of-type {
+  margin-top: 0;
+}
+
+.faqSection p {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #444;
+  margin: 0 0 8px;
+  max-width: 760px;
+}
+
+/* ── CTA section ── */
+.ctaSection {
+  background: #eff6ff;
+  padding: 64px 40px;
+  border-top: 1px solid #dbeafe;
+}
+
+.ctaSection h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #1e3a5c;
+}
+
+.ctaSection p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #374151;
+  max-width: 540px;
+  margin: 0 0 24px;
+}
+
+/* ── Nav resource strip ── */
+.navStrip {
+  background: #fff;
+  padding: 40px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.navStrip h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: #1a1a1a;
+}
+
+.navStrip p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0 0 8px;
+  max-width: 760px;
+}
+
+.navStrip a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .banner { height: 240px; }
+  .heroSection { padding: 36px 20px 32px; }
+  .heroSection h1 { font-size: 1.8rem; }
+  .textSection,
+  .tintSection,
+  .gridSection,
+  .faqSection,
+  .ctaSection { padding: 48px 20px; }
+  .navStrip { padding: 32px 20px; }
+  .grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .heroCtas { flex-direction: column; }
+  .primaryCta,
+  .secondaryCta { text-align: center; }
 }

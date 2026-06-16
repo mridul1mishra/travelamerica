@@ -9,6 +9,7 @@ import styles from "./SoloTripNarrative.module.css";
 
 export default function SoloTripNarrative() {
   return (
+    <section className={styles.narrativeSection}>
     <article className={styles.narrative} aria-label="Solo trip to Las Vegas deep dive">
 
       <section id="can-you-travel-lasvegas-alone" className={styles.section}>
@@ -203,7 +204,7 @@ export default function SoloTripNarrative() {
           and the trip you&apos;re imagining is more available than you think.
         </p>
       </section>
-
     </article>
+    </section>
   );
 }
