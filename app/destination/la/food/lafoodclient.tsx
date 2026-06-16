@@ -15,7 +15,7 @@ export default function LAFoodClient() {
     return(
         <>
         <NavigationHeader />
-        <HeroBanner image={`/data/majorcities/losangeles/assets/la-solo-dining.webp`} bannerText="Hero banner showcasing LA solo dining experience for travelers" variant="wide" />
+        <HeroBanner image={`/data/majorcities/losangeles/assets/la-solo-dining.webp`} bannerText="" variant="wide" />
         <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/bookings?tab=restaurants&from=food" label="See food tours" />
         <SoloDiningGuide />
         <BookingCTA variant="full" text="Book a guided LA food tour" href="/destination/la/bookings?tab=restaurants&from=food" label="See food tours" />

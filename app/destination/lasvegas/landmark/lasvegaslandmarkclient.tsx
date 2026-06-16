@@ -25,7 +25,7 @@ export default function LasVegasLandmarkClient() {
       <NavigationHeader />
       <HeroBanner
         image="/data/majorcities/lasvegas/assets/lasvegas-landmarks-banner.png"
-        bannerText="Las Vegas Landmarks Guide"
+        bannerText=""
         variant="wide"
       />
       <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=activities&from=landmark" label="See tickets" />

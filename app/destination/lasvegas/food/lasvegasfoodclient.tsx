@@ -240,9 +240,10 @@ export default function LasVegasFoodClient() {
                 </ul>
                 </div>
         </section>
+        <FAQAccordion faqs={faqData} />
 
         <BookingCTA variant="full" text="Book a guided Las Vegas food tour" href="/destination/lasvegas/bookings?tab=activities&from=food" label="See food tours" />
-        <FAQAccordion faqs={faqData} />
+        
         <Footer />
         </>
     );

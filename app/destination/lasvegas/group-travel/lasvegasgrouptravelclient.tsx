@@ -16,7 +16,7 @@ export default function LasVegasGroupTravelClient() {
 return (
     <>
         <NavigationHeader />
-        <HeroBanner image={`/data/majorcities/lasvegas/assets/group/lasvegas-group-travel-packing-flatlay-essentials.webp`} bannerText="Flatlay of Las Vegas group travel essentials including backpack, sunglasses, monorail pass, sneakers, and a Strip map" variant="wide" />
+        <HeroBanner image={`/data/majorcities/lasvegas/assets/group/lasvegas-group-travel-packing-flatlay-essentials.webp`} bannerText="" variant="wide" />
         <BookingCTA variant="slim" text="Book hotels for your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=hotels&from=group-travel" label="Book your trip" />
         <section className={`${styles.splitSection} ${styles.introSection}`}>
                 <div className={styles.introContent}>

@@ -15,7 +15,7 @@ export default function LALandmarkClient() {
       <NavigationHeader />
       <HeroBanner
         image="/data/majorcities/losangeles/assets/losangeles.webp"
-        bannerText="Los Angeles Landmarks Guide"
+        bannerText=""
       />
       <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/bookings?tab=activities&from=landmark" label="See tickets" />
       <LandmarkIntro />

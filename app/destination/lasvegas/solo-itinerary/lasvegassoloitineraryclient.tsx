@@ -25,7 +25,7 @@ export default function LasVegasSoloItineraryClient({ grouped }: SoloItineraryCl
       <>
     <div className="App">
       <NavigationHeader />
-      <HeroBanner image={`/data/majorcities/lasvegas/assets/solo-travel-itinerary.png`} bannerText="Solo Travel Itinerary for Las Vegas" variant="wide" />
+      <HeroBanner image={`/data/majorcities/lasvegas/assets/solo-travel-itinerary.png`} bannerText="" variant="wide" />
       <BookingCTA variant="slim" text="Book hotels for your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=hotels&from=solo-itinerary" label="Book this trip" />
       <section className={`${styles.splitSection} ${styles.introSection}`}>
         <div className={styles.introContent}>

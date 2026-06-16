@@ -29,7 +29,7 @@ export default async function LASoloItineraryClient({ grouped }: SoloItineraryCl
       <>
     <div className="App">
       <NavigationHeader />
-      <HeroBanner image={`/data/majorcities/losangeles/assets/solo-travel-itinerary.png`} bannerText="Solo Travel Itinerary for Los Angeles" variant="wide" />
+      <HeroBanner image={`/data/majorcities/losangeles/assets/solo-travel-itinerary.png`} bannerText="" variant="wide" />
       <BookingCTA variant="slim" text="Book hotels for your Los Angeles trip →" href="/destination/la/bookings?tab=hotels&from=solo-itinerary" label="Book this trip" />
       <SoloItineraryHero />
       <SoloDay1 />
