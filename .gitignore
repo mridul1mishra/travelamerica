@@ -46,3 +46,6 @@ next-env.d.ts
 
 # office temp lock files
 .~lock.*#
+
+# claude work files
+/claudeworkfile/
