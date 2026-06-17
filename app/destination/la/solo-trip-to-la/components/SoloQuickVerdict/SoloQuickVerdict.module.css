@@ -1,0 +1,110 @@
+.section {
+  width: min(960px, calc(100% - 32px));
+  margin: 2rem auto;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.07);
+}
+
+.header {
+  max-width: 760px;
+  margin-bottom: 1.35rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.45rem;
+  color: #2563eb;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.header h2 {
+  margin: 0 0 0.65rem;
+  color: #111827;
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  font-weight: 650;
+  line-height: 1.18;
+  letter-spacing: -0.018em;
+}
+
+.header p {
+  margin: 0;
+  color: #4b5563;
+  font-size: clamp(1rem, 1.2vw, 1.08rem);
+  line-height: 1.65;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.card {
+  padding: 1rem;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+}
+
+.card span {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card h3 {
+  margin: 0 0 0.45rem;
+  color: #111827;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.card p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.routeLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.routeLinks a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 0.9rem;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.routeLinks a:hover {
+  background: #dbeafe;
+}
+
+@media (max-width: 640px) {
+  .section {
+    width: calc(100% - 20px);
+    margin: 1.25rem auto;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

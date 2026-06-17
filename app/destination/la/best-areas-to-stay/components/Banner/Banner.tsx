@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Banner.module.css";
 
 interface BannerProps {
@@ -20,9 +21,9 @@ export default function Banner({ cityName, cityHref, description, guideBullets =
     <section className={styles.wrapper}>
       <div className={styles.hero}>
         <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-          <a href="/">Home</a>
+          <Link href="/">Home</Link>
           <span>›</span>
-          <a href={cityHref}>{cityName}</a>
+          <Link href={cityHref}>{cityName}</Link>
           <span>›</span>
           <span className={styles.current}>Best Areas to Stay</span>
         </nav>

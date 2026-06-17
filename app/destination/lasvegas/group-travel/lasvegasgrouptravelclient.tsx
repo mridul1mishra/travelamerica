@@ -18,8 +18,9 @@ return (
         <NavigationHeader />
         <HeroBanner image={`/data/majorcities/lasvegas/assets/group/lasvegas-group-travel-packing-flatlay-essentials.webp`} bannerText="" variant="wide" />
         <BookingCTA variant="slim" text="Book hotels for your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=hotels&from=group-travel" label="Book your trip" />
-        <section className={`${styles.splitSection} ${styles.introSection}`}>
-                <div className={styles.introContent}>
+        <section className={styles.introSection}>
+                <div className={styles.introCard}>
+                <p className={styles.eyebrow}>Las Vegas Group Travel Guide</p>
                 <h1  className={styles.sectionheading}>Las Vegas Group Travel Guide 2026</h1>
                 <p className={styles.introText}>Everything your group needs for Las Vegas — a 3-day itinerary, group-friendly Strip hotels and suites, where to eat as a crowd, the best shows and clubs, plus transport and bachelor/bachelorette logistics so everyone stays together and has a good time.</p>
                 <nav aria-label="Jump to section" className={styles.jumpNav}>

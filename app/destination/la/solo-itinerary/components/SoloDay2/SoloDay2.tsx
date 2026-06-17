@@ -7,15 +7,22 @@ export default function SoloDay2() {
     <section className={styles.splitSection}>
       <div className={styles.textWrapper}>
         <h2 className={styles.heading}>Day 2: Venice Beach &amp; Santa Monica</h2>
-        <p className={styles.subheading}>Trade the car for a bike. Today is all coast — flat path, ocean on your right the whole way.</p>
+        <p className={styles.subheading}>Keep the day coastal. Park once or rideshare in, then let the bike path do the work.</p>
         <ul className={styles.itineraryList}>
-          <li className={styles.subheading}>🌅Morning: Rent a bike in Santa Monica ($15–$25/hr) and ride south to Venice</li>
-          <li className={styles.subheading}>☀️Midday: Venice Boardwalk → lunch at the Gjusta counter on Abbot Kinney</li>
-          <li className={styles.subheading}>☀️Afternoon: Back to Santa Monica — Third Street Promenade or a quiet swim at Annenberg Beach House</li>
-          <li className={styles.subheading}>🌙Evening: Sunset from Santa Monica Pier, then a bar seat at Rustic Canyon</li>
-          <li className={styles.subheading}>🚗Getting around: Park once in Santa Monica and bike the rest — no rideshare needed all day</li>
+          <li className={styles.subheading}>
+            <span className={styles.timeLabel}>Morning</span>
+            Rent a bike in Santa Monica ($15-$25/hr) and ride south toward Venice on the flat beach path.
+          </li>
+          <li className={styles.subheading}>
+            <span className={styles.timeLabel}>Afternoon</span>
+            Venice Boardwalk, Abbot Kinney, and lunch at the Gjusta counter; then loop back toward Santa Monica.
+          </li>
+          <li className={styles.subheading}>
+            <span className={styles.timeLabel}>Evening</span>
+            Sunset at Santa Monica Pier, then a bar seat at Rustic Canyon or an easy dinner on Main Street.
+          </li>
         </ul>
-        <Link href="/destination/la/neighborhood-guide" className={styles.ctaButton}>
+        <Link href="/destination/la/best-areas-to-stay" className={styles.ctaButton}>
           Best neighborhoods for solo travelers in LA
         </Link>
       </div>

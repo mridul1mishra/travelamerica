@@ -2,7 +2,6 @@
 import QuickActionBar from './components/QuickActionBar/QuickActionBar';
 import LaNavHeader from './components/lanavheader/LaNavHeader';
 import sectionsData from "@/content/destination/la/solo-trip-to-la/infosection.json";
-import getaroundData from "@/content/destination/la/solo-trip-to-la/gettingaround.json";
 import InfoSection from './components/InfoSection/InfoSection';
 import neighborhoodsData  from "@/content/destination/la/solo-trip-to-la/neighborhoods.json";
 import BestNeighborhoodsGrid from './components/BestNeighborhoodsGrid/BestNeighborhoodsGrid';
@@ -23,6 +22,7 @@ import { SoloLaQa } from './components/aisnippet/cardqanda';
 import { SoloTripNarrative } from './components/solotripnarrative/SoloTripNarrative';
 import BookingCTA from './components/BookingCTA/BookingCTA';
 import { HeroSection } from './components/herosection/HeroSection';
+import { SoloQuickVerdict } from './components/SoloQuickVerdict/SoloQuickVerdict';
 
 
 export default function SoloTripToLAClient() {
@@ -34,16 +34,16 @@ export default function SoloTripToLAClient() {
         <HeroSection />
         <BookingCTA variant="slim" text="Book hotels for your Los Angeles trip →" href="/destination/la/bookings?tab=hotels&from=solo-trip-to-la" label="Book your trip" />
         <QuickActionBar />
+        <SoloQuickVerdict />
         <InfoSection sections={sectionsData.sections} />
         <WhyTrustThisGuide data={laWhyTrustData} />
-        <SoloLaQa />
-        <SoloTripNarrative />
         <BestNeighborhoodsGrid  neighborhoods={neighborhoodsData.neighborhoods}  ctaLink="/destination/la/best-areas-to-stay"/>
         <SubwayAccessSection />
-        <InfoSection sections={getaroundData.sections} />
         <ThreeDayItinerary days={data.days} ctaLink="/destination/la/solo-itinerary" cityName="LA" />
         <ScenarioSection />
         <FemaleSoloTiles tiles={femaleSolo.tiles}  ctaLink={femaleSolo.ctaLink} cityName="LA" />
+        <SoloTripNarrative />
+        <SoloLaQa />
         <FAQAccordion faqs={faqData} />
         <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/la/bookings?tab=hotels&from=solo-trip-to-la" label="Book your trip" />
         <Footer></Footer>

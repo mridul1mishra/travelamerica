@@ -7,16 +7,16 @@
 }
 
 .subway-section__inner {
-  max-width: 1060px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
 .subway-section__heading { 
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  font-weight: 800;
-  letter-spacing: -0.035em;
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  font-weight: 650;
+  letter-spacing: -0.018em;
   color: #111827;
-  line-height: 1.2;
+  line-height: 1.18;
 }
 
 .subway-section__intro {

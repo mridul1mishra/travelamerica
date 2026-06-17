@@ -27,8 +27,9 @@ export default function LasVegasSoloItineraryClient({ grouped }: SoloItineraryCl
       <NavigationHeader />
       <HeroBanner image={`/data/majorcities/lasvegas/assets/solo-travel-itinerary.png`} bannerText="" variant="wide" />
       <BookingCTA variant="slim" text="Book hotels for your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=hotels&from=solo-itinerary" label="Book this trip" />
-      <section className={`${styles.splitSection} ${styles.introSection}`}>
-        <div className={styles.introContent}>
+      <section className={styles.introSection}>
+        <div className={styles.introCard}>
+          <p className={styles.eyebrow}>Las Vegas Solo Itinerary</p>
           <h1 className={styles.sectionheading}>3-Day Solo Travel Itinerary for Las Vegas</h1>
           <p className={styles.introText}>A solo-friendly route built around walkable days, easy food stops, safe late-night movement, and one desert escape.</p>
         </div>

@@ -1,5 +1,4 @@
 "use client"
-import Link from "next/link";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from "./bestareatostay.module.css";

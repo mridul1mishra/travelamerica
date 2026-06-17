@@ -2,51 +2,69 @@ import styles from "../../bestareatostay.module.css";
 
 const areas = [
   {
-    name: "Santa Monica (Best Overall for First-Timers)",
-    vibe: "Beach access, walkable Third Street Promenade, the famous pier, and a safe, well-lit grid. Closest LA gets to a walkable city. Expensive ($200–$400/night for hotels), but you trade car dependency for convenience.",
-    bestFor: "First-timers, couples, anyone wanting beach + walkability",
+    name: "Santa Monica",
+    badge: "Best overall",
+    summary: "Beach access, Third Street Promenade, the pier, and LA's most walkable visitor grid.",
+    note: "$200-$400/night, but you reduce rideshare and car dependency.",
+    bestFor: "First-timers, couples, beach + walkability",
   },
   {
-    name: "West Hollywood (WeHo)",
-    vibe: "Sunset Strip, lively nightlife, excellent restaurants, walkable between bars and clubs. LGBTQ+ friendly and very social. Mid-range to expensive hotels ($150–$300). Quieter during the day, buzzing at night.",
-    bestFor: "Nightlife, dining, LGBTQ+ travelers, social trips",
+    name: "West Hollywood",
+    badge: "Best nightlife",
+    summary: "Sunset Strip, restaurants, nightlife, and walkable bars in the most social LA base.",
+    note: "$150-$300/night, central for evenings but quieter during the day.",
+    bestFor: "Nightlife, dining, LGBTQ+ travelers",
   },
   {
     name: "Hollywood",
-    vibe: "Walk of Fame, TCL Chinese Theatre, Griffith Observatory access. Central location. Very touristy and congested. Quality varies wildly by block — stick to hotels on Hollywood Blvd or above. Budget to mid-range ($100–$200).",
-    bestFor: "Sightseeing-focused trips, budget travelers wanting central access",
+    badge: "Best sightseeing",
+    summary: "Walk of Fame, TCL Chinese Theatre, and easy access to Griffith Observatory.",
+    note: "$100-$200/night, but quality changes fast by block.",
+    bestFor: "Sightseeing, budget, central access",
   },
   {
     name: "Silver Lake / Los Feliz",
-    vibe: "Hip, local neighborhood with excellent coffee shops, independent restaurants, and a reservoir walk. No beach access. Requires a car or Uber for most attractions. Airbnbs dominate — hotels are scarce.",
-    bestFor: "Repeat visitors, digital nomads, food and culture travelers",
+    badge: "Best local feel",
+    summary: "Coffee shops, independent restaurants, local nightlife, and the reservoir walk.",
+    note: "Limited hotels; expect rideshare or a car for most tourist sights.",
+    bestFor: "Repeat visitors, food, culture",
   },
   {
-    name: "Downtown LA (DTLA)",
-    vibe: "Grand Central Market, The Broad, Staples Center events, Arts District galleries. Rapidly gentrified with excellent hotel value ($120–$180). Some blocks still rough — stay near Grand Ave or the Arts District, not Skid Row adjacent.",
-    bestFor: "Budget travelers, arts and food focus, concert-goers",
+    name: "Downtown LA",
+    badge: "Best value",
+    summary: "Grand Central Market, The Broad, sports venues, and Arts District galleries.",
+    note: "$120-$180/night value; stay near Grand Ave or the Arts District.",
+    bestFor: "Budget travelers, arts, concerts",
   },
   {
     name: "Beverly Hills / Bel Air",
-    vibe: "Rodeo Drive, Mulholland Drive views, ultra-luxury hotels. The safest and most manicured area in LA. Very expensive ($350–$700+/night). Nothing is walkable — you need a car for everything.",
-    bestFor: "Luxury travel, business travel, special occasions",
+    badge: "Best luxury",
+    summary: "Rodeo Drive, polished streets, luxury hotels, and the calmest high-end base.",
+    note: "$350-$700+/night, and you still need a car for almost everything.",
+    bestFor: "Luxury, business, special occasions",
   },
 ];
 
 export default function AreasCompared() {
   return (
     <section aria-labelledby="areas-la" className={styles.section}>
-      <h2 id="areas-la">All Los Angeles Areas Compared</h2>
-      <p style={{ color: "#555", maxWidth: 620, margin: "0.5rem auto 1.5rem", textAlign: "center" }}>
-        Six distinct neighborhoods - what each is actually like and who it suits.
-      </p>
+      <div className={styles.sectionHeader}>
+        <p className={styles.eyebrow}>Neighborhood comparison</p>
+        <h2 id="areas-la">All Los Angeles Areas Compared</h2>
+        <p className={styles.sectionIntro}>
+          Pick the area by trade-off: beach, nightlife, budget, local feel, or luxury.
+        </p>
+      </div>
       <div className={styles.grid}>
-        {areas.map(({ name, vibe, bestFor }) => (
+        {areas.map(({ name, badge, summary, note, bestFor }) => (
           <article key={name} className={styles.card}>
-            <h3 style={{ marginBottom: "0.5rem", fontSize: "1rem", fontWeight: 600 }}>{name}</h3>
-            <p style={{ color: "#555", fontSize: "0.9rem", margin: "0 0 0.5rem" }}>{vibe}</p>
-            <p style={{ color: "#333", fontSize: "0.85rem", margin: 0 }}>
-              <strong>Best for:</strong> {bestFor}
+            <span className={styles.cardBadge}>{badge}</span>
+            <h3 className={styles.cardTitle}>{name}</h3>
+            <p className={styles.cardText}>{summary}</p>
+            <p className={styles.cardNote}>{note}</p>
+            <p className={styles.cardBestFor}>
+              <span>Best for</span>
+              {bestFor}
             </p>
           </article>
         ))}

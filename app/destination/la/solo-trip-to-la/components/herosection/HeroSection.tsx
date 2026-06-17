@@ -14,7 +14,7 @@ export function HeroSection() {
           </p>
 
           <div className={styles.herobuttons}>
-            <a href="#first-24-hours" className={`${styles.btn} ${styles.primary}`}>
+            <a href="#quick-verdict" className={`${styles.btn} ${styles.primary}`}>
               Start planning
             </a>
             <a href="/destination/la/best-areas-to-stay" className={`${styles.btn} ${styles.secondary}`}>
@@ -22,7 +22,7 @@ export function HeroSection() {
             </a>
           </div>
 
-          <p className={styles.updated}>Updated for 2025 · built for first-time solo travelers</p>
+          <p className={styles.updated}>Updated for 2026 · built for first-time solo travelers</p>
         </div>
 
         <div className={styles.heroImage}>

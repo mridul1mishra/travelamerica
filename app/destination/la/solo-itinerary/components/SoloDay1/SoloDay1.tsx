@@ -15,22 +15,19 @@ export default function SoloDay1() {
       </div>
       <div className={styles.textWrapper}>
         <h2 className={styles.heading}>Day 1: Griffith, Los Feliz &amp; Silver Lake</h2>
-        <p className={styles.subheading}>Ease into LA with its most walkable corner — earn a view, then wander streets you can actually do on foot.</p>
+        <p className={styles.subheading}>Start in LA&apos;s easiest solo pocket: one view, one walkable village, one relaxed dinner area.</p>
         <ul className={styles.itineraryList}>
-          <li className={styles.subheading}>🌅Morning: Griffith Observatory (hike up from the Greek Theatre lot, ~30 min)
-            <p className={styles.description}>Free entry. Arrive before 10am to beat the tour groups and earn the city view.</p>
+          <li className={styles.subheading}>
+            <span className={styles.timeLabel}>Morning</span>
+            Griffith Observatory from the Greek Theatre lot; the uphill walk is about 30 minutes and entry is free.
           </li>
-          <li className={styles.subheading}>☀️Afternoon: Los Feliz Village → coffee at Courage Bagels or Sqirl
-            <p className={styles.description}>One of LA&apos;s rare proper walking streets — independent shops along Vermont Ave.</p>
+          <li className={styles.subheading}>
+            <span className={styles.timeLabel}>Afternoon</span>
+            Los Feliz Village and the Silver Lake Reservoir loop; coffee at Courage Bagels or Sqirl if you want a proper pause.
           </li>
-          <li className={styles.subheading}>☀️Midday: Stroll the Silver Lake Reservoir loop
-            <p className={styles.description}>Flat, scenic, and pleasant at dusk — easy to do solo at your own pace.</p>
-          </li>
-          <li className={styles.subheading}>🌙Evening: Dinner at the bar — Bar Moruno or Alimento in Silver Lake
-            <p className={styles.description}>Great solo dining energy at the counter, safe and lively.</p>
-          </li>
-          <li className={styles.subheading}>🚗Getting around: Drive or rideshare to the observatory lot
-            <p className={styles.description}>Solo tip: Griffith and Los Feliz are among the safest areas to walk alone in LA — start here to find your feet.</p>
+          <li className={styles.subheading}>
+            <span className={styles.timeLabel}>Evening</span>
+            Dinner at the bar in Silver Lake; Bar Moruno or Alimento both work well for a solo counter meal.
           </li>
         </ul>
         <Link href="/destination/la/solo-trip-to-la" className={styles.ctaButton}>

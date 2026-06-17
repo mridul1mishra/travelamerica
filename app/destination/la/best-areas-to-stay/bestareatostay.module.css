@@ -10,27 +10,143 @@ body {
 
 /* ── LA-only sections (All Areas Compared, Booking Tips) ── */
 .section {
-  padding: 3rem 1.5rem;
-  max-width: 1100px;
+  padding: clamp(2.5rem, 5vw, 4rem) 1.5rem;
+  max-width: 800px;
   margin: auto;
+}
+
+.sectionHeader {
+  max-width: 760px;
+  margin: 0 auto 1.75rem;
+  text-align: center;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: #111827;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(1.85rem, 3vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.eyebrow {
+  margin: 0 0 0.55rem;
+  color: #2563eb;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sectionIntro {
+  max-width: 620px;
+  margin: 0.75rem auto 0;
+  color: #4b5563;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  line-height: 1.6;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.25rem;
-  margin: 1.5rem 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
 }
 
 .card {
   background: #fff;
-  border: 1px solid #e2e2e2;
-  border-radius: 10px;
-  padding: 1.5rem;
-  text-align: center;
-  transition: all 0.2s ease;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 1.15rem;
+  text-align: left;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
+
 .card:hover {
-  border-color: #000;
-  transform: translateY(-3px);
+  border-color: #bfdbfe;
+  box-shadow: 0 18px 36px rgba(37, 99, 235, 0.1);
+  transform: translateY(-2px);
+}
+
+.cardBadge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.65rem;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  margin: 0 0 0.6rem;
+  color: #111827;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(1.08rem, 1.4vw, 1.28rem);
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  line-height: 1.18;
+}
+
+.cardText,
+.cardNote,
+.cardBestFor {
+  margin: 0;
+  color: #4b5563;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.cardNote {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #edf0f3;
+  color: #374151;
+}
+
+.cardBestFor {
+  margin-top: 0.85rem;
+  padding: 0.75rem;
+  color: #1f2937;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.cardBestFor span {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #6b7280;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 640px) {
+  .section {
+    padding: 2.25rem 1rem;
+  }
+
+  .sectionHeader {
+    text-align: left;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
