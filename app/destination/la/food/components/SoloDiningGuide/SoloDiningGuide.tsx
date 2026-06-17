@@ -5,11 +5,15 @@ import styles from '../../lafood.module.css';
 export default function SoloDiningGuide() {
   return (
     <>
-      <section className={styles.splitSection} style={{ textAlign: "center" }}>
-        <div style={{ width: "100%", textAlign: "center" }}>
+      <section className={styles.introSection}>
+        <div className={styles.introCard}>
+          <p className={styles.eyebrow}>LA Solo Dining Guide</p>
           <h1 className={styles.sectionheading}>
-            Where to Eat Alone in LA: Taco Counters, Korean BBQ and Market Halls
+            Where to Eat Alone in LA
           </h1>
+          <p className={styles.introText}>
+            Taco counters, Koreatown BBQ, ramen rows, and market halls where solo travelers can eat well without making dinner feel like a production.
+          </p>
         </div>
       </section>
 
@@ -67,7 +71,7 @@ export default function SoloDiningGuide() {
           <p className={styles.subheading}>🌮 <strong>The classics.</strong> Tacos 1986 does birria, Leo&apos;s Tacos Truck does al pastor off the trompo, and Guisados does braised fillings — all the old way, on a fresh tortilla. Skip the tourist-facing &apos;Mexican&apos; spots near Hollywood Blvd; the real ones are trucks and counters.</p>
           <p className={styles.subheading}>🍳 <strong>The newer crowd.</strong> Eggslut launched out of a Grand Central Market stall, Sticky Rice built a following two doors down, and the market&apos;s rotating vendors keep things fresh if you&apos;re already downtown.</p>
           <p className={styles.subheading}>🗺️ <strong>Easy solo stops.</strong> Marugame Udon in Little Tokyo and the market counters have stand-up space and a few seats outside, so you can sit with your meal instead of eating on the move.</p>
-          <Link href="/destination/la/solo-trip-to-la" className={styles.ctaButton}>
+                    <Link href="/destination/la/solo-trip-to-la" className={styles.ctaButton}>
             Solo Travel Tips for Dining Out
           </Link>
         </div>

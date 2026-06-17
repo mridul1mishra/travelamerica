@@ -1,14 +1,16 @@
 .section {
-  padding: 60px 0;
-  max-width: 960px;
+  padding: clamp(2.5rem, 4vw, 4rem) 24px;
+  max-width: 1180px;
   margin: 0 auto;
   scroll-margin-top: 80px;
 }
 
 .heading {
-  font-size: 28px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  letter-spacing: -0.035em;
   margin-bottom: 32px;
   text-align: center;
+  color: #111827;
 }
 
 .grid {
@@ -18,10 +20,11 @@
 }
 
 .card {
-  background: #fff7f9;
-  border: 1px solid #f3dce3;
-  border-radius: 12px;
-  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.06);
   text-align: center;
 }
 
@@ -43,13 +46,14 @@
 
 .description {
   font-size: 14px;
-  color: #555;
+  color: #4b5563;
+  line-height: 1.6;
   margin-bottom: 12px;
 }
 
 .link {
   font-weight: 600;
-  color: #d63384;
+  color: #1d4ed8;
   text-decoration: none;
 }
 
@@ -65,15 +69,15 @@
 .cta {
   display: inline-block;
   padding: 12px 20px;
-  background: #d63384;
+  background: #2563eb;
   color: white;
-  border-radius: 8px;
-  font-weight: 600;
+  border-radius: 999px;
+  font-weight: 700;
   text-decoration: none;
 }
 
 .cta:hover {
-  background: #b82b6f;
+  background: #155fc4;
 }
 
 @media (max-width: 768px) {

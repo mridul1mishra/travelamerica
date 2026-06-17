@@ -1,12 +1,9 @@
 "use client";
-import { useParams } from "next/navigation";
 import HeroBanner from "../../../components/Header/HeroBanner";
 import NavigationHeader from "../../../components/Header/NavigationHeader";
-import styles from './lasoloitinerary.module.css';
 import Footer from "@/app/components/Header/Footer/footer";
 import BookingCTA from './components/BookingCTA/BookingCTA';
 import FAQ from "./components/FAQ/FAQ";
-import { getFaq, getFaqItinerary } from "@/app/lib/FaqData";
 import SoloItineraryHero from './components/SoloItineraryHero/SoloItineraryHero';
 import SoloDay1 from './components/SoloDay1/SoloDay1';
 import SoloDay2 from './components/SoloDay2/SoloDay2';
@@ -23,7 +20,7 @@ interface SoloItineraryClientProps {
   grouped: Record<string, FaqItem[]>;
 }
 
-export default async function LASoloItineraryClient({ grouped }: SoloItineraryClientProps) {
+export default function LASoloItineraryClient({ grouped }: SoloItineraryClientProps) {
 
     return(
       <>
@@ -41,9 +38,4 @@ export default async function LASoloItineraryClient({ grouped }: SoloItineraryCl
     </div>
     </>
 );
-}
-function capitalizeWords(str: string) {
-  return str
-    .toLowerCase()
-    .replace(/\b\w/g, (char) => char.toUpperCase());
 }

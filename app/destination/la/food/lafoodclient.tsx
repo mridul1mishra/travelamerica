@@ -1,5 +1,4 @@
 "use client";
-import { useParams } from "next/navigation";
 import HeroBanner from "../../../components/Header/HeroBanner";
 import NavigationHeader from "../../../components/Header/NavigationHeader";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -23,9 +22,4 @@ export default function LAFoodClient() {
         <Footer />
         </>
     );
-}
-function capitalizeWords(str: string) {
-  return str
-    .toLowerCase()
-    .replace(/\b\w/g, (char) => char.toUpperCase());
 }

@@ -6,21 +6,35 @@ export function HeroSection() {
     <section className={styles.hero}>
       <div className={styles.herocontainer}>
         <div className={styles.herotext}>
-          <h1>Solo Trip to Los Angeles: First-Time Traveler Guide</h1>
-          <p className={styles.subtext}>Safe, confident, and stress‑free solo travel in LA.</p>
+          <p className={styles.eyebrow}>Solo Travel in Los Angeles</p>
+          <h1>A first-timer&apos;s guide to doing LA alone, without wasting days in traffic.</h1>
+          <p className={styles.subtext}>
+            Where to stay, how to get around, what to do first, and the parts of LA that actually
+            work when you are traveling solo.
+          </p>
 
           <div className={styles.herobuttons}>
-            <a href="/destination/la/safety-guide" className={`${styles.btn} ${styles.primary}`}>Start with Safety </a>
-            <a href="/destination/la/best-areas-to-stay" className={`${styles.btn} ${styles.secondary}`}>Where to Stay</a>
+            <a href="#first-24-hours" className={`${styles.btn} ${styles.primary}`}>
+              Start planning
+            </a>
+            <a href="/destination/la/best-areas-to-stay" className={`${styles.btn} ${styles.secondary}`}>
+              Compare areas
+            </a>
           </div>
 
-          <p className={styles.updated}>Updated for 2025</p>
+          <p className={styles.updated}>Updated for 2025 · built for first-time solo travelers</p>
         </div>
 
         <div className={styles.heroImage}>
           <div className={styles.imagePlaceholder}>
             <div className={styles.heroImageWrapper}>
-              <Image src="/data/majorcities/losangeles/assets/losangeles.webp" alt="Los Angeles skyline" fill style={{ objectFit: "contain" }} fetchPriority="high"/>
+              <Image
+                src="/data/majorcities/losangeles/assets/solo-travel-itinerary.png"
+                alt="Solo traveler overlooking Los Angeles from Griffith Observatory"
+                fill
+                style={{ objectFit: "cover", objectPosition: "center" }}
+                fetchPriority="high"
+              />
             </div>
           </div>
         </div>

@@ -32,7 +32,7 @@ return (
         </section>
 
         {/* ── ITINERARY SECTION ── */}
-        <section id="itinerary" className={styles.splitSection}>
+        <section id="itinerary" className={`${styles.splitSection} ${styles.imageLeft}`}>
         <div className={styles.imageWrapper}>
           <Image
             src="/data/majorcities/lasvegas/assets/group/lasvegas-group-itinerary-day1-strip-fountains-shows.png"
@@ -50,7 +50,7 @@ return (
           </ul>
         </div>
         </section>
-        <section className={styles.splitSection}>
+        <section className={`${styles.splitSection} ${styles.imageRight}`}>
         <div className={styles.textWrapper}>
           <h2 className={styles.heading}>Day 2: Desert, Dam &amp; Camaraderie</h2>
           <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
@@ -68,7 +68,7 @@ return (
           />
         </div>
         </section>
-        <section className={styles.splitSection}>
+        <section className={`${styles.splitSection} ${styles.imageLeft}`}>
         <div className={styles.imageWrapper}>
           <Image
             src="/data/majorcities/lasvegas/assets/group/lasvegas-group-itinerary-day3-fremont-downtown-helicopter.png"
@@ -88,7 +88,7 @@ return (
         </section>
 
         {/* ── LANDMARKS SECTION ── */}
-        <section id="landmarks" className={styles.splitSection}>
+        <section id="landmarks" className={`${styles.splitSection} ${styles.imageRight}`}>
         <div className={styles.imageWrapper}>
           <Image
             src="/data/majorcities/lasvegas/assets/group/group-travel-lasvegas-1280x853.jpg"
@@ -104,7 +104,7 @@ return (
           <p className={styles.subheading}><strong>To wind down,</strong> a helicopter tour gives the whole group the Strip skyline without anyone having to walk, and the Bellagio fountain show every 15 minutes after dark is a free, flat, easy finish to an evening.</p>
         </div>
         </section>
-        <section className={styles.splitSection}>
+        <section className={`${styles.splitSection} ${styles.imageLeft}`}>
         <div className={styles.textWrapper}>
           <h2 className={styles.heading}>Beyond the Strip: Day Trips and Things to Do by Season</h2>
           <p className={styles.subheading}><strong>Drive the Red Rock Canyon scenic loop</strong> — about 30 minutes from the Strip and a flat 13-mile route with short trailheads, so a group can do as much or as little as it wants. Hoover Dam is 45 minutes the other way with guided tours that work for a crowd.</p>
@@ -120,7 +120,7 @@ return (
           />
         </div>
         </section>
-        <section className={styles.splitSection}>
+        <section className={`${styles.splitSection} ${styles.imageRight}`}>
         <div className={styles.imageWrapper}>
           <Image
             src="/data/majorcities/lasvegas/assets/group/group-travel-lasvegas-small-fremont.webp"
@@ -138,7 +138,7 @@ return (
         </section>
 
         {/* ── DINING SECTION ── */}
-        <section id="dining" className={styles.splitSection}>
+        <section id="dining" className={`${styles.splitSection} ${styles.imageLeft}`}>
         <div className={styles.imageWrapper}>
           <Image
             src="/data/majorcities/lasvegas/assets/group/food/lasvegas-group-food.png"
@@ -149,14 +149,12 @@ return (
         </div>
         <div className={styles.textWrapper}>
           <h2 className={styles.heading}>Where to Eat as a Group in Las Vegas</h2>
-          <p className={styles.subheading}>Feeding a group in Las Vegas is easier than it looks if you pick the right kind of place. Celebrity steakhouses, sushi rooms, family-style Italian, and the big buffets are all built around shared tables — and most Strip restaurants accommodate large parties with advance booking, so call at least a week ahead for 8+.</p>
-          <h3 className={styles.subsectionHeading}>Steakhouses &amp; Celebrity Kitchens</h3>
-          <p className={styles.subheading}><strong>The Strip&apos;s celebrity rooms are made for an occasion.</strong> Gordon Ramsay&apos;s Hell&apos;s Kitchen and Nobu both take large tables if you book; for a private feel, ask about the chef&apos;s table or a private room when you reserve a group of ten or more.</p>
-          <p className={styles.subheading}><strong>The sides are the point at a steakhouse.</strong> Get the creamed spinach, the mac and cheese, and a few towers for the table and let people share rather than ordering their own.</p>
-          <p className={styles.subheading}><strong>For the all-in option,</strong> the Wicked Spoon buffet at the Cosmopolitan is the highest-quality self-managed format for a big group — everyone grazes at their own pace and meets back at a shared table.</p>
+          <p className={styles.subheading}><strong>Book for the table, not the person.</strong> Celebrity steakhouses, sushi rooms, family-style Italian, and major buffets handle groups better than small reservation-only dining rooms.</p>
+          <p className={styles.subheading}><strong>Use the Strip for occasion meals.</strong> Gordon Ramsay&apos;s Hell&apos;s Kitchen and Nobu can take large tables if you book ahead; ask for a chef&apos;s table or private room for ten or more.</p>
+          <p className={styles.subheading}><strong>Let people share.</strong> Steakhouses work best when sides, towers, and mains land in the middle; Wicked Spoon is the easiest all-in buffet when everyone wants a different pace.</p>
         </div>
         </section>
-        <section className={styles.splitSection}>
+        <section className={`${styles.splitSection} ${styles.imageRight}`}>
         <div className={styles.textWrapper}>
           <h2 className={styles.heading}>Korean BBQ, Mocktails and Breweries</h2>
           <p className={styles.subheading}><strong>For a group that wants to cook together,</strong> Korean BBQ is the move — Jang Guem Tofu &amp; BBQ off-Strip has private rooms that seat up to 30, ideal for a whole party. Let the table share the banchan and grilled meats family-style rather than everyone ordering their own.</p>
@@ -173,7 +171,7 @@ return (
           />
         </div>
         </section>
-        <section className={styles.splitSection}>
+        <section className={`${styles.splitSection} ${styles.imageLeft}`}>
         <div className={styles.imageWrapper}>
           <Image
             src="/data/majorcities/lasvegas/assets/group/lasvegas-buffet-collage-group-dining.png"
@@ -191,18 +189,12 @@ return (
         </section>
 
         {/* ── LOGISTICS SECTION ── */}
-        <section className={styles.splitSection}>
+        <section className={`${styles.splitSection} ${styles.imageRight}`}>
         <div className={styles.textWrapper}>
           <h2 className={styles.heading}>Keeping a Group Together in Las Vegas</h2>
-          <p className={styles.subheading}>
-            A few things that actually matter with a crowd: pick a <strong>meeting point</strong> inside every resort
-            — a fountain, a valet, a named bar — because casino floors are huge and disorienting when the group splits.
-            Use the <strong>Las Vegas Monorail</strong> for Strip-to-Strip hops (about $5 a ride or $15 a day) instead of
-            coordinating individual Ubers for 8+, and put everyone on the same maps app so directions match. Hydrate —
-            the desert heat and late nights wear groups down fast. And split costs on{" "}
-            <strong>Splitwise</strong> from day one, factoring in resort fees, so there&apos;s no argument about who owes what.
-            That&apos;s the whole list.
-          </p>
+          <p className={styles.subheading}><strong>Pick meeting points.</strong> Use a fountain, valet, or named bar inside every resort because casino floors are huge and groups get separated quickly.</p>
+          <p className={styles.subheading}><strong>Move together.</strong> Use the Las Vegas Monorail for Strip-to-Strip hops and keep everyone on the same maps app so directions match.</p>
+          <p className={styles.subheading}><strong>Split costs early.</strong> Add resort fees, vans, cabanas, and tables to Splitwise or Venmo from day one so no one argues about who owes what.</p>
         </div>
         <div className={`${styles.imageWrapper} ${styles.wideImageWrapper}`}>
           <Image
@@ -215,28 +207,18 @@ return (
         </section>
 
         {/* ── SHOWS, CLUBS & POOL PARTIES FOR GROUPS SECTION ── */}
-        <section id="shows" className={styles.splitSection}>
+        <section id="shows" className={`${styles.splitSection} ${styles.imageLeft}`}>
         <div className={styles.textWrapper}>
           <h2 className={styles.heading}>Shows, Clubs &amp; Pool Parties</h2>
           <p className={styles.subheading}>
-            Book the big night early. For groups, the win is keeping seats, tables, and transport together instead of
-            improvising on the Strip.
-          </p>
-          <p className={styles.subheading}>
-            <strong>Shows.</strong> Cirque du Soleil group sales start at <strong>10+</strong>. Book one block so the
-            whole party sits together.
+            <strong>Shows.</strong> Cirque du Soleil group sales start at <strong>10+</strong>. Book one block early so the whole party sits together.
           </p>
           <p className={styles.subheading}>
             <strong>Clubs &amp; table service.</strong> XS, Hakkasan, and Omnia tables often run a{" "}
             <strong>$1,000–$5,000</strong> minimum. Split across a group, it can beat cover plus individual drinks.
           </p>
           <p className={styles.subheading}>
-            <strong>Pool parties.</strong> Reserve a cabana <strong>4–6 weeks ahead</strong> for summer weekends; it
-            keeps everyone in one place.
-          </p>
-          <p className={styles.subheading}>
-            <strong>Transport.</strong> Use a party bus or limo for club nights so the group moves together and avoids
-            the taxi-line scramble.
+            <strong>Pool parties &amp; transport.</strong> Reserve cabanas <strong>4–6 weeks ahead</strong> for summer weekends and use a party bus or limo so the group moves together.
           </p>
         </div>
         <div className={styles.imageWrapper}>
@@ -250,7 +232,7 @@ return (
         </section>
 
         {/* ── Las Vegas-only: bachelor/bachelorette & cost-management (NYC template has no equivalent) ── */}
-        <section className={styles.splitSection}>
+        <section className={`${styles.splitSection} ${styles.imageRight}`}>
         <div className={styles.imageWrapper}>
           <Image
             src="/data/majorcities/lasvegas/assets/group/lasvegas-group-suite-bachelorette.png"
@@ -266,7 +248,7 @@ return (
           <p className={styles.subheading}><strong>Moving the party.</strong> A party bus or limo (booked ahead) keeps a bachelor/bachelorette group together across dinner, show, and club, and avoids the logistics headache of coordinating individual rides for 8+ people late at night.</p>
         </div>
         </section>
-        <section className={styles.splitSection}>
+        <section className={`${styles.splitSection} ${styles.imageLeft}`}>
         <div className={styles.textWrapper}>
           <h2 className={styles.heading}>Cost Management for Groups</h2>
           <p className={styles.subheading}><strong>Watch the resort fees.</strong> Resort fees ($35–$50/night per room) are the hidden cost that catches groups off-guard. Always calculate the full nightly rate including fees before comparing hotels — the cheaper headline rate often isn&apos;t cheaper once fees are added.</p>
@@ -275,8 +257,8 @@ return (
         </div>
         <div className={styles.imageWrapper}>
           <Image
-            src="/data/majorcities/lasvegas/assets/group/lasvegas-group-cost-splitting-resort-fees.png"
-            alt="Illustration of Las Vegas group cost management showing resort fees, shared villa, and a cost-splitting app on a phone"
+            src="/data/majorcities/lasvegas/assets/group/lasvegas-group-cost-management-suite.png"
+            alt="Friends in a Las Vegas hotel suite reviewing shared trip expenses, receipts, and an expense-splitting app"
             fill
             className={styles.mapImage}
           />

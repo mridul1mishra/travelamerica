@@ -16,23 +16,40 @@
 }
 
 .introSection {
-  justify-content: center;
-  text-align: center;
-  background: linear-gradient(135deg, #f8fafc 0%, #fff 55%, #eff6ff 100%);
+  width: min(1200px, calc(100% - 2rem));
+  margin: 1.25rem auto;
 }
 
-.introContent {
-  max-width: 900px;
+.introCard {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3.25rem);
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-montserrat);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b5931a;
 }
 
 .sectionheading {
-  margin: 0 0 1rem;
+  max-width: 720px;
+  margin: 0 auto 0.9rem;
   color: #111827;
   font-family: var(--font-montserrat);
-  font-size: clamp(2.25rem, 4vw, 3.85rem);
+  font-size: clamp(1.85rem, 3vw, 2.65rem);
   font-weight: 800;
-  letter-spacing: -0.05em;
-  line-height: 1.05;
+  letter-spacing: -0.03em;
+  line-height: 1.16;
   text-align: center;
 }
 

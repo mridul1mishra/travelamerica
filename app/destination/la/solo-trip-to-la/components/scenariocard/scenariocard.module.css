@@ -1,24 +1,26 @@
 /* ScenarioSection.css */
 
 .scenario-section {
-  padding: 3rem 1.5rem;
-  background: #fff8f6;
+  padding: clamp(2.5rem, 4vw, 4rem) 1.5rem;
+  background: #ffffff;
 }
 
 .scenario-section__inner {
-  max-width: 960px;
+  max-width: 1060px;
   margin: 0 auto;
 }
 
 .scenario-section__heading {
-  font-size: 1.75rem;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  letter-spacing: -0.035em;
   margin-bottom: 1rem;
-  color: #222;
+  color: #111827;
 }
 
 .scenario-section__intro {
   font-size: 1rem;
-  color: #444;
+  color: #4b5563;
+  line-height: 1.65;
   margin-bottom: 2rem;
 }
 
@@ -35,10 +37,10 @@
 
 .scenario-card {
   padding: 1.25rem;
-  border: 1px solid #f3d9d0;
-  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
   background: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.06);
 }
 
 .scenario-card__title {
@@ -51,14 +53,14 @@
 .scenario-card__context,
 .scenario-card__advice {
   font-size: 0.95rem;
-  color: #555;
-  line-height: 1.6;
+  color: #4b5563;
+  line-height: 1.65;
   margin-bottom: 0.5rem;
 }
 
 .scenario-card__cta {
   font-size: 0.9rem;
-  color: #c93f1b;
+  color: #1d4ed8;
   font-weight: 600;
   text-decoration: none;
 }

@@ -20,8 +20,9 @@ export default function LasVegasFoodClient() {
         <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=activities&from=food" label="See food tours" />
 
         {/* H1 / Intro */}
-        <section className={`${styles.splitSection} ${styles.introSection}`}>
-                <div className={styles.introContent}>
+        <section className={styles.introSection}>
+                <div className={styles.introCard}>
+                <p className={styles.eyebrow}>Las Vegas Food Guide</p>
                 <h1 className={styles.sectionheading}>Where to Eat in Las Vegas: The 2026 Food Guide</h1>
                 <p className={styles.introText}>
                   Las Vegas has gone from buffet town to one of America&apos;s most serious eating cities, and the hard part
@@ -243,7 +244,7 @@ export default function LasVegasFoodClient() {
         <FAQAccordion faqs={faqData} />
 
         <BookingCTA variant="full" text="Book a guided Las Vegas food tour" href="/destination/lasvegas/bookings?tab=activities&from=food" label="See food tours" />
-        
+
         <Footer />
         </>
     );
