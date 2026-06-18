@@ -1,31 +1,11 @@
-﻿"use client";
+"use client";
 
-import { Suspense, useState } from "react";
-import { useSearchParams } from "next/navigation";
-import styles from "./booking.module.css";
-import "./components/BookingHeader.css";
-import "./components/propertylisting.css";
-import ActivitiesTab from "./components/ActivitiesTab";
-import BookingIntro from "./components/BookingIntro";
-import BookingTabs from "./components/BookingTabs";
-import BreadcrumbNav from "./components/BreadcrumbNav";
+import BookingClient, { type CityBookingConfig } from "./components/BookingClient/BookingClient";
 import FAQAccordion from "./components/FAQAccordion";
-import FlightsTab from "./components/FlightsTab";
-import GuideRail from "./components/GuideRail";
-import HeroBanner from "./components/HeroBanner/HeroBanner";
-import HotelsTab from "./components/HotelsTab";
-import NavigationHeader from "./components/NavigationHeader/NavigationHeader";
-import RelatedGuides from "./components/RelatedGuides";
-import type { CityBookingConfig, TabKey } from "./components/bookingTypes";
 import faqData from "@/content/destination/nyc/booking/faq/faqsection.json";
 import bookFlights from "@/content/cities/newyork/bookflights.json";
 import hotelsData from "@/content/cities/newyork/hotels.json";
 import thingsToDoData from "@/content/cities/newyork/thingstodo.json";
-
-function getInitialTab(param: string | null, validTabs: Set<TabKey>): TabKey {
-  if (param && validTabs.has(param as TabKey)) return param as TabKey;
-  return "flights";
-}
 
 const config: CityBookingConfig = {
   cityName: "New York",
@@ -33,11 +13,11 @@ const config: CityBookingConfig = {
   bookingHref: "/destination/nyc/booking",
   headerImage: "/data/majorcities/newyork/assets/newyork.jpeg",
   bannerText: "Book your New York trip",
-  pageTitle: "",
+  pageTitle: "Book Your New York Trip",
   tabs: [
-    { key: "flights", label: "Flights", icon: "" },
-    { key: "hotels", label: "Hotels", icon: "" },
-    { key: "activities", label: "Things to Do", icon: "" },
+    { key: "flights", label: "Flights", icon: "plane" },
+    { key: "hotels", label: "Hotels", icon: "hotel" },
+    { key: "activities", label: "Things to Do", icon: "ticket" },
   ],
   tabRail: {
     flights: {
@@ -92,49 +72,16 @@ const config: CityBookingConfig = {
       ],
     },
   ],
+  bookingTips: [
+    { heading: "Airports", text: "JFK, LaGuardia, and Newark can all work. Choose by transfer time, not only airfare." },
+    { heading: "Transit", text: "Most first-time trips are easier by subway and walking than by rental car." },
+    { heading: "Hotels", text: "Midtown is convenient, but Chelsea, Flatiron, Downtown Brooklyn, and Long Island City can be better value." },
+  ],
   flights: bookFlights as CityBookingConfig["flights"],
   hotels: hotelsData as CityBookingConfig["hotels"],
   activities: thingsToDoData as CityBookingConfig["activities"],
 };
 
-const nycBookingFaq = <FAQAccordion faqs={faqData} />;
-
-function BookFlightsContent() {
-  const searchParams = useSearchParams();
-  const validTabs = new Set<TabKey>(config.tabs.map((tab) => tab.key));
-  const [activeTab, setActiveTab] = useState<TabKey>(() =>
-    getInitialTab(searchParams.get("tab")?.toLowerCase() ?? null, validTabs)
-  );
-
-  return (
-    <div className="App">
-      <NavigationHeader />
-      <HeroBanner image={config.headerImage} bannerText={config.bannerText} variant={config.headerVariant} />
-      <BreadcrumbNav cityName={config.cityName} cityHref={config.cityHref} />
-
-      {config.pageTitle ? <h1 className={styles.pageHeading}>{config.pageTitle}</h1> : null}
-      <BookingIntro />
-
-      <BookingTabs tabs={config.tabs} activeTab={activeTab} onSelectTab={setActiveTab} />
-
-      {activeTab === "flights" ? <FlightsTab flights={config.flights} /> : null}
-      {activeTab === "hotels" ? <HotelsTab cityName={config.cityName} hotels={config.hotels} /> : null}
-      {activeTab === "activities" ? (
-        <ActivitiesTab cityName={config.cityName} activities={config.activities} />
-      ) : null}
-
-      <GuideRail rail={config.tabRail[activeTab]} onSelectTab={setActiveTab} />
-      <RelatedGuides cityName={config.cityName} groups={config.relatedGroups} />
-
-      {nycBookingFaq}
-    </div>
-  );
-}
-
 export default function BookFlightsClient() {
-  return (
-    <Suspense>
-      <BookFlightsContent />
-    </Suspense>
-  );
+  return <BookingClient config={config} faqSection={<FAQAccordion faqs={faqData} />} />;
 }
