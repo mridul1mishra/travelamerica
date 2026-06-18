@@ -11,7 +11,7 @@ interface BannerProps {
 const DEFAULT_BULLETS = [
   "The safest neighborhoods for solo travelers",
   "Where to stay for nightlife, food, or budget",
-  "Areas to avoid (and why)",
+  "Areas to avoid and why",
   "How to choose based on your travel style",
   "Local tips most tourists miss",
 ];
@@ -22,20 +22,26 @@ export default function Banner({ cityName, cityHref, description, guideBullets =
       <div className={styles.hero}>
         <nav className={styles.breadcrumb} aria-label="Breadcrumb">
           <Link href="/">Home</Link>
-          <span>›</span>
+          <span>/</span>
           <Link href={cityHref}>{cityName}</Link>
-          <span>›</span>
+          <span>/</span>
           <span className={styles.current}>Best Areas to Stay</span>
         </nav>
+
         <div className={styles.herocontent}>
+          <p className={styles.eyebrow}>Los Angeles stay guide</p>
           <h1>Best Areas to Stay in {cityName}</h1>
           <p>{description}</p>
         </div>
-        <div className={styles.infobox}>
-          <h2><span className={styles.infoicon}>ℹ</span>In this guide, you&apos;ll learn:</h2>
-          <ul>{guideBullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>
-        </div>
-        <div className={styles.envelopebottom}></div>
+
+        <aside className={styles.infobox} aria-label="What this page helps you decide">
+          <h2>Use this page to decide</h2>
+          <ul>
+            {guideBullets.slice(0, 4).map((bullet) => (
+              <li key={bullet}>{bullet}</li>
+            ))}
+          </ul>
+        </aside>
       </div>
     </section>
   );

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./SoloTripIntro.module.css";
 
 export interface SoloTripCard {
@@ -5,6 +6,7 @@ export interface SoloTripCard {
   title: string;
   description: string;
   cta: string;
+  href?: string;
 }
 
 export interface SoloTripIntroProps {
@@ -21,13 +23,16 @@ const DEFAULT_CARDS: SoloTripCard[] = [
   { icon: "💸", title: "On a Budget", description: "Smart picks and free gems — great trips without overspending.", cta: "Budget guide" },
 ];
 
-function CategoryCard({ icon, title, description, cta }: SoloTripCard) {
+function CategoryCard({ icon, title, description, cta, href }: SoloTripCard) {
   return (
     <div className={styles.card}>
       <div className={styles.icon}>{icon}</div>
       <h3 className={styles.cardTitle}>{title}</h3>
       <p className={styles.cardDescription}>{description}</p>
-      <button className={styles.cta}>{cta}</button>
+      {href
+        ? <Link href={href} className={styles.cta}>{cta}</Link>
+        : <button className={styles.cta}>{cta}</button>
+      }
     </div>
   );
 }

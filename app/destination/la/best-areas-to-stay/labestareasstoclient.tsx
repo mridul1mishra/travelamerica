@@ -107,6 +107,12 @@ export default function LABestAreasClient() {
           "How to get around without a car",
           "When to book and what to avoid",
         ]}
+        cards={[
+          { icon: "🛡️", title: "For Safety", description: "Find areas with high visibility, foot traffic, and safe streets.", cta: "Safety guide", href: "/destination/la/safety-guide" },
+          { icon: "🌃", title: "For Nightlife", description: "Explore solo-friendly venues with great vibes and easy access.", cta: "Things to do", href: "/destination/la/things-to-do" },
+          { icon: "🍜", title: "For Foodies", description: "Discover local favorites and budget-friendly bites.", cta: "Food guide", href: "/destination/la/food" },
+          { icon: "💸", title: "On a Budget", description: "Smart picks and free gems — great trips without overspending.", cta: "Solo trip guide", href: "/destination/la/solo-trip-to-la" },
+        ]}
       />
       <SectionSafestNeighborhoods
         title="Safest Neighborhoods in LA"
