@@ -49,6 +49,7 @@ const csp = `
   frame-src 'none';
   base-uri 'self';
   form-action 'self';
+  upgrade-insecure-requests;
 `.replace(/\s{2,}/g, " ")
   .trim();
 

@@ -55,6 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">      
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}>
         <Script strategy="afterInteractive"  src="https://www.googletagmanager.com/gtag/js?id=G-SM7NC16K21"/>
         <Script id="ga-script"  strategy="afterInteractive"  dangerouslySetInnerHTML={{__html: `window.dataLayer = window.dataLayer || [];

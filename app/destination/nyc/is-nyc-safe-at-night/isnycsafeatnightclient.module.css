@@ -1,0 +1,556 @@
+.page {
+  overflow-x: clip;
+  background: #f4efe9;
+  color: #111827;
+}
+
+.hero,
+.verdictGrid,
+.answerBand,
+.section,
+.featureSection,
+.transitSection,
+.emergencyBand,
+.faqSection,
+.bookingBand,
+.resourceLinks {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  align-items: stretch;
+  padding: clamp(1.25rem, 3vw, 2.25rem) 0 1rem;
+}
+
+.heroCopy,
+.heroMedia {
+  min-width: 0;
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1rem, 2.5vw, 2rem);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.heroMedia {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #111827;
+  border-radius: 8px;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.9rem;
+  color: #64748b;
+  font-size: 0.84rem;
+  line-height: 1.3;
+}
+
+.breadcrumb a {
+  color: #475569;
+  font-weight: 680;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #1d4ed8;
+}
+
+.current {
+  color: #111827;
+  font-weight: 760;
+}
+
+.eyebrow {
+  margin: 0 0 0.55rem;
+  color: #2563eb;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroCopy h1,
+.answerBand h2,
+.sectionIntro h2,
+.featureCopy h2,
+.emergencyBand h2,
+.bookingBand h2 {
+  margin: 0;
+  color: #111827;
+  font-family: var(--font-montserrat);
+  font-weight: 720;
+  letter-spacing: 0;
+  line-height: 1.08;
+}
+
+.heroCopy h1 {
+  max-width: 720px;
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+}
+
+.answerBand h2,
+.sectionIntro h2,
+.featureCopy h2,
+.emergencyBand h2,
+.bookingBand h2 {
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+}
+
+.heroCopy p,
+.answerBand p,
+.sectionIntro p,
+.featureCopy p,
+.zoneColumn p,
+.scenarioCard p,
+.transitGrid p,
+.emergencyBand p,
+.faqGrid p,
+.bookingBand p {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.primaryButton,
+.secondaryButton,
+.bookingButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 42px;
+  padding: 0.65rem 0.95rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 760;
+  text-align: center;
+  text-decoration: none;
+}
+
+.primaryButton,
+.bookingButton {
+  color: #ffffff;
+  background: #1d4ed8;
+}
+
+.secondaryButton {
+  color: #1d4ed8;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.trustRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.trustRow span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0.35rem 0.6rem;
+  color: #374151;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 740;
+}
+
+.verdictBadge {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  display: grid;
+  gap: 0.25rem;
+  max-width: 22rem;
+  padding: 0.9rem 1rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(229, 231, 235, 0.95);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+}
+
+.verdictBadge span {
+  color: #1d4ed8;
+  font-size: 1.6rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.verdictBadge strong {
+  color: #111827;
+  line-height: 1.25;
+}
+
+.verdictGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  margin-top: 0.65rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #e5e7eb;
+}
+
+.verdictGrid article {
+  min-height: 166px;
+  padding: 1rem;
+  background: #ffffff;
+}
+
+.verdictGrid span,
+.riskTag {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 26px;
+  margin-bottom: 0.45rem;
+  padding: 0.22rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.verdictGrid span {
+  color: #1d4ed8;
+  background: #eff6ff;
+}
+
+.verdictGrid strong {
+  display: block;
+  color: #111827;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.verdictGrid p {
+  margin: 0.55rem 0 0;
+  color: #4b5563;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.answerBand,
+.emergencyBand,
+.bookingBand {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.52fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: center;
+  margin-top: clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(1.35rem, 3vw, 2rem);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.answerBand ul,
+.emergencyCards,
+.resourceLinks {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.answerBand ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.answerBand li {
+  position: relative;
+  padding-left: 1rem;
+  color: #374151;
+  line-height: 1.55;
+}
+
+.answerBand li::before,
+.scenarioCard li::before,
+.transitGrid li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 0.38rem;
+  height: 0.38rem;
+  background: #2563eb;
+  border-radius: 999px;
+}
+
+.section,
+.featureSection,
+.transitSection,
+.faqSection {
+  padding: clamp(2.2rem, 5vw, 4rem) 0 0;
+}
+
+.sectionIntro {
+  max-width: 780px;
+  margin-bottom: 1.25rem;
+}
+
+.neighborhoodGrid,
+.scenarioGrid,
+.transitGrid,
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.zoneColumn,
+.scenarioCard,
+.transitGrid article,
+.faqGrid article,
+.emergencyCards article {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.zoneColumn {
+  padding: 1rem;
+}
+
+.zoneColumn h3 {
+  margin: 0 0 0.85rem;
+  color: #111827;
+  font-size: 1.05rem;
+}
+
+.zoneColumn article {
+  padding: 0.85rem 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.zoneColumn strong {
+  display: block;
+  color: #111827;
+  font-size: 1rem;
+}
+
+.zoneColumn p {
+  margin: 0.3rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.48;
+}
+
+.safe {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.mixed {
+  color: #854d0e;
+  background: #fef3c7;
+}
+
+.avoid {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.featureSection {
+  display: grid;
+  grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+}
+
+.featureCopy {
+  padding: 0.5rem 0;
+}
+
+.scenarioCard,
+.transitGrid article,
+.faqGrid article {
+  padding: 1rem;
+}
+
+.scenarioCard h3,
+.transitGrid h3,
+.faqGrid h3,
+.emergencyCards strong {
+  margin: 0;
+  color: #111827;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.scenarioCard p,
+.transitGrid p,
+.faqGrid p,
+.emergencyCards p {
+  margin: 0.55rem 0 0;
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+.scenarioCard ul,
+.transitGrid ul {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scenarioCard li,
+.transitGrid li {
+  position: relative;
+  padding-left: 1rem;
+  color: #374151;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.transitGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.emergencyBand {
+  background: #f8fafc;
+}
+
+.emergencyCards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.emergencyCards article {
+  padding: 1rem;
+}
+
+.faqGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.bookingBand {
+  margin-bottom: 1rem;
+  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.06);
+}
+
+.bookingBand p {
+  max-width: 720px;
+  margin-bottom: 0;
+}
+
+.bookingButton {
+  width: fit-content;
+  justify-self: end;
+  white-space: nowrap;
+}
+
+.resourceLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  padding: 1rem 0 clamp(2.5rem, 5vw, 4rem);
+}
+
+.resourceLinks a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0.45rem 0.75rem;
+  color: #1d4ed8;
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 760;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .answerBand,
+  .featureSection,
+  .emergencyBand,
+  .bookingBand {
+    grid-template-columns: 1fr;
+  }
+
+  .heroMedia {
+    aspect-ratio: 16 / 10;
+  }
+
+  .verdictGrid,
+  .neighborhoodGrid,
+  .scenarioGrid,
+  .transitGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bookingButton {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero,
+  .verdictGrid,
+  .answerBand,
+  .section,
+  .featureSection,
+  .transitSection,
+  .emergencyBand,
+  .faqSection,
+  .bookingBand,
+  .resourceLinks {
+    width: min(100% - 1.25rem, 1120px);
+  }
+
+  .heroMedia {
+    aspect-ratio: 4 / 3;
+  }
+
+  .heroActions,
+  .primaryButton,
+  .secondaryButton,
+  .bookingButton {
+    width: 100%;
+  }
+
+  .verdictGrid,
+  .neighborhoodGrid,
+  .scenarioGrid,
+  .transitGrid,
+  .faqGrid,
+  .emergencyCards {
+    grid-template-columns: 1fr;
+  }
+}

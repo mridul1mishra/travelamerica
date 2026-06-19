@@ -1,256 +1,323 @@
 'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './nycthingstodoclient.module.css';
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import BookingCTA from "./components/BookingCTA/BookingCTA";
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+
+const quickChoices = [
+  {
+    label: 'First NYC trip',
+    title: 'Pick icons that stack together',
+    copy: 'Statue ferry, Brooklyn Bridge, Top of the Rock, Central Park, and one Broadway night cover the classic memories without zigzagging.',
+  },
+  {
+    label: 'Free day',
+    title: 'Build around walks and views',
+    copy: 'Staten Island Ferry, Grand Central, the High Line, Little Island, and Brooklyn Bridge can make a full day with almost no ticket spend.',
+  },
+  {
+    label: 'Culture day',
+    title: 'Choose one museum zone',
+    copy: 'Do the Met with Central Park, MoMA with Midtown, or the Tenement Museum with the Lower East Side. One anchor is enough.',
+  },
+  {
+    label: 'Food-led trip',
+    title: 'Let neighborhoods drive the plan',
+    copy: 'Chelsea Market, Chinatown, Koreatown, Williamsburg, and the East Village work best when food is the reason for being there.',
+  },
+];
+
+const mustDoCards = [
+  {
+    number: '01',
+    title: 'Walk Brooklyn Bridge into DUMBO',
+    meta: 'Free | 45-75 minutes',
+    copy: 'Start on the Manhattan side and end with skyline photos, coffee, and waterfront time in Brooklyn Bridge Park.',
+  },
+  {
+    number: '02',
+    title: 'Pick one observation deck',
+    meta: 'Ticketed | sunset or late night',
+    copy: 'Top of the Rock is the best skyline photo. SUMMIT is the most theatrical. Do one well instead of buying three similar views.',
+  },
+  {
+    number: '03',
+    title: 'Use Central Park as a reset',
+    meta: 'Free | half day friendly',
+    copy: 'Bethesda Terrace, Bow Bridge, the Mall, and the Reservoir are the easiest way to slow the trip without leaving Manhattan.',
+  },
+  {
+    number: '04',
+    title: 'Pair Broadway with Midtown dinner',
+    meta: 'Ticketed | evening anchor',
+    copy: 'Book the show first, then choose dinner in Hell\'s Kitchen, Koreatown, or the Theater District so the night stays simple.',
+  },
+  {
+    number: '05',
+    title: 'Do one serious museum',
+    meta: 'Ticketed | 2-4 hours',
+    copy: 'The Met, MoMA, Natural History, and the Tenement Museum all deserve real time. Treat one as the main event, not a filler stop.',
+  },
+  {
+    number: '06',
+    title: 'Take the free harbor view',
+    meta: 'Free | 60-90 minutes',
+    copy: 'The Staten Island Ferry gives you skyline and Statue of Liberty views without turning the day into a full island visit.',
+  },
+];
+
+const neighborhoodRoutes = [
+  ['Lower Manhattan + DUMBO', 'Statue ferry, 9/11 Memorial plaza, Brooklyn Bridge, DUMBO waterfront.'],
+  ['Midtown + Theater District', 'Top of the Rock, Grand Central, NYPL, Bryant Park, Broadway.'],
+  ['Chelsea + West Side', 'High Line, Chelsea Market, galleries, Little Island, Hudson Yards.'],
+  ['Upper East Side + Central Park', 'The Met, Guggenheim, Frick, Bethesda Terrace, Reservoir loop.'],
+  ['Brooklyn day', 'Prospect Park, Brooklyn Botanic Garden, Williamsburg food, Brooklyn Heights Promenade.'],
+];
+
+const mapSummaryRoutes = neighborhoodRoutes.slice(0, 2);
+const detailRoutes = neighborhoodRoutes.slice(2);
+
+const budgetMoves = [
+  'Do one paid skyline view and make the rest free walks.',
+  'Use food halls, slice shops, bagels, and bakeries between big activities.',
+  'Avoid crossing town for single stops. Cluster each day by neighborhood.',
+  'Check current museum free hours before building the day around them.',
+];
+
+const faqItems = [
+  {
+    question: 'How many things should I plan per day?',
+    answer: 'Two major anchors plus one flexible neighborhood walk is the sweet spot. More than that usually turns the day into transit management.',
+  },
+  {
+    question: 'What is the best free thing to do in NYC?',
+    answer: 'For first-timers, the Brooklyn Bridge walk or Staten Island Ferry gives the biggest NYC feeling for no ticket cost.',
+  },
+  {
+    question: 'Which observation deck should I choose?',
+    answer: 'Top of the Rock is the safest recommendation for skyline photos. SUMMIT One Vanderbilt is better if you want a more immersive experience.',
+  },
+  {
+    question: 'Should I buy attraction passes?',
+    answer: 'Only if you are genuinely doing several paid attractions in a short window. Otherwise, individual tickets plus free walks usually feel less forced.',
+  },
+];
 
 export default function NYCThingsToDoClient() {
   return (
     <>
-    <Header />
-    <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=activities&from=things-to-do" label="See tickets & tours" />
-    <main className={styles.container}>
-      {/* Hero / Visual Header */}
-      <section className={styles.banner}>
-        <Image
-        src="/destination/nyc-things-to-do.jpg"
-        alt="Experience and activities in NewYork City"
-        fill
-        priority
-        className={styles.bannerImage}
-        />
-      </section>
-      <section className={styles.hero}>
-        <h1>The Best Things to Do in New York City</h1>
-        <p>
-          New York rewards a plan. There are more things to do in NYC than any one trip can hold,
-          and the difference between a great visit and an exhausting one usually comes down to
-          grouping the right things together and not crossing the city five times a day. This guide
-          breaks the city into what&apos;s actually worth your time — the iconic stuff, the free stuff,
-          the neighborhoods, and the views — so you can build days that flow instead of sprint. Mix
-          two or three of these per day and leave room to wander; the wandering is half of why
-          people fall for this city.
-        </p>
-      </section>
+      <Header />
+      <main className={styles.page}>
+        <section className={styles.hero}>
+          <div className={styles.heroCopy}>
+            <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+              <Link href="/">Home</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/destination/nyc">New York City</Link>
+              <span aria-hidden="true">/</span>
+              <span className={styles.current}>Things to Do</span>
+            </nav>
+            <p className={styles.eyebrow}>NYC things to do</p>
+            <h1>The Best Things to Do in New York City</h1>
+            <p>
+              New York gets easier when you stop treating it like a checklist. Pick one big anchor,
+              cluster nearby neighborhoods around it, and leave room for the city to surprise you.
+            </p>
+            <div className={styles.heroActions}>
+              <Link href="/destination/nyc/booking?tab=activities&from=things-to-do" className={styles.primaryButton}>
+                See tickets and tours
+              </Link>
+              <a href="#planner" className={styles.secondaryButton}>Browse by trip style</a>
+            </div>
+            <div className={styles.trustRow} aria-label="Activity planning highlights">
+              <span><strong>Curated</strong> trip anchors</span>
+              <span><strong>Free + paid</strong> options</span>
+              <span><strong>Neighborhood</strong> routing</span>
+            </div>
+          </div>
+          <div className={styles.heroMedia}>
+            <Image
+              src="/destination/nyc-things-to-do-brooklyn-bridge.jpg"
+              alt="People walking the Brooklyn Bridge promenade toward the Manhattan skyline"
+              fill
+              priority
+              sizes="(max-width: 900px) 100vw, 48vw"
+              className={styles.heroImage}
+            />
+          </div>
+        </section>
 
-      {/* The Icons */}
-      <section className={styles.bridge}>
-        <h2>The icons (do at least a few)</h2>
-        <p>
-          These are the names everyone knows, and they&apos;re famous for a reason. You don&apos;t need all
-          of them — pick the ones that match your trip.
-        </p>
-        <ul>
-          <li><strong>Statue of Liberty &amp; Ellis Island</strong> — half a day with the ferry from Battery Park.
-          Book the earliest slot; lines balloon after 10 AM. Ferry + grounds runs around $25–30;
-          crown access books months ahead.</li>
-          <li><strong>Empire State Building</strong> — the 86th-floor open-air deck is the classic. Tickets from ~$44.
-          Late evening (after 9 PM) means full skyline lights and almost no line.</li>
-          <li><strong>Top of the Rock</strong> — three-tier deck at Rockefeller Center, from ~$39. The local pick over
-          the Empire State, because the Empire State is <em>in</em> your photo here.</li>
-          <li><strong>SUMMIT One Vanderbilt</strong> — the newest deck: mirrored rooms, glass ledges, an art
-          installation as much as a viewpoint. Good for first-timers who want the &quot;wow.&quot;</li>
-          <li><strong>Edge at Hudson Yards</strong> — the highest open-air sky deck in the Western Hemisphere, ~$42.</li>
-          <li><strong>Brooklyn Bridge</strong> — free, 24/7. Walk Manhattan to DUMBO so the skyline sits ahead of
-          you. About 35–45 minutes.</li>
-          <li><strong>Times Square</strong> — worth seeing once, after dark, for the sensory overload. See it, then
-          walk two avenues in any direction for better, cheaper food.</li>
-        </ul>
-        <p>Pick <strong>one</strong> paid observation deck, not three — the views rhyme and the tickets add up fast.</p>
-      </section>
+        <section id="planner" className={styles.quickPanel} aria-label="Choose your NYC activity style">
+          {quickChoices.map((item) => (
+            <article key={item.label}>
+              <span>{item.label}</span>
+              <strong>{item.title}</strong>
+              <p>{item.copy}</p>
+            </article>
+          ))}
+        </section>
 
-      {/* Free things */}
-      <section className={styles.bridge}>
-        <h2>Free things to do in NYC</h2>
-        <p>
-          You can have a genuinely great NYC day for $0. Some of the best experiences in the city
-          don&apos;t cost anything.
-        </p>
-        <ul>
-          <li><strong>Staten Island Ferry</strong> — free, 25 minutes each way, passes the Statue of Liberty.
-          The best free skyline cruise in the city.</li>
-          <li><strong>Central Park</strong> — 843 acres. Bethesda Terrace, Bow Bridge, the Mall, the Ramble,
-          the Reservoir loop. Easy to lose a whole afternoon.</li>
-          <li><strong>The High Line</strong> — a 1.45-mile elevated park over the West Side, from the Meatpacking
-          District to Hudson Yards. Walk it north-to-south and hop off at Chelsea Market for lunch.</li>
-          <li><strong>Grand Central Terminal</strong> — the Beaux-Arts main concourse and the whispering gallery
-          downstairs. Free to walk through.</li>
-          <li><strong>The Oculus &amp; Little Island</strong> — the soaring transit hub at the WTC, and the floating
-          park on the Hudson at 13th St. Both free, both photogenic.</li>
-          <li><strong>Free museum hours</strong> — MoMA is free Friday 4–8 PM; the Whitney is free Friday 5–10 PM.
-          MoMA PS1 in Long Island City went fully free starting January 2026. The National Museum
-          of the American Indian (Lower Manhattan) and the Bronx Museum of the Arts are always free.</li>
-          <li><strong>SummerStage &amp; Bryant Park</strong> — free outdoor concerts, movies, and fitness classes
-          run all summer across the parks.</li>
-        </ul>
-      </section>
+        <section className={styles.editorialSection}>
+          <div className={styles.sectionIntro}>
+            <p className={styles.eyebrow}>What is worth your time</p>
+            <h2>Start with six moves that make most NYC trips work</h2>
+            <p>
+              These are not just famous attractions. They are reliable trip anchors: easy to explain,
+              easy to route around, and strong enough to carry a day.
+            </p>
+          </div>
+          <div className={styles.mustDoGrid}>
+            {mustDoCards.map((card) => (
+              <article key={card.title} className={styles.mustDoCard}>
+                <span>{card.number}</span>
+                <div>
+                  <h3>{card.title}</h3>
+                  <p className={styles.meta}>{card.meta}</p>
+                  <p>{card.copy}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
-      {/* Museums */}
-      <section className={styles.bridge}>
-        <h2>Museums worth the ticket</h2>
-        <ul>
-          <li><strong>The Metropolitan Museum of Art</strong> — the big one. $30 for out-of-state adults;
-          NY/NJ/CT residents and students pay what they wish. Friday and Saturday evenings (open till 9 PM)
-          are dramatically quieter than weekend days.</li>
-          <li><strong>MoMA</strong> — modern heavyweights (the Van Gogh everyone wants). Go early or Friday evening.</li>
-          <li><strong>American Museum of Natural History</strong> — the best pick with kids; the new Gilder Center
-          is worth seeing.</li>
-          <li><strong>The Tenement Museum</strong> — guided tours of restored Lower East Side apartments;
-          small-group and genuinely moving.</li>
-          <li><strong>The Guggenheim &amp; The Frick</strong> — the spiral and the mansion, both Upper East Side,
-          both quick.</li>
-        </ul>
-      </section>
+        <section className={styles.featureSection}>
+          <div className={styles.routeMap} aria-label="Suggested NYC activity clusters by area">
+            <div className={styles.mapPanel}>
+              <span className={styles.mapLabel}>NYC activity clusters</span>
+              <div className={styles.mapImageWrap}>
+                <Image
+                  src="/destination/nyc-activity-cluster-map.svg"
+                  alt="Map-style NYC activity clusters numbered across Manhattan and Brooklyn"
+                  fill
+                  sizes="(max-width: 900px) 100vw, 42vw"
+                  className={styles.mapImage}
+                />
+              </div>
+              <div className={styles.mapSummary}>
+                {mapSummaryRoutes.map(([title, copy], index) => (
+                  <article key={title}>
+                    <span>{index + 1}</span>
+                    <div>
+                      <strong>{title}</strong>
+                      <p>{copy}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className={styles.featureCopy}>
+            <p className={styles.eyebrow}>Route like a local</p>
+            <h2>Group your days by area, not by popularity</h2>
+            <p>
+              The fastest way to make NYC feel hard is to bounce between boroughs for isolated stops.
+              Better days have one neighborhood spine, one ticketed anchor, and a backup food plan.
+            </p>
+            <div className={styles.routeList}>
+              {detailRoutes.map(([title, copy], index) => (
+                <div key={title}>
+                  <span>{index + 3}</span>
+                  <div>
+                    <strong>{title}</strong>
+                    <p>{copy}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <Link href="/destination/nyc/neighborhood-guide" className={styles.inlineLink}>
+              Open the NYC neighborhood guide
+            </Link>
+          </div>
+        </section>
 
-      {/* By neighborhood */}
-      <section className={styles.bridge}>
-        <h2>Things to do by neighborhood</h2>
-        <p>Group your days by area to cut down on subway time.</p>
-        <ul>
-          <li><strong>Lower Manhattan &amp; DUMBO</strong> — Statue ferry, 9/11 Memorial (plaza free), Brooklyn
-          Bridge walk, finish with the bridge-framed Empire State shot on Washington St.</li>
-          <li><strong>Midtown</strong> — Top of the Rock, Grand Central, the New York Public Library, MoMA,
-          a Broadway show at night.</li>
-          <li><strong>Chelsea &amp; the West Side</strong> — the High Line, Chelsea Market, the galleries, Little Island.</li>
-          <li><strong>Upper East Side</strong> — the Met, the Guggenheim, the Frick, then into Central Park out the back.</li>
-          <li><strong>Brooklyn</strong> — Prospect Park, the Brooklyn Botanic Garden (cherry blossoms in late April),
-          Williamsburg for food and bars, the Brooklyn Heights Promenade for the skyline.</li>
-        </ul>
-      </section>
+        <section className={styles.splitSection}>
+          <div className={styles.advicePanel}>
+            <p className={styles.eyebrow}>Budget logic</p>
+            <h2>Spend where the ticket changes the day</h2>
+            <ul>
+              {budgetMoves.map((move) => (
+                <li key={move}>{move}</li>
+              ))}
+            </ul>
+          </div>
+          <div className={styles.yearPanel}>
+            <span>2026 planning note</span>
+            <p>
+              Big-event periods can make hotel prices, observation deck slots, ferries, and Broadway
+              seats move faster. If your dates overlap holidays, sports, or major city events, book
+              the fixed pieces early and keep the rest flexible.
+            </p>
+          </div>
+        </section>
 
-      {/* 2026 */}
-      <section className={styles.bridge}>
-        <h2>2026: a big year to visit</h2>
-        <p>
-          Two things make 2026 unusual. The city is going all-in on <strong>America&apos;s 250th anniversary</strong> around
-          July 4 — <strong>Sail250</strong> brings an international fleet of tall ships into New York Harbor alongside
-          a special Macy&apos;s fireworks show. And the <strong>FIFA World Cup</strong> comes to the region, with matches
-          at MetLife Stadium and fan-fest viewing at Rockefeller Center. If you&apos;re visiting around either,
-          book stays early — the city fills up.
-        </p>
-      </section>
+        <section className={styles.experienceSection}>
+          <div className={styles.sectionIntro}>
+            <p className={styles.eyebrow}>Pick your lens</p>
+            <h2>Choose the version of New York you came for</h2>
+          </div>
+          <div className={styles.experienceGrid}>
+            <Link href="/destination/nyc/neighborhood-guide?interest=sightseeing" className={styles.experienceCard}>
+              <span>Landmarks</span>
+              <h3>Big sights without a frantic route</h3>
+              <p>Use Lower Manhattan, Midtown, and DUMBO as your main sightseeing zones.</p>
+            </Link>
+            <Link href="/destination/nyc/neighborhood-guide?interest=culture" className={styles.experienceCard}>
+              <span>Culture</span>
+              <h3>Museums, galleries, and performance</h3>
+              <p>Build around the Met, MoMA, Broadway, or the Lower East Side instead of stacking everything.</p>
+            </Link>
+            <Link href="/destination/nyc/neighborhood-guide?interest=food" className={styles.experienceCard}>
+              <span>Food</span>
+              <h3>Neighborhoods you can taste</h3>
+              <p>Chinatown, Koreatown, Chelsea, Williamsburg, and the East Village all work as food-led routes.</p>
+            </Link>
+            <Link href="/destination/nyc/neighborhood-guide?interest=outdoors" className={styles.experienceCard}>
+              <span>Outdoors</span>
+              <h3>Walks, parks, bridges, and skyline air</h3>
+              <p>Central Park, the High Line, Brooklyn Bridge, and the waterfront balance the busy parts of town.</p>
+            </Link>
+          </div>
+        </section>
 
-      {/* Budget */}
-      <section className={styles.bridge}>
-        <h2>NYC on a budget</h2>
-        <ul>
-          <li>Walk the bridges and parks; they&apos;re free and they&apos;re the best of the city.</li>
-          <li>Do <strong>one</strong> paid view, not several.</li>
-          <li>Eat at food halls and by-the-slice counters instead of sit-down tourist spots.</li>
-          <li>Use a 7-day unlimited MetroCard/OMNY cap instead of single rides if you&apos;re moving a lot.</li>
-          <li>TKTS at the red steps in Times Square sells same-day Broadway seats at 20–50% off from ~3 PM.</li>
-        </ul>
-      </section>
+        <section className={styles.faqSection}>
+          <div className={styles.sectionIntro}>
+            <p className={styles.eyebrow}>Fast answers</p>
+            <h2>Common NYC activity questions</h2>
+          </div>
+          <div className={styles.faqGrid}>
+            {faqItems.map((item) => (
+              <article key={item.question}>
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
+              </article>
+            ))}
+          </div>
+        </section>
 
-      {/* Experience Buckets */}
-      <section className={styles.grid}>
-        <Link href="/destination/nyc/neighborhood-guide?interest=sightseeing" className={styles.card} style={{ textDecoration: "none", color: "inherit" }}>
-          <h3>Landmarks &amp; Big Sights</h3>
-          <p>
-            Good for a first visit, when you want to hit the names everyone
-            knows without spending half the day on the subway between them.
-          </p>
-        </Link>
-
-        <Link href="/destination/nyc/neighborhood-guide?interest=culture" className={styles.card} style={{ textDecoration: "none", color: "inherit" }}>
-          <h3>Culture &amp; Museums</h3>
-          <p>
-            Best for travelers who enjoy slower exploration, museums, galleries,
-            and neighborhoods with strong cultural character.
-          </p>
-        </Link>
-
-        <Link href="/destination/nyc/neighborhood-guide?interest=food" className={styles.card} style={{ textDecoration: "none", color: "inherit" }}>
-          <h3>Food &amp; Local Experiences</h3>
-          <p>
-            Designed for travelers who want dining, neighborhoods, and everyday
-            NYC life to be the focus of their trip.
-          </p>
-        </Link>
-
-        <Link href="/destination/nyc/neighborhood-guide?interest=outdoors" className={styles.card} style={{ textDecoration: "none", color: "inherit" }}>
-          <h3>Outdoors &amp; Walking</h3>
-          <p>
-            Works well for visitors who enjoy parks, long walks, and balancing
-            busy areas with calmer spaces.
-          </p>
-        </Link>
-      </section>
-
-      {/* FAQ */}
-      <section className={styles.bridge}>
-        <h2>Common questions</h2>
-
-        <h3>What are the top free things to do in NYC?</h3>
-        <p>
-          The Staten Island Ferry, Central Park, the High Line, the Brooklyn Bridge walk,
-          Grand Central, the 9/11 Memorial plaza, and free museum hours at MoMA (Fri) and
-          the Whitney (Fri).
-        </p>
-
-        <h3>How many days do you need in New York City?</h3>
-        <p>
-          Four to five days lets you do the major icons, a couple of museums, two or three
-          neighborhoods, and a Broadway show without rushing.
-        </p>
-
-        <h3>What&apos;s the one view to pick if you only do one?</h3>
-        <p>
-          Top of the Rock for the best skyline photo (the Empire State is in the frame), or
-          SUMMIT One Vanderbilt for the most novel experience.
-        </p>
-
-        <h3>What&apos;s new for 2026?</h3>
-        <p>
-          America&apos;s 250th-anniversary events and Sail250 around July 4, and FIFA World Cup
-          matches in the region — both draw large crowds, so book early if your trip overlaps.
-        </p>
-      </section>
-
-      {/* Decision Bridge */}
-      <section className={styles.bridge}>
-        <p>
-          What you want to do in New York City directly affects where you should stay.
-          Choosing the right area can save time, reduce travel fatigue, and make the
-          trip feel smoother.
-        </p>
-      </section>
-
-      {/* Assisted CTA */}
-      <section className={styles.cta}>
-        <h2>Not sure how to shape your NYC experience?</h2>
-        <p>
-          Tell us what you want to focus on, and we&apos;ll help you plan where to
-          stay and how to structure your visit.
-        </p>
-        <Link href="/destination/nyc#planning-intent" className={styles.primaryCta}>
-          Get help planning my NYC trip
-        </Link>
-      </section>
-
-      {/* Navigation Resource */}
-      <section className={styles.bridge} style={{ marginTop: '2rem' }}>
-        <h3>Navigate NYC with Confidence</h3>
-        <p>
-          Getting around is essential to doing what you want to do in NYC. Check out our{" "}
-          <Link href="/destination/nyc/nyc-subway-map">
-            interactive subway map
+        <section className={styles.bookingBand}>
+          <div>
+            <p className={styles.eyebrow}>Plan the fixed pieces</p>
+            <h2>Book the activities that anchor the trip</h2>
+            <p>
+              Observation decks, Broadway nights, ferry windows, and guided tours are the pieces worth
+              reserving early. Keep neighborhood wandering flexible around them.
+            </p>
+          </div>
+          <Link href="/destination/nyc/booking?tab=activities&from=things-to-do" className={styles.bookingButton}>
+            See tickets and tours
           </Link>
-          {" "}to plan your routes and understand the system.
-        </p>
-        <p>
-          Also useful:{" "}
-          <Link href="/destination/nyc/neighborhood-guide">neighborhood guide</Link>,{" "}
-          <Link href="/destination/nyc/food">NYC food guide</Link>,{" "}
-          <Link href="/destination/nyc/landmark">landmarks guide</Link>,{" "}
-          <Link href="/destination/nyc/group-travel">group travel guide</Link>.
-        </p>
-      </section>
-    </main>
-    <BookingCTA variant="full" text="Book skip-the-line tickets and audio tours" href="/destination/nyc/booking?tab=activities&from=things-to-do" label="See tickets & tours" />
-    <Footer />
+        </section>
+
+        <section className={styles.resourceLinks}>
+          <Link href="/destination/nyc/nyc-subway-map">NYC subway map</Link>
+          <Link href="/destination/nyc/food">Food guide</Link>
+          <Link href="/destination/nyc/landmark">Landmarks guide</Link>
+          <Link href="/destination/nyc/group-travel">Group travel guide</Link>
+        </section>
+      </main>
+      <Footer />
     </>
   );
 }

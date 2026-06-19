@@ -107,6 +107,13 @@ export default function GroupTravelPage() {
       <main className={styles.page}>
         <section className={styles.hero}>
           <div className={styles.heroCopy}>
+            <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+              <Link href="/">Home</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/destination/nyc">New York City</Link>
+              <span aria-hidden="true">/</span>
+              <span className={styles.current}>Group Travel</span>
+            </nav>
             <p className={styles.eyebrow}>NYC group travel guide</p>
             <h1>New York City Group Travel Guide</h1>
             <p>

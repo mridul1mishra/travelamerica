@@ -1,14 +1,14 @@
 import NYCThingsToDoClient from './nycthingstodoclient';
 
 export const metadata = {
-  title: 'The 40 Best Things to Do in New York City (2026 Guide)',
+  title: 'The Best Things to Do in New York City (2026 Guide)',
   description:
     'The best things to do in NYC — landmarks, free activities, museums, food halls, and skyline views, organized by vibe and budget. Updated for 2026.',
   alternates: {
     canonical: 'https://www.travelsamericas.com/destination/nyc/things-to-do',
   },
   openGraph: {
-    title: 'The 40 Best Things to Do in New York City (2026 Guide)',
+    title: 'The Best Things to Do in New York City (2026 Guide)',
     description:
       'The best things to do in NYC — landmarks, free activities, museums, food halls, and skyline views, organized by vibe and budget.',
     url: 'https://www.travelsamericas.com/destination/nyc/things-to-do',
@@ -16,7 +16,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The 40 Best Things to Do in New York City (2026 Guide)',
+    title: 'The Best Things to Do in New York City (2026 Guide)',
     description:
       'The best things to do in NYC — landmarks, free activities, museums, food halls, and skyline views, organized by vibe and budget.',
   },
@@ -35,7 +35,7 @@ const breadcrumb = {
 const article = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'The 40 Best Things to Do in New York City (2026 Guide)',
+  headline: 'The Best Things to Do in New York City (2026 Guide)',
   description:
     'The best things to do in NYC — landmarks, free activities, museums, food halls, and skyline views, organized by vibe and budget. Updated for 2026.',
   url: 'https://www.travelsamericas.com/destination/nyc/things-to-do',

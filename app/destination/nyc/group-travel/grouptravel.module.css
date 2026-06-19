@@ -47,6 +47,32 @@
   min-height: 0;
 }
 
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.9rem;
+  color: #64748b;
+  font-size: 0.84rem;
+  line-height: 1.3;
+}
+
+.breadcrumb a {
+  color: #475569;
+  font-weight: 680;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: #1d4ed8;
+}
+
+.current {
+  color: #111827;
+  font-weight: 760;
+}
+
 .cardImage {
   aspect-ratio: 4 / 3;
 }

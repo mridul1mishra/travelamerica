@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">NYC activity cluster map</title>
+  <desc id="desc">A schematic map of New York City with five numbered activity clusters around Manhattan and Brooklyn.</desc>
+  <rect width="960" height="620" rx="18" fill="#eef5ff"/>
+  <path d="M0 0h960v620H0z" fill="#f8fafc"/>
+  <path d="M0 0h960v620H0z" fill="#dbeafe" opacity=".55"/>
+  <path d="M0 0h220c45 76 66 151 52 225-13 68-65 118-76 190-10 66 20 126 57 205H0z" fill="#d8ecff"/>
+  <path d="M792 0h168v620H724c-34-68-39-134-15-198 28-73 99-104 114-180 13-69-28-141-31-242z" fill="#d8ecff"/>
+  <path d="M616 40c48 57 77 130 84 219 7 94-23 180-92 258-26 29-37 54-41 103H376c22-54 38-110 46-169 13-91-21-170-18-259 3-74 38-124 90-152z" fill="#f8fafc" stroke="#c7d2fe" stroke-width="2"/>
+  <path d="M385 0h58v620h-58z" fill="#c7d2fe" opacity=".8"/>
+  <path d="M470 0h34v620h-34z" fill="#e0e7ff"/>
+  <path d="M432 0h7v620h-7" stroke="#94a3b8" stroke-width="2" opacity=".45"/>
+  <path d="M0 430 960 92" stroke="#bfdbfe" stroke-width="18" opacity=".82"/>
+  <path d="M0 456 960 118" stroke="#ffffff" stroke-width="5" opacity=".9"/>
+  <path d="M96 0 960 352" stroke="#bfdbfe" stroke-width="14" opacity=".7"/>
+  <path d="M96 0 960 352" stroke="#ffffff" stroke-width="4" opacity=".85"/>
+  <path d="M155 135h170M112 214h210M135 295h245M90 386h270M58 480h290" stroke="#e2e8f0" stroke-width="5"/>
+  <path d="M616 86h184M640 174h230M622 268h254M598 360h220M590 458h180" stroke="#e2e8f0" stroke-width="5"/>
+  <path d="M514 70c28 74 38 151 30 231-9 88-36 178-47 270" fill="none" stroke="#94a3b8" stroke-width="6" opacity=".55"/>
+  <path d="M584 80c38 100 47 203 27 308-12 60-38 114-54 183" fill="none" stroke="#94a3b8" stroke-width="4" opacity=".45"/>
+  <path d="M452 84c-20 96-20 188-2 276 12 57 16 117 4 190" fill="none" stroke="#94a3b8" stroke-width="4" opacity=".45"/>
+  <path d="M674 330c52-25 112-23 176 6 31 14 62 18 94 13v271H680c-60-111-62-208-6-290z" fill="#dcfce7" opacity=".95"/>
+  <path d="M300 122c35-26 72-38 112-36 11 42 10 78-3 109-23 55-76 78-121 111-17-72-13-133 12-184z" fill="#dcfce7" opacity=".9"/>
+  <g font-family="Inter, Arial, sans-serif" font-weight="800" font-size="28" text-anchor="middle">
+    <g transform="translate(498 512)">
+      <circle r="31" fill="#1d4ed8" stroke="#fff" stroke-width="5"/>
+      <text y="9" fill="#fff">1</text>
+    </g>
+    <g transform="translate(532 312)">
+      <circle r="31" fill="#1d4ed8" stroke="#fff" stroke-width="5"/>
+      <text y="9" fill="#fff">2</text>
+    </g>
+    <g transform="translate(430 360)">
+      <circle r="31" fill="#1d4ed8" stroke="#fff" stroke-width="5"/>
+      <text y="9" fill="#fff">3</text>
+    </g>
+    <g transform="translate(586 180)">
+      <circle r="31" fill="#1d4ed8" stroke="#fff" stroke-width="5"/>
+      <text y="9" fill="#fff">4</text>
+    </g>
+    <g transform="translate(730 472)">
+      <circle r="31" fill="#1d4ed8" stroke="#fff" stroke-width="5"/>
+      <text y="9" fill="#fff">5</text>
+    </g>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" font-size="18" fill="#475569">
+    <text x="466" y="584">Lower Manhattan</text>
+    <text x="564" y="284">Midtown</text>
+    <text x="345" y="343">Chelsea</text>
+    <text x="614" y="142">Upper East Side</text>
+    <text x="758" y="528">Brooklyn</text>
+  </g>
+</svg>
