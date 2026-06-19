@@ -25,6 +25,7 @@ export const generateMetadata = () => ({
 });
 
 import GroupTravelClient from './grouptravelclient';
+import faqData from '@/content/destination/nyc/group-travel/faq/faqsection.json';
 
 
 // Schema markup (moved from client component)
@@ -89,35 +90,19 @@ const schema4 = {
   ]
 };
 
+// Generated from the same faqData rendered on the page, so the structured data
+// always matches the visible FAQ (a Google requirement for FAQ rich results).
 const schema3 = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What's the minimum group size for Broadway discounts?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most Broadway shows define group sales at 10 or more, though minimums vary by show — some run up to 20 (Hamilton's group minimum is 20). Book through Broadway Inbound or the show's Broadway.org page."
-      }
+  "mainEntity": (faqData as { question: string; answer: string }[]).map((f) => ({
+    "@type": "Question",
+    "name": f.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.answer,
     },
-    {
-      "@type": "Question",
-      "name": "Do NYC museums offer group rates?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes — the Met, MoMA, and others offer group entry that skips the ticket line. Book in advance through each museum's group sales page."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Best NYC neighborhoods for a group to stay?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Midtown for transit access and Broadway proximity; Brooklyn (Williamsburg or Downtown Brooklyn) for more space, better food options, and competitive prices."
-      }
-    }
-  ]
+  })),
 };
 
 const schema2 = {
@@ -188,5 +173,19 @@ const schema1 = {
 };
 
 export default function GroupItineraryPage() {
-  return <GroupTravelClient />;
+  // Emit the JSON-LD. These schemas were declared but never rendered, so the
+  // page previously shipped with no structured data at all.
+  const schemas = [schema1, schema2, schema3, schema4, schema5];
+  return (
+    <>
+      {schemas.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      <GroupTravelClient />
+    </>
+  );
 }

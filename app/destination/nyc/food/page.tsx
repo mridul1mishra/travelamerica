@@ -331,5 +331,18 @@ const breadcrumblist = {
                 };
 
 export default function FoodPage() {
-  return <FoodClientPage />;
+  // Render the JSON-LD. These schemas were defined but never output before.
+  const schemas = [Article, FAQPage, howto, itemlist, breadcrumblist];
+  return (
+    <>
+      {schemas.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      <FoodClientPage />
+    </>
+  );
 }

@@ -189,5 +189,18 @@ const schema2 = {
 };
 
 export default async function SoloItineraryPage() {
-  return <SoloItineraryClient grouped={nycItineraryFaq} />;
+  // Render the JSON-LD. These schemas were defined but never output before.
+  const schemas = [schema, schema1, schema2, schema3, schema4];
+  return (
+    <>
+      {schemas.map((s, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }}
+        />
+      ))}
+      <SoloItineraryClient grouped={nycItineraryFaq} />
+    </>
+  );
 }

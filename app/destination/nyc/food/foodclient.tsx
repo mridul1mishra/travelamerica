@@ -1,253 +1,317 @@
 "use client";
-import { useParams } from "next/navigation";
-import HeroBanner from "./components/HeroBanner/HeroBanner";
+
+import Image from "next/image";
+import Link from "next/link";
 import NavigationHeader from "./components/NavigationHeader/NavigationHeader";
-import Link from 'next/link';
-import Image from 'next/image';
-import styles from './food.module.css';
 import Footer from "./components/Footer/Footer";
 import BookingCTA from "./components/BookingCTA/BookingCTA";
-import FAQAccordion from './components/FAQAccordion/FAQAccordion';
-import faqData from '@/content/destination/nyc/food/faq/faqsection.json';
+import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
+import faqData from "@/content/destination/nyc/food/faq/faqsection.json";
+import styles from "./food.module.css";
+
+const mustEats = [
+  {
+    dish: "Classic slice",
+    where: "Joe's, L'Industrie, Mama's Too",
+    note: "Fast, cheap, and best eaten standing up.",
+  },
+  {
+    dish: "Hand-rolled bagel",
+    where: "Murray's, Ess-a-Bagel, Absolute",
+    note: "Order with a schmear; skip the toast request.",
+  },
+  {
+    dish: "Pastrami on rye",
+    where: "Katz's Delicatessen",
+    note: "Lower East Side institution. Keep your ticket.",
+  },
+  {
+    dish: "Dim sum or dumplings",
+    where: "Chinatown, Flushing",
+    note: "Best value when you want variety without a reservation.",
+  },
+];
+
+const neighborhoodRoutes = [
+  {
+    area: "Lower East Side + Chinatown",
+    bestFor: "classics in one walk",
+    stops: "Katz's, Nom Wah, dumpling counters, Essex Market",
+    timing: "Late morning to early dinner",
+  },
+  {
+    area: "West Village",
+    bestFor: "date-night energy",
+    stops: "Semma, Carbone, Via Carota, Joe's Pizza",
+    timing: "Book dinner, wander before",
+  },
+  {
+    area: "Williamsburg",
+    bestFor: "pizza + bars",
+    stops: "Lilia, Peter Luger, L'Industrie, waterfront drinks",
+    timing: "Afternoon slice, evening table",
+  },
+  {
+    area: "Flushing",
+    bestFor: "serious food value",
+    stops: "food courts, noodles, dumplings, bakeries",
+    timing: "Lunch crawl, cash handy",
+  },
+];
+
+const reservationRules = [
+  ["Book 28 days out", "Carbone, 4 Charles, Atomix, Tatiana-style hard tables."],
+  ["Walk in early", "Pizza counters, food halls, Chinatown, bar seats."],
+  ["Use the bar", "The Modern, Estela, Cafe Sabarsky, many hotel restaurants."],
+  ["Group of 6+", "Choose Koreatown, Chinatown dim sum, or food halls first."],
+];
+
+const pizzaPicks = [
+  "Mama's Too - creative squares and the cacio e pepe slice",
+  "L'Industrie - Williamsburg and LES slices with cult-level lines",
+  "Joe's Pizza - the reliable classic Village slice",
+  "Una Pizza Napoletana - destination Neapolitan on the Lower East Side",
+  "Lucali - Carroll Gardens whole-pie night if you want the ritual",
+];
+
+const soloStops = [
+  {
+    title: "Counter-safe",
+    copy: "Ichiran, Mimi Cheng's, Shake Shack, and food halls let you eat well without negotiating a table for one.",
+  },
+  {
+    title: "Bar-seat better",
+    copy: "At serious restaurants, the bar is often warmer, faster, and less awkward than a two-top.",
+  },
+  {
+    title: "Theater-adjacent",
+    copy: "Grand Central Oyster Bar, Joe Allen, and quick bagel stops work before or after a show.",
+  },
+];
+
+const foodHalls = [
+  ["Chelsea Market", "Best one-stop crowd pleaser. Go before noon or after 2 PM."],
+  ["Time Out Market", "DUMBO views, rooftop energy, easy for first-timers."],
+  ["Grand Central Dining Concourse", "Useful around trains, Midtown plans, and rainy days."],
+  ["Essex Market", "Lower East Side history with stalls that still feel local."],
+];
+
 export default function FoodClientPage() {
+  return (
+    <>
+      <NavigationHeader />
+      <BookingCTA
+        variant="slim"
+        text="Book your New York trip"
+        href="/destination/nyc/booking?tab=activities&from=food"
+        label="See food tours"
+      />
 
-
-
-
-    return(
-        <>
-        <NavigationHeader />
-        <HeroBanner image={`/data/majorcities/newyork/assets/nyc-solo-dining.webp`} bannerText="Hero banner showcasing NYC food and dining experiences for travelers" />
-        <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=activities&from=food" label="See food tours" />
-
-        {/* H1 / Intro */}
-        <section className={styles.splitSection} style={{textAlign: "center" }}>
-                <div style={{ width: "100%", textAlign: "center" }}>
-                <h1 className={styles.sectionheading}>Where to Eat in New York City: The 2026 Food Guide</h1>
-                <p className={styles.subheading}>
-                  New York is one of the best eating cities on earth, and the hard part isn&apos;t finding good food — it&apos;s
-                  narrowing it down. This guide covers where to eat in NYC across every budget: the iconic dishes you came
-                  for, the neighborhoods worth eating your way through, the food halls that let a group disagree happily,
-                  and the reservations worth planning around. Whether you&apos;re chasing a slice at midnight or a three-star
-                  tasting menu, here&apos;s how to eat well in the city.
-                </p>
-                </div>
+      <main className={styles.page}>
+        <section className={styles.hero}>
+          <div className={styles.heroMedia}>
+            <Image
+              src="/data/majorcities/newyork/assets/nyc-solo-dining.webp"
+              alt="New York City dining table with skyline views"
+              fill
+              priority
+              sizes="(max-width: 900px) 100vw, 46vw"
+              className={styles.heroImage}
+            />
+          </div>
+          <div className={styles.heroCopy}>
+            <p className={styles.eyebrow}>NYC food guide</p>
+            <h1>Where to Eat in New York City</h1>
+            <p>
+              New York rewards a good plan. Use this guide to pick the right food neighborhood,
+              decide what needs a reservation, and avoid wasting meals on generic Midtown traps.
+            </p>
+            <div className={styles.heroActions}>
+              <a href="#first-meals" className={styles.primaryButton}>Start with the classics</a>
+              <a href="#neighborhoods" className={styles.secondaryButton}>Choose a food area</a>
+            </div>
+          </div>
         </section>
 
-        {/* NYC dishes to eat at least once */}
-        <section className={styles.splitSection}>
-                <div className={styles.imageWrapper}>
-                <Image
-                    src="/data/majorcities/newyork/assets/asian-food-rainy-day-solo-dining-new-york-city.png"
-                    alt="Table with pizza, pasta, taco, and soda overlooking the Empire State Building in New York City"
-                    fill
-                    className={styles.mapImage}
-                />
-                </div>
-                <div className={styles.textWrapper}>
-                <h2 className={styles.heading}>The NYC dishes to eat at least once</h2>
-                <ul>
-                  <li className={styles.subheading}><strong>A proper slice</strong> — folded in half, eaten standing up. (Pizza section below.)</li>
-                  <li className={styles.subheading}><strong>A hand-rolled bagel</strong> — boiled, not toasted, with a schmear. (Bagel section below.)</li>
-                  <li className={styles.subheading}><strong>Pastrami on rye at Katz&apos;s</strong> — the Lower East Side classic; cash the ticket, tip the carver.</li>
-                  <li className={styles.subheading}><strong>Dim sum in Chinatown</strong> — Nom Wah Tea Parlor on Doyers St has been doing it since 1920.</li>
-                  <li className={styles.subheading}><strong>A black-and-white cookie or Junior&apos;s cheesecake</strong> — the city&apos;s sweet tooth.</li>
-                </ul>
-                </div>
+        <section className={styles.quickPanel} aria-label="Quick NYC dining planner">
+          <div>
+            <span className={styles.metric}>First meal</span>
+            <strong>Slice + neighborhood walk</strong>
+          </div>
+          <div>
+            <span className={styles.metric}>Best group move</span>
+            <strong>Chelsea Market or Koreatown</strong>
+          </div>
+          <div>
+            <span className={styles.metric}>Solo-friendly</span>
+            <strong>Food halls, counters, bar seats</strong>
+          </div>
+          <div>
+            <span className={styles.metric}>Reserve early</span>
+            <strong>Splurge dinners and tiny rooms</strong>
+          </div>
         </section>
 
-        {/* Best restaurants by cuisine */}
-        <section className={styles.splitSection}>
-                <div className={styles.textWrapper}>
-                <h2 className={styles.heading}>Best restaurants in NYC by cuisine</h2>
-                <p className={styles.subheading}><strong>Special-occasion / tasting menus</strong></p>
-                <p className={styles.subheading}>
-                  <strong>Semma</strong> (West Village) — Michelin-starred South Indian, currently among the top picks on the New York Times&apos; best list. Books out fast.
-                  <strong> Carbone</strong> (Greenwich Village) — the famous red-sauce splurge; reservations open ~28 days out and vanish in minutes.
-                  Le Bernardin, Eleven Madison Park, Per Se, and Jungsik round out the three-star tier.
-                </p>
-                <p className={styles.subheading}><strong>Italian</strong></p>
-                <p className={styles.subheading}>
-                  <strong>Lilia</strong> (Williamsburg) — Missy Robbins&apos; pasta; one of the hardest mid-range books in the city.
-                  <strong> Frankies 457 Spuntino</strong> (Carroll Gardens) — handmade pastas, homey, neighborhood-perfect.
-                  <strong> Rubirosa</strong> (Nolita) — vodka-sauce pizza and pasta; great for a group.
-                </p>
-                <p className={styles.subheading}><strong>Asian</strong></p>
-                <p className={styles.subheading}>
-                  <strong>Sushi Yasuda</strong> (Midtown East) — rigorous Edomae sushi at a relatively fair price.
-                  <strong> Nom Wah Tea Parlor</strong> (Chinatown) — old-school dim sum since 1920.
-                  <strong> Casa Enrique</strong> (Long Island City) — Michelin-starred Mexican.
-                </p>
-                <p className={styles.subheading}><strong>Steak</strong></p>
-                <p className={styles.subheading}>
-                  <strong>Peter Luger</strong> (Williamsburg) — the institution. Cash or their own card only — warn the table before the bill lands.
-                  <strong> Le Relais de Venise</strong> — steak frites, one dish, unlimited fries. Painless for a big table.
-                </p>
-                </div>
-                <div className={styles.imageWrapper}>
-                <Image
-                    src="/data/majorcities/newyork/assets/nyc-asian-food-hall-solo-dining-rainy-day-dumbo-chelsea.png"
-                    alt="Food halls and dining options in New York City including DUMBO and Chelsea Market"
-                    fill
-                    className={styles.mapImage}
-                />
-                </div>
+        <section id="first-meals" className={styles.section}>
+          <div className={styles.sectionIntro}>
+            <p className={styles.eyebrow}>Eat these first</p>
+            <h2>The NYC dishes worth planning around</h2>
+            <p>
+              Do one classic, one neighborhood crawl, and one flexible food hall. That gives a first-timer
+              the real range of New York without turning the trip into reservation homework.
+            </p>
+          </div>
+          <div className={styles.cardGrid}>
+            {mustEats.map((item) => (
+              <article className={styles.foodCard} key={item.dish}>
+                <span>{item.dish}</span>
+                <h3>{item.where}</h3>
+                <p>{item.note}</p>
+              </article>
+            ))}
+          </div>
         </section>
 
-        {/* Food by neighborhood */}
-        <section className={styles.splitSection}>
-                <div className={styles.imageWrapper}>
-                <Image
-                    src="/data/majorcities/newyork/assets/nyc-bagel-collage-murrays-blackseed-solo-dining.png"
-                    alt="Collage of New York City bagels and neighborhood food scenes"
-                    fill
-                    className={styles.mapImage}
-                />
-                </div>
-                <div className={styles.textWrapper}>
-                <h2 className={styles.heading}>NYC food by neighborhood</h2>
-                <ul>
-                  <li className={styles.subheading}><strong>Lower East Side / Chinatown</strong> — Katz&apos;s, Nom Wah, Una Pizza Napoletana, dumpling counters, natural-wine bars.</li>
-                  <li className={styles.subheading}><strong>West Village</strong> — Semma, Carbone, cozy date-night spots; one of the most walkable eating neighborhoods.</li>
-                  <li className={styles.subheading}><strong>Williamsburg (Brooklyn)</strong> — Lilia, Peter Luger, L&apos;Industrie for a slice, the bar scene after.</li>
-                  <li className={styles.subheading}><strong>Flushing (Queens)</strong> — the city&apos;s best and most affordable Chinese food, hands down.</li>
-                  <li className={styles.subheading}><strong>Arthur Avenue (Bronx)</strong> — the &quot;real&quot; Little Italy: family-run delis, bakeries, sit-down rooms. Book ahead for 6+.</li>
-                </ul>
-                </div>
+        <section id="neighborhoods" className={styles.featureSection}>
+          <div className={styles.featureImage}>
+            <Image
+              src="/data/majorcities/newyork/assets/nyc-bagel-collage-murrays-blackseed-solo-dining.png"
+              alt="New York bagels and neighborhood food scenes"
+              fill
+              sizes="(max-width: 900px) 100vw, 42vw"
+              className={styles.image}
+            />
+          </div>
+          <div className={styles.featureCopy}>
+            <p className={styles.eyebrow}>Choose by neighborhood</p>
+            <h2>Where to eat based on your route</h2>
+            <div className={styles.routeList}>
+              {neighborhoodRoutes.map((route) => (
+                <article key={route.area}>
+                  <div>
+                    <h3>{route.area}</h3>
+                    <p>{route.stops}</p>
+                  </div>
+                  <span>{route.bestFor}</span>
+                  <small>{route.timing}</small>
+                </article>
+              ))}
+            </div>
+          </div>
         </section>
 
-        {/* Best pizza */}
-        <section className={styles.splitSection}>
-                <div className={styles.textWrapper}>
-                <h2 className={styles.heading}>Best pizza in NYC</h2>
-                <ul>
-                  <li className={styles.subheading}><strong>Una Pizza Napoletana</strong> (Lower East Side) — named #1 in the U.S. at 50 Top Pizza. Neapolitan, pristine.</li>
-                  <li className={styles.subheading}><strong>Mama&apos;s Too</strong> (Upper West Side) — topped Time Out&apos;s world&apos;s best pizza list; the Cacio e Pepe square is the one.</li>
-                  <li className={styles.subheading}><strong>L&apos;Industrie</strong> (Williamsburg / LES) — best slice in the city per 50 Top.</li>
-                  <li className={styles.subheading}><strong>Joe&apos;s Pizza</strong> (Village) — the reliable, classic plain slice.</li>
-                  <li className={styles.subheading}><strong>Prince Street Pizza</strong> (Nolita) — the spicy pepperoni square with a cult following.</li>
-                  <li className={styles.subheading}><strong>Lucali</strong> (Carroll Gardens) &amp; <strong>Juliana&apos;s / Grimaldi&apos;s</strong> (DUMBO) — destination whole pies.</li>
-                </ul>
-                </div>
-                <div className={styles.imageWrapper}>
-                <Image
-                    src="/data/majorcities/newyork/assets/nyc-solo-dining.webp"
-                    alt="NYC pizza — a proper New York slice folded in half"
-                    fill
-                    className={styles.mapImage}
-                />
-                </div>
+        <section className={styles.section}>
+          <div className={styles.sectionIntro}>
+            <p className={styles.eyebrow}>Reservations</p>
+            <h2>How to avoid the NYC restaurant scramble</h2>
+            <p>
+              The best New York food days are a mix: one booked table, one spontaneous slice, and one
+              fallback you can reach by subway without crossing the city twice.
+            </p>
+          </div>
+          <div className={styles.ruleGrid}>
+            {reservationRules.map(([title, copy]) => (
+              <div className={styles.ruleCard} key={title}>
+                <strong>{title}</strong>
+                <p>{copy}</p>
+              </div>
+            ))}
+          </div>
         </section>
 
-        {/* Food halls */}
-        <section className={styles.splitSection}>
-                <div className={styles.imageWrapper}>
-                <Image
-                    src="/data/majorcities/newyork/assets/nyc-asian-food-hall-solo-dining-rainy-day-dumbo-chelsea.png"
-                    alt="Solo traveler enjoying food hall dining in DUMBO and Chelsea, New York City"
-                    fill
-                    className={styles.mapImage}
-                />
-                </div>
-                <div className={styles.textWrapper}>
-                <h2 className={styles.heading}>NYC food halls</h2>
-                <p className={styles.subheading}>Best for groups and indecision — everyone gets what they want, one table.</p>
-                <ul>
-                  <li className={styles.subheading}><strong>Chelsea Market</strong> (Meatpacking) — Los Tacos No. 1, hand-pulled noodles, dessert. Busy midday; go early or after 2 PM.</li>
-                  <li className={styles.subheading}><strong>Time Out Market</strong> (DUMBO) — Pat LaFrieda burgers and a rooftop with the bridge in frame.</li>
-                  <li className={styles.subheading}><strong>Grand Central Dining Concourse</strong> — Roberta&apos;s, Takumi Tacos, Blue Bottle, all easy around a train.</li>
-                  <li className={styles.subheading}><strong>Gotham West Market</strong> (Hell&apos;s Kitchen) — sushi, ramen, wagyu in one room.</li>
-                  <li className={styles.subheading}><strong>Essex Market</strong> (LES) — a 100-year-old market with serious stalls.</li>
-                  <li className={styles.subheading}><strong>Smorgasburg</strong> (weekends, Apr–Oct) — the giant outdoor market: Williamsburg Saturdays, Prospect Park Sundays, 100+ vendors.</li>
-                </ul>
-                </div>
+        <section className={styles.featureSectionAlt}>
+          <div className={styles.featureCopy}>
+            <p className={styles.eyebrow}>Pizza strategy</p>
+            <h2>Best pizza in NYC, without turning it into a debate</h2>
+            <p>
+              Pick the style first: a fast slice, a creative square, or a whole-pie destination.
+              Then choose the shop that fits your day instead of chasing one borough-to-borough ranking.
+            </p>
+            <ul className={styles.cleanList}>
+              {pizzaPicks.map((pick) => (
+                <li key={pick}>{pick}</li>
+              ))}
+            </ul>
+          </div>
+          <div className={styles.featureImage}>
+            <Image
+              src="/data/majorcities/newyork/assets/asian-food-rainy-day-solo-dining-new-york-city.png"
+              alt="Cozy New York dining table by a window"
+              fill
+              sizes="(max-width: 900px) 100vw, 42vw"
+              className={styles.image}
+            />
+          </div>
         </section>
 
-        {/* Solo dining — keep as differentiator */}
-        <section className={styles.splitSection}>
-                <div className={styles.imageWrapper}>
-                <Image
-                    src="/data/majorcities/newyork/assets/asian-food-rainy-day-solo-dining-new-york-city.png"
-                    alt="Table with pizza, pasta, taco, and soda overlooking the Empire State Building in New York City, capturing a solo traveler's cozy dining experience"
-                    fill
-                    className={styles.mapImage}
-                />
-                </div>
-                <div className={styles.textWrapper}>
-                <h2 className={styles.heading}>Eating Solo in NYC: Counters and Quiet Bars</h2>
-                <p className={styles.subheading}>🍜 <strong>Quick and easy when you&apos;re on your own.</strong> Ichiran builds the whole experience around eating alone — you order from a vending machine and sit in a private booth. Mimi Cheng&apos;s and Shake Shack are counter spots where nobody blinks at a table for one.</p>
-                <p className={styles.subheading}>🍷 <strong>Bar seats beat a table for one.</strong> At The Modern, Estela and Café Sabarsky, the bar is the best seat in the house when you&apos;re solo — you can order the full menu and you&apos;re not stuck staring across an empty chair.</p>
-                <p className={styles.subheading}>🥯 <strong>Near the theaters.</strong> Murray&apos;s Bagels, the Grand Central Oyster Bar and Joe Allen all work for a fast bite before a show or a late one after. Joe Allen has been feeding Broadway crowds since 1965.</p>
-
-                <Link href="/destination/nyc/solo-trip-to-nyc" className={styles.ctaButton}>
-                    NYC Solo Traveler Tips
-                </Link>
-                </div>
-        </section>
-        <section className={styles.splitSection}>
-
-                <div className={styles.textWrapper}>
-                <h2 className={styles.heading}>Three Food Halls Worth a Solo Stop</h2>
-                <p className={styles.subheading}>🏙️ <strong>DUMBO, for the view.</strong> Time Out Market sits right on the water with the bridge in frame. Grab a Pat LaFrieda burger, take it up to the rooftop, and you&apos;ve got dinner and the skyline for the price of one.</p>
-                <p className={styles.subheading}>🍣 <strong>Grand Central Dining Concourse.</strong> Easy to fit in around a train — Roberta&apos;s pizza, Takumi Tacos and a Blue Bottle coffee, all in one corridor and all fine to eat standing or at a counter.</p>
-                <p className={styles.subheading}>🥟 <strong>Chelsea Market.</strong> Tacos at Los Tacos No. 1, hand-pulled noodles, and something sweet on the way out. It gets packed midday, so go early or after 2pm if you want elbow room.</p>
-
-                <Link href="/destination/nyc/solo-itinerary" className={styles.ctaButton}>
-                   Plan Your NYC Itinerary
-                </Link>
-                </div>
-                <div className={styles.imageWrapper}>
-                <Image
-                    src="/data/majorcities/newyork/assets/nyc-asian-food-hall-solo-dining-rainy-day-dumbo-chelsea.png"
-                    alt="Solo traveler enjoying Asian-inspired dishes like ramen and dumplings by a window on a rainy day in New York City, evoking the cozy vibe of DUMBO and Chelsea food halls."
-                    fill
-                    className={styles.mapImage}
-                />
-                </div>
+        <section className={styles.section}>
+          <div className={styles.sectionIntro}>
+            <p className={styles.eyebrow}>Solo dining</p>
+            <h2>Where eating alone feels normal</h2>
+            <p>
+              New York is one of the easiest cities in the world to dine solo. Aim for counters,
+              bars, markets, and restaurants where turnover is part of the rhythm.
+            </p>
+          </div>
+          <div className={styles.cardGrid}>
+            {soloStops.map((stop) => (
+              <article className={styles.foodCard} key={stop.title}>
+                <span>{stop.title}</span>
+                <p>{stop.copy}</p>
+              </article>
+            ))}
+          </div>
+          <div className={styles.inlineCta}>
+            <Link href="/destination/nyc/solo-trip-to-nyc">Plan the solo NYC day around meals</Link>
+          </div>
         </section>
 
-        {/* Bagels */}
-        <section className={styles.splitSection}>
-                <div className={styles.imageWrapper}>
-                <Image
-                    src="/data/majorcities/newyork/assets/nyc-bagel-collage-murrays-blackseed-solo-dining.png"
-                    alt="Collage of New York City bagels including smoked salmon, rainbow, and sesame varieties from iconic shops like Murray's and Black Seed, highlighting solo dining culture."
-                    fill
-                    className={styles.mapImage}
-                />
+        <section className={styles.featureSection}>
+          <div className={styles.featureImage}>
+            <Image
+              src="/data/majorcities/newyork/assets/nyc-asian-food-hall-solo-dining-rainy-day-dumbo-chelsea.png"
+              alt="NYC food hall dishes for solo travelers and groups"
+              fill
+              sizes="(max-width: 900px) 100vw, 42vw"
+              className={styles.image}
+            />
+          </div>
+          <div className={styles.featureCopy}>
+            <p className={styles.eyebrow}>Food halls</p>
+            <h2>The flexible choice for groups, rain, and indecision</h2>
+            <div className={styles.foodHallList}>
+              {foodHalls.map(([name, copy]) => (
+                <div key={name}>
+                  <strong>{name}</strong>
+                  <p>{copy}</p>
                 </div>
-                <div className={styles.textWrapper}>
-                <h2 className={styles.heading}>Where to Get a Good Bagel</h2>
-                <p className={styles.subheading}>🥯 <strong>The classics.</strong> Murray&apos;s, Ess-a-Bagel and Absolute do it the old way — hand-rolled, boiled, nothing fancy. Order it with a schmear and don&apos;t ask them to toast it; that&apos;s how you spot a tourist.</p>
-                <p className={styles.subheading}>🧈 <strong>The newer crowd.</strong> Black Seed went Montreal-style with a wood-fired oven, Apollo built a cult following, and Utopia out in Queens is worth the trek if you&apos;re already that far.</p>
-                <p className={styles.subheading}>🗺️ <strong>Easy solo stops.</strong> Hudson Bagel and Tompkins Square have counter space and a few seats outside, so you can sit with your coffee instead of eating on the move.</p>
-
-                <Link href="/destination/nyc/solo-trip-to-nyc" className={styles.ctaButton}>
-                    Solo Travel Tips for Dining Out
-                </Link>
-                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
-        {/* Price ranges */}
-        <section className={styles.splitSection} style={{textAlign: "center"}}>
-                <div style={{ width: "100%", textAlign: "left" }}>
-                <h2 className={styles.heading}>Price ranges &amp; reservations</h2>
-                <ul>
-                  <li className={styles.subheading}><strong>Cheap (under ~$15):</strong> a slice, a bagel, a food-hall plate, dollar dumplings in Chinatown.</li>
-                  <li className={styles.subheading}><strong>Mid ($25–60):</strong> most neighborhood restaurants; NYC Restaurant Week (winter &amp; summer) runs prix-fixe at $30 / $45 / $60.</li>
-                  <li className={styles.subheading}><strong>Splurge ($100+):</strong> the tasting-menu tier. Hard books (Carbone, Atomix, 4 Charles, Tatiana) release in batches up to 28 days ahead — set an alarm.</li>
-                </ul>
-                </div>
+        <section className={styles.budgetSection}>
+          <div>
+            <p className={styles.eyebrow}>Budget check</p>
+            <h2>What meals cost in NYC</h2>
+          </div>
+          <div className={styles.budgetGrid}>
+            <div><strong>Under $15</strong><span>slice, bagel, dumplings, falafel, quick counter meals</span></div>
+            <div><strong>$25-$60</strong><span>most neighborhood dinners, brunch, casual sit-down restaurants</span></div>
+            <div><strong>$100+</strong><span>tasting menus, steakhouses, famous tables, cocktail-heavy nights</span></div>
+          </div>
         </section>
 
-        <BookingCTA variant="full" text="Book a guided NYC food tour" href="/destination/nyc/booking?tab=activities&from=food" label="See food tours" />
+        <BookingCTA
+          variant="full"
+          text="Book a guided NYC food tour"
+          href="/destination/nyc/booking?tab=activities&from=food"
+          label="See food tours"
+        />
         <FAQAccordion faqs={faqData} />
-        <Footer />
-        </>
-    );
-}
-function capitalizeWords(str: string) {
-  return str
-    .toLowerCase()
-    .replace(/\b\w/g, (char) => char.toUpperCase());
+      </main>
+
+      <Footer />
+    </>
+  );
 }

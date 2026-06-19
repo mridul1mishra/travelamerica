@@ -124,5 +124,18 @@ const breadcrumb = {
 };
 
 export default function LALandmarkPage() {
-  return <LALandmarkClient />;
+  // Render the JSON-LD. These schemas were defined but never output before.
+  const schemas = [article, touristAttractions, itemList, faqPage, breadcrumb];
+  return (
+    <>
+      {schemas.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      <LALandmarkClient />
+    </>
+  );
 }

@@ -158,5 +158,17 @@ const schema1 = {
 };
 
 export default function OrlandoGroupTravelPage() {
-  return <OrlandoGroupTravelClient />;
+  const schemas = [schema1, schema2, schema3, schema4, schema5];
+  return (
+    <>
+      {schemas.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      <OrlandoGroupTravelClient />
+    </>
+  );
 }

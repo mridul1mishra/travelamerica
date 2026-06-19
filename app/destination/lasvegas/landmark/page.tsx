@@ -124,5 +124,17 @@ const breadcrumb = {
 };
 
 export default function LasVegasLandmarkPage() {
-  return <LasVegasLandmarkClient />;
+  const schemas = [article, touristAttractions, itemList, faqPage, breadcrumb];
+  return (
+    <>
+      {schemas.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      <LasVegasLandmarkClient />
+    </>
+  );
 }
