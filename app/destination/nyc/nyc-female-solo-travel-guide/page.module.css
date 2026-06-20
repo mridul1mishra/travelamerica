@@ -1,7 +1,537 @@
-.container { 
-  max-width: 720px; /* or 800px depending on your editorial width */ 
-  margin: 0 auto; 
-  padding: 0 1rem; /* mobile breathing room */ 
-  box-sizing: border-box;
+.page {
+  --ink: #101828;
+  --muted: #536172;
+  --line: #d9e1ea;
+  --paper: #ffffff;
+  --wash: #f4efe8;
+  --blue: #2459e6;
+  --blueSoft: #edf4ff;
+  --greenSoft: #e8f7ef;
+  --goldSoft: #fff5ce;
+  background: var(--wash);
+  color: var(--ink);
+  font-family: var(--font-sans, "Inter", system-ui, sans-serif);
+  overflow-x: hidden;
 }
-body { background-color: #F7F7F8; /* soft gray */ }
+
+.headerSpacer {
+  height: 118px;
+}
+
+.hero,
+.sectionGrid,
+.band,
+.sectionStack,
+.splitSection,
+.utilityGrid,
+.faqSection,
+.nextSteps {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+  gap: 28px;
+  align-items: stretch;
+  padding: 30px 0 34px;
+}
+
+.heroCopy,
+.heroMedia,
+.band,
+.splitSection,
+.utilityPanel {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 8px;
+}
+
+.heroCopy {
+  padding: clamp(28px, 5vw, 52px);
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 34px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+.breadcrumb a {
+  color: #334155;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--blue);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #455362;
+  font-size: 0.88rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.hero h1,
+.sectionIntro h2,
+.bandHeader h2,
+.sectionHeader h2,
+.splitSection h2,
+.utilityPanel h2 {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.04;
+}
+
+.hero h1 {
+  max-width: 720px;
+  font-size: clamp(2.75rem, 6vw, 5rem);
+}
+
+.lede {
+  max-width: 690px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: clamp(1.12rem, 2vw, 1.32rem);
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 24px;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.primaryButton {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+.secondaryButton {
+  border: 1px solid #b9d4ff;
+  background: var(--blueSoft);
+  color: #1e55d7;
+}
+
+.trustRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-top: 28px;
+  color: #4f5d6d;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.trustRow span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trustRow span::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--blue);
+}
+
+.heroMedia {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.heroMedia img {
+  object-fit: cover;
+}
+
+.heroMedia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 16, 31, 0.04), rgba(8, 16, 31, 0.46));
+}
+
+.verdictCard {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1;
+  width: min(360px, calc(100% - 48px));
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 16px 40px rgba(8, 16, 31, 0.22);
+}
+
+.verdictCard span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--blue);
+  font-size: 0.86rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.verdictCard strong {
+  display: block;
+  font-size: 1.12rem;
+  line-height: 1.35;
+}
+
+.sectionGrid {
+  display: grid;
+  grid-template-columns: 0.74fr 1.26fr;
+  gap: 34px;
+  align-items: start;
+  padding: 44px 0;
+}
+
+.sectionIntro {
+  position: sticky;
+  top: 128px;
+}
+
+.sectionIntro h2,
+.bandHeader h2,
+.sectionHeader h2,
+.splitSection h2,
+.utilityPanel h2 {
+  font-size: clamp(2rem, 3.4vw, 3.2rem);
+}
+
+.sectionIntro p,
+.sectionHeader p,
+.splitSection p,
+.utilityPanel p {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 1.12rem;
+  line-height: 1.65;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.infoCard,
+.ruleCard,
+.scenarioCard,
+.faqCard {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.infoCard {
+  min-height: 260px;
+  padding: 24px;
+}
+
+.infoCard span,
+.scenarioCard span {
+  color: var(--blue);
+  font-size: 0.83rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.infoCard h3,
+.ruleCard h3,
+.scenarioCard h3,
+.faqCard h3,
+.checkPanel h3 {
+  margin: 12px 0 0;
+  color: var(--ink);
+  font-size: 1.28rem;
+  line-height: 1.18;
+}
+
+.infoCard p,
+.ruleCard p,
+.faqCard p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+.band,
+.sectionStack,
+.faqSection {
+  padding: 52px 0;
+}
+
+.band {
+  padding: clamp(28px, 4vw, 42px);
+}
+
+.bandHeader {
+  max-width: 780px;
+}
+
+.threeCards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.ruleCard {
+  padding: 24px;
+  background: #fbfdff;
+}
+
+.sectionHeader {
+  max-width: 830px;
+}
+
+.scenarioGrid,
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.scenarioCard {
+  padding: 24px;
+}
+
+.scenarioCard ul,
+.checkPanel ul {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.scenarioCard li,
+.checkPanel li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.scenarioCard li::before,
+.checkPanel li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--blue);
+}
+
+.splitSection {
+  display: grid;
+  grid-template-columns: 1fr 0.82fr;
+  gap: 34px;
+  align-items: center;
+  padding: clamp(28px, 4vw, 44px);
+}
+
+.textLink {
+  display: inline-flex;
+  margin-top: 22px;
+  color: var(--blue);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.textLink:hover {
+  text-decoration: underline;
+}
+
+.checkPanel {
+  border-radius: 8px;
+  background: var(--blueSoft);
+  padding: 26px;
+}
+
+.utilityGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 52px 0 0;
+}
+
+.utilityPanel {
+  padding: 30px;
+}
+
+.itemGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.itemGrid span {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfdff;
+  padding: 14px 16px;
+  color: #263445;
+  font-weight: 800;
+}
+
+.sourceLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.sourceLinks a {
+  color: var(--blue);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.sourceLinks a:hover {
+  text-decoration: underline;
+}
+
+.faqCard {
+  padding: 24px;
+}
+
+.nextSteps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0 0 58px;
+}
+
+.nextSteps a {
+  display: flex;
+  min-height: 74px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b9d4ff;
+  border-radius: 8px;
+  background: var(--blueSoft);
+  color: #1e55d7;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (max-width: 1060px) {
+  .hero,
+  .sectionGrid,
+  .splitSection,
+  .utilityGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionIntro {
+    position: static;
+  }
+
+  .heroMedia {
+    min-height: 420px;
+  }
+
+  .cardGrid,
+  .scenarioGrid,
+  .faqGrid,
+  .threeCards,
+  .nextSteps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .headerSpacer {
+    height: 92px;
+  }
+
+  .hero,
+  .sectionGrid,
+  .band,
+  .sectionStack,
+  .splitSection,
+  .utilityGrid,
+  .faqSection,
+  .nextSteps {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .hero {
+    padding-top: 18px;
+  }
+
+  .heroCopy {
+    padding: 24px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.32rem, 13vw, 3.6rem);
+  }
+
+  .actions,
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .heroMedia {
+    min-height: 360px;
+  }
+
+  .cardGrid,
+  .scenarioGrid,
+  .faqGrid,
+  .threeCards,
+  .itemGrid,
+  .nextSteps {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionGrid,
+  .band,
+  .sectionStack,
+  .splitSection,
+  .utilityGrid,
+  .faqSection {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+}

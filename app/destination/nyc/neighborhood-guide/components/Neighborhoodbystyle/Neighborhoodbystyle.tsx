@@ -1,10 +1,45 @@
-import styles from './Neighborhoodbystyle.module.css';
+import styles from "./Neighborhoodbystyle.module.css";
 
 type NeighborhoodsByStyleProps = {
   interest?: string;
-}
+};
 
-export default function NeighborhoodsByStyle({interest}: NeighborhoodsByStyleProps) {
+const travelStyles = [
+  {
+    title: "First-Time Visitors",
+    areas: "Midtown Manhattan, Lower Manhattan",
+    copy: "Central locations with easy access to landmarks, transit, and sightseeing.",
+  },
+  {
+    title: "Sightseeing & Landmarks",
+    areas: "Midtown, Upper West Side",
+    copy: "Walkable areas close to major attractions, museums, and parks.",
+  },
+  {
+    title: "Food & Culture",
+    areas: "Lower East Side, Williamsburg",
+    copy: "Known for diverse dining, nightlife, and creative energy.",
+  },
+  {
+    title: "Families",
+    areas: "Upper East Side, Brooklyn Heights",
+    copy: "Quieter streets, parks nearby, and a more relaxed pace.",
+  },
+  {
+    title: "Budget-Focused Travelers",
+    areas: "Harlem, Long Island City",
+    copy: "More affordable options with reliable subway access.",
+  },
+  {
+    title: "Nightlife & Restaurants",
+    areas: "East Village, SoHo, Williamsburg",
+    copy: "Better for travelers who want dinner, bars, and late-evening energy within walking distance.",
+  },
+];
+
+export default function NeighborhoodsByStyle({ interest }: NeighborhoodsByStyleProps) {
+  void interest;
+
   return (
     <section className={styles.section}>
       <h2 className={styles.heading}>Neighborhoods by Travel Style</h2>
@@ -16,56 +51,15 @@ export default function NeighborhoodsByStyle({interest}: NeighborhoodsByStylePro
       </p>
 
       <div className={styles.grid}>
-        <div className={styles.card}>
-          <h3>First‑Time Visitors</h3>
-          <p>
-            <strong>Midtown Manhattan, Lower Manhattan</strong>
-          </p>
-          <p>
-            Central locations with easy access to landmarks, transit, and
-            sightseeing.
-          </p>
-        </div>
-
-        <div className={styles.card}>
-          <h3>Sightseeing & Landmarks</h3>
-          <p>
-            <strong>Midtown, Upper West Side</strong>
-          </p>
-          <p>
-            Walkable areas close to major attractions, museums, and parks.
-          </p>
-        </div>
-
-        <div className={styles.card}>
-          <h3>Food & Culture</h3>
-          <p>
-            <strong>Lower East Side, Williamsburg</strong>
-          </p>
-          <p>
-            Known for diverse dining, nightlife, and creative energy.
-          </p>
-        </div>
-
-        <div className={styles.card}>
-          <h3>Families</h3>
-          <p>
-            <strong>Upper East Side, Brooklyn Heights</strong>
-          </p>
-          <p>
-            Quieter streets, parks nearby, and a more relaxed pace.
-          </p>
-        </div>
-
-        <div className={styles.card}>
-          <h3>Budget‑Focused Travelers</h3>
-          <p>
-            <strong>Harlem, Long Island City</strong>
-          </p>
-          <p>
-            More affordable options with reliable subway access.
-          </p>
-        </div>
+        {travelStyles.map((style) => (
+          <article key={style.title} className={styles.card}>
+            <h3>{style.title}</h3>
+            <p>
+              <strong>{style.areas}</strong>
+            </p>
+            <p>{style.copy}</p>
+          </article>
+        ))}
       </div>
     </section>
   );

@@ -1,10 +1,12 @@
-export const metadata = {
-  title: "Is New York Safe to Visit in 2026? Honest Safety Guide + Neighborhood Breakdown",
-  description: "Is NYC safe? Real answer: yes, but here's the breakdown by neighborhood. Skip the tourism board fluff — actual street-level advice for first-time visitors.",
-  alternates: { 
-    canonical: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide"
-  },
+import NYCSafetyGuideClient from "./nycsafetyguideclient";
 
+export const metadata = {
+  title: "Is New York City Safe to Visit in 2026? Practical NYC Safety Guide",
+  description:
+    "A practical NYC safety guide for visitors: where to stay, subway safety, night safety, scams, emergency steps, and official NYPD and MTA context.",
+  alternates: {
+    canonical: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
+  },
   robots: {
     index: true,
     follow: true,
@@ -13,142 +15,147 @@ export const metadata = {
       follow: true,
       maxImagePreview: "large",
       maxSnippet: -1,
-      maxVideoPreview: -1
-    }
+      maxVideoPreview: -1,
+    },
   },
-
-  openGraph: { 
-    title: "Is NYC Safe in 2026? An Honest, Local's Take", 
-    description: "Yes, NYC is safe — but with caveats. Get the real picture: which neighborhoods to trust, subway safety tips, scams to dodge, and what to do in an emergency.", 
-    url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide", 
-    siteName: "Travels Americas", 
-    type: "article", 
-    locale: "en_US", 
-    images: [ 
-      { 
-        url: "/data/metadataimage/nyc-safety-guide-og.webp", 
-        width: 1200, 
-        height: 630, 
-        alt: "Minimalist NYC skyline with bold title: NYC Safety Guide"
-      } 
-    ] 
-  },
-
-  twitter: { 
-    card: "summary_large_image", 
-    title: "Is NYC Safe in 2026? An Honest, Local's Take", 
-    description: "Yes, NYC is safe — but with caveats. Get the real picture: which neighborhoods to trust, subway safety tips, scams to dodge, and what to do in an emergency.", 
+  openGraph: {
+    title: "Is New York City Safe to Visit in 2026?",
+    description:
+      "A calm, practical NYC safety guide with neighborhood guidance, transit tips, night safety advice, scams to avoid, and emergency actions.",
+    url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
+    siteName: "Travels Americas",
+    type: "article",
+    locale: "en_US",
     images: [
-      "/data/metadataimage/nyc-safety-guide-og.webp"
-    ] 
-  }
+      {
+        url: "https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.webp",
+        width: 1024,
+        height: 1024,
+        alt: "Lower Manhattan skyline lit at night across the water",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Is New York City Safe to Visit in 2026?",
+    description:
+      "A practical NYC safety guide with neighborhood guidance, transit tips, night safety advice, and emergency actions.",
+    images: ["https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.webp"],
+  },
 };
 
-
-
-
-import NYCSafetyGuideClient from './nycsafetyguideclient';
-
 export default function NYCSafetyGuide() {
-  const GuideSchema = {
-  "@context": "https://schema.org",
-  "@type": "Guide",
-  "name": "NYC Safety Guide for Solo Travelers",
-  "description": "A practical, scenario-based safety guide for navigating New York City confidently.",
-  "url": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
-  "inLanguage": "en-US",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Travels Americas",
-    "url": "https://www.travelsamericas.com"
-  },
-  "author": {
-    "@type": "Organization",
-    "name": "Travels Americas"
-  }
-}
-  const FAQSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is New York City safe for tourists in 2026?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, NYC is generally safe for tourists in 2026 when basic precautions are followed. Most visitors stay in busy areas, use public transit safetly, and have trouble-free trips."
-      }
+  const guideSchema = {
+    "@context": "https://schema.org",
+    "@type": "Guide",
+    name: "NYC Safety Guide for Visitors",
+    description:
+      "A practical, scenario-based safety guide for visiting New York City with neighborhood, transit, night, and emergency guidance.",
+    url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
+    inLanguage: "en-US",
+    dateModified: "2026-06-19",
+    author: {
+      "@type": "Organization",
+      name: "Travels Americas",
     },
-    {
-      "@type": "Question",
-      "name": "Which NYC neighborhoods should tourists avoid at night?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tourists should be cautious in unfamiliar or poorly lit areas late at night. Popular central neighborhoods are generally safe, but staying in populated areas and following local guidance is recommended"
-      }
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Travels Americas",
+      url: "https://www.travelsamericas.com",
     },
-    {
-      "@type": "Question",
-      "name": "Is the NYC subway safe at night?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generally yes, but avoid empty platforms and late-night transfers in less busy stations. Wait near the conductor’s car."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Should I use rideshare or yellow cabs?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Both are safe. Rideshare apps offer tracking and driver info, while yellow cabs are regulated and easy to hail in Manhattan."
-      }
-    }
-  ]
-}
-  const BreadCrumbList = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Destinations",
-      "item": "https://www.travelsamericas.com/destination/nyc"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "New York City",
-      "item": "https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "NYC Safety Guide",
-      "item": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide"
-    }
-  ]
-}
-const WebPage = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "NYC Safety Guide for Solo Travelers",
-  "url": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
-  "description": "A calm, practical NYC safety guide for solo travelers with tips, scenarios, and neighborhood insights.",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Travels Americas",
-    "url": "https://www.travelsamericas.com"
-  }
-}
+  };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Is New York City safe for tourists in 2026?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "New York City is generally safe for visitors who stay in active areas, use reliable transit, and make practical late-night route choices.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is the NYC subway safe at night?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The subway is often usable at night, but visitors should avoid empty platforms and cars, reduce late transfers, and use a cab or rideshare when a route feels too quiet.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Where should first-time visitors stay in NYC?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Upper West Side, Upper East Side, Midtown, Chelsea, Flatiron, and Brooklyn Heights are practical choices because they combine transit, hotels, food, and active streets.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What should I do if I feel unsafe in NYC?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Step into a public place such as a hotel lobby, store, restaurant, museum, or staffed station. Call 911 for immediate danger.",
+        },
+      },
+    ],
+  };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.travelsamericas.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "New York City",
+        item: "https://www.travelsamericas.com/destination/nyc",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "NYC Safety Guide",
+        item: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
+      },
+    ],
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "NYC Safety Guide for Visitors",
+    url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
+    description:
+      "A calm, practical NYC safety guide for visitors with route planning, transit guidance, neighborhood context, and emergency actions.",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Travels Americas",
+      url: "https://www.travelsamericas.com",
+    },
+  };
 
   return (
-  <>
-  <script id="nyc-safety-guide-schema" type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify([GuideSchema, FAQSchema, BreadCrumbList, WebPage ])}} />
-  <NYCSafetyGuideClient />
-  </>
-);
-  
+    <>
+      <script
+        id="nyc-safety-guide-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [guideSchema, faqSchema, breadcrumbSchema, webPageSchema],
+          }),
+        }}
+      />
+      <NYCSafetyGuideClient />
+    </>
+  );
 }

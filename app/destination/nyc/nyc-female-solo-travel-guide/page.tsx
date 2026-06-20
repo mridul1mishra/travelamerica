@@ -30,10 +30,10 @@ export const metadata = {
     type: "article", 
     locale: "en_US", 
     images: [ { 
-      url: "https://www.travelsamericas.com/data/majorcities/newyork/assets/safety/nyc-safety-guide.webp", 
-      width: 1200, 
-      height: 630, 
-      alt: "NYC Solo Female Travel Safety Guide" 
+      url: "https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.webp",
+      width: 1024,
+      height: 1024,
+      alt: "Lower Manhattan skyline lit at night across the water"
     } 
   ] 
 },
@@ -43,7 +43,7 @@ export const metadata = {
     title: "New York City Safety for Solo Female Travelers (2026)", 
     description: "A practical NYC safety guide for solo women: safest neighborhoods, subway tips after dark, what to wear, real scenarios, and emergency steps you can use today.", 
     images: [
-    "https://www.travelsamericas.com/data/majorcities/newyork/assets/safety/nyc-safety-guide.webp"
+    "https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.webp"
   ] 
   }
 };
@@ -60,7 +60,7 @@ export default function Page()
       "name": "Is New York City safe for solo female travelers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — NYC is one of the safest major cities for solo female travelers, especially in busy neighborhoods. Stay aware, stick to well-lit avenues, avoid empty subway cars, and trust your instincts."
+        "text": "Yes, with normal city awareness. NYC is easiest for solo female travelers when you stay in busy neighborhoods, use well-lit routes, avoid empty subway cars, and trust your instincts."
       }
     },
     {
@@ -100,9 +100,9 @@ export default function Page()
 const Article = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "NYC Solo Female Travel Safety Guide (2026)",
+  "headline": "New York City for Solo Female Travelers (2026)",
   "description": "A practical, scenario-based NYC safety guide for solo female travelers. Includes safe areas, subway tips, night safety, packing essentials, and real-world scenarios.",
-  "image": "https://www.travelsamericas.com/data/majorcities/newyork/assets/safety/nyc-safety-guide.webp",
+  "image": "https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.webp",
   "author": {
     "@type": "Organization",
     "name": "Travels Americas"
@@ -117,7 +117,7 @@ const Article = {
   },
   "url": "https://www.travelsamericas.com/destination/nyc/nyc-female-solo-travel-guide",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-01-01"
+  "dateModified": "2026-06-19"
 }
 const BreadCrumbList = {
   "@context": "https://schema.org",

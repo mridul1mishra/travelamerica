@@ -300,41 +300,41 @@
   },
 
   "faq": [
-  {
-    "question": "Is NYC safe for solo female travelers at night?",
-    "answer": "Yes, especially in busy areas like Midtown, SoHo, and the Upper West Side.",
-    "relatedLinks": ["/destination/nyc/solo-trip-to-nyc"]
-  },
-  {
-    "question": "Which NYC neighborhoods are safest to walk in at night?",
-    "answer": "Midtown, SoHo, Greenwich Village, and Brooklyn Heights stay active and well-lit into the night.",
-    "relatedLinks": ["/destination/nyc/best-areas-to-stay"]
-  },
-  {
-    "question": "Is the NYC subway safe at night?",
-    "answer": "Yes on busy lines, but avoid empty cars and transfer stations late at night.",
-    "relatedLinks": ["/destination/nyc/subway-safety-guide"]
-  },
-  {
-    "question": "Is it safe to walk alone in NYC after 10 PM?",
-    "answer": "Stick to main avenues, avoid isolated parks, and stay in well-lit, busy areas.",
-    "relatedLinks": ["/destination/nyc/nyc-safety-guide"]
-  },
-  {
-    "question": "Are NYC tourist spots safe at night?",
-    "answer": "Times Square, Rockefeller Center, and DUMBO remain busy and safe for solo travelers.",
-    "relatedLinks": ["/destination/nyc/neighborhood-guide"]
-  },
-  {
-    "question": "What should solo travelers avoid at night in NYC?",
-    "answer": "Avoid empty subway cars, isolated parks, and quiet industrial areas.",
-    "relatedLinks": ["/destination/nyc/nyc-female-solo-travel-guide"]
-  }
-],
+    {
+      "question": "Is New York safe to visit in 2026?",
+      "answer": "Yes. The brief supports a cautious yes: NYPD reported Q1 2026 major crime down 5.3%, while tourists should still use normal big-city awareness in crowds, stations, and quieter areas.",
+      "relatedLinks": ["/destination/nyc/nyc-safety-guide"]
+    },
+    {
+      "question": "Is Manhattan safe for tourists?",
+      "answer": "Generally yes, especially in busy visitor areas such as Midtown, Lower Manhattan, the Upper West Side, and the Upper East Side. The main tourist risk is petty crime in crowded spots.",
+      "relatedLinks": ["/destination/nyc/best-areas-to-stay"]
+    },
+    {
+      "question": "Is the NYC subway safe at night?",
+      "answer": "Usually yes on busy routes, but be deliberate late. NYPD said 2025 subway major crime fell 4% and was the safest year since 2009, excluding pandemic years.",
+      "relatedLinks": ["/destination/nyc/nyc-subway-map"]
+    },
+    {
+      "question": "What NYC scams should tourists watch for?",
+      "answer": "Watch for Times Square photo characters, CD or bracelet hustles, fake-badge approaches, and pickpockets around crowded subway doors and tourist areas.",
+      "relatedLinks": ["/destination/nyc/nyc-safety-guide"]
+    },
+    {
+      "question": "Is NYC safe for solo female travelers?",
+      "answer": "Yes with practical defaults: stay in busy areas, use main avenues, avoid empty subway cars, keep a charged phone, and switch to rideshare when a route feels too isolated.",
+      "relatedLinks": ["/destination/nyc/nyc-female-solo-travel-guide"]
+    },
+    {
+      "question": "Which NYC areas should I be more cautious in after dark?",
+      "answer": "Be more careful on quiet side streets, isolated parks, industrial blocks, and low-foot-traffic areas after dark. The safer move is to stay near light, people, staff, and transit options.",
+      "relatedLinks": ["/destination/nyc/neighborhood-guide"]
+    }
+  ],
 
   "interlinkingGrid": [
     { "title": "Solo Trip to NYC Guide", "url": "/destination/nyc/solo-trip-to-nyc" },
-    { "title": "NYC Subway Safety", "url": "/destination/nyc/subway-safety-guide" }
+    { "title": "NYC Subway Map", "url": "/destination/nyc/nyc-subway-map" }
   ],
 
   "trustBlock": {

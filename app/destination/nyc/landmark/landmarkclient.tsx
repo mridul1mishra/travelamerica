@@ -1,217 +1,242 @@
 "use client";
-import HeroBanner from "./components/HeroBanner/HeroBanner";
-import NavigationHeader from "./components/NavigationHeader/NavigationHeader";
+
+import Image from "next/image";
 import Link from "next/link";
+import NavigationHeader from "./components/NavigationHeader/NavigationHeader";
 import Footer from "./components/Footer/Footer";
 import styles from "./landmark.module.css";
-import BookingCTA from "./components/BookingCTA/BookingCTA";
+import { LANDMARKS } from "./landmarks-data";
 
-import { LANDMARKS } from './landmarks-data';
+const priorityPicks = [
+  {
+    label: "First trip",
+    title: "Statue ferry, Brooklyn Bridge, one skyline deck",
+    copy: "This gives you harbor, walking, and the skyline without turning the day into a museum of lines.",
+  },
+  {
+    label: "Best paid view",
+    title: "Top of the Rock beats stacking decks",
+    copy: "You get the Empire State Building in the frame, which is why it is the safer first-timer pick.",
+  },
+  {
+    label: "Best free route",
+    title: "Ferry, memorial plaza, bridge, Times Square",
+    copy: "A strong landmark day can cost almost nothing if you use walks and transit intelligently.",
+  },
+];
 
+const landmarkRoutes = [
+  {
+    title: "Classic first-timer day",
+    tag: "Paid + free",
+    steps: [
+      "Statue of Liberty first ferry",
+      "9/11 Memorial plaza",
+      "Brooklyn Bridge into DUMBO",
+      "Late Empire State or Top of the Rock",
+    ],
+  },
+  {
+    title: "Relaxed museum + skyline day",
+    tag: "Lower stress",
+    steps: [
+      "Met Museum for 2-3 hours",
+      "Central Park southbound walk",
+      "Early dinner near Midtown West",
+      "Sunset Top of the Rock",
+    ],
+  },
+  {
+    title: "Free landmark day",
+    tag: "$0 attractions",
+    steps: [
+      "Staten Island Ferry",
+      "Brooklyn Bridge",
+      "NY Public Library + Bryant Park",
+      "High Line and Times Square after dark",
+    ],
+  },
+];
+
+const faqs = [
+  [
+    "How far ahead should I book landmark tickets?",
+    "Book Statue pedestal or crown access as early as possible. For observation decks, standard tickets are usually fine a few days out, but sunset slots need more lead time.",
+  ],
+  [
+    "Are city passes worth it?",
+    "Only if you will actually use four or more included attractions. For two or three landmarks, individual tickets are usually simpler and often cheaper.",
+  ],
+  [
+    "Can I see most landmarks in three days?",
+    "Yes, but it is better to group by area: Lower Manhattan and DUMBO, Central Park and Museum Mile, then Midtown and the West Side.",
+  ],
+  [
+    "Which landmark is best for solo travelers?",
+    "The Met, Brooklyn Bridge, High Line, and Top of the Rock are especially easy solo because they are self-paced and busy enough to feel comfortable.",
+  ],
+];
 
 export default function LandmarkPage() {
-
-  // ---- JSON-LD schemas ----
-
-
-
-
-
   return (
     <>
-
       <NavigationHeader />
-      <HeroBanner
-        image="/data/majorcities/newyork/assets/statue-of-liberty.webp"
-        bannerText="New York City Landmarks Guide"
-      />
-      <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=activities&from=landmark" label="See tickets" />
-
-      <section className={styles.intro} style={{ textAlign: "center" }}>
-        <h1 className={styles.sectionheading}>NYC Landmarks Guide: 9 Must-See Sights</h1>
-        <p className={styles.introLead}>
-          New York&apos;s landmarks are spread across boroughs, priced all over the map, and some are worth half a day
-          while others are a 20-minute photo stop. This guide gives you the practical details for the nine that
-          matter most &mdash; hours, ticket prices, the nearest subway, how long to budget, and when to go to skip
-          the worst crowds &mdash; so you can fit them into real days. Last updated: June 2026. Verify hours and
-          prices on the venue&apos;s own site before going; NYC attractions change schedules seasonally.
-          (Traveling alone? Each entry includes an insider tip that&apos;s particularly useful for solo visitors too.)
-        </p>
-
-        <nav aria-label="Jump to landmark" className={styles.jumpnav}>
-          {LANDMARKS.map((l) => (
-            <a key={l.id} href={`#${l.id}`} className={styles.jumpLink}>{l.name}</a>
-          ))}
-        </nav>
-      </section>
-
-      <section className={styles.landmarkList}>
-        {LANDMARKS.map((l) => (
-          <article key={l.id} id={l.id} className={styles.landmarkCard}>
-            <h2 className={styles.landmarkName}>{l.name}</h2>
-            <p className={styles.landmarkNeighborhood}>{l.neighborhood}</p>
-
-            <dl className={styles.landmarkMeta}>
-              <div className={styles.metaRow}>
-                <dt>Address</dt>
-                <dd>{l.address}</dd>
-              </div>
-              <div className={styles.metaRow}>
-                <dt>Subway</dt>
-                <dd>{l.subway}</dd>
-              </div>
-              <div className={styles.metaRow}>
-                <dt>Hours</dt>
-                <dd>{l.hours}</dd>
-              </div>
-              <div className={styles.metaRow}>
-                <dt>Ticket</dt>
-                <dd>{l.ticket}</dd>
-              </div>
-              <div className={styles.metaRow}>
-                <dt>Time needed</dt>
-                <dd>{l.timeNeeded}</dd>
-              </div>
-              <div className={styles.metaRow}>
-                <dt>Best time to go</dt>
-                <dd>{l.bestTime}</dd>
-              </div>
-            </dl>
-
-            <div className={styles.landmarkBody}>
-              <h3 className={styles.landmarkSubhead}>What to do</h3>
-              <p>{l.whatToDo}</p>
-
-              <h3 className={styles.landmarkSubhead}>Insider tip</h3>
-              <p>{l.soloTip}</p>
+      <div className={styles.headerSpacer} aria-hidden="true" />
+      <main className={styles.page}>
+        <section className={styles.hero}>
+          <div className={styles.heroCopy}>
+            <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+              <Link href="/">Home</Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/destination/nyc">New York City</Link>
+              <span aria-hidden="true">/</span>
+              <span className={styles.current}>Landmarks</span>
+            </nav>
+            <p className={styles.eyebrow}>NYC landmarks guide</p>
+            <h1>New York City Landmarks Guide</h1>
+            <p>
+              The best NYC landmark days are not about seeing everything. They are about choosing
+              the right anchors, booking the tickets that matter, and grouping sights so the city
+              feels exciting instead of exhausting.
+            </p>
+            <div className={styles.heroActions}>
+              <Link href="/destination/nyc/booking?tab=activities&from=landmark" className={styles.primaryButton}>
+                See landmark tickets
+              </Link>
+              <a href="#landmarks" className={styles.secondaryButton}>Compare landmarks</a>
             </div>
-          </article>
-        ))}
-      </section>
+            <div className={styles.metaLine}>
+              <span><strong>9</strong> major landmarks</span>
+              <span><strong>Updated</strong> June 2026</span>
+              <span><strong>Routes</strong> by area</span>
+            </div>
+          </div>
+          <div className={styles.heroMedia}>
+            <Image
+              src="/data/majorcities/newyork/assets/statue-of-liberty.jpg"
+              alt="Statue of Liberty, New York skyline, bridges, and harbor view"
+              fill
+              priority
+              sizes="(max-width: 900px) 100vw, 48vw"
+              className={styles.heroImage}
+            />
+          </div>
+        </section>
 
-      <section className={styles.routeSection} id="suggested-routes">
-        <h2 className={styles.sectionheading}>Suggested 1-Day Landmark Routes</h2>
+        <section className={styles.priorityGrid} aria-label="NYC landmark planning priorities">
+          {priorityPicks.map((item) => (
+            <article key={item.label}>
+              <span>{item.label}</span>
+              <strong>{item.title}</strong>
+              <p>{item.copy}</p>
+            </article>
+          ))}
+        </section>
 
-        <article className={styles.routeCard}>
-          <h3>Classic First-Timer Route (1 day, walking + subway)</h3>
-          <ol>
-            <li><strong>9:00 AM</strong> &mdash; Statue of Liberty + Ellis Island (first ferry from Battery Park)</li>
-            <li><strong>1:30 PM</strong> &mdash; Quick lunch in the Financial District</li>
-            <li><strong>2:30 PM</strong> &mdash; 9/11 Memorial plaza (skip the museum if pressed for time)</li>
-            <li><strong>4:00 PM</strong> &mdash; Walk the Brooklyn Bridge (Manhattan to DUMBO)</li>
-            <li><strong>6:00 PM</strong> &mdash; Dinner in DUMBO</li>
-            <li><strong>8:30 PM</strong> &mdash; Subway back to Midtown, finish with Empire State Building at 9-10 PM</li>
-          </ol>
-        </article>
+        <section id="landmarks" className={styles.section}>
+          <div className={styles.sectionIntro}>
+            <p className={styles.eyebrow}>What is worth planning around</p>
+            <h2>Compare the landmark before you buy the ticket</h2>
+            <p>
+              Some landmarks need timed entry and half a day. Others are better as a walk-by,
+              a photo stop, or a free route anchor.
+            </p>
+          </div>
+          <div className={styles.landmarkGrid}>
+            {LANDMARKS.map((landmark, index) => (
+              <article key={landmark.id} id={landmark.id} className={styles.landmarkCard}>
+                <div className={styles.cardHeader}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h3>{landmark.name}</h3>
+                    <p>{landmark.neighborhood}</p>
+                  </div>
+                </div>
+                <dl className={styles.factGrid}>
+                  <div>
+                    <dt>Time</dt>
+                    <dd>{landmark.timeNeeded}</dd>
+                  </div>
+                  <div>
+                    <dt>Ticket</dt>
+                    <dd>{landmark.ticket}</dd>
+                  </div>
+                  <div>
+                    <dt>Best time</dt>
+                    <dd>{landmark.bestTime}</dd>
+                  </div>
+                  <div>
+                    <dt>Subway</dt>
+                    <dd>{landmark.subway}</dd>
+                  </div>
+                </dl>
+                <div className={styles.landmarkAdvice}>
+                  <strong>What to do</strong>
+                  <p>{landmark.whatToDo}</p>
+                  <strong>Insider tip</strong>
+                  <p>{landmark.soloTip}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
-        <article className={styles.routeCard}>
-          <h3>Relaxed Sightseeing Route (1 day, low-energy)</h3>
-          <ol>
-            <li><strong>10:00 AM</strong> &mdash; The Metropolitan Museum (3 hours, take it room by room)</li>
-            <li><strong>1:30 PM</strong> &mdash; Lunch on the Upper East Side</li>
-            <li><strong>3:00 PM</strong> &mdash; Walk south through Central Park (Conservatory Garden &rarr; Reservoir &rarr; Bow Bridge &rarr; Bethesda Terrace)</li>
-            <li><strong>5:30 PM</strong> &mdash; Exit Central Park at Columbus Circle</li>
-            <li><strong>6:30 PM</strong> &mdash; Sunset at Top of the Rock (book the sunset slot in advance)</li>
-            <li><strong>8:30 PM</strong> &mdash; Dinner in Hell&apos;s Kitchen or Midtown West</li>
-          </ol>
-        </article>
+        <section id="routes" className={styles.routeSection}>
+          <div className={styles.sectionIntro}>
+            <p className={styles.eyebrow}>Build a real day</p>
+            <h2>Use routes instead of a landmark checklist</h2>
+          </div>
+          <div className={styles.routeGrid}>
+            {landmarkRoutes.map((route) => (
+              <article key={route.title} className={styles.routeCard}>
+                <span>{route.tag}</span>
+                <h3>{route.title}</h3>
+                <ol>
+                  {route.steps.map((step) => (
+                    <li key={step}>{step}</li>
+                  ))}
+                </ol>
+              </article>
+            ))}
+          </div>
+        </section>
 
-        <article className={styles.routeCard}>
-          <h3>Free Landmarks Day (1 day, $0 attractions + transit)</h3>
-          <ol>
-            <li><strong>8:30 AM</strong> &mdash; Staten Island Ferry round trip (free, passes Statue of Liberty)</li>
-            <li><strong>10:30 AM</strong> &mdash; 9/11 Memorial plaza (the museum is paid; the plaza is free)</li>
-            <li><strong>12:00 PM</strong> &mdash; Walk to and across Brooklyn Bridge</li>
-            <li><strong>1:30 PM</strong> &mdash; Cheap eats in DUMBO; subway back to Manhattan</li>
-            <li><strong>3:00 PM</strong> &mdash; Bryant Park + NY Public Library (free, gorgeous)</li>
-            <li><strong>4:30 PM</strong> &mdash; Walk Grand Central Terminal&apos;s main concourse</li>
-            <li><strong>5:30 PM</strong> &mdash; High Line + Hudson Yards Vessel viewing</li>
-            <li><strong>8:00 PM</strong> &mdash; Times Square at night (free, do it once, leave fast)</li>
-          </ol>
-        </article>
-      </section>
+        <section className={styles.faqSection}>
+          <div className={styles.sectionIntro}>
+            <p className={styles.eyebrow}>Practical answers</p>
+            <h2>Landmark planning questions</h2>
+          </div>
+          <div className={styles.faqGrid}>
+            {faqs.map(([question, answer]) => (
+              <article key={question}>
+                <h3>{question}</h3>
+                <p>{answer}</p>
+              </article>
+            ))}
+          </div>
+        </section>
 
-      <section className={styles.faqSection} id="landmarks-faq">
-        <h2 className={styles.sectionheading}>Practical Questions</h2>
-
-        <details className={styles.faqItem}>
-          <summary>How far in advance should I book Statue of Liberty / Empire State tickets?</summary>
-          <p>
-            Statue of Liberty grounds + pedestal: 1-2 weeks ahead is comfortable. Crown
-            access: 2-3 months ahead, usually sold out closer to date.
-            Empire State Building and Top of the Rock: 1-3 days ahead is fine for standard
-            tickets; sunset slots fill up earlier so book those 1-2 weeks out.
-          </p>
-        </details>
-
-        <details className={styles.faqItem}>
-          <summary>Are city passes (CityPASS, New York Pass, GoCity) worth it?</summary>
-          <p>
-            Only if you genuinely plan to use 4+ of the included attractions in a few days.
-            For 2-3 attractions, paying separately is usually cheaper. For first-time
-            visitors hitting Statue of Liberty + Empire State + Top of the Rock + a museum,
-            CityPASS often pencils out. Run the math against your actual planned itinerary
-            rather than buying optimistically.
-          </p>
-        </details>
-
-        <details className={styles.faqItem}>
-          <summary>Can I see most landmarks in 3 days?</summary>
-          <p>
-            Yes, but you&apos;ll be moving fast. A realistic 3-day landmark sprint:
-            Day 1 - Statue of Liberty + 9/11 Memorial + Brooklyn Bridge. Day 2 - Central
-            Park + Met Museum + sunset Top of the Rock. Day 3 - High Line + Times
-            Square + Broadway show. That covers 8 of the 9 landmarks in this guide.
-            4-5 days is more comfortable.
-          </p>
-        </details>
-
-        <details className={styles.faqItem}>
-          <summary>What time of year has the best landmark experience?</summary>
-          <p>
-            April-June and September-October offer the best combination: comfortable
-            walking weather, manageable crowds, full schedules everywhere. December
-            is magical visually (lights, decorations) but punishing crowd-wise.
-            July-August is hot and tourist-heavy. February is the cheapest but coldest.
-          </p>
-        </details>
-
-        <details className={styles.faqItem}>
-          <summary>Is it safe to visit these landmarks alone?</summary>
-          <p>
-            Yes &mdash; every landmark in this guide is in a heavily-trafficked tourist
-            area during normal visiting hours. For more on solo travel safety in NYC,
-            see our{" "}
-            <Link href="/destination/nyc/nyc-safety-guide">NYC safety guide</Link>{" "}
-            and{" "}
-            <Link href="/destination/nyc/nyc-female-solo-travel-guide">solo female travel guide</Link>.
-          </p>
-        </details>
-      </section>
-
-      <section className={styles.relatedLinks}>
-        <h2 className={styles.sectionheading}>Plan the Rest of Your Trip</h2>
-        <div className={styles.linkGrid}>
-          <Link href="/destination/nyc/solo-trip-to-nyc" className={styles.relatedLink}>
-            <h3>Solo Trip to NYC Guide</h3>
-            <p>Budget, where to stay, your first 24 hours, and what to avoid.</p>
+        <section className={styles.bookingBand}>
+          <div>
+            <p className={styles.eyebrow}>Book the fixed pieces</p>
+            <h2>Reserve the landmarks where timing matters</h2>
+            <p>
+              Statue access, sunset observation decks, and museum-heavy days are the places to book
+              ahead. Keep bridge walks, parks, and plazas flexible.
+            </p>
+          </div>
+          <Link href="/destination/nyc/booking?tab=activities&from=landmark" className={styles.bookingButton}>
+            See landmark tickets
           </Link>
-          <Link href="/destination/nyc/best-areas-to-stay" className={styles.relatedLink}>
-            <h3>Best Areas to Stay</h3>
-            <p>Neighborhood comparison with safety and transit scoring.</p>
-          </Link>
-          <Link href="/destination/nyc/food" className={styles.relatedLink}>
-            <h3>Where to Eat in NYC</h3>
-            <p>Best restaurants, food halls, pizza, and bagels by neighborhood.</p>
-          </Link>
-          <Link href="/destination/nyc/nyc-safety-guide" className={styles.relatedLink}>
-            <h3>NYC Safety Guide</h3>
-            <p>Practical safety: subway, neighborhoods, scams, emergencies.</p>
-          </Link>
-        </div>
-      </section>
+        </section>
 
-      <BookingCTA variant="full" text="Get tickets to NYC's top landmarks" href="/destination/nyc/booking?tab=activities&from=landmark" label="See tickets" />
+        <section className={styles.resourceLinks}>
+          <Link href="/destination/nyc/things-to-do">Things to do</Link>
+          <Link href="/destination/nyc/nyc-subway-map">NYC subway map</Link>
+          <Link href="/destination/nyc/food">Food guide</Link>
+          <Link href="/destination/nyc/best-areas-to-stay">Best areas to stay</Link>
+        </section>
+      </main>
       <Footer />
     </>
   );

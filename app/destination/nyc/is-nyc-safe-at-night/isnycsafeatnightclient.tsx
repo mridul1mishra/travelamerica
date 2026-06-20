@@ -7,34 +7,95 @@ import Footer from "./components/Footer/Footer";
 import data from "./is-nyc-safe-at-night.json";
 import styles from "./isnycsafeatnightclient.module.css";
 
-const verdictCards = [
+const sourceStats = [
   {
-    label: "Best after dark",
-    title: "Stay where the city is still moving",
-    copy: "Midtown, the Upper West Side, DUMBO, and busy Village streets feel easiest because there is light, transit, and steady foot traffic.",
+    label: "NYPD Q1 2026",
+    stat: "Major crime down 5.3%; Q1 murders at the fewest ever recorded.",
+    url: "https://www.nyc.gov/site/nypd/news/PR006/nypd-fewest-murders-shooting-incidents-recorded-history-first-three-months-the",
   },
   {
-    label: "Use caution",
-    title: "Nightlife blocks change after midnight",
-    copy: "East Village and the Lower East Side can be fun, but crowds get less predictable. Know your route home before the night starts.",
+    label: "NYPD subway 2025",
+    stat: "Major subway crime down 4%; safest subway year since 2009, excluding pandemic years.",
+    url: "https://www.nyc.gov/site/nypd/news/PR001/nypd-safest-year-ever-gun-violence-fewest-shooting-incidents-shooting",
   },
   {
-    label: "Skip late",
-    title: "Do not turn quiet areas into adventures",
-    copy: "Avoid isolated parks, empty industrial blocks, and low-foot-traffic neighborhoods after dark, especially when traveling alone.",
+    label: "MTA Fall 2025",
+    stat: "63% of riders felt safe on trains; 59% felt safe in stations.",
+    url: "https://www.mta.info/article/mta-customers-count-fall-2025-survey-results",
   },
 ];
 
-const safetyRules = [
-  "Use main avenues instead of quiet side streets.",
-  "Wait near other riders or the conductor on subway platforms.",
-  "Leave nightlife areas before you feel tired or disoriented.",
-  "Use rideshare for late, low-transit, or unfamiliar transfers.",
+const visitingRules = [
+  "Use busy tourist corridors and main avenues as your default route.",
+  "Treat quiet blocks, empty cars, and late transfers as the moments to slow down.",
+  "Keep your phone, wallet, and bag controlled in crowded tourist spots.",
+  "Use a rideshare when the safer route is no longer obvious.",
 ];
 
-const safeNeighborhoods = data.neighborhoodSafetyGrid.filter((item) => item.safetyLevel === "Safe").slice(0, 5);
-const mixedNeighborhoods = data.neighborhoodSafetyGrid.filter((item) => item.safetyLevel === "Mixed").slice(0, 4);
-const avoidNeighborhoods = data.neighborhoodSafetyGrid.filter((item) => item.safetyLevel === "Avoid Late").slice(0, 3);
+const scamCards = [
+  {
+    title: "Times Square characters",
+    copy: "A photo can become a payment demand. Agree on price first or keep walking.",
+  },
+  {
+    title: "CD or bracelet hustle",
+    copy: "Do not take anything handed to you unless you want to buy it.",
+  },
+  {
+    title: "Fake badge or helpful stranger",
+    copy: "Use official staff, hotel desks, or clearly marked transit help points for help.",
+  },
+  {
+    title: "Subway pickpockets",
+    copy: "Crowded platforms and train doors are the moments to secure your phone and bag.",
+  },
+];
+
+const soloCards = [
+  {
+    title: "Solo travelers",
+    copy: "NYC is one of the easier U.S. cities to be alone in because eating, walking, museums, shows, and transit all work solo.",
+  },
+  {
+    title: "Female travelers",
+    copy: "Stay in active hotel zones, use staffed stations where possible, and switch to rideshare when a route feels too empty.",
+  },
+  {
+    title: "Nightlife",
+    copy: "Pick the route home before you go out. The risk is usually not the venue; it is the tired walk or transfer after.",
+  },
+];
+
+const afterDarkCards = [
+  {
+    title: "Before midnight",
+    copy: "Subway and walking are usually workable on busy lines and main streets.",
+  },
+  {
+    title: "After midnight",
+    copy: "Prioritize direct routes, staffed stations, other riders, and short rideshare hops when transfers get awkward.",
+  },
+  {
+    title: "After bars close",
+    copy: "Leave with a plan, avoid isolated side streets, and do not wait outside alone for long pickups.",
+  },
+];
+
+const internalLinks = [
+  { href: "/destination/nyc/best-areas-to-stay", label: "Best areas to stay" },
+  { href: "/destination/nyc/neighborhood-guide", label: "Neighborhood guide" },
+  { href: "/destination/nyc/nyc-subway-map", label: "NYC subway map" },
+  { href: "/destination/nyc/nyc-safety-guide", label: "Full NYC safety guide" },
+  { href: "/destination/nyc/solo-trip-to-nyc", label: "Solo NYC guide" },
+  { href: "/destination/nyc/nyc-female-solo-travel-guide", label: "Female solo guide" },
+];
+
+const safeNeighborhoods = data.neighborhoodSafetyGrid
+  .filter((item) => item.safetyLevel === "Safe")
+  .slice(0, 5);
+const cautionNeighborhoods = data.neighborhoodSafetyGrid
+  .filter((item) => item.safetyLevel !== "Safe")
+  .slice(0, 6);
 
 function riskClass(level: string) {
   const value = level.toLowerCase();
@@ -45,7 +106,7 @@ function riskClass(level: string) {
 
 export default function Page() {
   const meter = data.safetyMeter;
-  const mainScenarios = data.scenarioCards.slice(0, 4);
+  const subway = data.transitSafety.subway;
 
   return (
     <>
@@ -58,32 +119,34 @@ export default function Page() {
               <span aria-hidden="true">/</span>
               <Link href="/destination/nyc">New York City</Link>
               <span aria-hidden="true">/</span>
-              <span className={styles.current}>Night Safety</span>
+              <span className={styles.current}>NYC Safety</span>
             </nav>
-            <p className={styles.eyebrow}>NYC night safety guide</p>
-            <h1>Is NYC Safe at Night for Solo Travelers?</h1>
+            <p className={styles.eyebrow}>Updated 2026 - NYC safety guide</p>
+            <h1>Is New York Safe to Visit? An Honest 2026 Guide (Day, Night & Subway)</h1>
             <p>
-              Yes, in the right places. The practical answer is to stay on bright, active streets,
-              use transit with intention, and avoid quiet blocks that remove your backup options.
+              Yes - New York is safe to visit in 2026 for most travelers, especially in busy,
+              well-lit areas of Manhattan and the main visitor zones in Brooklyn. I would not call
+              it risk-free: subway platforms get quieter late, pickpockets work crowds, and some
+              side streets feel different after midnight.
             </p>
             <div className={styles.heroActions}>
               <Link href="/destination/nyc/booking?tab=hotels&from=is-nyc-safe-at-night" className={styles.primaryButton}>
                 See safe-area hotels
               </Link>
-              <a href="#neighborhoods" className={styles.secondaryButton}>
-                Check neighborhoods
+              <a href="#subway-safety" className={styles.secondaryButton}>
+                Check subway safety
               </a>
             </div>
             <div className={styles.trustRow} aria-label="Safety guide trust signals">
-              <span>NYPD + MTA context</span>
-              <span>Solo-traveler scenarios</span>
-              <span>Neighborhood-based advice</span>
+              <span><strong>Updated 2026</strong></span>
+              <span><strong>Sources:</strong> NYPD + MTA</span>
+              <span><strong>Verdict:</strong> safe with street smarts, not a guarantee</span>
             </div>
           </div>
           <div className={styles.heroMedia}>
             <Image
               src={data.heroSafety.heroImage}
-              alt="New York City skyline and streets at night"
+              alt="New York City skyline at night viewed from across the water"
               fill
               priority
               sizes="(max-width: 900px) 100vw, 48vw"
@@ -92,121 +155,192 @@ export default function Page() {
             <div className={styles.verdictBadge}>
               <span>{meter.meterScore}/10</span>
               <strong>{meter.overallRating}</strong>
+              <p>
+                Method: caution score based on verified NYPD citywide crime, NYPD subway crime,
+                MTA rider-safety survey data, and traveler conditions like lighting, foot traffic,
+                and late-night transit options. Updated 2026.
+              </p>
+              <div className={styles.sourceLinks}>
+                {sourceStats.map((source) => (
+                  <a key={source.label} href={source.url} target="_blank" rel="noreferrer">
+                    {source.label}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
-        <section className={styles.verdictGrid} aria-label="NYC night safety verdict">
-          {verdictCards.map((card) => (
-            <article key={card.label}>
-              <span>{card.label}</span>
-              <strong>{card.title}</strong>
-              <p>{card.copy}</p>
-            </article>
-          ))}
-        </section>
-
         <section className={styles.answerBand}>
           <div>
-            <p className={styles.eyebrow}>The short answer</p>
-            <h2>{meter.overallRating}</h2>
+            <p className={styles.eyebrow}>General visiting safety</p>
+            <h2>Is NYC safe to visit right now?</h2>
             <p>
-              NYC's busiest areas remain active and well-patrolled at night. Risks increase in
-              quieter neighborhoods and during late-night transit.
+              Yes, with normal big-city awareness. The official data in this brief points in the
+              right direction: Q1 2026 major crime was down, 2025 subway major crime was down, and
+              MTA riders reported stronger safety satisfaction than the fear-heavy headlines imply.
             </p>
           </div>
           <ul>
-            {safetyRules.map((rule) => (
+            {visitingRules.map((rule) => (
               <li key={rule}>{rule}</li>
             ))}
           </ul>
         </section>
 
+        <section className={styles.statsBand} aria-label="Safety score sources">
+          {sourceStats.map((source) => (
+            <article key={source.label}>
+              <span>{source.label}</span>
+              <p>{source.stat}</p>
+              <a href={source.url} target="_blank" rel="noreferrer">Source</a>
+            </article>
+          ))}
+        </section>
+
         <section id="neighborhoods" className={styles.section}>
           <div className={styles.sectionIntro}>
-            <p className={styles.eyebrow}>Where it feels easiest</p>
-            <h2>Choose areas by nighttime conditions, not reputation alone</h2>
+            <p className={styles.eyebrow}>Safest neighborhoods</p>
+            <h2>Safest neighborhoods for visitors</h2>
             <p>
-              Safety at night is less about borough stereotypes and more about lighting, active
-              storefronts, transit options, and how many people are around when you leave.
+              The safest-feeling stays are usually close to active streets, subway options, hotels,
+              restaurants, and other people. Reputation matters less than the route you will actually
+              walk at night.
             </p>
           </div>
           <div className={styles.neighborhoodGrid}>
-            <div className={styles.zoneColumn}>
-              <h3>Comfortable late</h3>
-              {safeNeighborhoods.map((item) => (
-                <article key={item.name}>
-                  <span className={`${styles.riskTag} ${riskClass(item.safetyLevel)}`}>{item.safetyLevel}</span>
-                  <strong>{item.name}</strong>
-                  <p>{item.why}</p>
-                </article>
-              ))}
-            </div>
-            <div className={styles.zoneColumn}>
-              <h3>Good with timing</h3>
-              {mixedNeighborhoods.map((item) => (
-                <article key={item.name}>
-                  <span className={`${styles.riskTag} ${riskClass(item.safetyLevel)}`}>{item.safetyLevel}</span>
-                  <strong>{item.name}</strong>
-                  <p>{item.why} {item.avoidAfter ? `Aim to leave by ${item.avoidAfter}.` : ""}</p>
-                </article>
-              ))}
-            </div>
-            <div className={styles.zoneColumn}>
-              <h3>Skip late solo</h3>
-              {avoidNeighborhoods.map((item) => (
-                <article key={item.name}>
-                  <span className={`${styles.riskTag} ${riskClass(item.safetyLevel)}`}>{item.safetyLevel}</span>
-                  <strong>{item.name}</strong>
-                  <p>{item.why}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.featureSection}>
-          <div className={styles.featureCopy}>
-            <p className={styles.eyebrow}>Real situations</p>
-            <h2>What to do in the moments travelers actually worry about</h2>
-            <p>
-              The goal is not to feel fearless. It is to have simple defaults when the street,
-              station, or crowd changes around you.
-            </p>
-          </div>
-          <div className={styles.scenarioGrid}>
-            {mainScenarios.map((scenario) => (
-              <article key={scenario.title} className={styles.scenarioCard}>
-                <span className={`${styles.riskTag} ${riskClass(scenario.riskLevel)}`}>{scenario.riskLevel}</span>
-                <h3>{scenario.title}</h3>
-                <p>{scenario.whatToExpect}</p>
-                <ul>
-                  {scenario.howToStaySafe.slice(0, 3).map((tip) => (
-                    <li key={tip}>{tip}</li>
-                  ))}
-                </ul>
+            {safeNeighborhoods.map((item) => (
+              <article key={item.name} className={styles.zoneCard}>
+                <span className={`${styles.riskTag} ${riskClass(item.safetyLevel)}`}>{item.safetyLevel}</span>
+                <h3>{item.name}</h3>
+                <p>{item.why}</p>
+                {item.notes ? <p>{item.notes}</p> : null}
               </article>
             ))}
           </div>
         </section>
 
-        <section className={styles.transitSection}>
+        <section className={styles.section}>
           <div className={styles.sectionIntro}>
-            <p className={styles.eyebrow}>Getting back safely</p>
-            <h2>Late-night transit should feel deliberate</h2>
+            <p className={styles.eyebrow}>Use caution</p>
+            <h2>Areas to be cautious after dark</h2>
+            <p>
+              This is not a borough blacklist. It is a planning filter: quieter blocks, sparse
+              lighting, long transfers, and late-night crowd behavior are the things I would avoid
+              when traveling solo.
+            </p>
+          </div>
+          <div className={styles.neighborhoodGrid}>
+            {cautionNeighborhoods.map((item) => (
+              <article key={item.name} className={styles.zoneCard}>
+                <span className={`${styles.riskTag} ${riskClass(item.safetyLevel)}`}>{item.safetyLevel}</span>
+                <h3>{item.name}</h3>
+                <p>{item.why}</p>
+                {item.avoidAfter ? <p><strong>Better before:</strong> {item.avoidAfter}</p> : null}
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="subway-safety" className={styles.transitSection}>
+          <div className={styles.sectionIntro}>
+            <p className={styles.eyebrow}>Subway safety</p>
+            <h2>Is the NYC subway safe for visitors?</h2>
+            <p>
+              Generally yes, especially on busy lines and staffed stations. The brief's verified
+              NYPD data says 2025 was the safest subway year since 2009, excluding pandemic years:
+              major subway crime fell 4%, and transit robberies hit the lowest level ever recorded.
+              The MTA's Fall 2025 survey also found 63% of riders felt safe on trains.
+            </p>
           </div>
           <div className={styles.transitGrid}>
-            {Object.entries(data.transitSafety).map(([mode, info]) => (
-              <article key={mode}>
-                <span className={`${styles.riskTag} ${riskClass(info.riskLevel)}`}>{info.riskLevel}</span>
-                <h3>{mode === "rideshare" ? "Rideshare" : mode[0].toUpperCase() + mode.slice(1)}</h3>
-                <p><strong>Best:</strong> {info.bestHours || "Depends on route"}</p>
-                <p><strong>Watch:</strong> {info.avoidHours || "No major restriction"}</p>
-                <ul>
-                  {info.tips.slice(0, 2).map((tip) => (
-                    <li key={tip}>{tip}</li>
-                  ))}
-                </ul>
+            <article>
+              <span className={`${styles.riskTag} ${riskClass(subway.riskLevel)}`}>{subway.riskLevel}</span>
+              <h3>Subway after dark</h3>
+              <p><strong>Best:</strong> {subway.bestHours}</p>
+              <p><strong>Watch:</strong> {subway.avoidHours}</p>
+              <ul>
+                {subway.tips.map((tip) => (
+                  <li key={tip}>{tip}</li>
+                ))}
+              </ul>
+            </article>
+            <article>
+              <span className={`${styles.riskTag} ${styles.safe}`}>Low</span>
+              <h3>Bus or taxi backup</h3>
+              <p>Use buses, yellow cabs, or rideshare when subway waits get long or the transfer feels too empty.</p>
+              <ul>
+                <li>Sit near the front on buses.</li>
+                <li>Verify rideshare plates before entering.</li>
+                <li>Share your trip when traveling late.</li>
+              </ul>
+            </article>
+            <article>
+              <span className={`${styles.riskTag} ${styles.mixed}`}>Street smart</span>
+              <h3>Platform habits</h3>
+              <p>The small choices matter more than fear: where you wait, which car you enter, and whether you pivot when a platform feels wrong.</p>
+              <ul>
+                <li>Wait near other riders.</li>
+                <li>Avoid empty train cars.</li>
+                <li>Keep phones and bags controlled at doors.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section className={styles.featureSection}>
+          <div className={styles.featureCopy}>
+            <p className={styles.eyebrow}>Common NYC scams</p>
+            <h2>Scams tourists should watch for</h2>
+            <p>
+              The common scams are annoying more than dangerous, but they can make a first trip feel
+              chaotic. The cleanest response is usually a polite no and continued walking.
+            </p>
+          </div>
+          <div className={styles.scenarioGrid}>
+            {scamCards.map((card) => (
+              <article key={card.title} className={styles.scenarioCard}>
+                <h3>{card.title}</h3>
+                <p>{card.copy}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className={styles.featureSection}>
+          <div className={styles.featureCopy}>
+            <p className={styles.eyebrow}>Solo and female travelers</p>
+            <h2>Safe solo travel is about defaults, not fear</h2>
+            <p>
+              The brief's solo-travel sources agree on the same practical pattern: NYC works well
+              alone when you stay in busy zones, keep a route home, and switch transport when a
+              street or station feels too empty.
+            </p>
+          </div>
+          <div className={styles.scenarioGrid}>
+            {soloCards.map((card) => (
+              <article key={card.title} className={styles.scenarioCard}>
+                <h3>{card.title}</h3>
+                <p>{card.copy}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className={styles.featureSection}>
+          <div className={styles.featureCopy}>
+            <p className={styles.eyebrow}>Night-specific tips</p>
+            <h2>After dark, choose the route with backup</h2>
+            <p>
+              At night, I would rather be on a slightly longer route with light, people, and transit
+              choices than on a shortcut with no one around.
+            </p>
+          </div>
+          <div className={styles.scenarioGrid}>
+            {afterDarkCards.map((card) => (
+              <article key={card.title} className={styles.scenarioCard}>
+                <h3>{card.title}</h3>
+                <p>{card.copy}</p>
               </article>
             ))}
           </div>
@@ -236,7 +370,7 @@ export default function Page() {
         <section className={styles.faqSection}>
           <div className={styles.sectionIntro}>
             <p className={styles.eyebrow}>Fast answers</p>
-            <h2>Common NYC night safety questions</h2>
+            <h2>Common NYC safety questions</h2>
           </div>
           <div className={styles.faqGrid}>
             {data.faq.map((item) => (
@@ -262,11 +396,10 @@ export default function Page() {
           </Link>
         </section>
 
-        <section className={styles.resourceLinks}>
-          <Link href="/destination/nyc/nyc-safety-guide">Full NYC safety guide</Link>
-          <Link href="/destination/nyc/subway-safety-guide">Subway safety</Link>
-          <Link href="/destination/nyc/best-areas-to-stay">Best areas to stay</Link>
-          <Link href="/destination/nyc/solo-trip-to-nyc">Solo NYC guide</Link>
+        <section className={styles.resourceLinks} aria-label="Related NYC planning guides">
+          {internalLinks.map((link) => (
+            <Link key={link.href} href={link.href}>{link.label}</Link>
+          ))}
         </section>
       </main>
       <Footer />
