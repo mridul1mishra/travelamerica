@@ -509,6 +509,13 @@
   line-height: 1.62;
 }
 
+.textLink {
+  color: #1d4ed8;
+  font-weight: 760;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
 .experienceGrid,
 .faqGrid {
   display: grid;

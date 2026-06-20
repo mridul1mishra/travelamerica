@@ -247,7 +247,12 @@ export default function NYCThingsToDoClient() {
             <p>
               Big-event periods can make hotel prices, observation deck slots, ferries, and Broadway
               seats move faster. If your dates overlap holidays, sports, or major city events, book
-              the fixed pieces early and keep the rest flexible.
+              the fixed pieces early and keep the rest flexible. Planning a late show, rooftop bar,
+              or evening bridge walk? Read the{' '}
+              <Link href="/destination/nyc/is-nyc-safe-at-night" className={styles.textLink}>
+                NYC night safety guide
+              </Link>{' '}
+              before choosing your route home.
             </p>
           </div>
         </section>
