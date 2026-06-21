@@ -166,7 +166,7 @@ export default function NYCSafetyGuideClient() {
             </nav>
 
             <p className={styles.eyebrow}>NYC safety guide</p>
-            <h1>Is New York City Safe to Visit?</h1>
+            <h1>Is New York City Safe to Visit in 2026?</h1>
             <p className={styles.lede}>
               Yes for most visitors, with smart routing. This guide shows where to stay, how to use transit, what changes after dark, and what to do when a situation feels off.
             </p>

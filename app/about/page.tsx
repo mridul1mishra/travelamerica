@@ -22,11 +22,12 @@ const aboutPageSchema = {
         "name": "Travels Americas",
         "url": "https://www.travelsamericas.com",
         "logo": "https://www.travelsamericas.com/data/logo.png",
+        "sameAs": ["https://www.pinterest.com/075jnn7xy3gnkpp2hdltn2jrsmab43/"],
         "foundingDate": "2023",
         "founder": {
           "@type": "Person",
           "@id": "https://www.travelsamericas.com/#founder",
-          "name": "Mridul",
+          "name": "Mridul Mishra",
         },
         "contactPoint": {
           "@type": "ContactPoint",
@@ -38,8 +39,9 @@ const aboutPageSchema = {
     {
       "@type": "Person",
       "@id": "https://www.travelsamericas.com/#founder",
-      "name": "Mridul",
+      "name": "Mridul Mishra",
       "jobTitle": "Founder & Editor",
+      "url": "https://www.travelsamericas.com/about",
       "worksFor": { "@id": "https://www.travelsamericas.com/#organization" },
     },
   ],
@@ -104,7 +106,7 @@ export default function AboutPage() {
           <div className={styles.list}>
             <h2>About the editor</h2>
             <p>
-              <strong>Mridul</strong> is the founder and editor of Travels
+              <strong>Mridul Mishra</strong> is the founder and editor of Travels
               Americas. NYC was the first major US city I traveled to alone, and
               the experience of figuring it out the hard way shaped everything
               about how this site approaches travel content. Every guide is

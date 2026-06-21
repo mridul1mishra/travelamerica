@@ -5,8 +5,8 @@
       "@type": "WebPage",
       "@id": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night#webpage",
       "url": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
-      "name": "Is New York Safe to Visit? An Honest 2026 Guide (Day, Night & Subway)",
-      "description": "Is New York safe to visit in 2026? Yes - use NYPD stats, safest areas, subway safety, scams, solo tips and night advice to plan a smarter NYC trip today.",
+      "name": "Is New York Safe at Night? A Neighborhood-by-Neighborhood 2026 Guide",
+      "description": "Is NYC safe at night? A neighborhood-by-neighborhood read on DUMBO, Battery Park, Midtown and more, plus subway-after-dark and solo night tips, backed by NYPD and MTA data.",
       "isPartOf": {
         "@type": "WebSite",
         "@id": "https://www.travelsamericas.com/#website",
@@ -51,13 +51,15 @@
     {
       "@type": "Article",
       "@id": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night#article",
-      "headline": "Is New York Safe to Visit? An Honest 2026 Guide (Day, Night & Subway)",
-      "description": "A sourced 2026 NYC visitor safety guide covering safer neighborhoods, cautious areas, subway safety, scams, solo travel, and after-dark tips.",
+      "headline": "Is New York Safe at Night? A Neighborhood-by-Neighborhood 2026 Guide",
+      "description": "A sourced 2026 guide to NYC safety at night: neighborhood-by-neighborhood after-dark verdicts, subway-at-night tips, scams, and solo advice.",
       "image": "https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.webp",
       "dateModified": "2026-06-20",
       "author": {
-        "@type": "Organization",
-        "name": "Travels Americas"
+        "@type": "Person",
+        "@id": "https://www.travelsamericas.com/#founder",
+        "name": "Mridul Mishra",
+        "url": "https://www.travelsamericas.com/about"
       },
       "publisher": {
         "@type": "Organization",
@@ -65,7 +67,10 @@
         "logo": {
           "@type": "ImageObject",
           "url": "https://www.travelsamericas.com/logo.png"
-        }
+        },
+        "sameAs": [
+          "https://www.pinterest.com/075jnn7xy3gnkpp2hdltn2jrsmab43/"
+        ]
       },
       "mainEntityOfPage": {
         "@id": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night#webpage"

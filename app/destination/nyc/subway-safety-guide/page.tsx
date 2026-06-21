@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "NYC Subway Safety Guide 2026 | Tips for Travelers", 
-  description: "A practical NYC Subway Safety Guide covering core safety principles, emergency steps, etiquette, and neighborhood tips.",
+  title: "Is the NYC Subway Safe? 2026 Guide for Solo Travelers & Tourists",
+  description: "Yes - the NYC subway is safe for most travelers. NYPD data shows 2025 was the safest subway year since 2009. Practical tips for day, night, and solo riders.",
   keywords: [
     "NYC subway safety",
     "New York subway guide",
@@ -27,7 +27,7 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "NYC Subway Safety Guide — Practical, Scenario‑Driven, 2026 Edition",
+    title: "Is the NYC Subway Safe? 2026 Guide for Solo Travelers & Tourists",
     description:
       "A practical, scenario‑driven NYC Subway Safety Guide covering core principles, personas, emergency steps, etiquette, tools & apps, and neighborhood notes.",
     url: "https://www.travelsamericas.com/destination/nyc/subway-safety-guide",
@@ -45,7 +45,7 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "NYC Subway Safety Guide — 2026 Edition",
+    title: "Is the NYC Subway Safe in 2026? Solo & Tourist Guide",
     description:
       "A complete, scenario‑driven NYC Subway Safety Guide for solo travelers, women, and first‑timers.",
     images: ["https://www.travelsamericas.com/data/metadataimage/nyc-subway-generic.webp"],

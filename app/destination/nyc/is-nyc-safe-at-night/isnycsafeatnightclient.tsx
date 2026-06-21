@@ -121,13 +121,16 @@ export default function Page() {
               <span aria-hidden="true">/</span>
               <span className={styles.current}>NYC Safety</span>
             </nav>
-            <p className={styles.eyebrow}>Updated 2026 - NYC safety guide</p>
-            <h1>Is New York Safe to Visit? An Honest 2026 Guide (Day, Night & Subway)</h1>
+            <p className={styles.eyebrow}>Updated 2026 - NYC safety after dark</p>
+            <h1>Is New York Safe at Night? A Neighborhood-by-Neighborhood 2026 Guide</h1>
             <p>
-              Yes - New York is safe to visit in 2026 for most travelers, especially in busy,
-              well-lit areas of Manhattan and the main visitor zones in Brooklyn. I would not call
-              it risk-free: subway platforms get quieter late, pickpockets work crowds, and some
-              side streets feel different after midnight.
+              Mostly yes - in 2026 New York is safe at night in busy, well-lit areas of Manhattan
+              and the main Brooklyn visitor zones like DUMBO and Battery Park. It is not risk-free:
+              subway platforms get quieter late, some neighborhoods change after dark, and side
+              streets feel different after midnight. Below is a neighborhood-by-neighborhood read.
+            </p>
+            <p style={{ fontSize: "0.85rem", color: "#475569", margin: "0.4rem 0 0" }}>
+              By <a href="/about" style={{ color: "#1d4ed8", fontWeight: 600, textDecoration: "none" }}>Mridul Mishra</a> · Updated June 2026 · Fact-checked against NYPD &amp; MTA data
             </p>
             <div className={styles.heroActions}>
               <Link href="/destination/nyc/booking?tab=hotels&from=is-nyc-safe-at-night" className={styles.primaryButton}>
@@ -200,8 +203,8 @@ export default function Page() {
 
         <section id="neighborhoods" className={styles.section}>
           <div className={styles.sectionIntro}>
-            <p className={styles.eyebrow}>Safest neighborhoods</p>
-            <h2>Safest neighborhoods for visitors</h2>
+            <p className={styles.eyebrow}>Safest neighborhoods at night</p>
+            <h2>Safest NYC neighborhoods after dark</h2>
             <p>
               The safest-feeling stays are usually close to active streets, subway options, hotels,
               restaurants, and other people. Reputation matters less than the route you will actually
@@ -394,6 +397,12 @@ export default function Page() {
           <Link href="/destination/nyc/booking?tab=hotels&from=is-nyc-safe-at-night" className={styles.bookingButton}>
             See safe-area hotels
           </Link>
+        </section>
+
+        <section aria-label="About the author" style={{ width: "min(1120px, calc(100% - 2rem))", margin: "0 auto", padding: "1.25rem", border: "1px solid #e5e7eb", borderRadius: "8px", background: "#ffffff" }}>
+          <p style={{ margin: 0, color: "#4b5563", fontSize: "0.95rem", lineHeight: 1.6 }}>
+            <strong style={{ color: "#111827" }}>About the author.</strong> <a href="/about" style={{ color: "#1d4ed8", textDecoration: "none" }}>Mridul Mishra</a> has visited New York City and writes the NYC travel guides for Travels Americas. Every safety claim here is checked against primary sources — current NYPD crime data and MTA rider surveys — not online rumor or recycled blog posts.
+          </p>
         </section>
 
         <section className={styles.resourceLinks} aria-label="Related NYC planning guides">

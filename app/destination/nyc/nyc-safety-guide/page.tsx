@@ -1,9 +1,9 @@
 import NYCSafetyGuideClient from "./nycsafetyguideclient";
 
 export const metadata = {
-  title: "Is New York City Safe to Visit in 2026? Practical NYC Safety Guide",
+  title: "Is NYC Safe in 2026? An Honest, Data-Backed Visitor Guide",
   description:
-    "A practical NYC safety guide for visitors: where to stay, subway safety, night safety, scams, emergency steps, and official NYPD and MTA context.",
+    "Is New York City safe to visit in 2026? An honest, data-backed answer using NYPD and MTA stats — where to stay, what to skip, subway tips, scams to dodge, and what to do if something feels off.",
   alternates: {
     canonical: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
   },
@@ -19,9 +19,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Is New York City Safe to Visit in 2026?",
+    title: "Is NYC Safe in 2026? An Honest, Data-Backed Visitor Guide",
     description:
-      "A calm, practical NYC safety guide with neighborhood guidance, transit tips, night safety advice, scams to avoid, and emergency actions.",
+      "Is NYC safe in 2026? An honest, data-backed guide — where to stay, transit tips, scams to avoid, and what to do if a situation feels off.",
     url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
     siteName: "Travels Americas",
     type: "article",
@@ -37,9 +37,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Is New York City Safe to Visit in 2026?",
+    title: "Is NYC Safe in 2026? An Honest, Data-Backed Visitor Guide",
     description:
-      "A practical NYC safety guide with neighborhood guidance, transit tips, night safety advice, and emergency actions.",
+      "Is NYC safe in 2026? An honest, data-backed visitor guide — where to stay, transit tips, scams, and emergency actions.",
     images: ["https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.webp"],
   },
 };

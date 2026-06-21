@@ -1,16 +1,24 @@
 {
   "hero": {
-    "title": "NYC Subway Safety Guide for Solo Travelers",
-    "subtitle": "A practical, scenario‑driven guide to navigating NYC’s subway confidently and safely.",
+    "title": "Is the NYC Subway Safe? An Honest 2026 Guide for Solo Travelers",
+    "subtitle": "Short answer: yes, for most travelers. NYPD reported 2025 was the safest year on the subway since 2009 (excluding the pandemic years), with major transit crime down 4%. Here is how to ride confidently — day, night, and solo.",
     "hero_image": "/data/metadataimage/nyc-subway-generic.jpg",
     "breadcrumbs": [
-      { "label": "Home", "slug": "/" },
-      { "label": "Solo Trip to NYC", "slug": "/destination/nyc/solo-trip-to-nyc" },
-      { "label": "Subway Safety Guide", "slug": "/destination/nyc/subway-safety-guide" }
+      {
+        "label": "Home",
+        "slug": "/"
+      },
+      {
+        "label": "Solo Trip to NYC",
+        "slug": "/destination/nyc/solo-trip-to-nyc"
+      },
+      {
+        "label": "Subway Safety Guide",
+        "slug": "/destination/nyc/subway-safety-guide"
+      }
     ],
-    "updated_on": "2026-01-02"
+    "updated_on": "2026-06-20"
   },
-
   "why_trust_this_guide": {
     "author_expertise": "Built using NYC transit data, rider behavior patterns, and real-world solo traveler insights.",
     "local_insights": "Neighborhood-specific notes based on station layout, foot traffic, and time-of-day patterns.",
@@ -22,7 +30,6 @@
     ],
     "editorial_standards": "Fact-checked, persona-driven, and updated regularly for accuracy."
   },
-
   "core_principles": [
     {
       "icon": "awareness",
@@ -50,7 +57,6 @@
       "description": "Apps, alerts, and maps help you stay ahead of delays and disruptions."
     }
   ],
-
   "subway_basics": {
     "how_the_system_works": "The subway is the city’s heartbeat — running 24/7 and threading 472 stations across four boroughs. Trains move fast, signs move faster, and everything clicks once you learn the rhythm.",
     "peak_vs_off_peak": {
@@ -61,44 +67,69 @@
     "station_layouts": "Stations are mini‑mazes with multiple entrances, mezzanines, and exits that lead to very different streets. Follow the signs, and when unsure, choose the exit with more light and foot traffic.",
     "train_types": "Local trains stop everywhere. Express trains fly past smaller stations and cover long distances fast — great when you’re headed far, but easy to miss if you’re not watching the signs."
   },
-
   "personas": [
     {
       "id": "solo_female_traveler",
-      "top_concerns": ["Unwanted attention", "Late-night rides", "Crowded platforms"],
+      "top_concerns": [
+        "Unwanted attention",
+        "Late-night rides",
+        "Crowded platforms"
+      ],
       "recommended_behaviors": [
         "Ride near the conductor",
         "Avoid empty cars",
         "Stay close to families or commuters"
       ],
-      "avoid_list": ["Isolated platforms", "Late-night transfers"],
-      "confidence_boosters": ["Pre-plan routes", "Use live service alerts"]
+      "avoid_list": [
+        "Isolated platforms",
+        "Late-night transfers"
+      ],
+      "confidence_boosters": [
+        "Pre-plan routes",
+        "Use live service alerts"
+      ]
     },
     {
       "id": "first_time_visitor",
-      "top_concerns": ["Navigation", "Unexpected changes", "Platform mix-ups"],
+      "top_concerns": [
+        "Navigation",
+        "Unexpected changes",
+        "Platform mix-ups"
+      ],
       "recommended_behaviors": [
         "Use Google Maps or Citymapper",
         "Follow line colors and symbols",
         "Ask MTA staff when unsure"
       ],
-      "avoid_list": ["Last-minute platform switches"],
-      "confidence_boosters": ["Arrive early", "Save your route offline"]
+      "avoid_list": [
+        "Last-minute platform switches"
+      ],
+      "confidence_boosters": [
+        "Arrive early",
+        "Save your route offline"
+      ]
     },
     {
       "id": "late_night_commuter",
-      "top_concerns": ["Low foot traffic", "Empty cars", "Long gaps between trains"],
+      "top_concerns": [
+        "Low foot traffic",
+        "Empty cars",
+        "Long gaps between trains"
+      ],
       "recommended_behaviors": [
         "Wait near the station booth",
         "Choose cars with riders",
         "Use well-lit exits"
       ],
-      "avoid_list": ["Empty platforms", "Sleeping riders"],
-      "confidence_boosters": ["Track trains in real time"]
+      "avoid_list": [
+        "Empty platforms",
+        "Sleeping riders"
+      ],
+      "confidence_boosters": [
+        "Track trains in real time"
+      ]
     }
   ],
-
-
   "scenarios": [
     {
       "scenario_title": "Entering a Station Alone",
@@ -171,38 +202,67 @@
       "pro_tips": "Trust your instincts — act early."
     }
   ],
-
   "neighborhood_notes": [
     {
       "area_name": "Midtown Manhattan",
-      "lines": ["1", "2", "3", "A", "C", "E", "N", "Q", "R", "W"],
+      "lines": [
+        "1",
+        "2",
+        "3",
+        "A",
+        "C",
+        "E",
+        "N",
+        "Q",
+        "R",
+        "W"
+      ],
       "peak_safety_notes": "High foot traffic; safest during rush hours.",
       "late_night_notes": "Some stations get quieter after 11 PM.",
       "transfer_complexity": "Times Square and Herald Square can be overwhelming."
     },
     {
       "area_name": "Lower Manhattan",
-      "lines": ["4", "5", "6", "J", "Z", "R"],
+      "lines": [
+        "4",
+        "5",
+        "6",
+        "J",
+        "Z",
+        "R"
+      ],
       "peak_safety_notes": "Busy with commuters and tourists.",
       "late_night_notes": "Financial District becomes very quiet after 9 PM.",
       "transfer_complexity": "Brooklyn Bridge–City Hall has multiple platforms."
     },
     {
       "area_name": "Brooklyn — Williamsburg",
-      "lines": ["L"],
+      "lines": [
+        "L"
+      ],
       "peak_safety_notes": "Young commuter crowd; safe and busy.",
       "late_night_notes": "L line runs frequently but platforms thin out.",
       "transfer_complexity": "Simple layout; easy to navigate."
     }
   ],
-
   "tools_and_apps": [
-    { "name": "MTA App", "description": "Live service alerts and train arrival times." },
-    { "name": "Google Maps Transit", "description": "Reliable routing and platform guidance." },
-    { "name": "Citymapper", "description": "Best for alternative routes and delay avoidance." },
-    { "name": "Citizen App", "description": "Awareness of incidents near stations." }
+    {
+      "name": "MTA App",
+      "description": "Live service alerts and train arrival times."
+    },
+    {
+      "name": "Google Maps Transit",
+      "description": "Reliable routing and platform guidance."
+    },
+    {
+      "name": "Citymapper",
+      "description": "Best for alternative routes and delay avoidance."
+    },
+    {
+      "name": "Citizen App",
+      "description": "Awareness of incidents near stations."
+    }
   ],
-
   "behavioral_cues": {
     "green_flags": [
       "Families and commuters nearby",
@@ -217,7 +277,6 @@
       "People pacing or watching riders"
     ]
   },
-
   "emergency_playbook": {
     "if_you_feel_unsafe": [
       "Move to another car",
@@ -245,68 +304,103 @@
       "Follow conductor instructions"
     ]
   },
-
   "etiquette": {
-  "platform_etiquette": [
-    "Stand behind the yellow line at all times",
-    "Let riders exit fully before you step in",
-    "Form loose lines instead of crowding the doors",
-    "Keep backpacks and bags close to your body",
-    "Avoid standing at the platform edge while distracted"
-  ],
-  "train_etiquette": [
-    "Keep bags in front of you, not on your shoulder",
-    "Don’t block doors — move into the car quickly",
-    "Offer priority seats to seniors, pregnant riders, and people with disabilities",
-    "Keep music and phone volume low",
-    "Avoid eating strong‑smelling food"
-  ],
-  "rush_hour_rules": [
-    "Expect heavy crowds and limited personal space",
-    "Move to the center of the car instead of hovering near doors",
-    "Remove backpacks and hold them low",
-    "Prepare your MetroCard/OMNY before entering",
-    "Step aside quickly when the train arrives"
-  ],
-  "unspoken_norms": [
-    "Minimal eye contact — it’s normal, not rude",
-    "Keep conversations short and low‑volume",
-    "Avoid staring, pointing, or reacting loudly",
-    "Don’t take up extra seats or spread out",
-    "Respect personal space even when crowded"
-  ]
-},
-
-
-  "checklist": {
-    "essentials": ["MetroCard or OMNY", "Charged phone", "Route screenshot"],
-    "safety_items": ["Crossbody bag", "Portable charger"],
-    "digital_tools": ["MTA app", "Google Maps"],
-    "what_not_to_carry": ["Open drinks", "Loose valuables"]
+    "platform_etiquette": [
+      "Stand behind the yellow line at all times",
+      "Let riders exit fully before you step in",
+      "Form loose lines instead of crowding the doors",
+      "Keep backpacks and bags close to your body",
+      "Avoid standing at the platform edge while distracted"
+    ],
+    "train_etiquette": [
+      "Keep bags in front of you, not on your shoulder",
+      "Don’t block doors — move into the car quickly",
+      "Offer priority seats to seniors, pregnant riders, and people with disabilities",
+      "Keep music and phone volume low",
+      "Avoid eating strong‑smelling food"
+    ],
+    "rush_hour_rules": [
+      "Expect heavy crowds and limited personal space",
+      "Move to the center of the car instead of hovering near doors",
+      "Remove backpacks and hold them low",
+      "Prepare your MetroCard/OMNY before entering",
+      "Step aside quickly when the train arrives"
+    ],
+    "unspoken_norms": [
+      "Minimal eye contact — it’s normal, not rude",
+      "Keep conversations short and low‑volume",
+      "Avoid staring, pointing, or reacting loudly",
+      "Don’t take up extra seats or spread out",
+      "Respect personal space even when crowded"
+    ]
   },
-
+  "checklist": {
+    "essentials": [
+      "MetroCard or OMNY",
+      "Charged phone",
+      "Route screenshot"
+    ],
+    "safety_items": [
+      "Crossbody bag",
+      "Portable charger"
+    ],
+    "digital_tools": [
+      "MTA app",
+      "Google Maps"
+    ],
+    "what_not_to_carry": [
+      "Open drinks",
+      "Loose valuables"
+    ]
+  },
   "faq": [
     {
-      "question": "Is the NYC subway safe at night",
-      "answer": "Yes, with precautions — ride in busier cars and avoid isolated stations."
+      "question": "Is the NYC subway safe at night?",
+      "answer": "Yes, with sensible precautions. After dark, ride the busier center cars near the conductor, wait near the off-hours waiting area or the staffed station booth, and stick to high-ridership lines. After bars close (roughly 2-4am) trains run less often — if a platform feels empty, wait near the booth or take a rideshare."
     },
     {
-      "question": "Which lines are safest",
-      "answer": "Lines with high commuter traffic like 1/2/3, A/C/E, and N/Q/R/W."
+      "question": "Which subway lines are safest?",
+      "answer": "No line is categorically unsafe. For passive safety, favour high-ridership, well-staffed lines through tourist corridors such as the 1/2/3, A/C/E, and N/Q/R/W. NYPD does not publish per-line crime data, so treat any “most dangerous line” list with skepticism — your behaviour (busy car, alert, bag zipped) matters more than the line number."
     },
     {
-      "question": "How do I avoid empty cars",
-      "answer": "Look for cars with riders and avoid unusually empty ones during busy times."
+      "question": "Is the NYC subway safe for solo female travelers?",
+      "answer": "Generally yes, especially in daytime and on busy lines. Stay in populated cars, keep your bag zipped and in front of you in crowds, and trust your instincts — change cars or step off if someone makes you uncomfortable. After midnight on quieter routes, many solo travelers prefer a rideshare."
+    },
+    {
+      "question": "What should I do if I feel unsafe on the subway?",
+      "answer": "At the next stop, move to a busier car or the conductor’s car (middle of the train). On the platform, wait near the off-hours waiting area or the station booth. In an emergency, use the Help Point intercom on the platform or call 911. Trust your gut over politeness."
+    },
+    {
+      "question": "Is the NYC subway getting safer? What the latest data shows",
+      "answer": "Yes. NYPD reported 2025 was the safest year on the subway since 2009 (excluding pandemic years), with major transit crime down 4% (2,160 vs 2,251) and transit robberies at their lowest level ever recorded. Early 2026 continued the trend: Q1 2026 transit crime was down 1.3% (537 vs 544). In the MTA’s Fall 2025 Customers Count survey, 63% of riders said they feel safe on trains. (Sources: NYPD, Jan 6 & Apr 2, 2026; MTA, Jan 28, 2026.)"
     }
   ],
-
   "internal_links": [
-    { "label": "Solo Trip to NYC", "slug": "/solo-trip-to-nyc" },
-    { "label": "NYC Night Safety Guide", "slug": "/solo-trip-to-nyc/night-safety" },
-    { "label": "NYC Neighborhood Safety Guide", "slug": "/solo-trip-to-nyc/neighborhood-safety" },
-    { "label": "NYC Transit Etiquette", "slug": "/solo-trip-to-nyc/transit-etiquette" }
+    {
+      "label": "Is NYC Safe at Night?",
+      "slug": "/destination/nyc/is-nyc-safe-at-night"
+    },
+    {
+      "label": "Solo Trip to NYC",
+      "slug": "/destination/nyc/solo-trip-to-nyc"
+    },
+    {
+      "label": "NYC Subway Map",
+      "slug": "/destination/nyc/nyc-subway-map"
+    },
+    {
+      "label": "Best Areas to Stay in NYC",
+      "slug": "/destination/nyc/best-areas-to-stay"
+    },
+    {
+      "label": "NYC Neighborhood Guide",
+      "slug": "/destination/nyc/neighborhood-guide"
+    },
+    {
+      "label": "NYC Female Solo Travel Guide",
+      "slug": "/destination/nyc/nyc-female-solo-travel-guide"
+    }
   ],
-
   "footer_cta": {
     "text": "Plan your NYC solo trip with confidence",
     "button_label": "Explore More Safety Guides",
