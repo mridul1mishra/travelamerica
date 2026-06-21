@@ -183,6 +183,11 @@ export default function Page() {
               right direction: Q1 2026 major crime was down, 2025 subway major crime was down, and
               MTA riders reported stronger safety satisfaction than the fear-heavy headlines imply.
             </p>
+            <p>
+              Planning daytime sightseeing too? See our{" "}
+              <Link href="/destination/nyc/nyc-safety-guide">complete NYC safety guide</Link>{" "}
+              for overall neighborhood and transit safety.
+            </p>
           </div>
           <ul>
             {visitingRules.map((rule) => (
