@@ -67,8 +67,8 @@ export default function LasVegasItineraryClient() {
           { q: "How much does this 3-day Las Vegas trip cost?", a: "Budget: $180–250/day (off-Strip hotel $70–90/night, $30 gambling budget, cheap eats). Mid-range: $300–450/day (mid-Strip hotel $180–250/night, one show $80–120, moderate dining). Add resort fees ($35–55/night) to whatever room rate you see — they're mandatory at most Strip hotels." },
           { q: "What is the Hoover Dam like as a day trip?", a: "30 minutes from the Strip via US-93. Self-guided exterior viewing is free. The dam tour is $10, the powerplant tour is $30 and worth it for the engineering. Go early (before 10am) to beat the heat in summer. Combine with Boulder City lunch on the return." },
           { q: "Is Las Vegas safe to visit alone?", a: "Yes — the Strip and Fremont Street are among the most surveilled public spaces in America. Stay on the main corridors, use rideshare after midnight, and set a firm gambling budget before you arrive. The specific risks are drink tampering in clubs and unlicensed taxis outside venues." },
-        ].map(({ q, a }) => (
-          <details key={q} style={{ borderBottom: '1px solid #eee', padding: '12px 0' }}>
+        ].map(({ q, a }, index) => (
+          <details key={q} open={index === 0} style={{ borderBottom: '1px solid #eee', padding: '12px 0' }}>
             <summary style={{ fontWeight: 600, cursor: 'pointer', fontSize: '0.95rem' }}>{q}</summary>
             <p style={{ marginTop: '8px', color: '#444', fontSize: '0.9rem', lineHeight: 1.6 }}>{a}</p>
           </details>

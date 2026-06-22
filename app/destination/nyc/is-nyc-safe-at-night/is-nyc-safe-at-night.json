@@ -34,7 +34,7 @@
     {
       "name": "Upper East Side",
       "safetyLevel": "Safe",
-      "why": "Quiet, upscale, low crime.",
+      "why": "Quiet, upscale, and residential.",
       "bestTimeToVisit": "Evening",
       "avoidAfter": null,
       "notes": null
@@ -50,7 +50,7 @@
     {
       "name": "Battery Park",
       "safetyLevel": "Safe",
-      "why": "Calm, scenic, low crime.",
+      "why": "Calm and scenic, with steady early-evening foot traffic.",
       "bestTimeToVisit": "Evening",
       "avoidAfter": "Midnight",
       "notes": null
@@ -90,26 +90,32 @@
     {
       "name": "Brownsville",
       "safetyLevel": "Avoid Late",
-      "why": "Higher crime rates and low foot traffic.",
+      "why": "Primarily residential. The 73rd Precinct (Brownsville) logs more major crime than tourist-core precincts, but it is down about 6% in 2026 year-to-date and ~75% since 1990. Tourist routes rarely pass through.",
       "bestTimeToVisit": "Daytime",
       "avoidAfter": "Sunset",
-      "notes": null
+      "notes": null,
+      "sourceUrl": "https://www.nyc.gov/assets/nypd/downloads/pdf/crime_statistics/cs-en-us-073pct.pdf",
+      "sourceLabel": "NYPD CompStat · 73rd Pct"
     },
     {
       "name": "East New York",
       "safetyLevel": "Avoid Late",
-      "why": "Sparse lighting and limited activity at night.",
+      "why": "A large, mostly residential area. The 75th Precinct records the city's highest major-crime volume (3,347 in 2025), though it is down about 5% in 2026 year-to-date. Not a visitor area, with little reason to be here at night.",
       "bestTimeToVisit": "Daytime",
       "avoidAfter": "Sunset",
-      "notes": null
+      "notes": null,
+      "sourceUrl": "https://www.nyc.gov/assets/nypd/downloads/pdf/crime_statistics/cs-en-us-075pct.pdf",
+      "sourceLabel": "NYPD CompStat · 75th Pct"
     },
     {
       "name": "Fordham",
       "safetyLevel": "Avoid Late",
-      "why": "Busy during the day but quieter and less predictable at night.",
+      "why": "Busy by day, quieter at night. The 46th Precinct (Fordham) is smaller-volume but major crime is up about 12% in 2026 year-to-date — the one area here trending up. Mostly residential, off the usual tourist routes.",
       "bestTimeToVisit": "Daytime",
       "avoidAfter": "Sunset",
-      "notes": null
+      "notes": null,
+      "sourceUrl": "https://www.nyc.gov/assets/nypd/downloads/pdf/crime_statistics/cs-en-us-046pct.pdf",
+      "sourceLabel": "NYPD CompStat · 46th Pct"
     }
   ],
 

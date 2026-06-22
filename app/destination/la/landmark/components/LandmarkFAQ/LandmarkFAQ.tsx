@@ -6,7 +6,7 @@ export default function LandmarkFAQ() {
     <section className={styles.faqSection} id="landmarks-faq">
       <h2 className={styles.sectionheading}>Practical Questions</h2>
 
-      <details className={styles.faqItem}>
+      <details className={styles.faqItem} open>
         <summary>How far in advance should I book Getty parking or The Broad&apos;s timed entry?</summary>
         <p>
           The Getty Center: admission is free, but reserve parking online a few days

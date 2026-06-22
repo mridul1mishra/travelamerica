@@ -29,8 +29,8 @@ export default function ItineraryFAQ() {
       >
         LA Itinerary — Frequently Asked Questions
       </h2>
-      {faqs.map(({ q, a }) => (
-        <details key={q} style={{ borderBottom: "1px solid #eee", padding: "12px 0" }}>
+      {faqs.map(({ q, a }, index) => (
+        <details key={q} open={index === 0} style={{ borderBottom: "1px solid #eee", padding: "12px 0" }}>
           <summary style={{ fontWeight: 600, cursor: "pointer", fontSize: "0.95rem" }}>
             {q}
           </summary>

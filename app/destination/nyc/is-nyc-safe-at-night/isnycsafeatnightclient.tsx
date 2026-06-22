@@ -90,12 +90,22 @@ const internalLinks = [
   { href: "/destination/nyc/nyc-female-solo-travel-guide", label: "Female solo guide" },
 ];
 
-const safeNeighborhoods = data.neighborhoodSafetyGrid
+const grid = data.neighborhoodSafetyGrid as Array<{
+  name: string;
+  safetyLevel: string;
+  why: string;
+  bestTimeToVisit?: string;
+  avoidAfter: string | null;
+  notes: string | null;
+  sourceUrl?: string;
+  sourceLabel?: string;
+}>;
+const safeNeighborhoods = grid
   .filter((item) => item.safetyLevel === "Safe")
   .slice(0, 5);
-const cautionNeighborhoods = data.neighborhoodSafetyGrid
+const cautionNeighborhoods = grid
   .filter((item) => item.safetyLevel !== "Safe")
-  .slice(0, 6);
+  .slice(0, 8);
 
 function riskClass(level: string) {
   const value = level.toLowerCase();
@@ -215,6 +225,11 @@ export default function Page() {
               restaurants, and other people. Reputation matters less than the route you will actually
               walk at night.
             </p>
+            <p style={{ fontSize: "0.85rem", color: "#6b7280", marginTop: "0.5rem" }}>
+              These are general traveler-experience ratings based on lighting, foot traffic, late-night
+              activity, and official NYPD precinct crime data — not official safety scores. Conditions
+              vary block by block.
+            </p>
           </div>
           <div className={styles.neighborhoodGrid}>
             {safeNeighborhoods.map((item) => (
@@ -245,6 +260,7 @@ export default function Page() {
                 <h3>{item.name}</h3>
                 <p>{item.why}</p>
                 {item.avoidAfter ? <p><strong>Better before:</strong> {item.avoidAfter}</p> : null}
+                {item.sourceUrl ? <p><a href={item.sourceUrl} target="_blank" rel="noreferrer">{item.sourceLabel}</a></p> : null}
               </article>
             ))}
           </div>

@@ -4,7 +4,7 @@ import styles from "./FAQAccordion.module.css";
 import type { FAQAccordionProps } from "../typesafeatnight";
 
 export default function FAQAccordion({ faqs }: FAQAccordionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);

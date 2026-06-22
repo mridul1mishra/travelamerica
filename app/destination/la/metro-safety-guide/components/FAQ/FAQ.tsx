@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function FAQ({ items }: Props) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);

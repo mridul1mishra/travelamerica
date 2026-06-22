@@ -137,7 +137,7 @@ export default function LasVegasLandmarkClient() {
       <section className={styles.faqSection} id="landmarks-faq">
         <h2 className={styles.sectionheading}>Practical Questions</h2>
 
-        <details className={styles.faqItem}>
+        <details className={styles.faqItem} open>
           <summary>How far in advance should I book the High Roller, Neon Museum, or Red Rock entry?</summary>
           <p>
             High Roller: standard tickets are fine same-day, but book the sunset slot 1-2

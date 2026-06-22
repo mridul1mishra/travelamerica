@@ -53,7 +53,7 @@ export default function NYCSafetyGuide() {
       "A practical, scenario-based safety guide for visiting New York City with neighborhood, transit, night, and emergency guidance.",
     url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
     inLanguage: "en-US",
-    dateModified: "2026-06-19",
+    dateModified: "2026-06-22",
     author: {
       "@type": "Organization",
       name: "Travels Americas",
@@ -71,10 +71,34 @@ export default function NYCSafetyGuide() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Is New York City safe for tourists in 2026?",
+        name: "Is New York City safe to visit in 2026?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "New York City is generally safe for visitors who stay in active areas, use reliable transit, and make practical late-night route choices.",
+          text: "Yes for most visitors who stay in active areas and plan late-night routes carefully. The data supports it: citywide major crime fell 6.2% year-to-date through May 2026, and the NYPD recorded the fewest murders for the first five months of any year on record. Most visitor incidents involve pickpocketing or scams in crowded areas, not violent crime.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How safe is New York City right now?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Safer than it has been in years. Year-to-date major crime dropped 6.2% through May 2026 (44,955 vs. 47,929 incidents) with declines in every borough, and murders are at historic lows. Risk for visitors is concentrated in petty theft in busy tourist zones rather than serious crime.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is Manhattan safe for tourists?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Manhattan — especially Midtown, the Upper West and Upper East Sides, Chelsea, and Lower Manhattan — is busy, heavily policed, and where most tourists stay safely. Crowded spots like Times Square call for pickpocket awareness, but violent crime is rare in these areas.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is it safe to travel to NYC alone?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Solo travel in NYC is common and manageable. Stay in central, transit-connected neighborhoods, keep late-night routes simple, tell someone your plans, and use a rideshare when a subway transfer feels too quiet. Our dedicated solo and female-solo guides cover this in detail.",
         },
       },
       {
@@ -82,7 +106,15 @@ export default function NYCSafetyGuide() {
         name: "Is the NYC subway safe at night?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The subway is often usable at night, but visitors should avoid empty platforms and cars, reduce late transfers, and use a cab or rideshare when a route feels too quiet.",
+          text: "The subway carries millions safely each day and transit crime sits near a 16-year low, though early 2026 saw a brief uptick before levelling off. At night, avoid empty platforms and cars, reduce transfers, and switch to a cab or rideshare when a route feels thin.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Are Tribeca, DUMBO, and Brooklyn Heights safe at night?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "These are among the calmer, lower-crime neighborhoods visitors stay in. They feel quiet after dark, so the main consideration is the route home — favor a direct subway line or a cab over a long walk from a distant station.",
         },
       },
       {
@@ -98,7 +130,7 @@ export default function NYCSafetyGuide() {
         name: "What should I do if I feel unsafe in NYC?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Step into a public place such as a hotel lobby, store, restaurant, museum, or staffed station. Call 911 for immediate danger.",
+          text: "Step into a public place such as a hotel lobby, store, restaurant, museum, or staffed station, and call 911 for immediate danger or 311 for non-urgent help.",
         },
       },
     ],

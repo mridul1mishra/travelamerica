@@ -17,7 +17,7 @@ export default function FAQ({ groupedFaqs }: FAQProps) {
         <div key={group} className="faq-group">
           <h3 className="faq-group-title">{group}</h3>
           {items.map((item, index) => (
-            <details key={index}>
+            <details key={index} open={index === 0}>
               <summary>{item.question}</summary>
               <p>{item.answer}</p>
             </details>
