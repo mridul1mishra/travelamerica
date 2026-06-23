@@ -49,3 +49,6 @@ next-env.d.ts
 
 # claude work files
 /claudeworkfile/
+
+# generated Pinterest planning and creative assets
+/pin-templates/

@@ -5,6 +5,7 @@ import Link from "next/link";
 import NavigationHeader from "./components/NavigationHeader/NavigationHeader";
 import Footer from "./components/Footer/Footer";
 import BookingCTA from "./components/BookingCTA/BookingCTA";
+import EmailSignup from "@/app/components/destination/EmailSignup/EmailSignup";
 import styles from "./SoloItinerary.module.css";
 
 interface FaqItem {
@@ -191,6 +192,8 @@ export default function SoloItineraryClient({ grouped }: SoloItineraryClientProp
             ))}
           </div>
         </section>
+
+        <EmailSignup source="solo-itinerary" city="NYC" />
 
         <section id="day-plan" className={styles.daySection} aria-labelledby="days-heading">
           <div className={styles.sectionHeader}>
