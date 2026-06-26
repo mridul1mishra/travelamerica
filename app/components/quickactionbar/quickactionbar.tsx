@@ -1,16 +1,7 @@
-import styles from "./QuickActionBar.module.css";
 import Link from "next/link";
-
-// Icons
-import { FaShieldAlt } from "react-icons/fa";
-import { MdLocationCity, MdWarningAmber } from "react-icons/md";
-import { FaSubway } from "react-icons/fa";
-import { MdReportGmailerrorred } from "react-icons/md";
-import { FaHandsHelping } from "react-icons/fa";
-import { FaFemale } from "react-icons/fa";
-import { FaRegCalendarAlt } from "react-icons/fa";
-import { FaExclamationTriangle } from "react-icons/fa";
-import { FaLayerGroup } from "react-icons/fa"
+import { FaRegCalendarAlt, FaShieldAlt, FaSubway } from "react-icons/fa";
+import { MdFlightLand, MdLocationCity } from "react-icons/md";
+import styles from "./QuickActionBar.module.css";
 
 export default function QuickActionBar() {
   return (
@@ -30,16 +21,14 @@ export default function QuickActionBar() {
         Getting Around
       </Link>
 
-      {/* FRAME 8 */}
-      <Link href="#female-travel" className={styles.action}>
-        <FaFemale className={styles.icon} />
-        Female Solo
+      <Link href="#airport-transfer" className={styles.action}>
+        <MdFlightLand className={styles.icon} />
+        Airport Transfer
       </Link>
 
-      {/* FRAME 9 */}
       <Link href="#itinerary" className={styles.action}>
         <FaRegCalendarAlt className={styles.icon} />
-        3‑Day Plan
+        3-Day Plan
       </Link>
     </nav>
   );

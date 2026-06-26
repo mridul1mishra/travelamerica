@@ -1,4 +1,3 @@
-/* ── Slim variant ── */
 .slim {
   display: flex;
   align-items: center;
@@ -20,6 +19,7 @@
   display: inline-block;
   padding: 0.45rem 1.1rem;
   background: #2563eb;
+  border: 1px solid #1d4ed8;
   color: #fff;
   border-radius: 6px;
   font-size: 0.9rem;
@@ -33,7 +33,6 @@
   background: #1d4ed8;
 }
 
-/* ── Full card variant ── */
 .full {
   background: #2563eb;
   padding: 3rem 1.5rem;
@@ -62,6 +61,7 @@
   display: inline-block;
   padding: 0.75rem 2rem;
   background: #fff;
+  border: 1px solid #bfdbfe;
   color: #2563eb;
   border-radius: 8px;
   font-size: 1rem;
@@ -75,7 +75,6 @@
   color: #1d4ed8;
 }
 
-/* ── Responsive ── */
 @media (max-width: 600px) {
   .slim {
     flex-direction: column;

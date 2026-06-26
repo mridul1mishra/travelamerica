@@ -1,106 +1,118 @@
-import Script from "next/script";
+import SoloTripNYCClient from "./solotriptonycclient";
 
 export const generateMetadata = () => ({
-  title: 'Solo Trip to NYC in 2026: Safe Areas, Real Costs & 3-Day Itinerary',
-  description:  "Planning a solo trip to NYC in 2026? Here's the honest guide: safest neighborhoods to stay, how to get around without looking lost, and a realistic 3-day budget breakdown.",
+  title: "Solo Trip to NYC Guide: Safety, Best Areas to Stay, Budget Tips & Itinerary",
+  description: "Planning a solo trip to NYC? Learn where to stay, how to ride the subway safely, what to avoid, airport transfer options, budget tips, and the best things to do alone in New York City.",
   robots: {
     index: true,
-    follow: true,
+    follow: true
   },
   alternates: {
-      canonical: 'https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc',
-    },
-    twitter: {
+    canonical: "https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc"
+  },
+  twitter: {
     card: "summary_large_image",
-    title: 'Solo Trip to NYC in 2026: Safe Areas, Real Costs & 3-Day Itinerary',
-    description:  "Planning a solo trip to NYC in 2026? Here's the honest guide: safest neighborhoods to stay, how to get around without looking lost, and a realistic 3-day budget breakdown.",
+    title: "Solo Trip to NYC Guide: Safety, Best Areas to Stay, Budget Tips & Itinerary",
+    description: "Planning a solo trip to NYC? Learn where to stay, how to ride the subway safely, what to avoid, airport transfer options, budget tips, and the best things to do alone in New York City.",
     images: ["https://www.travelsamericas.com/social/solo-trip-to-nyc-gritty.png"]
   },
   openGraph: {
-    title: 'Solo Trip to NYC in 2026: Safe Areas, Real Costs & 3-Day Itinerary',
-    description: "Planning a solo trip to NYC in 2026? Here's the honest guide: safest neighborhoods to stay, how to get around without looking lost, and a realistic 3-day budget breakdown.",
-    url: 'https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc',
-    type: 'article',
-    siteName: 'Travels Americas',
-    images: [{ url: "https://www.travelsamericas.com/social/solo-trip-to-nyc-gritty.png", width: 1200, height: 630 }],
+    title: "Solo Trip to NYC Guide: Safety, Best Areas to Stay, Budget Tips & Itinerary",
+    description: "Planning a solo trip to NYC? Learn where to stay, how to ride the subway safely, what to avoid, airport transfer options, budget tips, and the best things to do alone in New York City.",
+    url: "https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc",
+    type: "article",
+    siteName: "Travels Americas",
+    images: [{ url: "https://www.travelsamericas.com/social/solo-trip-to-nyc-gritty.png", width: 1200, height: 630 }]
   }
 });
 
-
-import SoloTripNYCClient from './solotriptonycclient';
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Solo Trip to NYC (2026 Guide): Safety, Best Areas, Itinerary & Tips",
-  "description": "Plan your solo trip to NYC with safe areas, transit tips, a 3‑day itinerary, and what to avoid.",
-  "author": {
+  headline: "Solo Trip to NYC Guide: Safety, Best Areas to Stay, Budget Tips & Itinerary",
+  description: "Plan your solo trip to NYC with safe areas, subway tips, airport transfer options, scam warnings, budget timing, and a practical itinerary.",
+  dateModified: "2026-06-26",
+  author: {
     "@type": "Person",
-    "name": "Travels Americas Editorial Team"
+    name: "Travels Americas Editorial Team",
+    url: "https://www.travelsamericas.com/about"
   },
-  "publisher": {
+  publisher: {
     "@type": "Organization",
-    "name": "Travels Americas",
-    "logo": {
+    name: "Travels Americas",
+    logo: {
       "@type": "ImageObject",
-      "url": "https://www.travelsamericas.com/logo.png"
+      url: "https://www.travelsamericas.com/logo.png"
     }
   },
-  "mainEntityOfPage": "https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc"
+  mainEntityOfPage: "https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc"
 };
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
+  mainEntity: [
     {
       "@type": "Question",
-      "name": "Is NYC safe for solo travelers?",
-      "acceptedAnswer": {
+      name: "Is NYC safe for solo travelers?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": "Yes. NYC is one of the safest major U.S. cities when you stay in well‑lit areas, choose safe neighborhoods, and follow basic transit habits."
+        text: "Yes. New York City is generally a strong solo-travel destination when you stay in busy, well-lit areas, choose a practical neighborhood, and follow basic subway and street-safety habits."
       }
     },
     {
       "@type": "Question",
-      "name": "Where should I stay in NYC as a solo traveler?",
-      "acceptedAnswer": {
+      name: "Where should I stay in NYC as a solo traveler?",
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": "Popular safe areas include the Upper West Side, Midtown, Brooklyn Heights, and Long Island City."
+        text: "First-time solo travelers usually do best in convenient, transit-rich areas such as the Upper West Side, Midtown, Brooklyn Heights, or Long Island City."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Is MetroCard still the best option for tourists?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. MetroCard sales and refills ended on January 1, 2026, and OMNY contactless payment is the standard way for most visitors to ride the subway and local buses."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How can I save money on NYC transit?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Use the same OMNY card or device for every ride. After 12 paid subway or local-bus rides in a 7-day period, additional eligible rides are free for that week."
       }
     }
   ]
 };
 
-const howToSchema = {
+const breadcrumbSchema = {
   "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to Plan a Solo Trip to NYC",
-  "description": "A simple step‑by‑step guide to planning a safe and enjoyable solo trip to New York City.",
-  "step": [
+  "@type": "BreadcrumbList",
+  itemListElement: [
     {
-      "@type": "HowToStep",
-      "name": "Choose a safe neighborhood",
-      "text": "Pick areas like the Upper West Side, Midtown, or Brooklyn Heights for comfort and walkability."
+      "@type": "ListItem",
+      position: 1,
+      name: "NYC Travel",
+      item: "https://www.travelsamericas.com/destination/nyc"
     },
     {
-      "@type": "HowToStep",
-      "name": "Plan your transit strategy",
-      "text": "Use the subway during the day, avoid empty cars, and choose rideshare late at night."
+      "@type": "ListItem",
+      position: 2,
+      name: "Solo Trip to NYC",
+      item: "https://www.travelsamericas.com/destination/nyc/solo-trip-to-nyc"
     }
   ]
 };
-export default async function SoloTripToNYC() {
-  
 
+export default async function SoloTripToNYC() {
   return (
-  <>
-      {/* Schema blocks */}
-      <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}/>
-      <script id="schema-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}/>
-      <script id="schema-howto" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}/>
-      
-  <SoloTripNYCClient />
-  </>
-);
-  
+    <>
+      <script id="schema-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script id="schema-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="schema-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <SoloTripNYCClient />
+    </>
+  );
 }

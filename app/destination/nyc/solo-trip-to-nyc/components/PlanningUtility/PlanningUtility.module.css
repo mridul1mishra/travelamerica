@@ -1,0 +1,177 @@
+.section,
+.warningSection {
+  padding: 56px 20px;
+}
+
+.section {
+  background: #ffffff;
+}
+
+.warningSection {
+  background: #fff8f3;
+}
+
+.inner,
+.warningInner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.warningInner {
+  border: 1px solid #f4c7a5;
+  border-radius: 8px;
+  padding: 28px;
+  background: #ffffff;
+}
+
+.eyebrow {
+  color: #b45309;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.section h2,
+.warningSection h2 {
+  color: #18181b;
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+
+.section h3,
+.warningSection h3 {
+  color: #20202a;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.intro,
+.warningSection p,
+.section p,
+.warningSection li {
+  color: #3f3f46;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.warningSection ul {
+  margin: 18px 0 0;
+  padding-left: 22px;
+}
+
+.warningSection li {
+  margin: 8px 0;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid #dbe5f5;
+  border-radius: 8px;
+  background: #ffffff;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tableWrap::-webkit-scrollbar {
+  display: none;
+}
+
+.table {
+  border-collapse: collapse;
+  min-width: 860px;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #e7edf7;
+  color: #34343d;
+  font-size: 15px;
+  line-height: 1.45;
+  padding: 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  background: #f5f8fd;
+  color: #172554;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.table tr:last-child td {
+  border-bottom: 0;
+}
+
+.splitGrid,
+.cardGrid,
+.linkGrid {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.splitGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cardGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.splitGrid article,
+.cardGrid article,
+.linkCard {
+  border: 1px solid #dfe6f2;
+  border-radius: 8px;
+  padding: 22px;
+  background: #ffffff;
+}
+
+.splitGrid a,
+.linkCard {
+  color: #1d4ed8;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.splitGrid a:hover,
+.linkCard:hover {
+  text-decoration: underline;
+}
+
+.linkGrid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.linkCard span {
+  color: #172554;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.linkCard p {
+  color: #52525b;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .splitGrid,
+  .cardGrid,
+  .linkGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .section h2,
+  .warningSection h2 {
+    font-size: 26px;
+  }
+}

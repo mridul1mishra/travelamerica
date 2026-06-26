@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./HeroSection.module.css";
 
 export function HeroSection() {
@@ -6,21 +7,31 @@ export function HeroSection() {
     <section className={styles.hero}>
       <div className={styles.herocontainer}>
         <div className={styles.herotext}>
-          <h1>Solo Trip to New York City: First-Time Traveler Guide</h1>
-          <p className={styles.subtext}>Safe, confident, and stress‑free solo travel in NYC.</p>
+          <h1>Solo Trip to NYC</h1>
+          <p className={styles.subtext}>
+            NYC is one of the easiest U.S. cities to enjoy alone: transit runs all day, solo dining is normal, and busy streets make first-time exploring feel less exposed. Plan around well-lit neighborhoods, simple subway routes, and a few smart scam checks, and a solo trip feels confident instead of complicated.
+          </p>
 
           <div className={styles.herobuttons}>
-            <a href="/destination/nyc/nyc-safety-guide" className={`${styles.btn} ${styles.primary}`}>Start with Safety </a>
-            <a href="/destination/nyc/landmark" className={`${styles.btn} ${styles.secondary}`}>Where to Stay</a>
+            <Link href="/destination/nyc/nyc-safety-guide" className={`${styles.btn} ${styles.primary}`}>Start with safety</Link>
+            <Link href="#neighborhoods" className={`${styles.btn} ${styles.secondary}`}>Where to stay</Link>
           </div>
 
-          <p className={styles.updated}>Updated for 2026</p>
+          <div className={styles.jumpLinks} aria-label="Solo NYC guide sections">
+            <Link href="#safety">Safety</Link>
+            <Link href="#neighborhoods">Where to stay</Link>
+            <Link href="#transport">Getting around</Link>
+            <Link href="#airport-transfer">Airports</Link>
+            <Link href="#itinerary">Itinerary</Link>
+          </div>
+
+          <p className={styles.updated}>Last updated June 26, 2026</p>
         </div>
 
         <div className={styles.heroImage}>
           <div className={styles.imagePlaceholder}>
             <div className={styles.heroImageWrapper}>
-              <Image src="/destination/nyc-travel-editorial-collage-new.png" alt="New York City skyline" fill style={{ objectFit: "contain" }} fetchPriority="high"/>
+              <Image src="/destination/nyc-travel-editorial-collage-new.png" alt="New York City skyline" fill style={{ objectFit: "contain" }} fetchPriority="high" />
             </div>
           </div>
         </div>

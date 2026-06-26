@@ -3,14 +3,14 @@
     {
       "id": "transport",
       "title": "Getting Around NYC",
-      "summary": "The subway is the fastest way to move around the city, with safe alternatives depending on time and comfort.",
+      "summary": "The subway is usually the fastest way to move around NYC alone. In 2026, OMNY is the standard tap-to-pay system: use the same card or phone each time so your fares count toward the weekly cap.",
       "bullets": [
-        "Subway: reliable, fast, and safe during the day.",
-        "Buses: great for above‑ground views and short distances.",
-        "Rideshare: ideal for late‑night travel or unfamiliar areas.",
-        "Walking: Manhattan is extremely walkable — stick to main avenues after dark."
+        "Subway and local bus fare is $3 per ride, with OMNY fare capping after 12 paid rides in a 7-day period.",
+        "MetroCard sales and refills ended on January 1, 2026, so most visitors should use contactless payment.",
+        "Look for blue Help Point intercoms in stations: red is for emergencies, green is for information.",
+        "Rideshare or a yellow taxi is worth it late at night, with luggage, or when a route requires awkward transfers."
       ],
-      "link": "/destination/nyc/solo-trip-to-nyc"
+      "link": "/destination/nyc/subway-safety-guide"
     }
   ]
 }

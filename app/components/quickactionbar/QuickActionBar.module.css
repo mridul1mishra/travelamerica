@@ -12,6 +12,12 @@
   z-index: 50;
   overflow-x: auto;
   white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.quickBar::-webkit-scrollbar {
+  display: none;
 }
 
 .action {
@@ -41,6 +47,7 @@
   .quickBar {
     padding: 10px 12px;
     gap: 10px;
+    justify-content: flex-start;
   }
 
   .action {

@@ -1,0 +1,11 @@
+
+> my-next-app@0.1.0 dev
+> cross-env NEXT_DISABLE_TURBOPACK=true next dev -p 3000
+
+   ▲ Next.js 16.0.7 (Turbopack)
+   - Local:         http://localhost:3000
+   - Network:       http://192.168.1.251:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 3.8s

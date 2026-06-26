@@ -2,23 +2,23 @@
   "neighborhoods": [
     {
       "name": "Upper West Side",
-      "reason": "Calm, residential, extremely walkable.",
-      "link": "https://www.travelsamericas.com/destination/nyc/best-areas-to-stay#upper-west-side"
+      "reason": "Best for museums, Central Park, calmer evenings, and first-time solo travelers who want a residential base.",
+      "link": "/destination/nyc/best-areas-to-stay#upper-west-side"
     },
     {
       "name": "Midtown",
-      "reason": "Central, well‑lit, close to major attractions.",
-      "link": "https://www.travelsamericas.com/destination/nyc/best-areas-to-stay#midtown-east"
+      "reason": "Best for short trips, late arrivals, and simple subway access to the classic first-time sights.",
+      "link": "/destination/nyc/best-areas-to-stay#midtown-east"
     },
     {
       "name": "Brooklyn Heights",
-      "reason": "Quiet streets and skyline views.",
-      "link": "https://www.travelsamericas.com/destination/nyc/best-areas-to-stay#williamsburg"
+      "reason": "Best for quiet streets, skyline walks, brownstone charm, and a softer landing after busy Manhattan days.",
+      "link": "/destination/nyc/best-areas-to-stay#brooklyn-heights"
     },
     {
-      "name": "Long Island",
-      "reason": "Artsy, lively, and well‑connected by subway.",
-      "link": "https://www.travelsamericas.com/destination/nyc/best-areas-to-stay#long-island-city"
+      "name": "Long Island City",
+      "reason": "Best value play when you want quick Manhattan access, skyline views, and hotels near reliable subway lines.",
+      "link": "/destination/nyc/best-areas-to-stay#long-island-city"
     }
   ]
 }
