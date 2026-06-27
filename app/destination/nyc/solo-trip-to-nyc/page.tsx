@@ -31,11 +31,12 @@ const articleSchema = {
   "@type": "Article",
   headline: "Solo Trip to NYC Guide: Safety, Best Areas to Stay, Budget Tips & Itinerary",
   description: "Plan your solo trip to NYC with safe areas, subway tips, airport transfer options, scam warnings, budget timing, and a practical itinerary.",
-  dateModified: "2026-06-26",
+  dateModified: "2026-06-27",
   author: {
     "@type": "Person",
-    name: "Travels Americas Editorial Team",
-    url: "https://www.travelsamericas.com/about"
+    "@id": "https://www.travelsamericas.com/#manisha-shukla",
+    name: "Manisha Shukla",
+    url: "https://www.travelsamericas.com/about#manisha-shukla"
   },
   publisher: {
     "@type": "Organization",
@@ -54,6 +55,14 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
+      name: "Can you travel to NYC alone?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. NYC is one of the easiest major cities for solo travelers because it is walkable, well connected by public transportation, and full of solo-friendly restaurants, museums, shows, parks, and neighborhood walks."
+      }
+    },
+    {
+      "@type": "Question",
       name: "Is NYC safe for solo travelers?",
       acceptedAnswer: {
         "@type": "Answer",
@@ -65,23 +74,23 @@ const faqSchema = {
       name: "Where should I stay in NYC as a solo traveler?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "First-time solo travelers usually do best in convenient, transit-rich areas such as the Upper West Side, Midtown, Brooklyn Heights, or Long Island City."
+        text: "First-time solo travelers usually do best in convenient, transit-rich areas such as the Upper West Side, Midtown, Brooklyn Heights, or Long Island City, ideally within a short walk of a major subway line."
       }
     },
     {
       "@type": "Question",
-      name: "Is MetroCard still the best option for tourists?",
+      name: "What should I do on the first day of a solo NYC trip?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. MetroCard sales and refills ended on January 1, 2026, and OMNY contactless payment is the standard way for most visitors to ride the subway and local buses."
+        text: "Keep the first day low friction: get to your hotel, walk a short loop near where you are staying, find the nearest subway entrance and 24-hour basics, eat an early nearby dinner, and save the big sightseeing for day two."
       }
     },
     {
       "@type": "Question",
-      name: "How can I save money on NYC transit?",
+      name: "Is the NYC subway safe for solo travelers?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Use the same OMNY card or device for every ride. After 12 paid subway or local-bus rides in a 7-day period, additional eligible rides are free for that week."
+        text: "Usually yes on busy routes and staffed stations. Use OMNY, avoid empty cars late at night, wait near other riders or staff, and switch to a cab or rideshare when a route requires awkward late transfers."
       }
     }
   ]

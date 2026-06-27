@@ -53,7 +53,7 @@ export default function NYCSafetyGuide() {
       "A practical, scenario-based safety guide for visiting New York City with neighborhood, transit, night, and emergency guidance.",
     url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
     inLanguage: "en-US",
-    dateModified: "2026-06-22",
+    dateModified: "2026-06-27",
     author: {
       "@type": "Organization",
       name: "Travels Americas",

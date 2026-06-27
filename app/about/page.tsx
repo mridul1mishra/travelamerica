@@ -29,6 +29,13 @@ const aboutPageSchema = {
           "@id": "https://www.travelsamericas.com/#founder",
           "name": "Mridul Mishra",
         },
+        "employee": {
+          "@type": "Person",
+          "@id": "https://www.travelsamericas.com/#manisha-shukla",
+          "name": "Manisha Shukla",
+          "jobTitle": "Travel Writer",
+          "url": "https://www.travelsamericas.com/about#manisha-shukla",
+        },
         "contactPoint": {
           "@type": "ContactPoint",
           "contactType": "Editorial",
@@ -43,6 +50,23 @@ const aboutPageSchema = {
       "jobTitle": "Founder & Editor",
       "url": "https://www.travelsamericas.com/about",
       "worksFor": { "@id": "https://www.travelsamericas.com/#organization" },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.travelsamericas.com/#manisha-shukla",
+      "name": "Manisha Shukla",
+      "jobTitle": "Travel Writer",
+      "url": "https://www.travelsamericas.com/about#manisha-shukla",
+      "worksFor": { "@id": "https://www.travelsamericas.com/#organization" },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Banaras Hindu University"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "PhD",
+        "name": "PhD in English Literature"
+      }
     },
   ],
 };
@@ -112,6 +136,14 @@ export default function AboutPage() {
               about how this site approaches travel content. Every guide is
               written from the perspective of someone planning a real trip and
               wanting answers, not someone selling a fantasy.
+            </p>
+            <p id="manisha-shukla">
+              <strong>Manisha Shukla</strong> writes and reviews travel guides for
+              Travels Americas, with a focus on clear, useful language for travelers
+              making real decisions. She holds a PhD in English Literature from
+              Banaras Hindu University, and brings that editorial training to the
+              site&apos;s practical city guides, safety explainers, and solo-travel
+              planning content.
             </p>
           </div>
 

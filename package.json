@@ -10,6 +10,8 @@
     "lint": "eslint",
     "export": "next export",
     "analyze": "cross-env ANALYZE=true next build --webpack",
+    "test:e2e": "playwright test",
+    "test:e2e:nyc-safety": "playwright test tests/e2e/nyc-safety.spec.ts",
     "prepare": "cp scripts/pre-commit.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit || true"
   },
   "browserslist": {
@@ -38,6 +40,7 @@
     "react-zoom-pan-pinch": "^3.7.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "@types/node": "^20",
     "@types/pg": "^8.20.0",
     "@types/react": "^19",

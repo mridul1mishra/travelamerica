@@ -12,6 +12,8 @@
 
 # testing
 /coverage
+/playwright-report/
+/test-results/
 /Meta_Title_Description_Recommendations.pdf
 /TravelsAmericas_GSC_Traffic_Analysis.pdf
 # next.js

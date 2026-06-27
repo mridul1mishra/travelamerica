@@ -25,7 +25,7 @@ export function HeroSection() {
             <Link href="#itinerary">Itinerary</Link>
           </div>
 
-          <p className={styles.updated}>Last updated June 26, 2026</p>
+          <p className={styles.updated}>By Manisha Shukla · Last updated June 27, 2026</p>
         </div>
 
         <div className={styles.heroImage}>

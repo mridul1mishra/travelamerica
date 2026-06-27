@@ -340,6 +340,7 @@ export default function NYCSafetyGuideClient() {
 
         <section className={styles.nextSteps} aria-label="Related NYC planning guides">
           <Link href="/destination/nyc/best-areas-to-stay">Best areas to stay</Link>
+          <Link href="/destination/nyc/subway-safety-guide">NYC subway safety guide</Link>
           <Link href="/destination/nyc/things-to-do">Things to do in NYC</Link>
           <Link href="/destination/nyc/landmark">NYC landmarks guide</Link>
           <Link href="/destination/nyc/food">Where to eat in NYC</Link>

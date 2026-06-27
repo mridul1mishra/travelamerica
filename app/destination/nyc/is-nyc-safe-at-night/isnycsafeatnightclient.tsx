@@ -81,10 +81,34 @@ const afterDarkCards = [
   },
 ];
 
+const exactNightAnswers = [
+  {
+    question: "Is Manhattan safe at night?",
+    answer:
+      "Yes in the visitor core, especially Midtown, the Upper West Side, the Upper East Side, Chelsea, Flatiron, and Lower Manhattan. Stay on lit avenues, avoid park shortcuts, and use a cab or rideshare if the last walk from transit feels too quiet.",
+  },
+  {
+    question: "Is Lower Manhattan safe at night?",
+    answer:
+      "Generally yes around active areas such as the Financial District, Battery Park, Seaport, and hotel blocks. It can feel quiet after office hours, so plan the exact station exit or pickup spot before you leave.",
+  },
+  {
+    question: "Is Tribeca safe at night?",
+    answer:
+      "Yes for most visitors. Tribeca is calmer and residential-feeling after dark, so the main safety choice is route quality: stay near active streets, restaurants, hotels, and direct subway lines instead of wandering empty side blocks.",
+  },
+  {
+    question: "Are Times Square and Midtown safe at night?",
+    answer:
+      "Usually yes because they are bright, busy, and heavily traveled. The bigger visitor risks are pickpockets, pushy photo characters, and tired late-night decisions, not isolated streets in the main tourist corridors.",
+  },
+];
+
 const internalLinks = [
   { href: "/destination/nyc/best-areas-to-stay", label: "Best areas to stay" },
   { href: "/destination/nyc/neighborhood-guide", label: "Neighborhood guide" },
   { href: "/destination/nyc/nyc-subway-map", label: "NYC subway map" },
+  { href: "/destination/nyc/subway-safety-guide", label: "NYC subway safety guide" },
   { href: "/destination/nyc/nyc-safety-guide", label: "Full NYC safety guide" },
   { href: "/destination/nyc/solo-trip-to-nyc", label: "Solo NYC guide" },
   { href: "/destination/nyc/nyc-female-solo-travel-guide", label: "Female solo guide" },
@@ -216,6 +240,25 @@ export default function Page() {
           ))}
         </section>
 
+        <section className={styles.featureSection} aria-labelledby="exact-night-answers-heading">
+          <div className={styles.featureCopy}>
+            <p className={styles.eyebrow}>Exact night answers</p>
+            <h2 id="exact-night-answers-heading">Manhattan, Lower Manhattan, Tribeca, and Times Square after dark</h2>
+            <p>
+              These are the quick answers travelers usually search before booking a hotel or planning
+              a late dinner, show, or waterfront walk.
+            </p>
+          </div>
+          <div className={styles.scenarioGrid}>
+            {exactNightAnswers.map((item) => (
+              <article key={item.question} className={styles.scenarioCard}>
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section id="neighborhoods" className={styles.section}>
           <div className={styles.sectionIntro}>
             <p className={styles.eyebrow}>Safest neighborhoods at night</p>
@@ -271,10 +314,10 @@ export default function Page() {
             <p className={styles.eyebrow}>Subway safety</p>
             <h2>Is the NYC subway safe for visitors?</h2>
             <p>
-              Generally yes, especially on busy lines and staffed stations. The brief's verified
+              Generally yes, especially on busy lines and staffed stations. The brief&apos;s verified
               NYPD data says 2025 was the safest subway year since 2009, excluding pandemic years:
               major subway crime fell 4%, and transit robberies hit the lowest level ever recorded.
-              The MTA's Fall 2025 survey also found 63% of riders felt safe on trains.
+              The MTA&apos;s Fall 2025 survey also found 63% of riders felt safe on trains.
             </p>
           </div>
           <div className={styles.transitGrid}>
@@ -336,7 +379,7 @@ export default function Page() {
             <p className={styles.eyebrow}>Solo and female travelers</p>
             <h2>Safe solo travel is about defaults, not fear</h2>
             <p>
-              The brief's solo-travel sources agree on the same practical pattern: NYC works well
+              The brief&apos;s solo-travel sources agree on the same practical pattern: NYC works well
               alone when you stay in busy zones, keep a route home, and switch transport when a
               street or station feels too empty.
             </p>

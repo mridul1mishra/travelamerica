@@ -317,9 +317,24 @@
       "relatedLinks": ["/destination/nyc/best-areas-to-stay"]
     },
     {
+      "question": "Is Lower Manhattan safe at night?",
+      "answer": "Generally yes around active areas such as the Financial District, Battery Park, Seaport, and hotel blocks. It can feel quiet after office hours, so plan the exact station exit or pickup spot before you leave.",
+      "relatedLinks": ["/destination/nyc/neighborhood-guide"]
+    },
+    {
+      "question": "Is Tribeca safe at night?",
+      "answer": "Yes for most visitors. Tribeca is calmer and residential-feeling after dark, so stay near active streets, restaurants, hotels, and direct subway lines instead of wandering empty side blocks.",
+      "relatedLinks": ["/destination/nyc/neighborhood-guide"]
+    },
+    {
+      "question": "Are Times Square and Midtown safe at night?",
+      "answer": "Usually yes because they are bright, busy, and heavily traveled. The bigger visitor risks are pickpockets, pushy photo characters, and tired late-night decisions.",
+      "relatedLinks": ["/destination/nyc/best-areas-to-stay"]
+    },
+    {
       "question": "Is the NYC subway safe at night?",
       "answer": "Usually yes on busy routes, but be deliberate late. NYPD said 2025 subway major crime fell 4% and was the safest year since 2009, excluding pandemic years.",
-      "relatedLinks": ["/destination/nyc/nyc-subway-map"]
+      "relatedLinks": ["/destination/nyc/subway-safety-guide"]
     },
     {
       "question": "What NYC scams should tourists watch for?",
@@ -340,6 +355,7 @@
 
   "interlinkingGrid": [
     { "title": "Solo Trip to NYC Guide", "url": "/destination/nyc/solo-trip-to-nyc" },
+    { "title": "NYC Subway Safety Guide", "url": "/destination/nyc/subway-safety-guide" },
     { "title": "NYC Subway Map", "url": "/destination/nyc/nyc-subway-map" }
   ],
 

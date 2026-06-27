@@ -1,4 +1,5 @@
 import styles from "./SoloTripNarrative.module.css";
+import Link from "next/link";
 import { SAFETYWING_URL } from "@/app/lib/affiliates";
 
 // Long-form editorial for solo-trip-to-nyc page.
@@ -106,7 +107,7 @@ export function SoloTripNarrative() {
           the surrounding streets are 90% of the experience.
         </p>
         <p>
-          The <a href="/destination/nyc/nyc-female-solo-travel-guide#choosing-where-to-stay">female-solo accommodation guide</a> has additional specifics that apply equally to anyone solo traveling.
+          The <Link href="/destination/nyc/nyc-female-solo-travel-guide#choosing-where-to-stay">female-solo accommodation guide</Link> has additional specifics that apply equally to anyone solo traveling.
         </p>
       </section>
 
@@ -184,7 +185,7 @@ export function SoloTripNarrative() {
         <h2>Five Common Solo Travel Mistakes to Avoid in NYC</h2>
         <ol>
           <li><strong>Over-scheduling.</strong> Three planned things per day is the right number. Solo trips run on a different energy budget; you don&apos;t have a travel partner&apos;s second wind to lean on. Build in unstructured time.</li>
-          <li><strong>Skipping the subway.</strong> Solo travelers sometimes default to rideshares because the subway feels intimidating. The subway is faster, cheaper, and an essential NYC experience. Take it. Our <a href="/destination/nyc/nyc-safety-guide#subway-safety">subway safety section</a> and <a href="/destination/nyc/nyc-subway-map">interactive subway map</a> cover what you need to know.</li>
+          <li><strong>Skipping the subway.</strong> Solo travelers sometimes default to rideshares because the subway feels intimidating. The subway is faster, cheaper, and an essential NYC experience. Take it. Our <Link href="/destination/nyc/subway-safety-guide">NYC subway safety guide</Link> and <Link href="/destination/nyc/nyc-subway-map">interactive subway map</Link> cover what you need to know.</li>
           <li><strong>Eating the same kind of food every night.</strong> NYC is one of the great food cities. Plan one meal per day in a cuisine or neighborhood you&apos;d never have at home.</li>
           <li><strong>Booking too many guided tours.</strong> One walking tour or one museum highlights tour is great. Three guided tours in a 5-day trip starts to feel like a packaged vacation, which defeats the point of going solo.</li>
           <li><strong>Not telling anyone back home where you are.</strong> Share live location with one trusted person via Find My / Google Maps / Life360. Two taps, removes ambiguity, ends the worry.</li>
