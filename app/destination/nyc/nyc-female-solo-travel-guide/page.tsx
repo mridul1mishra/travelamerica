@@ -4,8 +4,8 @@ import ClientPage from "./solofemaletravelguideclient";
 
 
 export const metadata = {
-  title: "New York City Safety for Solo Female Travelers (2026)",
-  description: "Practical NYC safety guide for solo women: safest neighborhoods, subway tips after dark, and what to watch out for.", 
+  title: "Is NYC Safe for Solo Female Travelers? 2026 Guide",
+  description: "A calm, source-backed NYC safety and confidence guide for solo women: where to stay, subway at night, unwanted attention, and late returns.", 
   alternates: { 
     canonical: "https://www.travelsamericas.com/destination/nyc/nyc-female-solo-travel-guide"
    },
@@ -23,8 +23,8 @@ export const metadata = {
   },
 
   openGraph: { 
-    title: "New York City Safety for Solo Female Travelers (2026)", 
-    description: "A practical NYC safety guide for solo women: safest neighborhoods, subway tips after dark, what to wear, real scenarios, and emergency steps you can use today.", 
+    title: "Is NYC Safe for Solo Female Travelers? 2026 Guide", 
+    description: "A calm, source-backed NYC safety and confidence guide for solo women: where to stay, subway at night, unwanted attention, and late returns.", 
     url: "https://www.travelsamericas.com/destination/nyc/nyc-female-solo-travel-guide",
     siteName: "Travels Americas", 
     type: "article", 
@@ -40,8 +40,8 @@ export const metadata = {
 
   twitter: { 
     card: "summary_large_image", 
-    title: "New York City Safety for Solo Female Travelers (2026)", 
-    description: "A practical NYC safety guide for solo women: safest neighborhoods, subway tips after dark, what to wear, real scenarios, and emergency steps you can use today.", 
+    title: "Is NYC Safe for Solo Female Travelers? 2026 Guide", 
+    description: "A calm, source-backed NYC safety and confidence guide for solo women: where to stay, subway at night, unwanted attention, and late returns.", 
     images: [
     "https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.webp"
   ] 
@@ -65,10 +65,10 @@ export default function Page()
     },
     {
       "@type": "Question",
-      "name": "Which neighborhoods are best for solo women to stay in?",
+      "name": "Where should solo female travelers stay in NYC?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Midtown, Upper West Side, Upper East Side, Chelsea, and Brooklyn Heights are popular for their safety, walkability, and strong transit access."
+        "text": "Start with practical hotel checks: a 24-hour front desk, active streets, short walks from transit, and recent reviews from solo women. Use a dedicated best-areas guide for full neighborhood comparisons."
       }
     },
     {
@@ -76,7 +76,7 @@ export default function Page()
       "name": "Is the NYC subway safe for solo women?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, especially during the day and early evening. Avoid empty cars, stand near the conductor window, and switch cars if a situation feels uncomfortable."
+        "text": "Yes on many busy routes, but be selective late. Avoid empty cars, ride near the conductor area when possible, use station Help Points or staff if needed, and switch to a cab or rideshare if transfers feel too quiet."
       }
     },
     {
@@ -100,12 +100,18 @@ export default function Page()
 const Article = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "New York City for Solo Female Travelers (2026)",
-  "description": "A practical, scenario-based NYC safety guide for solo female travelers. Includes safe areas, subway tips, night safety, packing essentials, and real-world scenarios.",
+  "headline": "Is NYC Safe for Solo Female Travelers? 2026 Safety & Confidence Guide",
+  "description": "A calm, scenario-based NYC safety and confidence guide for solo female travelers. Includes stay heuristics, subway-at-night decisions, unwanted-attention scripts, and official NYPD/MTA source context.",
   "image": "https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.webp",
   "author": {
-    "@type": "Organization",
-    "name": "Travels Americas"
+    "@type": "Person",
+    "@id": "https://www.travelsamericas.com/#manisha-shukla",
+    "name": "Manisha Shukla",
+    "url": "https://www.travelsamericas.com/about#manisha-shukla",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Banaras Hindu University"
+    }
   },
   "publisher": {
     "@type": "Organization",
@@ -117,7 +123,16 @@ const Article = {
   },
   "url": "https://www.travelsamericas.com/destination/nyc/nyc-female-solo-travel-guide",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-06-19"
+  "dateModified": "2026-06-27",
+  "about": [
+    { "@type": "Thing", "name": "Solo female travel in New York City" },
+    { "@type": "Thing", "name": "NYC safety for women travelers" },
+    { "@type": "Thing", "name": "NYC subway safety at night" }
+  ],
+  "citation": [
+    "https://www.nyc.gov/site/nypd/stats/crime-statistics/compstat.page",
+    "https://new.mta.info/safety-and-security"
+  ]
 }
 const BreadCrumbList = {
   "@context": "https://schema.org",

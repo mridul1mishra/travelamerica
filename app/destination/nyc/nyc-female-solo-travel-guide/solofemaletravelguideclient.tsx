@@ -9,26 +9,26 @@ import styles from "./page.module.css";
 
 const hotelAreas = [
   {
-    title: "Best first base",
-    area: "Upper West Side or Upper East Side",
-    text: "Residential, well-connected, and calmer at night without feeling isolated.",
+    title: "Staffed arrival",
+    area: "Choose a hotel with a 24-hour front desk",
+    text: "For a first solo NYC trip, a staffed lobby matters more than a trendy block. It gives you a reset point after a late show, delayed train, or uncomfortable ride.",
   },
   {
-    title: "Most convenient",
-    area: "Midtown near major avenues",
-    text: "Easy transit and late foot traffic, but choose blocks that feel hotel-heavy and bright.",
+    title: "Simple last walk",
+    area: "Stay within a short, bright walk of transit",
+    text: "Favor hotels near active avenues, direct subway lines, and open businesses so your final five minutes do not feel isolated.",
   },
   {
-    title: "Good after dinner",
-    area: "Chelsea, Flatiron, or Brooklyn Heights",
-    text: "Strong restaurant access and reliable ways back if you do not want a late subway transfer.",
+    title: "Women-specific review scan",
+    area: "Read for lobby, entrance, and night-return details",
+    text: "Look for reviews from solo women that mention the entrance, elevator access, street lighting, and whether staff handled late arrivals smoothly.",
   },
 ];
 
 const confidenceCards = [
   {
     title: "Transit after dark",
-    text: "Use busier stations, avoid empty cars, and stand near the conductor area when the platform feels quiet.",
+    text: "Use busier stations, avoid empty cars, and ride near the conductor area when the platform feels quiet. For OMNY, maps, and route basics, use the subway guide.",
   },
   {
     title: "Walking alone",
@@ -44,7 +44,12 @@ const scenarios = [
   {
     label: "Subway",
     title: "The platform feels too empty",
-    steps: ["Wait near a staffed booth or conductor marker", "Switch stations or take a rideshare if your instinct says no"],
+    steps: ["Wait near a staffed booth, Help Point, or conductor marker", "Move to a populated car or leave the station if your instinct says no"],
+  },
+  {
+    label: "Attention",
+    title: "Someone keeps engaging after you say no",
+    steps: ["Use one clear line: 'No, I am leaving now'", "Move toward staff, a counter, a lobby, or other people without explaining"],
   },
   {
     label: "Street",
@@ -69,7 +74,7 @@ const scenarios = [
   {
     label: "Nightlife",
     title: "You are leaving a bar or show",
-    steps: ["Call the ride before stepping outside", "Avoid shortcuts through parks or quiet service streets"],
+    steps: ["Set the pickup before stepping outside", "Skip quiet shortcuts and wait inside or near staff until the ride arrives"],
   },
 ];
 
@@ -86,17 +91,17 @@ const faqs = [
   {
     question: "Is NYC safe for solo female travelers?",
     answer:
-      "Yes, with normal city awareness. The safest trips usually stay close to active streets, reliable transit, and neighborhoods that still feel busy after dinner.",
+      "Yes, for most travelers who choose an active base, keep late-night routes simple, and change plans when a station, street, or interaction feels off.",
   },
   {
     question: "Where should a solo woman stay in NYC?",
     answer:
-      "Upper West Side, Upper East Side, Midtown, Chelsea, Flatiron, and Brooklyn Heights are strong starting points because they combine transit, hotel options, and steady foot traffic.",
+      "Start with practical hotel checks: a 24-hour front desk, active streets, short walks from transit, and recent reviews from solo women. Use the best-areas guide for full neighborhood comparisons.",
   },
   {
     question: "Should I use the subway at night?",
     answer:
-      "Often yes, but be selective. Use busy stations, avoid empty cars, and switch to a cab or rideshare if the route requires quiet transfers late at night.",
+      "Often yes on busy routes, but be selective. Use populated stations, avoid empty cars, ride near the conductor area when possible, and switch to a cab or rideshare if transfers feel too quiet.",
   },
   {
     question: "What should I avoid at night?",
@@ -111,7 +116,7 @@ const faqs = [
   {
     question: "Are rideshares safe late at night?",
     answer:
-      "They are usually the simplest option after late shows or drinks. Always match the plate and driver details, sit in the back, and share your trip.",
+      "They are often the simplest option after late shows or drinks. Always match the plate and driver details, sit in the back, share your trip, and wait inside until the car arrives.",
   },
 ];
 
@@ -132,25 +137,28 @@ export default function FemaleSoloTravelGuide() {
               <span>Female Solo Travel</span>
             </nav>
 
-            <p className={styles.eyebrow}>NYC solo travel safety</p>
-            <h1>New York City for Solo Female Travelers</h1>
+            <p className={styles.eyebrow}>NYC solo female safety</p>
+            <h1>Is NYC Safe for Solo Female Travelers?</h1>
             <p className={styles.lede}>
-              A practical NYC guide for choosing the right base, moving around after dark, and knowing what to do when a street, station, or situation changes.
+              Yes, for most first-time solo women who choose an active base, keep late-night routes simple, and trust the moment when a street, station, or interaction starts to feel off.
+            </p>
+            <p className={styles.byline}>
+              By <Link href="/about#manisha-shukla">Manisha Shukla</Link> · Updated June 2026 · Fact-checked against NYPD &amp; MTA data
             </p>
 
             <div className={styles.actions}>
               <Link className={styles.primaryButton} href="/destination/nyc/booking?tab=hotels&from=female-solo">
                 See safe-area hotels
               </Link>
-              <Link className={styles.secondaryButton} href="#scenarios">
-                Review real situations
+              <Link className={styles.secondaryButton} href="/destination/nyc/subway-safety-guide">
+                Check subway safety
               </Link>
             </div>
 
             <div className={styles.trustRow} aria-label="Guide context">
-              <span>Updated 2026</span>
-              <span>Neighborhood-first advice</span>
-              <span>NYPD + MTA context links below</span>
+              <span><strong>Updated 2026</strong></span>
+              <span><strong>Sources:</strong> NYPD + MTA</span>
+              <span><strong>Verdict:</strong> safe with street smarts, not a guarantee</span>
             </div>
           </div>
 
@@ -164,17 +172,40 @@ export default function FemaleSoloTravelGuide() {
             />
             <div className={styles.verdictCard}>
               <span>Practical verdict</span>
-              <strong>Safe when you plan the base, route, and return</strong>
+              <strong>Safe when your base, route, and return plan stay simple</strong>
             </div>
           </div>
         </section>
 
-        <section className={styles.sectionGrid} aria-labelledby="base-heading">
+        <section className={styles.sourceBox} aria-labelledby="source-box-heading">
+          <div>
+            <p className={styles.eyebrow}>Source-backed context</p>
+            <h2 id="source-box-heading">Use data for reassurance, and scenarios for decisions</h2>
+            <p>
+              NYPD reported citywide major crime down 6.2% year-to-date through May 2026. NYPD and MTA also reported 2025 as the safest subway year since 2009, excluding pandemic years, with major subway crime down 4%. Those numbers are helpful context, but your best solo choices still depend on the exact block, station, hour, and route.
+            </p>
+          </div>
+          <div className={styles.sourceActions}>
+            <a href="https://www.nyc.gov/site/nypd/stats/crime-statistics/compstat.page" target="_blank" rel="noreferrer">
+              NYPD CompStat
+            </a>
+            <a href="https://new.mta.info/safety-and-security" target="_blank" rel="noreferrer">
+              MTA safety guidance
+            </a>
+            <Link href="/destination/nyc/nyc-safety-guide">
+              General NYC safety guide
+            </Link>
+          </div>
+        </section>
+
+        <section id="choosing-where-to-stay" className={styles.sectionGrid} aria-labelledby="base-heading">
           <div className={styles.sectionIntro}>
             <p className={styles.eyebrow}>Where to stay</p>
-            <h2 id="base-heading">Pick the area before the hotel</h2>
+            <h2 id="base-heading">Use stay heuristics, not fixed safety rankings</h2>
             <p>
-              Solo safety in New York is less about one perfect hotel and more about what surrounds it: subway choice, late food, open lobbies, and how simple your return route feels.
+              Safety varies block by block, so do not treat any neighborhood list as a guarantee. Pick a base by the routines it supports: staffed arrival, a short final walk, food nearby, and a simple way back after dark.
+              {" "}
+              <Link href="/destination/nyc/best-areas-to-stay" className={styles.inlineLink}>Compare full NYC stay areas here.</Link>
             </p>
           </div>
           <div className={styles.cardGrid}>
@@ -192,6 +223,9 @@ export default function FemaleSoloTravelGuide() {
           <div className={styles.bandHeader}>
             <p className={styles.eyebrow}>Simple defaults</p>
             <h2 id="confidence-heading">Make the safe choice easy before you need it</h2>
+            <p className={styles.bandIntro}>
+              This page owns the women-specific decisions. For broader subway logistics, hotel lists, and itinerary planning, use the dedicated NYC guides linked below.
+            </p>
           </div>
           <div className={styles.threeCards}>
             {confidenceCards.map((card) => (
@@ -208,7 +242,7 @@ export default function FemaleSoloTravelGuide() {
             <p className={styles.eyebrow}>Real situations</p>
             <h2 id="scenario-heading">What to do in the moments travelers actually worry about</h2>
             <p>
-              These are not fear tactics. They are quick defaults for the few moments when confidence matters most.
+              These are not fear tactics. They are quick defaults for the few moments when confidence matters most, written for a first-time solo traveler who wants calm options ready before she needs them.
             </p>
           </div>
           <div className={styles.scenarioGrid}>
@@ -233,9 +267,14 @@ export default function FemaleSoloTravelGuide() {
             <p>
               Broadway, dinner, rooftops, and late walks can all be part of a solo trip. The key is deciding your return before you are tired, distracted, or on a quiet block.
             </p>
-            <Link className={styles.textLink} href="/destination/nyc/is-nyc-safe-at-night">
-              Read the full NYC night safety guide
-            </Link>
+            <div className={styles.linkStack}>
+              <Link className={styles.textLink} href="/destination/nyc/is-nyc-safe-at-night">
+                Read the full NYC night safety guide
+              </Link>
+              <Link className={styles.textLink} href="/destination/nyc/solo-trip-to-nyc">
+                Use the broader solo trip guide for dining, Broadway, budget, and itinerary planning
+              </Link>
+            </div>
           </div>
           <div className={styles.checkPanel}>
             <h3>Before you go out</h3>
@@ -262,7 +301,7 @@ export default function FemaleSoloTravelGuide() {
             <p className={styles.eyebrow}>Context, not guarantees</p>
             <h2>Use official sources for current conditions</h2>
             <p>
-              Safety advice changes by time, route, and neighborhood. Check official city and transit resources when making late-night plans.
+              Safety advice changes by time, route, and neighborhood. Check official city and transit resources when making late-night plans, and use the dedicated subway guide for route logistics.
             </p>
             <div className={styles.sourceLinks}>
               <a href="https://www.nyc.gov/site/nypd/stats/crime-statistics/compstat.page" target="_blank" rel="noreferrer">
@@ -271,8 +310,18 @@ export default function FemaleSoloTravelGuide() {
               <a href="https://new.mta.info/safety-and-security" target="_blank" rel="noreferrer">
                 MTA safety
               </a>
+              <Link href="/destination/nyc/subway-safety-guide">
+                Subway safety guide
+              </Link>
             </div>
           </article>
+        </section>
+
+        <section className={styles.authorBox} aria-label="About the author">
+          <p>
+            <strong>About the author.</strong>{" "}
+            <Link href="/about#manisha-shukla">Manisha Shukla</Link> writes and reviews travel guidance for Travels Americas with a focus on clear, calm decision-making for visitors. She holds a PhD in English Literature from Banaras Hindu University.
+          </p>
         </section>
 
         <section className={styles.faqSection} aria-labelledby="faq-heading">
@@ -293,7 +342,7 @@ export default function FemaleSoloTravelGuide() {
         <section className={styles.nextSteps} aria-label="Related NYC planning guides">
           <Link href="/destination/nyc/best-areas-to-stay">Best areas to stay</Link>
           <Link href="/destination/nyc/solo-trip-to-nyc">Solo trip guide</Link>
-          <Link href="/destination/nyc/things-to-do">Things to do</Link>
+          <Link href="/destination/nyc/subway-safety-guide">Subway safety</Link>
           <Link href="/destination/nyc/is-nyc-safe-at-night">Night safety</Link>
         </section>
       </main>
