@@ -340,6 +340,36 @@
   padding: clamp(28px, 4vw, 44px);
 }
 
+.pdfCtaBand {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto 34px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  padding: clamp(24px, 4vw, 40px);
+}
+
+.pdfCtaCopy {
+  max-width: 760px;
+  margin-bottom: 18px;
+}
+
+.pdfCtaCopy h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.pdfCtaCopy p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
 .routeList {
   display: grid;
   gap: 12px;
@@ -410,6 +440,7 @@
   .hero,
   .plannerBand,
   .daySection,
+  .pdfCtaBand,
   .routePanel,
   .faqSection,
   .nextSteps {

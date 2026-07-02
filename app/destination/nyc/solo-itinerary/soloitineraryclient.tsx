@@ -238,6 +238,17 @@ export default function SoloItineraryClient({ grouped }: SoloItineraryClientProp
           </div>
         </section>
 
+        <section className={styles.pdfCtaBand} aria-labelledby="pdf-cta-heading">
+          <div className={styles.pdfCtaCopy}>
+            <p className={styles.eyebrow}>Save the route</p>
+            <h2 id="pdf-cta-heading">Send the 3-day plan to your inbox</h2>
+            <p>
+              Keep the day-by-day route handy before you compare hotels or start booking timed attractions.
+            </p>
+          </div>
+          <EmailSignup source="solo-itinerary-after-day-plan" city="NYC" />
+        </section>
+
         <section className={styles.routePanel} aria-labelledby="route-heading">
           <div>
             <p className={styles.eyebrow}>Advisor note</p>

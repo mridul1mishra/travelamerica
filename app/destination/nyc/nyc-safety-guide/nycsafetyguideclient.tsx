@@ -5,6 +5,7 @@ import Link from "next/link";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import BookingCTA from "./components/BookingCTA/BookingCTA";
+import EmailSignup from "@/app/components/destination/EmailSignup/EmailSignup";
 import styles from "./nycsafetyguide.module.css";
 
 const safetyDefaults = [
@@ -265,6 +266,17 @@ export default function NYCSafetyGuideClient() {
               </article>
             ))}
           </div>
+        </section>
+
+        <section className={styles.checklistCta} aria-labelledby="safety-checklist-heading">
+          <div className={styles.checklistCopy}>
+            <p className={styles.eyebrow}>Save the safety defaults</p>
+            <h2 id="safety-checklist-heading">Send the NYC solo safety checklist to your inbox</h2>
+            <p>
+              Keep the key hotel, subway, late-night, and reset moves handy before your first day in the city.
+            </p>
+          </div>
+          <EmailSignup source="nyc-safety-guide-checklist" city="NYC" />
         </section>
 
         <section id="subway-safety" className={styles.splitSection} aria-labelledby="night-heading">

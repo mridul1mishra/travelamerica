@@ -23,6 +23,7 @@
 .sectionStack,
 .splitSection,
 .sourceSection,
+.checklistCta,
 .emergencySection,
 .faqSection,
 .nextSteps {
@@ -347,6 +348,38 @@
   align-items: center;
 }
 
+.checklistCta {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(320px, 0.78fr);
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 52px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  padding: clamp(26px, 4vw, 44px);
+}
+
+.checklistCopy {
+  max-width: 720px;
+}
+
+.checklistCopy h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.9rem, 3.2vw, 3rem);
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: 0;
+}
+
+.checklistCopy p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.62;
+}
+
 .textLink {
   display: inline-flex;
   margin-top: 22px;
@@ -421,6 +454,7 @@
 @media (max-width: 1060px) {
   .hero,
   .quickAnswer,
+  .checklistCta,
   .splitSection {
     grid-template-columns: 1fr;
   }
@@ -449,6 +483,7 @@
   .sectionStack,
   .splitSection,
   .sourceSection,
+  .checklistCta,
   .emergencySection,
   .faqSection,
   .nextSteps {

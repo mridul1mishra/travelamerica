@@ -53,6 +53,7 @@ export default function SoloTripNYCClient() {
       <SoloNycQa />
       <SoloTripNarrative />
       <ThreeDayItinerary days={data.days} ctaLink="/destination/nyc/solo-itinerary" />
+      <EmailSignup source="solo-trip-to-nyc-after-itinerary" />
       <SoloModePlanner />
       <SeasonalSavings />
       <ScenarioSection />

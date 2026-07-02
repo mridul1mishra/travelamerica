@@ -5,6 +5,7 @@ import Link from "next/link";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import BookingCTA from "./components/BookingCTA/BookingCTA";
+import EmailSignup from "@/app/components/destination/EmailSignup/EmailSignup";
 import styles from "./page.module.css";
 
 const hotelAreas = [
@@ -258,6 +259,17 @@ export default function FemaleSoloTravelGuide() {
               </article>
             ))}
           </div>
+        </section>
+
+        <section className={styles.checklistCta} aria-labelledby="female-safety-checklist-heading">
+          <div className={styles.checklistCopy}>
+            <p className={styles.eyebrow}>Save the solo safety plan</p>
+            <h2 id="female-safety-checklist-heading">Send the solo female NYC safety checklist to your inbox</h2>
+            <p>
+              Keep the hotel checks, subway defaults, late-night return plan, and reset moves available while you plan.
+            </p>
+          </div>
+          <EmailSignup source="nyc-female-solo-guide-checklist" city="NYC" />
         </section>
 
         <section className={styles.splitSection} aria-labelledby="night-heading">

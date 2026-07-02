@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import Script from 'next/script';
+import LinkClickTracker from "./components/analytics/LinkClickTracker";
 import "./globals.css";
 
 export const viewport = {
@@ -66,6 +67,7 @@ export default function RootLayout({
             beforeInteractive so Next renders it into the initial <head> HTML,
             which is what the Travelpayouts verifier looks for. */}
         <Script id="travelpayouts" strategy="beforeInteractive" src="https://emrldtp.com/NTMzNjY5.js?t=533669"/>
+        <LinkClickTracker />
         <div className="full-height">
         {children}
         </div>

@@ -54,3 +54,6 @@ next-env.d.ts
 
 # generated Pinterest planning and creative assets
 /pin-templates/
+
+# personal/generated finance scratch output
+/mutual-fund-folio-summary.html

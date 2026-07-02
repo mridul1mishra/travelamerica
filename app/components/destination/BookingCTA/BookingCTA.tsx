@@ -19,7 +19,15 @@ export default function BookingCTA({
     return (
       <div className={styles.slim}>
         <span className={styles.slimText}>{text}</span>
-        <a href={href} aria-label={label} className={styles.slimButton}>
+        <a
+          href={href}
+          aria-label={label}
+          className={styles.slimButton}
+          data-track="booking_cta"
+          data-cta-label={label}
+          data-cta-variant={variant}
+          data-cta-placement="inline"
+        >
           {label}
         </a>
       </div>
@@ -31,7 +39,15 @@ export default function BookingCTA({
       <div className={styles.fullInner}>
         <h2 className={styles.fullHeadline}>{headline}</h2>
         <p className={styles.fullText}>{text}</p>
-        <a href={href} aria-label={label} className={styles.fullButton}>
+        <a
+          href={href}
+          aria-label={label}
+          className={styles.fullButton}
+          data-track="booking_cta"
+          data-cta-label={label}
+          data-cta-variant={variant}
+          data-cta-placement="footer"
+        >
           {label}
         </a>
       </div>
