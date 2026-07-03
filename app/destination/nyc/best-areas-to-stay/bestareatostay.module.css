@@ -7,3 +7,87 @@ body {
   padding: 0 1rem; /* mobile breathing room */ 
   box-sizing: border-box;
 }
+
+.editorialPanel {
+  max-width: 1080px;
+  margin: 2rem auto;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: #475569;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.editorialPanel h2 {
+  margin: 0;
+  color: #101828;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  line-height: 1.08;
+}
+
+.editorialPanel p {
+  color: #526173;
+  font-size: 1.04rem;
+  line-height: 1.65;
+}
+
+.decisionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.decisionGrid article {
+  min-height: 150px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fbfdff;
+  padding: 1.1rem;
+}
+
+.decisionGrid h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.1rem;
+}
+
+.decisionGrid p {
+  margin: 0.75rem 0 0;
+  font-size: 0.98rem;
+}
+
+.supportingLinks a {
+  color: #2459e6;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.supportingLinks a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .decisionGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .editorialPanel {
+    margin-inline: 1rem;
+  }
+
+  .decisionGrid {
+    grid-template-columns: 1fr;
+  }
+}

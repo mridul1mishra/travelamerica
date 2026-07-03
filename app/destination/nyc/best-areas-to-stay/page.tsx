@@ -1,8 +1,8 @@
 
 
 export const generateMetadata = () => ({
-  title: "Best Areas to Stay in NYC 2026 | Safe & Central",
-  description:  "Unsure where to stay in NYC? Discover the safest and best areas for tourists, first-time visitors, and solo travelers.",
+  title: "Best Areas to Stay in NYC 2026: Safe Neighborhoods for Tourists",
+  description:  "Compare the best areas to stay in NYC for first-time visitors, solo travelers, safe areas, budget hotels, nightlife, and subway access.",
   robots: {
     index: true,
     follow: true,
@@ -17,8 +17,8 @@ export const generateMetadata = () => ({
     images: ["https://www.travelsamericas.com/social/solo-trip-to-nyc-gritty.png"]
   },
   openGraph: {
-    title: "Best Areas to Stay in NYC 2026 | Safe & Central",
-    description: "Unsure where to stay in NYC? Discover the safest and best areas for tourists, first-time visitors, and solo travelers.",
+    title: "Best Areas to Stay in NYC 2026: Safe Neighborhoods for Tourists",
+    description: "Compare the best areas to stay in NYC for first-time visitors, solo travelers, safe areas, budget hotels, nightlife, and subway access.",
     url: 'https://www.travelsamericas.com/destination/nyc/best-areas-to-stay',
     type: 'article',
     siteName: 'Travels Americas',
@@ -40,6 +40,7 @@ export default async function SoloTripToNYC() {
     "name": "Mridul"
   },
   "datePublished": "2026-01-01",
+  "dateModified": "2026-07-03",
   "mainEntity": {
     "@type": "ItemList",
     "name": "Best Areas to Stay in NYC",

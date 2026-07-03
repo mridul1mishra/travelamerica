@@ -1,5 +1,5 @@
 export const generateMetadata = () => ({
-  title: 'Book Your New York Trip | Flights, Hotels & Things to Do',
+  title: 'Book Your New York Trip: Flights, Hotels & Things to Do',
   description:
     "Plan and book your New York trip — compare cheap flights, browse top hotels, and find the best cruises from NYC.",
   robots: {
@@ -11,8 +11,8 @@ export const generateMetadata = () => ({
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Book Your New York Trip: Flights, Hotels & Cruises',
-    description: 'Compare cheap flights, hotels, and cruises for your New York trip.',
+    title: 'Book Your New York Trip: Flights, Hotels & Things to Do',
+    description: 'Compare NYC flights, hotels, tours, Broadway tickets, and practical booking decisions for your New York trip.',
     images: ['https://www.travelsamericas.com/data/majorcities/newyork/assets/newyork.jpeg'],
   },
 });

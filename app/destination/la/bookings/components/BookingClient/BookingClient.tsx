@@ -194,8 +194,8 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
             <p className={styles.eyebrow}>{cityName} booking hub</p>
             <h1>{pageTitle}</h1>
             <p>
-              Compare flights, hotels, and ticketed experiences without losing the LA-specific planning context:
-              airport tradeoffs, parking costs, neighborhood fit, and seasonal price spikes.
+              Compare flights, hotels, and ticketed experiences without losing the practical planning context:
+              airport tradeoffs, neighborhood fit, local transport, and seasonal price spikes.
             </p>
             <div className={styles.heroActions}>
               <button type="button" onClick={() => chooseTab("flights", true)}>Compare flights</button>

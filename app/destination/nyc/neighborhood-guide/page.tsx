@@ -8,7 +8,7 @@ import NeighborhoodguideClient from "./neighborhoodguide";
 ========================= */
 export const metadata = {
   title:
-    "Is Manhattan Safe? Neighborhood Guide: Safe Areas + Neighborhoods to Avoid",
+    "NYC Neighborhood Guide 2026: Where to Stay by Area and Travel Style",
   description:
     "Is Manhattan safe? Breaks down 15+ neighborhoods by street-level safety, transit access, and vibe. Find your area—from sketchy to totally safe.",
   alternates: {
@@ -16,9 +16,9 @@ export const metadata = {
       'https://www.travelsamericas.com/destination/nyc/neighborhood-guide',
   },
   openGraph: {
-    title: 'New York City Neighborhood Guide',
+    title: 'NYC Neighborhood Guide 2026: Where to Stay by Area and Travel Style',
     description:
-      'A tourist-friendly guide to NYC neighborhoods, helping you choose the best area to stay and explore based on travel style, location, and ease of getting around.',
+      'A tourist-friendly guide to NYC neighborhoods, helping visitors choose where to stay and explore by travel style, safety, location, and transit access.',
     url: 'https://www.travelsamericas.com/destination/nyc/neighborhood-guide',
     type: 'article',
   },

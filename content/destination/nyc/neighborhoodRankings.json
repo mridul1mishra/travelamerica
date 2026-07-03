@@ -54,5 +54,47 @@
     "bestFor": ["Budget travelers", "Calm stays", "Quick subway access"],
     "pros": ["Best value hotels near Manhattan", "Fast subway access", "Quiet and modern"],
     "cons": ["Less walkable nightlife", "Fewer classic NYC vibes"]
+  },
+  {
+    "id": "chelsea",
+    "rank": "#5 Best Balanced Base",
+    "name": "Chelsea",
+    "why": "A central west-side base with restaurants, galleries, the High Line, and easy access to Midtown and Downtown.",
+    "image": "/destination/nyc-neighborhoods.png",
+    "color": "var(--tint-blue)",
+    "safety": "Safe and active",
+    "vibe": "Walkable, food-focused, central",
+    "transit": "A/C/E, 1/2/3, L nearby",
+    "bestFor": ["Couples", "Food and galleries", "Balanced sightseeing"],
+    "pros": ["Central without Times Square intensity", "Good restaurant and gallery access", "Easy north-south subway options"],
+    "cons": ["Hotel rates vary widely", "Some blocks feel quiet late near far west avenues"]
+  },
+  {
+    "id": "lower-manhattan",
+    "rank": "#6 Best for History + Waterfront",
+    "name": "Lower Manhattan",
+    "why": "A practical base for the 9/11 Memorial, Statue of Liberty ferries, Brooklyn Bridge, and quick subway links uptown.",
+    "image": "/destination/nyc-neighborhoods.png",
+    "color": "var(--tint-green)",
+    "safety": "Safe in core visitor areas",
+    "vibe": "Historic, waterfront, quieter after work",
+    "transit": "1/2/3, 4/5, A/C/E, R/W",
+    "bestFor": ["History", "Waterfront walks", "Short stays"],
+    "pros": ["Excellent transit coverage", "Walkable to major downtown sights", "Often calmer than Midtown at night"],
+    "cons": ["Can feel business-district quiet late", "Less convenient for Central Park and Uptown museums"]
+  },
+  {
+    "id": "brooklyn-heights",
+    "rank": "#7 Best Brooklyn Stay",
+    "name": "Brooklyn Heights",
+    "why": "A calm, scenic Brooklyn base with brownstone streets, skyline views, and quick subway access into Manhattan.",
+    "image": "/destination/nyc-neighborhoods.png",
+    "color": "var(--tint-purple)",
+    "safety": "Very safe",
+    "vibe": "Quiet, scenic, residential",
+    "transit": "2/3, A/C, R nearby",
+    "bestFor": ["Calm nights", "Couples", "Repeat visitors"],
+    "pros": ["Beautiful evening walks", "Fast access to Lower Manhattan", "Calmer hotel base than Midtown"],
+    "cons": ["Fewer hotel choices", "More transit time for Uptown sights"]
   }
 ]

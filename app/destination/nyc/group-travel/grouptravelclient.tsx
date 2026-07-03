@@ -98,6 +98,29 @@ const broadwaySteps = [
   ["Use official channels", "Broadway Inbound and Broadway.org show pages list group contacts."],
 ];
 
+const groupStayZones = [
+  {
+    title: "Midtown East",
+    best: "First-time groups",
+    copy: "Central, easy for landmarks and Broadway, and strong for groups that do not want complicated subway transfers.",
+  },
+  {
+    title: "Chelsea or Flatiron",
+    best: "Food and balanced access",
+    copy: "Good restaurants, walkable west-side plans, and easier movement between Downtown, Midtown, and the High Line.",
+  },
+  {
+    title: "Downtown Brooklyn",
+    best: "More room and value",
+    copy: "Useful for groups that want larger rooms or better pricing while staying close to A/C and 2/3 subway routes.",
+  },
+  {
+    title: "Long Island City",
+    best: "Budget near Manhattan",
+    copy: "Often better hotel value with fast subway access, but the organizer should check late-night route simplicity.",
+  },
+];
+
 export default function GroupTravelPage() {
   return (
     <>
@@ -146,6 +169,25 @@ export default function GroupTravelPage() {
               <strong>{copy}</strong>
             </div>
           ))}
+        </section>
+
+        <section className={styles.section}>
+          <div className={styles.sectionIntro}>
+            <p className={styles.eyebrow}>Where groups should stay</p>
+            <h2>Pick a hotel zone that keeps the group on one simple route</h2>
+            <p>
+              The best area for a NYC group is not always the cheapest hotel. It is the place where the organizer can keep airport transfers, Broadway nights, subway rides, dinner reservations, and late returns simple for everyone.
+            </p>
+          </div>
+          <div className={styles.stepGrid}>
+            {groupStayZones.map((zone) => (
+              <article key={zone.title}>
+                <strong>{zone.title}</strong>
+                <p><span>{zone.best}.</span> {zone.copy}</p>
+              </article>
+            ))}
+          </div>
+          <Link href="/destination/nyc/best-areas-to-stay" className={styles.inlineLink}>Compare NYC hotel areas</Link>
         </section>
 
         <section id="itinerary" className={styles.section}>
@@ -248,7 +290,7 @@ export default function GroupTravelPage() {
             <ul className={styles.cleanList}>
               <li>Put everyone on OMNY with their own card or phone.</li>
               <li>Use the same app, ideally Citymapper or the MTA app, so directions match.</li>
-              <li>Choose exact meetups: "NW corner of 42nd and 7th," not "near Times Square."</li>
+              <li>Choose exact meetups: NW corner of 42nd and 7th, not just near Times Square.</li>
               <li>Expect 5-7 miles of walking per day, even with good subway planning.</li>
               <li>Split for optional stops, then regroup at a timed food or ticket anchor.</li>
             </ul>

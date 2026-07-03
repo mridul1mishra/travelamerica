@@ -27,6 +27,30 @@ export default function Neighborhoodguide({interest}: Props) {
         <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=neighborhood-guide" label="See NYC hotels" />
         <div className={styles.container}>
         <IntroSection />
+        <section className={styles.routeRole} aria-labelledby="route-role-heading">
+          <p className={styles.eyebrow}>How to use this guide</p>
+          <h2 id="route-role-heading">Use this page to understand NYC neighborhoods, not just pick a hotel</h2>
+          <p>
+            This neighborhood guide compares the feel of Manhattan, Brooklyn, Queens, nightlife areas, food areas, safe residential bases, and sightseeing zones. If you only need the best areas to stay in NYC, use the stay-area ranking page; if you want to understand how the city fits together, stay here.
+          </p>
+          <div className={styles.roleGrid}>
+            <article>
+              <h3>For hotel decisions</h3>
+              <p>Compare Upper West Side, Midtown East, Chelsea, Lower Manhattan, Long Island City, Williamsburg, and Brooklyn Heights by safety, subway access, and budget.</p>
+              <a href="/destination/nyc/best-areas-to-stay">Open best areas to stay</a>
+            </article>
+            <article>
+              <h3>For food and nightlife</h3>
+              <p>Use Greenwich Village, SoHo, Williamsburg, Lower East Side, Chelsea, and Midtown as starting points depending on whether you want late rooms, restaurants, bars, or easy returns.</p>
+              <a href="/destination/nyc/food">Open NYC food guide</a>
+            </article>
+            <article>
+              <h3>For safety context</h3>
+              <p>Safe areas still vary by block and hour. Use active avenues, well-lit subway access, and the safety hub before late-night routes or unfamiliar transfers.</p>
+              <a href="/destination/nyc/nyc-safety-guide">Open NYC safety guide</a>
+            </article>
+          </div>
+        </section>
         <CityOrganization />
         <NeighborhoodsByStyle interest={interest}/>
         <PopularNeighborhoods interest={interest}/>

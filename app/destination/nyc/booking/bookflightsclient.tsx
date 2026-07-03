@@ -13,7 +13,7 @@ const config: CityBookingConfig = {
   bookingHref: "/destination/nyc/booking",
   headerImage: "/data/majorcities/newyork/assets/newyork.jpeg",
   bannerText: "Book your New York trip",
-  pageTitle: "Book Your New York Trip",
+  pageTitle: "Book Your New York Trip: Flights, Hotels & Things to Do",
   tabs: [
     { key: "flights", label: "Flights", icon: "plane" },
     { key: "hotels", label: "Hotels", icon: "hotel" },
@@ -73,9 +73,9 @@ const config: CityBookingConfig = {
     },
   ],
   bookingTips: [
-    { heading: "Airports", text: "JFK, LaGuardia, and Newark can all work. Choose by transfer time, not only airfare." },
-    { heading: "Transit", text: "Most first-time trips are easier by subway and walking than by rental car." },
-    { heading: "Hotels", text: "Midtown is convenient, but Chelsea, Flatiron, Downtown Brooklyn, and Long Island City can be better value." },
+    { heading: "Start with hotel zone", text: "Pick the area first: Midtown East for first-timers, Upper West Side for calm nights, Chelsea for food, or Long Island City for value." },
+    { heading: "Check airport transfer", text: "JFK, LaGuardia, and Newark can all work. Choose by total transfer time to your hotel, not only airfare." },
+    { heading: "Anchor the itinerary", text: "Book the fixed pieces first: hotel, flights, Broadway or observation deck, then keep neighborhood time flexible." },
   ],
   flights: bookFlights as CityBookingConfig["flights"],
   hotels: hotelsData as CityBookingConfig["hotels"],

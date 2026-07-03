@@ -408,11 +408,52 @@
 }
 
 .scenarioGrid,
+.boundaryGrid,
 .faqGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   margin-top: 28px;
+}
+
+.boundaryGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.boundaryCard {
+  display: flex;
+  min-height: 260px;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  padding: 24px;
+}
+
+.boundaryCard h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.18rem;
+  line-height: 1.2;
+}
+
+.boundaryCard p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.boundaryCard a {
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--blue);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.boundaryCard a:hover {
+  text-decoration: underline;
 }
 
 .scenarioCard {
@@ -630,6 +671,7 @@
 
   .cardGrid,
   .scenarioGrid,
+  .boundaryGrid,
   .faqGrid,
   .threeCards,
   .nextSteps {
@@ -684,6 +726,7 @@
 
   .cardGrid,
   .scenarioGrid,
+  .boundaryGrid,
   .faqGrid,
   .threeCards,
   .itemGrid,

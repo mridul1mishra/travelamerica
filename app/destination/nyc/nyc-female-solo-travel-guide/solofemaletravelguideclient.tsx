@@ -79,6 +79,67 @@ const scenarios = [
   },
 ];
 
+const attentionMoves = [
+  {
+    label: "Harassment",
+    title: "Unwanted attention or street harassment",
+    steps: [
+      "Use one short line, then stop engaging: 'No, I am leaving now.'",
+      "Move toward staff, a staffed lobby, a restaurant counter, or a busier avenue.",
+      "Do not worry about seeming rude when your body is telling you to leave.",
+    ],
+  },
+  {
+    label: "Followed",
+    title: "You think someone is following you",
+    steps: [
+      "Do not test it on a quiet block. Cross toward people, lights, and open businesses.",
+      "Enter a hotel lobby, pharmacy, restaurant, or shop and ask staff to wait with you.",
+      "Call someone on speaker, order a rideshare from inside, or call 911 if the person keeps following.",
+    ],
+  },
+  {
+    label: "Catcalling",
+    title: "Catcalling or comments keep escalating",
+    steps: [
+      "Skip the debate. A neutral face and direct exit usually works better than explanation.",
+      "Change position early: cross, slow down near a group, or step inside before the block empties.",
+      "If the person follows, treat it as a safety issue, not an awkward social moment.",
+    ],
+  },
+  {
+    label: "Nightlife",
+    title: "A venue, bar, or date feels wrong",
+    steps: [
+      "Close your tab, keep your drink with you, and leave through the main staffed exit.",
+      "Text your hotel address to a trusted person and wait inside until your ride arrives.",
+      "If staff dismiss your concern, move to another staffed place nearby before arranging transport.",
+    ],
+  },
+];
+
+const guideBoundaries = [
+  {
+    title: "Use this page for women-specific decisions",
+    text: "Unwanted attention, walking alone, late returns, room-entry routines, solo dining, and confidence resets.",
+  },
+  {
+    title: "Use the solo trip guide for the whole trip",
+    text: "Itinerary, budget, airport transfer, Broadway, dining alone, and first-time NYC planning live in the broader solo guide.",
+    href: "/destination/nyc/solo-trip-to-nyc",
+  },
+  {
+    title: "Use the safety hub for citywide context",
+    text: "Neighborhood safety, scams, emergency basics, and general visitor safety belong in the main NYC safety guide.",
+    href: "/destination/nyc/nyc-safety-guide",
+  },
+  {
+    title: "Use the subway guide for route decisions",
+    text: "Platform choices, night rides, Help Points, empty cars, OMNY, and MTA basics are covered in the subway safety guide.",
+    href: "/destination/nyc/subway-safety-guide",
+  },
+];
+
 const packingItems = [
   "Crossbody zip bag",
   "Backup battery",
@@ -119,6 +180,21 @@ const faqs = [
     answer:
       "They are often the simplest option after late shows or drinks. Always match the plate and driver details, sit in the back, share your trip, and wait inside until the car arrives.",
   },
+  {
+    question: "What should I do if someone follows me in NYC?",
+    answer:
+      "Do not confront them on an empty block. Cross toward a busier avenue, enter a staffed business or hotel lobby, call someone, and ask staff or security for help if the person keeps following.",
+  },
+  {
+    question: "Can I go to dinner or Broadway alone in NYC?",
+    answer:
+      "Yes. Solo dining, Broadway, rooftops, and late shows can work well when you choose busy rooms, book timed plans, and decide your return route before you are tired.",
+  },
+  {
+    question: "What is the safest way back to my hotel at night?",
+    answer:
+      "Use the simplest well-lit route. If the last subway transfer or walk feels too quiet, switch to a licensed cab or rideshare and wait inside until it arrives.",
+  },
 ];
 
 export default function FemaleSoloTravelGuide() {
@@ -141,7 +217,7 @@ export default function FemaleSoloTravelGuide() {
             <p className={styles.eyebrow}>NYC solo female safety</p>
             <h1>Is NYC Safe for Solo Female Travelers?</h1>
             <p className={styles.lede}>
-              Yes, for most first-time solo women who choose an active base, keep late-night routes simple, and trust the moment when a street, station, or interaction starts to feel off.
+              Yes, for most first-time solo women who choose an active base, keep late-night routes simple, and trust the moment when a street, station, or interaction starts to feel off. This solo female travel in NYC guide focuses on the women-specific decisions that broader itinerary pages usually skip.
             </p>
             <p className={styles.byline}>
               By <Link href="/about#manisha-shukla">Manisha Shukla</Link> · Updated June 2026 · Fact-checked against NYPD &amp; MTA data
@@ -196,6 +272,27 @@ export default function FemaleSoloTravelGuide() {
             <Link href="/destination/nyc/nyc-safety-guide">
               General NYC safety guide
             </Link>
+          </div>
+        </section>
+
+        <section className={styles.sectionStack} aria-labelledby="boundaries-heading">
+          <div className={styles.sectionHeader}>
+            <p className={styles.eyebrow}>Guide ownership</p>
+            <h2 id="boundaries-heading">Where this solo female guide begins and ends</h2>
+            <p>
+              This page is not trying to replace every NYC planning guide. It is the support page for solo women who want direct answers on harassment, being followed, late-night returns, hotel routines, subway comfort, and solo-night-out confidence.
+            </p>
+          </div>
+          <div className={styles.boundaryGrid}>
+            {guideBoundaries.map((item) => (
+              <article className={styles.boundaryCard} key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+                {item.href ? (
+                  <Link href={item.href}>Open guide</Link>
+                ) : null}
+              </article>
+            ))}
           </div>
         </section>
 
@@ -261,6 +358,29 @@ export default function FemaleSoloTravelGuide() {
           </div>
         </section>
 
+        <section className={styles.sectionStack} aria-labelledby="attention-heading">
+          <div className={styles.sectionHeader}>
+            <p className={styles.eyebrow}>Unwanted attention</p>
+            <h2 id="attention-heading">What to do if harassment, catcalling, or being followed changes the mood</h2>
+            <p>
+              Most NYC interactions are ordinary city noise, but solo women should not have to improvise when attention becomes uncomfortable. These moves are intentionally simple: reduce engagement, move toward staff or other people, and make the next step public.
+            </p>
+          </div>
+          <div className={styles.scenarioGrid}>
+            {attentionMoves.map((move) => (
+              <article className={styles.scenarioCard} key={move.title}>
+                <span>{move.label}</span>
+                <h3>{move.title}</h3>
+                <ul>
+                  {move.steps.map((step) => (
+                    <li key={step}>{step}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className={styles.checklistCta} aria-labelledby="female-safety-checklist-heading">
           <div className={styles.checklistCopy}>
             <p className={styles.eyebrow}>Save the solo safety plan</p>
@@ -296,6 +416,30 @@ export default function FemaleSoloTravelGuide() {
               <li>Know the rideshare pickup corner</li>
               <li>Keep battery above 30 percent</li>
             </ul>
+          </div>
+        </section>
+
+        <section className={styles.band} aria-labelledby="night-out-heading">
+          <div className={styles.bandHeader}>
+            <p className={styles.eyebrow}>Solo night out</p>
+            <h2 id="night-out-heading">Dinner, Broadway, and bars are easier when the exit is already decided</h2>
+            <p className={styles.bandIntro}>
+              Solo dining and nightlife are not red flags by themselves. The safety win is choosing active places and removing the tired-late-night decision from the end of the evening.
+            </p>
+          </div>
+          <div className={styles.threeCards}>
+            <article className={styles.ruleCard}>
+              <h3>Solo dinner</h3>
+              <p>Book a counter seat, bar seat, or busy dining room before peak rush. Keep your bag in front of you, and use the restroom before the final walk or ride back.</p>
+            </article>
+            <article className={styles.ruleCard}>
+              <h3>Broadway or shows</h3>
+              <p>Choose the return mode before curtain. If the subway route includes a quiet transfer, use a licensed cab or rideshare and wait inside the theater or a nearby lobby.</p>
+            </article>
+            <article className={styles.ruleCard}>
+              <h3>Bars and rooftops</h3>
+              <p>Leave while the venue is still active, keep your drink with you, and do not step onto a quiet block to find a car. Set pickup from the staffed entrance.</p>
+            </article>
           </div>
         </section>
 

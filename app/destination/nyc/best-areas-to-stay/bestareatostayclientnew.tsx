@@ -40,6 +40,42 @@ export default function Home() {
           "Packing smart for weather and walking",
         ]}
       />
+      <section className={styles.editorialPanel} aria-labelledby="quick-picks-heading">
+        <p className={styles.eyebrow}>Quick stay decisions</p>
+        <h2 id="quick-picks-heading">Best areas to stay in NYC by traveler type</h2>
+        <p>
+          If you are choosing a hotel quickly, start with the neighborhood that matches your trip style. These are practical stay areas for tourists, first-time visitors, solo travelers, and travelers who want safe areas with simple subway access.
+        </p>
+        <div className={styles.decisionGrid}>
+          <article>
+            <h3>First-time visitor</h3>
+            <p><strong>Midtown East</strong> keeps sightseeing simple without putting you directly in the Times Square crush.</p>
+          </article>
+          <article>
+            <h3>Solo or safety-focused</h3>
+            <p><strong>Upper West Side</strong> is calm, residential, walkable, and strong for late returns on active avenues.</p>
+          </article>
+          <article>
+            <h3>Balanced food and access</h3>
+            <p><strong>Chelsea</strong> works well if you want restaurants, galleries, the High Line, and easy Downtown/Midtown access.</p>
+          </article>
+          <article>
+            <h3>Budget near Manhattan</h3>
+            <p><strong>Long Island City</strong> usually gives better hotel value while keeping Midtown a short subway ride away.</p>
+          </article>
+          <article>
+            <h3>History and waterfront</h3>
+            <p><strong>Lower Manhattan</strong> is convenient for the 9/11 Memorial, Brooklyn Bridge, ferries, and Downtown routes.</p>
+          </article>
+          <article>
+            <h3>Quiet Brooklyn base</h3>
+            <p><strong>Brooklyn Heights</strong> gives you calm streets, skyline views, and quick access back to Manhattan.</p>
+          </article>
+        </div>
+        <p className={styles.supportingLinks}>
+          Need a wider comparison? Use the <a href="/destination/nyc/neighborhood-guide">NYC neighborhood guide</a>. Safety-first trip? Open the <a href="/destination/nyc/nyc-safety-guide">NYC safety hub</a> or the <a href="/destination/nyc/nyc-female-solo-travel-guide">solo female travel guide</a>.
+        </p>
+      </section>
       <SectionSafestNeighborhoods
         paragraphs={[
           "The Upper West Side consistently ranks as one of Manhattan's safest residential areas, thanks to its well-lit avenues, family-oriented atmosphere, and strong community presence.",

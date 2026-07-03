@@ -5,3 +5,62 @@
   box-sizing: border-box;
 }
 body { background-color: #F7F7F8; /* soft gray */ }
+
+.routeRole {
+  margin: 2rem 0;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.eyebrow {
+  margin: 0 0 0.65rem;
+  color: #475569;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.routeRole h2 {
+  margin: 0;
+  color: #101828;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  line-height: 1.12;
+}
+
+.routeRole p {
+  color: #526173;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.roleGrid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.35rem;
+}
+
+.roleGrid article {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fbfdff;
+  padding: 1rem;
+}
+
+.roleGrid h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 1.08rem;
+}
+
+.roleGrid a {
+  color: #2459e6;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.roleGrid a:hover {
+  text-decoration: underline;
+}

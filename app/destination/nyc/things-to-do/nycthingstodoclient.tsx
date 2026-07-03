@@ -27,6 +27,11 @@ const quickChoices = [
     title: 'Let neighborhoods drive the plan',
     copy: 'Chelsea Market, Chinatown, Koreatown, Williamsburg, and the East Village work best when food is the reason for being there.',
   },
+  {
+    label: 'Solo traveler',
+    title: 'Choose easy exits and flexible anchors',
+    copy: 'Museums, bridge walks, observation decks, food halls, Broadway, and Central Park all work well alone because you control the pace.',
+  },
 ];
 
 const mustDoCards = [
@@ -84,6 +89,13 @@ const budgetMoves = [
   'Use food halls, slice shops, bagels, and bakeries between big activities.',
   'Avoid crossing town for single stops. Cluster each day by neighborhood.',
   'Check current museum free hours before building the day around them.',
+];
+
+const soloFriendlyMoves = [
+  ['Best solo morning', 'Brooklyn Bridge into DUMBO, then coffee and waterfront photos before the crowds build.'],
+  ['Best solo reset', 'Central Park, the High Line, or a museum cafe when you need a quieter hour between big sights.'],
+  ['Best solo evening', 'Broadway, a food hall, or an observation deck with a clear route back to your hotel.'],
+  ['Best safety check', 'Pair night plans with the NYC night safety guide and the subway safety guide before choosing the return route.'],
 ];
 
 const faqItems = [
@@ -254,6 +266,33 @@ export default function NYCThingsToDoClient() {
               </Link>{' '}
               before choosing your route home.
             </p>
+          </div>
+        </section>
+
+        <section className={styles.editorialSection}>
+          <div className={styles.sectionIntro}>
+            <p className={styles.eyebrow}>Solo-friendly planning</p>
+            <h2>NYC things to do alone should be easy to enter, leave, and reroute</h2>
+            <p>
+              Solo travelers do best with activities that do not depend on a group reservation or a long shared schedule. Pick anchors with flexible timing, clear transit nearby, and a good backup if weather, crowds, or energy changes.
+            </p>
+          </div>
+          <div className={styles.mustDoGrid}>
+            {soloFriendlyMoves.map(([title, copy]) => (
+              <article key={title} className={styles.mustDoCard}>
+                <span>Solo</span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{copy}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <div className={styles.resourceLinks}>
+            <Link href="/destination/nyc/solo-trip-to-nyc">Solo trip guide</Link>
+            <Link href="/destination/nyc/solo-itinerary">3-day solo itinerary</Link>
+            <Link href="/destination/nyc/subway-safety-guide">Subway safety guide</Link>
+            <Link href="/destination/nyc/is-nyc-safe-at-night">Night safety guide</Link>
           </div>
         </section>
 
