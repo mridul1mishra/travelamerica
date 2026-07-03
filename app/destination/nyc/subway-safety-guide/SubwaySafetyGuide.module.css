@@ -111,6 +111,112 @@
   line-height: 1.5;
 }
 
+.tablePanel,
+.routePanel,
+.intentStack {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.tablePanel,
+.routePanel {
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.tableWrap {
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+.dataTable {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  color: #1f2937;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.dataTable th,
+.dataTable td {
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+  vertical-align: top;
+}
+
+.dataTable th {
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.intentStack {
+  display: grid;
+  gap: 1rem;
+}
+
+.intentBlock {
+  padding: 1.15rem 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.intentBlock h2 {
+  margin: 0 0 0.55rem;
+  color: #111827;
+  font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+  line-height: 1.25;
+}
+
+.intentBlock p {
+  margin: 0;
+  color: #374151;
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.intentBlock ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.15rem;
+  color: #374151;
+  line-height: 1.65;
+}
+
+.routeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.routeCard {
+  padding: 1rem;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  background: #f8fbff;
+}
+
+.routeCard h3 {
+  margin: 0 0 0.55rem;
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+.routeCard p {
+  margin: 0.45rem 0 0;
+  color: #475569;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
 @media (min-width: 768px) {
   .wrapper {
     margin-top: 80px;

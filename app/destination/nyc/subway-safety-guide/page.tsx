@@ -1,6 +1,6 @@
 export const metadata = {
   title: "NYC Subway Safety Guide: Tips for Tourists & Solo Travelers",
-  description: "NYC's subway is generally safe. Learn essential tips for solo travelers and tourists - day or night. Avoid scams, stay alert, and ride with confidence.",
+  description: "NYC's subway is generally safe (updated 2026). Essential tips for solo travelers and tourists - day or night. Avoid scams, stay alert, ride with confidence.",
   keywords: [
     "NYC subway safety",
     "New York subway guide",

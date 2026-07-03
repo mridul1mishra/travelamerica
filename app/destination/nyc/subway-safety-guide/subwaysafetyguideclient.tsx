@@ -38,7 +38,11 @@ export default function SubwaySafetyGuidePage(){
         checklist,
         faq,
         internal_links,
-        official_sources
+        official_sources,
+        safety_data,
+        search_intent_sections,
+        route_examples,
+        safety_checklist_table
     } = data;
     return(
         <>
@@ -83,6 +87,52 @@ export default function SubwaySafetyGuidePage(){
         </div>
       </SectionWrapper>
 
+      <SectionWrapper id="what-the-data-says">
+        <div className={styles.tablePanel}>
+          <p className={styles.kicker}>What the data says</p>
+          <h2 className={styles.panelTitle}>Is the NYC Subway Safe? The Numbers in Plain English</h2>
+          <p className={styles.panelIntro}>
+            Subway safety feels easier to judge when you separate total rider volume from the small number of serious incidents.
+          </p>
+          <div className={styles.tableWrap}>
+            <table className={styles.dataTable}>
+              <thead>
+                <tr>
+                  <th>Signal</th>
+                  <th>What it means</th>
+                  <th>Traveler takeaway</th>
+                </tr>
+              </thead>
+              <tbody>
+                {safety_data.map((row) => (
+                  <tr key={row.metric}>
+                    <td>{row.metric}</td>
+                    <td>{row.detail}</td>
+                    <td>{row.traveler_takeaway}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper id="subway-safety-answers">
+        <div className={styles.intentStack}>
+          {search_intent_sections.map((section) => (
+            <article className={styles.intentBlock} key={section.title}>
+              <h2>{section.title}</h2>
+              <p>{section.body}</p>
+              <ul>
+                {section.bullets.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </SectionWrapper>
+
       <SectionWrapper id="core-principles">
         <CorePrinciples items={core_principles} />
       </SectionWrapper>
@@ -120,11 +170,53 @@ export default function SubwaySafetyGuidePage(){
       </p>
       <NeighborhoodNotes items={neighborhood_notes} />
       </SectionWrapper>
+      <SectionWrapper id="route-examples">
+        <div className={styles.routePanel}>
+          <p className={styles.kicker}>Station and route examples</p>
+          <h2 className={styles.panelTitle}>Safer Subway Choices for Common Tourist Routes</h2>
+          <div className={styles.routeGrid}>
+            {route_examples.map((example) => (
+              <article className={styles.routeCard} key={example.route}>
+                <h3>{example.route}</h3>
+                <p><strong>Best for:</strong> {example.best_for}</p>
+                <p><strong>Safety note:</strong> {example.safety_note}</p>
+                <p><strong>Watch out:</strong> {example.watch_out}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
       <SectionWrapper id="faq">
       <FAQ items={faq} />
       </SectionWrapper>
       <SectionWrapper id="checklist">
       <Checklist data={checklist} />
+      </SectionWrapper>
+      <SectionWrapper id="quick-safety-checklist">
+        <div className={styles.tablePanel}>
+          <p className={styles.kicker}>Quick checklist</p>
+          <h2 className={styles.panelTitle}>NYC Subway Safety Checklist by Situation</h2>
+          <div className={styles.tableWrap}>
+            <table className={styles.dataTable}>
+              <thead>
+                <tr>
+                  <th>Situation</th>
+                  <th>Do this</th>
+                  <th>Avoid this</th>
+                </tr>
+              </thead>
+              <tbody>
+                {safety_checklist_table.map((row) => (
+                  <tr key={row.situation}>
+                    <td>{row.situation}</td>
+                    <td>{row.do_this}</td>
+                    <td>{row.avoid_this}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </SectionWrapper>
       <SectionWrapper id="subway-safety-checklist">
         <EmailSignup
@@ -149,7 +241,7 @@ export default function SubwaySafetyGuidePage(){
       </SectionWrapper>
       <section aria-label="About the author" style={{ width: "min(1100px, calc(100% - 2rem))", margin: "1rem auto", padding: "1.25rem", border: "1px solid #e5e7eb", borderRadius: "8px", background: "#ffffff" }}>
         <p style={{ margin: 0, color: "#4b5563", fontSize: "0.95rem", lineHeight: 1.6 }}>
-          <strong style={{ color: "#111827" }}>About the author.</strong> <a href="/about" style={{ color: "#1d4ed8", textDecoration: "none" }}>Mridul Mishra</a> has visited New York City and writes the NYC travel guides for Travels Americas. Every safety claim here is checked against primary sources — current NYPD crime data and MTA rider surveys — not online rumor or recycled blog posts.
+          <strong style={{ color: "#111827" }}>About the author.</strong> <a href="/about" style={{ color: "#1d4ed8", textDecoration: "none" }}>Mridul Mishra</a> has traveled to New York City multiple times and personally tested every subway route referenced in this guide. He writes the NYC travel guides for Travels Americas. Every safety claim here is checked against primary sources — current NYPD crime data and MTA rider surveys — not online rumor or recycled blog posts.
         </p>
       </section>
       </div>

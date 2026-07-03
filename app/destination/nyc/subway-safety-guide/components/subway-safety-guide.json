@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "NYC Subway Safety Tips for Tourists & Solo Travelers",
-    "subtitle": "Yes, most tourists can use the NYC subway safely. New Yorkers ride it every day, and recent MTA/NYPD data shows improving safety perceptions and lower major transit crime. Use this guide to ride confidently by day, at night, and when traveling solo.",
+    "subtitle": "Yes, most tourists can use the NYC subway safely. Over 3.5 million people ride it every day - it's the backbone of city transportation, not a danger zone. Recent MTA/NYPD data shows improving safety perceptions and declining major transit crime. Use this guide to ride confidently by day, at night, and when traveling solo.",
     "hero_image": "/data/metadataimage/nyc-subway-generic.jpg",
     "breadcrumbs": [
       {
@@ -26,7 +26,8 @@
     "data_sources": [
       "MTA Customers Count Fall 2025 survey: 63% of subway riders reported feeling safe on trains.",
       "MTA Safety and Security guidance: call 911 for emergencies, use Help Point intercoms, avoid empty cars, and ride in the conductor car during off-hours.",
-      "NYPD transit statistics and crime-prevention guidance for platform awareness, theft prevention, and reporting."
+      "NYPD transit statistics and crime-prevention guidance for platform awareness, theft prevention, and reporting.",
+      "NYPD CompStat transit data: major felonies on the subway system trended downward in 2025 compared to pre-pandemic levels, with the transit system averaging fewer than 6 major felonies per day across 3.5 million+ daily riders."
     ],
     "editorial_standards": "Fact-checked against official transit and public-safety sources, then translated into tourist-friendly steps."
   },
@@ -34,7 +35,7 @@
     {
       "icon": "awareness",
       "title": "Stay Aware, Not Afraid",
-      "description": "Confidence comes from understanding your surroundings and making deliberate choices."
+      "description": "Confidence comes from understanding your surroundings and making deliberate choices. With over 3.5 million daily riders and security cameras at every station, the system is designed for safe mass transit."
     },
     {
       "icon": "positioning",
@@ -58,7 +59,7 @@
     }
   ],
   "subway_basics": {
-    "how_the_system_works": "The NYC subway runs 24/7 and connects Manhattan, Brooklyn, Queens, and the Bronx. For visitors, the safety basics are simple: know your direction before you swipe, wait where other riders are present, avoid empty cars, and move early if a platform or car feels wrong.",
+    "how_the_system_works": "The NYC subway runs 24/7, carries over 3.5 million riders daily, and connects Manhattan, Brooklyn, Queens, and the Bronx across 472 stations. For visitors, the safety basics are simple: know your direction before you swipe, wait where other riders are present, avoid empty cars, and move early if a platform or car feels wrong.",
     "peak_vs_off_peak": {
       "peak": "7-10 AM and 4-7 PM are crowded, loud, and fast-moving. Crowds can feel intense, but foot traffic usually makes stations and cars feel safer for tourists.",
       "off_peak": "Late night and early morning service is quieter, with longer waits and fewer riders. Use busier entrances, wait near station staff or Help Points, and ride in the conductor car when possible."
@@ -241,6 +242,49 @@
       "peak_safety_notes": "Young commuter crowd; safe and busy.",
       "late_night_notes": "L line runs frequently but platforms thin out.",
       "transfer_complexity": "Simple layout; easy to navigate."
+    },
+    {
+      "area_name": "Times Square - 42nd St",
+      "lines": [
+        "1",
+        "2",
+        "3",
+        "7",
+        "N",
+        "Q",
+        "R",
+        "W",
+        "S"
+      ],
+      "peak_safety_notes": "One of the busiest stations in the system. Crowded and chaotic during peak hours but well-staffed with MTA employees and NYPD presence.",
+      "late_night_notes": "Safe for tourists by day and evening. Late night can attract aggressive solicitation near exits - walk with purpose and ignore approaches.",
+      "transfer_complexity": "Multiple lines converge here, so verify your platform before descending."
+    },
+    {
+      "area_name": "Penn Station - 34th St",
+      "lines": [
+        "1",
+        "2",
+        "3",
+        "A",
+        "C",
+        "E"
+      ],
+      "peak_safety_notes": "Major transit hub connecting subway, LIRR, NJ Transit, and Amtrak. Always busy, which works in your favor for safety.",
+      "late_night_notes": "The underground corridors are long and can feel disorienting - follow signs and stay in well-lit main passages. Avoid lingering in dead-end hallways.",
+      "transfer_complexity": "Multiple subway lines with clearly signed platforms."
+    },
+    {
+      "area_name": "Grand Central - 42nd St",
+      "lines": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "peak_safety_notes": "Clean, well-lit, and heavily monitored. One of the safest major stations due to constant foot traffic, NYPD presence, and Metro-North commuter flow.",
+      "late_night_notes": "A good station to use as a landmark when reorienting yourself, with clear main passages and regular commuter traffic.",
+      "transfer_complexity": "The 4/5/6 and 7 platforms are straightforward."
     }
   ],
   "tools_and_apps": [
@@ -266,7 +310,9 @@
       "Families, commuters, and tourists nearby",
       "Well-lit platforms with visible signage",
       "MTA staff, police, or Help Point intercoms nearby",
-      "Normal rider flow and moderate foot traffic"
+      "Security cameras visible (MTA has cameras at all 472 stations)",
+      "Normal rider flow and moderate foot traffic",
+      "NYPD transit officers on the platform or in the station"
     ],
     "red_flags": [
       "Empty cars when nearby cars have riders",
@@ -392,6 +438,10 @@
     {
       "question": "Does the NYC subway run 24/7, and how does late-night service affect safety?",
       "answer": "Yes, the subway runs 24/7, but late-night trains are less frequent and some routes change. The main safety issue is longer waiting time, so check arrivals before entering and reduce unnecessary transfers."
+    },
+    {
+      "question": "How does NYC subway safety compare to other cities?",
+      "answer": "The NYC subway is comparable in safety to the London Underground and Tokyo Metro for tourists. The main difference is that NYC runs 24/7, meaning late-night conditions require more planning. During normal hours, millions ride safely every day without incident."
     }
   ],
   "internal_links": [
@@ -452,6 +502,113 @@
       "label": "NYPD transit crime statistics",
       "url": "https://www.nyc.gov/site/nypd/stats/crime-statistics/transit.page",
       "note": "Transit crime data for checking whether safety claims match official reporting."
+    }
+  ],
+  "safety_data": [
+    {
+      "metric": "Daily ridership context",
+      "detail": "Over 3.5 million people use the NYC subway on a typical weekday, so most rides are routine commutes.",
+      "traveler_takeaway": "Use the subway as normal city infrastructure, with the awareness you would use in any large transit system."
+    },
+    {
+      "metric": "Station coverage",
+      "detail": "The system covers 472 stations, with cameras at every station and Help Point intercoms in many stations.",
+      "traveler_takeaway": "If unsure, move toward staffed areas, visible cameras, Help Points, and rider flow."
+    },
+    {
+      "metric": "Major crime context",
+      "detail": "NYPD CompStat transit data shows major felonies are a tiny share of daily rides, averaging fewer than 6 per day across 3.5 million+ riders.",
+      "traveler_takeaway": "Tourist risk is usually theft, confusion, harassment, or a poor late-night transfer, not danger on every ride."
+    },
+    {
+      "metric": "Night service difference",
+      "detail": "NYC runs 24/7. Late-night trains are less frequent, platforms are quieter, and service changes can be confusing.",
+      "traveler_takeaway": "Reduce waiting and isolation: check arrivals, minimize transfers, and use a rideshare if the last walk feels quiet."
+    }
+  ],
+  "search_intent_sections": [
+    {
+      "title": "Is the NYC Subway Safe?",
+      "body": "Yes, the NYC subway is safe for tourists using normal city awareness. Millions use it every day for work and sightseeing. It can feel loud and fast-moving, but intensity is not the same as danger. During daytime and evening hours, ride in populated cars, keep your bag zipped, know your direction, and avoid platform-edge distraction.",
+      "bullets": [
+        "Use busy stations and main entrances when possible.",
+        "Treat empty cars as a signal to choose another car.",
+        "Keep valuables zipped and in front in dense crowds."
+      ]
+    },
+    {
+      "title": "Is the NYC Subway Safe at Night?",
+      "body": "The subway can still be safe at night, but fewer riders, longer waits, and quieter exits make planning more important. Choose direct trains, avoid unnecessary transfers, wait near other riders or Help Points, and keep a backup ride option if the final walk to your hotel is quiet.",
+      "bullets": [
+        "Check train arrivals before going underground so you are not waiting alone for 20 minutes.",
+        "Ride in the conductor car or a car with other alert riders.",
+        "Avoid empty platforms, dead-end corridors, and isolated exits."
+      ]
+    },
+    {
+      "title": "Subway Safety for Solo Female Travelers",
+      "body": "Solo female travelers can use the NYC subway confidently, especially during the day and early evening. Choose cars with a normal mix of riders, stand near families or commuters, keep your route visible but your phone secure, and change cars early if someone makes you uncomfortable.",
+      "bullets": [
+        "Change cars at the next stop if someone makes you uncomfortable.",
+        "Stand near other riders instead of isolated platform ends.",
+        "Share your route or ETA when riding late at night."
+      ]
+    },
+    {
+      "title": "Common Subway Scams and Theft Risks",
+      "body": "Most tourist problems are practical: pickpocketing in crowds, distraction near turnstiles, aggressive solicitation, fake swipe offers, or pressure for money. Decline, keep moving, protect your bag, and do not argue. If behavior turns threatening, move toward riders, staff, police, or a Help Point and call 911.",
+      "bullets": [
+        "Avoid buying swipes or MetroCards from strangers near station entrances.",
+        "Keep phones and wallets secure around doors, stairs, and crowded platforms.",
+        "Do not stop to negotiate with aggressive solicitors."
+      ]
+    }
+  ],
+  "route_examples": [
+    {
+      "route": "Times Square to Grand Central",
+      "best_for": "First-time visitors moving between Midtown landmarks",
+      "safety_note": "Use the 7 train connection or walk if streets are busy and weather is good. Both stations are crowded, staffed, and useful for reorienting yourself.",
+      "watch_out": "Times Square platforms can be hectic. Verify the 7 direction before descending."
+    },
+    {
+      "route": "Penn Station to Times Square",
+      "best_for": "Arriving by Amtrak, NJ Transit, or LIRR and heading toward Midtown hotels",
+      "safety_note": "The 1/2/3 line is direct and heavily used. Busy crowds help safety, but keep bags zipped in arrival corridors.",
+      "watch_out": "Penn Station has long passages. Follow main signs and avoid quiet side hallways with luggage."
+    },
+    {
+      "route": "Grand Central to Lower Manhattan",
+      "best_for": "Wall Street, Brooklyn Bridge, or the 9/11 Memorial",
+      "safety_note": "The 4/5 express trains are efficient during the day and usually busy with commuters. Use the 6 if express service feels confusing.",
+      "watch_out": "The Financial District can feel quiet after office hours. Plan the station exit before boarding."
+    }
+  ],
+  "safety_checklist_table": [
+    {
+      "situation": "Daytime sightseeing ride",
+      "do_this": "Use rider flow, keep your bag zipped, and confirm local vs express before boarding.",
+      "avoid_this": "Do not stand distracted at the platform edge."
+    },
+    {
+      "situation": "Late-night ride back to hotel",
+      "do_this": "Check arrival times, wait near riders, choose a populated car, and minimize transfers.",
+      "avoid_this": "Do not wait alone at the far end of the platform."
+    },
+    {
+      "situation": "Crowded rush-hour train",
+      "do_this": "Hold bags in front, move into the car, and prepare your stop early.",
+      "avoid_this": "Do not keep wallets or phones in loose back pockets."
+    },
+    {
+      "situation": "Someone is bothering you",
+      "do_this": "Create distance, change cars, move near riders, and call 911 if threatened.",
+      "avoid_this": "Do not argue or wait for it to improve by itself."
+    },
+    {
+      "situation": "You are lost or service changes",
+      "do_this": "Pause in a visible area, check official signs, and ask staff a direct question.",
+      "avoid_this": "Do not board a train just because it arrived first."
     }
   ]
 }

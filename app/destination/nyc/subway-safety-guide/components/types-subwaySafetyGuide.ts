@@ -74,6 +74,31 @@ export interface OfficialSource {
   note: string;
 }
 
+export interface SafetyDataRow {
+  metric: string;
+  detail: string;
+  traveler_takeaway: string;
+}
+
+export interface SearchIntentSection {
+  title: string;
+  body: string;
+  bullets: string[];
+}
+
+export interface RouteExample {
+  route: string;
+  best_for: string;
+  safety_note: string;
+  watch_out: string;
+}
+
+export interface SafetyChecklistRow {
+  situation: string;
+  do_this: string;
+  avoid_this: string;
+}
+
 export interface BehavioralCues {
   green_flags: string[];
   red_flags: string[];
@@ -121,6 +146,10 @@ export interface SubwaySafetyGuide {
   hero: Hero;
   why_trust_this_guide: WhyTrustThisGuide;
   official_sources: OfficialSource[];
+  safety_data: SafetyDataRow[];
+  search_intent_sections: SearchIntentSection[];
+  route_examples: RouteExample[];
+  safety_checklist_table: SafetyChecklistRow[];
   core_principles: CorePrinciple[];
   subway_basics: SubwayBasics;
   personas: Persona[];

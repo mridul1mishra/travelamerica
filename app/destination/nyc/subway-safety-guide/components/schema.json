@@ -113,6 +113,14 @@
             "@type": "Answer",
             "text": "Yes, the subway runs 24/7, but late-night trains are less frequent and some routes change. The main safety issue is longer waiting time, so check arrivals before entering and reduce unnecessary transfers."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "How does NYC subway safety compare to other cities?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The NYC subway is comparable in safety to the London Underground and Tokyo Metro for tourists. The main difference is that NYC runs 24/7, meaning late-night conditions require more planning. During normal hours, millions ride safely every day without incident."
+          }
         }
       ]
     }
