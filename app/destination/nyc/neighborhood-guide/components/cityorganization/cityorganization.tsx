@@ -13,7 +13,7 @@ export default function CityOrganization() {
       <p className={styles.copy}>
         The subway is the real organizing principle. Express lines — 1/2/3 on the West Side, 4/5/6 on
         the East Side, A/C/E through Midtown West — run 24/7 and connect every neighborhood in under 30
-        minutes. Where you stay matters less than which express line you're on.
+        minutes. Where you stay matters less than which express line you&apos;re on.
       </p>
       <p className={styles.copy}>
         For solo travelers: any neighborhood with express subway access gives you full freedom to move at

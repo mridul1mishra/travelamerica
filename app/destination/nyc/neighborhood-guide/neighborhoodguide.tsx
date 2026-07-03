@@ -18,17 +18,15 @@ import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
 import faqData from '@/content/destination/nyc/neighborhood-guide/faq/faqsection.json';
 
 type Props = {
-    tripType?: string;
     interest?: string;
-    duration?: string;
 }
-export default function Neighborhoodguide({tripType, interest, duration}: Props) {
+export default function Neighborhoodguide({interest}: Props) {
     return(
         <>
         <Header />
         <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=neighborhood-guide" label="See NYC hotels" />
         <div className={styles.container}>
-        <IntroSection tripType={tripType} interest={interest}/>
+        <IntroSection />
         <CityOrganization />
         <NeighborhoodsByStyle interest={interest}/>
         <PopularNeighborhoods interest={interest}/>
@@ -37,7 +35,7 @@ export default function Neighborhoodguide({tripType, interest, duration}: Props)
         <SafetyOverview />
         <WhyTrustThisGuide />
         <FAQAccordion faqs={faqData} />
-        <NeighborhoodGuideCTA tripType={tripType} interest={interest} />
+        <NeighborhoodGuideCTA />
         </div>
         <BookingCTA variant="full" text="See hotels in the best NYC neighborhoods" href="/destination/nyc/booking?tab=hotels&from=neighborhood-guide" label="See NYC hotels" />
         <Footer />

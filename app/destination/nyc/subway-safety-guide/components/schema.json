@@ -3,8 +3,8 @@
   "@graph": [
     {
       "@type": "Article",
-      "headline": "NYC Subway Safety Guide (2026)",
-      "description": "A clear, scenario‑driven NYC Subway Safety Guide covering core principles, emergency steps, etiquette, tools, and neighborhood insights for 2026.",
+      "headline": "NYC Subway Safety Tips for Tourists & Solo Travelers",
+      "description": "Official-source-backed NYC subway safety tips for tourists and solo travelers, including night rides, scams, emergency steps, etiquette, and route planning.",
       "author": {
         "@type": "Person",
         "@id": "https://www.travelsamericas.com/#founder",
@@ -24,13 +24,12 @@
       },
       "image": "https://www.travelsamericas.com/data/metadataimage/subway-safety-guide-og.webp",
       "datePublished": "2026-06-13",
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-07-03",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.travelsamericas.com/destination/nyc/subway-safety-guide"
       }
     },
-
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -48,24 +47,71 @@
         }
       ]
     },
-
     {
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Is the NYC subway safe at night?",
+          "name": "Is the NYC subway safe to ride at night?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, but stay in well‑lit areas, ride in busier cars, and avoid empty stations when possible."
+            "text": "Usually yes, but night riding needs more planning. Use busier entrances, wait near other riders or station staff, avoid empty cars, ride near the conductor during off-hours, and choose a rideshare if the station-to-hotel walk feels isolated."
           }
         },
         {
           "@type": "Question",
-          "name": "Which subway apps should I use?",
+          "name": "Is the NYC subway safe for solo female travelers?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Use the official MTA app, Google Maps, and Transit for real‑time arrivals and service changes."
+            "text": "Generally yes, especially during daytime and on busy routes. Solo women should favor populated cars, avoid empty platforms, keep bags zipped and in front, and change cars or exit at a busy stop if someone makes them uncomfortable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I do if I feel unsafe on the subway?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Move first, explain later. Change cars at the next stop, stand near other riders, station staff, or a Help Point, and exit at a busy station if needed. Call 911 for immediate danger."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I report an emergency or crime on the subway?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call 911 for emergencies. You can also use a station Help Point intercom, speak with MTA staff or police, or use official MTA reporting channels for non-emergency issues."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What common scams should I watch out for on the NYC subway?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Watch for aggressive solicitation, distraction around turnstiles, people asking you to buy swipes, and pickpocketing in dense crowds. Keep valuables zipped, decline firmly, and keep moving."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I safely use the subway with my kids?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Use elevators or wider entrances when needed, keep children away from the platform edge, board together without rushing, and choose cars with families or other regular riders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which subway lines or stations should I avoid at night?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No line is automatically unsafe, and conditions change by station, time, and service pattern. At night, avoid long isolated waits, quiet transfer stations, and empty cars. Favor direct routes through busier stations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the NYC subway run 24/7, and how does late-night service affect safety?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the subway runs 24/7, but late-night trains are less frequent and some routes change. The main safety issue is longer waiting time, so check arrivals before entering and reduce unnecessary transfers."
           }
         }
       ]

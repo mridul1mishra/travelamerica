@@ -30,13 +30,12 @@ export const metadata = {
 type PageProps = {
       searchParams: Promise<{
         tripType?: string;
-        duration?: string;
         interest?: string;
       }>;
 };
 
 export default async function NYCSafetyGuide({searchParams}: PageProps) {
-  const {tripType, duration, interest} = await searchParams;
+  const {interest} = await searchParams;
   return (
     <>
       {/* =========================
@@ -129,7 +128,7 @@ export default async function NYCSafetyGuide({searchParams}: PageProps) {
       {/* =========================
           Page Content
       ========================== */}
-      <NeighborhoodguideClient tripType={tripType} interest={interest} />
+      <NeighborhoodguideClient interest={interest} />
     </>
   );
 }

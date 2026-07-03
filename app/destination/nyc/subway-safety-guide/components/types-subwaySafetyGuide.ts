@@ -68,6 +68,12 @@ export interface ToolApp {
   description: string;
 }
 
+export interface OfficialSource {
+  label: string;
+  url: string;
+  note: string;
+}
+
 export interface BehavioralCues {
   green_flags: string[];
   red_flags: string[];
@@ -114,6 +120,7 @@ export interface FooterCTA {
 export interface SubwaySafetyGuide {
   hero: Hero;
   why_trust_this_guide: WhyTrustThisGuide;
+  official_sources: OfficialSource[];
   core_principles: CorePrinciple[];
   subway_basics: SubwayBasics;
   personas: Persona[];

@@ -2,7 +2,7 @@
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import type { SubwaySafetyGuide } from "./components/types-subwaySafetyGuide";
-const data: SubwaySafetyGuide = require("./components/subway-safety-guide.json");
+import subwaySafetyGuideData from "./components/subway-safety-guide.json";
 import styles from "./SubwaySafetyGuide.module.css";
 import CorePrinciples from "./components/coreprinciples/coreprinciples";
 import SubwayBasics from "./components/subwaybasics/SubwayBasics";
@@ -19,12 +19,13 @@ import Footer from "./components/Footer/Footer";
 import SectionWrapper from "./components/SectionWrapper/SectionWrapper";
 import WhyTrustThisGuide from "./components/whytrustthisguide/whytrustthisguide";
 import BookingCTA from "./components/BookingCTA/BookingCTA";
+import EmailSignup from "@/app/components/destination/EmailSignup/EmailSignup";
 
+const data = subwaySafetyGuideData as unknown as SubwaySafetyGuide;
 
 export default function SubwaySafetyGuidePage(){
     const {
         hero,
-        why_trust_this_guide,
         core_principles,
         subway_basics,
         personas,
@@ -37,7 +38,7 @@ export default function SubwaySafetyGuidePage(){
         checklist,
         faq,
         internal_links,
-        footer_cta
+        official_sources
     } = data;
     return(
         <>
@@ -54,6 +55,32 @@ export default function SubwaySafetyGuidePage(){
 
       <SectionWrapper id="why-trust-this-guide">
         <WhyTrustThisGuide data={data.why_trust_this_guide} />
+      </SectionWrapper>
+
+      <SectionWrapper id="official-sources">
+        <div className={styles.sourcePanel}>
+          <div>
+            <p className={styles.kicker}>Official sources</p>
+            <h2 className={styles.panelTitle}>What the latest subway safety guidance says</h2>
+            <p className={styles.panelIntro}>
+              This guide prioritizes official MTA and NYPD references before turning the data into practical tourist decisions.
+            </p>
+          </div>
+          <div className={styles.sourceGrid}>
+            {official_sources.map((source) => (
+              <a
+                className={styles.sourceCard}
+                href={source.url}
+                key={source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>{source.label}</span>
+                <p>{source.note}</p>
+              </a>
+            ))}
+          </div>
+        </div>
       </SectionWrapper>
 
       <SectionWrapper id="core-principles">
@@ -98,6 +125,15 @@ export default function SubwaySafetyGuidePage(){
       </SectionWrapper>
       <SectionWrapper id="checklist">
       <Checklist data={checklist} />
+      </SectionWrapper>
+      <SectionWrapper id="subway-safety-checklist">
+        <EmailSignup
+          source="nyc-subway-safety-checklist"
+          city="NYC"
+          headline="Get the NYC subway safety checklist"
+          subheadline="A quick PDF for night rides, solo travel, scams, emergency steps, and station checks."
+          successMessage="Your NYC subway safety checklist is on its way."
+        />
       </SectionWrapper>
       <SectionWrapper id="emergency">
       <EmergencyPlaybook data={emergency_playbook} />

@@ -1,12 +1,7 @@
 import Link from 'next/link';
 import styles from './Neighborhood.module.css';
 
-type NeighborhoodGuideCTAProps = {
-  tripType?: string;
-  interest?: string;
-}
-
-export default function NeighborhoodGuideCTA({tripType, interest}: NeighborhoodGuideCTAProps) {
+export default function NeighborhoodGuideCTA() {
   return (
     <section className={styles.section}>
       <h2 className={styles.heading}>

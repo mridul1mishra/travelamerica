@@ -16,7 +16,7 @@ export default function SafetyOverview() {
 
       <p className={styles.copy}>
         For solo travelers: the subway after midnight is fine on busy platforms. Use the marked
-        "Off-Hours Waiting Area" on the platform, stay near the conductor's car, and avoid
+        &quot;Off-Hours Waiting Area&quot; on the platform, stay near the conductor&apos;s car, and avoid
         isolated stations on unfamiliar lines late at night. The blocks just west of Times Square
         (8th and 9th Avenues in the 30s and 40s) can feel rough after dark — these are the main
         areas to bypass.
