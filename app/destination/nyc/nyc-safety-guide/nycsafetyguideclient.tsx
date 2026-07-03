@@ -15,11 +15,38 @@ const safetyDefaults = [
   },
   {
     title: "Choose simple transit at night",
-    text: "Daytime subway is usually straightforward. Late at night, reduce transfers and switch to a cab or rideshare when the route feels thin.",
+    text: "Use transit as part of your route plan, not as a separate worry. Late at night, keep the trip direct and switch to a cab or rideshare when the route feels thin.",
   },
   {
     title: "Treat safety as situational",
     text: "The same area can feel different at noon, after a show, or during a delayed train. Make the next safe move, not a perfect plan.",
+  },
+];
+
+const guideRoutes = [
+  {
+    title: "Need overall NYC safety advice?",
+    text: "Stay on this page for neighborhoods, hotel areas, walking alone, tourist scams, night decisions, and emergency resets.",
+    href: "/destination/nyc/nyc-safety-guide",
+    label: "NYC safety guide",
+  },
+  {
+    title: "Need subway-specific safety tips?",
+    text: "Use the subway guide for platforms, train cars, Help Points, late-night transfers, station examples, and route-specific advice.",
+    href: "/destination/nyc/subway-safety-guide",
+    label: "Subway safety guide",
+  },
+  {
+    title: "Need after-dark planning?",
+    text: "Use the night guide for walking routes, late dinners, Broadway returns, quiet blocks, and cab-versus-subway decisions.",
+    href: "/destination/nyc/is-nyc-safe-at-night",
+    label: "NYC night safety guide",
+  },
+  {
+    title: "Need solo female guidance?",
+    text: "Use the female solo guide for confidence, hotels, neighborhoods, unwanted attention, and first-time solo planning.",
+    href: "/destination/nyc/nyc-female-solo-travel-guide",
+    label: "Female solo guide",
   },
 ];
 
@@ -37,7 +64,7 @@ const neighborhoodCards = [
   {
     tag: "Good balance",
     title: "Chelsea / Flatiron",
-    text: "Restaurants, transit, and walkable evenings with fewer tourist bottlenecks than Times Square.",
+    text: "Restaurants, simple transportation, and walkable evenings with fewer tourist bottlenecks than Times Square.",
   },
   {
     tag: "Daytime anchor",
@@ -47,7 +74,7 @@ const neighborhoodCards = [
   {
     tag: "Calmer stay",
     title: "Brooklyn Heights / DUMBO",
-    text: "Scenic and relaxed, but late returns work best when the subway route is direct or you use a cab.",
+    text: "Scenic and relaxed, but late returns work best when the route is direct or you use a cab.",
   },
   {
     tag: "Use timing",
@@ -59,8 +86,8 @@ const neighborhoodCards = [
 const situationCards = [
   {
     label: "Subway",
-    title: "The platform is almost empty",
-    steps: ["Wait near staff, cameras, or other riders", "Skip the train car if it is empty", "Use rideshare if the transfer feels wrong"],
+    title: "Transit is part of the route home",
+    steps: ["Keep late-night rides direct", "Avoid complicated transfers when tired", "Use the subway guide for platform details"],
   },
   {
     label: "Street",
@@ -85,7 +112,7 @@ const situationCards = [
   {
     label: "Phone",
     title: "You need directions in public",
-    steps: ["Step aside before checking the map", "Keep a firm grip near subway doors", "Download your route before going underground"],
+    steps: ["Step aside before checking the map", "Keep a firm grip in crowded places", "Download your route before going underground"],
   },
 ];
 
@@ -98,7 +125,7 @@ const sourceCards = [
   },
   {
     title: "MTA transit safety",
-    text: "Subway crime is near a 16-year low in 2026 after record improvements in 2025, with early-2026 fluctuations levelling off. Check MTA safety guidance for subway, bus, and station practices before planning late-night or unfamiliar routes.",
+    text: "Transit is one part of visitor safety. Use MTA safety guidance for current subway, bus, and station practices, then use the dedicated Travels Americas subway guide for platform, train-car, and route-specific advice.",
     href: "https://new.mta.info/safety-and-security",
     label: "Open MTA safety",
   },
@@ -137,19 +164,19 @@ const faqs = [
   },
   {
     question: "Is it safe to travel to NYC alone?",
-    answer: "Solo travel in NYC is common and manageable. Stay in central, transit-connected neighborhoods, keep late-night routes simple, tell someone your plans, and use a rideshare when a subway transfer feels too quiet. Our dedicated solo and female-solo guides cover this in detail.",
+    answer: "Solo travel in NYC is common and manageable. Stay in central, well-connected neighborhoods, keep late-night routes simple, tell someone your plans, and use a rideshare when the route home feels too quiet. Our dedicated solo and female-solo guides cover this in detail.",
   },
   {
     question: "Is the NYC subway safe at night?",
-    answer: "The subway carries millions safely each day and transit crime sits near a 16-year low, though early 2026 saw a brief uptick before levelling off. At night, avoid empty platforms and cars, reduce transfers, and switch to a cab or rideshare when a route feels thin.",
+    answer: "For broad NYC safety planning, treat the subway as one part of your route decision: daytime rides are usually straightforward, while late-night trips should be simple and direct. For platform, train-car, Help Point, and station-specific advice, use the dedicated subway safety guide.",
   },
   {
     question: "Are Tribeca, DUMBO, and Brooklyn Heights safe at night?",
-    answer: "These are among the calmer, lower-crime neighborhoods visitors stay in. They feel quiet after dark, so the main consideration is the route home — favor a direct subway line or a cab over a long walk from a distant station.",
+    answer: "These are among the calmer, lower-crime neighborhoods visitors stay in. They feel quiet after dark, so the main consideration is the route home — favor a direct route or a cab over a long walk from a distant station.",
   },
   {
     question: "Where should first-time visitors stay in NYC?",
-    answer: "Upper West Side, Upper East Side, Midtown, Chelsea, Flatiron, and Brooklyn Heights are practical choices because they combine transit, hotels, food, and active streets.",
+    answer: "Upper West Side, Upper East Side, Midtown, Chelsea, Flatiron, and Brooklyn Heights are practical choices because they combine hotels, food, active streets, and simple transportation.",
   },
   {
     question: "What should I do if I feel unsafe in NYC?",
@@ -177,7 +204,7 @@ export default function NYCSafetyGuideClient() {
             <p className={styles.eyebrow}>NYC safety guide</p>
             <h1>Is New York City Safe to Visit in 2026?</h1>
             <p className={styles.lede}>
-              Yes for most visitors, with smart routing. Citywide major crime is down 6.2% year-to-date through May 2026 and murders are at record lows — but street smarts still matter. This guide shows where to stay, how to use transit, what changes after dark, and what to do when a situation feels off.
+              Yes for most visitors, with smart routing. Citywide major crime is down 6.2% year-to-date through May 2026 and murders are at record lows — but street smarts still matter. This guide shows where to stay, what changes after dark, how to avoid tourist scams, and what to do when a situation feels off.
             </p>
 
             <div className={styles.actions}>
@@ -221,6 +248,25 @@ export default function NYCSafetyGuideClient() {
               <article className={styles.defaultCard} key={item.title}>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className={styles.guideRouter} aria-labelledby="guide-router-heading">
+          <div className={styles.sectionHeader}>
+            <p className={styles.eyebrow}>Use the right guide</p>
+            <h2 id="guide-router-heading">Start broad here, then go deeper only where needed</h2>
+            <p>
+              This page is the parent NYC safety hub. Use the specialist guides when your question is really about the subway, late-night plans, or solo female travel.
+            </p>
+          </div>
+          <div className={styles.routerGrid}>
+            {guideRoutes.map((route) => (
+              <article className={styles.routerCard} key={route.title}>
+                <h3>{route.title}</h3>
+                <p>{route.text}</p>
+                <Link href={route.href}>{route.label}</Link>
               </article>
             ))}
           </div>
@@ -273,7 +319,7 @@ export default function NYCSafetyGuideClient() {
             <p className={styles.eyebrow}>Save the safety defaults</p>
             <h2 id="safety-checklist-heading">Send the NYC solo safety checklist to your inbox</h2>
             <p>
-              Keep the key hotel, subway, late-night, and reset moves handy before your first day in the city.
+              Keep the key hotel, walking, late-night, tourist scam, and reset moves handy before your first day in the city.
             </p>
           </div>
           <EmailSignup source="nyc-safety-guide-checklist" city="NYC" />
@@ -284,16 +330,19 @@ export default function NYCSafetyGuideClient() {
             <p className={styles.eyebrow}>After dark</p>
             <h2 id="night-heading">Night safety is mostly about the route home</h2>
             <p>
-              NYC can feel energetic and safe late at night in the right places. The risk rises when a traveler is tired, on a quiet block, unsure of the station, or trying to save money with a complicated route.
+              NYC can feel energetic and safe late at night in the right places. The risk rises when a traveler is tired, on a quiet block, unsure of the route home, or trying to save money with a complicated plan.
             </p>
             <Link className={styles.textLink} href="/destination/nyc/is-nyc-safe-at-night">
               Read the dedicated NYC night safety guide
+            </Link>
+            <Link className={styles.textLink} href="/destination/nyc/subway-safety-guide">
+              Read the dedicated NYC subway safety guide
             </Link>
           </div>
           <div className={styles.rulePanel}>
             <h3>Late-night decision rule</h3>
             <p>
-              If your route requires an empty platform, a long transfer, or a quiet walk after the station, spend the extra money on a cab or rideshare.
+              If your route requires a long transfer, a quiet walk, or uncertainty after dark, spend the extra money on a cab or rideshare.
             </p>
           </div>
         </section>

@@ -20,6 +20,7 @@
 
 .hero,
 .quickAnswer,
+.guideRouter,
 .sectionStack,
 .splitSection,
 .sourceSection,
@@ -226,6 +227,14 @@
   align-items: start;
 }
 
+.guideRouter {
+  margin-top: 28px;
+  padding: clamp(28px, 4vw, 44px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
 .quickAnswer h2,
 .sectionHeader h2,
 .splitSection h2,
@@ -236,6 +245,7 @@
 }
 
 .defaultGrid,
+.routerGrid,
 .sourceGrid,
 .emergencyGrid {
   display: grid;
@@ -244,6 +254,7 @@
 }
 
 .defaultCard,
+.routerCard,
 .neighborhoodCard,
 .situationCard,
 .sourceCard,
@@ -257,6 +268,41 @@
 
 .defaultCard {
   background: #fbfdff;
+}
+
+.routerGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 28px;
+}
+
+.routerCard {
+  background: #fbfdff;
+}
+
+.routerCard h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.12rem;
+  line-height: 1.22;
+}
+
+.routerCard p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.routerCard a {
+  display: inline-flex;
+  margin-top: 16px;
+  color: var(--blue);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.routerCard a:hover {
+  text-decoration: underline;
 }
 
 .defaultCard h3,
@@ -454,6 +500,7 @@
 @media (max-width: 1060px) {
   .hero,
   .quickAnswer,
+  .guideRouter,
   .checklistCta,
   .splitSection {
     grid-template-columns: 1fr;
@@ -464,6 +511,7 @@
   }
 
   .defaultGrid,
+  .routerGrid,
   .neighborhoodGrid,
   .situationGrid,
   .emergencyGrid,
@@ -480,6 +528,7 @@
 
   .hero,
   .quickAnswer,
+  .guideRouter,
   .sectionStack,
   .splitSection,
   .sourceSection,
@@ -513,6 +562,7 @@
   }
 
   .defaultGrid,
+  .routerGrid,
   .neighborhoodGrid,
   .situationGrid,
   .sourceGrid,

@@ -3,7 +3,7 @@ import NYCSafetyGuideClient from "./nycsafetyguideclient";
 export const metadata = {
   title: "Is NYC Safe in 2026? An Honest, Data-Backed Visitor Guide",
   description:
-    "Is New York City safe to visit in 2026? An honest, data-backed answer using NYPD and MTA stats — where to stay, what to skip, subway tips, scams to dodge, and what to do if something feels off.",
+    "Is New York City safe to visit in 2026? A data-backed visitor guide covering safe areas to stay, night safety, tourist scams, solo travel, and emergency steps.",
   alternates: {
     canonical: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
   },
@@ -21,7 +21,7 @@ export const metadata = {
   openGraph: {
     title: "Is NYC Safe in 2026? An Honest, Data-Backed Visitor Guide",
     description:
-      "Is NYC safe in 2026? An honest, data-backed guide — where to stay, transit tips, scams to avoid, and what to do if a situation feels off.",
+      "Is NYC safe in 2026? A data-backed visitor guide covering safe areas to stay, night safety, tourist scams, solo travel, and emergency steps.",
     url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
     siteName: "Travels Americas",
     type: "article",
@@ -39,7 +39,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Is NYC Safe in 2026? An Honest, Data-Backed Visitor Guide",
     description:
-      "Is NYC safe in 2026? An honest, data-backed visitor guide — where to stay, transit tips, scams, and emergency actions.",
+      "Is NYC safe in 2026? A data-backed visitor guide covering where to stay, night safety, tourist scams, solo travel, and emergency actions.",
     images: ["https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.webp"],
   },
 };
@@ -50,7 +50,7 @@ export default function NYCSafetyGuide() {
     "@type": "Guide",
     name: "NYC Safety Guide for Visitors",
     description:
-      "A practical, scenario-based safety guide for visiting New York City with neighborhood, transit, night, and emergency guidance.",
+      "A practical safety guide for visiting New York City with neighborhood, night, solo travel, tourist scam, and emergency guidance.",
     url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
     inLanguage: "en-US",
     dateModified: "2026-06-27",
@@ -98,7 +98,7 @@ export default function NYCSafetyGuide() {
         name: "Is it safe to travel to NYC alone?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Solo travel in NYC is common and manageable. Stay in central, transit-connected neighborhoods, keep late-night routes simple, tell someone your plans, and use a rideshare when a subway transfer feels too quiet. Our dedicated solo and female-solo guides cover this in detail.",
+          text: "Solo travel in NYC is common and manageable. Stay in central, well-connected neighborhoods, keep late-night routes simple, tell someone your plans, and use a rideshare when the route home feels too quiet. Our dedicated solo and female-solo guides cover this in detail.",
         },
       },
       {
@@ -106,7 +106,7 @@ export default function NYCSafetyGuide() {
         name: "Is the NYC subway safe at night?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The subway carries millions safely each day and transit crime sits near a 16-year low, though early 2026 saw a brief uptick before levelling off. At night, avoid empty platforms and cars, reduce transfers, and switch to a cab or rideshare when a route feels thin.",
+          text: "For broad NYC safety planning, treat the subway as one part of your route decision: daytime rides are usually straightforward, while late-night trips should be simple and direct. For platform, train-car, Help Point, and station-specific advice, use the dedicated subway safety guide.",
         },
       },
       {
@@ -114,7 +114,7 @@ export default function NYCSafetyGuide() {
         name: "Are Tribeca, DUMBO, and Brooklyn Heights safe at night?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "These are among the calmer, lower-crime neighborhoods visitors stay in. They feel quiet after dark, so the main consideration is the route home — favor a direct subway line or a cab over a long walk from a distant station.",
+          text: "These are among the calmer, lower-crime neighborhoods visitors stay in. They feel quiet after dark, so the main consideration is the route home — favor a direct route or a cab over a long walk from a distant station.",
         },
       },
       {
@@ -122,7 +122,7 @@ export default function NYCSafetyGuide() {
         name: "Where should first-time visitors stay in NYC?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Upper West Side, Upper East Side, Midtown, Chelsea, Flatiron, and Brooklyn Heights are practical choices because they combine transit, hotels, food, and active streets.",
+          text: "Upper West Side, Upper East Side, Midtown, Chelsea, Flatiron, and Brooklyn Heights are practical choices because they combine hotels, food, active streets, and simple transportation.",
         },
       },
       {
@@ -167,7 +167,7 @@ export default function NYCSafetyGuide() {
     name: "NYC Safety Guide for Visitors",
     url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
     description:
-      "A calm, practical NYC safety guide for visitors with route planning, transit guidance, neighborhood context, and emergency actions.",
+      "A calm, practical NYC safety guide for visitors with safe-area planning, night safety, tourist scam awareness, solo travel context, and emergency actions.",
     isPartOf: {
       "@type": "WebSite",
       name: "Travels Americas",
