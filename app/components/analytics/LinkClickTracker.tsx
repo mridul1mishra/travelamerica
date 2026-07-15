@@ -20,6 +20,13 @@ function cleanPath(url: URL) {
   return `${url.pathname}${url.search || ""}`;
 }
 
+function getBookingEventName(type: string) {
+  if (type === "flight") return "booking_flight_click";
+  if (type === "hotel") return "booking_hotel_click";
+  if (type === "activity") return "booking_activity_click";
+  return "";
+}
+
 export default function LinkClickTracker() {
   useEffect(() => {
     function handleClick(event: MouseEvent) {
@@ -45,6 +52,8 @@ export default function LinkClickTracker() {
       const rel = link.getAttribute("rel") || "";
       const isExternal = url.origin !== window.location.origin;
       const partner = getPartner(url, rel);
+      const bookingType = link.dataset.bookingType || "";
+      const bookingEventName = getBookingEventName(bookingType);
       const isBookingCta =
         url.pathname.includes("/destination/nyc/booking") ||
         url.searchParams.has("from") ||
@@ -60,6 +69,16 @@ export default function LinkClickTracker() {
         cta_placement: link.dataset.ctaPlacement || "",
         source_page: url.searchParams.get("from") || "",
       };
+
+      if (bookingEventName) {
+        window.gtag("event", bookingEventName, {
+          ...params,
+          booking_type: bookingType,
+          item_name: link.dataset.itemName || link.getAttribute("aria-label") || params.link_text,
+          outbound_domain: isExternal ? url.hostname.replace(/^www\./, "") : "",
+        });
+        return;
+      }
 
       if (partner) {
         window.gtag("event", "affiliate_click", {

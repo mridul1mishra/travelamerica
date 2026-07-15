@@ -287,7 +287,15 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                         </div>
                         <div className={styles.priceBlock}>
                           <strong>{row.price}</strong>
-                          <a href={row.buttonUrl} target="_blank" rel="noopener noreferrer">{row.buttonText}</a>
+                          <a
+                            href={row.buttonUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-booking-type="flight"
+                            data-item-name={`${row.airline.name} ${row.departure.city} to ${row.arrival.city}`}
+                          >
+                            {row.buttonText}
+                          </a>
                         </div>
                       </article>
                     ))}
@@ -328,7 +336,15 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                   </div>
                   <div className={styles.cardGrid}>
                     {filteredHotels.map((hotel) => (
-                      <a className={styles.bookingCard} key={hotel.title} href={hotel.url} target="_blank" rel="noopener noreferrer">
+                      <a
+                        className={styles.bookingCard}
+                        key={hotel.title}
+                        href={hotel.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-booking-type="hotel"
+                        data-item-name={hotel.title}
+                      >
                         <img src={hotel.img} alt={hotel.title} />
                         <div className={styles.cardBody}>
                           <span className={styles.badge}>Hotel</span>
@@ -375,7 +391,15 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                   </div>
                   <div className={styles.cardGrid}>
                     {filteredActivities.map((activity) => (
-                      <a className={styles.bookingCard} key={activity.title} href={activity.url} target="_blank" rel="noopener noreferrer">
+                      <a
+                        className={styles.bookingCard}
+                        key={activity.title}
+                        href={activity.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-booking-type="activity"
+                        data-item-name={activity.title}
+                      >
                         <img src={activity.img} alt={activity.title} />
                         <div className={styles.cardBody}>
                           {activity.category && <span className={styles.badge}>{activity.category}</span>}

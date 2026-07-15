@@ -51,7 +51,7 @@ test.describe("NYC safety SEO pages", () => {
       "href",
       nightSafetyPath,
     );
-    await expect(page.getByRole("link", { name: /NYC subway safety guide/i })).toHaveAttribute(
+    await expect(page.getByRole("link", { name: /NYC subway safety guide/i }).first()).toHaveAttribute(
       "href",
       subwaySafetyPath,
     );
@@ -121,13 +121,14 @@ test.describe("NYC safety SEO pages", () => {
   test("female solo guide keeps specialist safety role, author, sources, and cluster links", async ({ page }) => {
     await page.goto(femaleSoloPath);
 
-    await expect(page).toHaveTitle(/Is NYC Safe for Solo Female Travelers\? 2026 Guide/i);
+    await expect(page).toHaveTitle(/Solo Female Travel in NYC: Safety & Confidence Guide 2026/i);
     await expect(page.getByRole("heading", { level: 1, name: /Is NYC Safe for Solo Female Travelers\?/i })).toBeVisible();
     await expect(page.getByText(/By Manisha Shukla/i)).toBeVisible();
     await expect(page.getByRole("heading", { name: /Use data for reassurance, and scenarios for decisions/i })).toBeVisible();
     await expect(page.getByText(/citywide major crime down 6\.2%/i)).toBeVisible();
     await expect(page.getByRole("heading", { name: /Use stay heuristics, not fixed safety rankings/i })).toBeVisible();
     await expect(page.getByRole("heading", { name: /Someone keeps engaging after you say no/i })).toBeVisible();
+    await expect(page.getByRole("heading", { name: /What to do if harassment, catcalling, or being followed changes the mood/i })).toBeVisible();
 
     await expect(page.getByRole("link", { name: /General NYC safety guide/i })).toHaveAttribute(
       "href",
@@ -140,9 +141,10 @@ test.describe("NYC safety SEO pages", () => {
     await expect(page.getByRole("link", { name: "Solo trip guide", exact: true })).toHaveAttribute("href", soloTripPath);
 
     const jsonLd = await page.locator('script[type="application/ld+json"]').first().textContent();
-    expect(jsonLd).toContain('"dateModified":"2026-06-27"');
+    expect(jsonLd).toContain('"dateModified":"2026-07-03"');
     expect(jsonLd).toContain("Manisha Shukla");
     expect(jsonLd).toContain("Where should solo female travelers stay in NYC?");
+    expect(jsonLd).toContain("What should I do if someone follows me in NYC?");
   });
 
   test("female solo guide hero renders cleanly on desktop and mobile", async ({ page }) => {
