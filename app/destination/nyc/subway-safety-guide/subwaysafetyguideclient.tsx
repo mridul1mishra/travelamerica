@@ -57,6 +57,18 @@ export default function SubwaySafetyGuidePage(){
         By <a href="/about" style={{ color: "#1d4ed8", fontWeight: 600, textDecoration: "none" }}>Mridul Mishra</a> · Updated June 2026 · Fact-checked against NYPD &amp; MTA data
       </div>
 
+      <SectionWrapper id="subway-safety-quick-checklist">
+        <EmailSignup
+          source="nyc-subway-safety-hero-checklist"
+          city="NYC"
+          headline="Get the NYC subway safety checklist"
+          subheadline="A quick PDF for night rides, solo travel, scams, emergency steps, and station checks."
+          buttonLabel="Send the subway checklist"
+          offerName="NYC subway safety checklist"
+          successMessage="Your NYC subway safety checklist is on its way."
+        />
+      </SectionWrapper>
+
       <SectionWrapper id="why-trust-this-guide">
         <WhyTrustThisGuide data={data.why_trust_this_guide} />
       </SectionWrapper>
@@ -224,6 +236,8 @@ export default function SubwaySafetyGuidePage(){
           city="NYC"
           headline="Get the NYC subway safety checklist"
           subheadline="A quick PDF for night rides, solo travel, scams, emergency steps, and station checks."
+          buttonLabel="Send the subway checklist"
+          offerName="NYC subway safety checklist"
           successMessage="Your NYC subway safety checklist is on its way."
         />
       </SectionWrapper>

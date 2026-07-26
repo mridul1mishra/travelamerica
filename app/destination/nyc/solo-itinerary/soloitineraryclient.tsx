@@ -178,6 +178,16 @@ export default function SoloItineraryClient({ grouped }: SoloItineraryClientProp
           </div>
         </section>
 
+        <EmailSignup
+          source="solo-itinerary-hero-printable"
+          city="NYC"
+          headline="Send me the printable 3-day NYC solo itinerary"
+          subheadline="A cleaner copy of the route, neighborhood flow, packing notes, and booking checklist so you can plan without reopening the page."
+          buttonLabel="Send the printable plan"
+          offerName="Printable 3-day NYC solo itinerary"
+          successMessage="Your printable 3-day NYC solo itinerary is on its way."
+        />
+
         <section className={styles.plannerBand} aria-labelledby="planner-heading">
           <div className={styles.bandIntro}>
             <p className={styles.eyebrow}>How to use this itinerary</p>
@@ -193,7 +203,14 @@ export default function SoloItineraryClient({ grouped }: SoloItineraryClientProp
           </div>
         </section>
 
-        <EmailSignup source="solo-itinerary" city="NYC" />
+        <EmailSignup
+          source="solo-itinerary"
+          city="NYC"
+          headline="Get the NYC solo trip planning PDF"
+          subheadline="Use it to keep the 3-day route, packing list, and budget checkpoints in one place."
+          buttonLabel="Send the planning PDF"
+          offerName="NYC solo trip planning PDF"
+        />
 
         <section id="day-plan" className={styles.daySection} aria-labelledby="days-heading">
           <div className={styles.sectionHeader}>
@@ -246,7 +263,14 @@ export default function SoloItineraryClient({ grouped }: SoloItineraryClientProp
               Keep the day-by-day route handy before you compare hotels or start booking timed attractions.
             </p>
           </div>
-          <EmailSignup source="solo-itinerary-after-day-plan" city="NYC" />
+          <EmailSignup
+            source="solo-itinerary-after-day-plan"
+            city="NYC"
+            headline="Email me this 3-day NYC route"
+            subheadline="Save the day-by-day route before you compare hotels or start booking timed attractions."
+            buttonLabel="Email me the route"
+            offerName="NYC 3-day route email"
+          />
         </section>
 
         <section className={styles.routePanel} aria-labelledby="route-heading">

@@ -238,6 +238,16 @@ export default function NYCSafetyGuideClient() {
           </div>
         </section>
 
+        <EmailSignup
+          source="nyc-safety-guide-hero-checklist"
+          city="NYC"
+          headline="Get the NYC solo safety checklist"
+          subheadline="A quick planning PDF for hotel area checks, subway defaults, late-night returns, common scams, and reset moves."
+          buttonLabel="Send the safety checklist"
+          offerName="NYC solo safety checklist"
+          successMessage="Your NYC solo safety checklist is on its way."
+        />
+
         <section className={styles.quickAnswer} aria-labelledby="quick-answer-heading">
           <div>
             <p className={styles.eyebrow}>Traveler verdict</p>
@@ -322,7 +332,15 @@ export default function NYCSafetyGuideClient() {
               Keep the key hotel, walking, late-night, tourist scam, and reset moves handy before your first day in the city.
             </p>
           </div>
-          <EmailSignup source="nyc-safety-guide-checklist" city="NYC" />
+          <EmailSignup
+            source="nyc-safety-guide-checklist"
+            city="NYC"
+            headline="Send me the NYC safety checklist"
+            subheadline="Keep the hotel, walking, late-night, tourist scam, and reset moves handy before your first day in the city."
+            buttonLabel="Send the checklist"
+            offerName="NYC safety checklist"
+            successMessage="Your NYC safety checklist is on its way."
+          />
         </section>
 
         <section id="subway-safety" className={styles.splitSection} aria-labelledby="night-heading">

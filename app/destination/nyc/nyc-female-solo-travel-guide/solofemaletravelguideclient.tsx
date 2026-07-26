@@ -254,6 +254,16 @@ export default function FemaleSoloTravelGuide() {
           </div>
         </section>
 
+        <EmailSignup
+          source="nyc-female-solo-guide-hero-checklist"
+          city="NYC"
+          headline="Get the solo female NYC safety checklist"
+          subheadline="A quick PDF for hotel checks, subway defaults, late-night return plans, and what to do when something feels off."
+          buttonLabel="Send the solo safety checklist"
+          offerName="Solo female NYC safety checklist"
+          successMessage="Your solo female NYC safety checklist is on its way."
+        />
+
         <section className={styles.sourceBox} aria-labelledby="source-box-heading">
           <div>
             <p className={styles.eyebrow}>Source-backed context</p>
@@ -389,7 +399,15 @@ export default function FemaleSoloTravelGuide() {
               Keep the hotel checks, subway defaults, late-night return plan, and reset moves available while you plan.
             </p>
           </div>
-          <EmailSignup source="nyc-female-solo-guide-checklist" city="NYC" />
+          <EmailSignup
+            source="nyc-female-solo-guide-checklist"
+            city="NYC"
+            headline="Send me the solo female NYC safety checklist"
+            subheadline="Keep the hotel checks, subway defaults, late-night return plan, and reset moves available while you plan."
+            buttonLabel="Send the checklist"
+            offerName="Solo female NYC safety checklist"
+            successMessage="Your solo female NYC safety checklist is on its way."
+          />
         </section>
 
         <section className={styles.splitSection} aria-labelledby="night-heading">
