@@ -14,7 +14,7 @@ export default function PlanningIntent() {
   return (
     <section id="planning-intent" className={styles.section}>
       <h2 className={styles.heading}>Planning a trip to NYC?</h2>
-      <p className={styles.subheading}>Answer a few quick questions to get personalised recommendations.</p>
+      <p className={styles.subheading}>Answer a few quick questions to get practical planning links for your trip.</p>
 
       <div className={styles.group}>
         <span className={styles.label}>Is this your first visit?</span>
@@ -24,8 +24,8 @@ export default function PlanningIntent() {
             First time
           </button>
 
-          <button className={`${styles.option} ${tripType === 'Returning' ? styles.selected : ''}`}
-          onClick={() => setTripType(tripType === 'Returning' ? null : 'Returning')} >
+          <button className={`${styles.option} ${tripType === 'returning' ? styles.selected : ''}`}
+          onClick={() => setTripType(tripType === 'returning' ? null : 'returning')} >
             Returning
           </button>
         </div>
@@ -50,23 +50,23 @@ export default function PlanningIntent() {
       </div>
       {/* Interests */}
       <div className={styles.group}>
-        <span className={styles.label}>What excites you most ?</span>
+        <span className={styles.label}>What excites you most?</span>
         <div className={styles.options}>
           <button className={`${styles.option} ${interest === 'sightseeing' ? styles.selected : ''}`}
           onClick={() => setInterest(interest === 'sightseeing' ? null : 'sightseeing')}>
-            Sight Seeing
+            Sightseeing
           </button>
 
-          <button className={`${styles.option} ${interest === 'foodanddining' ? styles.selected : ''}`}
-          onClick={() => setInterest(interest === "foodanddining" ? null : "foodanddining")} >
+          <button className={`${styles.option} ${interest === 'food-and-dining' ? styles.selected : ''}`}
+          onClick={() => setInterest(interest === "food-and-dining" ? null : "food-and-dining")} >
             Food and Dining
           </button>
           <button className={`${styles.option} ${interest === 'shows' ? styles.selected : ''}`}
           onClick={() => setInterest(interest === "shows" ? null : "shows")} >
             Shows & Culture
           </button>
-          <button className={`${styles.option} ${interest === 'Family' ? styles.selected : ''}`}
-          onClick={() => setInterest(interest === "Family" ? null : "Family")} >
+          <button className={`${styles.option} ${interest === 'family' ? styles.selected : ''}`}
+          onClick={() => setInterest(interest === "family" ? null : "family")} >
             Family-Friendly
           </button>
         </div>
@@ -75,7 +75,7 @@ export default function PlanningIntent() {
       {tripType && duration && interest && (
         <div className={styles.nextStep}>
           <button className={styles.primaryCta} onClick={() => setShowRecommendations(true)}>
-            See Recommendations
+            See planning links
           </button>
           <RecommendationPreview
           tripType = {tripType}

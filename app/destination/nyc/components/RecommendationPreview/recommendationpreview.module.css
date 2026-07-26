@@ -55,6 +55,7 @@
 }
 
 .primaryCta {
+  display: inline-block;
   background-color: #000;
   color: #fff;
   padding: 0.85rem 1.75rem;
@@ -62,6 +63,7 @@
   border: none;
   font-size: 1rem;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .primaryCta:hover {

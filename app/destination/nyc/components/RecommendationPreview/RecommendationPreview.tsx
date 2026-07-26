@@ -18,8 +18,9 @@ export default function RecommendationsPreview({
   visible,
 }: RecommendationsPreviewProps) {
   const sectionRef = useRef<HTMLElement | null>(null);
+  const tripTypeLabel = tripType === 'first-time' ? 'first-time visitor' : 'returning visitor';
+  const interestLabel = interest.replaceAll('-', ' ');
 
-  // Scroll into view when shown
   useEffect(() => {
     if (visible && sectionRef.current) {
       sectionRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -35,62 +36,44 @@ export default function RecommendationsPreview({
       aria-labelledby="recommendations-heading"
     >
       <h2 id="recommendations-heading" className={styles.heading}>
-        Based on your NYC trip
+        Start with these NYC planning guides
       </h2>
 
       <p className={styles.subheading}>
-        Since you&apos;re a {tripType === 'first-time' ? 'first‑time visitor ' : 'returning visitor '}
-        with a {duration} day stay, here&apos;s where we&apos;d start.
+        Since you&apos;re a {tripTypeLabel} planning a {duration}-day trip with a focus on {interestLabel},
+        these are the most useful next pages.
       </p>
 
       <div className={styles.grid}>
-        {/* Neighborhoods */}
         <div className={styles.card}>
           <h3>Best Neighborhoods</h3>
-          <p>
-            NYC areas that work well for your stay length and travel style.
-          </p>
-          <Link
-            href="/destination/nyc/neighborhood-guide"
-            className={styles.link}
-          >
+          <p>Compare safe, convenient areas before choosing a hotel base.</p>
+          <Link href="/destination/nyc/neighborhood-guide" className={styles.link}>
             Explore neighborhoods →
           </Link>
         </div>
 
-        {/* Things to Do */}
         <div className={styles.card}>
           <h3>Things You&apos;ll Love</h3>
-          <p>
-            Top experiences focused on {interest}.
-          </p>
-          <Link
-            href="/destination/nyc/things-to-do"
-            className={styles.link}
-          >
+          <p>Find experiences and attractions that match your main trip interest.</p>
+          <Link href="/destination/nyc/things-to-do" className={styles.link}>
             See things to do →
           </Link>
         </div>
 
-        {/* Itinerary */}
         <div className={styles.card}>
           <h3>Suggested Itinerary</h3>
-          <p>
-            A {duration}-day plan designed for your trip.
-          </p>
-          <Link
-            href="/destination/nyc/itineraries"
-            className={styles.link}
-          >
-            View itineraries →
+          <p>Use a practical solo-friendly route as the base for your NYC plan.</p>
+          <Link href="/destination/nyc/solo-itinerary" className={styles.link}>
+            View the 3-day route →
           </Link>
         </div>
       </div>
 
       <div className={styles.nextStep}>
-        <button className={styles.primaryCta}>
-          Get a personalized NYC itinerary
-        </button>
+        <Link href="/destination/nyc/solo-itinerary" className={styles.primaryCta}>
+          Open the 3-day NYC itinerary
+        </Link>
       </div>
     </section>
   );

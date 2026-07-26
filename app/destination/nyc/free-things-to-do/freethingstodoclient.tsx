@@ -32,7 +32,15 @@ export default function FreeThingsToDoClient() {
       />
       <FreeCategories />
       <MuseumTable />
-      <EmailSignup source="free-things-to-do" />
+      <EmailSignup
+        source="free-things-to-do"
+        city="NYC"
+        headline="Get the NYC free-things planning list"
+        subheadline="Save free sights, museum notes, rainy-day ideas, and the 3-day itinerary in one planning email."
+        buttonLabel="Send me the list"
+        offerName="NYC free things planning list"
+        successMessage="Your NYC planning list is on its way."
+      />
       <SeasonalEvents />
       <SavingsTips />
       <FAQAccordion faqs={faqData} />

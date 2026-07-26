@@ -87,7 +87,15 @@ export default function Home() {
         mapImage={{ src: "/destination/bestareatostay/mini-map.png", alt: "Mini-map of Upper West Side" }}
       />
       <NeighborhoodRankingCards cityName="NYC" neighborhoods={nycNeighborhoods} />
-      <EmailSignup source="best-areas-to-stay" />
+      <EmailSignup
+        source="best-areas-to-stay"
+        city="NYC"
+        headline="Get the NYC stay-area planning PDF"
+        subheadline="Save the best neighborhoods, safety notes, and the 3-day itinerary before you compare hotels."
+        buttonLabel="Send me the PDF"
+        offerName="NYC stay-area planning PDF"
+        successMessage="Your NYC stay-area planning PDF is on its way."
+      />
       <div className={styles.container}>
         <FAQAccordion faqs={faqData} />
       </div>

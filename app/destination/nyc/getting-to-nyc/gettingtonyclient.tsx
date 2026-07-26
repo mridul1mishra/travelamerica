@@ -30,7 +30,15 @@ export default function GettingToNYCClient() {
         label="Book your trip"
       />
       <AirportTabs />
-      <EmailSignup source="getting-to-nyc" />
+      <EmailSignup
+        source="getting-to-nyc"
+        city="NYC"
+        headline="Get the NYC arrival planning PDF"
+        subheadline="Save airport transfer notes, first-day route checks, and the 3-day itinerary in one planning email."
+        buttonLabel="Send me the PDF"
+        offerName="NYC arrival planning PDF"
+        successMessage="Your NYC arrival planning PDF is on its way."
+      />
       <ScamWarning />
       <ArrivalTips />
       <FAQAccordion faqs={faqData} />

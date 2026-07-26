@@ -31,7 +31,15 @@ export default function BestTimeToVisitClient() {
       />
       <SeasonCards />
       <MonthGrid />
-      <EmailSignup source="best-time-to-visit" />
+      <EmailSignup
+        source="best-time-to-visit"
+        city="NYC"
+        headline="Get the NYC trip timing checklist"
+        subheadline="Use it with the 3-day itinerary to compare months, weather, crowds, and booking windows."
+        buttonLabel="Send me the checklist"
+        offerName="NYC trip timing checklist"
+        successMessage="Your NYC planning PDF is on its way."
+      />
       <TravelerTypes />
       <FAQAccordion faqs={faqData} />
       <BookingCTA

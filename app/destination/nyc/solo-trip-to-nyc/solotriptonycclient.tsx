@@ -48,12 +48,28 @@ export default function SoloTripNYCClient() {
       <SubwayAccessSection />
       <InfoSection sections={getaroundData.sections} />
       <AirportTransferMatrix />
-      <EmailSignup source="solo-trip-to-nyc" />
+      <EmailSignup
+        source="solo-trip-to-nyc"
+        city="NYC"
+        headline="Get the NYC solo trip planning PDF"
+        subheadline="Save the 3-day itinerary, solo dining notes, subway defaults, and neighborhood checks in one planning email."
+        buttonLabel="Send me the PDF"
+        offerName="NYC solo trip planning PDF"
+        successMessage="Your NYC solo trip planning PDF is on its way."
+      />
       <WhyTrustThisGuide />
       <SoloNycQa />
       <SoloTripNarrative />
       <ThreeDayItinerary days={data.days} ctaLink="/destination/nyc/solo-itinerary" />
-      <EmailSignup source="solo-trip-to-nyc-after-itinerary" />
+      <EmailSignup
+        source="solo-trip-to-nyc-after-itinerary"
+        city="NYC"
+        headline="Save the NYC solo itinerary"
+        subheadline="Get the 3-day route and solo trip notes in your inbox before you book hotels or timed attractions."
+        buttonLabel="Send me the itinerary"
+        offerName="NYC solo itinerary"
+        successMessage="Your NYC solo itinerary is on its way."
+      />
       <SoloModePlanner />
       <SeasonalSavings />
       <ScenarioSection />
