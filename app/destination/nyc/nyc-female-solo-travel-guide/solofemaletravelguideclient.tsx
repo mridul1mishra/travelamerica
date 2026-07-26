@@ -258,8 +258,8 @@ export default function FemaleSoloTravelGuide() {
           source="nyc-female-solo-guide-hero-checklist"
           city="NYC"
           headline="Get the solo female NYC safety checklist"
-          subheadline="A quick PDF for hotel checks, subway defaults, late-night return plans, and what to do when something feels off."
-          buttonLabel="Send the solo safety checklist"
+          subheadline="Get hotel checks, subway defaults, late-night return tips, and reset moves in one quick PDF."
+          buttonLabel="Send me the checklist"
           offerName="Solo female NYC safety checklist"
           successMessage="Your solo female NYC safety checklist is on its way."
         />
@@ -402,9 +402,9 @@ export default function FemaleSoloTravelGuide() {
           <EmailSignup
             source="nyc-female-solo-guide-checklist"
             city="NYC"
-            headline="Send me the solo female NYC safety checklist"
-            subheadline="Keep the hotel checks, subway defaults, late-night return plan, and reset moves available while you plan."
-            buttonLabel="Send the checklist"
+            headline="Save the solo female NYC safety checklist"
+            subheadline="Keep hotel checks, subway defaults, late-night return tips, and reset moves handy while you plan."
+            buttonLabel="Send me the checklist"
             offerName="Solo female NYC safety checklist"
             successMessage="Your solo female NYC safety checklist is on its way."
           />

@@ -242,8 +242,8 @@ export default function NYCSafetyGuideClient() {
           source="nyc-safety-guide-hero-checklist"
           city="NYC"
           headline="Get the NYC solo safety checklist"
-          subheadline="A quick planning PDF for hotel area checks, subway defaults, late-night returns, common scams, and reset moves."
-          buttonLabel="Send the safety checklist"
+          subheadline="Get hotel area checks, subway defaults, late-night return tips, and scam warnings in one quick PDF."
+          buttonLabel="Send me the checklist"
           offerName="NYC solo safety checklist"
           successMessage="Your NYC solo safety checklist is on its way."
         />
@@ -335,9 +335,9 @@ export default function NYCSafetyGuideClient() {
           <EmailSignup
             source="nyc-safety-guide-checklist"
             city="NYC"
-            headline="Send me the NYC safety checklist"
-            subheadline="Keep the hotel, walking, late-night, tourist scam, and reset moves handy before your first day in the city."
-            buttonLabel="Send the checklist"
+            headline="Save the NYC safety checklist"
+            subheadline="Keep hotel, walking, late-night, scam, and reset tips handy before your first day in the city."
+            buttonLabel="Send me the checklist"
             offerName="NYC safety checklist"
             successMessage="Your NYC safety checklist is on its way."
           />

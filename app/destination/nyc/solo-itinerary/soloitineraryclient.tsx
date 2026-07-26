@@ -181,9 +181,9 @@ export default function SoloItineraryClient({ grouped }: SoloItineraryClientProp
         <EmailSignup
           source="solo-itinerary-hero-printable"
           city="NYC"
-          headline="Send me the printable 3-day NYC solo itinerary"
-          subheadline="A cleaner copy of the route, neighborhood flow, packing notes, and booking checklist so you can plan without reopening the page."
-          buttonLabel="Send the printable plan"
+          headline="Get the printable 3-day NYC solo itinerary"
+          subheadline="Get the route, neighborhood flow, packing notes, and booking checklist in one easy PDF."
+          buttonLabel="Send me the PDF"
           offerName="Printable 3-day NYC solo itinerary"
           successMessage="Your printable 3-day NYC solo itinerary is on its way."
         />
@@ -202,15 +202,6 @@ export default function SoloItineraryClient({ grouped }: SoloItineraryClientProp
             ))}
           </div>
         </section>
-
-        <EmailSignup
-          source="solo-itinerary"
-          city="NYC"
-          headline="Get the NYC solo trip planning PDF"
-          subheadline="Use it to keep the 3-day route, packing list, and budget checkpoints in one place."
-          buttonLabel="Send the planning PDF"
-          offerName="NYC solo trip planning PDF"
-        />
 
         <section id="day-plan" className={styles.daySection} aria-labelledby="days-heading">
           <div className={styles.sectionHeader}>
@@ -266,9 +257,9 @@ export default function SoloItineraryClient({ grouped }: SoloItineraryClientProp
           <EmailSignup
             source="solo-itinerary-after-day-plan"
             city="NYC"
-            headline="Email me this 3-day NYC route"
-            subheadline="Save the day-by-day route before you compare hotels or start booking timed attractions."
-            buttonLabel="Email me the route"
+            headline="Save this 3-day NYC route"
+            subheadline="Get the day-by-day route in your inbox before you compare hotels or book timed attractions."
+            buttonLabel="Send me the route"
             offerName="NYC 3-day route email"
           />
         </section>

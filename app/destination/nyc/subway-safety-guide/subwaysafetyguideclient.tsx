@@ -62,8 +62,8 @@ export default function SubwaySafetyGuidePage(){
           source="nyc-subway-safety-hero-checklist"
           city="NYC"
           headline="Get the NYC subway safety checklist"
-          subheadline="A quick PDF for night rides, solo travel, scams, emergency steps, and station checks."
-          buttonLabel="Send the subway checklist"
+          subheadline="Get night ride tips, solo travel defaults, scam warnings, emergency steps, and station checks in one quick PDF."
+          buttonLabel="Send me the checklist"
           offerName="NYC subway safety checklist"
           successMessage="Your NYC subway safety checklist is on its way."
         />
@@ -235,8 +235,8 @@ export default function SubwaySafetyGuidePage(){
           source="nyc-subway-safety-checklist"
           city="NYC"
           headline="Get the NYC subway safety checklist"
-          subheadline="A quick PDF for night rides, solo travel, scams, emergency steps, and station checks."
-          buttonLabel="Send the subway checklist"
+          subheadline="Get night ride tips, solo travel defaults, scam warnings, emergency steps, and station checks in one quick PDF."
+          buttonLabel="Send me the checklist"
           offerName="NYC subway safety checklist"
           successMessage="Your NYC subway safety checklist is on its way."
         />
