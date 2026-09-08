@@ -22,7 +22,7 @@ import FemaleSoloTiles from "./components/FemaleSoloTiles/solofemaletravel";
 import { FemaleSoloData } from "@/app/models/femaleSolo";
 import FAQAccordion from "./components/FAQAccordion/faqsection";
 import cityFaqData from "@/content/destination/orlando/solo-trip-to-orlando/faq/faqsection.json";
-import EmailSignup from "./components/EmailSignup/EmailSignup";
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 import Footer from "./components/Footer/footer";
 
 export default function SoloTripToOrlandoClient() {

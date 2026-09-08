@@ -6,7 +6,7 @@ import MonthGrid from './components/monthgrid/MonthGrid';
 import TravelerTypes from './components/travelertypes/TravelerTypes';
 import BookingCTA from './components/BookingCTA/BookingCTA';
 import FAQAccordion from './components/FAQAccordion/faqsection';
-import EmailSignup from './components/EmailSignup/EmailSignup';
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 import Footer from './components/Footer/footer';
 
 const faqData = [

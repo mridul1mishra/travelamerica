@@ -21,7 +21,7 @@ import { WhyTrustThisGuide } from "./components/WhyTrustThisGuide/whytrustthisgu
 import cityWhyTrustData from "@/content/destination/orlando/orlando-female-solo-travel-guide/whyTrustItems/whyTrustItems.json";
 import FemaleSafetyNarrative from "./components/safetynarrative/FemaleSafetyNarrative";
 import BookingCTA from './components/BookingCTA/BookingCTA';
-import EmailSignup from './components/EmailSignup/EmailSignup';
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 
 const navLinks = [
   { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },

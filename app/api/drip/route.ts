@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Pool } from 'pg';
+import { createUnsubscribeToken } from '@/app/lib/unsubscribeToken';
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -8,7 +9,7 @@ const pool = new Pool({
 });
 
 function unsubscribeUrl(email: string): string {
-  const token = Buffer.from(email.toLowerCase().trim()).toString('base64');
+  const token = createUnsubscribeToken(email);
   return `https://www.travelsamericas.com/api/unsubscribe?token=${token}`;
 }
 
@@ -294,7 +295,7 @@ async function sendDripEmail(email: string, subject: string, html: string): Prom
 
 function isAuthorized(req: NextRequest): boolean {
   const secret = process.env.CRON_SECRET;
-  if (!secret) return true;
+  if (!secret) return false;
   return req.headers.get('authorization') === `Bearer ${secret}`;
 }
 

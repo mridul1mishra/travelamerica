@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Pool } from 'pg';
+import { createHash } from 'crypto';
+import { createUnsubscribeToken } from '@/app/lib/unsubscribeToken';
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -27,8 +29,59 @@ type SignupOffer = {
 };
 
 function unsubscribeUrl(email: string): string {
-  const token = Buffer.from(email.toLowerCase().trim()).toString('base64');
+  const token = createUnsubscribeToken(email);
   return `${siteUrl}/api/unsubscribe?token=${token}`;
+}
+
+const RATE_LIMIT_WINDOW_MINUTES = 15;
+const RATE_LIMIT_ATTEMPTS = 5;
+
+function clientIp(req: NextRequest): string {
+  return req.headers.get('x-vercel-forwarded-for')?.split(',')[0]?.trim()
+    ?? req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+    ?? 'unknown';
+}
+
+async function isRateLimited(client: { query: (sql: string, values?: unknown[]) => Promise<{ rows: Array<{ attempts: number }> }> }, ip: string) {
+  const key = createHash('sha256').update(ip).digest('hex');
+  const { rows } = await client.query(
+    `INSERT INTO signup_rate_limits (key, window_started, attempts)
+     VALUES ($1, NOW(), 1)
+     ON CONFLICT (key) DO UPDATE SET
+       attempts = CASE
+         WHEN signup_rate_limits.window_started < NOW() - ($2 * INTERVAL '1 minute') THEN 1
+         ELSE signup_rate_limits.attempts + 1
+       END,
+       window_started = CASE
+         WHEN signup_rate_limits.window_started < NOW() - ($2 * INTERVAL '1 minute') THEN NOW()
+         ELSE signup_rate_limits.window_started
+       END
+     RETURNING attempts`,
+    [key, RATE_LIMIT_WINDOW_MINUTES]
+  );
+  return rows[0]?.attempts > RATE_LIMIT_ATTEMPTS;
+}
+
+async function verifyTurnstile(token: string, ip: string): Promise<boolean> {
+  const secretKey = process.env.TURNSTILE_SECRET_KEY;
+  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  if (!secretKey && !siteKey) return true;
+  if (!secretKey || !siteKey) {
+    console.error('Turnstile is only partially configured');
+    return false;
+  }
+  if (!token) return false;
+
+  const body = new URLSearchParams({ secret: secretKey, response: token });
+  if (ip !== 'unknown') body.set('remoteip', ip);
+  const response = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    method: 'POST',
+    body,
+    cache: 'no-store',
+  });
+  if (!response.ok) return false;
+  const result = await response.json() as { success?: boolean };
+  return result.success === true;
 }
 
 function guideLink(label: string, path: string): EmailLink {
@@ -343,8 +396,20 @@ async function sendWelcomeEmail(email: string, source?: string): Promise<void> {
 }
 
 export async function POST(req: NextRequest) {
-  const { email, source } = await req.json();
+  if (!req.headers.get('content-type')?.includes('application/json')) {
+    return NextResponse.json({ message: 'Unsupported request.' }, { status: 415 });
+  }
+
+  let body: { email?: unknown; source?: unknown; website?: unknown; formStartedAt?: unknown; turnstileToken?: unknown };
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ message: 'Invalid request.' }, { status: 400 });
+  }
+
+  const { email, source, website, formStartedAt, turnstileToken } = body;
   const normalizedEmail = typeof email === 'string' ? email.toLowerCase().trim() : '';
+  const normalizedSource = typeof source === 'string' ? source.slice(0, 200) : 'unknown';
 
   if (!normalizedEmail || !normalizedEmail.includes('@')) {
     return NextResponse.json({ message: 'Invalid email address.' }, { status: 400 });
@@ -357,19 +422,39 @@ export async function POST(req: NextRequest) {
 
   const client = await pool.connect();
   try {
+    if (await isRateLimited(client, clientIp(req))) {
+      return NextResponse.json(
+        { message: 'Too many attempts. Please try again in 15 minutes.' },
+        { status: 429, headers: { 'Cache-Control': 'no-store', 'Retry-After': '900' } }
+      );
+    }
+
+    // A filled hidden field is almost certainly an automated form submission.
+    if (typeof website === 'string' && website.length > 0) {
+      return NextResponse.json({ message: 'Subscribed!' }, { status: 200 });
+    }
+
+    if (typeof formStartedAt === 'number' && Date.now() - formStartedAt < 800) {
+      return NextResponse.json({ message: 'Please try again.' }, { status: 429 });
+    }
+
+    if (!await verifyTurnstile(typeof turnstileToken === 'string' ? turnstileToken : '', clientIp(req))) {
+      return NextResponse.json({ message: 'Verification failed. Please try again.' }, { status: 403 });
+    }
+
     const result = await client.query(
       `INSERT INTO subscribers (email, source)
        VALUES ($1, $2)
        ON CONFLICT (email) DO NOTHING
        RETURNING id`,
-      [normalizedEmail, source ?? 'unknown']
+      [normalizedEmail, normalizedSource]
     );
 
     const isNew = (result.rowCount ?? 0) > 0;
 
     if (isNew) {
       try {
-        await sendWelcomeEmail(normalizedEmail, source);
+        await sendWelcomeEmail(normalizedEmail, normalizedSource);
       } catch (err) {
         console.error('Welcome email error (non-fatal):', err);
       }

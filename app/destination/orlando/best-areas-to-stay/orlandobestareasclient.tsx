@@ -10,7 +10,7 @@ import SoloTripIntro from "./components/SoloTripIntro/solotripintro";
 import SectionSafestNeighborhoods from "./components/SectionSafestNeighborhoods/safestneighborhood";
 import NeighborhoodRankingCards, { Neighborhood } from "./components/NeighborhoodRankingCards/neighborhoodrankingcard";
 import faqData from "@/content/destination/orlando/bestplacetostay/faqsection.json";
-import EmailSignup from "./components/EmailSignup/EmailSignup";
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 
 const orlandoNeighborhoods: Neighborhood[] = [
   {

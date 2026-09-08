@@ -16,7 +16,7 @@ import sectionsData from "./components/infosection/infosection.json";
 import EmergencyContactBlock from './components/emergencycontactblock/EmergencyContactBlock';
 import SafetyNarrative from './components/safetynarrative/SafetyNarrative';
 import BookingCTA from './components/BookingCTA/BookingCTA';
-import EmailSignup from './components/EmailSignup/EmailSignup';
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 
 const navLinks = [
   { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },

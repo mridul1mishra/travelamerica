@@ -4,7 +4,7 @@ import Footer from "./components/Footer/footer";
 import BookingCTA from "./components/BookingCTA/BookingCTA";
 import styles from "@/app/destination/city-hub.module.css";
 import FAQ from "./components/FAQ/faq";
-import EmailSignup from "./components/EmailSignup/EmailSignup";
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 
 interface FaqItem {
   question: string;

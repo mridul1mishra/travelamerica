@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Pool } from 'pg';
+import { verifyUnsubscribeToken } from '@/app/lib/unsubscribeToken';
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -17,10 +18,15 @@ export async function GET(req: NextRequest) {
     });
   }
 
-  let email: string;
+  let email: string | null;
   try {
-    email = Buffer.from(token, 'base64').toString('utf8');
-    if (!email.includes('@')) throw new Error('invalid');
+    email = verifyUnsubscribeToken(token);
+    // Keep links from emails already sent working during the migration to signed tokens.
+    if (!email && process.env.ALLOW_LEGACY_UNSUBSCRIBE_TOKENS === 'true') {
+      const legacyEmail = Buffer.from(token, 'base64').toString('utf8').toLowerCase().trim();
+      email = legacyEmail.includes('@') && legacyEmail.length <= 320 ? legacyEmail : null;
+    }
+    if (!email) throw new Error('invalid');
   } catch {
     return new NextResponse(unsubscribePage('Invalid link', 'This unsubscribe link is invalid or has expired.'), {
       status: 400,
@@ -54,12 +60,14 @@ export async function GET(req: NextRequest) {
 }
 
 function unsubscribePage(title: string, message: string): string {
+  const safeTitle = escapeHtml(title);
+  const safeMessage = escapeHtml(message);
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>${title} — Travels Americas</title>
+  <title>${safeTitle} — Travels Americas</title>
   <style>
     body{font-family:sans-serif;display:flex;align-items:center;justify-content:center;
          min-height:100vh;margin:0;background:#f9fafb;color:#111827}
@@ -72,10 +80,20 @@ function unsubscribePage(title: string, message: string): string {
 </head>
 <body>
   <div class="card">
-    <h1>${title}</h1>
-    <p>${message}</p>
+    <h1>${safeTitle}</h1>
+    <p>${safeMessage}</p>
     <a href="https://www.travelsamericas.com">← Back to TravelsAmericas.com</a>
   </div>
 </body>
 </html>`;
+}
+
+function escapeHtml(value: string): string {
+  return value.replace(/[&<>'"]/g, (character) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    "'": '&#39;',
+    '"': '&quot;',
+  })[character] ?? character);
 }

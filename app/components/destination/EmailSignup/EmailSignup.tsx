@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import Script from 'next/script';
+import { useEffect, useRef, useState } from 'react';
 import styles from './EmailSignup.module.css';
 
 declare global {
@@ -10,6 +11,10 @@ declare global {
       eventName: string,
       params?: Record<string, unknown>
     ) => void;
+    turnstile?: {
+      render: (element: HTMLElement, options: Record<string, unknown>) => string;
+      remove: (widgetId: string) => void;
+    };
   }
 }
 
@@ -36,6 +41,35 @@ export default function EmailSignup({
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
   const [hasStarted, setHasStarted] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const [turnstileReady, setTurnstileReady] = useState(false);
+  const formStartedAt = useRef(0);
+  const turnstileElement = useRef<HTMLDivElement>(null);
+  const turnstileWidget = useRef<string | null>(null);
+  const honeypot = useRef<HTMLInputElement>(null);
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+  useEffect(() => {
+    formStartedAt.current = Date.now();
+  }, []);
+
+  useEffect(() => {
+    if (!turnstileSiteKey || !turnstileReady || !turnstileElement.current || !window.turnstile) return;
+    if (turnstileWidget.current) return;
+
+    turnstileWidget.current = window.turnstile.render(turnstileElement.current, {
+      sitekey: turnstileSiteKey,
+      callback: (token: string) => setTurnstileToken(token),
+      'expired-callback': () => setTurnstileToken(''),
+      'error-callback': () => setTurnstileToken(''),
+      appearance: 'interaction-only',
+    });
+
+    return () => {
+      if (turnstileWidget.current && window.turnstile) window.turnstile.remove(turnstileWidget.current);
+      turnstileWidget.current = null;
+    };
+  }, [turnstileReady, turnstileSiteKey]);
 
   function track(eventName: 'email_signup_start' | 'email_signup' | 'email_signup_error') {
     if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
@@ -73,7 +107,13 @@ export default function EmailSignup({
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source }),
+        body: JSON.stringify({
+          email,
+          source,
+          website: honeypot.current?.value ?? '',
+          formStartedAt: formStartedAt.current,
+          turnstileToken,
+        }),
       });
       const data = await res.json();
 
@@ -110,6 +150,13 @@ export default function EmailSignup({
 
   return (
     <div className={styles.wrapper}>
+      {turnstileSiteKey && (
+        <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+          strategy="afterInteractive"
+          onLoad={() => setTurnstileReady(true)}
+        />
+      )}
       <div className={styles.card}>
         <div className={styles.pdfIcon} aria-hidden="true">📄</div>
         <div className={styles.copy}>
@@ -119,6 +166,9 @@ export default function EmailSignup({
           </p>
         </div>
         <form className={styles.form} onSubmit={handleSubmit} noValidate>
+          <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}>
+            <label>Website<input ref={honeypot} name="website" type="text" tabIndex={-1} autoComplete="off" /></label>
+          </div>
           <input
             className={styles.input}
             type="email"
@@ -132,10 +182,11 @@ export default function EmailSignup({
           <button
             className={styles.button}
             type="submit"
-            disabled={status === 'loading'}
+            disabled={status === 'loading' || Boolean(turnstileSiteKey && !turnstileToken)}
           >
             {status === 'loading' ? 'Sending...' : buttonLabel || 'Send it free'}
           </button>
+          {turnstileSiteKey && <div ref={turnstileElement} />}
         </form>
         {status === 'error' && <p className={styles.errorMsg}>{errorMsg}</p>}
         <p className={styles.disclaimer}>No spam. Unsubscribe any time.</p>

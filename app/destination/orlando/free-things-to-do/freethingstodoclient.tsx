@@ -7,7 +7,7 @@ import SeasonalEvents from './components/seasonalevents/SeasonalEvents';
 import SavingsTips from './components/savingstips/SavingsTips';
 import BookingCTA from './components/BookingCTA/BookingCTA';
 import FAQAccordion from './components/FAQAccordion/faqsection';
-import EmailSignup from './components/EmailSignup/EmailSignup';
+import EmailSignup from '@/app/components/destination/EmailSignup/EmailSignup';
 import Footer from './components/Footer/footer';
 
 const faqData = [

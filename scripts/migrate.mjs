@@ -53,6 +53,16 @@ const migrations = [
         ADD COLUMN IF NOT EXISTS unsubscribed_at TIMESTAMPTZ;
     `,
   },
+  {
+    name: 'create_signup_rate_limits_table',
+    sql: `
+      CREATE TABLE IF NOT EXISTS signup_rate_limits (
+        key            TEXT PRIMARY KEY,
+        window_started TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+        attempts       INTEGER NOT NULL DEFAULT 1
+      );
+    `,
+  },
 ];
 
 async function migrate() {
