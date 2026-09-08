@@ -13,6 +13,7 @@ const csp = `
   script-src
     'self'
     'unsafe-inline'
+    https://challenges.cloudflare.com
     https://www.googletagmanager.com
     https://emrldtp.com;
 
@@ -46,7 +47,8 @@ const csp = `
     https://www.travelpayouts.com
     https://sentry.avs.io;
 
-  frame-src 'none';
+  frame-src
+    https://challenges.cloudflare.com;
   base-uri 'self';
   form-action 'self';
   upgrade-insecure-requests;
