@@ -62,7 +62,7 @@ export default function EmailSignup({
       callback: (token: string) => setTurnstileToken(token),
       'expired-callback': () => setTurnstileToken(''),
       'error-callback': () => setTurnstileToken(''),
-      appearance: 'always',
+      appearance: 'interaction-only',
     });
 
     return () => {
@@ -193,7 +193,7 @@ export default function EmailSignup({
           >
             {status === 'loading' ? 'Sending...' : buttonLabel || 'Send it free'}
           </button>
-          {turnstileSiteKey && <div ref={turnstileElement} />}
+          {turnstileSiteKey && <div className={styles.turnstile} ref={turnstileElement} />}
         </form>
         {status === 'error' && <p className={styles.errorMsg}>{errorMsg}</p>}
         <p className={styles.disclaimer}>No spam. Unsubscribe any time.</p>
