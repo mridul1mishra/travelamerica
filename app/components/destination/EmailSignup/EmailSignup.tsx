@@ -62,7 +62,7 @@ export default function EmailSignup({
       callback: (token: string) => setTurnstileToken(token),
       'expired-callback': () => setTurnstileToken(''),
       'error-callback': () => setTurnstileToken(''),
-      appearance: 'interaction-only',
+      appearance: 'always',
     });
 
     return () => {
@@ -95,6 +95,13 @@ export default function EmailSignup({
     e.preventDefault();
     if (!email || !email.includes('@')) {
       setErrorMsg('Please enter a valid email address.');
+      setStatus('error');
+      track('email_signup_error');
+      return;
+    }
+
+    if (turnstileSiteKey && !turnstileToken) {
+      setErrorMsg('Please complete the security verification and try again.');
       setStatus('error');
       track('email_signup_error');
       return;
@@ -182,7 +189,7 @@ export default function EmailSignup({
           <button
             className={styles.button}
             type="submit"
-            disabled={status === 'loading' || Boolean(turnstileSiteKey && !turnstileToken)}
+            disabled={status === 'loading'}
           >
             {status === 'loading' ? 'Sending...' : buttonLabel || 'Send it free'}
           </button>
