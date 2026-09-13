@@ -196,7 +196,7 @@ export default function EmailSignup({
           {turnstileSiteKey && <div className={styles.turnstile} ref={turnstileElement} />}
         </form>
         {status === 'error' && <p className={styles.errorMsg}>{errorMsg}</p>}
-        <p className={styles.disclaimer}>No spam. Unsubscribe any time.</p>
+        <p className={styles.disclaimer}>Get the PDF plus a short {city} planning email series. Unsubscribe anytime.</p>
       </div>
     </div>
   );

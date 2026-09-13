@@ -306,14 +306,14 @@ function offerForSource(source?: string): SignupOffer {
   return baseOffer;
 }
 
-async function sendWelcomeEmail(email: string, source?: string): Promise<void> {
+async function sendWelcomeEmail(email: string, source?: string): Promise<boolean> {
   const apiKey = process.env.SMTP2GO_API_KEY;
   const fromEmail = process.env.SMTP2GO_FROM_EMAIL;
   const fromName = process.env.SMTP2GO_FROM_NAME ?? 'Travels Americas';
 
   if (!apiKey || !fromEmail) {
     console.error('SMTP2GO env vars not set - skipping welcome email');
-    return;
+    return false;
   }
 
   const offer = offerForSource(source);
@@ -389,10 +389,14 @@ async function sendWelcomeEmail(email: string, source?: string): Promise<void> {
     }),
   });
 
-  if (!res.ok) {
-    const data = await res.json().catch(() => ({}));
+  const data = await res.json().catch(() => null) as {
+    data?: { succeeded?: number; failed?: number };
+  } | null;
+  if (!res.ok || data?.data?.succeeded !== 1 || data?.data?.failed !== 0) {
     console.error('SMTP2GO error:', data);
+    return false;
   }
+  return true;
 }
 
 export async function POST(req: NextRequest) {
@@ -454,7 +458,14 @@ export async function POST(req: NextRequest) {
 
     if (isNew) {
       try {
-        await sendWelcomeEmail(normalizedEmail, normalizedSource);
+        const accepted = await sendWelcomeEmail(normalizedEmail, normalizedSource);
+        if (accepted) {
+          await client.query(
+            `UPDATE subscribers SET drip_step = 2
+             WHERE id = $1 AND drip_step = 1 AND unsubscribed_at IS NULL`,
+            [result.rows[0].id]
+          );
+        }
       } catch (err) {
         console.error('Welcome email error (non-fatal):', err);
       }
