@@ -14,6 +14,10 @@
 /coverage
 /playwright-report/
 /test-results/
+# Temporary PDF review renders
+/tmp/pdfs/
+# Local ad hoc work, review renders, and temporary outputs
+/.scratch/
 /Meta_Title_Description_Recommendations.pdf
 /TravelsAmericas_GSC_Traffic_Analysis.pdf
 # next.js
