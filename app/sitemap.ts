@@ -32,6 +32,7 @@ const ROUTES: Entry[] = [
   { path: "/destination/nyc/food",                         priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/nyc/landmark",                     priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/nyc/group-travel",                 priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/nyc/couple-travel",                priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/nyc/booking",                      priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/nyc/is-nyc-safe-at-night",         priority: 0.9, changeFrequency: "weekly" },
 
