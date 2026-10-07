@@ -14,13 +14,11 @@ const csp = `
     'self'
     'unsafe-inline'
     https://challenges.cloudflare.com
-    https://www.googletagmanager.com
-    https://emrldtp.com;
+    https://www.googletagmanager.com;
 
   style-src
     'self'
     'unsafe-inline'
-    https://emrldtp.com
     https://fonts.googleapis.com;
 
   img-src
@@ -29,7 +27,6 @@ const csp = `
     https://www.travelsamericas.com
     https://www.googletagmanager.com
     https://www.google-analytics.com
-    https://emrldtp.com
     https://pics.avs.io
     https://media-cdn.tripadvisor.com
     https://dynamic-media-cdn.tripadvisor.com
@@ -43,8 +40,6 @@ const csp = `
     'self'
     https://www.googletagmanager.com
     https://www.google-analytics.com
-    https://emrldtp.com
-    https://www.travelpayouts.com
     https://sentry.avs.io;
 
   frame-src

@@ -1,55 +1,26 @@
-"use client";
-
-import { useState } from "react";
 import styles from "./FAQAccordion.module.css";
 
-type FAQItem = {
-  question: string;
-  answer: string;
-};
+type FAQItem = { question: string; answer: string };
 
-type FAQAccordionProps = {
-  faqs: FAQItem[];
-};
-
-export default function FAQAccordion({ faqs }: FAQAccordionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
+export default function FAQAccordion({ faqs }: { faqs: FAQItem[] }) {
+  if (!faqs.length) return null;
   return (
-    <section className={styles.wrapper}>
-      <h2>Frequently Asked Questions</h2>
+    <section className={styles.wrapper} aria-label="Frequently asked questions">
+      <div className={styles.heading}>
+        <p className={styles.eyebrow}>Before you book</p>
+        <h2>Frequently asked questions</h2>
+      </div>
       <div className={styles.accordion}>
-        {faqs.map((item, index) => (
-          <div key={item.question} className={styles.item}>
-            <button
-              className={styles.question}
-              onClick={() => toggle(index)}
-              aria-expanded={openIndex === index}
-              type="button"
-            >
+        {faqs.map((item) => (
+          <details key={item.question} className={styles.item}>
+            <summary className={styles.question}>
               <span>{item.question}</span>
-              <span className={`${styles.arrow} ${openIndex === index ? styles.open : ""}`}>
-                <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" fill="none" />
-                  <path
-                    d="M8 10l4 4 4-4"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    fill="none"
-                    strokeLinecap="round"
-                  />
-                </svg>
+              <span className={styles.arrow} aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="m6 9 6 6 6-6" /></svg>
               </span>
-            </button>
-
-            <div className={`${styles.answerWrapper} ${openIndex === index ? styles.show : ""}`}>
-              <p className={styles.answer}>{item.answer}</p>
-            </div>
-          </div>
+            </summary>
+            <p className={styles.answer}>{item.answer}</p>
+          </details>
         ))}
       </div>
     </section>

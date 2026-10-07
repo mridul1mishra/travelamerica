@@ -449,7 +449,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
 
         {faqSection}
 
-        <section className={styles.related} aria-label={`Related ${cityName} guides`}>
+        <section className={`${styles.related} ${config.category ? styles.categoryRelated : ""}`} aria-label={`Related ${cityName} guides`}>
           <div>
             <p className={styles.eyebrow}>Keep planning</p>
             <h2>Plan your {cityName} trip</h2>
