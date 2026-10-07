@@ -1,0 +1,252 @@
+[
+  {
+    "sourceId": "99288",
+    "name": "Arthouse Hotel New York City",
+    "tags": []
+  },
+  {
+    "sourceId": "208452",
+    "name": "Conrad New York Downtown",
+    "tags": []
+  },
+  {
+    "sourceId": "11854022",
+    "name": "Crowne Plaza HY36 Midtown Manhattan by IHG",
+    "tags": []
+  },
+  {
+    "sourceId": "11236004",
+    "name": "Doubletree By Hilton Hotel New York Times Square West",
+    "tags": []
+  },
+  {
+    "sourceId": "11998087",
+    "name": "Embassy Suites By Hilton New York Manhattan Times Square",
+    "tags": []
+  },
+  {
+    "sourceId": "7816364",
+    "name": "Executive Hotel Le Soleil",
+    "tags": []
+  },
+  {
+    "sourceId": "23627300",
+    "name": "Hard Rock Hotel New York",
+    "tags": []
+  },
+  {
+    "sourceId": "5040757",
+    "name": "Homewood Suites By Hilton New York/Midtown Manhattan Times Square-South, NY",
+    "tags": []
+  },
+  {
+    "sourceId": "93390",
+    "name": "Hotel Belleclaire",
+    "tags": []
+  },
+  {
+    "sourceId": "93437",
+    "name": "Hotel Edison Times Square",
+    "tags": []
+  },
+  {
+    "sourceId": "8515751",
+    "name": "Hotel Riu Plaza New York Times Square",
+    "tags": []
+  },
+  {
+    "sourceId": "4799063",
+    "name": "Hyatt Centric Times Square New York",
+    "tags": []
+  },
+  {
+    "sourceId": "93450",
+    "name": "Hyatt Grand Central New York",
+    "tags": []
+  },
+  {
+    "sourceId": "8873263",
+    "name": "INNSiDE New York Nomad",
+    "tags": []
+  },
+  {
+    "sourceId": "1646128",
+    "name": "InterContinental New York Times Square by IHG",
+    "tags": []
+  },
+  {
+    "sourceId": "93462",
+    "name": "Intercontinental New York Barclay By IHG",
+    "tags": []
+  },
+  {
+    "sourceId": "10679074",
+    "name": "LUMA Hotel Times Square",
+    "tags": []
+  },
+  {
+    "sourceId": "93607",
+    "name": "Loews Regency New York Hotel",
+    "tags": []
+  },
+  {
+    "sourceId": "126260",
+    "name": "Lotte New York Palace",
+    "tags": []
+  },
+  {
+    "sourceId": "23155544",
+    "name": "M Social Hotel New York Times Square",
+    "tags": []
+  },
+  {
+    "sourceId": "99425",
+    "name": "Martinique New York on Broadway, Curio Collection by Hilton",
+    "tags": []
+  },
+  {
+    "sourceId": "23448880",
+    "name": "Motto by Hilton New York City Chelsea",
+    "tags": []
+  },
+  {
+    "sourceId": "611947",
+    "name": "New York Hilton Midtown",
+    "tags": []
+  },
+  {
+    "sourceId": "93507",
+    "name": "New York Marriott Marquis",
+    "tags": []
+  },
+  {
+    "sourceId": "12533513",
+    "name": "PUBLIC Hotel",
+    "tags": []
+  },
+  {
+    "sourceId": "93517",
+    "name": "Paramount Times Square - A Generator Hotel",
+    "tags": []
+  },
+  {
+    "sourceId": "93520",
+    "name": "Park Central Hotel New York",
+    "tags": []
+  },
+  {
+    "sourceId": "6582176",
+    "name": "Park Hyatt New York",
+    "tags": []
+  },
+  {
+    "sourceId": "15135187",
+    "name": "Park Terrace Hotel",
+    "tags": []
+  },
+  {
+    "sourceId": "1938661",
+    "name": "Row Nyc",
+    "tags": []
+  },
+  {
+    "sourceId": "93555",
+    "name": "Sheraton New York Times Square Hotel",
+    "tags": []
+  },
+  {
+    "sourceId": "208454",
+    "name": "Sofitel New York",
+    "tags": []
+  },
+  {
+    "sourceId": "224214",
+    "name": "The Bryant Park Hotel",
+    "tags": []
+  },
+  {
+    "sourceId": "1456416",
+    "name": "The Dominick",
+    "tags": []
+  },
+  {
+    "sourceId": "671150",
+    "name": "The Empire Hotel",
+    "tags": []
+  },
+  {
+    "sourceId": "99389",
+    "name": "The Evelyn Hotel",
+    "tags": []
+  },
+  {
+    "sourceId": "93335",
+    "name": "The Kimberly Hotel",
+    "tags": []
+  },
+  {
+    "sourceId": "7255276",
+    "name": "The Knickerbocker",
+    "tags": []
+  },
+  {
+    "sourceId": "217616",
+    "name": "The Muse New York",
+    "tags": []
+  },
+  {
+    "sourceId": "113311",
+    "name": "The Peninsula New York",
+    "tags": []
+  },
+  {
+    "sourceId": "675616",
+    "name": "The Plaza New York - A Fairmont Managed Hotel",
+    "tags": []
+  },
+  {
+    "sourceId": "4702789",
+    "name": "The Towers at Lotte New York Palace",
+    "tags": []
+  },
+  {
+    "sourceId": "93593",
+    "name": "The Westin New York Grand Central",
+    "tags": []
+  },
+  {
+    "sourceId": "249712",
+    "name": "The Westin New York at Times Square",
+    "tags": []
+  },
+  {
+    "sourceId": "93464",
+    "name": "Thompson Central Park New York, by Hyatt",
+    "tags": []
+  },
+  {
+    "sourceId": "93623",
+    "name": "Trump International Hotel and Tower New York",
+    "tags": []
+  },
+  {
+    "sourceId": "25071657",
+    "name": "Virgin Hotels New York City",
+    "tags": []
+  },
+  {
+    "sourceId": "93618",
+    "name": "Waldorf Astoria New York",
+    "tags": []
+  },
+  {
+    "sourceId": "112064",
+    "name": "Warwick New York",
+    "tags": []
+  },
+  {
+    "sourceId": "4945551",
+    "name": "WestHouse Hotel New York, an SLH Hotel",
+    "tags": []
+  }
+]

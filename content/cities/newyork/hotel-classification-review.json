@@ -1,0 +1,502 @@
+[
+  {
+    "source_id": "99288",
+    "name": "Arthouse Hotel New York City",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "208452",
+    "name": "Conrad New York Downtown",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": "Luxury",
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "11854022",
+    "name": "Crowne Plaza HY36 Midtown Manhattan by IHG",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "11236004",
+    "name": "Doubletree By Hilton Hotel New York Times Square West",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "11998087",
+    "name": "Embassy Suites By Hilton New York Manhattan Times Square",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "7816364",
+    "name": "Executive Hotel Le Soleil",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "23627300",
+    "name": "Hard Rock Hotel New York",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "5040757",
+    "name": "Homewood Suites By Hilton New York/Midtown Manhattan Times Square-South, NY",
+    "city_slug": "nyc",
+    "neighborhood": "Midtown",
+    "hotel_tier": null,
+    "first_time_visitor": true,
+    "safe_area": true,
+    "classification_complete": false
+  },
+  {
+    "source_id": "93390",
+    "name": "Hotel Belleclaire",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "93437",
+    "name": "Hotel Edison Times Square",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "8515751",
+    "name": "Hotel Riu Plaza New York Times Square",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "4799063",
+    "name": "Hyatt Centric Times Square New York",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "93450",
+    "name": "Hyatt Grand Central New York",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "8873263",
+    "name": "INNSiDE New York Nomad",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "1646128",
+    "name": "InterContinental New York Times Square by IHG",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "93462",
+    "name": "Intercontinental New York Barclay By IHG",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "10679074",
+    "name": "LUMA Hotel Times Square",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "93607",
+    "name": "Loews Regency New York Hotel",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": "Luxury",
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "126260",
+    "name": "Lotte New York Palace",
+    "city_slug": "nyc",
+    "neighborhood": "Midtown",
+    "hotel_tier": "Luxury",
+    "first_time_visitor": true,
+    "safe_area": true,
+    "classification_complete": true
+  },
+  {
+    "source_id": "23155544",
+    "name": "M Social Hotel New York Times Square",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "99425",
+    "name": "Martinique New York on Broadway, Curio Collection by Hilton",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "23448880",
+    "name": "Motto by Hilton New York City Chelsea",
+    "city_slug": "nyc",
+    "neighborhood": "Chelsea",
+    "hotel_tier": null,
+    "first_time_visitor": true,
+    "safe_area": true,
+    "classification_complete": false
+  },
+  {
+    "source_id": "611947",
+    "name": "New York Hilton Midtown",
+    "city_slug": "nyc",
+    "neighborhood": "Midtown",
+    "hotel_tier": null,
+    "first_time_visitor": true,
+    "safe_area": true,
+    "classification_complete": false
+  },
+  {
+    "source_id": "93507",
+    "name": "New York Marriott Marquis",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "12533513",
+    "name": "PUBLIC Hotel",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "93517",
+    "name": "Paramount Times Square - A Generator Hotel",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "93520",
+    "name": "Park Central Hotel New York",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "6582176",
+    "name": "Park Hyatt New York",
+    "city_slug": "nyc",
+    "neighborhood": "Midtown",
+    "hotel_tier": "Luxury",
+    "first_time_visitor": true,
+    "safe_area": true,
+    "classification_complete": true
+  },
+  {
+    "source_id": "15135187",
+    "name": "Park Terrace Hotel",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "1938661",
+    "name": "Row Nyc",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "93555",
+    "name": "Sheraton New York Times Square Hotel",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "208454",
+    "name": "Sofitel New York",
+    "city_slug": "nyc",
+    "neighborhood": "Midtown",
+    "hotel_tier": "Luxury",
+    "first_time_visitor": true,
+    "safe_area": true,
+    "classification_complete": true
+  },
+  {
+    "source_id": "224214",
+    "name": "The Bryant Park Hotel",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "1456416",
+    "name": "The Dominick",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "671150",
+    "name": "The Empire Hotel",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "99389",
+    "name": "The Evelyn Hotel",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "93335",
+    "name": "The Kimberly Hotel",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "7255276",
+    "name": "The Knickerbocker",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "217616",
+    "name": "The Muse New York",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "113311",
+    "name": "The Peninsula New York",
+    "city_slug": "nyc",
+    "neighborhood": "Midtown",
+    "hotel_tier": "Luxury",
+    "first_time_visitor": true,
+    "safe_area": true,
+    "classification_complete": true
+  },
+  {
+    "source_id": "675616",
+    "name": "The Plaza New York - A Fairmont Managed Hotel",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": "Luxury",
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "4702789",
+    "name": "The Towers at Lotte New York Palace",
+    "city_slug": "nyc",
+    "neighborhood": "Midtown",
+    "hotel_tier": "Luxury",
+    "first_time_visitor": true,
+    "safe_area": true,
+    "classification_complete": true
+  },
+  {
+    "source_id": "93593",
+    "name": "The Westin New York Grand Central",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "249712",
+    "name": "The Westin New York at Times Square",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "93464",
+    "name": "Thompson Central Park New York, by Hyatt",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "93623",
+    "name": "Trump International Hotel and Tower New York",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "25071657",
+    "name": "Virgin Hotels New York City",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "93618",
+    "name": "Waldorf Astoria New York",
+    "city_slug": "nyc",
+    "neighborhood": "Midtown",
+    "hotel_tier": "Luxury",
+    "first_time_visitor": true,
+    "safe_area": true,
+    "classification_complete": true
+  },
+  {
+    "source_id": "112064",
+    "name": "Warwick New York",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  },
+  {
+    "source_id": "4945551",
+    "name": "WestHouse Hotel New York, an SLH Hotel",
+    "city_slug": "nyc",
+    "neighborhood": null,
+    "hotel_tier": null,
+    "first_time_visitor": null,
+    "safe_area": null,
+    "classification_complete": false
+  }
+]

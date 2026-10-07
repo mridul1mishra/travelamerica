@@ -1,0 +1,304 @@
+[
+  {
+    "sourceId": "23448880",
+    "neighborhood": "Chelsea",
+    "tags": [
+      {
+        "key": "FamilyFriendly",
+        "sourceUrl": "https://www.hilton.com/en/hotels/nycdlua-motto-new-york-city-chelsea/",
+        "rationale": "Hilton confirms connecting rooms at Motto Chelsea, supporting family room arrangements. Guests must confirm availability and occupancy for their dates."
+      }
+    ],
+    "classification": {
+      "safeArea": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
+        "rationale": "The site's nighttime safety guide recommends Chelsea within the visitor core. The property's official location evidence identifies this neighborhood. This is an editorial recommendation conditional on active, well-lit routes, not a safety guarantee."
+      },
+      "firstTimeVisitor": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
+        "rationale": "The site's first-time visitor FAQ recommends Chelsea for hotels, food, active streets and transportation. Applied as an area-based suitability recommendation to this property's verified location."
+      }
+    }
+  },
+  {
+    "sourceId": "6582176",
+    "tags": [
+      {
+        "key": "Luxury",
+        "sourceUrl": "https://www.hyatt.com/park-hyatt/en-US/nycph-park-hyatt-new-york/rooms",
+        "rationale": "Hyatt describes luxury rooms and suites at Park Hyatt New York."
+      },
+      {
+        "key": "CityCenter",
+        "sourceUrl": "https://www.hyatt.com/park-hyatt/en-US/nycph-park-hyatt-new-york/rooms",
+        "rationale": "The official hotel page places the property in Midtown Manhattan near Central Park."
+      },
+      {
+        "key": "FamilyFriendly",
+        "sourceUrl": "https://www.hyatt.com/park-hyatt/en-US/nycph-park-hyatt-new-york/rooms",
+        "rationale": "The official room inventory includes spacious two-double-bed rooms, supporting family stays; confirm occupancy and room availability."
+      }
+    ],
+    "neighborhood": "Midtown",
+    "classification": {
+      "safeArea": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
+        "rationale": "The site's nighttime safety guide recommends Midtown within the visitor core. The property's official location evidence identifies this neighborhood. This is an editorial recommendation conditional on active, well-lit routes, not a safety guarantee."
+      },
+      "firstTimeVisitor": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
+        "rationale": "The site's first-time visitor FAQ recommends Midtown for hotels, food, active streets and transportation. Applied as an area-based suitability recommendation to this property's verified location."
+      }
+    }
+  },
+  {
+    "sourceId": "113311",
+    "tags": [
+      {
+        "key": "Luxury",
+        "sourceUrl": "https://www.peninsula.com/en/new-york/5-star-luxury-hotel-midtown-nyc",
+        "rationale": "The official property page identifies a five-star luxury hotel."
+      },
+      {
+        "key": "CityCenter",
+        "sourceUrl": "https://www.peninsula.com/en/new-york/5-star-luxury-hotel-midtown-nyc",
+        "rationale": "The official property page places the hotel in Midtown Manhattan on Fifth Avenue."
+      },
+      {
+        "key": "WalkableArea",
+        "sourceUrl": "https://www.peninsula.com/en/new-york/5-star-luxury-hotel-midtown-nyc",
+        "rationale": "The official page describes the hotel as steps from Central Park, with nearby Rockefeller Center, shopping, museums and Broadway."
+      }
+    ],
+    "neighborhood": "Midtown",
+    "classification": {
+      "safeArea": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
+        "rationale": "The site's nighttime safety guide recommends Midtown within the visitor core. The property's official location evidence identifies this neighborhood. This is an editorial recommendation conditional on active, well-lit routes, not a safety guarantee."
+      },
+      "firstTimeVisitor": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
+        "rationale": "The site's first-time visitor FAQ recommends Midtown for hotels, food, active streets and transportation. Applied as an area-based suitability recommendation to this property's verified location."
+      }
+    }
+  },
+  {
+    "sourceId": "675616",
+    "tags": [
+      {
+        "key": "Luxury",
+        "sourceUrl": "https://www.theplazany.com/rooms-suites/",
+        "rationale": "The official room collection describes luxury rooms and suites."
+      },
+      {
+        "key": "FamilyFriendly",
+        "sourceUrl": "https://www.theplazany.com/rooms-suites/",
+        "rationale": "The official room collection offers connecting two- and three-bedroom arrangements for families; confirm availability and occupancy."
+      }
+    ]
+  },
+  {
+    "sourceId": "208452",
+    "tags": [
+      {
+        "key": "Luxury",
+        "sourceUrl": "https://www.hilton.com/en/hotels/nyccici-conrad-new-york-downtown/",
+        "rationale": "Hilton describes Conrad Downtown as an all-suite luxury hotel."
+      },
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.hilton.com/en/hotels/nyccici-conrad-new-york-downtown/",
+        "rationale": "Hilton lists 30,000 square feet of event space across two floors, supporting business meetings."
+      }
+    ]
+  },
+  {
+    "sourceId": "126260",
+    "tags": [
+      {
+        "key": "Luxury",
+        "sourceUrl": "https://www.lottenypalace.com/profile",
+        "rationale": "The official hotel profile describes luxury accommodations."
+      },
+      {
+        "key": "FamilyFriendly",
+        "sourceUrl": "https://www.lottenypalace.com/profile",
+        "rationale": "The official profile lists a two-bedroom Family Suite with two bathrooms; confirm availability and occupancy."
+      }
+    ],
+    "neighborhood": "Midtown",
+    "classification": {
+      "safeArea": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
+        "rationale": "The site's nighttime safety guide recommends Midtown within the visitor core. The property's official location evidence identifies this neighborhood. This is an editorial recommendation conditional on active, well-lit routes, not a safety guarantee."
+      },
+      "firstTimeVisitor": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
+        "rationale": "The site's first-time visitor FAQ recommends Midtown for hotels, food, active streets and transportation. Applied as an area-based suitability recommendation to this property's verified location."
+      }
+    }
+  },
+  {
+    "sourceId": "4702789",
+    "tags": [
+      {
+        "key": "Luxury",
+        "sourceUrl": "https://www.lottenypalace.com/the-towers",
+        "rationale": "The official Towers page describes luxury accommodations."
+      },
+      {
+        "key": "CityCenter",
+        "sourceUrl": "https://www.lottenypalace.com/the-towers",
+        "rationale": "The official Towers page places the property in Midtown Manhattan."
+      }
+    ],
+    "neighborhood": "Midtown",
+    "classification": {
+      "safeArea": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
+        "rationale": "The site's nighttime safety guide recommends Midtown within the visitor core. The property's official location evidence identifies this neighborhood. This is an editorial recommendation conditional on active, well-lit routes, not a safety guarantee."
+      },
+      "firstTimeVisitor": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
+        "rationale": "The site's first-time visitor FAQ recommends Midtown for hotels, food, active streets and transportation. Applied as an area-based suitability recommendation to this property's verified location."
+      }
+    }
+  },
+  {
+    "sourceId": "93618",
+    "tags": [
+      {
+        "key": "Luxury",
+        "sourceUrl": "https://www.hilton.com/en/hotels/nycwawa-waldorf-astoria-new-york/rooms/",
+        "rationale": "Hilton describes the Waldorf Astoria New York room collection as luxury accommodations."
+      }
+    ],
+    "neighborhood": "Midtown",
+    "classification": {
+      "safeArea": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
+        "rationale": "The site's nighttime safety guide recommends Midtown within the visitor core. The property's official location evidence identifies this neighborhood. This is an editorial recommendation conditional on active, well-lit routes, not a safety guarantee."
+      },
+      "firstTimeVisitor": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
+        "rationale": "The site's first-time visitor FAQ recommends Midtown for hotels, food, active streets and transportation. Applied as an area-based suitability recommendation to this property's verified location."
+      }
+    }
+  },
+  {
+    "sourceId": "93607",
+    "tags": [
+      {
+        "key": "Luxury",
+        "sourceUrl": "https://www.loewshotels.com/Regency-Hotel",
+        "rationale": "The official Loews Regency property page describes a luxury hotel on Park Avenue."
+      }
+    ]
+  },
+  {
+    "sourceId": "208454",
+    "tags": [
+      {
+        "key": "Luxury",
+        "sourceUrl": "https://www.sofitel-new-york.com/the-hotel/",
+        "rationale": "The official Sofitel page describes luxury accommodations."
+      },
+      {
+        "key": "CityCenter",
+        "sourceUrl": "https://www.sofitel-new-york.com/the-hotel/",
+        "rationale": "The official hotel page places the property in Midtown Manhattan near Grand Central."
+      },
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.sofitel-new-york.com/the-hotel/",
+        "rationale": "The official hotel page explicitly welcomes business travelers."
+      }
+    ],
+    "neighborhood": "Midtown",
+    "classification": {
+      "safeArea": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
+        "rationale": "The site's nighttime safety guide recommends Midtown within the visitor core. The property's official location evidence identifies this neighborhood. This is an editorial recommendation conditional on active, well-lit routes, not a safety guarantee."
+      },
+      "firstTimeVisitor": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
+        "rationale": "The site's first-time visitor FAQ recommends Midtown for hotels, food, active streets and transportation. Applied as an area-based suitability recommendation to this property's verified location."
+      }
+    }
+  },
+  {
+    "sourceId": "5040757",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.hilton.com/en-GB/travel/articles/work-and-play-in-midtown-manhattan/",
+        "rationale": "Hilton recommends Homewood Suites Times Square South for extended business stays, with kitchens and separate living areas."
+      }
+    ],
+    "neighborhood": "Midtown",
+    "classification": {
+      "safeArea": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
+        "rationale": "The site's nighttime safety guide recommends Midtown within the visitor core. The property's official location evidence identifies this neighborhood. This is an editorial recommendation conditional on active, well-lit routes, not a safety guarantee."
+      },
+      "firstTimeVisitor": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
+        "rationale": "The site's first-time visitor FAQ recommends Midtown for hotels, food, active streets and transportation. Applied as an area-based suitability recommendation to this property's verified location."
+      }
+    }
+  },
+  {
+    "sourceId": "611947",
+    "tags": [
+      {
+        "key": "CityCenter",
+        "sourceUrl": "https://www.hilton.com/en-gb/travel/articles/reasons-to-stay-new-york-hilton-midtown/",
+        "rationale": "Hilton identifies the property as a Midtown Manhattan sightseeing base."
+      },
+      {
+        "key": "WalkableArea",
+        "sourceUrl": "https://www.hilton.com/en-gb/travel/articles/reasons-to-stay-new-york-hilton-midtown/",
+        "rationale": "Hilton describes major attractions within walking distance, including nearby Museum of Modern Art and Rockefeller Center."
+      }
+    ],
+    "neighborhood": "Midtown",
+    "classification": {
+      "safeArea": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
+        "rationale": "The site's nighttime safety guide recommends Midtown within the visitor core. The property's official location evidence identifies this neighborhood. This is an editorial recommendation conditional on active, well-lit routes, not a safety guarantee."
+      },
+      "firstTimeVisitor": {
+        "value": true,
+        "sourceUrl": "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
+        "rationale": "The site's first-time visitor FAQ recommends Midtown for hotels, food, active streets and transportation. Applied as an area-based suitability recommendation to this property's verified location."
+      }
+    }
+  },
+  {
+    "sourceId": "93507",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marquis/events/",
+        "rationale": "Marriott lists staffed business facilities and meeting spaces for the New York Marriott Marquis."
+      }
+    ]
+  }
+]

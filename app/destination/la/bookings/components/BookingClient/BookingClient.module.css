@@ -653,6 +653,10 @@
 
 .sidePanel > a { display: block; box-sizing: border-box; }
 
+.hotelTags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+.hotelTags span { padding: 4px 8px; border-radius: 6px; background: #edf3f0; color: #365d4e; font-size: .72rem; font-weight: 650; line-height: 1.4; }
+.tagNote { color: #576277; font-size: .82rem; line-height: 1.6; }
+
 .categoryIntro {
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
   gap: clamp(28px, 5vw, 64px);

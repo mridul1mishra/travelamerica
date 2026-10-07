@@ -7,7 +7,12 @@ test("NYC booking categories use dedicated pages", async ({ page }) => {
   await expect(page.locator('[data-booking-type="flight"]')).toHaveCount(0);
   await expect(page.locator('[data-booking-type="activity"]')).toHaveCount(0);
   await expect(page.locator('[data-booking-type="hotel"]')).toHaveCount(50);
-  await page.getByLabel("Hotel filters").getByRole("combobox").nth(1).selectOption("4.5");
+  await page.getByRole("combobox", { name: /^Hotel tags/ }).selectOption("FamilyFriendly");
+  await expect(page.locator('[data-booking-type="hotel"]').filter({ hasText: "Motto by Hilton New York City Chelsea" })).toBeVisible();
+  await expect(page.locator('[data-booking-type="hotel"]').filter({ hasText: "Hotel Edison" })).toHaveCount(0);
+  await expect(page.locator('[data-booking-type="hotel"]').first()).toContainText("Family friendly");
+  await page.getByRole("combobox", { name: /^Hotel tags/ }).selectOption("all");
+  await page.getByLabel("Hotel filters").getByRole("combobox", { name: /^Rating/ }).selectOption("4.5");
   await expect(page.locator('[data-booking-type="hotel"]').first()).toBeVisible();
   await expect(page.getByRole("navigation", { name: "Booking categories" })).toHaveCount(0);
   await page.goto("/destination/nyc/flight");

@@ -1,0 +1,502 @@
+[
+  {
+    "source_id": "93437",
+    "name": "Hotel Edison Times Square",
+    "address": "228 West 47th Street, New York City, NY 10036-1401",
+    "latitude": 40.759735,
+    "longitude": -73.98615,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "8515751",
+    "name": "Hotel Riu Plaza New York Times Square",
+    "address": "305 W 46th St, New York City, NY 10036-3810",
+    "latitude": 40.760185,
+    "longitude": -73.988174,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "126260",
+    "name": "Lotte New York Palace",
+    "address": "455 Madison Avenue, New York City, NY 10022",
+    "latitude": 40.75803,
+    "longitude": -73.974976,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "7255276",
+    "name": "The Knickerbocker",
+    "address": "6 Times Square SE Corner Of 42nd St. & Broadway, New York City, NY 10036",
+    "latitude": 40.755608,
+    "longitude": -73.986275,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "93520",
+    "name": "Park Central Hotel New York",
+    "address": "870 7th Ave, New York City, NY 10019",
+    "latitude": 40.764618,
+    "longitude": -73.980896,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "93507",
+    "name": "New York Marriott Marquis",
+    "address": "1535 Broadway, New York City, NY 10036",
+    "latitude": 40.758854,
+    "longitude": -73.98587,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "208454",
+    "name": "Sofitel New York",
+    "address": "45 W 44th St, New York City, NY 10036",
+    "latitude": 40.7557,
+    "longitude": -73.98184,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "93618",
+    "name": "Waldorf Astoria New York",
+    "address": "301 Park Avenue, New York City, NY 10022",
+    "latitude": 40.756256,
+    "longitude": -73.972855,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "611947",
+    "name": "New York Hilton Midtown",
+    "address": "1335 Avenue Of The Americas The Waterfall Plaza, New York City, NY 10019-6078",
+    "latitude": 40.762245,
+    "longitude": -73.97919,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "93450",
+    "name": "Hyatt Grand Central New York",
+    "address": "109 East 42nd Street Grand Central Terminal, New York City, NY 10017-8500",
+    "latitude": 40.752064,
+    "longitude": -73.9763,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "4799063",
+    "name": "Hyatt Centric Times Square New York",
+    "address": "135 West 45th Street, New York City, NY 10036-4004",
+    "latitude": 40.757473,
+    "longitude": -73.98409,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "23448880",
+    "name": "Motto by Hilton New York City Chelsea",
+    "address": "113 West 24th Street, New York City, NY 10001",
+    "latitude": 40.74406,
+    "longitude": -73.99294,
+    "neighborhood": "Chelsea",
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "23155544",
+    "name": "M Social Hotel New York Times Square",
+    "address": "226 W 52nd St, New York City, NY 10019",
+    "latitude": 40.76289,
+    "longitude": -73.9838,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "8873263",
+    "name": "INNSiDE New York Nomad",
+    "address": "132 W 27th St, New York City, NY 10001-6202",
+    "latitude": 40.745975,
+    "longitude": -73.99255,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "7816364",
+    "name": "Executive Hotel Le Soleil",
+    "address": "38 W 36th St, New York City, NY 10018-8078",
+    "latitude": 40.750294,
+    "longitude": -73.9855,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "224214",
+    "name": "The Bryant Park Hotel",
+    "address": "40 West 40th Street, New York City, NY 10018-2602",
+    "latitude": 40.752895,
+    "longitude": -73.983696,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "99425",
+    "name": "Martinique New York on Broadway, Curio Collection by Hilton",
+    "address": "49 W 32nd Street, New York City, NY 10001",
+    "latitude": 40.748283,
+    "longitude": -73.987816,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "4945551",
+    "name": "WestHouse Hotel New York, an SLH Hotel",
+    "address": "201 W 55th St, New York City, NY 10019",
+    "latitude": 40.764553,
+    "longitude": -73.98137,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "93390",
+    "name": "Hotel Belleclaire",
+    "address": "2175 Broadway, New York City, NY 10024",
+    "latitude": 40.782486,
+    "longitude": -73.98117,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "93607",
+    "name": "Loews Regency New York Hotel",
+    "address": "540 Park Avenue 61st Street, New York City, NY 10065-7366",
+    "latitude": 40.76454,
+    "longitude": -73.96911,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "6582176",
+    "name": "Park Hyatt New York",
+    "address": "153 West 57th Street, New York City, NY 10019",
+    "latitude": 40.765343,
+    "longitude": -73.97915,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "113311",
+    "name": "The Peninsula New York",
+    "address": "700 5th Ave, New York City, NY 10019",
+    "latitude": 40.76174,
+    "longitude": -73.975365,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "93517",
+    "name": "Paramount Times Square - A Generator Hotel",
+    "address": "235 W 46th St, New York City, NY 10036",
+    "latitude": 40.759544,
+    "longitude": -73.987015,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "11236004",
+    "name": "Doubletree By Hilton Hotel New York Times Square West",
+    "address": "350 W. 40th Street, New York City, NY 10018",
+    "latitude": 40.756664,
+    "longitude": -73.99302,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "93462",
+    "name": "Intercontinental New York Barclay By IHG",
+    "address": "111 East 48th St, New York City, NY 10017",
+    "latitude": 40.75566,
+    "longitude": -73.973526,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "112064",
+    "name": "Warwick New York",
+    "address": "65 W 54th St, New York City, NY 10019",
+    "latitude": 40.762466,
+    "longitude": -73.9781,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "5040757",
+    "name": "Homewood Suites By Hilton New York/Midtown Manhattan Times Square-South, NY",
+    "address": "312 West 37th Street, New York City, NY 10018",
+    "latitude": 40.754353,
+    "longitude": -73.99312,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "93593",
+    "name": "The Westin New York Grand Central",
+    "address": "212 East 42nd Street, New York City, NY 10017",
+    "latitude": 40.75051,
+    "longitude": -73.97397,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "1646128",
+    "name": "InterContinental New York Times Square by IHG",
+    "address": "300 West 44th Street, New York City, NY 10036",
+    "latitude": 40.758602,
+    "longitude": -73.98922,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "99288",
+    "name": "Arthouse Hotel New York City",
+    "address": "2178 Broadway at West 77th Street, New York City, NY 10024-6647",
+    "latitude": 40.782177,
+    "longitude": -73.98034,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "4702789",
+    "name": "The Towers at Lotte New York Palace",
+    "address": "455 Madison Avenue At 50th Street, New York City, NY 10022",
+    "latitude": 40.758144,
+    "longitude": -73.97468,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "12533513",
+    "name": "PUBLIC Hotel",
+    "address": "215 Chrystie Street, New York City, NY 10002",
+    "latitude": 40.723003,
+    "longitude": -73.99175,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "675616",
+    "name": "The Plaza New York - A Fairmont Managed Hotel",
+    "address": "5th Avenue At Central Park South, New York City, NY 10019",
+    "latitude": 40.764645,
+    "longitude": -73.97432,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "11998087",
+    "name": "Embassy Suites By Hilton New York Manhattan Times Square",
+    "address": "60 West 37th Street, New York City, NY 10018",
+    "latitude": 40.75134,
+    "longitude": -73.98582,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "25071657",
+    "name": "Virgin Hotels New York City",
+    "address": "1227 Broadway, New York City, NY 10001-4302",
+    "latitude": 40.7471,
+    "longitude": -73.989044,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "15135187",
+    "name": "Park Terrace Hotel",
+    "address": "18 West 40th Street, New York City, NY 10018",
+    "latitude": 40.75249,
+    "longitude": -73.98311,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "93555",
+    "name": "Sheraton New York Times Square Hotel",
+    "address": "811 7th Avenue 53rd Street, New York City, NY 10019",
+    "latitude": 40.762634,
+    "longitude": -73.98202,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "93335",
+    "name": "The Kimberly Hotel",
+    "address": "145 East 50th Street, New York City, NY 10022-9502",
+    "latitude": 40.75632,
+    "longitude": -73.971405,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "93623",
+    "name": "Trump International Hotel and Tower New York",
+    "address": "1 Central Park West, New York City, NY 10023-7703",
+    "latitude": 40.76907,
+    "longitude": -73.98157,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "23627300",
+    "name": "Hard Rock Hotel New York",
+    "address": "159 W 48 Street, New York City, NY 10036",
+    "latitude": 40.75984,
+    "longitude": -73.983284,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "11854022",
+    "name": "Crowne Plaza HY36 Midtown Manhattan by IHG",
+    "address": "320 West 36th Street, New York City, NY 10018",
+    "latitude": 40.75388,
+    "longitude": -73.99374,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "10679074",
+    "name": "LUMA Hotel Times Square",
+    "address": "120 West 41st Street, New York City, NY 10036-7315",
+    "latitude": 40.75458,
+    "longitude": -73.9858,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "1456416",
+    "name": "The Dominick",
+    "address": "246 Spring Street, New York City, NY 10013",
+    "latitude": 40.725464,
+    "longitude": -74.00533,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "208452",
+    "name": "Conrad New York Downtown",
+    "address": "102 North End Avenue, New York City, NY 10282",
+    "latitude": 40.715042,
+    "longitude": -74.01584,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "93464",
+    "name": "Thompson Central Park New York, by Hyatt",
+    "address": "119 West 56th Street, New York City, NY 10019-4000",
+    "latitude": 40.764202,
+    "longitude": -73.97852,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "1938661",
+    "name": "Row Nyc",
+    "address": "700 8th Ave, New York City, NY 10036",
+    "latitude": 40.758705,
+    "longitude": -73.98829,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "249712",
+    "name": "The Westin New York at Times Square",
+    "address": "270 West 43rd Street, New York City, NY 10036",
+    "latitude": 40.757477,
+    "longitude": -73.9894,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "99389",
+    "name": "The Evelyn Hotel",
+    "address": "7 E 27th St, New York City, NY 10016-8701",
+    "latitude": 40.743896,
+    "longitude": -73.98707,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "671150",
+    "name": "The Empire Hotel",
+    "address": "44 W 63rd Street, New York City, NY 10023-7029",
+    "latitude": 40.771496,
+    "longitude": -73.982666,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  },
+  {
+    "source_id": "217616",
+    "name": "The Muse New York",
+    "address": "130 W 46th St, New York City, NY 10036-8501",
+    "latitude": 40.757915,
+    "longitude": -73.9837,
+    "neighborhood": null,
+    "hotel_class": null,
+    "amenities": []
+  }
+]

@@ -8,6 +8,7 @@ import { useSearchParams } from "next/navigation";
 import NavigationHeader from "@/app/components/Header/NavigationHeader";
 import Footer from "@/app/components/Header/Footer/footer";
 import styles from "./BookingClient.module.css";
+import { HOTEL_TAGS, type HotelTag } from "@/app/lib/hotelTags";
 
 export type TabKey = "flights" | "hotels" | "activities";
 
@@ -27,6 +28,22 @@ export type Hotel = {
   title: string;
   area?: string;
   address?: string | null;
+  neighborhood?: string | null;
+  city?: string;
+  hotelTier?: "Budget" | "Premium" | "Luxury" | null;
+  firstTimeVisitor?: boolean | null;
+  safeArea?: boolean | null;
+  systemMetadata?: {
+    destination: string;
+    displayOrder: number;
+    isActive: boolean;
+    featuredHotel: boolean;
+    lastUpdated: string;
+    affiliateEnabled: boolean;
+    hasImages: boolean;
+    hasDetailPage: boolean;
+  };
+  tags?: HotelTag[];
   rating?: number | null;
   reviews?: number | null;
   price: string;
@@ -137,6 +154,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
   );
   const [hotelPriceFilter, setHotelPriceFilter] = useState("all");
   const [hotelRatingFilter, setHotelRatingFilter] = useState("all");
+  const [hotelTagFilter, setHotelTagFilter] = useState("all");
   const [hotelSort, setHotelSort] = useState("recommended");
   const [activityCategory, setActivityCategory] = useState("all");
   const [activitySort, setActivitySort] = useState("recommended");
@@ -154,13 +172,14 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
     return hotels
       .filter((hotel) => matchesHotelPrice(hotel.price, hotelPriceFilter))
       .filter((hotel) => hotelRatingFilter === "all" || (hotel.rating ?? 0) >= Number(hotelRatingFilter))
+      .filter((hotel) => hotelTagFilter === "all" || hotel.tags?.includes(hotelTagFilter as HotelTag))
       .toSorted((a, b) => {
         if (hotelSort === "price") return priceNumber(a.price) - priceNumber(b.price);
         if (hotelSort === "rating") return (b.rating ?? 0) - (a.rating ?? 0);
         if (hotelSort === "reviews") return (b.reviews ?? 0) - (a.reviews ?? 0);
         return 0;
       });
-  }, [hotelPriceFilter, hotelRatingFilter, hotelSort, hotels]);
+  }, [hotelPriceFilter, hotelRatingFilter, hotelTagFilter, hotelSort, hotels]);
   const filteredActivities = useMemo(() => {
     return activities
       .filter((activity) => activityCategory === "all" || activity.category === activityCategory)
@@ -317,7 +336,15 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                 <>
                   <h2>Book Hotels in {cityName}</h2>
                   {config.category === "hotels" && <p>{hotels.length} hotels listed. Check current rates and availability with the provider.</p>}
+                  {config.category === "hotels" && hotels.some((hotel) => hotel.tags?.includes("NearSubway")) && <p className={styles.tagNote}>Near subway: within 500 metres of a listed MTA entrance in a straight line. Walking distance may be longer; check current entrance access.</p>}
                   <div className={styles.filters} aria-label="Hotel filters">
+                    {config.category === "hotels" && <label>
+                      Hotel tags
+                      <select value={hotelTagFilter} onChange={(event) => setHotelTagFilter(event.target.value)}>
+                        <option value="all">All hotel tags</option>
+                        {Object.entries(HOTEL_TAGS).filter(([key]) => hotels.some((hotel) => hotel.tags?.includes(key as HotelTag))).map(([key, label]) => <option key={key} value={key}>{label}</option>)}
+                      </select>
+                    </label>}
                     <label>
                       Price
                       <select value={hotelPriceFilter} onChange={(event) => setHotelPriceFilter(event.target.value)}>
@@ -361,7 +388,11 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                           <span className={styles.badge}>Hotel</span>
                           <h3>{hotel.title}</h3>
                           {hotel.area && <p>{hotel.area}</p>}
+                          {hotel.neighborhood && <p>{hotel.neighborhood}</p>}
                           {hotel.address && <p>{hotel.address}</p>}
+                          {!!hotel.tags?.length && <div className={styles.hotelTags} aria-label="Hotel tags">
+                            {hotel.tags.map((tag) => <span key={tag}>{HOTEL_TAGS[tag]}</span>)}
+                          </div>}
                           <div className={styles.metaRow}>
                             {hotel.rating != null && <span>{hotel.rating} rating</span>}
                             {hotel.reviews != null && <span>{hotel.reviews.toLocaleString()} reviews</span>}

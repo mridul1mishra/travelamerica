@@ -13,7 +13,9 @@
     "test:e2e": "playwright test",
     "test:e2e:nyc-safety": "playwright test tests/e2e/nyc-safety.spec.ts",
     "prepare": "cp scripts/pre-commit.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit || true",
-    "import:nyc-hotels": "node scripts/import-nyc-hotels.mjs"
+    "import:nyc-hotels": "node scripts/import-nyc-hotels.mjs",
+    "tag:nyc-hotels": "node scripts/apply-hotel-tags.mjs content/cities/newyork/hotel-tags.json",
+    "tag:nyc-subway": "node scripts/tag-near-subway.mjs"
   },
   "browserslist": {
     "production": [

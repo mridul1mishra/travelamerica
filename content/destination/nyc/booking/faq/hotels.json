@@ -22,5 +22,9 @@
   {
     "question": "How do I check whether a room meets my needs?",
     "answer": "Read the details for the exact room you are booking, including bed configuration, occupancy limits, bathroom type, and included amenities. If you need step-free access, an accessible bathroom, connecting rooms, a crib, or a particular check-in arrangement, confirm those requirements directly with the hotel before reserving."
+  },
+  {
+    "question": "What do the hotel tags mean?",
+    "answer": "Tags highlight documented features or reviewed travel suitability. Near subway means the hotel coordinates are within 500 metres of a listed MTA entrance in a straight line, not a measured walking route or a guarantee that the entrance is currently open. Family friendly indicates a documented feature supporting family stays; confirm room occupancy and availability with the hotel. Tags that have not been verified are left unassigned."
   }
 ]
