@@ -71,7 +71,7 @@ export default function CoupleTravelPage() {
       </section>
 
       <section className={styles.faqSection} aria-labelledby="faq-heading"><div className={styles.sectionHeader}><p className={styles.eyebrow}>Before you go</p><h2 id="faq-heading">Planning your NYC trip together</h2></div><div className={styles.faqGrid}>{faqs.map(faq => <article key={faq.question} className={styles.faqCard}><h3>{faq.question}</h3><p>{faq.answer}</p></article>)}</div></section>
-      <section className={styles.nextSteps} aria-label="Related NYC planning guides"><Link href="/destination/nyc/best-areas-to-stay">Choose your neighborhood</Link><Link href="/destination/nyc/things-to-do">Explore shared experiences</Link><Link href="/destination/nyc/getting-to-nyc">Plan your arrival</Link><Link href="/destination/nyc/booking?tab=hotels&from=couple-travel">Compare NYC stays</Link></section>
+      <section className={styles.nextSteps} aria-label="Related NYC planning guides"><Link href="/destination/nyc/best-areas-to-stay">Choose your neighborhood</Link><Link href="/destination/nyc/things-to-do">Explore shared experiences</Link><Link href="/destination/nyc/getting-to-nyc">Plan your arrival</Link><Link href="/destination/nyc/hotel?from=couple-travel">Compare NYC stays</Link></section>
     </main>
     <Footer />
   </>;

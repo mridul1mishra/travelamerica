@@ -55,7 +55,7 @@ export default function LinkClickTracker() {
       const bookingType = link.dataset.bookingType || "";
       const bookingEventName = getBookingEventName(bookingType);
       const isBookingCta =
-        url.pathname.includes("/destination/nyc/booking") ||
+        ["/destination/nyc/booking", "/destination/nyc/hotel", "/destination/nyc/flight", "/destination/nyc/tours-and-tickets"].includes(url.pathname) ||
         url.searchParams.has("from") ||
         link.dataset.track === "booking_cta";
 

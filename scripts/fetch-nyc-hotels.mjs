@@ -2,7 +2,7 @@
 /**
  * Fetch New York hotels from the RapidAPI "Travel Advisor" API (apidojo) and
  * write content/cities/newyork/hotels.json (consumed by the Hotels tab on
- * /destination/nyc/booking).
+ * legacy JSON consumers). Hotel page listings use PostgreSQL via import-nyc-hotels.mjs.
  *
  * Reuses the same RapidAPI subscription as the Things to Do script — no extra
  * signup needed. Replaced the previous Hotelbeds integration, whose free key
@@ -46,7 +46,7 @@ if (!KEY || KEY === "your_rapidapi_key") {
   process.exit(1);
 }
 
-const LIMIT = Number(process.env.HOTELS_LIMIT || 12); // cards to keep
+const LIMIT = Number(process.env.HOTELS_LIMIT || 50); // cards to keep
 const NYC_LOCATION_ID = "60763"; // New York City (Tripadvisor geo id)
 const headers = { "X-RapidAPI-Key": KEY, "X-RapidAPI-Host": HOST };
 
@@ -99,46 +99,57 @@ async function getLocationId() {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function getHotels(locationId) {
-  const url =
-    `https://${HOST}/hotels/list?` +
-    new URLSearchParams({
-      location_id: String(locationId),
-      adults: "2",
-      rooms: "1",
-      nights: "1",
-      checkin: CHECK_IN,
-      currency: "USD",
-      order: "asc",
-      limit: String(LIMIT * 4),
-      sort: "recommended",
-      lang: "en_US",
+export async function getHotels(locationId = NYC_LOCATION_ID) {
+  const found = new Map();
+  for (let offset = 0; offset < 300 && found.size < LIMIT; offset += 30) {
+    const url = `https://${HOST}/hotels/list?` + new URLSearchParams({
+      location_id: String(locationId), adults: "2", rooms: "1", nights: "1",
+      checkin: CHECK_IN, currency: "USD", order: "asc", limit: "30",
+      offset: String(offset), sort: "recommended", lang: "en_US",
     });
-
-  // /hotels/list is an async search: the first call returns progress "0" with
-  // empty data while the auction runs. Poll until progress hits 100 (or we get
-  // usable items, or we run out of attempts).
-  let json;
-  let auctionKey = null;
-  for (let attempt = 1; attempt <= 12; attempt++) {
-    const pollUrl = auctionKey
-      ? url + "&auction_key=" + encodeURIComponent(auctionKey)
-      : url;
-    json = await getJson(pollUrl);
-    const items = (json?.data || []).filter((d) => d?.name);
-    const progress = Number(json?.status?.progress ?? 0);
-    auctionKey = json?.status?.auction_key || auctionKey;
-    console.log(`  attempt ${attempt}: progress ${progress}%, ${items.length} items`);
-    if (items.length) return items;
-    if (progress >= 100) break; // search finished with nothing
-    await sleep(2000);
+    let auctionKey = null;
+    let items = [];
+    for (let attempt = 1; attempt <= 12; attempt++) {
+      const json = await getJson(auctionKey ? url + "&auction_key=" + encodeURIComponent(auctionKey) : url);
+      items = (json?.data || []).filter((item) => item?.name && item?.location_id);
+      const progress = Number(json?.status?.progress ?? 0);
+      auctionKey = json?.status?.auction_key || auctionKey;
+      console.log(`  offset ${offset}, attempt ${attempt}: ${items.length} hotels, progress ${progress}%`);
+      if (items.length || progress >= 100) break;
+      await sleep(2000);
+    }
+    const before = found.size;
+    for (const item of items) found.set(String(item.location_id), item);
+    if (found.size === before) break;
   }
-  console.warn("  hotels search returned no usable items; last raw sample:");
-  console.warn("  " + JSON.stringify(json).slice(0, 600));
-  return [];
+  return [...found.values()].slice(0, LIMIT);
+}
+export { CHECK_IN };
+
+// Directory search provides hotel details even when dated availability is empty.
+export async function getHotelDirectory(limit = 50) {
+  const found = new Map();
+  for (let offset = 0; offset < 600 && found.size < limit; offset += 30) {
+    const json = await getJson(`https://${HOST}/locations/search?` + new URLSearchParams({
+      query: "New York City hotels", location_id: NYC_LOCATION_ID,
+      limit: "30", offset: String(offset), currency: "USD", lang: "en_US",
+    }));
+    const results = json?.data ?? [];
+    if (!results.length) break;
+    for (const result of results) {
+      const item = result.result_object;
+      if (result.result_type !== "lodging" || item?.category?.key !== "hotel" ||
+          !item.location_id || !item.name || item.is_closed || item.is_long_closed) continue;
+      if (!item.ancestors?.some((ancestor) => String(ancestor.location_id) === NYC_LOCATION_ID)) continue;
+      found.set(String(item.location_id), item);
+    }
+    console.log(`  directory offset ${offset}: ${found.size} unique NYC hotels`);
+  }
+  return [...found.values()].slice(0, limit);
 }
 
 function num(n) {
+  if (n == null || n === "") return null;
   const v = Number(n);
   return Number.isFinite(v) ? v : null;
 }
@@ -156,11 +167,11 @@ function priceText(item) {
   return /\$|\bUSD\b/.test(s) ? s : `$${s}`;
 }
 
-function toCard(item) {
+export function toCard(item) {
   const img =
     item?.photo?.images?.medium?.url ||
     item?.photo?.images?.original?.url ||
-    "/majorcities/hotel-edison.jpg";
+    "/destination/nyc-neighborhoods.png";
   const rating = num(item?.rating) ?? num(item?.bubble_rating?.rating);
   const reviews = num(item?.num_reviews);
   const area = item?.parent_display_name || item?.location_string || "New York City";
@@ -192,7 +203,7 @@ async function main() {
   cards.forEach((c) => console.log(`  ${c.price.padEnd(28)} ${c.title}`));
 }
 
-main().catch((e) => {
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main().catch((e) => {
   console.error(e);
   process.exit(1);
 });

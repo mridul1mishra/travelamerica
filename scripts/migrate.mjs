@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 /**
  * Database migration script.
  * Runs automatically before `next build` (see package.json).
@@ -21,6 +22,7 @@ const pool = new Pool({
 });
 
 const migrations = [
+  { name: "create_hotels_table", sql: readFileSync(new URL("./hotels-schema.sql", import.meta.url), "utf8") },
   {
     name: 'create_subscribers_table',
     sql: `

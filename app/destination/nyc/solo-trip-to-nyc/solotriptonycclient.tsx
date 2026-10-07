@@ -76,7 +76,7 @@ export default function SoloTripNYCClient() {
       <FemaleSoloTiles tiles={femaleSolo.tiles} ctaLink={femaleSolo.ctaLink} />
       <InternalLinkHub />
       <FAQAccordion faqs={faqData} />
-      <BookingCTA variant="full" text="Choose a hotel in a safe NYC neighborhood" href="/destination/nyc/booking?tab=hotels&from=solo-trip-to-nyc" label="See NYC hotels" />
+      <BookingCTA variant="full" text="Choose a hotel in a safe NYC neighborhood" href="/destination/nyc/hotel?from=solo-trip-to-nyc" label="See NYC hotels" />
       <Footer />
     </>
   );

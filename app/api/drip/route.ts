@@ -82,7 +82,7 @@ const DRIP_SCHEDULE = [
         </a>
       </p>
       <p style="margin:0">
-        <a href="https://www.travelsamericas.com/destination/nyc/booking?tab=hotels&from=drip-email"
+        <a href="https://www.travelsamericas.com/destination/nyc/hotel?from=drip-email"
            style="background:#fff;color:#2563eb;padding:13px 24px;border-radius:6px;border:2px solid #2563eb;
                   text-decoration:none;font-weight:700;font-size:14px;display:inline-block">
           Compare hotel prices in these areas →
@@ -136,7 +136,7 @@ const DRIP_SCHEDULE = [
         </a>
       </p>
       <p style="margin:0">
-        <a href="https://www.travelsamericas.com/destination/nyc/booking?tab=hotels&from=drip-email"
+        <a href="https://www.travelsamericas.com/destination/nyc/hotel?from=drip-email"
            style="background:#fff;color:#2563eb;padding:13px 24px;border-radius:6px;border:2px solid #2563eb;
                   text-decoration:none;font-weight:700;font-size:14px;display:inline-block">
           Check hotel prices for your dates →
@@ -187,7 +187,7 @@ const DRIP_SCHEDULE = [
         </a>
       </p>
       <p style="margin:0">
-        <a href="https://www.travelsamericas.com/destination/nyc/booking?tab=flights&from=drip-email"
+        <a href="https://www.travelsamericas.com/destination/nyc/flight?from=drip-email"
            style="background:#fff;color:#2563eb;padding:13px 24px;border-radius:6px;border:2px solid #2563eb;
                   text-decoration:none;font-weight:700;font-size:14px;display:inline-block">
           Compare flights to NYC →

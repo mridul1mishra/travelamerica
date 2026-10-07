@@ -167,7 +167,7 @@ export default function Page() {
               By <a href="/about" style={{ color: "#1d4ed8", fontWeight: 600, textDecoration: "none" }}>Mridul Mishra</a> · Updated June 2026 · Fact-checked against NYPD &amp; MTA data
             </p>
             <div className={styles.heroActions}>
-              <Link href="/destination/nyc/booking?tab=hotels&from=is-nyc-safe-at-night" className={styles.primaryButton}>
+              <Link href="/destination/nyc/hotel?from=is-nyc-safe-at-night" className={styles.primaryButton}>
                 See safe-area hotels
               </Link>
               <a href="#subway-safety" className={styles.secondaryButton}>
@@ -458,7 +458,7 @@ export default function Page() {
               forces long late-night transfers.
             </p>
           </div>
-          <Link href="/destination/nyc/booking?tab=hotels&from=is-nyc-safe-at-night" className={styles.bookingButton}>
+          <Link href="/destination/nyc/hotel?from=is-nyc-safe-at-night" className={styles.bookingButton}>
             See safe-area hotels
           </Link>
         </section>

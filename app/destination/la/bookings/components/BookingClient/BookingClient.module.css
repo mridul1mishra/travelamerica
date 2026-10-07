@@ -55,6 +55,7 @@
 
 .heroActions button,
 .sidePanel button,
+.sidePanel > a,
 .priceBlock a {
   min-height: 40px;
   border: 0;
@@ -240,7 +241,7 @@
   border-radius: 8px;
 }
 
-.tabs button {
+.tabs button, .tabs a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -529,7 +530,7 @@
   color: #8b3f31;
 }
 
-.sidePanel button {
+.sidePanel button, .sidePanel > a {
   width: 100%;
   padding: 11px 14px;
   color: #fff;
@@ -647,3 +648,7 @@
     width: 100%;
   }
 }
+
+.tabs a, .sidePanel > a { text-decoration: none; }
+
+.sidePanel > a { display: block; box-sizing: border-box; }

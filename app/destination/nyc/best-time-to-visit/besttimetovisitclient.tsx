@@ -26,7 +26,7 @@ export default function BestTimeToVisitClient() {
       <BookingCTA
         variant="slim"
         text="Book your New York trip →"
-        href="/destination/nyc/booking?tab=hotels&from=best-time-to-visit"
+        href="/destination/nyc/hotel?from=best-time-to-visit"
         label="Book your trip"
       />
       <SeasonCards />
@@ -45,7 +45,7 @@ export default function BestTimeToVisitClient() {
       <BookingCTA
         variant="full"
         text="Book flights and hotels for your NYC trip"
-        href="/destination/nyc/booking?tab=hotels&from=best-time-to-visit"
+        href="/destination/nyc/hotel?from=best-time-to-visit"
         label="Book your trip"
       />
       <Footer />

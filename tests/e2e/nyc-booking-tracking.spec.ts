@@ -1,6 +1,6 @@
 import { expect, type Page, test } from "@playwright/test";
 
-const bookingPath = "/destination/nyc/booking";
+const bookingPath = "/destination/nyc/flight";
 const femaleSoloPath = "/destination/nyc/nyc-female-solo-travel-guide";
 
 type CapturedGtagEvent = {
@@ -10,6 +10,8 @@ type CapturedGtagEvent = {
 };
 
 async function installGtagCapture(page: Page) {
+  await page.waitForFunction(() => Array.from(document.querySelectorAll("a")).some((link) => Object.keys(link).some((key) => key.startsWith("__reactProps$"))));
+  await page.waitForTimeout(500);
   await page.evaluate(() => {
     const win = window as typeof window & {
       __capturedGtagEvents?: Array<{
@@ -76,7 +78,8 @@ test.describe("NYC booking tracking guardrails", () => {
       outbound_domain: /aviasales|emrldtp/i,
     });
 
-    await page.getByRole("tab", { name: /Hotels/i }).click();
+    await page.goto("/destination/nyc/hotel");
+    await installGtagCapture(page);
     const firstHotel = page.getByRole("link", { name: /Motto by Hilton New York City Chelsea/i }).first();
     const hotelPopup = context.waitForEvent("page");
     await firstHotel.click();
@@ -84,19 +87,20 @@ test.describe("NYC booking tracking guardrails", () => {
     await expectEvent(page, "booking_hotel_click", {
       booking_type: "hotel",
       item_name: "Motto by Hilton New York City Chelsea",
-      page_path: bookingPath,
+      page_path: "/destination/nyc/hotel",
       outbound_domain: /google\.com/i,
     });
 
-    await page.getByRole("button", { name: /Next: things to do in NYC/i }).click();
-    const firstActivity = page.getByRole("link", { name: /Guggenheim Ticket/i }).first();
+    await page.goto("/destination/nyc/tours-and-tickets");
+    await installGtagCapture(page);
+    const firstActivity = page.locator('[data-booking-type="activity"]').filter({ hasText: /Guggenheim Ticket/i }).first();
     const activityPopup = context.waitForEvent("page");
     await firstActivity.click();
     await (await activityPopup).close();
     await expectEvent(page, "booking_activity_click", {
       booking_type: "activity",
       item_name: /Guggenheim Ticket/i,
-      page_path: bookingPath,
+      page_path: "/destination/nyc/tours-and-tickets",
       outbound_domain: /wegotrip|tpx\.lt/i,
     });
   });
@@ -109,7 +113,7 @@ test.describe("NYC booking tracking guardrails", () => {
         "click",
         (event) => {
           const target = event.target;
-          if (target instanceof Element && target.closest('a[href*="/destination/nyc/booking"]')) {
+          if (target instanceof Element && target.closest('a[href*="/destination/nyc/hotel"]')) {
             event.preventDefault();
           }
         },
@@ -120,7 +124,7 @@ test.describe("NYC booking tracking guardrails", () => {
     await page.getByRole("link", { name: /See safe-area hotels/i }).click();
     await expectEvent(page, "booking_cta_click", {
       page_path: femaleSoloPath,
-      link_path: /\/destination\/nyc\/booking\?tab=hotels&from=female-solo/i,
+      link_path: /\/destination\/nyc\/hotel\?from=female-solo/i,
       source_page: "female-solo",
     });
   });

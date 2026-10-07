@@ -208,7 +208,7 @@ export default function NYCSafetyGuideClient() {
             </p>
 
             <div className={styles.actions}>
-              <Link className={styles.primaryButton} href="/destination/nyc/booking?tab=hotels&from=nyc-safety-guide">
+              <Link className={styles.primaryButton} href="/destination/nyc/hotel?from=nyc-safety-guide">
                 See safe-area hotels
               </Link>
               <Link className={styles.secondaryButton} href="#situations">
@@ -432,7 +432,7 @@ export default function NYCSafetyGuideClient() {
       <BookingCTA
         variant="full"
         text="Choose a hotel in a practical NYC neighborhood"
-        href="/destination/nyc/booking?tab=hotels&from=nyc-safety-guide"
+        href="/destination/nyc/hotel?from=nyc-safety-guide"
         label="See NYC hotels"
       />
       <Footer />

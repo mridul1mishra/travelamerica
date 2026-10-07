@@ -144,7 +144,7 @@ export default function GroupTravelPage() {
               Broadway, and the landmarks people actually want to see.
             </p>
             <div className={styles.heroActions}>
-              <Link href="/destination/nyc/booking?tab=hotels&from=group-travel" className={styles.primaryButton}>
+              <Link href="/destination/nyc/hotel?from=group-travel" className={styles.primaryButton}>
                 Compare group stays
               </Link>
               <a href="#itinerary" className={styles.secondaryButton}>Use the 3-day plan</a>
@@ -342,7 +342,7 @@ export default function GroupTravelPage() {
               <li>Hold Broadway or ferry tickets early</li>
               <li>Keep dinner within 15 minutes of the anchor plan</li>
             </ul>
-            <Link href="/destination/nyc/booking?tab=hotels&from=group-travel" className={styles.bookingButton}>
+            <Link href="/destination/nyc/hotel?from=group-travel" className={styles.bookingButton}>
               Compare group stays
             </Link>
           </div>

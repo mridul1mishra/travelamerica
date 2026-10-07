@@ -149,7 +149,7 @@ export default function SoloItineraryClient({ grouped }: SoloItineraryClientProp
             </p>
 
             <div className={styles.actions}>
-              <Link className={styles.primaryButton} href="/destination/nyc/booking?tab=hotels&from=solo-itinerary">
+              <Link className={styles.primaryButton} href="/destination/nyc/hotel?from=solo-itinerary">
                 Find hotels near the route
               </Link>
               <Link className={styles.secondaryButton} href="#day-plan">
@@ -306,7 +306,7 @@ export default function SoloItineraryClient({ grouped }: SoloItineraryClientProp
       <BookingCTA
         variant="full"
         text="Book a central NYC stay for this solo itinerary"
-        href="/destination/nyc/booking?tab=hotels&from=solo-itinerary"
+        href="/destination/nyc/hotel?from=solo-itinerary"
         label="See NYC hotels"
       />
       <Footer />

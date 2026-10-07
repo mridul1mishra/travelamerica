@@ -4,7 +4,6 @@ import BookingClient, { type CityBookingConfig } from "./components/BookingClien
 import FAQAccordion from "./components/FAQAccordion";
 import faqData from "@/content/destination/nyc/booking/faq/faqsection.json";
 import bookFlights from "@/content/cities/newyork/bookflights.json";
-import hotelsData from "@/content/cities/newyork/hotels.json";
 import thingsToDoData from "@/content/cities/newyork/thingstodo.json";
 
 const config: CityBookingConfig = {
@@ -78,10 +77,15 @@ const config: CityBookingConfig = {
     { heading: "Anchor the itinerary", text: "Book the fixed pieces first: hotel, flights, Broadway or observation deck, then keep neighborhood time flexible." },
   ],
   flights: bookFlights as CityBookingConfig["flights"],
-  hotels: hotelsData as CityBookingConfig["hotels"],
+  hotels: [],
   activities: thingsToDoData as CityBookingConfig["activities"],
 };
 
-export default function BookFlightsClient() {
-  return <BookingClient config={config} faqSection={<FAQAccordion faqs={faqData} />} />;
+export default function BookFlightsClient({ category = "flights", hotels = [] }: { hotels?: CityBookingConfig["hotels"]; category?: "flights" | "hotels" | "activities" }) {
+  const titles = { flights: "Compare Flights to New York City", hotels: "Find Your New York City Hotel", activities: "Book NYC Activities, Tours & Tickets" };
+  const intros = { flights: "Compare sample fares to New York and plan your airport transfer. Check current prices with the provider.", hotels: "Find a NYC hotel that fits your neighborhood, budget, and travel plans. Filter stays by price and rating, then check current rates with the provider.", activities: "Browse NYC tours, museums, and attraction tickets. Compare experiences by category and check availability with the provider." };
+  const routes = { flights: "/destination/nyc/flight", hotels: "/destination/nyc/hotel", activities: "/destination/nyc/tours-and-tickets" };
+  const focused = { ...config, hotels, category, categoryRoutes: routes, bookingHref: routes[category], bannerText: titles[category], pageTitle: titles[category], introText: intros[category], bookingTips: config.bookingTips?.filter((_, index) => index === (category === "hotels" ? 0 : category === "flights" ? 1 : 2)) };
+  const faqs = faqData.filter((faq) => category === "hotels" ? /hotel in/i.test(faq.question) : category === "flights" ? /fly/i.test(faq.question) : /activities/i.test(faq.question));
+  return <BookingClient config={focused} faqSection={<FAQAccordion faqs={faqs} />} />;
 }

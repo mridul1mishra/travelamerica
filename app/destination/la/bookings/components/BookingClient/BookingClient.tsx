@@ -26,6 +26,7 @@ export type Hotel = {
   img: string;
   title: string;
   area?: string;
+  address?: string | null;
   rating?: number | null;
   reviews?: number | null;
   price: string;
@@ -62,6 +63,9 @@ export interface CityBookingConfig {
   bannerText: string;
   pageTitle: string;
   tabs: TabDef[];
+  category?: TabKey;
+  categoryRoutes?: Record<TabKey, string>;
+  introText?: string;
   tabRail: Record<TabKey, RailConfig>;
   relatedGroups: RelatedGroup[];
   bookingTips?: BookingTip[];
@@ -86,6 +90,7 @@ function priceNumber(value: string | null | undefined) {
 
 function matchesHotelPrice(price: string, filter: string) {
   const value = priceNumber(price);
+  if (filter !== "all" && !Number.isFinite(value)) return false;
   if (filter === "under250") return value < 250;
   if (filter === "250to400") return value >= 250 && value <= 400;
   if (filter === "over400") return value > 400;
@@ -128,7 +133,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
   const searchParams = useSearchParams();
   const bookingRef = useRef<HTMLElement | null>(null);
   const [activeTab, setActiveTab] = useState<TabKey>(() =>
-    getInitialTab(searchParams.get("tab")?.toLowerCase() ?? null, validTabs)
+    config.category ?? getInitialTab(searchParams.get("tab")?.toLowerCase() ?? null, validTabs)
   );
   const [hotelPriceFilter, setHotelPriceFilter] = useState("all");
   const [hotelRatingFilter, setHotelRatingFilter] = useState("all");
@@ -189,18 +194,17 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
               <span>/</span>
               <Link href={cityHref}>{cityName}</Link>
               <span>/</span>
-              <span>Book your trip</span>
+              <span>{config.category ? activeLabel : "Book your trip"}</span>
             </nav>
-            <p className={styles.eyebrow}>{cityName} booking hub</p>
+            <p className={styles.eyebrow}>{cityName} {config.category ? activeLabel.toLowerCase() : "booking hub"}</p>
             <h1>{pageTitle}</h1>
             <p>
-              Compare flights, hotels, and ticketed experiences without losing the practical planning context:
-              airport tradeoffs, neighborhood fit, local transport, and seasonal price spikes.
+              {config.introText ?? "Compare flights, hotels, and ticketed experiences without losing the practical planning context: airport tradeoffs, neighborhood fit, local transport, and seasonal price spikes."}
             </p>
-            <div className={styles.heroActions}>
+            {!config.category && <div className={styles.heroActions}>
               <button type="button" onClick={() => chooseTab("flights", true)}>Compare flights</button>
               <button type="button" onClick={() => chooseTab("hotels", true)}>Browse hotels</button>
-            </div>
+            </div>}
           </div>
           <div className={styles.introVisual}>
             <div className={styles.imageStrip}>
@@ -217,7 +221,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
           </div>
         </section>
 
-        <section className={styles.stats} aria-label="Booking options summary">
+        {!config.category && <section className={styles.stats} aria-label="Booking options summary">
           <button type="button" onClick={() => chooseTab("flights", true)}>
             <span>Flights</span>
             <strong>{lowestFlight}</strong>
@@ -236,11 +240,10 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
             <small>{activities.length} tours and tickets</small>
             <span className={styles.statCta}>Browse activities →</span>
           </button>
-        </section>
+        </section>}
         </div>
-
         <section className={styles.bookingShell} aria-label="Booking tools" ref={bookingRef}>
-          <div className={styles.tabs} role="tablist" aria-label="Booking categories">
+          {config.categoryRoutes ? <nav className={styles.tabs} aria-label="Booking categories">{tabs.map((tab) => <Link key={tab.key} href={config.categoryRoutes![tab.key]} aria-current={activeTab === tab.key ? "page" : undefined} className={activeTab === tab.key ? styles.activeTab : ""}><BookingIcon type={tab.key} /><span>{tab.label}</span></Link>)}</nav> : <div className={styles.tabs} role="tablist" aria-label="Booking categories">
             {tabs.map((tab) => (
               <button
                 key={tab.key}
@@ -254,7 +257,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                 <span>{tab.label}</span>
               </button>
             ))}
-          </div>
+          </div>}
 
           <div className={styles.workspace}>
             <section className={styles.resultsPanel}>
@@ -306,6 +309,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
               {activeTab === "hotels" && (
                 <>
                   <h2>Book Hotels in {cityName}</h2>
+                  {config.category === "hotels" && <p>{hotels.length} hotels listed. Check current rates and availability with the provider.</p>}
                   <div className={styles.filters} aria-label="Hotel filters">
                     <label>
                       Price
@@ -350,12 +354,13 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                           <span className={styles.badge}>Hotel</span>
                           <h3>{hotel.title}</h3>
                           {hotel.area && <p>{hotel.area}</p>}
+                          {hotel.address && <p>{hotel.address}</p>}
                           <div className={styles.metaRow}>
                             {hotel.rating != null && <span>{hotel.rating} rating</span>}
                             {hotel.reviews != null && <span>{hotel.reviews.toLocaleString()} reviews</span>}
                           </div>
                           <div className={styles.cardFooter}>
-                            <strong>{hotel.price}<small> / night</small></strong>
+                            <strong>{hotel.price}{Number.isFinite(priceNumber(hotel.price)) && <small> / night</small>}</strong>
                             <span>View hotel</span>
                           </div>
                         </div>
@@ -424,9 +429,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
 
             <aside className={styles.sidePanel} aria-label={`${activeLabel} next steps`}>
               <p className={styles.eyebrow}>Next step</p>
-              <button type="button" onClick={() => chooseTab(rail.nextStep.toTab)}>
-                {rail.nextStep.label}
-              </button>
+              {config.categoryRoutes ? <Link href={config.categoryRoutes[rail.nextStep.toTab]}>{rail.nextStep.label}</Link> : <button type="button" onClick={() => chooseTab(rail.nextStep.toTab)}>{rail.nextStep.label}</button>}
               <div className={styles.guideLinks}>
                 <h3>Helpful guides</h3>
                 {rail.guides.map((guide) => (

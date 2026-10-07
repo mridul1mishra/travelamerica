@@ -224,7 +224,7 @@ export default function FemaleSoloTravelGuide() {
             </p>
 
             <div className={styles.actions}>
-              <Link className={styles.primaryButton} href="/destination/nyc/booking?tab=hotels&from=female-solo">
+              <Link className={styles.primaryButton} href="/destination/nyc/hotel?from=female-solo">
                 See safe-area hotels
               </Link>
               <Link className={styles.secondaryButton} href="/destination/nyc/subway-safety-guide">
@@ -523,7 +523,7 @@ export default function FemaleSoloTravelGuide() {
       <BookingCTA
         variant="full"
         text="Book a central NYC hotel for a solo-friendly base"
-        href="/destination/nyc/booking?tab=hotels&from=female-solo"
+        href="/destination/nyc/hotel?from=female-solo"
         label="See NYC hotels"
       />
       <Footer />

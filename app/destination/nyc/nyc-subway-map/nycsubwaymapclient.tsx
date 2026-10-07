@@ -18,7 +18,7 @@ export default function NYCSubwayMapClient() {
   return (
     <>
     <Header />
-      <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=nyc-subway-map" label="Book your trip" />
+      <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/hotel?from=nyc-subway-map" label="Book your trip" />
       <div className="page-container">
   <div className={styles.pagestack}>
 
@@ -79,7 +79,7 @@ export default function NYCSubwayMapClient() {
   </div>
 </div>
 
-    <BookingCTA variant="full" text="Booked your flight? Plan your NYC trip" href="/destination/nyc/booking?tab=hotels&from=nyc-subway-map" label="Book your trip" />
+    <BookingCTA variant="full" text="Booked your flight? Plan your NYC trip" href="/destination/nyc/hotel?from=nyc-subway-map" label="Book your trip" />
     <Footer />
     </>
   );

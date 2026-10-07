@@ -24,7 +24,7 @@ export default function Neighborhoodguide({interest}: Props) {
     return(
         <>
         <Header />
-        <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/booking?tab=hotels&from=neighborhood-guide" label="See NYC hotels" />
+        <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/hotel?from=neighborhood-guide" label="See NYC hotels" />
         <div className={styles.container}>
         <IntroSection />
         <section className={styles.routeRole} aria-labelledby="route-role-heading">
@@ -61,7 +61,7 @@ export default function Neighborhoodguide({interest}: Props) {
         <FAQAccordion faqs={faqData} />
         <NeighborhoodGuideCTA />
         </div>
-        <BookingCTA variant="full" text="See hotels in the best NYC neighborhoods" href="/destination/nyc/booking?tab=hotels&from=neighborhood-guide" label="See NYC hotels" />
+        <BookingCTA variant="full" text="See hotels in the best NYC neighborhoods" href="/destination/nyc/hotel?from=neighborhood-guide" label="See NYC hotels" />
         <Footer />
         </>
     )

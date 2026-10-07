@@ -1,63 +1,40 @@
 import styles from "./Popularneighborhood.module.css";
 
-type PopularNeighborhoodsProps = {
-  interest?: string;
-};
-
 const neighborhoods = [
-  {
-    name: "Midtown Manhattan",
-    vibe: "Subway: N/Q/R/W, 4/5/6 · Hotels from $180/night · Walk to Empire State, Times Square",
-    copy: "Home to Times Square, Broadway, and major landmarks, Midtown offers unmatched convenience for first-time visitors.",
-  },
-  {
-    name: "Upper East Side",
-    vibe: "Subway: 4/5/6 · Museum Mile · Hotels from $160/night",
-    copy: "Close to Central Park and Museum Mile, this area feels more relaxed while staying well connected.",
-  },
-  {
-    name: "Lower Manhattan",
-    vibe: "Subway: 2/3, A/C · Walk to 9/11 Memorial, Brooklyn Bridge · Hotels from $150/night",
-    copy: "A mix of history, waterfront views, and nightlife, with easy subway access across the city.",
-  },
-  {
-    name: "Brooklyn Heights & DUMBO",
-    vibe: "Subway: A/C, 2/3 · 10 min to Midtown · Hotels from $130/night",
-    copy: "Known for tree-lined streets and skyline views, these neighborhoods offer a quieter stay just across the river.",
-  },
-  {
-    name: "Williamsburg",
-    vibe: "Subway: L train · 20 min to Midtown · Hotels from $120/night",
-    copy: "Popular for its restaurants, shops, and nightlife, Williamsburg has a youthful energy and easy subway access to Manhattan.",
-  },
-  {
-    name: "Greenwich Village & SoHo",
-    vibe: "Subway: A/C/E, B/D/F/M, N/R/W · Dining, shopping, nightlife · Hotels from $170/night",
-    copy: "A strong choice for travelers who want walkable restaurants, character, and easy access to Downtown, Chelsea, and Midtown.",
-  },
+  { name: "Midtown Manhattan", fit: "First visits and landmark sightseeing", atmosphere: "Busy, central, and convenient", nearby: "Times Square, Broadway, Empire State Building" },
+  { name: "Upper East Side", fit: "Museums, parks, and a more relaxed base", atmosphere: "Residential streets and a quieter pace", nearby: "Central Park and Museum Mile" },
+  { name: "Lower Manhattan", fit: "History and waterfront sightseeing", atmosphere: "Historic sights and waterfront views", nearby: "9/11 Memorial and Brooklyn Bridge" },
+  { name: "Brooklyn Heights & DUMBO", fit: "Skyline views and neighborhood walks", atmosphere: "Tree-lined streets and waterfront scenery", nearby: "Brooklyn waterfront and skyline viewpoints" },
+  { name: "Williamsburg", fit: "Restaurants, shopping, and nightlife", atmosphere: "Lively dining and evening energy", nearby: "Neighborhood restaurants, shops, and bars" },
+  { name: "Greenwich Village & SoHo", fit: "Walkable dining and shopping", atmosphere: "Street life, restaurants, and neighborhood character", nearby: "Village restaurants and SoHo shopping" },
 ];
 
-export default function PopularNeighborhoods({ interest }: PopularNeighborhoodsProps) {
+export default function PopularNeighborhoods({ interest }: { interest?: string }) {
   void interest;
-
   return (
-    <section className={styles.section}>
-      <h2 className={styles.heading}>Popular Neighborhoods for Tourists</h2>
-
+    <section className={styles.section} aria-labelledby="neighborhood-comparison-heading">
+      <h2 id="neighborhood-comparison-heading" className={styles.heading}>Compare NYC neighborhoods at a glance</h2>
       <p className={styles.intro}>
-        These neighborhoods are some of the most popular choices for visitors
-        because they balance convenience, character, and access to attractions.
+        Start with what you want to do, then compare the feel of each area.
+        This shortlist brings together the neighborhoods described in this guide.
       </p>
-
-      <div className={styles.grid}>
-        {neighborhoods.map((neighborhood) => (
-          <article key={neighborhood.name} className={styles.card}>
-            <h3>{neighborhood.name}</h3>
-            <p className={styles.vibe}>{neighborhood.vibe}</p>
-            <p>{neighborhood.copy}</p>
+      <div className={styles.grid}>{neighborhoods.map((area) => (
+          <article className={styles.card} key={area.name}>
+            <h3>{area.name}</h3>
+            <p><strong>Consider it for:</strong> {area.fit}</p>
+            <p><strong>Atmosphere:</strong> {area.atmosphere}</p>
+            <p><strong>What to explore:</strong> {area.nearby}</p>
           </article>
-        ))}
-      </div>
+        ))}</div>
+      <p className={styles.note}>
+        Before choosing a hotel, check prices for your dates and the route from its exact address to your planned stops.
+        Neighborhood names alone do not tell you the room rate or door-to-door journey time.
+      </p>
+      <nav className={styles.nextSteps} aria-label="Next steps after comparing neighborhoods">
+        <a href="/destination/nyc/best-areas-to-stay">Compare areas for your hotel stay →</a>
+        <a href="/destination/nyc/nyc-subway-map">Check subway connections →</a>
+        <a href="/destination/nyc/nyc-safety-guide">Read practical safety advice →</a>
+      </nav>
     </section>
   );
 }

@@ -64,3 +64,10 @@ next-env.d.ts
 
 # private local analytics reporting app, data, and credentials
 /analytics-dashboard/
+
+# Local supporting documents, research, and generated reports
+/outreach/
+/tmp/
+/healthcheck.html
+/scripts/strip-report.json
+/.claude/settings.local.json
