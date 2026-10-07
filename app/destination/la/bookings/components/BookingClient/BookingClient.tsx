@@ -183,16 +183,16 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
 
   return (
     <div className={styles.page}>
-      <NavigationHeader />
+      <NavigationHeader prefetch={config.category ? false : undefined} />
 
       <main>
         <div className={styles.planningBlock}>
-        <section className={styles.pageIntro} aria-label={bannerText}>
+        <section className={`${styles.pageIntro} ${config.category ? styles.categoryIntro : ""}`} aria-label={bannerText}>
           <div>
             <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
-              <Link href="/">Home</Link>
+              <Link prefetch={config.category ? false : undefined} href="/">Home</Link>
               <span>/</span>
-              <Link href={cityHref}>{cityName}</Link>
+              <Link prefetch={config.category ? false : undefined} href={cityHref}>{cityName}</Link>
               <span>/</span>
               <span>{config.category ? activeLabel : "Book your trip"}</span>
             </nav>
@@ -201,6 +201,13 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
             <p>
               {config.introText ?? "Compare flights, hotels, and ticketed experiences without losing the practical planning context: airport tradeoffs, neighborhood fit, local transport, and seasonal price spikes."}
             </p>
+            {config.category && <div className={styles.categoryActions}>
+              <button type="button" onClick={() => chooseTab(activeTab, true)}>
+                {activeTab === "hotels" ? "Explore hotels" : activeTab === "flights" ? "Explore flights" : "Explore tours & tickets"}
+                <span aria-hidden="true">↓</span>
+              </button>
+              <span>{activeTab === "hotels" ? `${hotels.length} stays to explore` : activeTab === "flights" ? `${flights.rows.length} sample routes` : `${activities.length} experiences to explore`}</span>
+            </div>}
             {!config.category && <div className={styles.heroActions}>
               <button type="button" onClick={() => chooseTab("flights", true)}>Compare flights</button>
               <button type="button" onClick={() => chooseTab("hotels", true)}>Browse hotels</button>
@@ -243,7 +250,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
         </section>}
         </div>
         <section className={styles.bookingShell} aria-label="Booking tools" ref={bookingRef}>
-          {config.categoryRoutes ? <nav className={styles.tabs} aria-label="Booking categories">{tabs.map((tab) => <Link key={tab.key} href={config.categoryRoutes![tab.key]} aria-current={activeTab === tab.key ? "page" : undefined} className={activeTab === tab.key ? styles.activeTab : ""}><BookingIcon type={tab.key} /><span>{tab.label}</span></Link>)}</nav> : <div className={styles.tabs} role="tablist" aria-label="Booking categories">
+          {!config.category && <div className={styles.tabs} role="tablist" aria-label="Booking categories">
             {tabs.map((tab) => (
               <button
                 key={tab.key}
@@ -429,11 +436,11 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
 
             <aside className={styles.sidePanel} aria-label={`${activeLabel} next steps`}>
               <p className={styles.eyebrow}>Next step</p>
-              {config.categoryRoutes ? <Link href={config.categoryRoutes[rail.nextStep.toTab]}>{rail.nextStep.label}</Link> : <button type="button" onClick={() => chooseTab(rail.nextStep.toTab)}>{rail.nextStep.label}</button>}
+              {config.categoryRoutes ? <Link prefetch={config.category ? false : undefined} href={config.categoryRoutes[rail.nextStep.toTab]}>{rail.nextStep.label}</Link> : <button type="button" onClick={() => chooseTab(rail.nextStep.toTab)}>{rail.nextStep.label}</button>}
               <div className={styles.guideLinks}>
                 <h3>Helpful guides</h3>
                 {rail.guides.map((guide) => (
-                  <Link key={guide.href} href={guide.href}>{guide.label}</Link>
+                  <Link prefetch={config.category ? false : undefined} key={guide.href} href={guide.href}>{guide.label}</Link>
                 ))}
               </div>
             </aside>
@@ -452,7 +459,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
               <div className={styles.relatedGroup} key={group.heading}>
                 <h3>{group.heading}</h3>
                 {group.links.map((link) => (
-                  <Link key={link.href} href={link.href}>{link.label}</Link>
+                  <Link prefetch={config.category ? false : undefined} key={link.href} href={link.href}>{link.label}</Link>
                 ))}
               </div>
             ))}
@@ -460,7 +467,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
         </section>
       </main>
 
-      <Footer />
+      <Footer prefetch={config.category ? false : undefined} />
     </div>
   );
 }

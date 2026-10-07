@@ -19,10 +19,12 @@ const defaultLinks: HeaderLink[] = [
 
 type NavigationHeaderProps = {
   links?: HeaderLink[];
+  prefetch?: boolean;
 };
 
 const NavigationHeader: React.FC<NavigationHeaderProps> = ({
   links = defaultLinks,
+  prefetch,
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
@@ -31,7 +33,7 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({
   return (
     <header className="overlay-header scrolled">
       <div className="brand-logo">
-        <Link href="/" aria-label="Travels Americas home" onClick={closeMenu}>
+        <Link prefetch={prefetch} href="/" aria-label="Travels Americas home" onClick={closeMenu}>
           <Image
             src="/Travels-Americas-logo-horizontal-v3.png"
             alt="Travels Americas Logo"
@@ -60,7 +62,7 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           </li>
           {links.map((link) => (
             <li key={link.href}>
-              <Link href={link.href} onClick={closeMenu}>
+              <Link prefetch={prefetch} href={link.href} onClick={closeMenu}>
                 {link.label}
               </Link>
             </li>

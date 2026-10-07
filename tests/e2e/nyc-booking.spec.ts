@@ -9,12 +9,16 @@ test("NYC booking categories use dedicated pages", async ({ page }) => {
   await expect(page.locator('[data-booking-type="hotel"]')).toHaveCount(50);
   await page.getByLabel("Hotel filters").getByRole("combobox").nth(1).selectOption("4.5");
   await expect(page.locator('[data-booking-type="hotel"]').first()).toBeVisible();
-  await page.getByRole("navigation", { name: "Booking categories" }).getByRole("link", { name: "Flights" }).click();
+  await expect(page.getByRole("navigation", { name: "Booking categories" })).toHaveCount(0);
+  await page.goto("/destination/nyc/flight");
   await expect(page).toHaveURL(/\/destination\/nyc\/flight$/);
   await expect(page.locator('[data-booking-type="flight"]').first()).toBeVisible();
   await expect(page.locator('[data-booking-type="hotel"]')).toHaveCount(0);
-  await page.getByRole("navigation", { name: "Booking categories" }).getByRole("link", { name: "Things to Do" }).click();
+  await expect(page.getByRole("navigation", { name: "Booking categories" })).toHaveCount(0);
+  await page.goto("/destination/nyc/tours-and-tickets");
   await expect(page).toHaveURL(/\/destination\/nyc\/tours-and-tickets$/);
+  await expect(page.getByRole("navigation", { name: "Booking categories" })).toHaveCount(0);
+  await expect(page.getByRole("tablist", { name: "Booking categories" })).toHaveCount(0);
   await expect(page.getByLabel("Activity filters")).toBeVisible();
   await expect(page.locator('[data-booking-type="activity"]').first()).toBeVisible();
 });

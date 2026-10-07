@@ -652,3 +652,127 @@
 .tabs a, .sidePanel > a { text-decoration: none; }
 
 .sidePanel > a { display: block; box-sizing: border-box; }
+
+.categoryIntro {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+  padding: 184px 0 44px;
+}
+
+.categoryIntro .breadcrumb {
+  margin-bottom: 30px;
+  font-size: 0.8rem;
+}
+
+.categoryIntro h1 {
+  max-width: 19ch;
+  font-size: clamp(2.1rem, 3.5vw, 3.15rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.categoryIntro > div > p:not(.eyebrow) {
+  max-width: 48ch;
+  margin-top: 22px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.categoryIntro .introVisual {
+  gap: 16px;
+  min-width: 0;
+}
+
+.categoryIntro .imageStrip {
+  aspect-ratio: 16 / 8.5;
+  min-height: 0;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(23, 32, 51, 0.09);
+}
+
+.categoryIntro .tipGrid {
+  grid-template-columns: 1fr;
+}
+
+.categoryIntro .tipGrid article {
+  padding: 20px 24px;
+  border-radius: 14px;
+  border-left: 3px solid #b54f3a;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.categoryIntro .tipGrid p {
+  margin-top: 8px;
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.categoryActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 20px;
+  margin-top: 28px;
+}
+
+.categoryActions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 48px;
+  padding: 12px 20px;
+  border: 1px solid #172033;
+  border-radius: 9px;
+  background: #172033;
+  color: #fff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.categoryActions button:hover {
+  background: #2d3d56;
+}
+
+.categoryActions button:focus-visible {
+  outline: 3px solid #b54f3a;
+  outline-offset: 4px;
+}
+
+.categoryActions > span {
+  color: #69758b;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 980px) {
+  .categoryIntro {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 720px) {
+  .categoryIntro {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 176px 0 30px;
+  }
+
+  .categoryIntro .breadcrumb {
+    margin-bottom: 22px;
+  }
+
+  .categoryIntro h1 {
+    max-width: 22ch;
+    font-size: clamp(2rem, 8vw, 2.7rem);
+  }
+
+  .categoryIntro .tipGrid article {
+    padding: 18px 20px;
+  }
+}
