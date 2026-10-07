@@ -1,0 +1,26 @@
+[
+  {
+    "question": "How can I compare the NYC tours and tickets listed here?",
+    "answer": "Use the category filter to narrow the experiences, then compare ratings, review counts, and the listed starting prices. Open the provider's listing to check duration, inclusions, accessibility, and available dates. Ratings and prices on this page are saved listing details, not live availability checks."
+  },
+  {
+    "question": "Does an audio tour include admission to the attraction?",
+    "answer": "Do not assume that an audio tour includes entry. Read the provider's inclusions to confirm whether the product supplies an admission ticket, audio guide, guided visit, or a combination. Check which areas or exhibitions are covered and whether headphones, an app, or an internet connection are needed."
+  },
+  {
+    "question": "Are the listed prices and time slots guaranteed?",
+    "answer": "No. A ‘from’ price is a saved starting price and may differ for your date, ticket type, age group, or group size. Available time slots and the final total are confirmed by the provider. Check all required fees and inclusions before completing the booking."
+  },
+  {
+    "question": "What should I check before booking a timed-entry ticket?",
+    "answer": "Confirm the date, entry window, meeting point, check-in requirements, and late-arrival policy. Leave room in your itinerary for travel and any security checks described by the provider. Check whether the ticket must be exchanged for admission or can be shown directly at the entrance."
+  },
+  {
+    "question": "Can I cancel or reschedule an experience?",
+    "answer": "Cancellation and rescheduling terms depend on the specific ticket and provider. Read the deadline, refund conditions, and any restrictions before paying; some tickets may be nonrefundable or tied to a fixed time. For changes, contact the provider using the details in your booking confirmation."
+  },
+  {
+    "question": "How do I check whether an experience suits my group?",
+    "answer": "Check age restrictions, walking distance, stairs, language, duration, and any equipment requirements. Confirm accessibility, stroller access, and group arrangements with the provider if those details affect your visit. For outdoor experiences, also read the weather policy and what happens if the provider cancels."
+  }
+]

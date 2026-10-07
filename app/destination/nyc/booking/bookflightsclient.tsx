@@ -2,7 +2,9 @@
 
 import BookingClient, { type CityBookingConfig } from "./components/BookingClient/BookingClient";
 import FAQAccordion from "./components/FAQAccordion";
-import faqData from "@/content/destination/nyc/booking/faq/faqsection.json";
+import hotelFaqs from "@/content/destination/nyc/booking/faq/hotels.json";
+import flightFaqs from "@/content/destination/nyc/booking/faq/flights.json";
+import activityFaqs from "@/content/destination/nyc/booking/faq/activities.json";
 import bookFlights from "@/content/cities/newyork/bookflights.json";
 import thingsToDoData from "@/content/cities/newyork/thingstodo.json";
 
@@ -86,6 +88,6 @@ export default function BookFlightsClient({ category = "flights", hotels = [] }:
   const intros = { flights: "Compare sample fares to New York and plan your airport transfer. Check current prices with the provider.", hotels: "Find a NYC hotel that fits your neighborhood, budget, and travel plans. Filter stays by price and rating, then check current rates with the provider.", activities: "Browse NYC tours, museums, and attraction tickets. Compare experiences by category and check availability with the provider." };
   const routes = { flights: "/destination/nyc/flight", hotels: "/destination/nyc/hotel", activities: "/destination/nyc/tours-and-tickets" };
   const focused = { ...config, hotels, category, categoryRoutes: routes, bookingHref: routes[category], bannerText: titles[category], pageTitle: titles[category], introText: intros[category], bookingTips: config.bookingTips?.filter((_, index) => index === (category === "hotels" ? 0 : category === "flights" ? 1 : 2)) };
-  const faqs = faqData.filter((faq) => category === "hotels" ? /hotel in/i.test(faq.question) : category === "flights" ? /fly/i.test(faq.question) : /activities/i.test(faq.question));
-  return <BookingClient config={focused} faqSection={<FAQAccordion faqs={faqs} />} />;
+  const faqs = category === "hotels" ? hotelFaqs : category === "flights" ? flightFaqs : activityFaqs;
+  return <BookingClient config={focused} faqSection={faqs.length >= 5 ? <FAQAccordion faqs={faqs} /> : undefined} />;
 }

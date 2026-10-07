@@ -1,0 +1,26 @@
+[
+  {
+    "question": "How do I choose a NYC hotel that fits my trip?",
+    "answer": "Start with the places you plan to visit, then check each hotel's exact address and nearby subway connections. Compare room type, recent reviews, cancellation terms, and the total for your dates. A hotel that costs less per night may be less convenient for your itinerary."
+  },
+  {
+    "question": "How can I compare the 50 hotels listed here?",
+    "answer": "Use the rating filter to narrow the list, then sort by highest rating or most reviewed. Check the address on each card before opening the provider's listing. Ratings and review counts are saved from the hotel directory; they are not live availability checks or hotel star classifications."
+  },
+  {
+    "question": "Why do the hotel cards say ‘See prices’?",
+    "answer": "Our hotel directory supplies property details but does not currently provide nightly rates for your travel dates. Select ‘View hotel’ and enter your dates, guest count, and room requirements with the provider to see current prices and availability. Hotels without a listed rate are excluded when you select a price range."
+  },
+  {
+    "question": "What should I check before comparing hotel prices?",
+    "answer": "Compare the same dates, number of guests, room type, and cancellation policy. At checkout, check the complete stay total, including taxes and any mandatory property fees. Also check whether breakfast, parking, or other extras are included, and whether the property requires a deposit."
+  },
+  {
+    "question": "Can I book or cancel a hotel through this website?",
+    "answer": "This page helps you compare hotel listings and opens an external provider when you select a hotel. Reservations, payments, changes, and cancellations are handled by that provider or the hotel. Check the cancellation deadline and refund conditions for the specific rate before paying, and keep your booking confirmation."
+  },
+  {
+    "question": "How do I check whether a room meets my needs?",
+    "answer": "Read the details for the exact room you are booking, including bed configuration, occupancy limits, bathroom type, and included amenities. If you need step-free access, an accessible bathroom, connecting rooms, a crib, or a particular check-in arrangement, confirm those requirements directly with the hotel before reserving."
+  }
+]

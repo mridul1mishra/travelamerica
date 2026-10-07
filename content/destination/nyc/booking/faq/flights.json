@@ -1,0 +1,26 @@
+[
+  {
+    "question": "Are the flight prices and departure dates shown here live?",
+    "answer": "No. The routes, dates, and prices on this page are saved examples, not live quotes or a guarantee of availability. Select ‘View Prices’ and enter your actual travel dates and passenger details with the provider before comparing or booking."
+  },
+  {
+    "question": "How should I compare flights to New York?",
+    "answer": "Compare the complete fare for the same dates and passengers, including baggage and any extras you need. Check whether the itinerary is nonstop, the length of any connection, and the arrival time. Read the fare's change and cancellation conditions before selecting the lowest advertised price."
+  },
+  {
+    "question": "How do I choose between JFK, LaGuardia, and Newark?",
+    "answer": "Compare the route from each airport to your hotel's exact address at your expected arrival time. Include transfer costs, luggage, late arrivals, and any accessibility needs in the decision. Check the airport code on both the outbound and return flights; a search for New York may include different airports."
+  },
+  {
+    "question": "Does the listed fare include carry-on and checked baggage?",
+    "answer": "The sample price on this page does not confirm a baggage allowance. Check the selected airline and fare's rules for personal items, carry-on bags, checked bags, and size or weight limits. Add any required baggage charges before comparing the total with another flight."
+  },
+  {
+    "question": "Can I book or change a flight through this website?",
+    "answer": "This page links to an external flight provider. Follow the provider's booking process and check which airline or agency will issue your ticket and handle support. Payments, ticket changes, cancellations, and refunds are handled by the booking provider or airline, not by this website."
+  },
+  {
+    "question": "What should I verify before paying for a flight?",
+    "answer": "Check passenger names against travel documents, travel dates, airport codes, local departure and arrival times, and the final currency and total. For connecting flights, check whether you need to change airports, collect baggage, or check in again. Review the ticket conditions and retain your confirmation and booking reference."
+  }
+]
