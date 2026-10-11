@@ -1,252 +1,261 @@
 [
   {
-    "sourceId": "99288",
-    "name": "Arthouse Hotel New York City",
-    "tags": []
-  },
-  {
-    "sourceId": "208452",
-    "name": "Conrad New York Downtown",
-    "tags": []
-  },
-  {
-    "sourceId": "11854022",
-    "name": "Crowne Plaza HY36 Midtown Manhattan by IHG",
-    "tags": []
-  },
-  {
-    "sourceId": "11236004",
-    "name": "Doubletree By Hilton Hotel New York Times Square West",
-    "tags": []
-  },
-  {
-    "sourceId": "11998087",
-    "name": "Embassy Suites By Hilton New York Manhattan Times Square",
-    "tags": []
-  },
-  {
-    "sourceId": "7816364",
-    "name": "Executive Hotel Le Soleil",
-    "tags": []
-  },
-  {
-    "sourceId": "23627300",
-    "name": "Hard Rock Hotel New York",
-    "tags": []
-  },
-  {
-    "sourceId": "5040757",
-    "name": "Homewood Suites By Hilton New York/Midtown Manhattan Times Square-South, NY",
-    "tags": []
-  },
-  {
-    "sourceId": "93390",
-    "name": "Hotel Belleclaire",
-    "tags": []
-  },
-  {
-    "sourceId": "93437",
-    "name": "Hotel Edison Times Square",
-    "tags": []
-  },
-  {
-    "sourceId": "8515751",
-    "name": "Hotel Riu Plaza New York Times Square",
-    "tags": []
-  },
-  {
-    "sourceId": "4799063",
-    "name": "Hyatt Centric Times Square New York",
-    "tags": []
-  },
-  {
-    "sourceId": "93450",
-    "name": "Hyatt Grand Central New York",
-    "tags": []
-  },
-  {
-    "sourceId": "8873263",
-    "name": "INNSiDE New York Nomad",
-    "tags": []
-  },
-  {
-    "sourceId": "1646128",
-    "name": "InterContinental New York Times Square by IHG",
-    "tags": []
-  },
-  {
-    "sourceId": "93462",
-    "name": "Intercontinental New York Barclay By IHG",
-    "tags": []
-  },
-  {
-    "sourceId": "10679074",
-    "name": "LUMA Hotel Times Square",
-    "tags": []
-  },
-  {
-    "sourceId": "93607",
-    "name": "Loews Regency New York Hotel",
-    "tags": []
-  },
-  {
-    "sourceId": "126260",
-    "name": "Lotte New York Palace",
-    "tags": []
-  },
-  {
-    "sourceId": "23155544",
-    "name": "M Social Hotel New York Times Square",
-    "tags": []
-  },
-  {
-    "sourceId": "99425",
-    "name": "Martinique New York on Broadway, Curio Collection by Hilton",
-    "tags": []
-  },
-  {
-    "sourceId": "23448880",
-    "name": "Motto by Hilton New York City Chelsea",
-    "tags": []
-  },
-  {
-    "sourceId": "611947",
-    "name": "New York Hilton Midtown",
-    "tags": []
-  },
-  {
-    "sourceId": "93507",
-    "name": "New York Marriott Marquis",
-    "tags": []
-  },
-  {
-    "sourceId": "12533513",
-    "name": "PUBLIC Hotel",
-    "tags": []
-  },
-  {
-    "sourceId": "93517",
-    "name": "Paramount Times Square - A Generator Hotel",
-    "tags": []
-  },
-  {
-    "sourceId": "93520",
-    "name": "Park Central Hotel New York",
-    "tags": []
-  },
-  {
-    "sourceId": "6582176",
-    "name": "Park Hyatt New York",
-    "tags": []
-  },
-  {
-    "sourceId": "15135187",
-    "name": "Park Terrace Hotel",
-    "tags": []
-  },
-  {
-    "sourceId": "1938661",
-    "name": "Row Nyc",
-    "tags": []
-  },
-  {
-    "sourceId": "93555",
-    "name": "Sheraton New York Times Square Hotel",
-    "tags": []
+    "sourceId": "7255276",
+    "name": "The Knickerbocker",
+    "tags": [],
+    "hotelId": "4",
+    "tierReview": {
+      "hotelTier": null,
+      "options": [
+        "Premium",
+        "Luxury"
+      ],
+      "status": "Human decision required",
+      "reason": "High-end rooms and services overlap Premium and Luxury; the reviewed details do not settle the distinction for us.",
+      "officialPropertyFacts": "SFERRA bedding, premium bath products, concierge, fitness studio and 24-hour in-room dining.",
+      "sources": [
+        "https://www.theknickerbocker.com/about/amenities/",
+        "https://www.theknickerbocker.com/faq/"
+      ]
+    }
   },
   {
     "sourceId": "208454",
     "name": "Sofitel New York",
-    "tags": []
+    "tags": [],
+    "hotelId": "7",
+    "tierReview": {
+      "hotelTier": null,
+      "options": [
+        "Premium",
+        "Luxury"
+      ],
+      "status": "Human decision required",
+      "reason": "The luxury positioning and upgraded accommodation are documented, but the Premium/Luxury service boundary needs your decision.",
+      "officialPropertyFacts": "Redesigned rooms and suites, marble bathrooms, concierge, in-room dining and Social 45 bar and bistro.",
+      "sources": [
+        "https://www.sofitel-new-york.com/the-hotel/services-amenities/",
+        "https://www.sofitel-new-york.com/rooms-suites/"
+      ]
+    }
+  },
+  {
+    "sourceId": "23448880",
+    "name": "Motto by Hilton New York City Chelsea",
+    "tags": [],
+    "hotelId": "12",
+    "tierReview": {
+      "hotelTier": null,
+      "options": [
+        "Standard",
+        "Premium"
+      ],
+      "status": "Human decision required",
+      "reason": "The service list is broad, but the reviewed room and service details do not clearly distinguish Standard from Premium.",
+      "officialPropertyFacts": "Boutique accommodation with an on-site restaurant, fitness center, concierge, room service and meeting facilities.",
+      "sources": [
+        "https://www.hilton.com/en/hotels/nycdlua-motto-new-york-city-chelsea/"
+      ]
+    }
   },
   {
     "sourceId": "224214",
     "name": "The Bryant Park Hotel",
-    "tags": []
+    "tags": [],
+    "hotelId": "16",
+    "tierReview": {
+      "hotelTier": null,
+      "options": [
+        "Premium",
+        "Luxury"
+      ],
+      "status": "Human decision required",
+      "reason": "Luxury wording and dining are documented, but personalized service evidence is insufficient to choose Premium or Luxury. Future renovations are not counted as current facilities.",
+      "officialPropertyFacts": "Boutique rooms and suites, Koi restaurant and Célon lounge; the site advertises a future lobby redesign.",
+      "sources": [
+        "https://bryantparkhotel.com/"
+      ]
+    }
   },
   {
-    "sourceId": "1456416",
-    "name": "The Dominick",
-    "tags": []
+    "sourceId": "93462",
+    "name": "Intercontinental New York Barclay By IHG",
+    "tags": [],
+    "hotelId": "25",
+    "tierReview": {
+      "hotelTier": null,
+      "options": [
+        "Premium",
+        "Luxury"
+      ],
+      "status": "Human decision required",
+      "reason": "Both Premium and Luxury are plausible; luxury marketing alone does not establish the agreed service standard.",
+      "officialPropertyFacts": "Refined rooms, on-site restaurant, in-room dining and concierge arrangements.",
+      "sources": [
+        "https://www.icbarclay.com/",
+        "https://www.icbarclay.com/faq",
+        "https://www.icbarclay.com/concierge"
+      ]
+    }
   },
   {
-    "sourceId": "671150",
-    "name": "The Empire Hotel",
-    "tags": []
-  },
-  {
-    "sourceId": "99389",
-    "name": "The Evelyn Hotel",
-    "tags": []
-  },
-  {
-    "sourceId": "93335",
-    "name": "The Kimberly Hotel",
-    "tags": []
-  },
-  {
-    "sourceId": "7255276",
-    "name": "The Knickerbocker",
-    "tags": []
-  },
-  {
-    "sourceId": "217616",
-    "name": "The Muse New York",
-    "tags": []
-  },
-  {
-    "sourceId": "113311",
-    "name": "The Peninsula New York",
-    "tags": []
-  },
-  {
-    "sourceId": "675616",
-    "name": "The Plaza New York - A Fairmont Managed Hotel",
-    "tags": []
-  },
-  {
-    "sourceId": "4702789",
-    "name": "The Towers at Lotte New York Palace",
-    "tags": []
-  },
-  {
-    "sourceId": "93593",
-    "name": "The Westin New York Grand Central",
-    "tags": []
-  },
-  {
-    "sourceId": "249712",
-    "name": "The Westin New York at Times Square",
-    "tags": []
-  },
-  {
-    "sourceId": "93464",
-    "name": "Thompson Central Park New York, by Hyatt",
-    "tags": []
-  },
-  {
-    "sourceId": "93623",
-    "name": "Trump International Hotel and Tower New York",
-    "tags": []
+    "sourceId": "1646128",
+    "name": "InterContinental New York Times Square by IHG",
+    "tags": [],
+    "hotelId": "29",
+    "tierReview": {
+      "hotelTier": null,
+      "options": [
+        "Premium",
+        "Luxury"
+      ],
+      "status": "Human decision required",
+      "reason": "Documented VIP services and luxury positioning create a Premium/Luxury overlap; their depth and availability need an editorial decision.",
+      "officialPropertyFacts": "Restaurant, room service, concierge, executive VIP services and a 24-hour fitness center.",
+      "sources": [
+        "https://www.ihg.com/intercontinental/hotels/us/en/new-york/nychc/hoteldetail/amenities"
+      ]
+    }
   },
   {
     "sourceId": "25071657",
     "name": "Virgin Hotels New York City",
-    "tags": []
+    "tags": [],
+    "hotelId": "35",
+    "tierReview": {
+      "hotelTier": null,
+      "options": [
+        "Premium",
+        "Luxury"
+      ],
+      "status": "Human decision required",
+      "reason": "Facilities are extensive, but the reviewed details do not establish the personalized service threshold for Luxury versus Premium.",
+      "officialPropertyFacts": "Lifestyle accommodation, exhale spa and a rooftop pool club with reservation and access conditions.",
+      "sources": [
+        "https://virginhotels.com/new-york/offers/spa-recovery-retreat/",
+        "https://virginhotels.com/new-york/eat-drink/the-pool-club/"
+      ]
+    }
   },
   {
-    "sourceId": "93618",
-    "name": "Waldorf Astoria New York",
-    "tags": []
+    "sourceId": "93335",
+    "name": "The Kimberly Hotel",
+    "tags": [],
+    "hotelId": "38",
+    "tierReview": {
+      "hotelTier": null,
+      "options": [
+        "Premium",
+        "Luxury"
+      ],
+      "status": "Human decision required",
+      "reason": "High-end rooms and concierge services support both Premium and Luxury; the property-wide service distinction needs your decision.",
+      "officialPropertyFacts": "Frette linens, many balcony suites, Les Clefs d’Or concierge, multiple restaurants and room service.",
+      "sources": [
+        "https://www.kimberlyhotel.com/amenities",
+        "https://www.kimberlyhotel.com/accommodations"
+      ]
+    }
   },
   {
-    "sourceId": "112064",
-    "name": "Warwick New York",
-    "tags": []
+    "sourceId": "208452",
+    "name": "Conrad New York Downtown",
+    "tags": [],
+    "hotelId": "44",
+    "tierReview": {
+      "hotelTier": null,
+      "options": [
+        "Premium",
+        "Luxury"
+      ],
+      "status": "Human decision required",
+      "reason": "The suite format and luxury positioning are documented; they alone do not settle personalized-service depth between Premium and Luxury.",
+      "officialPropertyFacts": "All-suite accommodation with separate living/sleeping areas, stylish interiors, dining and concierge services.",
+      "sources": [
+        "https://www.hilton.com/en/hotels/nyccici-conrad-new-york-downtown/",
+        "https://www.hilton.com/en-gb/hotels/nyccici-conrad-new-york-downtown/amenities/"
+      ]
+    }
   },
   {
-    "sourceId": "4945551",
-    "name": "WestHouse Hotel New York, an SLH Hotel",
-    "tags": []
+    "sourceId": "93464",
+    "name": "Thompson Central Park New York, by Hyatt",
+    "tags": [],
+    "hotelId": "45",
+    "tierReview": {
+      "hotelTier": null,
+      "options": [
+        "Premium",
+        "Luxury"
+      ],
+      "status": "Human decision required",
+      "reason": "Enhanced luxury benefits apply to Upper Stories bookings. A single property-wide tier needs your decision on how to treat that split.",
+      "officialPropertyFacts": "Contemporary rooms and dining; Upper Stories adds a lounge, enhanced amenities and personalized partner experiences.",
+      "sources": [
+        "https://www.hyatt.com/thompson-hotels/en-US/lgatp-thompson-central-park-new-york",
+        "https://www.hyatt.com/thompson-hotels/en-US/lgatp-thompson-central-park-new-york/upper-stories-experience"
+      ]
+    }
+  },
+  {
+    "sourceId": "23887495",
+    "name": "The Hotel Chelsea",
+    "tags": [],
+    "hotelId": "140",
+    "tierReview": {
+      "hotelTier": null,
+      "options": [
+        "Premium",
+        "Luxury"
+      ],
+      "status": "Human decision required",
+      "reason": "High-end rooms and facilities are documented, but the reviewed pages do not clearly establish personalized service at the Luxury threshold.",
+      "officialPropertyFacts": "Marble bathrooms and Bellino linens, several dining venues and a penthouse spa with hydrotherapy amenities.",
+      "sources": [
+        "https://hotelchelsea.com/accommodations/chelsea-room",
+        "https://hotelchelsea.com/wellness/spa",
+        "https://hotelchelsea.com/"
+      ]
+    }
+  },
+  {
+    "sourceId": "4283443",
+    "name": "The High Line Hotel",
+    "tags": [],
+    "hotelId": "142",
+    "tierReview": {
+      "hotelTier": null,
+      "options": [
+        "Standard",
+        "Premium"
+      ],
+      "status": "Human decision required",
+      "reason": "Distinctive rooms suggest Premium, while the documented service offering is narrower. Standard/Premium remains an editorial decision.",
+      "officialPropertyFacts": "Individually furnished historic rooms, plush robes, premium bath products, coffee bar, courtyard and off-site fitness passes.",
+      "sources": [
+        "https://thehighlinehotel.com/rooms-overview/",
+        "https://thehighlinehotel.com/faqs/"
+      ]
+    }
+  },
+  {
+    "sourceId": "15530677",
+    "name": "Renaissance New York Chelsea Hotel",
+    "tags": [],
+    "hotelId": "144",
+    "tierReview": {
+      "hotelTier": null,
+      "options": [
+        "Standard",
+        "Premium"
+      ],
+      "status": "Human decision required",
+      "reason": "The current official listing supplies limited guest dining/service details. Brand affiliation alone cannot settle Standard versus Premium.",
+      "officialPropertyFacts": "Plush bedding, modern guestrooms, a 24-hour fitness center and catered event facilities.",
+      "sources": [
+        "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/overview/",
+        "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/events/"
+      ]
+    }
   }
 ]
