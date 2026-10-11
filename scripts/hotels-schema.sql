@@ -29,7 +29,11 @@ CREATE INDEX IF NOT EXISTS hotels_city_active_order_idx
 
 ALTER TABLE hotels ADD COLUMN IF NOT EXISTS neighborhood TEXT;
 ALTER TABLE hotels ADD COLUMN IF NOT EXISTS hotel_tier TEXT
-  CHECK (hotel_tier IN ('Budget', 'Premium', 'Luxury'));
+  CHECK (hotel_tier IN ('Standard', 'Premium', 'Luxury'));
+ALTER TABLE hotels DROP CONSTRAINT IF EXISTS hotels_hotel_tier_check;
+UPDATE hotels SET hotel_tier = 'Standard' WHERE hotel_tier IN ('Budget', 'Value');
+ALTER TABLE hotels ADD CONSTRAINT hotels_hotel_tier_check
+  CHECK (hotel_tier IN ('Standard', 'Premium', 'Luxury'));
 ALTER TABLE hotels ADD COLUMN IF NOT EXISTS first_time_visitor BOOLEAN;
 ALTER TABLE hotels ADD COLUMN IF NOT EXISTS safe_area BOOLEAN;
 ALTER TABLE hotels ADD COLUMN IF NOT EXISTS classification_evidence JSONB NOT NULL DEFAULT '{}';
@@ -65,7 +69,7 @@ CREATE OR REPLACE VIEW hotel_classification_review AS
 SELECT id, city_slug, source_id, name, neighborhood, hotel_tier,
   first_time_visitor, safe_area,
   (NULLIF(TRIM(city_slug), '') IS NOT NULL AND NULLIF(TRIM(neighborhood), '') IS NOT NULL
-    AND hotel_tier IS NOT NULL AND first_time_visitor IS NOT NULL AND safe_area IS NOT NULL)
+    AND hotel_tier IS NOT NULL)
     AS classification_complete
 FROM hotels;
 

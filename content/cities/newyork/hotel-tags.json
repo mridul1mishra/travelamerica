@@ -41,7 +41,7 @@
         "rationale": "The official room inventory includes spacious two-double-bed rooms, supporting family stays; confirm occupancy and room availability."
       }
     ],
-    "neighborhood": "Midtown",
+    "neighborhood": "Central Park South",
     "classification": {
       "safeArea": {
         "value": true,
@@ -74,7 +74,7 @@
         "rationale": "The official page describes the hotel as steps from Central Park, with nearby Rockefeller Center, shopping, museums and Broadway."
       }
     ],
-    "neighborhood": "Midtown",
+    "neighborhood": "Central Park South",
     "classification": {
       "safeArea": {
         "value": true,
@@ -101,7 +101,8 @@
         "sourceUrl": "https://www.theplazany.com/rooms-suites/",
         "rationale": "The official room collection offers connecting two- and three-bedroom arrangements for families; confirm availability and occupancy."
       }
-    ]
+    ],
+    "neighborhood": "Central Park South"
   },
   {
     "sourceId": "208452",
@@ -116,7 +117,8 @@
         "sourceUrl": "https://www.hilton.com/en/hotels/nyccici-conrad-new-york-downtown/",
         "rationale": "Hilton lists 30,000 square feet of event space across two floors, supporting business meetings."
       }
-    ]
+    ],
+    "neighborhood": "Financial District / Downtown"
   },
   {
     "sourceId": "126260",
@@ -132,7 +134,7 @@
         "rationale": "The official profile lists a two-bedroom Family Suite with two bathrooms; confirm availability and occupancy."
       }
     ],
-    "neighborhood": "Midtown",
+    "neighborhood": "Midtown / Times Square",
     "classification": {
       "safeArea": {
         "value": true,
@@ -160,7 +162,7 @@
         "rationale": "The official Towers page places the property in Midtown Manhattan."
       }
     ],
-    "neighborhood": "Midtown",
+    "neighborhood": "Midtown / Times Square",
     "classification": {
       "safeArea": {
         "value": true,
@@ -183,7 +185,7 @@
         "rationale": "Hilton describes the Waldorf Astoria New York room collection as luxury accommodations."
       }
     ],
-    "neighborhood": "Midtown",
+    "neighborhood": "Midtown / Times Square",
     "classification": {
       "safeArea": {
         "value": true,
@@ -205,7 +207,8 @@
         "sourceUrl": "https://www.loewshotels.com/Regency-Hotel",
         "rationale": "The official Loews Regency property page describes a luxury hotel on Park Avenue."
       }
-    ]
+    ],
+    "neighborhood": "Upper East Side"
   },
   {
     "sourceId": "208454",
@@ -226,7 +229,7 @@
         "rationale": "The official hotel page explicitly welcomes business travelers."
       }
     ],
-    "neighborhood": "Midtown",
+    "neighborhood": "Midtown / Times Square",
     "classification": {
       "safeArea": {
         "value": true,
@@ -249,7 +252,7 @@
         "rationale": "Hilton recommends Homewood Suites Times Square South for extended business stays, with kitchens and separate living areas."
       }
     ],
-    "neighborhood": "Midtown",
+    "neighborhood": "Midtown / Times Square",
     "classification": {
       "safeArea": {
         "value": true,
@@ -277,7 +280,7 @@
         "rationale": "Hilton describes major attractions within walking distance, including nearby Museum of Modern Art and Rockefeller Center."
       }
     ],
-    "neighborhood": "Midtown",
+    "neighborhood": "Midtown / Times Square",
     "classification": {
       "safeArea": {
         "value": true,
@@ -299,6 +302,7 @@
         "sourceUrl": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marquis/events/",
         "rationale": "Marriott lists staffed business facilities and meeting spaces for the New York Marriott Marquis."
       }
-    ]
+    ],
+    "neighborhood": "Midtown / Times Square"
   }
 ]

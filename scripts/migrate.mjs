@@ -22,7 +22,15 @@ const pool = new Pool({
 });
 
 const migrations = [
+  { name: "create_cities_table", sql: readFileSync(new URL("./cities-schema.sql", import.meta.url), "utf8") },
+  { name: "seed_cities", sql: readFileSync(new URL("./cities-seed.sql", import.meta.url), "utf8") },
+  { name: "create_neighborhoods_table", sql: readFileSync(new URL("./neighborhoods-schema.sql", import.meta.url), "utf8") },
+  { name: "seed_nyc_neighborhoods", sql: readFileSync(new URL("./nyc-neighborhoods-seed.sql", import.meta.url), "utf8") },
   { name: "create_hotels_table", sql: readFileSync(new URL("./hotels-schema.sql", import.meta.url), "utf8") },
+  { name: "add_hotel_relations", sql: readFileSync(new URL("./hotel-relations-schema.sql", import.meta.url), "utf8") },
+  { name: "canonical_nyc_neighborhoods", sql: readFileSync(new URL("./nyc-neighborhoods-canonical.sql", import.meta.url), "utf8") },
+  { name: "normalize_hotel_tags", sql: readFileSync(new URL("./hotel-tag-relations-schema.sql", import.meta.url), "utf8") },
+  { name: "seed_requested_tags", sql: readFileSync(new URL("./tags-seed.sql", import.meta.url), "utf8") },
   {
     name: 'create_subscribers_table',
     sql: `

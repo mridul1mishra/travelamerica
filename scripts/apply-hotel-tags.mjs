@@ -23,7 +23,7 @@ async function main() {
     for (const [field, value] of Object.entries(entry.classification ?? {})) {
       if (!["hotelTier", "firstTimeVisitor", "safeArea"].includes(field)) throw new Error("Unknown classification field");
       if (!value.rationale?.trim() || !/^https:\/\//.test(value.sourceUrl ?? "")) throw new Error("Classification requires HTTPS evidence and rationale");
-      if (field === "hotelTier" ? !["Budget", "Premium", "Luxury"].includes(value.value) : typeof value.value !== "boolean") throw new Error("Invalid classification value");
+      if (field === "hotelTier" ? !["Standard", "Premium", "Luxury"].includes(value.value) : typeof value.value !== "boolean") throw new Error("Invalid classification value");
     }
     for (const tag of entry.tags) {
       if (!supported.has(tag.key) || !tag.rationale?.trim() || !/^https:\/\//.test(tag.sourceUrl ?? "")) throw new Error("Each tag requires a supported key, rationale, and HTTPS evidence URL");
@@ -46,9 +46,11 @@ async function main() {
         await client.query(`UPDATE hotels SET ${classificationColumns[field]} = $1,
           classification_evidence = classification_evidence || $2::jsonb, updated_at = NOW() WHERE id = $3`,
           [evidence.value, JSON.stringify({ [field]: evidence }), id]);
+        // Tier is a hotel classification, separate from the optional tag catalog.
+        if (field === "hotelTier") continue;
         const classificationTags = field === "hotelTier" ? ["BudgetFriendly", "Premium", "Luxury"] : [field === "safeArea" ? "SafeArea" : "FirstTimeVisitor"];
         await client.query("DELETE FROM hotel_tags WHERE hotel_id = $1 AND tag = ANY($2::text[])", [id, classificationTags]);
-        const positiveTag = field === "hotelTier" ? { Budget: "BudgetFriendly", Premium: "Premium", Luxury: "Luxury" }[evidence.value] : evidence.value ? classificationTags[0] : null;
+        const positiveTag = field === "hotelTier" ? null : evidence.value ? classificationTags[0] : null;
         if (positiveTag) await client.query("INSERT INTO hotel_tags (hotel_id, tag, source_url, rationale) VALUES ($1,$2,$3,$4)", [id, positiveTag, evidence.sourceUrl, evidence.rationale]);
       }
       for (const tag of entry.tags) {

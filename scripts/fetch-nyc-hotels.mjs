@@ -127,11 +127,11 @@ export async function getHotels(locationId = NYC_LOCATION_ID) {
 export { CHECK_IN };
 
 // Directory search provides hotel details even when dated availability is empty.
-export async function getHotelDirectory(limit = 50) {
+export async function getHotelDirectory(limit = 50, query = "New York City hotels") {
   const found = new Map();
   for (let offset = 0; offset < 600 && found.size < limit; offset += 30) {
     const json = await getJson(`https://${HOST}/locations/search?` + new URLSearchParams({
-      query: "New York City hotels", location_id: NYC_LOCATION_ID,
+      query, location_id: NYC_LOCATION_ID,
       limit: "30", offset: String(offset), currency: "USD", lang: "en_US",
     }));
     const results = json?.data ?? [];

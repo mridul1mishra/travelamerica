@@ -1,0 +1,352 @@
+[
+  {
+    "sourceId": "93437",
+    "name": "Hotel Edison Times Square",
+    "neighborhood": "Midtown / Times Square",
+    "address": "228 West 47th Street, New York City, NY 10036-1401",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "8515751",
+    "name": "Hotel Riu Plaza New York Times Square",
+    "neighborhood": "Midtown / Times Square",
+    "address": "305 W 46th St, New York City, NY 10036-3810",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "126260",
+    "name": "Lotte New York Palace",
+    "neighborhood": "Midtown / Times Square",
+    "address": "455 Madison Avenue, New York City, NY 10022",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "7255276",
+    "name": "The Knickerbocker",
+    "neighborhood": "Midtown / Times Square",
+    "address": "6 Times Square SE Corner Of 42nd St. & Broadway, New York City, NY 10036",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "93507",
+    "name": "New York Marriott Marquis",
+    "neighborhood": "Midtown / Times Square",
+    "address": "1535 Broadway, New York City, NY 10036",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "208454",
+    "name": "Sofitel New York",
+    "neighborhood": "Midtown / Times Square",
+    "address": "45 W 44th St, New York City, NY 10036",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "93618",
+    "name": "Waldorf Astoria New York",
+    "neighborhood": "Midtown / Times Square",
+    "address": "301 Park Avenue, New York City, NY 10022",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "611947",
+    "name": "New York Hilton Midtown",
+    "neighborhood": "Midtown / Times Square",
+    "address": "1335 Avenue Of The Americas The Waterfall Plaza, New York City, NY 10019-6078",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "93450",
+    "name": "Hyatt Grand Central New York",
+    "neighborhood": "Midtown / Times Square",
+    "address": "109 East 42nd Street Grand Central Terminal, New York City, NY 10017-8500",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "4799063",
+    "name": "Hyatt Centric Times Square New York",
+    "neighborhood": "Midtown / Times Square",
+    "address": "135 West 45th Street, New York City, NY 10036-4004",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "23448880",
+    "name": "Motto by Hilton New York City Chelsea",
+    "neighborhood": "Chelsea",
+    "address": "113 West 24th Street, New York City, NY 10001",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "23155544",
+    "name": "M Social Hotel New York Times Square",
+    "neighborhood": "Midtown / Times Square",
+    "address": "226 W 52nd St, New York City, NY 10019",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "8873263",
+    "name": "INNSiDE New York Nomad",
+    "neighborhood": "NoMad",
+    "address": "132 W 27th St, New York City, NY 10001-6202",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "224214",
+    "name": "The Bryant Park Hotel",
+    "neighborhood": "Midtown / Times Square",
+    "address": "40 West 40th Street, New York City, NY 10018-2602",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "99425",
+    "name": "Martinique New York on Broadway, Curio Collection by Hilton",
+    "neighborhood": "Midtown / Times Square",
+    "address": "49 W 32nd Street, New York City, NY 10001",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "93390",
+    "name": "Hotel Belleclaire",
+    "neighborhood": "Upper West Side",
+    "address": "2175 Broadway, New York City, NY 10024",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "93607",
+    "name": "Loews Regency New York Hotel",
+    "neighborhood": "Upper East Side",
+    "address": "540 Park Avenue 61st Street, New York City, NY 10065-7366",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "6582176",
+    "name": "Park Hyatt New York",
+    "neighborhood": "Central Park South",
+    "address": "153 West 57th Street, New York City, NY 10019",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "113311",
+    "name": "The Peninsula New York",
+    "neighborhood": "Central Park South",
+    "address": "700 5th Ave, New York City, NY 10019",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "93462",
+    "name": "Intercontinental New York Barclay By IHG",
+    "neighborhood": "Midtown / Times Square",
+    "address": "111 East 48th St, New York City, NY 10017",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "112064",
+    "name": "Warwick New York",
+    "neighborhood": "Midtown / Times Square",
+    "address": "65 W 54th St, New York City, NY 10019",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "5040757",
+    "name": "Homewood Suites By Hilton New York/Midtown Manhattan Times Square-South, NY",
+    "neighborhood": "Midtown / Times Square",
+    "address": "312 West 37th Street, New York City, NY 10018",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "93593",
+    "name": "The Westin New York Grand Central",
+    "neighborhood": "Midtown / Times Square",
+    "address": "212 East 42nd Street, New York City, NY 10017",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "1646128",
+    "name": "InterContinental New York Times Square by IHG",
+    "neighborhood": "Midtown / Times Square",
+    "address": "300 West 44th Street, New York City, NY 10036",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "99288",
+    "name": "Arthouse Hotel New York City",
+    "neighborhood": "Upper West Side",
+    "address": "2178 Broadway at West 77th Street, New York City, NY 10024-6647",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "4702789",
+    "name": "The Towers at Lotte New York Palace",
+    "neighborhood": "Midtown / Times Square",
+    "address": "455 Madison Avenue At 50th Street, New York City, NY 10022",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "675616",
+    "name": "The Plaza New York - A Fairmont Managed Hotel",
+    "neighborhood": "Central Park South",
+    "address": "5th Avenue At Central Park South, New York City, NY 10019",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "25071657",
+    "name": "Virgin Hotels New York City",
+    "neighborhood": "NoMad",
+    "address": "1227 Broadway, New York City, NY 10001-4302",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "93555",
+    "name": "Sheraton New York Times Square Hotel",
+    "neighborhood": "Midtown / Times Square",
+    "address": "811 7th Avenue 53rd Street, New York City, NY 10019",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "93335",
+    "name": "The Kimberly Hotel",
+    "neighborhood": "Midtown / Times Square",
+    "address": "145 East 50th Street, New York City, NY 10022-9502",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "93623",
+    "name": "Trump International Hotel and Tower New York",
+    "neighborhood": "Upper West Side",
+    "address": "1 Central Park West, New York City, NY 10023-7703",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "23627300",
+    "name": "Hard Rock Hotel New York",
+    "neighborhood": "Midtown / Times Square",
+    "address": "159 W 48 Street, New York City, NY 10036",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "10679074",
+    "name": "LUMA Hotel Times Square",
+    "neighborhood": "Midtown / Times Square",
+    "address": "120 West 41st Street, New York City, NY 10036-7315",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "208452",
+    "name": "Conrad New York Downtown",
+    "neighborhood": "Financial District / Downtown",
+    "address": "102 North End Avenue, New York City, NY 10282",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "93464",
+    "name": "Thompson Central Park New York, by Hyatt",
+    "neighborhood": "Central Park South",
+    "address": "119 West 56th Street, New York City, NY 10019-4000",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "249712",
+    "name": "The Westin New York at Times Square",
+    "neighborhood": "Midtown / Times Square",
+    "address": "270 West 43rd Street, New York City, NY 10036",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "99389",
+    "name": "The Evelyn Hotel",
+    "neighborhood": "NoMad",
+    "address": "7 E 27th St, New York City, NY 10016-8701",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "671150",
+    "name": "The Empire Hotel",
+    "neighborhood": "Upper West Side",
+    "address": "44 W 63rd Street, New York City, NY 10023-7029",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "217616",
+    "name": "The Muse New York",
+    "neighborhood": "Midtown / Times Square",
+    "address": "130 W 46th St, New York City, NY 10036-8501",
+    "rationale": "Reviewed provider address and coordinates against the selected NYC hotel-planning areas; these are editorial zones, not official administrative boundaries."
+  },
+  {
+    "sourceId": "23887495",
+    "name": "The Hotel Chelsea",
+    "neighborhood": "Chelsea",
+    "address": "222 West 23rd Street, New York City, NY 10011-2301",
+    "rationale": "API hotel identity and address reviewed against the selected neighborhood; retained as an editorial hotel-planning category."
+  },
+  {
+    "sourceId": "273530",
+    "name": "The Maritime Hotel",
+    "neighborhood": "Chelsea",
+    "address": "363 W 16th St, New York City, NY 10011",
+    "rationale": "API hotel identity and address reviewed against the selected neighborhood; retained as an editorial hotel-planning category."
+  },
+  {
+    "sourceId": "4283443",
+    "name": "The High Line Hotel",
+    "neighborhood": "Chelsea",
+    "address": "180 10th Ave at 20th Street, New York City, NY 10011",
+    "rationale": "API hotel identity and address reviewed against the selected neighborhood; retained as an editorial hotel-planning category."
+  },
+  {
+    "sourceId": "1177864",
+    "name": "The Moore",
+    "neighborhood": "Chelsea",
+    "address": "300 W 22nd St, New York City, NY 10011",
+    "rationale": "API hotel identity and address reviewed against the selected neighborhood; retained as an editorial hotel-planning category."
+  },
+  {
+    "sourceId": "15530677",
+    "name": "Renaissance New York Chelsea Hotel",
+    "neighborhood": "Chelsea",
+    "address": "112 West 25th Street, New York City, NY 10001",
+    "rationale": "API hotel identity and address reviewed against the selected neighborhood; retained as an editorial hotel-planning category."
+  },
+  {
+    "sourceId": "23115585",
+    "name": "Hyatt Place New York / Chelsea",
+    "neighborhood": "Chelsea",
+    "address": "140 W 24th St, New York City, NY 10011-1980",
+    "rationale": "API hotel identity and address reviewed against the selected neighborhood; retained as an editorial hotel-planning category."
+  },
+  {
+    "sourceId": "10390915",
+    "name": "Hyatt House New York/Chelsea",
+    "neighborhood": "Chelsea",
+    "address": "815 6th Ave Corner of West 28th Street, New York City, NY 10001",
+    "rationale": "API hotel identity and address reviewed against the selected neighborhood; retained as an editorial hotel-planning category."
+  },
+  {
+    "sourceId": "8615610",
+    "name": "The Beekman, A Thompson Hotel, by Hyatt",
+    "neighborhood": "Financial District / Downtown",
+    "address": "123 Nassau St, New York City, NY 10038",
+    "rationale": "API hotel identity and address reviewed against the selected neighborhood; retained as an editorial hotel-planning category."
+  },
+  {
+    "sourceId": "262330",
+    "name": "M Social Hotel New York Downtown",
+    "neighborhood": "Financial District / Downtown",
+    "address": "55 Church Street, New York City, NY 10007",
+    "rationale": "API hotel identity and address reviewed against the selected neighborhood; retained as an editorial hotel-planning category."
+  },
+  {
+    "sourceId": "208455",
+    "name": "The Roxy Hotel New York",
+    "neighborhood": "Tribeca",
+    "address": "2 6th Avenue, New York City, NY 10013-2401",
+    "rationale": "API hotel identity and address reviewed against the selected neighborhood; retained as an editorial hotel-planning category."
+  },
+  {
+    "sourceId": "15327417",
+    "name": "Walker Hotel Tribeca",
+    "neighborhood": "Tribeca",
+    "address": "77 Walker St, New York City, NY 10013",
+    "rationale": "API hotel identity and address reviewed against the selected neighborhood; retained as an editorial hotel-planning category."
+  }
+]

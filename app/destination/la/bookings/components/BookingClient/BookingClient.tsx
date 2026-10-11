@@ -11,6 +11,7 @@ import styles from "./BookingClient.module.css";
 import { HOTEL_TAGS, type HotelTag } from "@/app/lib/hotelTags";
 
 export type TabKey = "flights" | "hotels" | "activities";
+export type HotelTier = "Standard" | "Premium" | "Luxury";
 
 export type FlightRow = {
   airline: { name: string; logo: string };
@@ -30,7 +31,11 @@ export type Hotel = {
   address?: string | null;
   neighborhood?: string | null;
   city?: string;
-  hotelTier?: "Budget" | "Premium" | "Luxury" | null;
+  hotelTier?: HotelTier | null;
+  hotelTierIsProvisional?: boolean;
+  hotelTierEvidenceCoverage?: number;
+  hotelId?: string;
+  hotelSourceId?: string;
   firstTimeVisitor?: boolean | null;
   safeArea?: boolean | null;
   systemMetadata?: {
@@ -44,6 +49,7 @@ export type Hotel = {
     hasDetailPage: boolean;
   };
   tags?: HotelTag[];
+  tagOrder?: Partial<Record<HotelTag, number>>;
   rating?: number | null;
   reviews?: number | null;
   price: string;
@@ -155,6 +161,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
   const [hotelPriceFilter, setHotelPriceFilter] = useState("all");
   const [hotelRatingFilter, setHotelRatingFilter] = useState("all");
   const [hotelTagFilter, setHotelTagFilter] = useState("all");
+  const [hotelTierFilter, setHotelTierFilter] = useState<HotelTier | "all">("all");
   const [hotelSort, setHotelSort] = useState("recommended");
   const [activityCategory, setActivityCategory] = useState("all");
   const [activitySort, setActivitySort] = useState("recommended");
@@ -164,6 +171,8 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
   const lowestHotel = firstPrice(hotels.map((hotel) => hotel.price));
   const lowestActivity = firstPrice(activities.map((activity) => activity.priceLevel));
   const bookingTips = config.bookingTips ?? fallbackTips;
+  const showHotelTierFilter = config.category === "hotels" && hotels.some((hotel) => hotel.hotelTier);
+  const hasHotelFilters = hotelPriceFilter !== "all" || hotelRatingFilter !== "all" || hotelTagFilter !== "all" || (showHotelTierFilter && hotelTierFilter !== "all");
   const activityCategories = useMemo(
     () => Array.from(new Set(activities.map((activity) => activity.category).filter(Boolean))).sort() as string[],
     [activities]
@@ -173,13 +182,14 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
       .filter((hotel) => matchesHotelPrice(hotel.price, hotelPriceFilter))
       .filter((hotel) => hotelRatingFilter === "all" || (hotel.rating ?? 0) >= Number(hotelRatingFilter))
       .filter((hotel) => hotelTagFilter === "all" || hotel.tags?.includes(hotelTagFilter as HotelTag))
+      .filter((hotel) => !showHotelTierFilter || hotelTierFilter === "all" || hotel.hotelTier === hotelTierFilter)
       .toSorted((a, b) => {
         if (hotelSort === "price") return priceNumber(a.price) - priceNumber(b.price);
         if (hotelSort === "rating") return (b.rating ?? 0) - (a.rating ?? 0);
         if (hotelSort === "reviews") return (b.reviews ?? 0) - (a.reviews ?? 0);
         return 0;
       });
-  }, [hotelPriceFilter, hotelRatingFilter, hotelTagFilter, hotelSort, hotels]);
+  }, [hotelPriceFilter, hotelRatingFilter, hotelTagFilter, hotelTierFilter, hotelSort, hotels, showHotelTierFilter]);
   const filteredActivities = useMemo(() => {
     return activities
       .filter((activity) => activityCategory === "all" || activity.category === activityCategory)
@@ -190,6 +200,13 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
         return 0;
       });
   }, [activities, activityCategory, activitySort]);
+
+  const clearHotelFilters = () => {
+    setHotelPriceFilter("all");
+    setHotelRatingFilter("all");
+    setHotelTagFilter("all");
+    setHotelTierFilter("all");
+  };
 
   const chooseTab = (tab: TabKey, shouldScroll = false) => {
     setActiveTab(tab);
@@ -338,11 +355,23 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                   {config.category === "hotels" && <p>{hotels.length} hotels listed. Check current rates and availability with the provider.</p>}
                   {config.category === "hotels" && hotels.some((hotel) => hotel.tags?.includes("NearSubway")) && <p className={styles.tagNote}>Near subway: within 500 metres of a listed MTA entrance in a straight line. Walking distance may be longer; check current entrance access.</p>}
                   <div className={styles.filters} aria-label="Hotel filters">
+                    {showHotelTierFilter && <label>
+                      Hotel tier
+                      <select value={hotelTierFilter} aria-describedby="hotel-tier-note" onChange={(event) => setHotelTierFilter(event.target.value as HotelTier | "all")}>
+                        <option value="all">All tiers</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Luxury">Luxury</option>
+                      </select>
+                    </label>}
                     {config.category === "hotels" && <label>
                       Hotel tags
                       <select value={hotelTagFilter} onChange={(event) => setHotelTagFilter(event.target.value)}>
                         <option value="all">All hotel tags</option>
-                        {Object.entries(HOTEL_TAGS).filter(([key]) => hotels.some((hotel) => hotel.tags?.includes(key as HotelTag))).map(([key, label]) => <option key={key} value={key}>{label}</option>)}
+                        {Object.entries(HOTEL_TAGS).filter(([key]) => hotels.some((hotel) => hotel.tags?.includes(key as HotelTag))).sort(([a], [b]) => {
+                          const order = (key: string) => hotels.find((hotel) => hotel.tagOrder?.[key as HotelTag] !== undefined)?.tagOrder?.[key as HotelTag] ?? 0;
+                          return order(a) - order(b);
+                        }).map(([key, label]) => <option key={key} value={key}>{label}</option>)}
                       </select>
                     </label>}
                     <label>
@@ -372,11 +401,16 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                       </select>
                     </label>
                   </div>
+                  {showHotelTierFilter && <p id="hotel-tier-note" className={styles.tierNote}>Tiers reflect our assessment of rooms, service and amenities. Provisional tiers use available evidence and may change.</p>}
+                  {config.category === "hotels" && <div className={styles.hotelResultsSummary}>
+                    <p role="status">Showing {filteredHotels.length} of {hotels.length} hotels</p>
+                    {hasHotelFilters && <button type="button" className={styles.clearFilters} onClick={clearHotelFilters}>Clear filters</button>}
+                  </div>}
                   <div className={styles.cardGrid}>
                     {filteredHotels.map((hotel) => (
                       <a
                         className={styles.bookingCard}
-                        key={hotel.title}
+                        key={hotel.hotelId ?? hotel.hotelSourceId ?? hotel.title}
                         href={hotel.url}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -386,6 +420,13 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                         <img src={hotel.img} alt={hotel.title} />
                         <div className={styles.cardBody}>
                           <span className={styles.badge}>Hotel</span>
+                          {showHotelTierFilter && hotel.hotelTier && <div className={styles.hotelTier}>
+                            <span>{hotel.hotelTier}{hotel.hotelTierIsProvisional && " · Provisional"}</span>
+                            {hotel.hotelTierIsProvisional && <small>
+                              Based on available evidence; may change.
+                              {hotel.hotelTierEvidenceCoverage != null && Number.isFinite(hotel.hotelTierEvidenceCoverage) && ` Evidence coverage: ${Math.round(hotel.hotelTierEvidenceCoverage)}%.`}
+                            </small>}
+                          </div>}
                           <h3>{hotel.title}</h3>
                           {hotel.area && <p>{hotel.area}</p>}
                           {hotel.neighborhood && <p>{hotel.neighborhood}</p>}
@@ -405,7 +446,10 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                       </a>
                     ))}
                   </div>
-                  {filteredHotels.length === 0 && <p className={styles.emptyState}>No hotels match those filters.</p>}
+                  {filteredHotels.length === 0 && <div className={styles.emptyState}>
+                    <p>No hotels match those filters.</p>
+                    {hasHotelFilters && <button type="button" className={styles.clearFilters} onClick={clearHotelFilters}>Clear filters</button>}
+                  </div>}
                 </>
               )}
 

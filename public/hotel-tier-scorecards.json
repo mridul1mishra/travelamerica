@@ -1,0 +1,2921 @@
+{
+  "model": {
+    "version": 2,
+    "dimensions": [
+      {
+        "key": "rooms",
+        "name": "Rooms and bathrooms",
+        "weight": 30,
+        "rubric": [
+          "Confirmed minimal room and bathroom provision.",
+          "Practical furnishings and a functional private bathroom; essential comfort.",
+          "Documented upgrades to bedding, furnishings or bathroom fixtures beyond the essential offering.",
+          "Multiple documented high-quality room features: refined materials, upgraded bedding and well-appointed bathrooms.",
+          "Exceptional accommodation documented across the regular room offering, with distinguishing space, materials and bathroom features."
+        ]
+      },
+      {
+        "key": "guestService",
+        "name": "Guest service",
+        "weight": 30,
+        "rubric": [
+          "Confirmed minimal assistance, such as primarily self-service accommodation.",
+          "Reception and basic housekeeping or guest assistance.",
+          "Additional services such as luggage assistance, laundry coordination or limited dining delivery.",
+          "A broad service offering with staffed concierge, regular housekeeping and in-room dining or comparable guest support.",
+          "Documented individually tailored assistance, such as dedicated personal concierge or butler service, beyond routine booking help."
+        ]
+      },
+      {
+        "key": "dining",
+        "name": "Dining",
+        "weight": 15,
+        "rubric": [
+          "Confirmed absence of a property-operated dining offering.",
+          "Breakfast, snacks or a basic café offering.",
+          "An on-site restaurant or substantial bar menu with documented service hours.",
+          "Multiple distinct dining offerings or extensive meal coverage with in-room dining.",
+          "Distinguishing culinary experiences plus extensive dining service; supported by menus, venues and service details."
+        ]
+      },
+      {
+        "key": "wellness",
+        "name": "Wellness and facilities",
+        "weight": 15,
+        "rubric": [
+          "Confirmed absence of guest fitness, wellness or other relevant facilities.",
+          "Basic fitness equipment or confirmed access to an external fitness facility.",
+          "An equipped on-site fitness center or a broader documented guest-facility offering.",
+          "Equipped fitness plus substantive additional facilities, such as a pool or staffed treatment offering.",
+          "An extensive documented wellness offering combining equipped fitness, staffed treatments and distinguishing facilities or tailored programs."
+        ]
+      },
+      {
+        "key": "design",
+        "name": "Design and finish",
+        "weight": 10,
+        "rubric": [
+          "Confirmed minimal design and finish provision.",
+          "Functional, conventional rooms and common spaces.",
+          "A documented coordinated design with upgraded finishes.",
+          "Distinctive, detailed design and high-quality finishes across rooms and shared spaces.",
+          "Exceptional craftsmanship or bespoke materials across the property, supported by specific documented details."
+        ]
+      }
+    ],
+    "thresholds": {
+      "premium": 50,
+      "luxury": 75
+    },
+    "luxuryMinimums": {
+      "rooms": 3,
+      "guestService": 3
+    },
+    "missingEvidence": "Unknown; never zero. Exclude missing dimensions from the denominator and label partial assessments provisional.",
+    "scope": "Assess the regular property-wide offering. Suite-only or special-floor benefits do not upgrade the whole hotel. Separately listed hotel-within-a-hotel inventory may be assessed separately.",
+    "calculation": "Score = sum(known dimension score / 4 * weight) / sum(known dimension weights) * 100. Evidence coverage is the sum of included weights out of 100.",
+    "partialAssessment": "Partial scores and tiers are provisional. Luxury still requires evidenced rooms and guestService scores of at least 3 each."
+  },
+  "assessedOn": "2026-10-10",
+  "assessmentType": "Editorial tier assessments from official evidence",
+  "hotels": [
+    {
+      "hotelId": "4",
+      "sourceId": "7255276",
+      "name": "The Knickerbocker",
+      "neighborhood": "Midtown / Times Square",
+      "existingDatabaseTier": null,
+      "officialPropertyFacts": "Regular-room amenities include SFERRA Egyptian-cotton bedding, Stearns & Foster mattresses, Ploh bedding and premium bath products, together with soundproofing and automated shades. Concierge assistance and 24-hour in-room dining establish broad guest support, without assuming dedicated butlers. Current dining lists Charlie Palmer Steak IV, Martini Lounge, St. Cloud, Jake’s cafe and Akoya, supporting multiple distinct venues. The fitness studio offers workout equipment and yoga/Pilates provision; a full treatment or pool offering is not established. Regular-room documentation identifies bespoke furnishings, oak finishes, textured fabrics, marble vanities and glass rain showers. Property material presents restored Beaux-Arts identity and coordinated contemporary interiors. Supports coordinated design and upgraded finishes (level 2), not level 3 absent equally detailed current shared-space finishes.",
+      "sources": [
+        {
+          "url": "https://www.theknickerbocker.com/about/amenities/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.theknickerbocker.com/faq/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.theknickerbocker.com/dine-drink/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.theknickerbocker.com/stay/deluxe-two-queen/",
+          "title": "Deluxe Hotel Room with 2 Queen Beds in NYC | The Knickerbocker",
+          "publicationDate": null,
+          "reviewedOn": "2026-10-10",
+          "type": "Official property or operator"
+        },
+        {
+          "url": "https://www.theknickerbocker.com/about/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-11",
+          "publicationDate": null
+        }
+      ],
+      "rooms": 3,
+      "guestService": 3,
+      "dining": 3,
+      "wellness": 2,
+      "design": 2,
+      "evidence": {
+        "rooms": {
+          "status": "Scored",
+          "note": "Regular-room amenities include SFERRA Egyptian-cotton bedding, Stearns & Foster mattresses, Ploh bedding and premium bath products, together with soundproofing and automated shades.",
+          "sourceUrl": "https://www.theknickerbocker.com/about/amenities/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.theknickerbocker.com/stay/deluxe-two-queen/",
+              "title": "Deluxe Hotel Room with 2 Queen Beds in NYC | The Knickerbocker",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "guestService": {
+          "status": "Scored",
+          "note": "Concierge assistance and 24-hour in-room dining establish broad guest support, without assuming dedicated butlers.",
+          "sourceUrl": "https://www.theknickerbocker.com/faq/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.theknickerbocker.com/stay/deluxe-two-queen/",
+              "title": "Deluxe Hotel Room with 2 Queen Beds in NYC | The Knickerbocker",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "dining": {
+          "status": "Scored",
+          "note": "Current dining lists Charlie Palmer Steak IV, Martini Lounge, St. Cloud, Jake’s cafe and Akoya, supporting multiple distinct venues.",
+          "sourceUrl": "https://www.theknickerbocker.com/dine-drink/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.theknickerbocker.com/stay/deluxe-two-queen/",
+              "title": "Deluxe Hotel Room with 2 Queen Beds in NYC | The Knickerbocker",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "wellness": {
+          "status": "Scored",
+          "note": "The fitness studio offers workout equipment and yoga/Pilates provision; a full treatment or pool offering is not established.",
+          "sourceUrl": "https://www.theknickerbocker.com/about/amenities/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.theknickerbocker.com/stay/deluxe-two-queen/",
+              "title": "Deluxe Hotel Room with 2 Queen Beds in NYC | The Knickerbocker",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "design": {
+          "status": "Scored",
+          "note": "Regular-room documentation identifies bespoke furnishings, oak finishes, textured fabrics, marble vanities and glass rain showers. Property material presents restored Beaux-Arts identity and coordinated contemporary interiors. Supports coordinated design and upgraded finishes (level 2), not level 3 absent equally detailed current shared-space finishes.",
+          "sourceUrl": "https://www.theknickerbocker.com/stay/deluxe-two-queen/",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.theknickerbocker.com/stay/deluxe-two-queen/",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            },
+            {
+              "url": "https://www.theknickerbocker.com/about/",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": true,
+          "reasoning": "Regular-room documentation identifies bespoke furnishings, oak finishes, textured fabrics, marble vanities and glass rain showers. Property material presents restored Beaux-Arts identity and coordinated contemporary interiors. Supports coordinated design and upgraded finishes (level 2), not level 3 absent equally detailed current shared-space finishes.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "Do current official materials document finish materials and craftsmanship in shared/public spaces well enough to distinguish design 2 from 3? The regular-room evidence is now strong—bespoke furnishings, oak finishes, textured fabrics and marble/rain-shower details—but the shared-space side of level 3 remains insufficiently documented.",
+            "sourceUrl": "https://www.theknickerbocker.com/about/amenities/",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "Do current official materials document finish materials and craftsmanship in shared/public spaces well enough to distinguish design 2 from 3? The regular-room evidence is now strong—bespoke furnishings, oak finishes, textured fabrics and marble/rain-shower details—but the shared-space side of level 3 remains insufficiently documented. [7]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://www.theknickerbocker.com/stay/deluxe-two-queen/",
+                "title": "Deluxe Hotel Room with 2 Queen Beds in NYC | The Knickerbocker",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "Do current official materials document finish materials and craftsmanship in shared/public spaces well enough to distinguish design 2 from 3? The regular-room evidence is now strong—bespoke furnishings, oak finishes, textured fabrics and marble/rain-shower details—but the shared-space side of level 3 remains insufficiently documented. [7]"
+          },
+          "previousScore": null,
+          "newScore": 2,
+          "additionalSourceUrls": [
+            "https://www.theknickerbocker.com/about/"
+          ],
+          "integrationValidation": {
+            "checkedOn": "2026-10-11",
+            "status": "Supporting official page text and gallery captions checked; proposed rubric level retained"
+          }
+        }
+      },
+      "score": 68.75,
+      "tier": "Premium",
+      "assessmentStatus": "Scored proposal",
+      "pendingDimensions": [],
+      "tierReason": "Calculated from the five weighted dimensions.",
+      "scoreChanges": [
+        {
+          "dimension": "design",
+          "previousScore": null,
+          "newScore": 2,
+          "researchDate": "2026-10-11",
+          "reasoning": "Regular-room documentation identifies bespoke furnishings, oak finishes, textured fabrics, marble vanities and glass rain showers. Property material presents restored Beaux-Arts identity and coordinated contemporary interiors. Supports coordinated design and upgraded finishes (level 2), not level 3 absent equally detailed current shared-space finishes.",
+          "sourceUrls": [
+            "https://www.theknickerbocker.com/stay/deluxe-two-queen/",
+            "https://www.theknickerbocker.com/about/"
+          ]
+        }
+      ],
+      "researchProvenance": "User-supplied Deep Research assessment; proposed tiers, not database assignments; targeted second pass reviewed 2026-10-11",
+      "lastTargetedReviewOn": "2026-10-11",
+      "evidenceCoverage": 100,
+      "scoredDimensions": 5,
+      "isProvisional": false
+    },
+    {
+      "hotelId": "6",
+      "sourceId": "93507",
+      "name": "New York Marriott Marquis",
+      "neighborhood": "Midtown / Times Square",
+      "existingDatabaseTier": null,
+      "officialPropertyFacts": "Current Marriott accommodations page describes regular spacious modern guest rooms; official property gallery identifies standard guest bathroom with walk-in shower and vanity. Practical furnishings and functional private bathroom support level 1; modern/renovated marketing alone does not establish upgraded bedding or finishes for level 2. A concierge desk and room service are documented in the property overview. Multiple dining venues and room service provide broad meal coverage. The hotel documents fitness facilities; no additional staffed wellness offering is established. The accommodations page specifies calming neutral tones and modern coordinated styling. View rooms and club-suite exclusives are excluded.",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/overview/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/rooms/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/photos/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-11",
+          "publicationDate": null
+        }
+      ],
+      "rooms": 1,
+      "guestService": 3,
+      "dining": 3,
+      "wellness": 2,
+      "design": 2,
+      "evidence": {
+        "rooms": {
+          "status": "Scored",
+          "note": "Current Marriott accommodations page describes regular spacious modern guest rooms; official property gallery identifies standard guest bathroom with walk-in shower and vanity. Practical furnishings and functional private bathroom support level 1; modern/renovated marketing alone does not establish upgraded bedding or finishes for level 2.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/rooms/",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/rooms/",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            },
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/photos/",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": true,
+          "reasoning": "Current Marriott accommodations page describes regular spacious modern guest rooms; official property gallery identifies standard guest bathroom with walk-in shower and vanity. Practical furnishings and functional private bathroom support level 1; modern/renovated marketing alone does not establish upgraded bedding or finishes for level 2.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "For a regular, non-M Club and non-suite room, what bedding/mattress upgrades and bathroom fixtures or finish materials are currently standard? Current Marriott copy establishes modern/spacious accommodation but not enough regular-room detail to select a rubric level.",
+            "sourceUrl": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/rooms/",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "For a regular, non-M Club and non-suite room, what bedding/mattress upgrades and bathroom fixtures or finish materials are currently standard? Current Marriott copy establishes modern/spacious accommodation but not enough regular-room detail to select a rubric level. [8]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/overview/",
+                "title": "New York Marriott Marquis | Iconic Times Square Hotel with Rooftop Dining",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "For a regular, non-M Club and non-suite room, what bedding/mattress upgrades and bathroom fixtures or finish materials are currently standard? Current Marriott copy establishes modern/spacious accommodation but not enough regular-room detail to select a rubric level. [8]"
+          },
+          "previousScore": null,
+          "newScore": 1,
+          "additionalSourceUrls": [
+            "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/photos/"
+          ],
+          "integrationValidation": {
+            "checkedOn": "2026-10-11",
+            "status": "Supporting official page text and gallery captions checked; proposed rubric level retained"
+          }
+        },
+        "guestService": {
+          "status": "Scored",
+          "note": "A concierge desk and room service are documented in the property overview.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/overview/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/overview/",
+              "title": "New York Marriott Marquis | Iconic Times Square Hotel with Rooftop Dining",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "dining": {
+          "status": "Scored",
+          "note": "Multiple dining venues and room service provide broad meal coverage.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/overview/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/overview/",
+              "title": "New York Marriott Marquis | Iconic Times Square Hotel with Rooftop Dining",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "wellness": {
+          "status": "Scored",
+          "note": "The hotel documents fitness facilities; no additional staffed wellness offering is established.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/overview/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/overview/",
+              "title": "New York Marriott Marquis | Iconic Times Square Hotel with Rooftop Dining",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "design": {
+          "status": "Scored",
+          "note": "The accommodations page specifies calming neutral tones and modern coordinated styling. View rooms and club-suite exclusives are excluded.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/rooms/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/overview/",
+              "title": "New York Marriott Marquis | Iconic Times Square Hotel with Rooftop Dining",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        }
+      },
+      "score": 53.75,
+      "tier": "Premium",
+      "assessmentStatus": "Scored proposal",
+      "pendingDimensions": [],
+      "tierReason": "Calculated from the five weighted dimensions.",
+      "scoreChanges": [
+        {
+          "dimension": "rooms",
+          "previousScore": null,
+          "newScore": 1,
+          "researchDate": "2026-10-11",
+          "reasoning": "Current Marriott accommodations page describes regular spacious modern guest rooms; official property gallery identifies standard guest bathroom with walk-in shower and vanity. Practical furnishings and functional private bathroom support level 1; modern/renovated marketing alone does not establish upgraded bedding or finishes for level 2.",
+          "sourceUrls": [
+            "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/rooms/",
+            "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/photos/"
+          ]
+        }
+      ],
+      "researchProvenance": "User-supplied Deep Research assessment; proposed tiers, not database assignments; targeted second pass reviewed 2026-10-11",
+      "lastTargetedReviewOn": "2026-10-11",
+      "evidenceCoverage": 100,
+      "scoredDimensions": 5,
+      "isProvisional": false
+    },
+    {
+      "hotelId": "9",
+      "sourceId": "611947",
+      "name": "New York Hilton Midtown",
+      "neighborhood": "Midtown / Times Square",
+      "existingDatabaseTier": null,
+      "officialPropertyFacts": "The property documents Hilton Serenity beds, a desk and regular Urban/City room options. Executive-suite and lounge benefits are excluded. Concierge support is listed. In-room dining is not established on the current amenity list, so broad meal delivery is not assumed. Herb N’ Kitchen, Bridges Bar and Lobby Lounge provide multiple distinct dining/drink outlets. The property describes an extensive 24-hour fitness center. Contemporary guestrooms and public dining/lounge areas shown, but no current specific finishes/materials across both ordinary rooms and shared spaces; cannot distinguish level 1 from 2.",
+      "sources": [
+        {
+          "url": "https://www.hilton.com/en/hotels/nycnhhh-new-york-hilton-midtown/amenities/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.hilton.com/en/hotels/nycnhhh-new-york-hilton-midtown",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.hilton.com/en/hotels/nycnhhh-new-york-hilton-midtown/rooms/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.hilton.com/tr/hotels/nycnhhh-new-york-hilton-midtown/",
+          "title": "NYC Turistik Yerlerine Yakın 6th Avenue Oteli | New York Hilton Midtown",
+          "publicationDate": null,
+          "reviewedOn": "2026-10-10",
+          "type": "Official property or operator"
+        },
+        {
+          "url": "https://www.hilton.com/en-gb/hotels/nycnhhh-new-york-hilton-midtown/rooms/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-11",
+          "publicationDate": null
+        }
+      ],
+      "rooms": 2,
+      "guestService": 2,
+      "dining": 3,
+      "wellness": 2,
+      "design": null,
+      "evidence": {
+        "rooms": {
+          "status": "Scored",
+          "note": "The property documents Hilton Serenity beds, a desk and regular Urban/City room options. Executive-suite and lounge benefits are excluded.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nycnhhh-new-york-hilton-midtown",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/tr/hotels/nycnhhh-new-york-hilton-midtown/",
+              "title": "NYC Turistik Yerlerine Yakın 6th Avenue Oteli | New York Hilton Midtown",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "guestService": {
+          "status": "Scored",
+          "note": "Concierge support is listed. In-room dining is not established on the current amenity list, so broad meal delivery is not assumed.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nycnhhh-new-york-hilton-midtown/rooms/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/tr/hotels/nycnhhh-new-york-hilton-midtown/",
+              "title": "NYC Turistik Yerlerine Yakın 6th Avenue Oteli | New York Hilton Midtown",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "dining": {
+          "status": "Scored",
+          "note": "Herb N’ Kitchen, Bridges Bar and Lobby Lounge provide multiple distinct dining/drink outlets.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nycnhhh-new-york-hilton-midtown",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/tr/hotels/nycnhhh-new-york-hilton-midtown/",
+              "title": "NYC Turistik Yerlerine Yakın 6th Avenue Oteli | New York Hilton Midtown",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "wellness": {
+          "status": "Scored",
+          "note": "The property describes an extensive 24-hour fitness center.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nycnhhh-new-york-hilton-midtown/amenities/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/tr/hotels/nycnhhh-new-york-hilton-midtown/",
+              "title": "NYC Turistik Yerlerine Yakın 6th Avenue Oteli | New York Hilton Midtown",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "design": {
+          "status": "Evidence insufficient",
+          "note": "Contemporary guestrooms and public dining/lounge areas shown, but no current specific finishes/materials across both ordinary rooms and shared spaces; cannot distinguish level 1 from 2.",
+          "sourceUrl": "https://www.hilton.com/en-gb/hotels/nycnhhh-new-york-hilton-midtown/rooms/",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": "Current property-specific finish/material details for regular rooms and public spaces?",
+          "reviewQuestion": "Current property-specific finish/material details for regular rooms and public spaces?",
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/en-gb/hotels/nycnhhh-new-york-hilton-midtown/rooms/",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Contemporary guestrooms and public dining/lounge areas shown, but no current specific finishes/materials across both ordinary rooms and shared spaces; cannot distinguish level 1 from 2.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "Do current official materials specify upgraded finish materials in regular rooms and shared spaces, rather than only contemporary styling?",
+            "sourceUrl": "https://www.hilton.com/en/hotels/nycnhhh-new-york-hilton-midtown/rooms/",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "Do current official materials specify upgraded finish materials in regular rooms and shared spaces, rather than only contemporary styling? [9]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://www.hilton.com/tr/hotels/nycnhhh-new-york-hilton-midtown/",
+                "title": "NYC Turistik Yerlerine Yakın 6th Avenue Oteli | New York Hilton Midtown",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "Do current official materials specify upgraded finish materials in regular rooms and shared spaces, rather than only contemporary styling? [9]"
+          },
+          "previousScore": null,
+          "newScore": null
+        }
+      },
+      "score": 54.166666666666664,
+      "tier": "Premium",
+      "assessmentStatus": "Provisional tier from available evidence",
+      "pendingDimensions": [
+        "design"
+      ],
+      "tierReason": "Provisional assessment. Calculated from available dimensions, normalized by their combined weight.",
+      "scoreChanges": [],
+      "researchProvenance": "User-supplied Deep Research assessment; proposed tiers, not database assignments; targeted second pass reviewed 2026-10-11",
+      "lastTargetedReviewOn": "2026-10-11",
+      "evidenceCoverage": 90,
+      "scoredDimensions": 4,
+      "isProvisional": true
+    },
+    {
+      "hotelId": "10",
+      "sourceId": "93450",
+      "name": "Hyatt Grand Central New York",
+      "neighborhood": "Midtown / Times Square",
+      "existingDatabaseTier": null,
+      "officialPropertyFacts": "Regular rooms document plush beds, Pharmacopia bath amenities, blackout curtains and enhanced lighting. Presidential-suite and Commodore Lounge benefits are excluded. Concierge and valet assistance are documented; a property-wide in-room meal service is not established. Breakfast, New York Central evening cocktails/light bites and the Market’s soups, sandwiches and entrees provide distinct offerings across the day. Terminal restaurants are excluded. The 24-hour fitness center documents Technogym and Precor equipment. Current room details establish workspaces, lighting controls, blackout curtains and bath amenities; dated renovation material specifications not reconfirmed as current across rooms and public spaces.",
+      "sources": [
+        {
+          "url": "https://www.hyatt.com/hyatt-hotels/en-US/nycgh-hyatt-grand-central-new-york/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.hyatt.com/hyatt-hotels/en-US/nycgh-hyatt-grand-central-new-york/rooms",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.hyatt.com/hyatt-hotels/en-US/nycgh-hyatt-grand-central-new-york/dining",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.hyatt.com/hyatt-hotels/ko-KR/nycgh-hyatt-grand-central-new-york/rooms",
+          "title": "뉴욕 맨해튼의 2베드룸 호텔 스위트룸 | 하얏트 그랜드 센트럴",
+          "publicationDate": null,
+          "reviewedOn": "2026-10-10",
+          "type": "Official property or operator"
+        }
+      ],
+      "rooms": 2,
+      "guestService": 2,
+      "dining": 3,
+      "wellness": 2,
+      "design": null,
+      "evidence": {
+        "rooms": {
+          "status": "Scored",
+          "note": "Regular rooms document plush beds, Pharmacopia bath amenities, blackout curtains and enhanced lighting. Presidential-suite and Commodore Lounge benefits are excluded.",
+          "sourceUrl": "https://www.hyatt.com/hyatt-hotels/en-US/nycgh-hyatt-grand-central-new-york/rooms",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hyatt.com/hyatt-hotels/ko-KR/nycgh-hyatt-grand-central-new-york/rooms",
+              "title": "뉴욕 맨해튼의 2베드룸 호텔 스위트룸 | 하얏트 그랜드 센트럴",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "guestService": {
+          "status": "Scored",
+          "note": "Concierge and valet assistance are documented; a property-wide in-room meal service is not established.",
+          "sourceUrl": "https://www.hyatt.com/hyatt-hotels/en-US/nycgh-hyatt-grand-central-new-york/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hyatt.com/hyatt-hotels/ko-KR/nycgh-hyatt-grand-central-new-york/rooms",
+              "title": "뉴욕 맨해튼의 2베드룸 호텔 스위트룸 | 하얏트 그랜드 센트럴",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "dining": {
+          "status": "Scored",
+          "note": "Breakfast, New York Central evening cocktails/light bites and the Market’s soups, sandwiches and entrees provide distinct offerings across the day. Terminal restaurants are excluded.",
+          "sourceUrl": "https://www.hyatt.com/hyatt-hotels/en-US/nycgh-hyatt-grand-central-new-york/dining",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hyatt.com/hyatt-hotels/ko-KR/nycgh-hyatt-grand-central-new-york/rooms",
+              "title": "뉴욕 맨해튼의 2베드룸 호텔 스위트룸 | 하얏트 그랜드 센트럴",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "wellness": {
+          "status": "Scored",
+          "note": "The 24-hour fitness center documents Technogym and Precor equipment.",
+          "sourceUrl": "https://www.hyatt.com/hyatt-hotels/en-US/nycgh-hyatt-grand-central-new-york/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hyatt.com/hyatt-hotels/ko-KR/nycgh-hyatt-grand-central-new-york/rooms",
+              "title": "뉴욕 맨해튼의 2베드룸 호텔 스위트룸 | 하얏트 그랜드 센트럴",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "design": {
+          "status": "Evidence insufficient",
+          "note": "Current room details establish workspaces, lighting controls, blackout curtains and bath amenities; dated renovation material specifications not reconfirmed as current across rooms and public spaces.",
+          "sourceUrl": "https://www.hyatt.com/hyatt-hotels/ko-KR/nycgh-hyatt-grand-central-new-york/rooms",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": "Current room and public-space material/finish specifications after the old renovation?",
+          "reviewQuestion": "Current room and public-space material/finish specifications after the old renovation?",
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hyatt.com/hyatt-hotels/ko-KR/nycgh-hyatt-grand-central-new-york/rooms",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Current room details establish workspaces, lighting controls, blackout curtains and bath amenities; dated renovation material specifications not reconfirmed as current across rooms and public spaces.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "Is there a current, post-2011 official source confirming the finish/material specifications of regular rooms and public spaces? The older Hyatt renovation announcement is detailed but too old to substitute automatically for present condition.",
+            "sourceUrl": "https://www.hyatt.com/hyatt-hotels/en-US/nycgh-hyatt-grand-central-new-york/rooms",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "Is there a current, post-2011 official source confirming the finish/material specifications of regular rooms and public spaces? The older Hyatt renovation announcement is detailed but too old to substitute automatically for present condition. [1]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://www.hyatt.com/hyatt-hotels/ko-KR/nycgh-hyatt-grand-central-new-york/rooms",
+                "title": "뉴욕 맨해튼의 2베드룸 호텔 스위트룸 | 하얏트 그랜드 센트럴",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "Is there a current, post-2011 official source confirming the finish/material specifications of regular rooms and public spaces? The older Hyatt renovation announcement is detailed but too old to substitute automatically for present condition. [1]"
+          },
+          "previousScore": null,
+          "newScore": null
+        }
+      },
+      "score": 54.166666666666664,
+      "tier": "Premium",
+      "assessmentStatus": "Provisional tier from available evidence",
+      "pendingDimensions": [
+        "design"
+      ],
+      "tierReason": "Provisional assessment. Calculated from available dimensions, normalized by their combined weight.",
+      "scoreChanges": [],
+      "researchProvenance": "User-supplied Deep Research assessment; proposed tiers, not database assignments; targeted second pass reviewed 2026-10-11",
+      "lastTargetedReviewOn": "2026-10-11",
+      "evidenceCoverage": 90,
+      "scoredDimensions": 4,
+      "isProvisional": true
+    },
+    {
+      "hotelId": "12",
+      "sourceId": "23448880",
+      "name": "Motto by Hilton New York City Chelsea",
+      "neighborhood": "Chelsea",
+      "existingDatabaseTier": null,
+      "officialPropertyFacts": "Chelsea room page describes cleverly compact rooms but lacks standard bedding/mattress, furnishing and bathroom fixture/finish specifications. Concierge, room service and meeting support are listed by the operator. An on-site restaurant and room service are listed; further distinct venue coverage is not established. A fitness center is listed; equipment and broader wellness details are not established. Hilton property editorial documents jewel-toned stained-glass reception backdrop, layered artwork and street motif, but not corresponding regular-room finishes.",
+      "sources": [
+        {
+          "url": "https://www.hilton.com/en/hotels/nycdlua-motto-new-york-city-chelsea/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.hilton.com/en-gb/hotels/nycdlua-motto-new-york-city-chelsea/",
+          "title": "Motto by Hilton New York City Chelsea",
+          "publicationDate": null,
+          "reviewedOn": "2026-10-10",
+          "type": "Official property or operator"
+        },
+        {
+          "url": "https://www.hilton.com/en/hotels/nycdlua-motto-new-york-city-chelsea/rooms/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-11",
+          "publicationDate": null
+        },
+        {
+          "url": "https://stories.hilton.com/growth-development/how-motto-by-hilton-is-building-toward-tripling-its-portfolio",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-11",
+          "publicationDate": null
+        }
+      ],
+      "rooms": null,
+      "guestService": 3,
+      "dining": 2,
+      "wellness": 1,
+      "design": null,
+      "evidence": {
+        "rooms": {
+          "status": "Evidence insufficient",
+          "note": "Chelsea room page describes cleverly compact rooms but lacks standard bedding/mattress, furnishing and bathroom fixture/finish specifications.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nycdlua-motto-new-york-city-chelsea/rooms/",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": "Chelsea-specific ordinary-room bedding, furnishing and bathroom specifications?",
+          "reviewQuestion": "Chelsea-specific ordinary-room bedding, furnishing and bathroom specifications?",
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/en/hotels/nycdlua-motto-new-york-city-chelsea/rooms/",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Chelsea room page describes cleverly compact rooms but lacks standard bedding/mattress, furnishing and bathroom fixture/finish specifications.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "What bedding or mattress upgrades and bathroom fixtures/finishes are standard in regular Chelsea rooms? Current Chelsea room pages are too sparse, and the broader Motto brand room examples were not substituted.",
+            "sourceUrl": "https://www.hilton.com/en/hotels/nycdlua-motto-new-york-city-chelsea/",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "What bedding or mattress upgrades and bathroom fixtures/finishes are standard in regular Chelsea rooms? Current Chelsea room pages are too sparse, and the broader Motto brand room examples were not substituted. [37]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://www.hilton.com/en-gb/hotels/nycdlua-motto-new-york-city-chelsea/",
+                "title": "Motto by Hilton New York City Chelsea",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "What bedding or mattress upgrades and bathroom fixtures/finishes are standard in regular Chelsea rooms? Current Chelsea room pages are too sparse, and the broader Motto brand room examples were not substituted. [37]"
+          },
+          "previousScore": null,
+          "newScore": null
+        },
+        "guestService": {
+          "status": "Scored",
+          "note": "Concierge, room service and meeting support are listed by the operator.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nycdlua-motto-new-york-city-chelsea/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/en-gb/hotels/nycdlua-motto-new-york-city-chelsea/",
+              "title": "Motto by Hilton New York City Chelsea",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "dining": {
+          "status": "Scored",
+          "note": "An on-site restaurant and room service are listed; further distinct venue coverage is not established.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nycdlua-motto-new-york-city-chelsea/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/en-gb/hotels/nycdlua-motto-new-york-city-chelsea/",
+              "title": "Motto by Hilton New York City Chelsea",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "wellness": {
+          "status": "Scored",
+          "note": "A fitness center is listed; equipment and broader wellness details are not established.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nycdlua-motto-new-york-city-chelsea/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/en-gb/hotels/nycdlua-motto-new-york-city-chelsea/",
+              "title": "Motto by Hilton New York City Chelsea",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "design": {
+          "status": "Evidence insufficient",
+          "note": "Hilton property editorial documents jewel-toned stained-glass reception backdrop, layered artwork and street motif, but not corresponding regular-room finishes.",
+          "sourceUrl": "https://stories.hilton.com/growth-development/how-motto-by-hilton-is-building-toward-tripling-its-portfolio",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": "Chelsea-specific regular-room material/finish details to pair with shared-space design?",
+          "reviewQuestion": "Chelsea-specific regular-room material/finish details to pair with shared-space design?",
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://stories.hilton.com/growth-development/how-motto-by-hilton-is-building-toward-tripling-its-portfolio",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Hilton property editorial documents jewel-toned stained-glass reception backdrop, layered artwork and street motif, but not corresponding regular-room finishes.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "What Chelsea-property-specific finish/material details apply to regular rooms and shared spaces?",
+            "sourceUrl": "https://www.hilton.com/en/hotels/nycdlua-motto-new-york-city-chelsea/",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "What Chelsea-property-specific finish/material details apply to regular rooms and shared spaces? [38]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://www.hilton.com/en-gb/hotels/nycdlua-motto-new-york-city-chelsea/",
+                "title": "Motto by Hilton New York City Chelsea",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "What Chelsea-property-specific finish/material details apply to regular rooms and shared spaces? [38]"
+          },
+          "previousScore": null,
+          "newScore": null
+        }
+      },
+      "score": 56.25,
+      "tier": "Premium",
+      "assessmentStatus": "Provisional tier from available evidence",
+      "pendingDimensions": [
+        "rooms",
+        "design"
+      ],
+      "tierReason": "Provisional assessment. Calculated from available dimensions, normalized by their combined weight.",
+      "scoreChanges": [],
+      "researchProvenance": "User-supplied Deep Research assessment; proposed tiers, not database assignments; targeted second pass reviewed 2026-10-11",
+      "lastTargetedReviewOn": "2026-10-11",
+      "evidenceCoverage": 60,
+      "scoredDimensions": 3,
+      "isProvisional": true
+    },
+    {
+      "hotelId": "14",
+      "sourceId": "8873263",
+      "name": "INNSiDE New York Nomad",
+      "neighborhood": "NoMad",
+      "existingDatabaseTier": null,
+      "officialPropertyFacts": "Regular rooms document rain showers, workspaces, floor-to-ceiling windows and included minibar drinks; larger Townhouse benefits are excluded. Meliá property page documents facilities and express check-in/check-out, not the ordinary-guest combination of housekeeping, luggage/laundry assistance, staffed concierge and hotel-operated room dining. An on-site dining offering is documented; conflicting venue names and broader meal delivery are not used to raise the score. The InFit gym is described as equipped for guest workouts. The room descriptions and operator image captions document a coordinated modern scheme with glass showers, illuminated vanities and contemporary room furnishings.",
+      "sources": [
+        {
+          "url": "https://www.melia.com/en/hotels/united-states/new-york/innside-new-york-nomad",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://feelthebeat.melia.com/innside/it/index.htm",
+          "title": "Playbook INNSiDE",
+          "publicationDate": null,
+          "reviewedOn": "2026-10-10",
+          "type": "Official property or operator"
+        }
+      ],
+      "rooms": 2,
+      "guestService": null,
+      "dining": 2,
+      "wellness": 2,
+      "design": 2,
+      "evidence": {
+        "rooms": {
+          "status": "Scored",
+          "note": "Regular rooms document rain showers, workspaces, floor-to-ceiling windows and included minibar drinks; larger Townhouse benefits are excluded.",
+          "sourceUrl": "https://www.melia.com/en/hotels/united-states/new-york/innside-new-york-nomad",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://feelthebeat.melia.com/innside/it/index.htm",
+              "title": "Playbook INNSiDE",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "guestService": {
+          "status": "Evidence insufficient",
+          "note": "Meliá property page documents facilities and express check-in/check-out, not the ordinary-guest combination of housekeeping, luggage/laundry assistance, staffed concierge and hotel-operated room dining.",
+          "sourceUrl": "https://www.melia.com/en/hotels/united-states/new-york/innside-new-york-nomad",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": "Which regular housekeeping, luggage/laundry, concierge and hotel-operated room dining services are currently available to ordinary guests?",
+          "reviewQuestion": "Which regular housekeeping, luggage/laundry, concierge and hotel-operated room dining services are currently available to ordinary guests?",
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.melia.com/en/hotels/united-states/new-york/innside-new-york-nomad",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Meliá property page documents facilities and express check-in/check-out, not the ordinary-guest combination of housekeeping, luggage/laundry assistance, staffed concierge and hotel-operated room dining.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "Which services are currently provided to ordinary guests: housekeeping frequency, luggage/laundry assistance, staffed concierge, and in-room dining/delivery? Operator-level service standards and a property front-desk job listing are not sufficiently property-specific to lock the level.",
+            "sourceUrl": "https://www.melia.com/en/hotels/united-states/new-york/innside-new-york-nomad",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "Which services are currently provided to ordinary guests: housekeeping frequency, luggage/laundry assistance, staffed concierge, and in-room dining/delivery? Operator-level service standards and a property front-desk job listing are not sufficiently property-specific to lock the level. [13]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://feelthebeat.melia.com/innside/it/index.htm",
+                "title": "Playbook INNSiDE",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "Which services are currently provided to ordinary guests: housekeeping frequency, luggage/laundry assistance, staffed concierge, and in-room dining/delivery? Operator-level service standards and a property front-desk job listing are not sufficiently property-specific to lock the level. [13]"
+          },
+          "previousScore": null,
+          "newScore": null
+        },
+        "dining": {
+          "status": "Scored",
+          "note": "An on-site dining offering is documented; conflicting venue names and broader meal delivery are not used to raise the score.",
+          "sourceUrl": "https://www.melia.com/en/hotels/united-states/new-york/innside-new-york-nomad",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://feelthebeat.melia.com/innside/it/index.htm",
+              "title": "Playbook INNSiDE",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "wellness": {
+          "status": "Scored",
+          "note": "The InFit gym is described as equipped for guest workouts.",
+          "sourceUrl": "https://www.melia.com/en/hotels/united-states/new-york/innside-new-york-nomad",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://feelthebeat.melia.com/innside/it/index.htm",
+              "title": "Playbook INNSiDE",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "design": {
+          "status": "Scored",
+          "note": "The room descriptions and operator image captions document a coordinated modern scheme with glass showers, illuminated vanities and contemporary room furnishings.",
+          "sourceUrl": "https://www.melia.com/en/hotels/united-states/new-york/innside-new-york-nomad",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://feelthebeat.melia.com/innside/it/index.htm",
+              "title": "Playbook INNSiDE",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        }
+      },
+      "score": 50,
+      "tier": "Premium",
+      "assessmentStatus": "Provisional tier from available evidence",
+      "pendingDimensions": [
+        "guestService"
+      ],
+      "tierReason": "Provisional assessment. Calculated from available dimensions, normalized by their combined weight.",
+      "scoreChanges": [],
+      "researchProvenance": "User-supplied Deep Research assessment; proposed tiers, not database assignments; targeted second pass reviewed 2026-10-11",
+      "lastTargetedReviewOn": "2026-10-11",
+      "evidenceCoverage": 70,
+      "scoredDimensions": 4,
+      "isProvisional": true
+    },
+    {
+      "hotelId": "17",
+      "sourceId": "99425",
+      "name": "Martinique New York on Broadway, Curio Collection by Hilton",
+      "neighborhood": "Midtown / Times Square",
+      "existingDatabaseTier": null,
+      "officialPropertyFacts": "Current Hilton pages show regular room categories and Art Deco-inspired decor but not standard non-suite bedding, furnishings and bathroom fixtures/materials. Accessible-category features cannot be generalized. In-room dining and event assistance provide services beyond reception; dedicated tailored assistance is not established. Noksu, The Bronze Owl and Carnegie Diner plus in-room dining provide multiple distinct food offerings. The property lists fitness access; equipment and substantive additional wellness facilities need further detail for a higher score. The gallery documents French Renaissance architecture, original marble spiral staircase and Art Deco-inspired finishes across the property.",
+      "sources": [
+        {
+          "url": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/gallery/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/rooms/",
+          "title": "Martinique on Broadway Midtown Manhattan Hotel Rooms",
+          "publicationDate": null,
+          "reviewedOn": "2026-10-10",
+          "type": "Official property or operator"
+        }
+      ],
+      "rooms": null,
+      "guestService": 2,
+      "dining": 3,
+      "wellness": 1,
+      "design": 3,
+      "evidence": {
+        "rooms": {
+          "status": "Evidence insufficient",
+          "note": "Current Hilton pages show regular room categories and Art Deco-inspired decor but not standard non-suite bedding, furnishings and bathroom fixtures/materials. Accessible-category features cannot be generalized.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/rooms/",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": "Standard non-suite, non-restricted bedding/furnishings and bathroom fixtures/materials?",
+          "reviewQuestion": "Standard non-suite, non-restricted bedding/furnishings and bathroom fixtures/materials?",
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/rooms/",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Current Hilton pages show regular room categories and Art Deco-inspired decor but not standard non-suite bedding, furnishings and bathroom fixtures/materials. Accessible-category features cannot be generalized.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "What standard bedding, furnishings and bathroom fixtures/finish materials are documented for regular rooms? Hilton currently confirms Art Deco-inspired décor and modern amenities, but not enough regular-room detail for the room rubric.",
+            "sourceUrl": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "What standard bedding, furnishings and bathroom fixtures/finish materials are documented for regular rooms? Hilton currently confirms Art Deco-inspired décor and modern amenities, but not enough regular-room detail for the room rubric. [14]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/rooms/",
+                "title": "Martinique on Broadway Midtown Manhattan Hotel Rooms",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "What standard bedding, furnishings and bathroom fixtures/finish materials are documented for regular rooms? Hilton currently confirms Art Deco-inspired décor and modern amenities, but not enough regular-room detail for the room rubric. [14]"
+          },
+          "previousScore": null,
+          "newScore": null
+        },
+        "guestService": {
+          "status": "Scored",
+          "note": "In-room dining and event assistance provide services beyond reception; dedicated tailored assistance is not established.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/rooms/",
+              "title": "Martinique on Broadway Midtown Manhattan Hotel Rooms",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "dining": {
+          "status": "Scored",
+          "note": "Noksu, The Bronze Owl and Carnegie Diner plus in-room dining provide multiple distinct food offerings.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/rooms/",
+              "title": "Martinique on Broadway Midtown Manhattan Hotel Rooms",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "wellness": {
+          "status": "Scored",
+          "note": "The property lists fitness access; equipment and substantive additional wellness facilities need further detail for a higher score.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/rooms/",
+              "title": "Martinique on Broadway Midtown Manhattan Hotel Rooms",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "design": {
+          "status": "Scored",
+          "note": "The gallery documents French Renaissance architecture, original marble spiral staircase and Art Deco-inspired finishes across the property.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/gallery/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/rooms/",
+              "title": "Martinique on Broadway Midtown Manhattan Hotel Rooms",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        }
+      },
+      "score": 53.57142857142857,
+      "tier": "Premium",
+      "assessmentStatus": "Provisional tier from available evidence",
+      "pendingDimensions": [
+        "rooms"
+      ],
+      "tierReason": "Provisional assessment. Calculated from available dimensions, normalized by their combined weight.",
+      "scoreChanges": [],
+      "researchProvenance": "User-supplied Deep Research assessment; proposed tiers, not database assignments; targeted second pass reviewed 2026-10-11",
+      "lastTargetedReviewOn": "2026-10-11",
+      "evidenceCoverage": 70,
+      "scoredDimensions": 4,
+      "isProvisional": true
+    },
+    {
+      "hotelId": "27",
+      "sourceId": "5040757",
+      "name": "Homewood Suites By Hilton New York/Midtown Manhattan Times Square-South, NY",
+      "neighborhood": "Midtown / Times Square",
+      "existingDatabaseTier": null,
+      "officialPropertyFacts": "Regular suites include kitchens and recently renovated practical accommodation. Kitchen size does not establish exceptional bathroom/finish quality. Concierge and laundry provision document assistance beyond reception; full-service dining delivery is not established. Hot breakfast is documented; kitchens for self-catering do not count as property-operated restaurants. Guest fitness facilities include Peloton equipment. Property/gallery documents ordinary studio work, seating, dining and kitchen furnishings, and shared Lodge/rooftop seating, tables and fireplace. Functional conventional rooms and common spaces support level 1; renovation wording alone does not prove upgraded finishes.",
+      "sources": [
+        {
+          "url": "https://www.hilton.com/en/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.hilton.com/es/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/rooms/",
+          "title": "Suites tipo estudio en el centro de la ciudad en Homewood Times Square - Cerca de Bryant Park, Nueva York",
+          "publicationDate": null,
+          "reviewedOn": "2026-10-10",
+          "type": "Official property or operator"
+        },
+        {
+          "url": "https://www.hilton.com/en/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/gallery/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-11",
+          "publicationDate": null
+        }
+      ],
+      "rooms": 2,
+      "guestService": 2,
+      "dining": 1,
+      "wellness": 2,
+      "design": 1,
+      "evidence": {
+        "rooms": {
+          "status": "Scored",
+          "note": "Regular suites include kitchens and recently renovated practical accommodation. Kitchen size does not establish exceptional bathroom/finish quality.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/es/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/rooms/",
+              "title": "Suites tipo estudio en el centro de la ciudad en Homewood Times Square - Cerca de Bryant Park, Nueva York",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "guestService": {
+          "status": "Scored",
+          "note": "Concierge and laundry provision document assistance beyond reception; full-service dining delivery is not established.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/es/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/rooms/",
+              "title": "Suites tipo estudio en el centro de la ciudad en Homewood Times Square - Cerca de Bryant Park, Nueva York",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "dining": {
+          "status": "Scored",
+          "note": "Hot breakfast is documented; kitchens for self-catering do not count as property-operated restaurants.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/es/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/rooms/",
+              "title": "Suites tipo estudio en el centro de la ciudad en Homewood Times Square - Cerca de Bryant Park, Nueva York",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "wellness": {
+          "status": "Scored",
+          "note": "Guest fitness facilities include Peloton equipment.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/es/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/rooms/",
+              "title": "Suites tipo estudio en el centro de la ciudad en Homewood Times Square - Cerca de Bryant Park, Nueva York",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "design": {
+          "status": "Scored",
+          "note": "Property/gallery documents ordinary studio work, seating, dining and kitchen furnishings, and shared Lodge/rooftop seating, tables and fireplace. Functional conventional rooms and common spaces support level 1; renovation wording alone does not prove upgraded finishes.",
+          "sourceUrl": "https://www.hilton.com/en/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/gallery/",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.hilton.com/en/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/gallery/",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": true,
+          "reasoning": "Property/gallery documents ordinary studio work, seating, dining and kitchen furnishings, and shared Lodge/rooftop seating, tables and fireplace. Functional conventional rooms and common spaces support level 1; renovation wording alone does not prove upgraded finishes.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "What specific finish/material upgrades were made in the recent renovation to regular accommodation and public spaces? “Recently renovated” and gallery imagery alone do not establish the level-2 finish criterion.",
+            "sourceUrl": "https://www.hilton.com/en/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "What specific finish/material upgrades were made in the recent renovation to regular accommodation and public spaces? “Recently renovated” and gallery imagery alone do not establish the level-2 finish criterion. [16]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://www.hilton.com/es/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/rooms/",
+                "title": "Suites tipo estudio en el centro de la ciudad en Homewood Times Square - Cerca de Bryant Park, Nueva York",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "What specific finish/material upgrades were made in the recent renovation to regular accommodation and public spaces? “Recently renovated” and gallery imagery alone do not establish the level-2 finish criterion. [16]"
+          },
+          "previousScore": null,
+          "newScore": 1,
+          "integrationValidation": {
+            "checkedOn": "2026-10-11",
+            "status": "Supporting official page text and gallery captions checked; proposed rubric level retained"
+          }
+        }
+      },
+      "score": 43.75,
+      "tier": "Standard",
+      "assessmentStatus": "Scored proposal",
+      "pendingDimensions": [],
+      "tierReason": "Calculated from the five weighted dimensions.",
+      "scoreChanges": [
+        {
+          "dimension": "design",
+          "previousScore": null,
+          "newScore": 1,
+          "researchDate": "2026-10-11",
+          "reasoning": "Property/gallery documents ordinary studio work, seating, dining and kitchen furnishings, and shared Lodge/rooftop seating, tables and fireplace. Functional conventional rooms and common spaces support level 1; renovation wording alone does not prove upgraded finishes.",
+          "sourceUrls": [
+            "https://www.hilton.com/en/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/gallery/"
+          ]
+        }
+      ],
+      "researchProvenance": "User-supplied Deep Research assessment; proposed tiers, not database assignments; targeted second pass reviewed 2026-10-11",
+      "lastTargetedReviewOn": "2026-10-11",
+      "evidenceCoverage": 100,
+      "scoredDimensions": 5,
+      "isProvisional": false
+    },
+    {
+      "hotelId": "47",
+      "sourceId": "249712",
+      "name": "The Westin New York at Times Square",
+      "neighborhood": "Midtown / Times Square",
+      "existingDatabaseTier": null,
+      "officialPropertyFacts": "The regular accommodation documents Heavenly Beds/Bath amenities and modern technology; suite size is excluded. Guest dining delivery and hotel assistance are documented; a sufficiently detailed staffed concierge offering is not established by the reviewed pages. Foundry provides restaurant/bar dining; multiple additional distinct venues are not established. Equipped guest fitness/wellness facilities are documented. Marriott confirms renovated rooms and Heavenly Bed/Bath, and gallery shows guestrooms and public areas; no current post-renovation material/finish detail for shared spaces.",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/overview/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/rooms/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        }
+      ],
+      "rooms": 2,
+      "guestService": 2,
+      "dining": 2,
+      "wellness": 2,
+      "design": null,
+      "evidence": {
+        "rooms": {
+          "status": "Scored",
+          "note": "The regular accommodation documents Heavenly Beds/Bath amenities and modern technology; suite size is excluded.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/rooms/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/overview/",
+              "title": "The Westin New York at Times Square | NYC Hotel near Broadway & Madison Square Garden",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "guestService": {
+          "status": "Scored",
+          "note": "Guest dining delivery and hotel assistance are documented; a sufficiently detailed staffed concierge offering is not established by the reviewed pages.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/overview/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/overview/",
+              "title": "The Westin New York at Times Square | NYC Hotel near Broadway & Madison Square Garden",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "dining": {
+          "status": "Scored",
+          "note": "Foundry provides restaurant/bar dining; multiple additional distinct venues are not established.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/overview/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/overview/",
+              "title": "The Westin New York at Times Square | NYC Hotel near Broadway & Madison Square Garden",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "wellness": {
+          "status": "Scored",
+          "note": "Equipped guest fitness/wellness facilities are documented.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/overview/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/overview/",
+              "title": "The Westin New York at Times Square | NYC Hotel near Broadway & Madison Square Garden",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "design": {
+          "status": "Evidence insufficient",
+          "note": "Marriott confirms renovated rooms and Heavenly Bed/Bath, and gallery shows guestrooms and public areas; no current post-renovation material/finish detail for shared spaces.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/overview/",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": "Specific current finish/material details for ordinary rooms and shared spaces?",
+          "reviewQuestion": "Specific current finish/material details for ordinary rooms and shared spaces?",
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/overview/",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Marriott confirms renovated rooms and Heavenly Bed/Bath, and gallery shows guestrooms and public areas; no current post-renovation material/finish detail for shared spaces.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "What specific post-renovation finish/material details apply to regular guestrooms and common areas? The live site confirms renovation and premium bedding/bath products but does not document the design finishes required by the rubric.",
+            "sourceUrl": "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/rooms/",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "What specific post-renovation finish/material details apply to regular guestrooms and common areas? The live site confirms renovation and premium bedding/bath products but does not document the design finishes required by the rubric. [36]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/overview/",
+                "title": "The Westin New York at Times Square | NYC Hotel near Broadway & Madison Square Garden",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "What specific post-renovation finish/material details apply to regular guestrooms and common areas? The live site confirms renovation and premium bedding/bath products but does not document the design finishes required by the rubric. [36]"
+          },
+          "previousScore": null,
+          "newScore": null
+        }
+      },
+      "score": 50,
+      "tier": "Premium",
+      "assessmentStatus": "Provisional tier from available evidence",
+      "pendingDimensions": [
+        "design"
+      ],
+      "tierReason": "Provisional assessment. Calculated from available dimensions, normalized by their combined weight.",
+      "scoreChanges": [],
+      "researchProvenance": "User-supplied Deep Research assessment; proposed tiers, not database assignments; targeted second pass reviewed 2026-10-11",
+      "lastTargetedReviewOn": "2026-10-11",
+      "evidenceCoverage": 90,
+      "scoredDimensions": 4,
+      "isProvisional": true
+    },
+    {
+      "hotelId": "140",
+      "sourceId": "23887495",
+      "name": "The Hotel Chelsea",
+      "neighborhood": "Chelsea",
+      "existingDatabaseTier": null,
+      "officialPropertyFacts": "Chelsea rooms document Bellino linens, marble bathrooms, antique brass fixtures and rain showers. Apartment kitchens and suite-only benefits are excluded. Hotel website details rooms, dining, spa and fitness but does not establish ordinary-guest housekeeping, concierge, luggage/laundry and hotel-operated in-room dining package. Café Chelsea provides extensive all-day coverage; El Quijote, Teruko and the Lobby Bar add differentiated concepts, with Teruko documenting an Edomae-style sushi program. Wellness combines a 24-hour Technogym/Peloton/Rogue gym with staffed treatments, sauna, steam, rain showers, rooftop terrace and tailored programs. Café Chelsea provides extensive all-day coverage; El Quijote, Teruko and the Lobby Bar add differentiated concepts, with Teruko documenting an Edomae-style sushi program. Wellness combines a 24-hour Technogym/Peloton/Rogue gym with staffed treatments, sauna, steam, rain showers, rooftop terrace and tailored programs. Regular-room marble/brass finishes and restored event/shared spaces with custom furniture, ornate rugs and historic detailing establish distinctive design.",
+      "sources": [
+        {
+          "url": "https://hotelchelsea.com/accommodations/chelsea-room",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://hotelchelsea.com/wellness/spa",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://hotelchelsea.com/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://hotelchelsea.com/events",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://hotelchelsea.com/dining-and-bar/cafe-chelsea",
+          "title": "Café Chelsea",
+          "publicationDate": null,
+          "reviewedOn": "2026-10-10",
+          "type": "Official property or operator"
+        },
+        {
+          "url": "https://hotelchelsea.com/wellness/fitness",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        }
+      ],
+      "rooms": 3,
+      "guestService": null,
+      "dining": 4,
+      "wellness": 4,
+      "design": 3,
+      "evidence": {
+        "rooms": {
+          "status": "Scored",
+          "note": "Chelsea rooms document Bellino linens, marble bathrooms, antique brass fixtures and rain showers. Apartment kitchens and suite-only benefits are excluded.",
+          "sourceUrl": "https://hotelchelsea.com/accommodations/chelsea-room",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://hotelchelsea.com/dining-and-bar/cafe-chelsea",
+              "title": "Café Chelsea",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "guestService": {
+          "status": "Evidence insufficient",
+          "note": "Hotel website details rooms, dining, spa and fitness but does not establish ordinary-guest housekeeping, concierge, luggage/laundry and hotel-operated in-room dining package.",
+          "sourceUrl": "https://hotelchelsea.com/",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": "Which guest services are provided to every ordinary guest?",
+          "reviewQuestion": "Which guest services are provided to every ordinary guest?",
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://hotelchelsea.com/",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Hotel website details rooms, dining, spa and fitness but does not establish ordinary-guest housekeeping, concierge, luggage/laundry and hotel-operated in-room dining package.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "Does the hotel currently provide ordinary hotel guests with regular housekeeping, staffed concierge, luggage/laundry assistance and/or in-room dining? The official site is exceptionally detailed on rooms, dining and wellness but does not establish this service package.",
+            "sourceUrl": "https://hotelchelsea.com/",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "Does the hotel currently provide ordinary hotel guests with regular housekeeping, staffed concierge, luggage/laundry assistance and/or in-room dining? The official site is exceptionally detailed on rooms, dining and wellness but does not establish this service package. [39]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://hotelchelsea.com/dining-and-bar/cafe-chelsea",
+                "title": "Café Chelsea",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "Does the hotel currently provide ordinary hotel guests with regular housekeeping, staffed concierge, luggage/laundry assistance and/or in-room dining? The official site is exceptionally detailed on rooms, dining and wellness but does not establish this service package. [39]"
+          },
+          "previousScore": null,
+          "newScore": null
+        },
+        "dining": {
+          "status": "Scored",
+          "note": "Café Chelsea provides extensive all-day coverage; El Quijote, Teruko and the Lobby Bar add differentiated concepts, with Teruko documenting an Edomae-style sushi program. Wellness combines a 24-hour Technogym/Peloton/Rogue gym with staffed treatments, sauna, steam, rain showers, rooftop terrace and tailored programs.",
+          "sourceUrl": "https://hotelchelsea.com/dining-and-bar/cafe-chelsea",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://hotelchelsea.com/dining-and-bar/cafe-chelsea",
+              "title": "Café Chelsea",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "previousScore": 3,
+          "scoreChanged": true,
+          "scoreChangeReason": "Café Chelsea provides extensive all-day coverage; El Quijote, Teruko and the Lobby Bar add differentiated concepts, with Teruko documenting an Edomae-style sushi program. Wellness combines a 24-hour Technogym/Peloton/Rogue gym with staffed treatments, sauna, steam, rain showers, rooftop terrace and tailored programs. [34]",
+          "reasoning": "Research report score change: dining 3 → 4; wellness 3 → 4. Café Chelsea provides extensive all-day coverage; El Quijote, Teruko and the Lobby Bar add differentiated concepts, with Teruko documenting an Edomae-style sushi program. Wellness combines a 24-hour Technogym/Peloton/Rogue gym with staffed treatments, sauna, steam, rain showers, rooftop terrace and tailored programs. [34]"
+        },
+        "wellness": {
+          "status": "Scored",
+          "note": "Café Chelsea provides extensive all-day coverage; El Quijote, Teruko and the Lobby Bar add differentiated concepts, with Teruko documenting an Edomae-style sushi program. Wellness combines a 24-hour Technogym/Peloton/Rogue gym with staffed treatments, sauna, steam, rain showers, rooftop terrace and tailored programs.",
+          "sourceUrl": "https://hotelchelsea.com/wellness/spa",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://hotelchelsea.com/dining-and-bar/cafe-chelsea",
+              "title": "Café Chelsea",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "previousScore": 3,
+          "scoreChanged": true,
+          "scoreChangeReason": "Café Chelsea provides extensive all-day coverage; El Quijote, Teruko and the Lobby Bar add differentiated concepts, with Teruko documenting an Edomae-style sushi program. Wellness combines a 24-hour Technogym/Peloton/Rogue gym with staffed treatments, sauna, steam, rain showers, rooftop terrace and tailored programs. [34]",
+          "reasoning": "Research report score change: dining 3 → 4; wellness 3 → 4. Café Chelsea provides extensive all-day coverage; El Quijote, Teruko and the Lobby Bar add differentiated concepts, with Teruko documenting an Edomae-style sushi program. Wellness combines a 24-hour Technogym/Peloton/Rogue gym with staffed treatments, sauna, steam, rain showers, rooftop terrace and tailored programs. [34]",
+          "originalResearchSourceUrl": "https://hotelchelsea.com/dining-and-bar/cafe-chelsea",
+          "additionalSourceUrls": [
+            "https://hotelchelsea.com/wellness/fitness"
+          ],
+          "sourceLinkReview": "Supporting page corrected during integration; tier remains an editorial proposal"
+        },
+        "design": {
+          "status": "Scored",
+          "note": "Regular-room marble/brass finishes and restored event/shared spaces with custom furniture, ornate rugs and historic detailing establish distinctive design.",
+          "sourceUrl": "https://hotelchelsea.com/events",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://hotelchelsea.com/dining-and-bar/cafe-chelsea",
+              "title": "Café Chelsea",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        }
+      },
+      "score": 85.71428571428571,
+      "tier": "Premium",
+      "assessmentStatus": "Provisional tier from available evidence",
+      "pendingDimensions": [
+        "guestService"
+      ],
+      "tierReason": "Provisional assessment. Premium: Luxury requires evidenced rooms and guest service scores of at least 3/4 each.",
+      "scoreChanges": [
+        {
+          "dimension": "dining",
+          "previousScore": 3,
+          "newScore": 4,
+          "scoreChangeReason": "Café Chelsea provides extensive all-day coverage; El Quijote, Teruko and the Lobby Bar add differentiated concepts, with Teruko documenting an Edomae-style sushi program. Wellness combines a 24-hour Technogym/Peloton/Rogue gym with staffed treatments, sauna, steam, rain showers, rooftop terrace and tailored programs. [34]"
+        },
+        {
+          "dimension": "wellness",
+          "previousScore": 3,
+          "newScore": 4,
+          "scoreChangeReason": "Café Chelsea provides extensive all-day coverage; El Quijote, Teruko and the Lobby Bar add differentiated concepts, with Teruko documenting an Edomae-style sushi program. Wellness combines a 24-hour Technogym/Peloton/Rogue gym with staffed treatments, sauna, steam, rain showers, rooftop terrace and tailored programs. [34]"
+        }
+      ],
+      "researchProvenance": "User-supplied Deep Research assessment; proposed tiers, not database assignments; targeted second pass reviewed 2026-10-11",
+      "lastTargetedReviewOn": "2026-10-11",
+      "evidenceCoverage": 70,
+      "scoredDimensions": 4,
+      "isProvisional": true
+    },
+    {
+      "hotelId": "141",
+      "sourceId": "273530",
+      "name": "The Maritime Hotel",
+      "neighborhood": "Chelsea",
+      "existingDatabaseTier": null,
+      "officialPropertyFacts": "The standard room documents rain showers, C.O. Bigelow products and artisanal minibar provision. Penthouse benefits are excluded. Property site documents hotel rooms and facilities but not specific housekeeping, luggage/laundry assistance, concierge or dining delivery to ordinary guests. Tao Downtown is documented; private event catering does not establish additional regular-guest venues. The standard room offering documents 24-hour gym access and bicycles. The regular-room and property presentation documents a coordinated maritime/porthole scheme; no exceptional craftsmanship is inferred.",
+      "sources": [
+        {
+          "url": "https://themaritimehotel.com/standard-room/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://themaritimehotel.com/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        }
+      ],
+      "rooms": 2,
+      "guestService": null,
+      "dining": 2,
+      "wellness": 2,
+      "design": 2,
+      "evidence": {
+        "rooms": {
+          "status": "Scored",
+          "note": "The standard room documents rain showers, C.O. Bigelow products and artisanal minibar provision. Penthouse benefits are excluded.",
+          "sourceUrl": "https://themaritimehotel.com/standard-room/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://themaritimehotel.com/standard-room/",
+              "title": "Superior Queen",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "guestService": {
+          "status": "Evidence insufficient",
+          "note": "Property site documents hotel rooms and facilities but not specific housekeeping, luggage/laundry assistance, concierge or dining delivery to ordinary guests.",
+          "sourceUrl": "https://themaritimehotel.com/",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": "Which housekeeping, reception/concierge, luggage/laundry and dining-delivery services are currently offered?",
+          "reviewQuestion": "Which housekeeping, reception/concierge, luggage/laundry and dining-delivery services are currently offered?",
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://themaritimehotel.com/",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Property site documents hotel rooms and facilities but not specific housekeeping, luggage/laundry assistance, concierge or dining delivery to ordinary guests.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "What regular-guest assistance is currently available beyond the room itself—housekeeping, luggage/laundry help, concierge or dining delivery? The official material reviewed establishes the room product, gym and guest bicycles but not the service rubric.",
+            "sourceUrl": "https://themaritimehotel.com/",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "What regular-guest assistance is currently available beyond the room itself—housekeeping, luggage/laundry help, concierge or dining delivery? The official material reviewed establishes the room product, gym and guest bicycles but not the service rubric. [25]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://themaritimehotel.com/standard-room/",
+                "title": "Superior Queen",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "What regular-guest assistance is currently available beyond the room itself—housekeeping, luggage/laundry help, concierge or dining delivery? The official material reviewed establishes the room product, gym and guest bicycles but not the service rubric. [25]"
+          },
+          "previousScore": null,
+          "newScore": null
+        },
+        "dining": {
+          "status": "Scored",
+          "note": "Tao Downtown is documented; private event catering does not establish additional regular-guest venues.",
+          "sourceUrl": "https://themaritimehotel.com/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://themaritimehotel.com/standard-room/",
+              "title": "Superior Queen",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "wellness": {
+          "status": "Scored",
+          "note": "The standard room offering documents 24-hour gym access and bicycles.",
+          "sourceUrl": "https://themaritimehotel.com/standard-room/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://themaritimehotel.com/standard-room/",
+              "title": "Superior Queen",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "design": {
+          "status": "Scored",
+          "note": "The regular-room and property presentation documents a coordinated maritime/porthole scheme; no exceptional craftsmanship is inferred.",
+          "sourceUrl": "https://themaritimehotel.com/standard-room/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://themaritimehotel.com/standard-room/",
+              "title": "Superior Queen",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        }
+      },
+      "score": 50,
+      "tier": "Premium",
+      "assessmentStatus": "Provisional tier from available evidence",
+      "pendingDimensions": [
+        "guestService"
+      ],
+      "tierReason": "Provisional assessment. Calculated from available dimensions, normalized by their combined weight.",
+      "scoreChanges": [],
+      "researchProvenance": "User-supplied Deep Research assessment; proposed tiers, not database assignments; targeted second pass reviewed 2026-10-11",
+      "lastTargetedReviewOn": "2026-10-11",
+      "evidenceCoverage": 70,
+      "scoredDimensions": 4,
+      "isProvisional": true
+    },
+    {
+      "hotelId": "143",
+      "sourceId": "1177864",
+      "name": "The Moore",
+      "neighborhood": "Chelsea",
+      "existingDatabaseTier": null,
+      "officialPropertyFacts": "Regular rooms document Frette linens/robes and D.S. & Durga bath products. The suite terrace/hot tub is excluded; additional room material/fixture upgrades are not established. Regular-room pages explicitly state daily housekeeping, and the current Enjoy page advertises breakfast or dinner in the room. That supports additional guest assistance without assuming a higher concierge-style service level. A café and seasonal rooftop wine bar are documented; extensive meal coverage is not established. A gym is documented, without enough equipment detail for a higher score. Regular-room pages detail Frette linens/terry, D.S. & Durga bath amenities, work areas, lamps and armoires; café/lounge and rooftop wine bar are identified, but their finish/material scheme is not.",
+      "sources": [
+        {
+          "url": "https://www.themoorenyc.com/sleep",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.themoorenyc.com/enjoy",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        }
+      ],
+      "rooms": 2,
+      "guestService": 2,
+      "dining": 2,
+      "wellness": 1,
+      "design": null,
+      "evidence": {
+        "rooms": {
+          "status": "Scored",
+          "note": "Regular rooms document Frette linens/robes and D.S. & Durga bath products. The suite terrace/hot tub is excluded; additional room material/fixture upgrades are not established.",
+          "sourceUrl": "https://www.themoorenyc.com/sleep",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.themoorenyc.com/enjoy",
+              "title": "Enjoy",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "guestService": {
+          "status": "Scored",
+          "note": "Regular-room pages explicitly state daily housekeeping, and the current Enjoy page advertises breakfast or dinner in the room. That supports additional guest assistance without assuming a higher concierge-style service level.",
+          "sourceUrl": "https://www.themoorenyc.com/enjoy",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.themoorenyc.com/enjoy",
+              "title": "Enjoy",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "previousScore": null,
+          "scoreChanged": true,
+          "scoreChangeReason": "Regular-room pages explicitly state daily housekeeping, and the current Enjoy page advertises breakfast or dinner in the room. That supports additional guest assistance without assuming a higher concierge-style service level. [26]",
+          "reasoning": "Research report score change: guestService null → 2. Regular-room pages explicitly state daily housekeeping, and the current Enjoy page advertises breakfast or dinner in the room. That supports additional guest assistance without assuming a higher concierge-style service level. [26]"
+        },
+        "dining": {
+          "status": "Scored",
+          "note": "A café and seasonal rooftop wine bar are documented; extensive meal coverage is not established.",
+          "sourceUrl": "https://www.themoorenyc.com/enjoy",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.themoorenyc.com/enjoy",
+              "title": "Enjoy",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "wellness": {
+          "status": "Scored",
+          "note": "A gym is documented, without enough equipment detail for a higher score.",
+          "sourceUrl": "https://www.themoorenyc.com/enjoy",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.themoorenyc.com/enjoy",
+              "title": "Enjoy",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "design": {
+          "status": "Evidence insufficient",
+          "note": "Regular-room pages detail Frette linens/terry, D.S. & Durga bath amenities, work areas, lamps and armoires; café/lounge and rooftop wine bar are identified, but their finish/material scheme is not.",
+          "sourceUrl": "https://www.themoorenyc.com/sleep",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": "Current shared-space material/finish details and relationship to regular rooms?",
+          "reviewQuestion": "Current shared-space material/finish details and relationship to regular rooms?",
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.themoorenyc.com/sleep",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Regular-room pages detail Frette linens/terry, D.S. & Durga bath amenities, work areas, lamps and armoires; café/lounge and rooftop wine bar are identified, but their finish/material scheme is not.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "What current property-specific finish/material details describe both regular rooms and shared spaces? The current pages establish Frette linens, D.S. & Durga amenities and functional furnishings but do not distinguish the design levels.",
+            "sourceUrl": "https://www.themoorenyc.com/sleep",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "What current property-specific finish/material details describe both regular rooms and shared spaces? The current pages establish Frette linens, D.S. & Durga amenities and functional furnishings but do not distinguish the design levels. [26]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://www.themoorenyc.com/enjoy",
+                "title": "Enjoy",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "What current property-specific finish/material details describe both regular rooms and shared spaces? The current pages establish Frette linens, D.S. & Durga amenities and functional furnishings but do not distinguish the design levels. [26]"
+          },
+          "previousScore": null,
+          "newScore": null
+        }
+      },
+      "score": 45.833333333333336,
+      "tier": "Standard",
+      "assessmentStatus": "Provisional tier from available evidence",
+      "pendingDimensions": [
+        "design"
+      ],
+      "tierReason": "Provisional assessment. Calculated from available dimensions, normalized by their combined weight.",
+      "scoreChanges": [
+        {
+          "dimension": "guestService",
+          "previousScore": null,
+          "newScore": 2,
+          "scoreChangeReason": "Regular-room pages explicitly state daily housekeeping, and the current Enjoy page advertises breakfast or dinner in the room. That supports additional guest assistance without assuming a higher concierge-style service level. [26]"
+        }
+      ],
+      "researchProvenance": "User-supplied Deep Research assessment; proposed tiers, not database assignments; targeted second pass reviewed 2026-10-11",
+      "lastTargetedReviewOn": "2026-10-11",
+      "evidenceCoverage": 90,
+      "scoredDimensions": 4,
+      "isProvisional": true
+    },
+    {
+      "hotelId": "144",
+      "sourceId": "15530677",
+      "name": "Renaissance New York Chelsea Hotel",
+      "neighborhood": "Chelsea",
+      "existingDatabaseTier": null,
+      "officialPropertyFacts": "The current overview documents plush bedding, LED TVs and modern functional rooms. Suite-specific additions are excluded. Front desk, valet and catered event support are documented; broad guest meal delivery and personalized concierge assistance are not established. Marriott live dining/navigation does not establish an operating outlet or hours; gallery still shows Cotto restaurant and bar, but images alone cannot establish current operation. The current experiences page specifies cardio, free weights and strength equipment. The current overview explicitly describes fun, functional rooms. Additional craftsmanship/finish upgrades are not established.",
+      "sources": [
+        {
+          "url": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/overview/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/events/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/experiences/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        },
+        {
+          "url": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/dining/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-11",
+          "publicationDate": null
+        }
+      ],
+      "rooms": 2,
+      "guestService": 2,
+      "dining": null,
+      "wellness": 2,
+      "design": 1,
+      "evidence": {
+        "rooms": {
+          "status": "Scored",
+          "note": "The current overview documents plush bedding, LED TVs and modern functional rooms. Suite-specific additions are excluded.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/overview/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/overview/",
+              "title": "Renaissance New York Chelsea Hotel | Boutique Hotel with Skyline Views near MSG",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "guestService": {
+          "status": "Scored",
+          "note": "Front desk, valet and catered event support are documented; broad guest meal delivery and personalized concierge assistance are not established.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/overview/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/overview/",
+              "title": "Renaissance New York Chelsea Hotel | Boutique Hotel with Skyline Views near MSG",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "dining": {
+          "status": "Evidence insufficient",
+          "note": "Marriott live dining/navigation does not establish an operating outlet or hours; gallery still shows Cotto restaurant and bar, but images alone cannot establish current operation.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/dining/",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": "Is Cotto or another property outlet currently operating, with current menus and service hours?",
+          "reviewQuestion": "Is Cotto or another property outlet currently operating, with current menus and service hours?",
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/dining/",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Marriott live dining/navigation does not establish an operating outlet or hours; gallery still shows Cotto restaurant and bar, but images alone cannot establish current operation.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "Is Cotto, or another property-operated guest restaurant/bar, currently operating, and what are its current hours? Marriott's current overview does not establish an on-property outlet while its current gallery still retains Cotto imagery.",
+            "sourceUrl": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/overview/",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "Is Cotto, or another property-operated guest restaurant/bar, currently operating, and what are its current hours? Marriott's current overview does not establish an on-property outlet while its current gallery still retains Cotto imagery. [2]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/overview/",
+                "title": "Renaissance New York Chelsea Hotel | Boutique Hotel with Skyline Views near MSG",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "Is Cotto, or another property-operated guest restaurant/bar, currently operating, and what are its current hours? Marriott's current overview does not establish an on-property outlet while its current gallery still retains Cotto imagery. [2]"
+          },
+          "previousScore": null,
+          "newScore": null
+        },
+        "wellness": {
+          "status": "Scored",
+          "note": "The current experiences page specifies cardio, free weights and strength equipment.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/experiences/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/overview/",
+              "title": "Renaissance New York Chelsea Hotel | Boutique Hotel with Skyline Views near MSG",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "design": {
+          "status": "Scored",
+          "note": "The current overview explicitly describes fun, functional rooms. Additional craftsmanship/finish upgrades are not established.",
+          "sourceUrl": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/overview/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/overview/",
+              "title": "Renaissance New York Chelsea Hotel | Boutique Hotel with Skyline Views near MSG",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        }
+      },
+      "score": 47.05882352941177,
+      "tier": "Standard",
+      "assessmentStatus": "Provisional tier from available evidence",
+      "pendingDimensions": [
+        "dining"
+      ],
+      "tierReason": "Provisional assessment. Calculated from available dimensions, normalized by their combined weight.",
+      "scoreChanges": [],
+      "researchProvenance": "User-supplied Deep Research assessment; proposed tiers, not database assignments; targeted second pass reviewed 2026-10-11",
+      "lastTargetedReviewOn": "2026-10-11",
+      "evidenceCoverage": 85,
+      "scoredDimensions": 4,
+      "isProvisional": true
+    },
+    {
+      "hotelId": "148",
+      "sourceId": "262330",
+      "name": "M Social Hotel New York Downtown",
+      "neighborhood": "Financial District / Downtown",
+      "existingDatabaseTier": null,
+      "officialPropertyFacts": "Operator confirms redevelopment and redesigned guestrooms, but useful bathroom details are tied to ADA categories; no standard non-suite, non-ADA bedding and bathroom specifications. The current overview documents room service, daily housekeeping, front desk and laundry assistance. Beast & Butterflies and room service are documented; distinct additional regular-guest venues are not established. A fitness center is documented, but equipment detail sufficient for a higher score is not established. The operator documents fully redesigned modern accommodation and social/dining spaces; no exceptional bespoke craftsmanship is established.",
+      "sources": [
+        {
+          "url": "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-hotel-new-york-downtown/overview/",
+          "type": "Official property or operator",
+          "reviewedOn": "2026-10-10"
+        }
+      ],
+      "rooms": null,
+      "guestService": 3,
+      "dining": 2,
+      "wellness": 1,
+      "design": 2,
+      "evidence": {
+        "rooms": {
+          "status": "Evidence insufficient",
+          "note": "Operator confirms redevelopment and redesigned guestrooms, but useful bathroom details are tied to ADA categories; no standard non-suite, non-ADA bedding and bathroom specifications.",
+          "sourceUrl": "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-hotel-new-york-downtown/overview/",
+          "reviewedOn": "2026-10-11",
+          "scope": "Exclude suite-only, club-floor, loyalty, package, VIP and restricted-category benefits; no brand-wide substitution",
+          "researchDate": "2026-10-11",
+          "applicability": "Regular rooms or ordinary guests only, as relevant; property-specific evidence",
+          "sourcePublicationDate": null,
+          "uncertainty": "Standard non-ADA, non-suite room bedding/mattress and bathroom fixtures/finishes?",
+          "reviewQuestion": "Standard non-ADA, non-suite room bedding/mattress and bathroom fixtures/finishes?",
+          "researchReportSource": "Targeted NYC Hotel Gap Research and Updated Scorecards.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-hotel-new-york-downtown/overview/",
+              "type": "Official property or operator",
+              "reviewedOn": "2026-10-11",
+              "publicationDate": null
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Operator confirms redevelopment and redesigned guestrooms, but useful bathroom details are tied to ADA categories; no standard non-suite, non-ADA bedding and bathroom specifications.",
+          "priorEvidenceSnapshot": {
+            "status": "Evidence insufficient",
+            "note": "After the documented $50 million full renovation, what bedding, furnishing and bathroom fixture/finish upgrades are standard in regular, non-suite rooms? Detailed “sleek bathroom”/roll-in-shower wording currently appears on an ADA category and was not generalized to every regular room.",
+            "sourceUrl": "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-hotel-new-york-downtown/overview/",
+            "reviewedOn": "2026-10-10",
+            "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+            "researchDate": "2026-10-10",
+            "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+            "sourcePublicationDate": null,
+            "uncertainty": "Official property/operator documentation did not establish a defensible rubric level.",
+            "reviewQuestion": "After the documented $50 million full renovation, what bedding, furnishing and bathroom fixture/finish upgrades are standard in regular, non-suite rooms? Detailed “sleek bathroom”/roll-in-shower wording currently appears on an ADA category and was not generalized to every regular room. [27]",
+            "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+            "reportOfficialSources": [
+              {
+                "url": "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-hotel-new-york-downtown/overview/",
+                "title": "Hotel Overview & Amenities | M Social Hotel NYC Downtown",
+                "publicationDate": null,
+                "reviewedOn": "2026-10-10",
+                "type": "Official property or operator"
+              }
+            ],
+            "scoreChanged": false,
+            "reasoning": "After the documented $50 million full renovation, what bedding, furnishing and bathroom fixture/finish upgrades are standard in regular, non-suite rooms? Detailed “sleek bathroom”/roll-in-shower wording currently appears on an ADA category and was not generalized to every regular room. [27]"
+          },
+          "previousScore": null,
+          "newScore": null
+        },
+        "guestService": {
+          "status": "Scored",
+          "note": "The current overview documents room service, daily housekeeping, front desk and laundry assistance.",
+          "sourceUrl": "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-hotel-new-york-downtown/overview/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-hotel-new-york-downtown/overview/",
+              "title": "Hotel Overview & Amenities | M Social Hotel NYC Downtown",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "dining": {
+          "status": "Scored",
+          "note": "Beast & Butterflies and room service are documented; distinct additional regular-guest venues are not established.",
+          "sourceUrl": "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-hotel-new-york-downtown/overview/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-hotel-new-york-downtown/overview/",
+              "title": "Hotel Overview & Amenities | M Social Hotel NYC Downtown",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "wellness": {
+          "status": "Scored",
+          "note": "A fitness center is documented, but equipment detail sufficient for a higher score is not established.",
+          "sourceUrl": "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-hotel-new-york-downtown/overview/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-hotel-new-york-downtown/overview/",
+              "title": "Hotel Overview & Amenities | M Social Hotel NYC Downtown",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        },
+        "design": {
+          "status": "Scored",
+          "note": "The operator documents fully redesigned modern accommodation and social/dining spaces; no exceptional bespoke craftsmanship is established.",
+          "sourceUrl": "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-hotel-new-york-downtown/overview/",
+          "reviewedOn": "2026-10-10",
+          "scope": "Regular accommodation/property-wide guest offering; category-only exceptions stated in note",
+          "researchDate": "2026-10-10",
+          "applicability": "Ordinary guest/regular room/property-wide offering; exclude suite, club, loyalty, VIP and package-only benefits.",
+          "sourcePublicationDate": null,
+          "uncertainty": null,
+          "reviewQuestion": null,
+          "researchReportSource": "NYC Hotel Tier Review — Official-Source Evidence and Proposed Tiers.docx",
+          "reportOfficialSources": [
+            {
+              "url": "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-hotel-new-york-downtown/overview/",
+              "title": "Hotel Overview & Amenities | M Social Hotel NYC Downtown",
+              "publicationDate": null,
+              "reviewedOn": "2026-10-10",
+              "type": "Official property or operator"
+            }
+          ],
+          "scoreChanged": false,
+          "reasoning": "Retained original evidence-based assessment from source JSON."
+        }
+      },
+      "score": 55.357142857142854,
+      "tier": "Premium",
+      "assessmentStatus": "Provisional tier from available evidence",
+      "pendingDimensions": [
+        "rooms"
+      ],
+      "tierReason": "Provisional assessment. Calculated from available dimensions, normalized by their combined weight.",
+      "scoreChanges": [],
+      "researchProvenance": "User-supplied Deep Research assessment; proposed tiers, not database assignments; targeted second pass reviewed 2026-10-11",
+      "lastTargetedReviewOn": "2026-10-11",
+      "evidenceCoverage": 70,
+      "scoredDimensions": 4,
+      "isProvisional": true
+    }
+  ],
+  "researchProvenance": "Includes 24 user-supplied Deep Research assessments with preserved evidence and change history; targeted second pass for 14 hotels reviewed 2026-10-11",
+  "lastTargetedReviewOn": "2026-10-11",
+  "scoringPolicyUpdatedOn": "2026-10-11",
+  "summary": {
+    "hotelsIncluded": 14,
+    "dimensionsReviewed": 70,
+    "dimensionsScored": 58,
+    "dimensionsNeedingHumanReview": 12,
+    "hotelsFullyScored": 3,
+    "hotelsNeedingHumanReview": 11,
+    "hotelsWithTier": 14,
+    "hotelsWithProvisionalTier": 11,
+    "proposedTierCounts": {
+      "Standard": 3,
+      "Premium": 11,
+      "Luxury": 0
+    }
+  },
+  "scope": "The 14 hotels submitted for targeted research; partial assessments now have provisional tiers from available evidence"
+}

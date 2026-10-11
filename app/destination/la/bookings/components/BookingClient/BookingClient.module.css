@@ -326,6 +326,51 @@
   color: #69758b;
 }
 
+.tierNote {
+  margin: -4px 0 16px;
+  color: #576277;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.hotelResultsSummary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 0 0 16px;
+}
+
+.hotelResultsSummary p {
+  margin: 0;
+  color: #576277;
+  font-size: 0.82rem;
+}
+
+.clearFilters {
+  min-height: 40px;
+  padding: 8px 12px;
+  color: #435066;
+  background: #fff;
+  border: 1px solid rgba(23, 32, 51, 0.18);
+  border-radius: 6px;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.clearFilters:hover {
+  color: #8b3f31;
+  border-color: #b54f3a;
+}
+
+.clearFilters:focus-visible {
+  outline: 2px solid #b54f3a;
+  outline-offset: 3px;
+}
+
 .flightList,
 .cardGrid {
   display: grid;
@@ -485,6 +530,28 @@
 
 .badge {
   align-self: flex-start;
+}
+
+.hotelTier {
+  display: grid;
+  gap: 6px;
+}
+
+.hotelTier > span {
+  justify-self: start;
+  padding: 4px 8px;
+  color: #435066;
+  background: #f2ede5;
+  border-radius: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.hotelTier small {
+  color: #576277;
+  font-size: 0.76rem;
+  line-height: 1.5;
 }
 
 .metaRow {

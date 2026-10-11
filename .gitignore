@@ -71,3 +71,13 @@ next-env.d.ts
 /healthcheck.html
 /scripts/strip-report.json
 /.claude/settings.local.json
+
+# Local NYC hotel research inputs, audit snapshots, and import caches
+# Keep the final hotel-tier-scorecards.json and public reports versioned.
+/content/cities/newyork/hotel-tier-deep-research.json
+/content/cities/newyork/hotel-tier-targeted-research.json
+/content/cities/newyork/hotel-tier-proposals.json
+/content/cities/newyork/hotel-tier-database-sync.json
+/content/cities/newyork/hotel-neighborhood-report.json
+/content/cities/newyork/hotel-rebalance-candidates.json
+/content/cities/newyork/hotel-tag-ids.json

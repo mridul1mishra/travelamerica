@@ -15,6 +15,7 @@
     "prepare": "cp scripts/pre-commit.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit || true",
     "import:nyc-hotels": "node scripts/import-nyc-hotels.mjs",
     "tag:nyc-hotels": "node scripts/apply-hotel-tags.mjs content/cities/newyork/hotel-tags.json",
+    "tier:nyc-hotels": "node scripts/apply-hotel-tiers.mjs",
     "tag:nyc-subway": "node scripts/tag-near-subway.mjs"
   },
   "browserslist": {
