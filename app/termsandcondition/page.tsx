@@ -61,6 +61,7 @@ return (
 
         <h2>4. Third-Party Services</h2>
         <p>Any bookings, cancellations, disputes, or services obtained through third parties are governed by those providers’ terms. We are not responsible for delays, damages, losses, or refunds arising from third-party services.</p>
+        <p>Use of the Google Maps hotel ratings feature is also subject to the <a href="https://maps.google.com/help/terms_maps/" target="_blank" rel="noopener noreferrer">Google Maps/Google Earth Additional Terms of Service</a>, which are incorporated into these terms for that feature.</p>
         <h2>5. User Conduct</h2>
         <p>You agree not to:</p>
             <ul>

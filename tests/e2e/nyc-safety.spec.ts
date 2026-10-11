@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, type Page, test } from "@playwright/test";
 
 const safetyGuidePath = "/destination/nyc/nyc-safety-guide";
 const nightSafetyPath = "/destination/nyc/is-nyc-safe-at-night";
@@ -7,7 +7,7 @@ const subwaySafetyPath = "/destination/nyc/subway-safety-guide";
 const femaleSoloPath = "/destination/nyc/nyc-female-solo-travel-guide";
 
 async function expectNoOverlap(
-  page: Parameters<Parameters<typeof test>[1]>[0]["page"],
+  page: Page,
   firstSelector: string,
   secondSelector: string,
 ) {

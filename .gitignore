@@ -39,6 +39,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -49,6 +50,8 @@ next-env.d.ts
 
 # markdown files
 *.md
+!scripts/GOOGLE_PLACES_SETUP.md
+!scripts/MEMBER_AUTH_SETUP.md
 
 # office temp lock files
 .~lock.*#

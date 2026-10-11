@@ -1,0 +1,23 @@
+.details {
+  display: grid;
+  margin: 24px 0;
+}
+
+.details > div {
+  padding: 16px 0;
+  border-bottom: 1px solid #e4e8ed;
+}
+
+.details dt {
+  color: #435066;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.details dd {
+  margin: 6px 0 0;
+  color: #172033;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}

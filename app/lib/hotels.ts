@@ -2,6 +2,7 @@ import { Pool } from "pg";
 import type { Hotel } from "@/app/destination/la/bookings/components/BookingClient/BookingClient";
 import type { HotelTag } from "./hotelTags";
 import { getNycHotelTierAssessment } from "./hotelTiers";
+import selection from "@/content/cities/newyork/hotel-selection.json";
 
 const globalDatabase = globalThis as typeof globalThis & { hotelPool?: Pool };
 
@@ -19,8 +20,8 @@ function database() {
 export async function getNycHotels(tag?: HotelTag): Promise<Hotel[]> {
   const result = await database().query<{
     hotelId: string; hotelSourceId: string; hotelSource: string;
-    img: string; title: string; area: string; rating: string | null;
-    reviews: number | null; price: string; url: string; address: string | null;
+    img: string; title: string; area: string; googlePlaceId: string | null;
+    price: string; url: string; address: string | null;
     neighborhood: string | null; tags: HotelTag[];
     city: string; hotelTier: "Standard" | "Premium" | "Luxury" | null;
     hotelTierModelVersion: string | null;
@@ -31,8 +32,8 @@ export async function getNycHotels(tag?: HotelTag): Promise<Hotel[]> {
     tagOrder: Partial<Record<HotelTag, number>>;
   }>(`SELECT id::text AS "hotelId", source_id AS "hotelSourceId", source AS "hotelSource",
       COALESCE(image_url, '/destination/nyc-neighborhoods.png') AS img,
-      name AS title, area, address, rating, review_count AS reviews,
-      COALESCE(price_text, 'See prices') AS price, booking_url AS url,
+      name AS title, area, address, google_place_id AS "googlePlaceId",
+      'See prices' AS price, '/api/hotel-prices/' || id::text AS url,
       COALESCE((SELECT n.name FROM neighborhoods n WHERE n.neighborhood_id = hotels.neighborhood_id), neighborhood) AS neighborhood,
       city_slug AS city, hotel_tier AS "hotelTier",
       classification_evidence #>> '{hotelTier,modelVersion}' AS "hotelTierModelVersion",
@@ -54,7 +55,7 @@ export async function getNycHotels(tag?: HotelTag): Promise<Hotel[]> {
       AND ($2::text IS NULL OR EXISTS (SELECT 1 FROM hotel_tags ht JOIN tags t ON t.tag_id = ht.tag_id
         WHERE ht.hotel_id = hotels.id AND ht.tag = $2 AND t.is_active))
     ORDER BY sort_order, id LIMIT 50`, ["nyc", tag ?? null]);
-  return result.rows.map(({ hotelSource, hotelTierModelVersion, hotelTierIsProvisional, hotelTierEvidenceCoverage, ...hotel }) => {
+  return result.rows.map(({ hotelSource, googlePlaceId, hotelTierModelVersion, hotelTierIsProvisional, hotelTierEvidenceCoverage, ...hotel }) => {
     // Saved assessments take precedence; scorecards cover rows awaiting migration.
     const tierAssessment = hotelTierModelVersion === "2" ? {
       hotelTierIsProvisional: hotelTierIsProvisional ?? undefined,
@@ -63,7 +64,19 @@ export async function getNycHotels(tag?: HotelTag): Promise<Hotel[]> {
     return {
       ...hotel,
       ...tierAssessment,
-      rating: hotel.rating === null ? null : Number(hotel.rating),
+      googleRatingAvailable: Boolean(googlePlaceId),
+      googleMapsUrl: googlePlaceId
+        ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.title)}&query_place_id=${encodeURIComponent(googlePlaceId)}`
+        : undefined,
     };
   });
+}
+
+// Resolve destinations only after the prices route has verified the session.
+// Neither the public page nor its React payload includes booking destinations.
+export async function getNycHotelBookingUrl(hotelId: string): Promise<string | null> {
+  const result = await database().query<{ url: string }>(`SELECT booking_url AS url FROM hotels
+    WHERE id = $1::bigint AND city_slug = 'nyc' AND active = TRUE
+      AND source = 'travel-advisor' AND source_id = ANY($2::text[]) LIMIT 1`, [hotelId, selection.sourceIds]);
+  return result.rows[0]?.url ?? null;
 }

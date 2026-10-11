@@ -63,7 +63,23 @@ async function expectEvent(
 }
 
 test.describe("NYC booking tracking guardrails", () => {
+  test.beforeEach(async ({ context }) => {
+    // Exercise local tracking handlers while preventing real analytics calls or
+    // loading the external booking providers opened by the tested links.
+    await context.route(/^https?:\/\/(?!127\.0\.0\.1(?::|\/)|localhost(?::|\/))/, (route) =>
+      route.fulfill({ contentType: "text/html", body: "<!doctype html><title>Mock booking provider</title>" }));
+    await context.route(/\/api\/auth\/get-session(?:\?|$)/, (route) => route.fulfill({
+      contentType: "application/json",
+      body: JSON.stringify({
+        session: { id: "test-session", userId: "test-member", token: "test-token", expiresAt: new Date(Date.now() + 86_400_000).toISOString() },
+        user: { id: "test-member", name: "Test member", email: "member@example.test", emailVerified: true },
+      }),
+    }));
+  });
+
   test("live booking clicks emit explicit GA4 events", async ({ page, context }) => {
+    // This covers three pages and multiple popups, including cold dev builds.
+    test.setTimeout(60_000);
     await page.goto(bookingPath);
     await installGtagCapture(page);
 
@@ -81,14 +97,36 @@ test.describe("NYC booking tracking guardrails", () => {
     await page.goto("/destination/nyc/hotel");
     await installGtagCapture(page);
     const firstHotel = page.getByRole("link", { name: /Motto by Hilton New York City Chelsea/i }).first();
+    await expect(firstHotel).toHaveAttribute("href", /^\/api\/hotel-prices\/\d+$/);
+    // Browser-only membership mocks do not grant access to the server route.
     const hotelPopup = context.waitForEvent("page");
     await firstHotel.click();
-    await (await hotelPopup).close();
+    const guestHotelPage = await hotelPopup;
+    await expect(guestHotelPage).toHaveURL(/\/signin\?.*action=prices/);
+    await guestHotelPage.close();
     await expectEvent(page, "booking_hotel_click", {
       booking_type: "hotel",
       item_name: "Motto by Hilton New York City Chelsea",
       page_path: "/destination/nyc/hotel",
-      outbound_domain: /google\.com/i,
+      outbound_domain: "",
+      link_path: /^\/api\/hotel-prices\/\d+$/,
+    });
+
+    const firstHotelCard = page.locator("[data-hotel-card]").first();
+    const footerHotelLink = firstHotelCard.locator('a[data-booking-type="hotel"]').filter({ hasText: "View hotel" });
+    const footerHotelName = await firstHotelCard.locator("h3").innerText();
+    await expect(footerHotelLink).toHaveAttribute("data-item-name", footerHotelName);
+    await expect(footerHotelLink).toHaveAttribute("href", /^\/api\/hotel-prices\/\d+$/);
+    await expect(footerHotelLink).toContainText("See prices");
+    const footerPopup = context.waitForEvent("page");
+    await footerHotelLink.click();
+    await (await footerPopup).close();
+    await expectEvent(page, "booking_hotel_click", {
+      booking_type: "hotel",
+      item_name: footerHotelName,
+      page_path: "/destination/nyc/hotel",
+      outbound_domain: "",
+      link_path: /^\/api\/hotel-prices\/\d+$/,
     });
 
     await page.goto("/destination/nyc/tours-and-tickets");

@@ -52,7 +52,7 @@ return (
       <article className={`prose ${styles.prose}`} aria-label="Terms and conditions">
         <div className={styles.list}>
         <h2>1. Information we collect</h2>
-        <p>We do not ask users to create accounts or submit personal information directly. However, we may collect</p>
+        <p>When you register or sign in, we collect your name, email address, its verification status, and session records to provide account access. You may also provide an optional phone number for your account profile; it is not used for SMS sign-in or marketing. Passwords are stored as secure hashes, rather than readable passwords. We send temporary email verification, sign-in, and password reset codes through our email provider, SMTP2GO. Registration does not subscribe you to marketing emails; newsletter signup is separate. We also collect</p>
         <ul>
             <li>Information automatically collected
             <ul>
@@ -84,6 +84,7 @@ return (
             <p>We use cookies, pixels, and similar technologies to:</p>
             <ul>
                 <li>Remember user preferences</li>
+                <li>Keep you signed in with an account session cookie</li>
                 <li>Track affiliate referrals</li>
                 <li>Analyze usage through analytics tools</li>
             </ul>
@@ -92,6 +93,8 @@ return (
         <div>
             <h2>4. Third Party links</h2>
             <p>This Site contains links to third-party travel providers. We are not responsible for their content, security, or privacy practices. You should review each provider’s own privacy policy before submitting information.</p>
+            <p>When you choose to view a hotel’s Google rating, we use Cloudflare Turnstile to check for automated traffic and request the rating and review count from Google Maps. Turnstile processes browser and device signals for this check. We retain hashed network identifiers and request counters temporarily to limit abuse; we do not save Google ratings or review counts in our database.</p>
+            <p>Google Maps features are governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>, which is incorporated into this policy for those features. Learn how <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare handles personal information</a>.</p>
         </div>
         <div>
             <h2>5. Data Security</h2>

@@ -1,0 +1,155 @@
+.header {
+  box-sizing: border-box;
+}
+
+.header :global(.nav-links) {
+  gap: 22px;
+  align-items: center;
+}
+
+.header:global(.overlay-header.scrolled) :global(.nav-links li a) {
+  padding-right: 0;
+}
+
+.header:global(.overlay-header.scrolled) :global(.nav-links) .memberNavigation .menuItem {
+  font-size: 0.88rem;
+  padding: 12px 14px;
+}
+
+.memberNavigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  color: #1b263b;
+  font-size: 0.88rem;
+}
+
+.memberNavigation .avatar {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #d6dce4;
+  border-radius: 50%;
+  background: #172033;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.accountMenu {
+  position: absolute;
+  z-index: 1002;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 200px;
+  padding: 6px;
+  border: 1px solid #d6dce4;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(23, 32, 51, 0.16);
+  box-sizing: border-box;
+}
+
+.memberNavigation .menuItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #1b263b;
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.memberNavigation .menuItem:hover,
+.memberNavigation .menuItem:focus-visible {
+  background: #f5f1e9;
+}
+
+.memberNavigation a:focus-visible,
+.memberNavigation button:focus-visible {
+  outline: 2px solid #b54f3a;
+  outline-offset: 3px;
+}
+
+.memberNavigation button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.error {
+  margin: 8px 10px;
+  color: #8b3f31;
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1100px) {
+  .header :global(.hamburger) {
+    display: block;
+  }
+
+  .header :global(.nav-links) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(85vw, 360px);
+    height: 100dvh;
+    box-sizing: border-box;
+    background: #fff;
+    color: #1b263b;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    padding: 70px 20px 30px;
+    overflow-y: auto;
+    transform: translateX(100%);
+  }
+
+  .header :global(.nav-links.active) {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .header :global(.nav-links li) {
+    margin-bottom: 0;
+  }
+
+  .header :global(.close-btn) {
+    position: absolute;
+    display: block;
+    top: 20px;
+    right: 20px;
+  }
+
+  .memberNavigation {
+    padding-top: 14px;
+    border-top: 1px solid #d6dce4;
+    width: 100%;
+  }
+
+  .accountMenu {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+}
+
+@media (max-width: 480px) {
+  .header :global(.brand-logo) {
+    width: min(70vw, 285px);
+  }
+}

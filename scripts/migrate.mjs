@@ -31,6 +31,8 @@ const migrations = [
   { name: "canonical_nyc_neighborhoods", sql: readFileSync(new URL("./nyc-neighborhoods-canonical.sql", import.meta.url), "utf8") },
   { name: "normalize_hotel_tags", sql: readFileSync(new URL("./hotel-tag-relations-schema.sql", import.meta.url), "utf8") },
   { name: "seed_requested_tags", sql: readFileSync(new URL("./tags-seed.sql", import.meta.url), "utf8") },
+  { name: "create_hotel_rating_limits", sql: readFileSync(new URL("./hotel-rating-limits-schema.sql", import.meta.url), "utf8") },
+  { name: "create_member_auth", sql: readFileSync(new URL("./member-auth-schema.sql", import.meta.url), "utf8") },
   {
     name: 'create_subscribers_table',
     sql: `

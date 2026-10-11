@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import MemberNavigation from "../auth/MemberNavigation";
+import memberStyles from "../auth/MemberNavigation.module.css";
 import "./header.css";
 
 export type HeaderLink = {
@@ -20,18 +22,22 @@ const defaultLinks: HeaderLink[] = [
 type NavigationHeaderProps = {
   links?: HeaderLink[];
   prefetch?: boolean;
+  memberReturnTo?: string;
+  memberAction?: "rating" | "prices";
 };
 
 const NavigationHeader: React.FC<NavigationHeaderProps> = ({
   links = defaultLinks,
   prefetch,
+  memberReturnTo,
+  memberAction,
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="overlay-header scrolled">
+    <header className={`overlay-header scrolled ${memberStyles.header}`}>
       <div className="brand-logo">
         <Link prefetch={prefetch} href="/" aria-label="Travels Americas home" onClick={closeMenu}>
           <Image
@@ -67,6 +73,7 @@ const NavigationHeader: React.FC<NavigationHeaderProps> = ({
               </Link>
             </li>
           ))}
+          <MemberNavigation onNavigate={closeMenu} returnTo={memberReturnTo} action={memberAction} />
         </ul>
       </nav>
     </header>

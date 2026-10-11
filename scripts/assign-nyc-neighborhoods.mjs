@@ -48,8 +48,8 @@ async function main() {
       ["Hotel → Neighborhood", `${complete}/50 linked`, `${50 - complete} need review`],
       ["Hotel tier", `${count("hotel_tier")}/50 classified`, `${50 - count("hotel_tier")} Standard / Premium / Luxury decisions`],
       ["Google Place ID", `${count("google_place_id")}/50 populated`, `${50 - count("google_place_id")} IDs`],
-      ["Google rating", `${count("google_rating")}/50 populated`, "Google data, if required"],
-      ["Google review count", `${count("google_review_count")}/50 populated`, "Google data, if required"],
+      ["Google rating", `${count("google_rating")}/50 stored`, "Click-to-view lookup with bot verification and shared limits; not stored"],
+      ["Google review count", `${count("google_review_count")}/50 stored`, "Fetched with the rating on request; not stored"],
       ["Affiliate URL", `${count("affiliate_url")}/50 populated`, "Affiliate links, if required"],
     ];
     const rows = data => data.map(row => `<tr>${row.map(v => `<td>${escape(v)}</td>`).join("")}</tr>`).join("\n");

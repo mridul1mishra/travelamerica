@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import Script from 'next/script';
 import LinkClickTracker from "./components/analytics/LinkClickTracker";
+import MemberProvider from "./components/auth/MemberProvider";
 import "./globals.css";
 
 export const viewport = {
@@ -64,9 +65,11 @@ export default function RootLayout({
                 gtag('js', new Date());
                 gtag('config', 'G-SM7NC16K21');`}}/>
         <LinkClickTracker />
-        <div className="full-height">
-        {children}
-        </div>
+        <MemberProvider>
+          <div className="full-height">
+          {children}
+          </div>
+        </MemberProvider>
       </body>
     </html>
   );

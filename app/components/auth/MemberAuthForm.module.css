@@ -1,0 +1,261 @@
+.page {
+  min-height: 100dvh;
+  color: #172033;
+  background: #f5f1e9;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70dvh;
+  padding: 190px 20px 70px;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
+  padding: clamp(24px, 5vw, 40px);
+  border: 1px solid rgba(23, 32, 51, 0.1);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(23, 32, 51, 0.07);
+}
+
+.eyebrow {
+  color: #8b3f31;
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.card h1 {
+  margin: 14px 0;
+  font-size: clamp(1.75rem, 5vw, 2.3rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.intro,
+.sentTo,
+.signedIn {
+  color: #576277;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.methodTabs {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 0;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.methodTabs button {
+  flex: 1;
+  min-height: 42px;
+  padding: 9px 12px;
+  border: 1px solid #d6dce4;
+  border-radius: 6px;
+  background: transparent;
+  color: #435066;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.methodTabs button[aria-selected="true"] {
+  color: #8b3f31;
+  border-color: #b54f3a;
+  background: #fff7f1;
+}
+
+.formHeading {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.passwordField {
+  position: relative;
+}
+
+.form .passwordField input {
+  padding-right: 50px;
+}
+
+.passwordField button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #435066;
+  cursor: pointer;
+}
+
+.crossLink {
+  margin: 22px 0 0;
+  color: #576277;
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.form .crossLink {
+  margin: 0 0 6px;
+}
+
+.crossLink a {
+  color: #8b3f31;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.form label {
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.form input {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid #bdc6d1;
+  border-radius: 7px;
+  background: #fff;
+  color: #172033;
+  font: inherit;
+  font-size: 1rem;
+}
+
+.form .codeInput {
+  font-size: 1.4rem;
+  letter-spacing: 0.3em;
+}
+
+.helper,
+.legal,
+.feedback {
+  margin: 4px 0 0;
+  color: #576277;
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 48px;
+  margin-top: 10px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 7px;
+  background: #172033;
+  color: #fff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.primaryButton:hover:not(:disabled) {
+  background: #2d3d56;
+}
+
+.primaryButton:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.form input:focus-visible,
+.primaryButton:focus-visible,
+.secondaryActions button:focus-visible,
+.methodTabs button:focus-visible,
+.passwordField button:focus-visible,
+.crossLink a:focus-visible,
+.legal a:focus-visible {
+  outline: 2px solid #b54f3a;
+  outline-offset: 3px;
+}
+
+.secondaryActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.secondaryActions button {
+  min-height: 40px;
+  padding: 6px 0;
+  border: 0;
+  background: transparent;
+  color: #435066;
+  font: inherit;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.secondaryActions button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  text-decoration: none;
+}
+
+.feedback:empty,
+.error:empty {
+  display: none;
+}
+
+.feedback {
+  margin-top: 14px;
+}
+
+.error {
+  color: #8b3f31;
+}
+
+.legal {
+  margin-top: 22px;
+}
+
+.legal a {
+  color: #8b3f31;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 160px 16px 48px;
+  }
+}

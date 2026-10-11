@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "cross-env NEXT_DISABLE_TURBOPACK=true next dev",
+    "dev:local": "cross-env NEXT_DISABLE_TURBOPACK=true next dev --hostname 127.0.0.1",
     "build": "node scripts/migrate.mjs && next build",
     "start": "next start",
     "lint": "eslint",
@@ -12,6 +13,8 @@
     "analyze": "cross-env ANALYZE=true next build --webpack",
     "test:e2e": "playwright test",
     "test:e2e:nyc-safety": "playwright test tests/e2e/nyc-safety.spec.ts",
+    "test:hotel-ratings": "node --test tests/unit/google-hotel-ratings.test.mjs tests/unit/google-hotel-rating-providers.test.mjs tests/unit/google-hotel-rating-budget.test.mjs",
+    "test:members": "node --test tests/unit/member*.test.mjs",
     "prepare": "cp scripts/pre-commit.sh .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit || true",
     "import:nyc-hotels": "node scripts/import-nyc-hotels.mjs",
     "tag:nyc-hotels": "node scripts/apply-hotel-tags.mjs content/cities/newyork/hotel-tags.json",
@@ -35,13 +38,15 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
     "@next/bundle-analyzer": "^16.0.3",
+    "better-auth": "1.7.7",
     "lucide-react": "^0.562.0",
     "next": "^16.0.7",
     "pg": "^8.20.0",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "react-icons": "^5.5.0",
-    "react-zoom-pan-pinch": "^3.7.0"
+    "react-zoom-pan-pinch": "^3.7.0",
+    "server-only": "0.0.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.61.1",

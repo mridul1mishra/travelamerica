@@ -1,0 +1,69 @@
+.rating {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 24px;
+  gap: 8px;
+  color: #435066;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.button:hover:not(:disabled) {
+  color: #b54f3a;
+}
+
+.button:disabled {
+  cursor: wait;
+}
+
+.button:focus-visible,
+.attribution:focus-visible {
+  outline: 2px solid #b54f3a;
+  outline-offset: 3px;
+}
+
+.message:empty {
+  display: none;
+}
+
+.message {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.message p {
+  margin: 0;
+}
+
+.challenge {
+  min-width: 0;
+  flex-basis: 100%;
+}
+
+.attribution {
+  color: #5e5e5e;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
