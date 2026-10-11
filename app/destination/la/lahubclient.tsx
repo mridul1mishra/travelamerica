@@ -93,7 +93,7 @@ export default function LAHubClient() {
         <HeroSection />
       </div>
 
-      <BookingCTA variant="slim" text="Book hotels for your Los Angeles trip →" href="/destination/la/bookings?tab=hotels&from=la-hub" label="Book your LA trip" />
+      <BookingCTA variant="slim" text="Book hotels for your Los Angeles trip →" href="/destination/la/hotel?from=la-hub" label="Book your LA trip" />
 
       {/* Star zone — stars are scoped to this wrapper only, never bleed into Header/Footer/BookingCTA */}
       <div className={styles.starZone}>
@@ -123,7 +123,7 @@ export default function LAHubClient() {
         <DataCaptureCTA />
       </div>
 
-      <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/la/bookings?tab=hotels&from=la-hub" label="Book your LA trip" />
+      <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/la/hotel?from=la-hub" label="Book your LA trip" />
       <Footer />
     </main>
   );

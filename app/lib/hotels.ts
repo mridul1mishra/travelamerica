@@ -2,6 +2,7 @@ import { Pool } from "pg";
 import type { Hotel } from "@/app/destination/la/bookings/components/BookingClient/BookingClient";
 import type { HotelTag } from "./hotelTags";
 import { getNycHotelTierAssessment } from "./hotelTiers";
+import catalog from "@/content/cities/hotel-catalog.json";
 import selection from "@/content/cities/newyork/hotel-selection.json";
 
 const globalDatabase = globalThis as typeof globalThis & { hotelPool?: Pool };
@@ -17,7 +18,9 @@ function database() {
   });
 }
 
-export async function getNycHotels(tag?: HotelTag): Promise<Hotel[]> {
+export type HotelCity = "nyc" | "la" | "orlando" | "lasvegas";
+
+export async function getCityHotels(city: HotelCity, tag?: HotelTag): Promise<Hotel[]> {
   const result = await database().query<{
     hotelId: string; hotelSourceId: string; hotelSource: string;
     img: string; title: string; area: string; googlePlaceId: string | null;
@@ -52,15 +55,17 @@ export async function getNycHotels(tag?: HotelTag): Promise<Hotel[]> {
         FROM hotel_tags ht JOIN tags t ON t.tag_id = ht.tag_id
         WHERE ht.hotel_id = hotels.id AND t.is_active), '{}'::jsonb) AS "tagOrder"
     FROM hotels WHERE city_slug = $1 AND active = TRUE
+      AND ((city_slug = 'nyc' AND source = 'travel-advisor' AND source_id = ANY($3::text[]))
+        OR (city_slug <> 'nyc' AND source = 'saved-listing' AND source_id = ANY($4::text[])))
       AND ($2::text IS NULL OR EXISTS (SELECT 1 FROM hotel_tags ht JOIN tags t ON t.tag_id = ht.tag_id
         WHERE ht.hotel_id = hotels.id AND ht.tag = $2 AND t.is_active))
-    ORDER BY sort_order, id LIMIT 50`, ["nyc", tag ?? null]);
+    ORDER BY sort_order, id LIMIT 50`, [city, tag ?? null, selection.sourceIds, catalog.filter(h => h.city === city).map(h => h.sourceId)]);
   return result.rows.map(({ hotelSource, googlePlaceId, hotelTierModelVersion, hotelTierIsProvisional, hotelTierEvidenceCoverage, ...hotel }) => {
     // Saved assessments take precedence; scorecards cover rows awaiting migration.
     const tierAssessment = hotelTierModelVersion === "2" ? {
       hotelTierIsProvisional: hotelTierIsProvisional ?? undefined,
       hotelTierEvidenceCoverage: hotelTierEvidenceCoverage ?? undefined,
-    } : getNycHotelTierAssessment(hotelSource, hotel.hotelSourceId);
+    } : city === "nyc" ? getNycHotelTierAssessment(hotelSource, hotel.hotelSourceId) : {};
     return {
       ...hotel,
       ...tierAssessment,
@@ -74,9 +79,13 @@ export async function getNycHotels(tag?: HotelTag): Promise<Hotel[]> {
 
 // Resolve destinations only after the prices route has verified the session.
 // Neither the public page nor its React payload includes booking destinations.
-export async function getNycHotelBookingUrl(hotelId: string): Promise<string | null> {
+export async function getHotelBookingUrl(hotelId: string): Promise<string | null> {
   const result = await database().query<{ url: string }>(`SELECT booking_url AS url FROM hotels
-    WHERE id = $1::bigint AND city_slug = 'nyc' AND active = TRUE
-      AND source = 'travel-advisor' AND source_id = ANY($2::text[]) LIMIT 1`, [hotelId, selection.sourceIds]);
+    WHERE id = $1::bigint AND active = TRUE
+      AND ((city_slug = 'nyc' AND source = 'travel-advisor' AND source_id = ANY($2::text[]))
+        OR (city_slug = ANY($3::text[]) AND source = 'saved-listing' AND source_id = ANY($4::text[])))
+      LIMIT 1`, [hotelId, selection.sourceIds, ['la', 'orlando', 'lasvegas'], catalog.map(h => h.sourceId)]);
   return result.rows[0]?.url ?? null;
 }
+
+export function getNycHotels(tag?: HotelTag) { return getCityHotels("nyc", tag); }

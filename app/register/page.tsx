@@ -8,7 +8,7 @@ import styles from "@/app/components/auth/MemberAuthForm.module.css";
 
 export const metadata: Metadata = {
   title: "Create Account | Travels Americas",
-  description: "Create your free account to view New York City hotel ratings and prices.",
+  description: "Create your free account to view hotel ratings and prices.",
   robots: { index: false, follow: false },
 };
 
@@ -28,7 +28,7 @@ export default async function RegisterPage({ searchParams }: {
         <p className={styles.intro}>
           {action === "rating" ? "Create your free account to view this hotel's Google rating and reviews."
             : action === "prices" ? "Create your free account to check this hotel's prices and availability."
-              : "Create your free account to view NYC hotel ratings and check prices."}
+              : "Create your free account to view hotel ratings and check prices."}
         </p>
         <MemberAuthForm mode="register" returnTo={next} action={action} />
       </section>

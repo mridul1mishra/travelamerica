@@ -6,8 +6,19 @@ const { MEMBER_RETURN_TO, safeMemberReturnTo, memberSignInUrl, memberRegisterUrl
   await loadTypescriptModule("../../app/lib/member-access.ts");
 
 test("member return links preserve hotels, a selected price endpoint, or the private profile", () => {
-  for (const value of [MEMBER_RETURN_TO, `${MEMBER_RETURN_TO}?from=female-solo&tier=Premium`, "/api/hotel-prices/42", "/profile"]) {
+  for (const value of [MEMBER_RETURN_TO, `${MEMBER_RETURN_TO}?from=female-solo&tier=Premium`, "/destination/la/hotel", "/destination/orlando/hotel?from=hub", "/destination/lasvegas/hotel", "/api/hotel-prices/42", "/profile"]) {
     assert.equal(safeMemberReturnTo(value), value);
+  }
+});
+
+test("hotel detail return links preserve the selected city and hotel", () => {
+  for (const city of ["nyc", "la", "orlando", "lasvegas"]) {
+    const path = `/destination/${city}/hotel/42`;
+    assert.equal(safeMemberReturnTo(path), path);
+    assert.equal(safeMemberReturnTo(`${path}?from=rating`), `${path}?from=rating`);
+  }
+  for (const path of ["/destination/nyc/hotel/0", "/destination/la/hotel/42/extra", "/destination/nyc/hotel/42#fragment"]) {
+    assert.equal(safeMemberReturnTo(path), MEMBER_RETURN_TO);
   }
 });
 
@@ -15,6 +26,7 @@ for (const value of [
   undefined, null, "", "https://attacker.example", "//attacker.example", "/\\attacker.example", "/register", "/signin",
   "/api/auth/sign-out", "/destination/nyc/hotel/other", "/api/hotel-prices/0", "/api/hotel-prices/42?redirect=elsewhere",
   "/profile?email=private@example.test", "/profile/other", "/profile#fragment",
+  "/destination/la/hotel/other", "/destination/lasvegas/hotel#fragment", "/destination/orlando/hotel?bad=%0d%0aheader", "/destination/other/hotel",
   "/destination/nyc/hotel#fragment", "/destination/nyc/hotel?bad=\r\nheader", "/destination/nyc/hotel?bad=%0d%0aheader",
   "/destination/nyc/hotel?bad=%250d%250aheader", "/destination/nyc/hotel?bad=%255cattacker", "/destination/nyc/hotel?bad=%zz",
   `/destination/nyc/hotel?filter=${"x".repeat(2048)}`,

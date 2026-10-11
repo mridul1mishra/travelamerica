@@ -1,5 +1,5 @@
 import { getMemberSession } from "@/app/lib/auth";
-import { getNycHotelBookingUrl } from "@/app/lib/hotels";
+import { getHotelBookingUrl } from "@/app/lib/hotels";
 import { handleMemberHotelPrices } from "@/app/lib/member-hotel-access";
 
 export const runtime = "nodejs";
@@ -10,6 +10,6 @@ export async function GET(request: Request, context: { params: Promise<{ hotelId
   const { hotelId } = await context.params;
   return handleMemberHotelPrices(request, hotelId, {
     getMember: getMemberSession,
-    findBookingUrl: getNycHotelBookingUrl,
+    findBookingUrl: getHotelBookingUrl,
   });
 }

@@ -20,7 +20,7 @@ export function safeMemberReturnTo(value: string | null | undefined): string {
   }
 
   if (value === "/profile" || /^\/api\/hotel-prices\/[1-9]\d*$/.test(value)) return value;
-  if (value === MEMBER_RETURN_TO || value.startsWith(`${MEMBER_RETURN_TO}?`)) {
+  if (/^\/destination\/(nyc|la|orlando|lasvegas)\/hotel(?:\/[1-9]\d*)?(?:\?.*)?$/.test(value)) {
     return value;
   }
   return MEMBER_RETURN_TO;

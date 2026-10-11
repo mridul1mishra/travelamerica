@@ -1,6 +1,7 @@
 import { createHmac } from "node:crypto";
 import { isIP } from "node:net";
 import { Pool } from "pg";
+import catalog from "@/content/cities/hotel-catalog.json";
 import selection from "@/content/cities/newyork/hotel-selection.json";
 import { handleHotelRatingRequest, readHotelRatingConfig } from "./google-hotel-ratings-core";
 import { reserveHotelRatingBudget } from "./google-hotel-rating-budget";
@@ -33,9 +34,10 @@ export async function handleGoogleHotelRating(request: Request): Promise<Respons
     config,
     async findHotel(hotelId) {
       const result = await database().query<{ placeId: string }>(`SELECT google_place_id AS "placeId"
-        FROM hotels WHERE id = $1::bigint AND city_slug = 'nyc' AND active = TRUE
-          AND source = 'travel-advisor' AND source_id = ANY($2::text[])
-          AND google_place_id IS NOT NULL LIMIT 1`, [hotelId, selection.sourceIds]);
+        FROM hotels WHERE id = $1::bigint AND active = TRUE
+          AND ((city_slug = 'nyc' AND source = 'travel-advisor' AND source_id = ANY($2::text[]))
+            OR (city_slug = ANY($3::text[]) AND source = 'saved-listing' AND source_id = ANY($4::text[])))
+          AND google_place_id IS NOT NULL LIMIT 1`, [hotelId, selection.sourceIds, ["la", "orlando", "lasvegas"], catalog.map(h => h.sourceId)]);
       const placeId = result.rows[0]?.placeId;
       return placeId && /^[A-Za-z0-9_-]{10,256}$/.test(placeId) ? { placeId } : null;
     },

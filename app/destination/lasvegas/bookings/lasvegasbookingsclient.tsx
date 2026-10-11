@@ -4,7 +4,6 @@ import BookingClient, { type CityBookingConfig } from "./components/BookingClien
 import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
 import faqData from "@/content/destination/lasvegas/booking/faq/faqsection.json";
 import bookFlights from "@/content/cities/lasvegas/bookflights.json";
-import hotelsData from "@/content/cities/lasvegas/hotels.json";
 import thingsToDoData from "@/content/cities/lasvegas/thingstodo.json";
 
 const config: CityBookingConfig = {
@@ -77,10 +76,13 @@ const config: CityBookingConfig = {
     { heading: "Activities", text: "Book Sphere, Cirque, clubs, and pool parties earlier than casual attractions." },
   ],
   flights: bookFlights as CityBookingConfig["flights"],
-  hotels: hotelsData as CityBookingConfig["hotels"],
+  hotels: [],
+  hotelListingHref: "/destination/lasvegas/hotel",
+  hotelCount: 50,
   activities: thingsToDoData as CityBookingConfig["activities"],
 };
 
-export default function LasVegasBookingsClient() {
+export default function LasVegasBookingsClient({ hotels }: { hotels?: CityBookingConfig["hotels"] }) {
+  if (hotels) return <BookingClient config={{ ...config, hotels, category: "hotels", onDemandGoogleRatings: true, bookingHref: "/destination/lasvegas/hotel", pageTitle: "Find Your Las Vegas Hotel", introText: "Browse Las Vegas hotels and sign in to check current prices with the provider.", bookingTips: config.bookingTips?.filter(tip => tip.heading === "Hotels"), categoryRoutes: { hotels: "/destination/lasvegas/hotel", flights: "/destination/lasvegas/bookings?tab=flights", activities: "/destination/lasvegas/bookings?tab=activities" } }} />;
   return <BookingClient config={config} faqSection={<FAQAccordion faqs={faqData} />} />;
 }

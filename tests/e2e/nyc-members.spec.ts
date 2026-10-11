@@ -588,7 +588,7 @@ test("an open profile clears its details when the member session expires", async
 for (const fabricatedCookie of [false, true]) {
   test(`anonymous profile shell and fresh session contain no traveler data ${fabricatedCookie ? "with a fabricated cookie" : "without a cookie"}`, async ({ page, request }) => {
     const cookieValue = "fabricated.invalid-signature";
-    const headers = fabricatedCookie ? { cookie: `travels-americas-member.session_token=${cookieValue}` } : {};
+    const headers: Record<string, string> = fabricatedCookie ? { cookie: `travels-americas-member.session_token=${cookieValue}` } : {};
     const session = await request.get("/api/auth/get-session?disableCookieCache=true", { headers });
     expect(session.ok()).toBe(true);
     expect(await session.json()).toBeNull();

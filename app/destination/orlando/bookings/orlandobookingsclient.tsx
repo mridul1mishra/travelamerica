@@ -4,7 +4,6 @@ import BookingClient, { type CityBookingConfig } from "./components/BookingClien
 import FAQAccordion from "./components/FAQAccordion/faqsection";
 import faqData from "@/content/destination/orlando/booking/faq/faqsection.json";
 import bookFlights from "@/content/cities/orlando/bookflights.json";
-import hotelsData from "@/content/cities/orlando/hotels.json";
 import thingsToDoData from "@/content/cities/orlando/thingstodo.json";
 
 const config: CityBookingConfig = {
@@ -77,10 +76,13 @@ const config: CityBookingConfig = {
     { heading: "Hotels", text: "On-site hotels save park time; International Drive is usually better value for shorter trips." },
   ],
   flights: bookFlights as CityBookingConfig["flights"],
-  hotels: hotelsData as CityBookingConfig["hotels"],
+  hotels: [],
+  hotelListingHref: "/destination/orlando/hotel",
+  hotelCount: 50,
   activities: thingsToDoData as CityBookingConfig["activities"],
 };
 
-export default function OrlandoBookingsClient() {
+export default function OrlandoBookingsClient({ hotels }: { hotels?: CityBookingConfig["hotels"] }) {
+  if (hotels) return <BookingClient config={{ ...config, hotels, category: "hotels", onDemandGoogleRatings: true, bookingHref: "/destination/orlando/hotel", pageTitle: "Find Your Orlando Hotel", introText: "Browse Orlando hotels and sign in to check current prices with the provider.", bookingTips: config.bookingTips?.filter(tip => tip.heading === "Hotels"), categoryRoutes: { hotels: "/destination/orlando/hotel", flights: "/destination/orlando/bookings?tab=flights", activities: "/destination/orlando/bookings?tab=activities" } }} />;
   return <BookingClient config={config} faqSection={<FAQAccordion faqs={faqData} />} />;
 }

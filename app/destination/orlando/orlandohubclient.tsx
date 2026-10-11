@@ -25,7 +25,7 @@ export default function OrlandoHubClient() {
     <main className={styles.container}>
       <Header links={navLinks} />
       <HeroSection />
-      <BookingCTA variant="slim" text="Book hotels for your Orlando trip â†’" href="/destination/orlando/bookings?tab=hotels&from=orlando-hub" label="Book your Orlando trip" />
+      <BookingCTA variant="slim" text="Book hotels for your Orlando trip â†’" href="/destination/orlando/hotel?from=orlando-hub" label="Book your Orlando trip" />
       <PlanningIntent />
       <WhyVisit />
       <AttractionsHub />
@@ -34,7 +34,7 @@ export default function OrlandoHubClient() {
       <WhereToStay />
       <ItinerariesPreview />
       <DataCaptureCTA />
-      <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/orlando/bookings?tab=hotels&from=orlando-hub" label="Book your Orlando trip" />
+      <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/orlando/hotel?from=orlando-hub" label="Book your Orlando trip" />
       <Footer />
     </main>
   );

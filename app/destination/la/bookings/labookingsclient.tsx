@@ -4,7 +4,6 @@ import BookingClient, { type CityBookingConfig } from "./components/BookingClien
 import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
 import faqData from "@/content/destination/la/booking/faq/faqsection.json";
 import bookFlights from "@/content/cities/losangeles/booking/bookflights.json";
-import hotelsData from "@/content/cities/losangeles/booking/hotels.json";
 import thingsToDoData from "@/content/cities/losangeles/booking/thingstodo.json";
 
 const config: CityBookingConfig = {
@@ -86,10 +85,13 @@ const config: CityBookingConfig = {
     },
   ],
   flights: bookFlights as CityBookingConfig["flights"],
-  hotels: hotelsData as CityBookingConfig["hotels"],
+  hotels: [],
+  hotelListingHref: "/destination/la/hotel",
+  hotelCount: 50,
   activities: thingsToDoData as CityBookingConfig["activities"],
 };
 
-export default function LABookingsClient() {
+export default function LABookingsClient({ hotels }: { hotels?: CityBookingConfig["hotels"] }) {
+  if (hotels) return <BookingClient config={{ ...config, hotels, category: "hotels", onDemandGoogleRatings: true, bookingHref: "/destination/la/hotel", pageTitle: "Find Your Los Angeles Hotel", introText: "Browse Los Angeles hotels and sign in to check current prices with the provider.", bookingTips: config.bookingTips?.filter(tip => tip.heading === "Hotels"), categoryRoutes: { hotels: "/destination/la/hotel", flights: "/destination/la/bookings?tab=flights", activities: "/destination/la/bookings?tab=activities" } }} />;
   return <BookingClient config={config} faqSection={<FAQAccordion faqs={faqData} />} />;
 }

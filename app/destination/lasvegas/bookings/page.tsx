@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 export const generateMetadata = () => ({
   title: "Book Your Las Vegas Trip | Flights, Hotels & More",
   description:
@@ -52,7 +53,9 @@ const breadcrumbSchema = {
   ],
 };
 
-export default function LasVegasBookingsPage() {
+export default async function LasVegasBookingsPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+  const params = await searchParams;
+  if (params.tab === "hotels") redirect("/destination/lasvegas/hotel");
   return (
     <>
       <script

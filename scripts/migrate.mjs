@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { seedCityHotels } from "./seed-city-hotels.mjs";
 /**
  * Database migration script.
  * Runs automatically before `next build` (see package.json).
@@ -85,6 +86,7 @@ async function migrate() {
       await client.query(sql);
       console.log(`  ✓ Done: ${name}`);
     }
+    await seedCityHotels(client);
     console.log('\n✅ All migrations complete.\n');
   } catch (err) {
     console.error('\n❌ Migration failed:', err.message);

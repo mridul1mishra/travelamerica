@@ -1,0 +1,1474 @@
+{
+  "city": "nyc",
+  "preparedOn": "2026-10-11",
+  "purpose": "Dated reference prices, not live availability or guaranteed booking rates.",
+  "publicationRule": "Publish only after source reuse permission and all stay, occupancy, fee and rate details are verified. Null means unknown; never infer missing details.",
+  "hotels": [
+    {
+      "hotelId": "1",
+      "sourceId": "93437",
+      "name": "Hotel Edison Times Square",
+      "officialPropertySources": [
+        "https://www.edisonhotelnyc.com/rooms-suites",
+        "https://www.edisonhotelnyc.com/amenities"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "2",
+      "sourceId": "8515751",
+      "name": "Hotel Riu Plaza New York Times Square",
+      "officialPropertySources": [
+        "https://www.riu.com/en/hotel/united-states/new-york/hotel-riu-plaza-new-york-times-square",
+        "https://www.riu.com/es/hotel/estados-unidos/nueva-york/hotel-riu-plaza-new-york-times-square/habitaciones",
+        "https://www.riu.com/fr/hotel/etats-unis/new-york/hotel-riu-plaza-new-york-times-square"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "3",
+      "sourceId": "126260",
+      "name": "Lotte New York Palace",
+      "officialPropertySources": [
+        "https://www.lottenypalace.com/nyc-hotel",
+        "https://www.lottenypalace.com/profile",
+        "https://www.lottenypalace.com/rooms-overview",
+        "https://www.lottenypalace.com/concierge-services"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "4",
+      "sourceId": "7255276",
+      "name": "The Knickerbocker",
+      "officialPropertySources": [
+        "https://www.theknickerbocker.com/about/amenities/",
+        "https://www.theknickerbocker.com/faq/",
+        "https://www.theknickerbocker.com/dine-drink/",
+        "https://www.theknickerbocker.com/stay/deluxe-two-queen/",
+        "https://www.theknickerbocker.com/about/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "6",
+      "sourceId": "93507",
+      "name": "New York Marriott Marquis",
+      "officialPropertySources": [
+        "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/overview/",
+        "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/rooms/",
+        "https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/photos/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "7",
+      "sourceId": "208454",
+      "name": "Sofitel New York",
+      "officialPropertySources": [
+        "https://www.sofitel-new-york.com/the-hotel/services-amenities/",
+        "https://www.sofitel-new-york.com/rooms-suites/",
+        "https://www.sofitel-new-york.com/eat-drink/in-room-dining/",
+        "https://www.sofitel-new-york.com/the-hotel/services-amenities/sofitel-fitness/",
+        "https://www.sofitel-new-york.com/the-hotel/hotel-information/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "8",
+      "sourceId": "93618",
+      "name": "Waldorf Astoria New York",
+      "officialPropertySources": [
+        "https://www.hilton.com/en/hotels/nycwawa-waldorf-astoria-new-york/amenities/",
+        "https://www.hilton.com/en/hotels/nycwawa-waldorf-astoria-new-york/spa/",
+        "https://stories.hilton.com/releases/waldorf-astoria-new-york-begins-opening-season",
+        "https://stories.hilton.com/luxury/an-icon-reborn-inside-the-reimagining-of-waldorf-astoria-new-york"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "9",
+      "sourceId": "611947",
+      "name": "New York Hilton Midtown",
+      "officialPropertySources": [
+        "https://www.hilton.com/en/hotels/nycnhhh-new-york-hilton-midtown/amenities/",
+        "https://www.hilton.com/en/hotels/nycnhhh-new-york-hilton-midtown",
+        "https://www.hilton.com/en/hotels/nycnhhh-new-york-hilton-midtown/rooms/",
+        "https://www.hilton.com/tr/hotels/nycnhhh-new-york-hilton-midtown/",
+        "https://www.hilton.com/en-gb/hotels/nycnhhh-new-york-hilton-midtown/rooms/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "10",
+      "sourceId": "93450",
+      "name": "Hyatt Grand Central New York",
+      "officialPropertySources": [
+        "https://www.hyatt.com/hyatt-hotels/en-US/nycgh-hyatt-grand-central-new-york/",
+        "https://www.hyatt.com/hyatt-hotels/en-US/nycgh-hyatt-grand-central-new-york/rooms",
+        "https://www.hyatt.com/hyatt-hotels/en-US/nycgh-hyatt-grand-central-new-york/dining",
+        "https://www.hyatt.com/hyatt-hotels/ko-KR/nycgh-hyatt-grand-central-new-york/rooms"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "11",
+      "sourceId": "4799063",
+      "name": "Hyatt Centric Times Square New York",
+      "officialPropertySources": [
+        "https://www.hyatt.com/hyatt-centric/en-US/nycts-hyatt-centric-times-square/",
+        "https://www.hyatt.com/hyatt-centric/en-US/nycts-hyatt-centric-times-square/rooms",
+        "https://www.hyatt.com/hyatt-centric/en-US/nycts-hyatt-centric-times-square/faqs"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "12",
+      "sourceId": "23448880",
+      "name": "Motto by Hilton New York City Chelsea",
+      "officialPropertySources": [
+        "https://www.hilton.com/en/hotels/nycdlua-motto-new-york-city-chelsea/",
+        "https://www.hilton.com/en-gb/hotels/nycdlua-motto-new-york-city-chelsea/",
+        "https://www.hilton.com/en/hotels/nycdlua-motto-new-york-city-chelsea/rooms/",
+        "https://stories.hilton.com/growth-development/how-motto-by-hilton-is-building-toward-tripling-its-portfolio"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "13",
+      "sourceId": "23155544",
+      "name": "M Social Hotel New York Times Square",
+      "officialPropertySources": [
+        "https://www.msocial.com/en/new-york/m-social-new-york/",
+        "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-new-york/overview/",
+        "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-new-york/rooms/",
+        "https://www.msocial.com/en/new-york/m-social-new-york/rooms/social-city-view-king/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "14",
+      "sourceId": "8873263",
+      "name": "INNSiDE New York Nomad",
+      "officialPropertySources": [
+        "https://www.melia.com/en/hotels/united-states/new-york/innside-new-york-nomad",
+        "https://feelthebeat.melia.com/innside/it/index.htm"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "16",
+      "sourceId": "224214",
+      "name": "The Bryant Park Hotel",
+      "officialPropertySources": [
+        "https://bryantparkhotel.com/",
+        "https://bryantparkhotel.com/faq/",
+        "https://bryantparkhotel.com/experiences/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "17",
+      "sourceId": "99425",
+      "name": "Martinique New York on Broadway, Curio Collection by Hilton",
+      "officialPropertySources": [
+        "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/",
+        "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/gallery/",
+        "https://www.hilton.com/en/hotels/nyccuqq-martinique-new-york-on-broadway/rooms/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "19",
+      "sourceId": "93390",
+      "name": "Hotel Belleclaire",
+      "officialPropertySources": [
+        "https://www.hotelbelleclaire.com/amenities",
+        "https://www.hotelbelleclaire.com/rooms-suites"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "20",
+      "sourceId": "93607",
+      "name": "Loews Regency New York Hotel",
+      "officialPropertySources": [
+        "https://www.loewshotels.com/regency-hotel/discover/services-amenities",
+        "https://www.loewshotels.com/Regency-Hotel",
+        "https://www.loewshotels.com/regency-hotel/rooms-showcase",
+        "https://www.loewshotels.com/regency-hotel/photos-videos"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "21",
+      "sourceId": "6582176",
+      "name": "Park Hyatt New York",
+      "officialPropertySources": [
+        "https://www.hyatt.com/park-hyatt/en-US/nycph-park-hyatt-new-york/rooms",
+        "https://www.hyatt.com/content/dam/hotel/propertysites/assets/park/nycph/documents/en_us/spa/PHNY-Spa-Menu-April-2025.pdf",
+        "https://www.hyatt.com/content/dam/hotel/propertysites/assets/park/nycph/documents/en_us/dining/ird/Room_Service_Menu_Dec2025.pdf",
+        "https://www.hyatt.com/park-hyatt/en-US/nycph-park-hyatt-new-york"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "22",
+      "sourceId": "113311",
+      "name": "The Peninsula New York",
+      "officialPropertySources": [
+        "https://www.peninsula.com/en/new-york/wellness",
+        "https://www.peninsula.com/en/new-york/our-city/moments/30th-anniversary",
+        "https://www.peninsula.com/en/new-york/luxury-hotel-room-suite-types/deluxe-room",
+        "https://www.peninsula.com/en/new-york/operation-hours"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "25",
+      "sourceId": "93462",
+      "name": "Intercontinental New York Barclay By IHG",
+      "officialPropertySources": [
+        "https://www.icbarclay.com/",
+        "https://www.icbarclay.com/faq",
+        "https://www.icbarclay.com/concierge",
+        "https://www.icbarclay.com/barclay-brief",
+        "https://www.icbarclay.com/rooms-suites/premium-room"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "26",
+      "sourceId": "112064",
+      "name": "Warwick New York",
+      "officialPropertySources": [
+        "https://www.warwickhotels.com/warwick-new-york",
+        "https://www.warwickhotels.com/warwick-new-york/rooms/premier-room",
+        "https://www.warwickhotels.com/warwick-new-york/services-and-facilities"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "27",
+      "sourceId": "5040757",
+      "name": "Homewood Suites By Hilton New York/Midtown Manhattan Times Square-South, NY",
+      "officialPropertySources": [
+        "https://www.hilton.com/en/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/",
+        "https://www.hilton.com/es/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/rooms/",
+        "https://www.hilton.com/en/hotels/nycmmhw-homewood-suites-new-york-midtown-manhattan-times-square-south-ny/gallery/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "28",
+      "sourceId": "93593",
+      "name": "The Westin New York Grand Central",
+      "officialPropertySources": [
+        "https://www.marriott.com/en-us/hotels/nyczw-the-westin-new-york-grand-central/overview/",
+        "https://www.marriott.com/en-us/hotels/nyczw-the-westin-new-york-grand-central/rooms/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "29",
+      "sourceId": "1646128",
+      "name": "InterContinental New York Times Square by IHG",
+      "officialPropertySources": [
+        "https://www.ihg.com/intercontinental/hotels/us/en/new-york/nychc/hoteldetail/amenities",
+        "https://digital.ihg.com/is/content/ihg/intercontinental-new-york-10216379023-original?fmt=pdf"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "30",
+      "sourceId": "99288",
+      "name": "Arthouse Hotel New York City",
+      "officialPropertySources": [
+        "https://www.arthousehotelnyc.com/faq",
+        "https://www.arthousehotelnyc.com/rooms/junior-suite-with-balcony",
+        "https://www.arthousehotelnyc.com/",
+        "https://www.arthousehotelnyc.com/arthouse-bar"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "31",
+      "sourceId": "4702789",
+      "name": "The Towers at Lotte New York Palace",
+      "officialPropertySources": [
+        "https://www.lottenypalace.com/the-towers",
+        "https://www.lottenypalace.com/profile",
+        "https://www.lottenypalace.com/nyc-hotel"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "33",
+      "sourceId": "675616",
+      "name": "The Plaza New York - A Fairmont Managed Hotel",
+      "officialPropertySources": [
+        "https://www.theplazany.com/amenities/",
+        "https://www.theplazany.com/spa-salon-and-wellness/",
+        "https://www.theplazany.com/rooms-and-suites/plaza-king/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "35",
+      "sourceId": "25071657",
+      "name": "Virgin Hotels New York City",
+      "officialPropertySources": [
+        "https://virginhotels.com/new-york/offers/spa-recovery-retreat/",
+        "https://virginhotels.com/new-york/eat-drink/the-pool-club/",
+        "https://virginhotels.com/new-york/the-hotel/faqs/",
+        "https://virginhotels.com/new-york/stay/",
+        "https://virginhotels.com/new-york/eat-drink/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "37",
+      "sourceId": "93555",
+      "name": "Sheraton New York Times Square Hotel",
+      "officialPropertySources": [
+        "https://www.marriott.com/en-us/hotels/nycst-sheraton-new-york-times-square-hotel/overview/",
+        "https://www.marriott.com/reservation/ersViewRoomPool.mi?displayRoomPoolList=Y&marshaCode=NYCST&productId=TllDU1R8RDAwMDAwMDAwMXxRVUVOfDIwMjItMTItMjV8MjAyMi0xMi0yNnxhYzhlMTViZS1lZDEwLTQ2NGUtODgzMC1jYTFhYzUwOTAyODQ&roomPoolCode=d000000001&selectedTabName=standard&src=ratelist",
+        "https://www.marriott.com/en-us/hotels/nycst-sheraton-new-york-times-square-hotel/rooms/",
+        "https://www.marriott.com/en-us/hotels/nycst-sheraton-new-york-times-square-hotel/dining/",
+        "https://www.marriott.com/en-us/hotels/nycst-sheraton-new-york-times-square-hotel/experiences/sheraton-fitness/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "38",
+      "sourceId": "93335",
+      "name": "The Kimberly Hotel",
+      "officialPropertySources": [
+        "https://www.kimberlyhotel.com/amenities",
+        "https://www.kimberlyhotel.com/accommodations",
+        "https://www.kimberlyhotel.com/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "39",
+      "sourceId": "93623",
+      "name": "Trump International Hotel and Tower New York",
+      "officialPropertySources": [
+        "https://www.trumphotels.com/central-park/manhattan-luxury-hotel-amenities",
+        "https://www.trumphotels.com/central-park/accommodations/manhattan-hotel-superior-room"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "40",
+      "sourceId": "23627300",
+      "name": "Hard Rock Hotel New York",
+      "officialPropertySources": [
+        "https://hotel.hardrock.com/new-york/",
+        "https://hotel.hardrock.com/new-york/amenities.aspx",
+        "https://hotel.hardrock.com/new-york/rooms-and-suites.aspx",
+        "https://hotel.hardrock.com/new-york/hotels-near-broadway.aspx",
+        "https://hotel.hardrock.com/new-york/hotels-near-moma.aspx",
+        "https://hotel.hardrock.com/news/hard-rock-hotel-new-york-makes-its-debut/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "42",
+      "sourceId": "10679074",
+      "name": "LUMA Hotel Times Square",
+      "officialPropertySources": [
+        "https://www.lumahotels.com/times-square/stay/services-amenities",
+        "https://www.lumahotels.com/de/times-square/stay/rooms-suites/metro/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "44",
+      "sourceId": "208452",
+      "name": "Conrad New York Downtown",
+      "officialPropertySources": [
+        "https://www.hilton.com/en/hotels/nyccici-conrad-new-york-downtown/",
+        "https://www.hilton.com/en-gb/hotels/nyccici-conrad-new-york-downtown/amenities/",
+        "https://www.hilton.com/en/hotels/nyccici-conrad-new-york-downtown/suites/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "45",
+      "sourceId": "93464",
+      "name": "Thompson Central Park New York, by Hyatt",
+      "officialPropertySources": [
+        "https://www.hyatt.com/thompson-hotels/en-US/lgatp-thompson-central-park-new-york",
+        "https://www.hyatt.com/thompson-hotels/en-US/lgatp-thompson-central-park-new-york/upper-stories-experience",
+        "https://www.hyatt.com/thompson-hotels/en-US/lgatp-thompson-central-park-new-york/rooms/king-1-king-bed"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "47",
+      "sourceId": "249712",
+      "name": "The Westin New York at Times Square",
+      "officialPropertySources": [
+        "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/overview/",
+        "https://www.marriott.com/en-us/hotels/nycsw-the-westin-new-york-at-times-square/rooms/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "48",
+      "sourceId": "99389",
+      "name": "The Evelyn Hotel",
+      "officialPropertySources": [
+        "https://www.theevelyn.com/rooms-suites",
+        "https://www.theevelyn.com/amenities"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "49",
+      "sourceId": "671150",
+      "name": "The Empire Hotel",
+      "officialPropertySources": [
+        "https://www.empirehotelnyc.com/stay/hotel-amenities",
+        "https://www.empirehotelnyc.com/faq",
+        "https://www.empirehotelnyc.com/residence-fee/",
+        "https://www.empirehotelnyc.com/site-map/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "50",
+      "sourceId": "217616",
+      "name": "The Muse New York",
+      "officialPropertySources": [
+        "https://www.themusehotel.com/stay",
+        "https://www.themusehotel.com/",
+        "https://www.themusehotel.com/faqs",
+        "https://www.themusehotel.com/amp"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "140",
+      "sourceId": "23887495",
+      "name": "The Hotel Chelsea",
+      "officialPropertySources": [
+        "https://hotelchelsea.com/accommodations/chelsea-room",
+        "https://hotelchelsea.com/wellness/spa",
+        "https://hotelchelsea.com/",
+        "https://hotelchelsea.com/events",
+        "https://hotelchelsea.com/dining-and-bar/cafe-chelsea",
+        "https://hotelchelsea.com/wellness/fitness"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "141",
+      "sourceId": "273530",
+      "name": "The Maritime Hotel",
+      "officialPropertySources": [
+        "https://themaritimehotel.com/standard-room/",
+        "https://themaritimehotel.com/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "142",
+      "sourceId": "4283443",
+      "name": "The High Line Hotel",
+      "officialPropertySources": [
+        "https://thehighlinehotel.com/rooms-overview/",
+        "https://thehighlinehotel.com/faqs/",
+        "https://thehighlinehotel.com/whatsinyourroom/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "143",
+      "sourceId": "1177864",
+      "name": "The Moore",
+      "officialPropertySources": [
+        "https://www.themoorenyc.com/sleep",
+        "https://www.themoorenyc.com/enjoy"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "144",
+      "sourceId": "15530677",
+      "name": "Renaissance New York Chelsea Hotel",
+      "officialPropertySources": [
+        "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/overview/",
+        "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/events/",
+        "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/experiences/",
+        "https://www.marriott.com/en-us/hotels/nycmm-renaissance-new-york-chelsea-hotel/dining/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "145",
+      "sourceId": "23115585",
+      "name": "Hyatt Place New York / Chelsea",
+      "officialPropertySources": [
+        "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea/faqs",
+        "https://www.hyatt.com/hyatt-place/en-US/lgazc-hyatt-place-new-york-chelsea"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "146",
+      "sourceId": "10390915",
+      "name": "Hyatt House New York/Chelsea",
+      "officialPropertySources": [
+        "https://www.hyatt.com/hyatt-house/en-US/nycxc-hyatt-house-new-york-chelsea/faqs",
+        "https://www.hyatt.com/hyatt-house/en-US/nycxc-hyatt-house-new-york-chelsea/rooms",
+        "https://assets.hyatt.com/content/dam/hyatt/hyattdam/documents/2023/03/07/1822/Hyatt-House-New-York-Chelsea-Facility-Guide-English.pdf",
+        "https://www.hyatt.com/hyatt-house/en-US/nycxc-hyatt-house-new-york-chelsea"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "147",
+      "sourceId": "8615610",
+      "name": "The Beekman, A Thompson Hotel, by Hyatt",
+      "officialPropertySources": [
+        "https://www.thebeekman.com/amenities/",
+        "https://www.thebeekman.com/faq/",
+        "https://www.thebeekman.com/rooms/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "148",
+      "sourceId": "262330",
+      "name": "M Social Hotel New York Downtown",
+      "officialPropertySources": [
+        "https://www.msocial.com/en/home/destinations/north-america/united-states/new-york/m-social-hotel-new-york-downtown/overview/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "149",
+      "sourceId": "208455",
+      "name": "The Roxy Hotel New York",
+      "officialPropertySources": [
+        "https://www.roxyhotelnyc.com/",
+        "https://www.roxyhotelnyc.com/faqs/",
+        "https://www.roxyhotelnyc.com/accommodations/roxy-king/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    },
+    {
+      "hotelId": "150",
+      "sourceId": "15327417",
+      "name": "Walker Hotel Tribeca",
+      "officialPropertySources": [
+        "https://www.walkerhotels.com/walker-hotel-tribeca/guest-rooms/",
+        "https://www.walkerhotels.com/walker-hotel-tribeca/"
+      ],
+      "status": "AwaitingAuthorizedRateSource",
+      "price": null,
+      "currency": null,
+      "priceBasis": "PerNight",
+      "checkIn": null,
+      "checkOut": null,
+      "adults": null,
+      "children": null,
+      "roomType": null,
+      "taxesIncluded": null,
+      "mandatoryFeesIncluded": null,
+      "cancellationPolicy": null,
+      "sourceUrl": null,
+      "checkedAt": null,
+      "reusePermission": {
+        "status": "Unconfirmed",
+        "evidenceUrl": null,
+        "note": null
+      }
+    }
+  ]
+}

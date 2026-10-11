@@ -613,6 +613,9 @@
   white-space: nowrap;
 }
 
+.hotelFooterLink a { text-decoration: none; color: #b54f3a; font-weight: 850; }
+.hotelFooterLink a:focus-visible { outline: 3px solid #b54f3a; outline-offset: 4px; }
+
 .sidePanel {
   position: sticky;
   top: 84px;

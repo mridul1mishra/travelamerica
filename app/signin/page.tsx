@@ -7,7 +7,7 @@ import styles from "@/app/components/auth/MemberAuthForm.module.css";
 
 export const metadata: Metadata = {
   title: "Sign In | Travels Americas",
-  description: "Sign in to view New York City hotel ratings and check prices.",
+  description: "Sign in to view hotel ratings and check prices.",
   robots: { index: false, follow: false },
 };
 
@@ -26,7 +26,7 @@ export default async function SignInPage({ searchParams }: {
         <p className={styles.intro}>
           {action === "rating" ? "Sign in to view this hotel's Google rating and reviews."
             : action === "prices" ? "Sign in to check this hotel's prices and availability."
-              : "Welcome back. Sign in to view NYC hotel ratings and check prices."}
+              : "Welcome back. Sign in to view hotel ratings and check prices."}
         </p>
         <MemberAuthForm key={params.verified === "1" ? "verified" : "signin"} mode="signin" returnTo={next} action={action} verified={params.verified === "1"} />
       </section>
