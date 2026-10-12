@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { headers } from "next/headers";
+import { getMemberSession } from "@/app/lib/auth";
+import { defaultHotelPriceStay } from "@/app/lib/hotel-price-stay";
+import { priceCacheKey, readPriceCache } from "@/app/lib/serpapi-hotel-prices";
 import NavigationHeader from "@/app/components/Header/NavigationHeader";
 import Footer from "@/app/components/Header/Footer/footer";
 import { getCityHotels, type HotelCity } from "@/app/lib/hotels";
@@ -33,6 +37,15 @@ export async function hotelDetailMetadata(city: HotelCity, params: Params): Prom
 export default async function HotelDetailPage({ city, params }: { city: HotelCity; params: Params }) {
   const hotel = await findHotel(city, params);
   const path = `/destination/${city}/hotel/${hotel.hotelId}`;
+  let cachedPrices = null;
+  if (await getMemberSession(await headers())) {
+    const stay = defaultHotelPriceStay();
+    const query = `${hotel.title} ${hotel.address ?? cityNames[city]}`;
+    try {
+      const cached = await readPriceCache(priceCacheKey(hotel.hotelId!, query, stay));
+      if (cached) cachedPrices = { ...cached, stay };
+    } catch { /* Keep the hotel page usable when the cache is unavailable. */ }
+  }
   return <>
     <NavigationHeader prefetch={false} memberReturnTo={path} />
     <main className={styles.main}>
@@ -48,8 +61,7 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
           {hotel.neighborhood && <p className={styles.location}>{hotel.neighborhood}</p>}
           {hotel.address && <p>{hotel.address}</p>}
           {hotel.googleRatingAvailable && hotel.hotelId && <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={hotel.googleMapsUrl} />}
-          <HotelPriceLink hotelId={hotel.hotelId!} className={styles.button} />
-          <p className={styles.note}>Sample prices are for one adult staying one night, checking in 15 days from today. Prices can change before booking.</p>
+          <HotelPriceLink hotelId={hotel.hotelId!} className={styles.button} initialPrices={cachedPrices} />
         </div>
         <Image className={styles.photo} src={hotel.img} alt={hotel.title} width={720} height={600} unoptimized />
       </div>

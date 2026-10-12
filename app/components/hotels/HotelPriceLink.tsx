@@ -9,13 +9,14 @@ type PriceResponse = {
   stay: { checkIn: string; checkOut: string; adults: number };
 };
 
-export default function HotelPriceLink({ hotelId, className }: { hotelId: string; className?: string }) {
+export default function HotelPriceLink({ hotelId, className, initialPrices = null }: { hotelId: string; className?: string; initialPrices?: PriceResponse | null }) {
   const { member, pending, signIn } = useMember();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [prices, setPrices] = useState<PriceResponse | null>(null);
-  const requested = useRef(false);
+  const [prices, setPrices] = useState<PriceResponse | null>(initialPrices);
+  const requested = useRef(Boolean(initialPrices));
   const href = `/api/hotel-prices/${hotelId}`;
+  const price = prices?.results[0];
 
   async function load() {
     if (requested.current) return;
@@ -40,22 +41,17 @@ export default function HotelPriceLink({ hotelId, className }: { hotelId: string
   }, [member, hotelId]);
 
   return <div>
-    <a href={href} className={className} aria-busy={pending || loading || undefined}
+    {!prices && <a href={href} className={className} aria-busy={pending || loading || undefined}
       onClick={event => {
         event.preventDefault();
         if (pending || loading) return;
         if (!member) { signIn(href, "prices"); return; }
         void load();
-      }}>{loading ? "Checking price…" : prices ? "Price checked" : "See prices"}</a>
+      }}>{loading ? "Checking price…" : "See prices"}</a>}
     <div role="status" aria-live="polite">
       {error && <p>{error}</p>}
-      {prices && <>
-        <p>1 adult · 1 night · {prices.stay.checkIn} to {prices.stay.checkOut} · USD</p>
-        {prices.results.length ? prices.results.map((price, index) => <p key={`${price.name}-${index}`}>
-          <strong>{price.name}</strong>: {price.nightly ? `From ${price.nightly} / night` : price.total}
-        </p>) : <p>No price is available for this stay.</p>}
-        <small>Checked {new Date(prices.checkedAt).toLocaleString()}. Confirm the property, final taxes, fees and availability before booking.</small>
-      </>}
+      {prices && (price?.nightly ? <p><strong>{price.name}</strong>: From {price.nightly} / night</p>
+        : <p>No price is available for this stay.</p>)}
     </div>
   </div>;
 }
