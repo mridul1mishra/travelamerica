@@ -7,9 +7,11 @@ import flightFaqs from "@/content/destination/nyc/booking/faq/flights.json";
 import activityFaqs from "@/content/destination/nyc/booking/faq/activities.json";
 import bookFlights from "@/content/cities/newyork/bookflights.json";
 import thingsToDoData from "@/content/cities/newyork/thingstodo.json";
+import { nycHotelAreaPresets } from "@/app/lib/nycHotelAreas";
 
 const config: CityBookingConfig = {
   cityName: "New York",
+  hotelAreaPresets: nycHotelAreaPresets,
   cityHref: "/destination/nyc",
   bookingHref: "/destination/nyc/booking",
   headerImage: "/data/majorcities/newyork/assets/newyork.jpeg",

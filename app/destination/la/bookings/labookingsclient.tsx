@@ -5,6 +5,8 @@ import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
 import faqData from "@/content/destination/la/booking/faq/faqsection.json";
 import bookFlights from "@/content/cities/losangeles/booking/bookflights.json";
 import thingsToDoData from "@/content/cities/losangeles/booking/thingstodo.json";
+import { laHotelAreaPresets } from "@/app/lib/laHotelAreas";
+import hotelFaqs from "@/content/cities/losangeles/hotel-faq.json";
 
 const config: CityBookingConfig = {
   cityName: "Los Angeles",
@@ -33,6 +35,7 @@ const config: CityBookingConfig = {
         { href: "/destination/la/best-areas-to-stay", label: "Best areas to stay in LA" },
         { href: "/destination/la/neighborhood-guide", label: "Compare LA neighborhoods" },
         { href: "/destination/la/safety-guide", label: "LA safety guide" },
+        { href: "/destination/la/is-la-safe-at-night", label: "Plan LA evenings and the hotel return" },
       ],
     },
     activities: {
@@ -92,6 +95,12 @@ const config: CityBookingConfig = {
 };
 
 export default function LABookingsClient({ hotels }: { hotels?: CityBookingConfig["hotels"] }) {
-  if (hotels) return <BookingClient config={{ ...config, hotels, category: "hotels", onDemandGoogleRatings: true, bookingHref: "/destination/la/hotel", pageTitle: "Find Your Los Angeles Hotel", introText: "Browse Los Angeles hotels and sign in to check current prices with the provider.", bookingTips: config.bookingTips?.filter(tip => tip.heading === "Hotels"), categoryRoutes: { hotels: "/destination/la/hotel", flights: "/destination/la/bookings?tab=flights", activities: "/destination/la/bookings?tab=activities" } }} />;
+  if (hotels) return <BookingClient config={{ ...config, hotels, category: "hotels", onDemandGoogleRatings: true,
+    hotelAreaPresets: laHotelAreaPresets, bookingHref: "/destination/la/hotel", bannerText: "Find your Los Angeles hotel",
+    pageTitle: "Find Your Los Angeles Hotel",
+    introText: "Choose a hotel base for your shows, dining, beach visit or event. Compare neighborhoods and check the return route. Sign in to check current prices with the provider.",
+    bookingTips: [{ heading: "Location", text: "Match the hotel to your main destinations. Nearby on a map does not guarantee an easy final walk; confirm the entrance and transport." }],
+    categoryRoutes: { hotels: "/destination/la/hotel", flights: "/destination/la/bookings?tab=flights", activities: "/destination/la/bookings?tab=activities" }
+  }} faqSection={<FAQAccordion faqs={hotelFaqs} />} />;
   return <BookingClient config={config} faqSection={<FAQAccordion faqs={faqData} />} />;
 }

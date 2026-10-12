@@ -278,6 +278,7 @@
 }
 
 .resultsPanel {
+  min-width: 0;
   padding: clamp(18px, 2.4vw, 24px);
 }
 
@@ -300,6 +301,42 @@
   border: 1px solid rgba(23, 32, 51, 0.1);
   border-radius: 8px;
 }
+
+.areaPresets { margin: 0 0 20px; }
+.hotelIntro { color: #657083; font-size: .9rem; margin-bottom: 16px; }
+.hotelToolbar { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 12px; margin: 16px 0 12px; }
+.hotelSearch { margin: 0; min-width: 0; }
+.hotelSearch label { display: block; margin-bottom: 8px; font-weight: 700; font-size: .9rem; }
+.hotelSearch > div { display: flex; align-items: center; gap: 10px; }
+.hotelSearch input { width: 100%; min-width: 0; min-height: 46px; padding: 10px 14px; border: 1px solid #cfd4dc; border-radius: 8px; background: white; color: #172033; font: inherit; font-size: .9rem; }
+.hotelSearch button { flex-shrink: 0; padding: 10px 0; border: 0; background: transparent; color: #98442e; font: inherit; font-size: .8rem; cursor: pointer; }
+.hotelSearch input:focus-visible, .hotelSearch button:focus-visible { outline: 3px solid #98442e; outline-offset: 3px; }
+@media (max-width: 600px) { .hotelToolbar { grid-template-columns: minmax(0, 1fr); gap: 10px; } }
+.areaPresets h3 { margin: 0 0 6px; font-size: 1rem; }
+.areaPresets p { color: #435066; line-height: 1.6; margin: 0 0 12px; }
+.planCards { display: flex; flex-direction: column; gap: 6px; margin: 0; padding: 0; border: 0; min-width: 0; }
+.planCards legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.planCard { display: flex; align-items: center; gap: 8px; padding: 10px 12px; min-height: 44px; border: 1px solid #d5dae1; border-radius: 8px; background: #fff; cursor: pointer; transition: background .15s, border-color .15s; }
+.planCard:hover { background: #faf8f5; border-color: #98442e; }
+.planCardSelected { background: #faf2ed; border-color: #98442e; box-shadow: inset 0 0 0 1px #98442e; }
+.planCard input { flex: 0 0 auto; width: 16px; height: 16px; margin: 0; accent-color: #98442e; }
+.planCard:focus-within { outline: 3px solid #98442e; outline-offset: 3px; }
+.planCardText { display: flex; flex: 1; justify-content: space-between; align-items: baseline; gap: 7px; min-width: 0; }
+.planCardText strong { color: #172033; font-size: .8rem; font-weight: 600; }
+.planCardText > span { color: #657083; font-size: .7rem; white-space: nowrap; }
+.planSummary { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 6px; color: #657083; font-size: .8rem; }
+.planSummary button { background: transparent; border: 0; color: #98442e; font: inherit; font-weight: 700; padding: 10px 0; cursor: pointer; text-decoration: underline; }
+.planSummary button:focus-visible { outline: 3px solid #98442e; outline-offset: 3px; }
+.planSwipeHint { display: none; }
+@media (max-width: 600px) {
+  .planCards { gap: 6px; }
+  .planCard { padding: 10px 12px; gap: 6px; }
+  .planSwipeHint { display: inline; }
+}
+.areaPresets .planCards { flex-direction: column; flex-wrap: nowrap; overflow: visible; padding: 0; gap: 6px; }
+.areaPresets .planCard { border-radius: 8px; padding: 10px 12px; }
+.areaPresets .planCardText { flex: 1; justify-content: space-between; }
+.preferenceHint { font-size: .85rem; color: #657083; margin: 0 0 12px; }
 
 .neighborhoodChoices { min-width: 0; margin: 18px 0; padding: 16px 20px 20px; border: 1px solid #ddd6cd; border-radius: 12px; background: #faf8f5; }
 .neighborhoodChoices legend { padding: 0 6px; font-weight: 800; color: #172033; }

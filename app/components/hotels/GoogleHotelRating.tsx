@@ -208,11 +208,13 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl }:
 
   return (
     <div className={styles.rating} aria-label={`Google rating for ${hotelName}`} aria-busy={pending}>
-      {!expanded && <span aria-hidden="true">****</span>}
+      {!expanded && <span aria-hidden="true" className={phase === "loading" && member ? styles.loadingStars : undefined}>
+        {[0, 1, 2, 3].map(index => <span key={index}>*</span>)}
+      </span>}
       <div id={messageId} className={styles.message} aria-live="polite">
         {!member && phase === "signin" && <p>Sign in again to view this rating.</p>}
         {member && phase === "challenge" && <p>Complete the security check to view this rating.</p>}
-        {member && phase === "loading" && <p>Loading rating…</p>}
+        {member && phase === "loading" && <span className={styles.srOnly}>Loading rating…</span>}
         {expanded && unavailable && <p>Google rating is unavailable right now.</p>}
         {expanded && phase === "loaded" && result && <>
           <span>{result.rating === null ? "No Google rating available." : `${result.rating.toFixed(1)} rating`}</span>

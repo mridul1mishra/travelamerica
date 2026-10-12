@@ -3,10 +3,14 @@
 import { useEffect, useId, useRef, useState } from "react";
 import styles from "./NeighborhoodDropdown.module.css";
 
-export default function NeighborhoodDropdown({ options, selected, onChange }: {
+export default function NeighborhoodDropdown({ options, selected, onChange, label = "Neighborhood", allLabel = "All neighborhoods", hint = "Select one or more areas", selectedPrefix = "Selected areas" }: {
   options: { name: string; count: number }[];
   selected: string[];
   onChange: (areas: string[]) => void;
+  label?: string;
+  allLabel?: string;
+  hint?: string;
+  selectedPrefix?: string;
 }) {
   const [open, setOpen] = useState(false);
   const root = useRef<HTMLDivElement>(null);
@@ -28,16 +32,16 @@ export default function NeighborhoodDropdown({ options, selected, onChange }: {
     };
   }, [open]);
   return <div ref={root} className={styles.root}>
-    <span id={`${id}-label`} className={styles.label}>Neighborhood</span>
+    <span id={`${id}-label`} className={styles.label}>{label}</span>
     <button ref={trigger} type="button" className={styles.trigger} aria-labelledby={`${id}-label ${id}-value`}
       aria-expanded={open} aria-controls={`${id}-panel`} onClick={() => setOpen(value => !value)}>
-      <span id={`${id}-value`}>{selected.length ? `Selected areas: ${selected.join(" / ")}` : "All neighborhoods"}</span>
+      <span id={`${id}-value`}>{selected.length ? `${selectedPrefix}: ${selected.join(" / ")}` : allLabel}</span>
       <span aria-hidden="true">⌄</span>
     </button>
     {open && <div id={`${id}-panel`} className={styles.panel}>
-      <button type="button" className={styles.clear} onClick={() => onChange([])}>All neighborhoods</button>
+      <button type="button" className={styles.clear} onClick={() => onChange([])}>{allLabel}</button>
       <fieldset>
-        <legend className={styles.hint}>Select one or more areas</legend>
+        <legend className={styles.hint}>{hint}</legend>
         {options.map(area => <label key={area.name}>
           <input type="checkbox" checked={selected.includes(area.name)} onChange={event => onChange(event.target.checked ? [...selected, area.name] : selected.filter(name => name !== area.name))} />
           <span>{area.name} ({area.count})</span>

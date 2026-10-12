@@ -1,6 +1,6 @@
 "use client";
 
-import SafetyHotelCTA from "@/app/components/hotels/SafetyHotelCTA";
+import NycHotelPlansCTA from "@/app/components/hotels/NycHotelPlansCTA";
 import NeighborhoodHotelLink from "@/app/components/hotels/NeighborhoodHotelLink";
 import Image from "next/image";
 import Link from "next/link";
@@ -240,7 +240,7 @@ export default function NYCSafetyGuideClient() {
           </div>
         </section>
 
-        <SafetyHotelCTA source="nyc-safety-guide" />
+        <NycHotelPlansCTA />
 
         <EmailSignup
           source="nyc-safety-guide-hero-checklist"

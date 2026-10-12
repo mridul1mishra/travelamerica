@@ -1,0 +1,622 @@
+[
+  {
+    "sourceId": "005a351f8a5f13e5dbb1e66d",
+    "name": "Cameo Beverly Hills, LXR Hotels & Resorts",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.hilton.com/en/hotels/laxmcol-cameo-beverly-hills/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      },
+      {
+        "key": "FamilyFriendly",
+        "sourceUrl": "https://www.hilton.com/en/hotels/laxmcol-cameo-beverly-hills/rooms/",
+        "rationale": "Two-queen rooms and connecting-room options are documented. Confirm occupancy, room type and availability for your dates."
+      }
+    ]
+  },
+  {
+    "sourceId": "7510616f1974f680cb04f15e",
+    "name": "Kimpton Everly Hotel",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.ihg.com/kimptonhotels/hotels/us/en/everly-hotel-los-angeles-ca/laxgy/hoteldetail/meetings-events",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "b4d6edf5de4b8e7c04f93e30",
+    "name": "Warner Center Marriott Woodland Hills",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxwc-warner-center-marriott-woodland-hills/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "affd54c148a99fc0b682baa7",
+    "name": "Burton House, Beverly Hills, A Tribute Portfolio Hotel",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxtw-burton-house-beverly-hills-a-tribute-portfolio-hotel/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      },
+      {
+        "key": "FamilyFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxtw-burton-house-beverly-hills-a-tribute-portfolio-hotel/rooms/",
+        "rationale": "Two-bedroom suites and sofa-bed layouts are documented. Confirm occupancy, room type and availability for your dates."
+      }
+    ]
+  },
+  {
+    "sourceId": "60e0fe570e96a5848968d084",
+    "name": "Hotel Figueroa - The Unbound Collection by Hyatt",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.hotelfigueroa.com/meetings-events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      },
+      {
+        "key": "WalkableArea",
+        "sourceUrl": "https://www.hotelfigueroa.com/",
+        "rationale": "Official property information places the hotel steps from Crypto.com Arena and the convention center. This describes attraction access, not a safety rating."
+      }
+    ]
+  },
+  {
+    "sourceId": "ffd0d19f615a1275c3001ee5",
+    "name": "Hilton Los Angeles/Universal City",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.hilton.com/en/hotels/buruchf-hilton-los-angeles-universal-city/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      },
+      {
+        "key": "FamilyFriendly",
+        "sourceUrl": "https://www.hilton.com/en/travel/articles/reasons-to-stay-hilton-los-angles-universal-city/",
+        "rationale": "Official hotel information describes confirmed connecting rooms. Confirm occupancy, room type and availability for your dates."
+      },
+      {
+        "key": "WalkableArea",
+        "sourceUrl": "https://www.hilton.com/en/travel/articles/reasons-to-stay-hilton-los-angles-universal-city/",
+        "rationale": "Official information describes walking access to Universal Studios and CityWalk. This describes attraction access, not a safety rating."
+      }
+    ]
+  },
+  {
+    "sourceId": "f4ff8a12a9a593d6d06c772b",
+    "name": "The Garland",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.thegarland.com/meetings-and-events/overview",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      },
+      {
+        "key": "FamilyFriendly",
+        "sourceUrl": "https://www.thegarland.com/stay/rooms-and-suites",
+        "rationale": "Kids Rooms and Family Suites include separate bunk-bed sleeping areas. Confirm occupancy, room type and availability for your dates."
+      }
+    ]
+  },
+  {
+    "sourceId": "acf22bd90dd4ad7c0139dde2",
+    "name": "Sheraton Universal Hotel",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/bursi-sheraton-universal-hotel/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      },
+      {
+        "key": "FamilyFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/bursi-sheraton-universal-hotel/rooms/",
+        "rationale": "The Family King Room includes a twin sleeper sofa. Confirm occupancy, room type and availability for your dates."
+      }
+    ]
+  },
+  {
+    "sourceId": "bd3bea2fa1323bc3d599b0a7",
+    "name": "Hotel Indigo Los Angeles Downtown By IHG",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.ihg.com/hotelindigo/hotels/us/en/los-angeles/laxfs/hoteldetail/events-facilities",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "2f95ccc1e3f8f04f7f947671",
+    "name": "UCLA Meyer & Renee Luskin Conference Center",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://luskinconferencecenter.ucla.edu/events-main/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "c07500367b9bb7eb333aa22d",
+    "name": "Holiday Inn Express & Suites Hollywood Walk of Fame by IHG",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.ihg.com/holidayinnexpress/hotels/us/en/los-angeles/laxfa/hoteldetail/events-facilities",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      },
+      {
+        "key": "FamilyFriendly",
+        "sourceUrl": "https://www.ihg.com/holidayinnexpress/hotels/us/en/los-angeles/laxfa/hoteldetail/rooms",
+        "rationale": "Official room information includes two-queen layouts and family-room options. Confirm occupancy, room type and availability for your dates."
+      }
+    ]
+  },
+  {
+    "sourceId": "70a92bd2ced5d0362dc992e8",
+    "name": "Hotel Erwin Venice Beach",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.hotelerwin.com/groups-events/corporate-travel/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      },
+      {
+        "key": "WalkableArea",
+        "sourceUrl": "https://www.hotelerwin.com/things-to-do/venice-beach-nightlife-guide/",
+        "rationale": "Official hotel guide describes Abbot Kinney as approximately a 15-minute walk; check the actual route before going out. This describes attraction access, not a safety rating."
+      },
+      {
+        "key": "NightlifeAccess",
+        "sourceUrl": "https://www.hotelerwin.com/things-to-do/venice-beach-nightlife-guide/",
+        "rationale": "The official guide documents the on-site Kassi rooftop with evening dining, drinks and music. Confirm current hours and entry rules."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-77804",
+    "name": "Omni Los Angeles Hotel At California Plaza",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.omnihotels.com/hotels/los-angeles-california-plaza/meetings",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-8678267",
+    "name": "InterContinental Los Angeles Downtown by IHG",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.ihg.com/intercontinental/hotels/us/en/los-angeles/laxhc/hoteldetail/meetings-events",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-78046",
+    "name": "Sheraton Gateway Los Angeles Hotel",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxsi-sheraton-gateway-los-angeles-hotel/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-77866",
+    "name": "The Biltmore Los Angeles",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.millenniumhotels.com/en/meetings-events/united-states/los-angeles/millennium-biltmore-hotel-los-angeles",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-23845025",
+    "name": "Conrad Los Angeles",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.hilton.com/en/hotels/laxavci-conrad-los-angeles/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-76049",
+    "name": "Four Seasons Hotel Los Angeles at Beverly Hills",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.fourseasons.com/losangeles/meetings-and-events/meetings/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-77874",
+    "name": "The Westin Bonaventure Hotel & Suites, Los Angeles",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxbw-the-westin-bonaventure-hotel-and-suites-los-angeles/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-1100791",
+    "name": "JW Marriott Los Angeles L.A. LIVE",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxjw-jw-marriott-los-angeles-la-live/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      },
+      {
+        "key": "WalkableArea",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxjw-jw-marriott-los-angeles-la-live/events/",
+        "rationale": "Official property information describes Crypto.com Arena and Peacock Theater as steps away. This describes attraction access, not a safety rating."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-77700",
+    "name": "W Los Angeles - West Beverly Hills",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxwb-w-los-angeles-west-beverly-hills/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-11894770",
+    "name": "Freehand Los Angeles",
+    "tags": [
+      {
+        "key": "NightlifeAccess",
+        "sourceUrl": "https://freehandhotels.com/los-angeles/broken-shaker/",
+        "rationale": "The property documents the on-site Broken Shaker rooftop cocktail bar. Confirm current opening hours and entry rules."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-77714",
+    "name": "DoubleTree by Hilton Hotel Los Angeles Downtown",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.hilton.com/en/hotels/laxdtdt-doubletree-los-angeles-downtown/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-119421",
+    "name": "Los Angeles Athletic Club",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.laac.com/our-club/faq/",
+        "rationale": "Official hotel FAQ documents guest coworking spaces and reservable private meeting rooms."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-84167",
+    "name": "Hilton Los Angeles Airport",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.hilton.com/en/hotels/laxahhh-hilton-los-angeles-airport/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-1563899",
+    "name": "The Ritz-Carlton, Los Angeles",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.ritzcarlton.com/en/hotels/laxlz-the-ritz-carlton-los-angeles/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-223046",
+    "name": "Miyako Hotel Los Angeles",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.miyakola.com/meetings-and-events.htm",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-23479627",
+    "name": "citizenM Los Angeles Downtown",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxzd-citizenm-los-angeles-downtown/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      },
+      {
+        "key": "NearTransit",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxzd-citizenm-los-angeles-downtown/events/",
+        "rationale": "Official property information identifies nearby Pershing Square station. Check service and the route for your journey."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-77798",
+    "name": "Sheraton Grand Los Angeles",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxgr-sheraton-grand-los-angeles/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-19852062",
+    "name": "Fairmont Century Plaza",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.fairmont.com/en/hotels/los-angeles/fairmont-century-plaza/meetings.html",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-77931",
+    "name": "Holiday Inn Express Los Angeles - LAX Airport by IHG",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.ihg.com/holidayinnexpress/hotels/us/en/los-angeles/laxat/hoteldetail/events-facilities",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-77944",
+    "name": "Renaissance Los Angeles Airport Hotel",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxrr-renaissance-los-angeles-airport-hotel/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-224168",
+    "name": "Loews Hollywood Hotel",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.loewshotels.com/hollywood-hotel",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      },
+      {
+        "key": "FamilyFriendly",
+        "sourceUrl": "https://www.loewshotels.com/hollywood-hotel",
+        "rationale": "The hotel documents a guaranteed connecting-room offer. Confirm occupancy, room type and availability for your dates."
+      },
+      {
+        "key": "WalkableArea",
+        "sourceUrl": "https://www.loewshotels.com/hollywood-hotel",
+        "rationale": "Official property information describes walking access to the Walk of Fame and Dolby Theatre. This describes attraction access, not a safety rating."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-77888",
+    "name": "Hilton Checkers Los Angeles",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.hilton.com/en/hotels/laxchhf-hilton-checkers-los-angeles/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-77237",
+    "name": "Hollywood Hotel",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.thehollywoodhotel.com/gatherings/business-meetings",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      },
+      {
+        "key": "NearTransit",
+        "sourceUrl": "https://www.thehollywoodhotel.com/transportation",
+        "rationale": "Official transportation information identifies nearby Vermont/Santa Monica station and local buses. Check current service for your journey."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-76083",
+    "name": "Sofitel Los Angeles at Beverly Hills",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.sofitel-los-angeles.com/meetings-events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-77827",
+    "name": "Luxe Sunset Boulevard Hotel",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.luxehotels.com/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-111751",
+    "name": "Hotel Bel-Air",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.dorchestercollection.com/los-angeles/hotel-bel-air/occasions/meetings",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-77917",
+    "name": "Embassy Suites By Hilton Los Angeles International Airport North",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.hilton.com/en/hotels/laxabes-embassy-suites-los-angeles-international-airport-north/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-5418166",
+    "name": "Stile Downtown Los Angeles",
+    "tags": [],
+    "pendingReason": "Current official property information could not be verified; no optional tags assigned."
+  },
+  {
+    "sourceId": "ta-77264",
+    "name": "Hilton Garden Inn Los Angeles/Hollywood",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.hilton.com/en/hotels/laxhogi-hilton-garden-inn-los-angeles-hollywood/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-77775",
+    "name": "Kimpton Hotel Palomar Los Angeles Beverly Hills",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.ihg.com/kimptonhotels/hotels/us/en/hotel-palomar-la-beverly-hills/laxwp/hoteldetail/meetings-events",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-133994",
+    "name": "Cara",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.carahotel.com/private-events",
+        "rationale": "Official private-events information offers executive dinners and product launches; contact the property about the required business setup."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-84286",
+    "name": "Holiday Inn Express & Suites Los Angeles Downtown West By IHG",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.ihg.com/holidayinnexpress/hotels/us/en/los-angeles/laxwd/hoteldetail/events-facilities",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-119443",
+    "name": "The Westin Los Angeles Airport",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxwi-the-westin-los-angeles-airport/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-19900021",
+    "name": "Downtown LA Proper Hotel",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.properhotel.com/downtown-la/meetings-events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-223049",
+    "name": "Hyatt Regency Los Angeles International Airport",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.hyatt.com/hyatt-regency/en-US/laxla-hyatt-regency-los-angeles-international-airport/meetings",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-12934528",
+    "name": "Hotel Per La, Autograph Collection",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://hotelperla.com/meetings-and-events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-6420746",
+    "name": "Residence Inn by Marriott Los Angeles L.A. LIVE",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxri-residence-inn-los-angeles-la-live/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  },
+  {
+    "sourceId": "ta-7389126",
+    "name": "Residence Inn by Marriott Los Angeles LAX/Century Boulevard",
+    "tags": [
+      {
+        "key": "BusinessFriendly",
+        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxax-residence-inn-los-angeles-lax-century-boulevard/events/",
+        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
+      }
+    ]
+  }
+]

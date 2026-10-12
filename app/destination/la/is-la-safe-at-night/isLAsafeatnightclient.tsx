@@ -4,6 +4,7 @@ import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import data from "./is-la-safe-at-night.json";
 import styles from "./nightguide.module.css";
+import { laNightHotelAreas, laHotelAreasUrl } from "@/app/lib/laHotelAreas";
 
 const hotelUrl = "/destination/la/hotel?from=is-la-safe-at-night";
 const navLinks = [
@@ -86,6 +87,9 @@ export default function Page() {
             <p>{area.answer}</p><p><strong>Getting back:</strong> {area.planning}</p>
             <p><strong>Where to stay:</strong> {area.hotel}</p>
             <a href={area.sourceUrl}>{area.sourceLabel}</a>
+            {laNightHotelAreas[area.id] && <p><Link href={laHotelAreasUrl(laNightHotelAreas[area.id].areas)}
+              data-track="booking_cta" data-cta-label={laNightHotelAreas[area.id].label}
+              data-cta-placement={`neighborhood_${area.id}`}>{laNightHotelAreas[area.id].label}</Link></p>}
           </section>)}</div>
         </section>
 

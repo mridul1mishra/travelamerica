@@ -52,6 +52,7 @@ next-env.d.ts
 *.md
 !scripts/GOOGLE_PLACES_SETUP.md
 !scripts/MEMBER_AUTH_SETUP.md
+!scripts/LA_HOTELS_SETUP.md
 
 # office temp lock files
 .~lock.*#

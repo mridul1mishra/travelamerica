@@ -351,3 +351,22 @@ test("failed local Google attempts still consume one reservation and never retry
   assert.doesNotMatch(await response.text(), /secret|private|payload/);
   noStore(response);
 });
+
+test("Next dev loopback normalization requires the actual matching Host header", async () => {
+  const { deps, calls } = localFixture();
+  const response = await handleHotelRatingRequest(localRequest({ headers: {
+    origin: "http://127.0.0.1:3000", host: "127.0.0.1:3000",
+  } }), deps);
+  assert.equal(response.status, 200);
+  assert.equal(calls.google.length, 1);
+  for (const host of ["localhost:3000", "attacker.test", "127.0.0.1:4000"]) {
+    const f = localFixture();
+    const rejected = await handleHotelRatingRequest(localRequest({ headers: { origin: "http://127.0.0.1:3000", host } }), f.deps);
+    assert.equal(rejected.status, 403);
+    noExternalCalls(f.calls);
+  }
+  const production = fixture({ config: { ...config, allowedOrigins: ["http://localhost:3000", "http://127.0.0.1:3000"] } });
+  const rejected = await handleHotelRatingRequest(localRequest({ headers: { origin: "http://127.0.0.1:3000", host: "127.0.0.1:3000" } }), production.deps);
+  assert.equal(rejected.status, 403);
+  noExternalCalls(production.calls);
+});

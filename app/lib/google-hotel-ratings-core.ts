@@ -169,7 +169,19 @@ export async function handleHotelRatingRequest(request: Request, deps: HotelRati
   try { requestUrl = new URL(request.url); } catch { return reply({ code: "invalid_request", message: "Invalid request." }, 400); }
   const origin = request.headers.get("origin");
   const fetchSite = request.headers.get("sec-fetch-site");
+  // Next dev can normalize the internal URL to localhost even when the
+  // browser requested 127.0.0.1. Accept only configured loopback aliases with
+  // an exact Host/Origin match; never trust forwarded hosts or production URLs.
+  const loopbackOrigins = ["http://localhost:3000", "http://127.0.0.1:3000"];
+  if (config.localTurnstileBypass === true && origin && loopbackOrigins.includes(origin)
+    && loopbackOrigins.includes(requestUrl.origin) && config.allowedOrigins.includes(origin)
+    && request.headers.get("host") === new URL(origin).host && fetchSite === "same-origin") {
+    requestUrl = new URL(requestUrl.pathname + requestUrl.search, origin);
+  }
   if (!config.allowedOrigins.includes(requestUrl.origin) || origin !== requestUrl.origin || (fetchSite !== null && fetchSite !== "same-origin")) {
+    if (typeof process !== "undefined" && process.env.NODE_ENV === "development") {
+      console.warn("Hotel rating request rejected", { reason: "origin_check", requestOrigin: requestUrl.origin, browserOrigin: origin, fetchSite, configuredOrigin: config.allowedOrigins.includes(requestUrl.origin) });
+    }
     return reply({ code: "forbidden", message: "This request is not allowed." }, 403);
   }
   const localTurnstileBypass = config.localTurnstileBypass === true
@@ -177,6 +189,7 @@ export async function handleHotelRatingRequest(request: Request, deps: HotelRati
   if (!localTurnstileBypass && (!config.turnstileSecretKey || !config.turnstileSiteKey)) return unavailable();
   const userAgent = request.headers.get("user-agent");
   if (!userAgent || /bot\b|crawler|spider|slurp|facebookexternalhit|preview/i.test(userAgent)) {
+    if (typeof process !== "undefined" && process.env.NODE_ENV === "development") console.warn("Hotel rating request rejected", { reason: "user_agent_check" });
     return reply({ code: "forbidden", message: "This request is not allowed." }, 403);
   }
   if (request.headers.get("content-type")?.split(";")[0].trim().toLowerCase() !== "application/json") {
