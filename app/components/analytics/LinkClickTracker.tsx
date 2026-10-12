@@ -70,6 +70,17 @@ export default function LinkClickTracker() {
         source_page: url.searchParams.get("from") || "",
       };
 
+      if (link.dataset.hotelCta === "true" && !isExternal &&
+          ["/destination/nyc/hotel", "/destination/nyc/booking"].includes(url.pathname)) {
+        window.gtag("event", "hotel_cta_click", {
+          page_location: window.location.href,
+          cta_id: link.dataset.ctaId,
+          cta_placement: link.dataset.ctaPlacement,
+          link_url: url.href,
+        });
+        return;
+      }
+
       if (bookingEventName) {
         window.gtag("event", bookingEventName, {
           ...params,

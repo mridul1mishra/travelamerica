@@ -1,6 +1,7 @@
 "use client";
 
 import SafetyHotelCTA from "@/app/components/hotels/SafetyHotelCTA";
+import SafetyArticleTracker from "@/app/components/analytics/SafetyArticleTracker";
 import NeighborhoodHotelLink from "@/app/components/hotels/NeighborhoodHotelLink";
 import Image from "next/image";
 import Link from "next/link";
@@ -150,6 +151,7 @@ export default function Page() {
 
   return (
     <>
+      <SafetyArticleTracker />
       <Header />
       <main className={styles.page}>
         <section className={styles.hero}>
@@ -173,7 +175,8 @@ export default function Page() {
               By <a href="/about" style={{ color: "#1d4ed8", fontWeight: 600, textDecoration: "none" }}>Mridul Mishra</a> · Updated June 2026 · Fact-checked against NYPD &amp; MTA data
             </p>
             <div className={styles.heroActions}>
-              <Link href="/destination/nyc/hotel?from=is-nyc-safe-at-night" className={styles.primaryButton}>
+              <Link href="/destination/nyc/hotel?from=is-nyc-safe-at-night" className={styles.primaryButton}
+                data-hotel-cta="true" data-cta-id="safe-area-hotels-hero" data-cta-placement="hero">
                 See safe-area hotels
               </Link>
               <a href="#subway-safety" className={styles.secondaryButton}>
@@ -214,7 +217,7 @@ export default function Page() {
           </div>
         </section>
 
-        <SafetyHotelCTA source="nyc-safe-at-night" />
+        <SafetyHotelCTA source="nyc-safe-at-night" trackingId="recommended-nyc-hotel-areas" />
 
         <section className={styles.answerBand}>
           <div>
@@ -262,16 +265,16 @@ export default function Page() {
               <article key={item.question} className={styles.scenarioCard}>
                 <h3>{item.question}</h3>
                 <p>{item.answer}</p>
-                <NeighborhoodHotelLink area={item.hotelArea} source="nyc-exact-night-answer" variant="button" />
+                <NeighborhoodHotelLink area={item.hotelArea} source="nyc-exact-night-answer" variant="button" trackingPlacement="exact_night_answers" />
               </article>
             ))}
           </div>
         </section>
 
         <section id="neighborhoods" className={styles.section}>
-          <div className={styles.sectionIntro}>
+          <section id="neighborhood-advice" data-safety-section aria-labelledby="neighborhood-advice-heading" className={styles.sectionIntro}>
             <p className={styles.eyebrow}>Safest neighborhoods at night</p>
-            <h2>Safest NYC neighborhoods after dark</h2>
+            <h2 id="neighborhood-advice-heading">Safest NYC neighborhoods after dark</h2>
             <p>
               The safest-feeling stays are usually close to active streets, subway options, hotels,
               restaurants, and other people. Reputation matters less than the route you will actually
@@ -282,7 +285,7 @@ export default function Page() {
               activity, and official NYPD precinct crime data — not official safety scores. Conditions
               vary block by block.
             </p>
-          </div>
+          </section>
           <div className={styles.neighborhoodGrid}>
             {safeNeighborhoods.map((item) => (
               <article key={item.name} className={styles.zoneCard}>
@@ -290,7 +293,7 @@ export default function Page() {
                 <h3>{item.name}</h3>
                 <p>{item.why}</p>
                 {item.notes ? <p>{item.notes}</p> : null}
-                <NeighborhoodHotelLink area={item.name} source="nyc-night-neighborhood" variant="button" />
+                <NeighborhoodHotelLink area={item.name} source="nyc-night-neighborhood" variant="button" trackingPlacement="safe_neighborhoods" />
               </article>
             ))}
           </div>
@@ -478,7 +481,8 @@ export default function Page() {
               forces long late-night transfers.
             </p>
           </div>
-          <Link href="/destination/nyc/hotel?from=is-nyc-safe-at-night" className={styles.bookingButton}>
+          <Link href="/destination/nyc/hotel?from=is-nyc-safe-at-night" className={styles.bookingButton}
+            data-hotel-cta="true" data-cta-id="safe-area-hotels-bottom" data-cta-placement="bottom_booking_band">
             See safe-area hotels
           </Link>
         </section>

@@ -20,11 +20,14 @@ const areaGroups: Record<string, { areas: string[]; label: string }> = {
   "Financial District": { areas: ["Financial District / Downtown"], label: "Financial District / Downtown" },
 };
 
-export default function NeighborhoodHotelLink({ area, source, variant = "text" }: { area: string; source: string; variant?: "text" | "button" }) {
+export default function NeighborhoodHotelLink({ area, source, variant = "text", trackingPlacement }: { area: string; source: string; variant?: "text" | "button"; trackingPlacement?: string }) {
   const group = areaGroups[area];
   if (!group) return null;
   const params = new URLSearchParams({ from: source, areas: group.areas.join("|") });
-  return <Link href={`/destination/nyc/hotel?${params}`} className={variant === "button" ? styles.button : styles.text} aria-label={`Find hotels in ${group.label}`}>
+  return <Link href={`/destination/nyc/hotel?${params}`} className={variant === "button" ? styles.button : styles.text} aria-label={`Find hotels in ${group.label}`}
+    data-hotel-cta={trackingPlacement ? "true" : undefined}
+    data-cta-id={trackingPlacement ? `${trackingPlacement}-${area.toLowerCase().replace(/[^a-z0-9]+/g, "-")}` : undefined}
+    data-cta-placement={trackingPlacement}>
     <span>{variant === "button" ? `${group.label} hotels` : `Find hotels in ${group.label}`}</span><span aria-hidden="true">→</span>
   </Link>;
 }
