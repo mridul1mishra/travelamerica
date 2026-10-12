@@ -1,5 +1,7 @@
 "use client";
 
+import SafetyHotelCTA from "@/app/components/hotels/SafetyHotelCTA";
+import NeighborhoodHotelLink from "@/app/components/hotels/NeighborhoodHotelLink";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "./components/Header/Header";
@@ -208,6 +210,8 @@ export default function Page() {
           </div>
         </section>
 
+        <SafetyHotelCTA source="nyc-safe-at-night" />
+
         <section className={styles.answerBand}>
           <div>
             <p className={styles.eyebrow}>General visiting safety</p>
@@ -281,6 +285,7 @@ export default function Page() {
                 <h3>{item.name}</h3>
                 <p>{item.why}</p>
                 {item.notes ? <p>{item.notes}</p> : null}
+                <NeighborhoodHotelLink area={item.name} source="nyc-night-neighborhood" />
               </article>
             ))}
           </div>

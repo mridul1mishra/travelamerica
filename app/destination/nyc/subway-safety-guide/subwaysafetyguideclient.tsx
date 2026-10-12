@@ -1,4 +1,5 @@
 "use client"
+import SafetyHotelCTA from "@/app/components/hotels/SafetyHotelCTA";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import type { SubwaySafetyGuide } from "./components/types-subwaySafetyGuide";
@@ -56,6 +57,8 @@ export default function SubwaySafetyGuidePage(){
       <div style={{ width: "min(1100px, calc(100% - 2rem))", margin: "0.5rem auto 0", fontSize: "0.85rem", color: "#475569" }}>
         By <a href="/about" style={{ color: "#1d4ed8", fontWeight: 600, textDecoration: "none" }}>Mridul Mishra</a> · Updated June 2026 · Fact-checked against NYPD &amp; MTA data
       </div>
+
+        <SafetyHotelCTA source="subway-safety-guide" />
 
       <SectionWrapper id="subway-safety-quick-checklist">
         <EmailSignup

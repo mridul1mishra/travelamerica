@@ -1,5 +1,7 @@
 "use client";
 
+import SafetyHotelCTA from "@/app/components/hotels/SafetyHotelCTA";
+import NeighborhoodHotelLink from "@/app/components/hotels/NeighborhoodHotelLink";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "./components/Header/Header";
@@ -238,6 +240,8 @@ export default function NYCSafetyGuideClient() {
           </div>
         </section>
 
+        <SafetyHotelCTA source="nyc-safety-guide" />
+
         <EmailSignup
           source="nyc-safety-guide-hero-checklist"
           city="NYC"
@@ -296,6 +300,7 @@ export default function NYCSafetyGuideClient() {
                 <span>{card.tag}</span>
                 <h3>{card.title}</h3>
                 <p>{card.text}</p>
+                <NeighborhoodHotelLink area={card.title} source="nyc-safety-neighborhood" />
               </article>
             ))}
           </div>

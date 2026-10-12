@@ -10,6 +10,7 @@ import Footer from "@/app/components/Header/Footer/footer";
 import styles from "./BookingClient.module.css";
 import { HOTEL_TAGS, type HotelTag } from "@/app/lib/hotelTags";
 import GoogleHotelRating from "@/app/components/hotels/GoogleHotelRating";
+import NeighborhoodDropdown from "@/app/components/hotels/NeighborhoodDropdown";
 import { useMember } from "@/app/components/auth/MemberProvider";
 
 export type TabKey = "flights" | "hotels" | "activities";
@@ -171,6 +172,11 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
   const [hotelTagFilter, setHotelTagFilter] = useState("all");
   const [hotelTierFilter, setHotelTierFilter] = useState<HotelTier | "all">("all");
   const [hotelSort, setHotelSort] = useState("recommended");
+  const [selectedHotelAreas, setSelectedHotelAreas] = useState<string[] | null>(null);
+  const neighborhoodOptions = Array.from(new Set(hotels.map(hotel => hotel.neighborhood).filter((area): area is string => Boolean(area)))).sort();
+  const linkedHotelAreas = (searchParams.get("areas") ?? "").split("|").filter(area => neighborhoodOptions.includes(area));
+  const requestedHotelAreas = selectedHotelAreas ?? linkedHotelAreas;
+  const hotelAreasKey = requestedHotelAreas.join("|");
   const [activityCategory, setActivityCategory] = useState("all");
   const [activitySort, setActivitySort] = useState("recommended");
   const rail = tabRail[activeTab];
@@ -182,13 +188,14 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
   const showHotelTierFilter = config.category === "hotels" && hotels.some((hotel) => hotel.hotelTier);
   const useOnDemandGoogleRatings = config.onDemandGoogleRatings === true && config.category === "hotels";
   const hasHotelPrices = !useOnDemandGoogleRatings;
-  const hasHotelFilters = (hasHotelPrices && hotelPriceFilter !== "all") || (!useOnDemandGoogleRatings && hotelRatingFilter !== "all") || hotelTagFilter !== "all" || (showHotelTierFilter && hotelTierFilter !== "all");
+  const hasHotelFilters = Boolean(hotelAreasKey) || (hasHotelPrices && hotelPriceFilter !== "all") || (!useOnDemandGoogleRatings && hotelRatingFilter !== "all") || hotelTagFilter !== "all" || (showHotelTierFilter && hotelTierFilter !== "all");
   const activityCategories = useMemo(
     () => Array.from(new Set(activities.map((activity) => activity.category).filter(Boolean))).sort() as string[],
     [activities]
   );
   const filteredHotels = useMemo(() => {
     return hotels
+      .filter((hotel) => !hotelAreasKey || hotelAreasKey.split("|").includes(hotel.neighborhood ?? ""))
       .filter((hotel) => !hasHotelPrices || matchesHotelPrice(hotel.price, hotelPriceFilter))
       .filter((hotel) => useOnDemandGoogleRatings || hotelRatingFilter === "all" || (hotel.rating ?? 0) >= Number(hotelRatingFilter))
       .filter((hotel) => hotelTagFilter === "all" || hotel.tags?.includes(hotelTagFilter as HotelTag))
@@ -199,7 +206,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
         if (!useOnDemandGoogleRatings && hotelSort === "reviews") return (b.reviews ?? 0) - (a.reviews ?? 0);
         return 0;
       });
-  }, [hotelPriceFilter, hotelRatingFilter, hotelTagFilter, hotelTierFilter, hotelSort, hotels, showHotelTierFilter, useOnDemandGoogleRatings, hasHotelPrices]);
+  }, [hotelAreasKey, hotelPriceFilter, hotelRatingFilter, hotelTagFilter, hotelTierFilter, hotelSort, hotels, showHotelTierFilter, useOnDemandGoogleRatings, hasHotelPrices]);
   const filteredActivities = useMemo(() => {
     return activities
       .filter((activity) => activityCategory === "all" || activity.category === activityCategory)
@@ -212,6 +219,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
   }, [activities, activityCategory, activitySort]);
 
   const clearHotelFilters = () => {
+    setSelectedHotelAreas([]);
     setHotelPriceFilter("all");
     setHotelRatingFilter("all");
     setHotelTagFilter("all");
@@ -366,13 +374,16 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
               {activeTab === "hotels" && (
                 <>
                   <h2>Book Hotels in {cityName}</h2>
-                  {config.category === "hotels" && <p>{hotels.length} hotels listed. {useOnDemandGoogleRatings && !member
+                  {config.category === "hotels" && <p>{filteredHotels.length} hotels listed. {useOnDemandGoogleRatings && !member
                     ? hotels.some(hotel => hotel.googleRatingAvailable)
                       ? "Register or sign in to view Google ratings and check hotel prices."
                       : "Register or sign in to check hotel prices."
                     : "Check current rates and availability with the provider."}</p>}
                   {config.category === "hotels" && hotels.some((hotel) => hotel.tags?.includes("NearSubway")) && <p className={styles.tagNote}>Near subway: within 500 metres of a listed MTA entrance in a straight line. Walking distance may be longer; check current entrance access.</p>}
-                  {(!useOnDemandGoogleRatings || showHotelTierFilter || hotels.some(hotel => hotel.tags?.length)) && <div className={styles.filters} aria-label="Hotel filters">
+                  {(!useOnDemandGoogleRatings || showHotelTierFilter || neighborhoodOptions.length > 0 || hotels.some(hotel => hotel.tags?.length)) && <div className={styles.filters} aria-label="Hotel filters">
+                    {config.category === "hotels" && neighborhoodOptions.length > 0 && <NeighborhoodDropdown
+                      options={neighborhoodOptions.map(name => ({ name, count: hotels.filter(hotel => hotel.neighborhood === name).length }))}
+                      selected={requestedHotelAreas} onChange={setSelectedHotelAreas} />}
                     {showHotelTierFilter && <label>
                       Hotel tier
                       <select value={hotelTierFilter} aria-describedby="hotel-tier-note" onChange={(event) => setHotelTierFilter(event.target.value as HotelTier | "all")}>
@@ -426,6 +437,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                     <p role="status">Showing {filteredHotels.length} of {hotels.length} hotels</p>
                     {hasHotelFilters && <button type="button" className={styles.clearFilters} onClick={clearHotelFilters}>Clear filters</button>}
                   </div>}
+                  {config.category === "hotels" && hotelAreasKey && <p>Hotel areas: {requestedHotelAreas.join(" · ")}</p>}
                   <div className={styles.cardGrid}>
                     {filteredHotels.map((hotel) => {
                       const key = hotel.hotelId ?? hotel.hotelSourceId ?? hotel.title;

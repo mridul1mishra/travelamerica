@@ -1,0 +1,13 @@
+.root { position: relative; flex: 1 1 280px; min-width: 0; }
+.label { display: block; margin-bottom: 8px; font-weight: 800; }
+.trigger { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; min-height: 46px; padding: 10px 14px; border: 1px solid #cfd4dc; border-radius: 8px; background: white; color: #172033; font: inherit; font-weight: 700; text-align: left; cursor: pointer; }
+.trigger span:first-child { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.panel { position: absolute; top: calc(100% + 5px); left: 0; right: 0; z-index: 30; padding: 12px; max-height: 420px; overflow-y: auto; border: 1px solid #cfd4dc; border-radius: 8px; background: white; box-shadow: 0 12px 30px #17203326; }
+.panel fieldset { min-width: 0; padding: 0; margin: 8px 0; border: 0; }
+.panel label { display: flex; flex-direction: row; align-items: center; gap: 10px; padding: 9px 4px; font-size: .9rem; cursor: pointer; }
+.panel input { flex: 0 0 auto; width: 18px; height: 18px; accent-color: #98442e; }
+.hint { font-size: .8rem; color: #657083; margin-bottom: 4px; }
+.clear, .done { padding: 8px 10px; border: 0; border-radius: 4px; font: inherit; cursor: pointer; }
+.clear { background: #f5f1eb; color: #172033; width: 100%; text-align: left; }
+.done { background: #98442e; color: white; width: 100%; }
+.root button:focus-visible, .root input:focus-visible { outline: 3px solid #98442e; outline-offset: 3px; }

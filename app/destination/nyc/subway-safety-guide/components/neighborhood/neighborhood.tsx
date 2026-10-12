@@ -1,4 +1,5 @@
 import { useState } from "react";
+import NeighborhoodHotelLink from "@/app/components/hotels/NeighborhoodHotelLink";
 import styles from "./neighborhood.module.css";
 import type { NeighborhoodNote } from "../types-subwaySafetyGuide";
 
@@ -44,6 +45,7 @@ export default function NeighborhoodNotes({ items }: Props) {
 
                 <p className={styles.label}>Transfer Complexity:</p>
                 <p className={styles.text}>{note.transfer_complexity}</p>
+                <NeighborhoodHotelLink area={note.area_name} source="nyc-subway-neighborhood" />
 
                 {note.avoid_times && (
                   <>

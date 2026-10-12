@@ -1,5 +1,6 @@
 "use client";
 
+import SafetyHotelCTA from "@/app/components/hotels/SafetyHotelCTA";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "./components/Header/Header";
@@ -253,6 +254,8 @@ export default function FemaleSoloTravelGuide() {
             </div>
           </div>
         </section>
+
+        <SafetyHotelCTA source="female-solo" />
 
         <EmailSignup
           source="nyc-female-solo-guide-hero-checklist"

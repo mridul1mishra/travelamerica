@@ -301,6 +301,14 @@
   border-radius: 8px;
 }
 
+.neighborhoodChoices { min-width: 0; margin: 18px 0; padding: 16px 20px 20px; border: 1px solid #ddd6cd; border-radius: 12px; background: #faf8f5; }
+.neighborhoodChoices legend { padding: 0 6px; font-weight: 800; color: #172033; }
+.neighborhoodChoices p { margin: 0 0 14px; font-size: .85rem; color: #596579; }
+.neighborhoodOptions { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px 20px; }
+.neighborhoodOptions label { display: flex; align-items: center; gap: 10px; cursor: pointer; font-size: .9rem; }
+.neighborhoodOptions input { flex: 0 0 auto; width: 18px; height: 18px; accent-color: #98442e; }
+.neighborhoodOptions input:focus-visible { outline: 3px solid #98442e; outline-offset: 3px; }
+
 .filters label {
   display: grid;
   gap: 6px;
