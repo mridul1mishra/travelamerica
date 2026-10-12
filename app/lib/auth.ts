@@ -43,6 +43,29 @@ export class MemberAuthUnavailableError extends Error {
   }
 }
 
+/** Report only fixed configuration labels, never values, credentials or URLs. */
+export function memberAuthConfigurationIssues(env: NodeJS.ProcessEnv = process.env): string[] {
+  const issues: string[] = [];
+  if (!env.BETTER_AUTH_SECRET || env.BETTER_AUTH_SECRET.trim().length < 32) issues.push("BETTER_AUTH_SECRET_MISSING_OR_TOO_SHORT");
+  if (!env.BETTER_AUTH_URL) issues.push("BETTER_AUTH_URL_MISSING");
+  else {
+    try { configuredOrigin(env.BETTER_AUTH_URL, env.NODE_ENV === "development" ? "development" : "production"); }
+    catch { issues.push("BETTER_AUTH_URL_INVALID"); }
+  }
+  if (!env.DATABASE_URL) issues.push("DATABASE_URL_MISSING");
+  else {
+    try { if (!["postgres:", "postgresql:"].includes(new URL(env.DATABASE_URL).protocol)) issues.push("DATABASE_URL_INVALID"); }
+    catch { issues.push("DATABASE_URL_INVALID"); }
+  }
+  if (!env.SMTP2GO_API_KEY?.trim()) issues.push("SMTP2GO_API_KEY_MISSING");
+  const fromEmail = env.SMTP2GO_FROM_EMAIL?.trim() || "hello@travelsamericas.com";
+  const fromName = env.SMTP2GO_FROM_NAME?.trim() || "Travels Americas";
+  if (!/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(fromEmail)) issues.push("SMTP2GO_FROM_EMAIL_INVALID");
+  if (fromName.length > 128 || /[\r\n<>]/.test(fromName)) issues.push("SMTP2GO_FROM_NAME_INVALID");
+  if (env.BETTER_AUTH_TRUSTED_ORIGINS) issues.push("BETTER_AUTH_TRUSTED_ORIGINS_UNSUPPORTED");
+  return issues;
+}
+
 function trustedOrigins(environment: MemberAuthConfig["environment"]): string[] {
   return environment === "development"
     ? [...PRODUCTION_ORIGINS, ...DEVELOPMENT_ORIGINS]

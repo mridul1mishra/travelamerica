@@ -3,7 +3,7 @@ import test from "node:test";
 import { memoryAdapter } from "better-auth/adapters/memory";
 import { loadTypescriptModule } from "./load-typescript-module.mjs";
 
-const { createMemberAuth, MemberAuthUnavailableError } = await loadTypescriptModule("../../app/lib/auth.ts", {
+const { createMemberAuth, MemberAuthUnavailableError, memberAuthConfigurationIssues } = await loadTypescriptModule("../../app/lib/auth.ts", {
   resolveImports: true, omitServerOnly: true,
 });
 const secret = "isolated-auth-test-secret-with-at-least-32-characters-7b931e2c";
@@ -11,6 +11,17 @@ const baseURL = "https://www.travelsamericas.com";
 const email = "member@example.test";
 const password = "A test password 42!";
 const nextPassword = "A new test password 53!";
+
+test("configuration diagnostics identify failures without disclosing values", () => {
+  const env = { NODE_ENV: "production", BETTER_AUTH_SECRET: secret, BETTER_AUTH_URL: baseURL,
+    DATABASE_URL: "postgresql://private-user:private-password@example.test/db", SMTP2GO_API_KEY: "private-api-key" };
+  assert.deepEqual(memberAuthConfigurationIssues(env), []);
+  assert.deepEqual(memberAuthConfigurationIssues({ ...env, BETTER_AUTH_URL: "https://www.travelsamericas.com/register" }), ["BETTER_AUTH_URL_INVALID"]);
+  assert.deepEqual(memberAuthConfigurationIssues({ ...env, BETTER_AUTH_SECRET: "short" }), ["BETTER_AUTH_SECRET_MISSING_OR_TOO_SHORT"]);
+  assert.deepEqual(memberAuthConfigurationIssues({ ...env, SMTP2GO_API_KEY: "" }), ["SMTP2GO_API_KEY_MISSING"]);
+  assert.deepEqual(memberAuthConfigurationIssues({ ...env, BETTER_AUTH_TRUSTED_ORIGINS: "private-value" }), ["BETTER_AUTH_TRUSTED_ORIGINS_UNSUPPORTED"]);
+  assert.ok(!JSON.stringify(memberAuthConfigurationIssues({ ...env, DATABASE_URL: "private-password" })).includes("private-password"));
+});
 
 function fixture(overrides = {}) {
   const database = { member_user: [], member_session: [], member_account: [], member_verification: [], member_rate_limit: [] };

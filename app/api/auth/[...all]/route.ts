@@ -1,4 +1,4 @@
-import { getAuth } from "@/app/lib/auth";
+import { getAuth, memberAuthConfigurationIssues } from "@/app/lib/auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -20,11 +20,20 @@ function unavailable(): Response {
 }
 
 async function handle(request: Request): Promise<Response> {
+  let initialized = false;
   try {
-    const response = await getAuth().handler(request);
+    const auth = getAuth();
+    initialized = true;
+    const response = await auth.handler(request);
     // Keep database and mail-provider errors private, including errors handled by the auth router.
-    return response.status >= 500 ? unavailable() : noStore(response);
+    if (response.status >= 500) {
+      console.error("[member-auth] AUTH_HANDLER_FAILURE");
+      return unavailable();
+    }
+    return noStore(response);
   } catch {
+    const issues = memberAuthConfigurationIssues();
+    console.error("[member-auth]", issues.length ? issues.join(", ") : initialized ? "AUTH_HANDLER_FAILURE" : "AUTH_INITIALIZATION_FAILURE");
     return unavailable();
   }
 }
