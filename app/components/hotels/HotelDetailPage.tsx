@@ -49,7 +49,7 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
           {hotel.address && <p>{hotel.address}</p>}
           {hotel.googleRatingAvailable && hotel.hotelId && <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={hotel.googleMapsUrl} />}
           <HotelPriceLink hotelId={hotel.hotelId!} className={styles.button} />
-          <p className={styles.note}>Sign in to search hotel prices for your dates and guests. Prices can change before booking.</p>
+          <p className={styles.note}>Sample prices are for one adult staying one night, checking in 15 days from today. Prices can change before booking.</p>
         </div>
         <Image className={styles.photo} src={hotel.img} alt={hotel.title} width={720} height={600} unoptimized />
       </div>

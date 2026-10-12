@@ -13,6 +13,7 @@ import GoogleHotelRating from "@/app/components/hotels/GoogleHotelRating";
 import HotelFilterPanel from "@/app/components/hotels/HotelFilterPanel";
 import HotelFilterGroup from "@/app/components/hotels/HotelFilterGroup";
 import { useMember } from "@/app/components/auth/MemberProvider";
+import HotelPriceLink from "@/app/components/hotels/HotelPriceLink";
 
 export type TabKey = "flights" | "hotels" | "activities";
 export type HotelTier = "Standard" | "Premium" | "Luxury";
@@ -567,7 +568,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                           <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={hotel.googleMapsUrl} />
                         </div>}
                         <div className={`${styles.hotelFooterLink} ${styles.cardFooter}`}>
-                          <a {...linkProps}><strong>See prices</strong></a>
+                          {hotel.hotelId && <HotelPriceLink hotelId={hotel.hotelId} />}
                           <a href={`/destination/${hotel.city}/hotel/${hotel.hotelId}`}>View hotel</a>
                         </div>
                       </article> : <a className={styles.bookingCard} key={key} {...linkProps}>

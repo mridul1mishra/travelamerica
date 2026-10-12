@@ -2,7 +2,8 @@ import { getMemberSession } from "@/app/lib/auth";
 import { getHotelPriceIdentity } from "@/app/lib/hotels";
 import { MEMBER_NO_STORE_HEADERS, validHotelId } from "@/app/lib/member-hotel-access";
 import { memberSignInUrl } from "@/app/lib/member-access";
-import { lookupHotelPrices, priceCacheKey, validateStay } from "@/app/lib/serpapi-hotel-prices";
+import { lookupHotelPrices, priceCacheKey } from "@/app/lib/serpapi-hotel-prices";
+import { defaultHotelPriceStay } from "@/app/lib/hotel-price-stay";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -12,7 +13,9 @@ export async function GET(request: Request, context: { params: Promise<{ hotelId
   const { hotelId } = await context.params;
   if (!validHotelId(hotelId)) return new Response("Hotel not found.", { status: 404 });
   const member = await getMemberSession(request.headers);
-  const destination = member ? `/hotel-prices/${hotelId}` : memberSignInUrl(`/api/hotel-prices/${hotelId}`, "prices");
+  const hotel = member ? await getHotelPriceIdentity(hotelId) : null;
+  if (member && !hotel) return new Response("Hotel not found.", { status: 404, headers: MEMBER_NO_STORE_HEADERS });
+  const destination = hotel ? `/destination/${hotel.city}/hotel/${hotelId}?prices=1` : memberSignInUrl(`/api/hotel-prices/${hotelId}`, "prices");
   return new Response(null, { status: 303, headers: { ...MEMBER_NO_STORE_HEADERS, Location: destination } });
 }
 
@@ -24,9 +27,7 @@ export async function POST(request: Request, context: { params: Promise<{ hotelI
   const { hotelId } = await context.params;
   if (!validHotelId(hotelId)) return reply({ message: "Hotel not found." }, 404);
   if (!process.env.SERPAPI_API_KEY) return reply({ message: "Hotel pricing is not configured yet." }, 503);
-  let stay;
-  try { stay = validateStay(await request.json()); }
-  catch { return reply({ message: "Choose valid dates (up to 30 nights), 1–6 adults, and child ages from 1–17." }, 400); }
+  const stay = defaultHotelPriceStay();
   try {
     const hotel = await getHotelPriceIdentity(hotelId);
     if (!hotel) return reply({ message: "Hotel not found." }, 404);
@@ -34,6 +35,6 @@ export async function POST(request: Request, context: { params: Promise<{ hotelI
     const query = `${hotel.name} ${hotel.address ?? cities[hotel.city]}`;
     const result = await lookupHotelPrices(priceCacheKey(hotelId, query, stay), query, stay, member.user.id);
     if (!result) return reply({ message: "The price lookup limit has been reached. Please try again later." }, 429);
-    return reply(result);
+    return reply({ ...result, stay });
   } catch { return reply({ message: "Pricing is temporarily unavailable. Please try again later." }, 503); }
 }
