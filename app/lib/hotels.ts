@@ -89,3 +89,11 @@ export async function getHotelBookingUrl(hotelId: string): Promise<string | null
 }
 
 export function getNycHotels(tag?: HotelTag) { return getCityHotels("nyc", tag); }
+
+export async function getHotelPriceIdentity(hotelId: string) {
+  for (const city of ["nyc", "la", "orlando", "lasvegas"] as HotelCity[]) {
+    const hotel = (await getCityHotels(city)).find(h => h.hotelId === hotelId);
+    if (hotel) return { name: hotel.title, address: hotel.address, city };
+  }
+  return null;
+}

@@ -23,6 +23,7 @@ const pool = new Pool({
 });
 
 const migrations = [
+  { name: "create_hotel_price_limits", sql: readFileSync(new URL("./hotel-price-limits-schema.sql", import.meta.url), "utf8") },
   { name: "create_cities_table", sql: readFileSync(new URL("./cities-schema.sql", import.meta.url), "utf8") },
   { name: "seed_cities", sql: readFileSync(new URL("./cities-seed.sql", import.meta.url), "utf8") },
   { name: "create_neighborhoods_table", sql: readFileSync(new URL("./neighborhoods-schema.sql", import.meta.url), "utf8") },

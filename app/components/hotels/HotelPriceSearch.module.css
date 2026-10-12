@@ -1,0 +1,8 @@
+.main { max-width: 800px; margin: 48px auto; padding: 24px; color: #172e39; }
+.main h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.form { display: grid; gap: 16px; padding: 24px; background: #f3f7f8; border-radius: 16px; margin: 24px 0; }
+.form label { display: grid; gap: 8px; font-weight: 600; }
+.form input { padding: 12px; border: 1px solid #71858e; border-radius: 6px; font: inherit; min-width: 0; }
+.form button { padding: 14px; background: #126272; color: white; border: 0; border-radius: 8px; font: inherit; cursor: pointer; }
+.form button:disabled { opacity: .65; cursor: wait; }
+.result { padding: 16px 24px; border: 1px solid #ccd9df; border-radius: 12px; margin: 16px 0; }
