@@ -1,95 +1,30 @@
-"use client"
-import HeroSafety from "./components/hero/hero";
-import SafetyMeter from "./components/SafetyMeter/SafetyMeter";
-import NeighborhoodSafetyGrid from "./components/NeighborhoodSafetyGrid/NeighborhoodSafetyGrid";
-import ScenarioCards from "./components/ScenarioCards/ScenarioCards";
-import PersonaSafetyBlocks from "./components/PersonaSafetyBlocks/PersonaSafetyBlocks";
-import CorePrinciples from "./components/CorePrinciples/CorePrinciples";
-import TransitSafety from "./components/TransitSafety/TransitSafety";
-import NeighborhoodCards from "./components/NeighborhoodCards/NeighborhoodCards";
-import EmergencyBlock from "./components/EmergencyBlock/EmergencyBlock";
-import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
-import InterlinkingGrid from "./components/InterlinkingGrid/InterlinkingGrid";
-import TrustBlock from "./components/TrustBlock/TrustBlock";
-import SectionWrapper from "./Sectionwrapper";
+import Image from "next/image";
+import BackToTop from "@/app/components/BackToTop";
+import Link from "next/link";
+import Header from "@/app/components/destination/header/header";
+import Footer from "@/app/components/Header/Footer/footer";
 import data from "./is-orlando-safe-at-night.json";
+import styles from "./nightguide.module.css";
+const hotelUrl = "/destination/orlando/hotel?from=is-orlando-safe-at-night";
+const contents = [["night-safety","The short answer"],["neighborhoods","Evenings by area"],["where-to-stay","Choose your hotel base"],["hotel-checklist","Before you book"],["getting-back","Getting back"],["evening-outings","Evening outings"],["travelers","Traveler scenarios"],["faq","FAQs"]];
+const related = [["best-areas-to-stay","Best areas to stay in Orlando"],["neighborhood-guide","Orlando neighborhood guide"],["getting-to-orlando","Getting to Orlando and airport transport"],["things-to-do","Things to do in Orlando"],["orlando-female-solo-travel-guide","Orlando guide for solo women"],["safety-guide","Orlando safety guide"],["itinerary","Plan your Orlando itinerary"]];
+function HotelLink({placement,children}:{placement:string;children:React.ReactNode}) {return <Link href={hotelUrl} className={styles.button} data-track="booking_cta" data-cta-label="Compare Orlando hotel locations" data-cta-placement={placement}>{children}</Link>;}
+function Comparison({rows,caption,headers}:{rows:string[][];caption:string;headers:string[]}) {return <div className={styles.tableScroll} role="region" aria-label={caption} tabIndex={0}><table><caption>{caption}</caption><thead><tr>{headers.map(h=><th scope="col" key={h}>{h}</th>)}</tr></thead><tbody>{rows.map(row=><tr key={row[0]}><th scope="row">{row[0]}</th>{row.slice(1).map((cell,i)=><td key={i} data-label={headers[i+1]}>{cell}</td>)}</tr>)}</tbody></table></div>;}
+export default function IsOrlandoSafeAtNightClient(){return <>
+ <Header links={related.slice(0,4).map(([path,label])=>({href:`/destination/orlando/${path}`,label}))}/>
+ <main className={styles.page}><article>
+ <header className={styles.hero}><div><nav className={styles.breadcrumb} aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/destination/orlando">Orlando</Link><span>/</span><span>Night safety</span></nav><p className={styles.eyebrow}>Hotel locations and evening returns</p><h1 id="orlando-night-title" tabIndex={-1}>{data.title}</h1><p className={styles.lead}>{data.lead}</p><div className={styles.actions}><HotelLink placement="hero">Compare Orlando hotel locations</HotelLink><a href="#neighborhoods">Explore the areas</a></div></div><Image src={data.heroImage} alt="Orlando travel destination" width={800} height={600} priority className={styles.heroImage}/></header>
+ <nav className={styles.contents} aria-label="Article contents">{contents.map(([id,label])=><a key={id} href={`#${id}`}>{label}</a>)}</nav>
+ <section id="night-safety" className={styles.section}><h2>Is Orlando safe at night for tourists?</h2><p>There is no useful blanket yes or no for the whole Orlando tourism region. An evening can involve a compact resort setting, a city event, or a hotel separated from restaurants by a large road. Plan around the destination, the exact hotel address and the final part of the journey back.</p><div className={styles.twoColumns}><div><h3>What the safety question includes</h3><p>Think about theft precautions, road crossings, waiting for transport and unfamiliar walking routes as well as personal safety. Keep valuables out of view, use the venue’s transport instructions and decide on a return before leaving the hotel. These precautions do not establish how common a particular incident is.</p></div><div><h3>Why “Orlando” needs some geographic context</h3><p>Downtown Orlando, Lake Buena Vista, Bay Lake, Winter Park and Kissimmee are not the same jurisdiction. A postal address or a citywide crime figure cannot describe every hotel marketed as an Orlando stay. This guide does not rank districts by safety or assign numerical safety scores.</p></div></div><p>For broader preparation, read our <Link href="/destination/orlando/safety-guide">Orlando safety guide</Link>.</p></section>
+ <section id="neighborhoods" className={styles.section}><h2>International Drive, Downtown and other Orlando areas after dark</h2><p>Compare hotel areas around the outings you are planning. Our <Link href="/destination/orlando/neighborhood-guide">Orlando neighborhood guide</Link> provides broader orientation; the return checks below focus on evenings.</p><div className={styles.areaList}>{data.areas.map(area=><section key={area.id} id={area.id} className={styles.area}><h3>{area.title}</h3><p>{area.advice}</p><p><strong>Getting back:</strong> {area.returnAdvice}</p><p><strong>Hotel location:</strong> {area.hotelAdvice}</p></section>)}</div><Comparison caption="Compare evening plans and hotel-location checks" headers={["Hotel area","Evening focus","Check before booking"]} rows={data.areas.map(area=>[area.title,area.hotelAdvice,area.returnAdvice])}/><aside className={styles.hotelCta}><h3>Start with the nights you will actually have</h3><p>Compare hotel addresses around your most frequent evening destination, then confirm each property’s transport and parking arrangements.</p><HotelLink placement="after_neighborhoods">Find an Orlando hotel for your plans</HotelLink></aside></section>
+ <section id="where-to-stay" className={styles.section}><h2>Where should you stay if you plan to go out at night?</h2><p>A hotel that makes your repeated returns simpler can be more useful than a lower room rate with extra transfers. Compare location, transport costs and time together. Our <Link href="/destination/orlando/best-areas-to-stay">best areas to stay in Orlando</Link> guide can help with the wider accommodation decision.</p><Comparison caption="Choose a hotel base around your itinerary" headers={["Your plans","Hotel-base considerations","What to verify"]} rows={data.bases}/><h3>For a trip without a rental car</h3><p>Concentrate evening outings where practical. A documented resort or hotel connection may help, while public transport can involve changes and a final walk. Price a late-return fallback into the trip rather than assuming a shuttle covers every destination. Use our <Link href="/destination/orlando/itinerary">Orlando itinerary</Link> to group your plans.</p><HotelLink placement="hotel_base">Compare hotel locations and transport needs</HotelLink></section>
+ <section id="hotel-checklist" className={styles.section}><h2>What should you check before booking an Orlando hotel?</h2><p>Area advice cannot establish an individual hotel’s amenities. Confirm these details with the property for your room type and travel dates.</p><ul>{data.checklist.map(text=><li key={text}>{text}</li>)}</ul></section>
+ <section id="getting-back" className={styles.section}><h2>How should you get back to your hotel after dark?</h2>{data.transport.map(([title,text])=><div key={title}><h3>{title}</h3><p>{text}</p></div>)}<p>Check current <a href="https://www.golynx.com/maps-schedules/routes-schedules.stml">LYNX routes and schedules</a> and <a href="https://sunrail.com/">SunRail service</a> for the day you travel. For late airport arrivals, see <Link href="/destination/orlando/getting-to-orlando">getting to Orlando</Link> and <a href="https://flymco.com/ground-transportation/hotel-shuttles/">MCO’s hotel-shuttle information</a>.</p></section>
+ <section id="evening-outings" className={styles.section}><h2>Plan the return before these popular evening outings</h2><p>Use our <Link href="/destination/orlando/things-to-do">Orlando things-to-do guide</Link> to choose outings, then check the return for the date and property. Seasonal events can finish differently from an ordinary park day.</p><Comparison caption="Evening outings and return checks" headers={["Outing","Return options to investigate","Confirm before leaving"]} rows={data.outings}/><p>For convention visits, the <a href="https://www.occc.net/Attendee-Getting-Here">OCCC getting-here guide</a> explains pedestrian connections and transport. For Disney visits, check <a href="https://disneyworld.disney.go.com/guest-services/parking/">Disney’s current parking and transport information</a>. Confirm exact pickup locations with the attraction; this guide does not assume one fixed pickup point or last service time.</p></section>
+ <section id="travelers" className={styles.section}><h2>What changes for families, solo travelers and accessible trips?</h2><div className={styles.twoColumns}>{data.personas.map(([title,text])=><div key={title}><h3>{title}</h3><p>{text}</p></div>)}</div><p>For more scenario-specific planning, read our <Link href="/destination/orlando/orlando-female-solo-travel-guide">Orlando guide for solo women</Link> or <Link href="/destination/orlando/solo-trip-to-orlando">solo Orlando trip guide</Link>.</p></section>
+ <section id="faq" className={`${styles.section} ${styles.faq}`}><h2>FAQs about Orlando at night</h2>{data.faq.map(faq=><details key={faq.question}><summary><h3>{faq.question}</h3></summary><p>{faq.answer}</p></details>)}</section>
+ <aside className={styles.hotelCta}><h2>Choose a hotel that makes your evening return simpler</h2><p>Start with location, then verify the shuttle, walking route, parking and room arrangements that matter to your trip.</p><HotelLink placement="article_end">Browse Orlando hotels</HotelLink></aside>
+ <nav className={styles.related} aria-label="Related Orlando guides">{related.map(([path,label])=><Link key={path} href={`/destination/orlando/${path}`}>{label}</Link>)}</nav>
+ </article></main><BackToTop/><Footer/>
+ </>;}
 
-import Header from "./components/Header/header";
-import Footer from "./components/Footer/footer";
-import BookingCTA from './components/BookingCTA/BookingCTA';
-
-const navLinks = [
-  { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
-  { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
-  { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
-  { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
-];
-
-export default function IsOrlandoSafeAtNightClient() {
-  return (
-    <>
-      <Header links={navLinks} />
-      <BookingCTA variant="slim" text="Book your Orlando trip â†’" href="/destination/orlando/bookings?tab=hotels&from=is-orlando-safe-at-night" label="See safe-area hotels" />
-
-      {/* 1. Hero Section */}
-      <HeroSafety {...data.heroSafety} />
-
-      {/* 2. Safety Verdict Snapshot */}
-      <SectionWrapper id="safetyMeter">
-        <SafetyMeter {...data.safetyMeter} />
-      </SectionWrapper>
-
-      {/* 3. Neighborhood Safety Grid */}
-      <SectionWrapper id="neighborhoods">
-        <NeighborhoodSafetyGrid neighborhoods={data.neighborhoodSafetyGrid} />
-      </SectionWrapper>
-
-      {/* 4. Night Scenarios */}
-      <SectionWrapper id="scenarios">
-        <ScenarioCards scenarios={data.scenarioCards} />
-      </SectionWrapper>
-
-      {/* 5. Persona-Driven Safety Advice */}
-      <SectionWrapper id="personas">
-        <PersonaSafetyBlocks personas={data.personaSafetyBlocks} />
-      </SectionWrapper>
-
-      {/* 6. Core Safety Principles */}
-      <SectionWrapper id="principles">
-        <CorePrinciples principles={data.corePrinciples} />
-      </SectionWrapper>
-
-      {/* 6. Transit Safety */}
-      <SectionWrapper id="transitSafety">
-        <TransitSafety {...data.transitSafety} />
-      </SectionWrapper>
-
-      {/* 7. Neighborhood Deep Dives */}
-      <SectionWrapper id="neighborhoodCards">
-        <NeighborhoodCards neighborhoods={data.neighborhoodCards} />
-      </SectionWrapper>
-
-      {/* 8. Emergency Resources */}
-      <SectionWrapper id="emergencyBlock">
-        <EmergencyBlock {...data.emergencyBlock} />
-      </SectionWrapper>
-
-      {/* 9. FAQ */}
-      <SectionWrapper id="faq">
-        <FAQAccordion faqs={data.faq} />
-      </SectionWrapper>
-
-      {/* 10. Internal Linking */}
-      <SectionWrapper id="links">
-        <InterlinkingGrid links={data.interlinkingGrid} />
-      </SectionWrapper>
-
-      {/* 11. Trust Block */}
-      <SectionWrapper id="trustBlock">
-        <TrustBlock {...data.trustBlock} />
-      </SectionWrapper>
-      <BookingCTA variant="full" text="Book a safe, centrally located hotel in Orlando" href="/destination/orlando/bookings?tab=hotels&from=is-safe-at-night" label="Book your trip" />
-      <Footer />
-    </>
-  );
-}

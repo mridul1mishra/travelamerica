@@ -1,0 +1,3 @@
+.button { position: fixed; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); z-index: 50; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid #fff; border-radius: 50%; background: #164c65; color: #fff; box-shadow: 0 4px 14px #18243333; cursor: pointer; }
+.button:hover { background: #0f3548; }
+.button:focus-visible { outline: 3px solid #ba760f; outline-offset: 4px; }

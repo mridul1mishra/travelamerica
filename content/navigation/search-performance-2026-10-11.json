@@ -1,0 +1,98 @@
+{
+  "source": "travelsamericas.com-Performance-on-Search-2026-10-11.xlsx",
+  "searchType": "Web",
+  "startDate": "2026-07-10",
+  "endDate": "2026-10-09",
+  "calendarQuarter": false,
+  "method": "Top four existing city routes ranked by clicks descending, impressions descending, then path ascending. No reserved menu slots.",
+  "rankings": {
+    "nyc": [
+      {
+        "href": "/destination/nyc/is-nyc-safe-at-night",
+        "clicks": 190,
+        "impressions": 34481
+      },
+      {
+        "href": "/destination/nyc/nyc-safety-guide",
+        "clicks": 130,
+        "impressions": 22656
+      },
+      {
+        "href": "/destination/nyc/subway-safety-guide",
+        "clicks": 15,
+        "impressions": 4193
+      },
+      {
+        "href": "/destination/nyc/solo-trip-to-nyc",
+        "clicks": 9,
+        "impressions": 1521
+      }
+    ],
+    "la": [
+      {
+        "href": "/destination/la/metro-safety-guide",
+        "clicks": 125,
+        "impressions": 9595
+      },
+      {
+        "href": "/destination/la/is-la-safe-at-night",
+        "clicks": 83,
+        "impressions": 9440
+      },
+      {
+        "href": "/destination/la/la-female-solo-travel-guide",
+        "clicks": 46,
+        "impressions": 2323
+      },
+      {
+        "href": "/destination/la",
+        "clicks": 2,
+        "impressions": 1008
+      }
+    ],
+    "lasvegas": [
+      {
+        "href": "/destination/lasvegas/is-lasvegas-safe-at-night",
+        "clicks": 31,
+        "impressions": 5062
+      },
+      {
+        "href": "/destination/lasvegas/lasvegas-female-solo-travel-guide",
+        "clicks": 27,
+        "impressions": 1455
+      },
+      {
+        "href": "/destination/lasvegas/food",
+        "clicks": 7,
+        "impressions": 923
+      },
+      {
+        "href": "/destination/lasvegas/solo-trip-to-lasvegas",
+        "clicks": 4,
+        "impressions": 192
+      }
+    ],
+    "orlando": [
+      {
+        "href": "/destination/orlando/orlando-female-solo-travel-guide",
+        "clicks": 7,
+        "impressions": 298
+      },
+      {
+        "href": "/destination/orlando/safety-guide",
+        "clicks": 5,
+        "impressions": 286
+      },
+      {
+        "href": "/destination/orlando/is-orlando-safe-at-night",
+        "clicks": 2,
+        "impressions": 593
+      },
+      {
+        "href": "/destination/orlando",
+        "clicks": 0,
+        "impressions": 1011
+      }
+    ]
+  }
+}

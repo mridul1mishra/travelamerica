@@ -1,163 +1,225 @@
 {
-  "heroSafety": {
-    "title": "Is Orlando Safe at Night for Solo Travelers?",
-    "subtitle": "Orlando's tourist corridors are safe at night when you stay in well-lit, busy areas and use rideshare for getting around after dark.",
-    "heroImage": "/data/majorcities/orlando/assets/orlando.webp",
-    "trustBadges": ["🛡️Local Insights", "👣Traveler Patterns", "📊Tourist-Area Focus"]
-  },
-
-  "safetyMeter": {
-    "overallRating": "Safe in Tourist Areas with Smart Precautions",
-    "meterScore": 7,
-    "quickSummary": "Orlando's tourist zones — International Drive, Disney Springs, Universal CityWalk, and Downtown's main strips — stay busy and patrolled at night. Risk rises off the beaten path and in quiet parking areas late at night.",
-    "bestFor": ["Solo women", "First-time visitors", "Families"],
-    "avoidIf": ["You plan to walk long distances between areas after dark", "You expect walkable, transit-first nightlife", "You are uneasy in large theme-park crowds"]
-  },
-
-  "neighborhoodSafetyGrid": [
-    { "name": "International Drive (I-Drive)", "safetyLevel": "Safe", "why": "Busy tourist corridor, well-lit, steady foot traffic and security.", "bestTimeToVisit": "Anytime", "avoidAfter": null, "notes": "Stay on the main drive; watch belongings in crowds." },
-    { "name": "Disney Springs / Lake Buena Vista", "safetyLevel": "Safe", "why": "Heavily staffed and surveilled retail-and-dining district.", "bestTimeToVisit": "Anytime", "avoidAfter": null, "notes": null },
-    { "name": "Universal CityWalk", "safetyLevel": "Safe", "why": "Gated entertainment complex with strong security presence.", "bestTimeToVisit": "Anytime", "avoidAfter": null, "notes": null },
-    { "name": "Lake Eola / Thornton Park", "safetyLevel": "Safe", "why": "Walkable downtown park district, popular and well-lit in the evening.", "bestTimeToVisit": "Evening", "avoidAfter": null, "notes": null },
-    { "name": "Winter Park", "safetyLevel": "Safe", "why": "Upscale, quiet, low crime around Park Avenue.", "bestTimeToVisit": "Evening", "avoidAfter": null, "notes": null },
-    { "name": "Downtown Orlando (Church Street)", "safetyLevel": "Mixed", "why": "Lively nightlife; crowds get rowdier after bars close.", "bestTimeToVisit": "Evening", "avoidAfter": "2 AM", "notes": "Plan your ride home before closing time." },
-    { "name": "Mills 50 / Milk District", "safetyLevel": "Mixed", "why": "Trendy local nightlife with quieter, uneven side streets.", "bestTimeToVisit": "Evening", "avoidAfter": "1 AM", "notes": null },
-    { "name": "Kissimmee (US-192)", "safetyLevel": "Mixed", "why": "Long budget-hotel corridor; fine near attractions, quieter stretches less so at night.", "bestTimeToVisit": "Evening", "avoidAfter": "Midnight", "notes": "A car or rideshare is essential here." },
-    { "name": "SoDo / South Orange Ave", "safetyLevel": "Mixed", "why": "Mostly commercial; calm by day, sparse foot traffic at night.", "bestTimeToVisit": "Daytime", "avoidAfter": "Midnight", "notes": null },
-    { "name": "Orange Blossom Trail (OBT) corridor", "safetyLevel": "Avoid Late", "why": "Higher reported crime and low foot traffic; not a tourist area.", "bestTimeToVisit": "Daytime", "avoidAfter": "Sunset", "notes": null },
-    { "name": "Pine Hills", "safetyLevel": "Avoid Late", "why": "Residential area with higher crime statistics; no tourist reason to visit at night.", "bestTimeToVisit": "Daytime", "avoidAfter": "Sunset", "notes": null },
-    { "name": "Parramore (west of downtown)", "safetyLevel": "Avoid Late", "why": "Quiet residential blocks with limited nighttime activity.", "bestTimeToVisit": "Daytime", "avoidAfter": "Sunset", "notes": null }
-  ],
-
-  "scenarioCards": [
+  "title": "Is Orlando Safe at Night? Where to Stay and How to Get Back",
+  "heroImage": "/data/majorcities/orlando/assets/orlando.webp",
+  "modified": "2026-10-12",
+  "lead": "Orlando evenings are easier to plan when your hotel, outing and return journey work together. Conditions vary by location and route: a resort bus, a connected convention hotel and a walk across a long commercial corridor are different situations. Choose your base around the nights you will actually have.",
+  "areas": [
     {
-      "title": "Walking I-Drive or a Park Area After Dark",
-      "riskLevel": "Low",
-      "whatToExpect": "Main tourist strips stay busy and lit; side streets and parking lots get quiet.",
-      "howToStaySafe": ["Stay on the main, lit drive", "Avoid cutting through empty lots", "Walk with purpose", "Keep your phone accessible"],
-      "bestFor": "Solo women, first-timers",
-      "avoidIf": "You need to cover long distances on foot"
+      "id": "international-drive-universal",
+      "title": "International Drive near Universal",
+      "advice": "This part of International Drive puts Universal visits, restaurants and shopping within the same broad area. That does not make every nearby hotel walkable to the resort: an entrance can be across a multilane road or beyond a large parking parcel.",
+      "returnAdvice": "Check the full pedestrian route or the hotel’s documented shuttle. Confirm whether the final service runs after your dinner or event, and have a taxi or rideshare fallback.",
+      "hotelAdvice": "Compare the hotel entrance with your intended destination, rather than relying on a “near Universal” label."
     },
     {
-      "title": "Driving & Parking at Night",
-      "riskLevel": "Moderate",
-      "whatToExpect": "Orlando is car-centric; you'll use garages and large lots after dark.",
-      "howToStaySafe": ["Park in well-lit, attended garages", "Never leave valuables visible in the car", "Have keys ready before you reach the car", "Note your parking spot to avoid wandering"],
-      "bestFor": "Road-trippers, families",
-      "avoidIf": "You would rather not drive at night"
+      "id": "convention-center",
+      "title": "International Drive and the convention-center district",
+      "advice": "The Orange County Convention Center documents pedestrian bridges to adjoining hotels, marked crossings and designated rideshare points. A bridge-connected property has a different return route from a hotel elsewhere in the district.",
+      "returnAdvice": "Check which convention building and concourse your event uses. Confirm the bridge or crossing you need, and follow the event’s pickup instructions.",
+      "hotelAdvice": "For conventions and repeated evening networking, compare the actual connection to your event building."
     },
     {
-      "title": "Using Rideshare Late",
-      "riskLevel": "Low",
-      "whatToExpect": "Uber and Lyft are widely available and the easiest way around at night.",
-      "howToStaySafe": ["Verify the plate, car, and driver photo", "Wait inside a lobby until it arrives", "Sit in the back and share your trip", "Confirm who they're picking up before saying your name"],
-      "bestFor": "Nightlife travelers, solo visitors",
-      "avoidIf": "You're on a very tight budget"
+      "id": "seaworld",
+      "title": "SeaWorld and southern International Drive",
+      "advice": "A SeaWorld-area address can suit park visits and evening events, but the last part of the journey still depends on the property. Nearby roads and crossings deserve the same attention as the distance on a map.",
+      "returnAdvice": "Check the event date, park transport and the hotel’s final shuttle separately. Do not assume a regular park-day service continues until a special event ends.",
+      "hotelAdvice": "Choose a property with a return arrangement you can verify for the dates of your visit."
     },
     {
-      "title": "Exploring Downtown Nightlife",
-      "riskLevel": "Mixed",
-      "whatToExpect": "Church Street and Wall Street Plaza get crowded and rowdier near closing.",
-      "howToStaySafe": ["Keep drinks in sight at all times", "Stay in the busy, staffed venues", "Avoid quiet side streets after leaving a bar", "Arrange your ride home before midnight"],
-      "bestFor": "Social explorers",
-      "avoidIf": "You prefer quiet, low-key evenings"
+      "id": "universal-resort",
+      "title": "Universal Orlando Resort hotels",
+      "advice": "Universal has a resort hotel and transport network. The useful question is which connection your specific property offers, rather than whether all Universal hotels share the same walking path, boat or bus.",
+      "returnAdvice": "Confirm the transport mode, destination and operating arrangements for your hotel, including evening events.",
+      "hotelAdvice": "A Universal-focused base can simplify repeated park and CityWalk visits when the property’s transport matches your plans."
+    },
+    {
+      "id": "disney-springs",
+      "title": "Disney Springs and Lake Buena Vista",
+      "advice": "Disney Springs is an evening dining, shopping and entertainment destination. Nearby off-site hotels and Disney Resort hotels can have different transport arrangements; being in the Disney area does not establish eligibility for every resort service.",
+      "returnAdvice": "Check whether your hotel’s transport actually serves Disney Springs, whether you must reserve a seat and how you will return later.",
+      "hotelAdvice": "For repeated Disney Springs evenings, compare the exact route and documented service from each hotel."
+    },
+    {
+      "id": "disney-resorts",
+      "title": "Walt Disney World Resort hotels",
+      "advice": "Disney Resort guests have access to Disney’s resort transport system, with modes and destinations varying by resort. This is a practical accommodation advantage for a Disney-heavy itinerary, rather than a guarantee about every journey.",
+      "returnAdvice": "Identify your route before the evening show ends. Check transport for your resort, park and event date, including any changes or transfers.",
+      "hotelAdvice": "Compare the resort’s actual transport connections with the parks and evening destinations you will visit most."
+    },
+    {
+      "id": "downtown",
+      "title": "Downtown Orlando and Lake Eola",
+      "advice": "Downtown suits an itinerary built around dining, performances, sports and other city events. The venue exit, hotel block and event-night conditions matter more than a blanket label for the whole district.",
+      "returnAdvice": "Check the last useful bus or train before going out. If service does not fit the event finish, plan a taxi, rideshare or parking return.",
+      "hotelAdvice": "A nearby hotel can reduce repeated cross-region journeys when several evenings are spent Downtown."
+    },
+    {
+      "id": "winter-park",
+      "title": "Winter Park and Park Avenue",
+      "advice": "Winter Park is a separate municipality. Its central dining and shopping core should not be treated as equivalent to every hotel with a Winter Park address, especially where a major road separates the hotel from the outing.",
+      "returnAdvice": "Check the hotel-to-restaurant route and current train service. Keep a separate plan for an evening that ends after the last useful connection.",
+      "hotelAdvice": "Compare proximity to the Park Avenue core and station with the actual hotel entrance."
+    },
+    {
+      "id": "airport",
+      "title": "Orlando International Airport hotels",
+      "advice": "Airport hotels can be useful for a late arrival or early flight. An airport-area address does not mean you can walk from the terminal, and not every property operates a complimentary shuttle.",
+      "returnAdvice": "Save the hotel’s shuttle contact, service hours and terminal instructions. Use MCO’s official ground-transport information if a shuttle is unavailable.",
+      "hotelAdvice": "Consider an airport night for flight logistics; assess theme-park journeys separately before making it your whole-trip base."
+    },
+    {
+      "id": "kissimmee",
+      "title": "Kissimmee and the US-192 corridor",
+      "advice": "Kissimmee and the wider US-192 lodging corridor are not one compact Orlando neighborhood. The precise address affects restaurant access, bus connections and the distance to your park or evening destination.",
+      "returnAdvice": "Check the actual stop, road crossing and hotel shuttle. Do not assume that all properties along the corridor have the same Disney connection.",
+      "hotelAdvice": "Compare the room rate with the time and cost of repeated transfers, especially without a car."
     }
   ],
-
-  "personaSafetyBlocks": [
-    {
-      "personaName": "Solo Female Traveler",
-      "topConcerns": ["Walking between areas at night", "Parking lots and garages", "Crowded nightlife zones"],
-      "recommendedNeighborhoods": ["International Drive", "Disney Springs / Lake Buena Vista", "Winter Park"],
-      "avoidZones": ["Orange Blossom Trail corridor", "Pine Hills"],
-      "nightTips": ["Rideshare instead of walking long distances", "Park in lit, attended garages", "Keep drinks in sight downtown", "Keep your phone charged"]
-    }
+  "bases": [
+    [
+      "Disney parks and Disney Springs",
+      "Compare Disney Resort transport with the specific service offered by an off-site Lake Buena Vista hotel.",
+      "Which destinations are served and how the late return works."
+    ],
+    [
+      "Universal parks and CityWalk",
+      "Compare Universal Resort hotels and nearby off-site properties by their actual connection.",
+      "Transport mode, reservations and service after your planned outing."
+    ],
+    [
+      "International Drive and conventions",
+      "Match the hotel to the relevant stretch of I-Drive or convention building.",
+      "Pedestrian connections, crossings and the final distance from drop-off to door."
+    ],
+    [
+      "Downtown events and dining",
+      "A Downtown base can suit several evenings in the city center.",
+      "Venue exit, hotel entrance, parking and the last useful transit service."
+    ],
+    [
+      "A trip without a rental car",
+      "Concentrate your outings around a base with documented transport.",
+      "Transfers, waiting time and a rideshare fallback for late finishes."
+    ],
+    [
+      "Late arrivals and early departures",
+      "An MCO-area night can simplify flight logistics.",
+      "Shuttle hours, terminal pickup and after-hours check-in."
+    ]
   ],
-
-  "corePrinciples": [
-    { "title": "Read the Room", "description": "Scan the environment regularly to gauge lighting, foot traffic, and exits.", "example": "If a stretch of I-Drive suddenly empties out, move back toward the busier, lit section." },
-    { "title": "Plan Your Moves", "description": "Know your next 2–3 steps — your ride, your route, and a backup.", "example": "If you're leaving a downtown bar at closing, request your rideshare before you walk out." },
-    { "title": "Stay in the Flow", "description": "Stick to well-lit, busy streets and avoid shortcuts through quiet lots.", "example": "Walk the main drive to your hotel rather than cutting behind a closed plaza." },
-    { "title": "Signal Confidence", "description": "Walk with purpose, head up, and avoid looking distracted or lost.", "example": "Hold your phone at chest level for navigation instead of staring down at it." },
-    { "title": "Trust Micro-Signals", "description": "If a person, a block, or a garage feels off, change direction immediately.", "example": "If a parking level feels deserted, walk back and ask security to escort you." }
+  "checklist": [
+    "Inspect the route to the hotel entrance, including sidewalks, crossings and parking-lot approaches.",
+    "Ask which destinations the shuttle serves. A theme-park shuttle may not serve CityWalk or Disney Springs.",
+    "Confirm reservations, fees, frequency and the final return on your travel dates.",
+    "Check parking charges, access and whether a planned event lot allows the stay you need.",
+    "Confirm late check-in instructions and save the reception or shuttle contact before traveling.",
+    "Check room occupancy and sleeping arrangements rather than assuming a family can use every room type.",
+    "Confirm accessible rooms and vehicles, reservation requirements and the final route from drop-off to door."
   ],
-
-  "transitSafety": {
-    "bus": {
-      "riskLevel": "Low",
-      "bestHours": "Daytime and early evening",
-      "avoidHours": "Late night, when service thins out",
-      "tips": ["Use well-lit, busy stops", "Sit near the front", "Check the last departure time"],
-      "recommendedRoutes": ["I-Ride Trolley (International Drive)", "Lynx routes to the parks", "Disney & Universal resort shuttles"]
-    },
-    "rideshare": {
-      "riskLevel": "Low",
-      "bestHours": "Anytime",
-      "avoidHours": "None — but stay alert after 2 AM",
-      "tips": ["Verify the driver and plate", "Request from inside a lobby", "Share your trip"],
-      "recommendedRoutes": ["Strip-to-hotel hops", "Downtown nightlife trips", "Airport (MCO) transfers"]
-    },
-    "walking": {
-      "riskLevel": "Moderate",
-      "bestHours": "Daytime and early evening on tourist strips",
-      "avoidHours": "Late night between areas",
-      "tips": ["Stay on lit, busy corridors", "Avoid crossing large dark lots on foot", "Use crosswalks — I-Drive traffic is fast"],
-      "recommendedRoutes": ["Within International Drive", "Disney Springs", "Lake Eola loop"]
-    }
-  },
-
-  "neighborhoodCards": [
-    {
-      "name": "International Drive (I-Drive)",
-      "nightVibe": "Bright, busy tourist corridor with restaurants and attractions",
-      "safetyRating": "Safe",
-      "safeSpots": ["ICON Park", "The main I-Drive strip"],
-      "avoidSpots": ["Empty parking lots behind plazas late at night"],
-      "idealFor": "First-time visitors, families, solo travelers",
-      "notFor": "People who want a quiet, local scene",
-      "indicators": { "lighting": "Excellent", "footTraffic": "Very High", "policePresence": "Moderate" }
-    },
-    {
-      "name": "Disney Springs / Lake Buena Vista",
-      "nightVibe": "Polished, staffed retail-and-dining district",
-      "safetyRating": "Safe",
-      "safeSpots": ["Disney Springs waterfront", "Resort-area walkways"],
-      "avoidSpots": ["Unlit stretches of road outside the complex"],
-      "idealFor": "Families, solo women, relaxed evenings",
-      "notFor": "People avoiding tourist crowds",
-      "indicators": { "lighting": "Excellent", "footTraffic": "High", "policePresence": "High (private security)" }
-    }
+  "transport": [
+    [
+      "Walking: check the route, not just the distance",
+      "A short map distance may involve a large arterial or an awkward crossing. Use marked crossings and inspect the complete route. If the pedestrian connection is unclear, plan another way back rather than improvising after the outing."
+    ],
+    [
+      "Hotel and resort shuttles: verify the exact service",
+      "Disney transport, Universal resort transport and an off-site hotel shuttle are separate arrangements. Check eligibility, destinations and return times for your property. Confirm special-event operation separately."
+    ],
+    [
+      "Public transport: check the last useful connection",
+      "LYNX serves major tourism destinations, but some journeys require connections. SunRail can help with certain Downtown, Winter Park and Kissimmee journeys; check the actual day’s schedule rather than assuming a late train every night."
+    ],
+    [
+      "Rideshare and taxis: identify the pickup first",
+      "Follow the venue’s current pickup instructions and verify the booked vehicle before getting in. The convention center and MCO publish ground-transport arrangements; do not guess an equivalent pickup point at another attraction."
+    ],
+    [
+      "Driving: confirm parking before the evening",
+      "Know where you parked, how to reach the hotel entrance and what your parking arrangement permits. Keep valuables out of view. If you plan to drink, arrange a different return rather than depending on driving."
+    ]
   ],
-
-  "emergencyBlock": {
-    "call911": "For emergencies requiring immediate police, fire, or medical response.",
-    "call311": "For non-emergency city services and information in Orlando and Orange County.",
-    "nypdPrecinctLocator": "https://www.orlando.gov/Our-Government/Departments-Offices/Orlando-Police-Department",
-    "nypdPrecinctLocatorText": "Orlando Police Department (city) and Orange County Sheriff (tourist areas like I-Drive) — use the non-emergency line for reports and lost property.",
-    "nearestHospital": "Orlando Health ORMC (downtown) is the area's Level 1 trauma center; AdventHealth and HCA ERs are within 10–15 minutes of most tourist zones.",
-    "subwayHelpPoints": "There is no subway in Orlando — use rideshare (Uber/Lyft), the I-Ride Trolley on International Drive, or Lynx buses, and ask hotel or attraction staff for help.",
-    "lateNightTransportLinks": ["https://www.golynx.com", "https://www.iridetrolley.com"]
-  },
-
+  "outings": [
+    [
+      "Disney Springs",
+      "Eligible resort transport, documented hotel service, taxi/rideshare or driving.",
+      "Check whether your hotel service serves Disney Springs and how the return works. Standard self-parking is documented as complimentary; check current conditions."
+    ],
+    [
+      "Universal CityWalk",
+      "Your property’s documented resort or hotel transport, or a planned taxi/rideshare return.",
+      "Confirm service after dinner or an event and the venue’s current pickup instructions."
+    ],
+    [
+      "Disney and Universal park nights",
+      "Property-specific resort transport, hotel service or driving.",
+      "Plan transfers before the show ends. Check special-event transport separately from ordinary park operations."
+    ],
+    [
+      "International Drive dining",
+      "Walking on a checked route, local transit or taxi/rideshare.",
+      "Inspect crossings and confirm the last useful trolley or bus; do not assume continuous evening service."
+    ],
+    [
+      "Downtown performances and sports",
+      "A checked walk, transit, taxi/rideshare or event parking.",
+      "Check the event finish, last service, pickup instructions and any road closures."
+    ],
+    [
+      "SeaWorld evening events",
+      "Documented hotel service, public transport or driving.",
+      "Confirm event-date returns and parking arrangements instead of relying on a regular park-day shuttle."
+    ]
+  ],
+  "personas": [
+    [
+      "Families with children and strollers",
+      "Count transfers and the distance from the final stop to the room. A difficult crossing or long parking-lot walk can feel very different after a full park day. Confirm shuttle reservations and the return after evening shows."
+    ],
+    [
+      "Solo travelers and solo women",
+      "Prioritize a direct return and a clearly designated pickup. Save the hotel address and transport instructions before going out. Avoid extending an unfamiliar walk just because the hotel appears close on a map."
+    ],
+    [
+      "Visitors with mobility requirements",
+      "Check the entire journey: room, hotel exit, vehicle, attraction drop-off and return pickup. Confirm accessible transport and reservations with the property; attraction accessibility does not establish hotel-shuttle accessibility."
+    ],
+    [
+      "Late arrivals at MCO",
+      "Save after-hours check-in instructions and the hotel shuttle contact before boarding. Check terminal-specific pickup information and have a taxi or rideshare plan if the shuttle does not operate at your arrival time."
+    ]
+  ],
   "faq": [
-    { "question": "Is Orlando safe for solo female travelers at night?", "answer": "Yes, in the tourist corridors — International Drive, Disney Springs, Universal CityWalk, and downtown's main strips stay busy and lit. Use rideshare to move between areas after dark.", "relatedLinks": ["/destination/orlando/orlando-female-solo-travel-guide"] },
-    { "question": "Which Orlando areas are safest at night?", "answer": "International Drive, Disney Springs / Lake Buena Vista, Universal CityWalk, Winter Park, and the Lake Eola / Thornton Park area are the safest, most walkable choices after dark.", "relatedLinks": ["/destination/orlando/best-areas-to-stay"] },
-    { "question": "Is it safe to walk around Orlando at night?", "answer": "On the main tourist strips, yes. Orlando is spread out and car-centric, so use rideshare for longer distances rather than walking between areas or through large parking lots.", "relatedLinks": ["/destination/orlando/safety-guide"] },
-    { "question": "What should I watch for at night in Orlando?", "answer": "Petty theft in crowds, car break-ins in dark lots, the summer heat, and a few non-tourist areas (the OBT corridor, Pine Hills) you have no reason to visit after dark.", "relatedLinks": ["/destination/orlando/safety-guide"] },
-    { "question": "Are the theme park areas safe after closing?", "answer": "Yes — Disney Springs, CityWalk, and resort areas are heavily staffed and surveilled. Take normal care in large parking structures and have your ride or route planned.", "relatedLinks": ["/destination/orlando/neighborhood-guide"] },
-    { "question": "How do I get around Orlando safely at night?", "answer": "Rideshare (Uber/Lyft) is the safest and easiest option after dark. The I-Ride Trolley covers International Drive in the evening, and most resorts run their own shuttles.", "relatedLinks": ["/destination/orlando/solo-trip-to-orlando"] }
-  ],
-
-  "interlinkingGrid": [
-    { "title": "Solo Trip to Orlando Guide", "url": "/destination/orlando/solo-trip-to-orlando" },
-    { "title": "Orlando Safety Guide", "url": "/destination/orlando/safety-guide" }
-  ],
-
-  "trustBlock": {
-    "methodology": "We combine local crime patterns, traveler reports, and tourist-area knowledge.",
-    "localInsights": "Built with input from Orlando residents and frequent park visitors.",
-    "dataSources": ["Local crime reports", "Traveler feedback", "Tourist-board guidance"],
-    "editorialProcess": "Every guide is reviewed for accuracy and clarity.",
-    "safetyExpertsConsulted": ""
-  }
+    {
+      "question": "Is Orlando safe at night for tourists?",
+      "answer": "Nighttime conditions vary by area, activity and return route. Choose a hotel around your evening plans, inspect the actual walking connection and verify transport. No citywide statistic or tourist-area label can guarantee conditions at an individual hotel."
+    },
+    {
+      "question": "Can you walk along International Drive at night?",
+      "answer": "Some trips have useful pedestrian connections, especially around parts of the convention-center district. International Drive is a long corridor, so check sidewalks, crossings and the exact hotel entrance before treating a short map distance as a practical walk."
+    },
+    {
+      "question": "Is Downtown Orlando safe after dark?",
+      "answer": "Downtown is an evening dining and event destination, but conditions vary by block and occasion. Check the route between your venue and hotel and arrange transport that fits the event finish rather than relying on a general label for Downtown."
+    },
+    {
+      "question": "Should you stay near Disney or Universal?",
+      "answer": "Choose around the resort you will visit most, particularly for late returns. Compare the actual hotel transport, transfer time and total cost. A mixed itinerary may need a different plan for each evening."
+    },
+    {
+      "question": "Can you visit Orlando without renting a car?",
+      "answer": "Yes, with itinerary-specific planning. Resort transport, hotel services and public transit can cover useful journeys, but connections and late returns need checking. Include rideshare costs when comparing hotel bases."
+    },
+    {
+      "question": "Do Orlando hotels offer free theme-park shuttles?",
+      "answer": "Some properties provide transport, but do not assume it is free or serves every park and evening venue. Check the exact destinations, fee, reservation rules and last return directly with the hotel."
+    },
+    {
+      "question": "How do you get back after CityWalk or Disney Springs?",
+      "answer": "Use the transport documented for your specific property or arrange a taxi, rideshare or driving return. Confirm that an off-site hotel shuttle serves the evening destination and still operates when you plan to leave."
+    },
+    {
+      "question": "Are airport hotels a good base for a theme-park trip?",
+      "answer": "They can be practical for a late arrival or early flight. For the rest of the trip, compare the repeated park journeys and transport arrangements. An airport shuttle does not establish a convenient theme-park connection."
+    }
+  ]
 }

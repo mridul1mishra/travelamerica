@@ -1,0 +1,26 @@
+.header { display: flex; align-items: center; justify-content: space-between; gap: 20px; width: 100%; min-height: 104px; padding: 14px 24px; box-sizing: border-box; background: white; color: #172033; border-bottom: 2px solid #b22234; z-index: 1000; }
+.fixed { position: fixed; top: 0; left: 0; }
+.logo { display: block; flex-shrink: 0; }
+.logo img { display: block; width: 285px; height: auto; }
+.nav { min-width: 0; }
+.list { display: flex; align-items: center; gap: 12px; list-style: none; margin: 0; padding: 0; }
+.city { position: relative; }
+.cityTrigger { display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px; border: 0; background: transparent; color: #172033; font: inherit; font-size: .95rem; cursor: pointer; }
+.cityTrigger[data-current] { color: #98442e; font-weight: 700; }
+.cityTrigger:hover { background: #f5f1eb; border-radius: 6px; }
+.dropdown { position: absolute; top: calc(100% + 8px); right: 0; min-width: 230px; list-style: none; margin: 0; padding: 8px; background: white; border: 1px solid #d6dce4; border-radius: 10px; box-shadow: 0 12px 28px #17203326; z-index: 1001; }
+.dropdown a { display: block; padding: 11px 12px; min-height: 44px; box-sizing: border-box; color: #172033; font: inherit; font-size: .9rem; text-decoration: none; border-radius: 6px; }
+.dropdown a:hover, .dropdown a[aria-current] { background: #f5f1eb; }
+.header button:focus-visible,.header a:focus-visible { outline: 3px solid #98442e; outline-offset: 3px; }
+.toggle, .mobileClose { display: none; }
+@media(max-width:1000px){
+ .header { min-height: 84px; padding: 12px 16px; }
+ .logo img { width: min(64vw, 250px); }
+ .toggle { display: block; border: 0; background: transparent; color: #172033; width: 44px; height: 44px; font-size: 26px; cursor: pointer; }
+ .list { display: none; }
+ .list.open { display: flex; position: fixed; top: 0; right: 0; width: min(340px,100vw); height: 100dvh; padding: 16px; box-sizing: border-box; flex-direction: column; align-items: stretch; gap: 8px; background: white; overflow-y: auto; box-shadow: -8px 0 28px #17203326; z-index: 1002; }
+ .mobileClose { display: flex; justify-content: flex-end; }
+ .mobileClose button { border: 0; background: transparent; width: 44px; height: 44px; font-size: 28px; cursor: pointer; }
+ .cityTrigger { width: 100%; justify-content: space-between; }
+ .dropdown { position: static; box-shadow: none; margin-top: 4px; min-width: 0; }
+}
