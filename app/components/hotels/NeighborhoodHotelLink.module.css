@@ -1,0 +1,5 @@
+.text { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; color: #98442e; font-weight: 700; text-underline-offset: 4px; }
+.text > span:last-child { flex-shrink: 0; }
+.button { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; align-self: flex-start; margin-top: auto; padding: 12px 18px; border-radius: 8px; border: 1px solid #b97864; background: transparent; color: #98442e; font-size: .9rem; font-weight: 750; text-decoration: none; }
+.button:hover { background: #f8eee8; border-color: #98442e; }
+.button:focus-visible, .text:focus-visible { outline: 3px solid #98442e; outline-offset: 4px; }

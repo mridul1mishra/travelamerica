@@ -86,21 +86,25 @@ const afterDarkCards = [
 const exactNightAnswers = [
   {
     question: "Is Manhattan safe at night?",
+    hotelArea: "Manhattan",
     answer:
       "Yes in the visitor core, especially Midtown, the Upper West Side, the Upper East Side, Chelsea, Flatiron, and Lower Manhattan. Stay on lit avenues, avoid park shortcuts, and use a cab or rideshare if the last walk from transit feels too quiet.",
   },
   {
     question: "Is Lower Manhattan safe at night?",
+    hotelArea: "Lower Manhattan",
     answer:
       "Generally yes around active areas such as the Financial District, Battery Park, Seaport, and hotel blocks. It can feel quiet after office hours, so plan the exact station exit or pickup spot before you leave.",
   },
   {
     question: "Is Tribeca safe at night?",
+    hotelArea: "Tribeca",
     answer:
       "Yes for most visitors. Tribeca is calmer and residential-feeling after dark, so the main safety choice is route quality: stay near active streets, restaurants, hotels, and direct subway lines instead of wandering empty side blocks.",
   },
   {
     question: "Are Times Square and Midtown safe at night?",
+    hotelArea: "Midtown",
     answer:
       "Usually yes because they are bright, busy, and heavily traveled. The bigger visitor risks are pickpockets, pushy photo characters, and tired late-night decisions, not isolated streets in the main tourist corridors.",
   },
@@ -253,11 +257,12 @@ export default function Page() {
               a late dinner, show, or waterfront walk.
             </p>
           </div>
-          <div className={styles.scenarioGrid}>
+          <div className={styles.exactAnswersGrid}>
             {exactNightAnswers.map((item) => (
               <article key={item.question} className={styles.scenarioCard}>
                 <h3>{item.question}</h3>
                 <p>{item.answer}</p>
+                <NeighborhoodHotelLink area={item.hotelArea} source="nyc-exact-night-answer" variant="button" />
               </article>
             ))}
           </div>
@@ -285,7 +290,7 @@ export default function Page() {
                 <h3>{item.name}</h3>
                 <p>{item.why}</p>
                 {item.notes ? <p>{item.notes}</p> : null}
-                <NeighborhoodHotelLink area={item.name} source="nyc-night-neighborhood" />
+                <NeighborhoodHotelLink area={item.name} source="nyc-night-neighborhood" variant="button" />
               </article>
             ))}
           </div>
@@ -384,11 +389,12 @@ export default function Page() {
             <p className={styles.eyebrow}>Solo and female travelers</p>
             <h2>Safe solo travel is about defaults, not fear</h2>
             <p>
-              The brief&apos;s solo-travel sources agree on the same practical pattern: NYC works well
+              NYC works well
               alone when you stay in busy zones, keep a route home, and switch transport when a
               street or station feels too empty.
             </p>
           </div>
+          <div className={styles.soloContent}>
           <div className={styles.scenarioGrid}>
             {soloCards.map((card) => (
               <article key={card.title} className={styles.scenarioCard}>
@@ -396,6 +402,15 @@ export default function Page() {
                 <p>{card.copy}</p>
               </article>
             ))}
+          </div>
+          <Image
+            className={styles.soloIllustration}
+            src="/data/metadataimage/nyc-evening-traveler.png"
+            alt="Illustration of a traveler approaching a warmly lit hotel entrance beside an evening city street."
+            width={2048}
+            height={683}
+            sizes="(max-width: 900px) 100vw, 65vw"
+          />
           </div>
         </section>
 

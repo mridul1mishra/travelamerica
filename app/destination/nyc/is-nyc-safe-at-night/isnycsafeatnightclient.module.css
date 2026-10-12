@@ -647,3 +647,18 @@
     grid-template-columns: 1fr;
   }
 }
+
+.exactAnswersGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem; }
+@media (max-width: 560px) { .exactAnswersGrid { grid-template-columns: 1fr; } }
+
+.exactAnswersGrid .scenarioCard { display: flex; flex-direction: column; gap: 20px; padding: 24px; }
+.exactAnswersGrid .scenarioCard h3 { font-size: 1.15rem; line-height: 1.35; }
+.exactAnswersGrid .scenarioCard p { margin: 0; line-height: 1.65; }
+
+.neighborhoodGrid .zoneCard { display: flex; flex-direction: column; align-items: flex-start; }
+.neighborhoodGrid .zoneCard > a { margin-top: auto; }
+.neighborhoodGrid .zoneCard > p:last-of-type { margin-bottom: 20px; }
+
+.soloContent { display: grid; gap: 20px; align-content: start; min-width: 0; }
+
+.soloIllustration { display: block; width: 100%; height: auto; border-radius: 12px; }
