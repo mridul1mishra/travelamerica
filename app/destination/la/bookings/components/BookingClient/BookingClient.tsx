@@ -568,8 +568,8 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                           <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={hotel.googleMapsUrl} />
                         </div>}
                         <div className={`${styles.hotelFooterLink} ${styles.cardFooter}`}>
-                          {hotel.hotelId && <HotelPriceLink hotelId={hotel.hotelId} />}
-                          <a href={`/destination/${hotel.city}/hotel/${hotel.hotelId}`}>View hotel</a>
+                          {hotel.hotelId && <HotelPriceLink hotelId={hotel.hotelId} className={styles.priceButton} />}
+                          <a className={styles.detailsLink} href={`/destination/${hotel.city}/hotel/${hotel.hotelId}`}>View details <span aria-hidden="true">→</span></a>
                         </div>
                       </article> : <a className={styles.bookingCard} key={key} {...linkProps}>
                         <img src={hotel.img} alt={hotel.title} />

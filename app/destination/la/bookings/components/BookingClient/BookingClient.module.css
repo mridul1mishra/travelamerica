@@ -661,6 +661,33 @@
 .hotelFooterLink a { text-decoration: none; color: #b54f3a; font-weight: 850; }
 .hotelFooterLink a:focus-visible { outline: 3px solid #b54f3a; outline-offset: 4px; }
 
+.hotelFooterLink a.priceButton {
+  padding: 10px 14px;
+  min-height: 44px;
+  border-radius: 8px;
+  background: #9e492d;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hotelFooterLink a.priceButton:hover { background: #803b25; }
+
+.hotelFooterLink a.detailsLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  white-space: nowrap;
+}
+
+.hotelFooterLink a.detailsLink:hover { text-decoration: underline; }
+.hotelFooterLink a.detailsLink span { color: inherit; font-size: inherit; }
+
 .sidePanel {
   position: sticky;
   top: 84px;
