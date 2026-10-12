@@ -1,347 +1,358 @@
 {
-  "heroSafety": {
-    "title": "Is LA Safe at Night for Solo Travelers?",
-    "subtitle": "LA is safe at night in the major tourist areas — and riskier in specific corridors that tourists have no reason to visit. Here's the honest breakdown.",
-    "heroImage": "/data/majorcities/losangeles/assets/losangeles.webp",
-    "trustBadges": ["🛡️LAPD Data", "👣Local Insights", "📊Traveler Patterns"]
-  },
-
-  "safetyMeter": {
-    "overallRating": "Safe in Tourist Areas with Smart Precautions",
-    "meterScore": 7,
-    "quickSummary": "LA's main tourist areas — Santa Monica, West Hollywood, Beverly Hills, and the Hollywood corridor — stay comfortable after dark with normal awareness. Risks increase in specific corridors and when walking residential areas late at night.",
-    "bestFor": ["Solo women", "First-time visitors", "Nightlife travelers"],
-    "avoidIf": ["Prefer walking everywhere instead of using rideshare", "Feel uneasy in spread-out, car-centric cities at night", "Plan to explore unfamiliar residential areas after dark on foot"]
-  },
-
-  "neighborhoodSafetyGrid": [
+  "reviewedDate": "2026-10-12",
+  "title": "Is Los Angeles Safe at Night? A Neighborhood-by-Neighborhood Guide",
+  "description": "Many LA visitor districts can work for evening dining, shows and sightseeing, but safety varies by block, activity and the journey home. Pick a hotel around your plans, check the final walk, and arrange a return option before heading out.",
+  "heroImage": "/data/majorcities/losangeles/assets/losangeles.webp",
+  "hotelBases": [
     {
-      "name": "Santa Monica",
-      "safetyLevel": "Safe",
-      "why": "Third Street Promenade and the pier area have foot traffic, open businesses, and security presence at night.",
-      "bestTimeToVisit": "Anytime",
-      "avoidAfter": null,
-      "notes": "Tourist-heavy but comfortable after dark."
+      "area": "Santa Monica",
+      "plans": "Pier, beach sunset and dinner",
+      "consideration": "Check the walk from dinner to the hotel and your specific parking lot's closing time.",
+      "tradeoff": "Useful for local beach evenings; Hollywood and Downtown still require a planned journey."
     },
     {
-      "name": "West Hollywood",
-      "safetyLevel": "Safe",
-      "why": "Sunset Strip has consistent foot traffic, good lighting, and visible venue security throughout the night.",
-      "bestTimeToVisit": "Evening",
-      "avoidAfter": null,
-      "notes": "One of LA's safest nightlife areas."
+      "area": "West Hollywood",
+      "plans": "Sunset Strip shows, dining and nightlife",
+      "consideration": "Check distance to your intended venues, the hotel entrance and pickup location.",
+      "tradeoff": "A base for nightlife; compare room noise and the final walk after the venues empty."
     },
     {
-      "name": "Beverly Hills",
-      "safetyLevel": "Safe",
-      "why": "Upscale, well-patrolled, and low crime after dark.",
-      "bestTimeToVisit": "Evening",
-      "avoidAfter": null,
-      "notes": null
+      "area": "Hollywood",
+      "plans": "Theaters and Hollywood sightseeing",
+      "consideration": "Compare the actual hotel-to-theater route and access from the B Line station.",
+      "tradeoff": "Useful for Hollywood-focused evenings; a Hollywood address does not describe every block."
     },
     {
-      "name": "Hollywood Blvd (Tourist Corridor)",
-      "safetyLevel": "Safe",
-      "why": "The well-lit tourist corridor stays busy with foot traffic and security.",
-      "bestTimeToVisit": "Before midnight",
-      "avoidAfter": "Midnight",
-      "notes": "Stay west of Highland Ave."
+      "area": "Downtown LA",
+      "plans": "L.A. LIVE, games, concerts and dining",
+      "consideration": "For L.A. LIVE, assess a South Park return; for Little Tokyo or Arts District dining, check those routes separately.",
+      "tradeoff": "Staying near the venue may simplify the return; a cheaper room elsewhere may add travel."
     },
     {
-      "name": "DTLA Arts District",
-      "safetyLevel": "Safe",
-      "why": "Open businesses and steady foot traffic keep it comfortable after dark.",
-      "bestTimeToVisit": "Evening",
-      "avoidAfter": "1 AM",
-      "notes": null
+      "area": "Beverly Hills",
+      "plans": "Hotel dining and planned restaurant evenings",
+      "consideration": "Check what remains open on the hotel-to-restaurant route after retail closes.",
+      "tradeoff": "A fit for a hotel-centered stay; other evening districts may require a ride."
     },
     {
-      "name": "Venice Beach Boardwalk",
-      "safetyLevel": "Mixed",
-      "why": "Lighting is inconsistent and the homeless population increases after dark.",
-      "bestTimeToVisit": "Daytime",
-      "avoidAfter": "10 PM",
-      "notes": "Not recommended for solo walking after 10pm."
-    },
-    {
-      "name": "East Hollywood",
-      "safetyLevel": "Mixed",
-      "why": "Quieter and less predictable east of Highland Ave and north of Sunset.",
-      "bestTimeToVisit": "Daytime",
-      "avoidAfter": "Sunset",
-      "notes": null
-    },
-    {
-      "name": "Malibu Beaches",
-      "safetyLevel": "Mixed",
-      "why": "Isolated at night with little lighting or foot traffic.",
-      "bestTimeToVisit": "Daytime",
-      "avoidAfter": "Sunset",
-      "notes": "Only visit with others and let someone know where you are."
-    },
-    {
-      "name": "Skid Row (DTLA)",
-      "safetyLevel": "Avoid Late",
-      "why": "High-risk area east of Main St between 3rd and 7th. Tourists have no reason to visit.",
-      "bestTimeToVisit": "Daytime",
-      "avoidAfter": "Sunset",
-      "notes": null
-    },
-    {
-      "name": "South LA",
-      "safetyLevel": "Avoid Late",
-      "why": "Many parts south of the 10 freeway have higher crime and low foot traffic at night.",
-      "bestTimeToVisit": "Daytime",
-      "avoidAfter": "Sunset",
-      "notes": null
-    },
-    {
-      "name": "Compton",
-      "safetyLevel": "Avoid Late",
-      "why": "Higher crime rates at night unless you know the area.",
-      "bestTimeToVisit": "Daytime",
-      "avoidAfter": "Sunset",
-      "notes": null
-    },
-    {
-      "name": "Watts / Inglewood",
-      "safetyLevel": "Avoid Late",
-      "why": "Residential areas best avoided at night unless you know them.",
-      "bestTimeToVisit": "Daytime",
-      "avoidAfter": "Sunset",
-      "notes": null
+      "area": "Universal City",
+      "plans": "Universal Studios and CityWalk",
+      "consideration": "Confirm the usable hotel connection and the last shuttle for your travel date; have a backup return.",
+      "tradeoff": "A focused base for Universal visits; nearby streets may differ from CityWalk."
     }
   ],
-
-  "scenarioCards": [
+  "neighborhoods": [
     {
-      "title": "Walking Alone After 10 PM",
-      "riskLevel": "Moderate",
-      "whatToExpect": "Tourist corridors stay active; residential side streets get very quiet in car-centric LA.",
-      "howToStaySafe": [
-        "Stick to well-lit tourist corridors",
-        "Avoid empty residential blocks",
-        "Walk confidently with purpose",
-        "Rideshare to your hotel whenever in doubt"
-      ],
-      "bestFor": "Solo women, first-timers",
-      "avoidIf": "You plan to wander unfamiliar areas on foot"
+      "id": "hollywood",
+      "question": "Is Hollywood safe to walk around at night?",
+      "answer": "An evening show or dinner on active Hollywood entertainment blocks can be a practical visitor plan. Crowds also create opportunities for distraction and theft, while the next street may be much quieter. Hollywood's district dispatch and ambassador services support the area, but do not guarantee every route.",
+      "planning": "Before a show, save the route to your hotel or B Line station and check the train you expect to use. If the walk is unfamiliar or activity has fallen away when you leave, wait near the venue while arranging a direct ride. Secure phones and bags in crowded nightlife settings.",
+      "hotel": "Choose by the actual theater-to-hotel route and station exit. A Hollywood address alone does not tell you how the last few blocks will feel.",
+      "sourceLabel": "Hollywood community dispatch",
+      "sourceUrl": "https://hollywoodpartnership.com/clean-and-safe-services/community-dispatch-center"
     },
     {
-      "title": "Using Rideshare After 10 PM",
-      "riskLevel": "Low",
-      "whatToExpect": "Fast, reliable, and the standard nighttime choice in LA.",
-      "howToStaySafe": [
-        "Verify license plate before getting in",
-        "Sit in the back seat",
-        "Share your trip with someone",
-        "Use the in-app emergency button if needed"
-      ],
-      "bestFor": "Nightlife travelers",
-      "avoidIf": "You're on a very tight budget"
+      "id": "downtown",
+      "question": "Is Downtown LA safe after dinner?",
+      "answer": "Downtown is too varied for a single safety verdict. The Financial District, Historic Core, South Park, Little Tokyo and Arts District have different mixes of offices, hotels, restaurants and events. A direct walk between nearby destinations can be workable; a long cross-Downtown walk may pass through blocks with much less evening activity.",
+      "planning": "Map the destination-to-hotel route before dinner, including the exact station exit or garage entrance. Choose a direct ride if the journey requires unfamiliar quiet blocks or awkward transfers. Consult the official district map when planning around Skid Row; homelessness itself is not evidence of criminality.",
+      "hotel": "Match the property to the Downtown district you will actually visit. Do not book solely because the listing says Downtown or appears close on a small map.",
+      "sourceLabel": "Official Downtown district geography",
+      "sourceUrl": "https://planning.lacity.gov/plans-policies/community-plan-area/downtown-community-plan"
     },
     {
-      "title": "Parking at Night",
-      "riskLevel": "Moderate",
-      "whatToExpect": "Multi-story structures in DTLA and Hollywood can feel isolated late at night.",
-      "howToStaySafe": [
-        "Use the elevator rather than stairwells",
-        "Park near the elevator on well-lit floors",
-        "Never leave anything visible in your car",
-        "Ask venue staff to walk with you if anything feels wrong"
-      ],
-      "bestFor": "Drivers staying late at venues",
-      "avoidIf": "You prefer attended valet only"
+      "id": "south-park",
+      "question": "What about South Park and L.A. LIVE after an event?",
+      "answer": "Games and concerts concentrate crowds, venue staff and transport activity around L.A. LIVE and Crypto.com Arena. That can make the departure easier to organize, but the event crowd does not describe conditions across all surrounding streets once attendees disperse.",
+      "planning": "Choose the hotel walk, garage or pickup location before the event begins. Leave using the planned route while event services are operating, and check the final Metro departure if riding. Use the arena's official parking and pickup information rather than assuming a nearby private lot has the same arrangements.",
+      "hotel": "For an arena-focused stay, compare the actual walk between the arena exit and the property entrance. A hotel elsewhere in Downtown may still require a ride.",
+      "sourceLabel": "Arena parking and transport arrangements",
+      "sourceUrl": "https://www.cryptoarena.com/arena-info/getting-here"
     },
     {
-      "title": "Exploring Nightlife Areas",
-      "riskLevel": "Mixed",
-      "whatToExpect": "Lively venues on the Sunset Strip and DTLA, with quieter blocks just off the main strips.",
-      "howToStaySafe": [
-        "Stay on the main strips with foot traffic",
-        "Avoid isolated side streets after leaving venues",
-        "Keep drinks in sight at all times",
-        "Plan your rideshare home before you head out"
-      ],
-      "bestFor": "Nightlife travelers, social explorers",
-      "avoidIf": "You prefer quiet, low-stimulation environments"
+      "id": "santa-monica",
+      "question": "Is Santa Monica safe at night for visitors?",
+      "answer": "A planned Pier visit, dinner or downtown evening can work for visitors, with normal awareness of the route and belongings. The Pier currently operates from 6 a.m. to 10 p.m.; individual businesses keep separate hours. Those hours describe access, not a guarantee of safety on every waterfront street.",
+      "planning": "Check the restaurant, hotel entrance and parking facility separately. The Pier deck and other beach or downtown lots have different schedules. If dinner ends after the Pier closes, plan the return from the restaurant rather than assuming you can retrace the same route through the attraction.",
+      "hotel": "A hotel near your chosen downtown or waterfront destinations may shorten the evening journey. Santa Monica is a separate city; City of LA crime totals should not be used to rank its hotel blocks.",
+      "sourceLabel": "Official Pier hours and parking FAQ",
+      "sourceUrl": "https://www.santamonicapier.org/faqs"
+    },
+    {
+      "id": "venice",
+      "question": "Is Venice Beach safe to visit after dark?",
+      "answer": "Venice's recreation facilities and Boardwalk sightseeing activity wind down earlier than dedicated nightlife venues. Daylight is a practical choice for the main Boardwalk experience. A sunset or restaurant outing needs its own route and transport plan; the dossier does not establish a precise hour when the entire area becomes unsafe.",
+      "planning": "Choose the restaurant or sunset destination in advance, confirm where you will park or meet a driver, and avoid relying on an open-ended walk along the beach as the way home. If the return route is quiet or unclear, arrange a direct ride from a known location.",
+      "hotel": "Check the exact hotel or rental entrance and the route from dinner. Venice and Santa Monica are different bases even when both are marketed as beach accommodation.",
+      "sourceLabel": "City of LA Venice Beach facilities",
+      "sourceUrl": "https://www2.laparks.org/reccenter/venice-beach"
+    },
+    {
+      "id": "west-hollywood",
+      "question": "Is West Hollywood safe at night?",
+      "answer": "West Hollywood is a practical setting for planned nightlife, dining and live music, but busy venues are not risk-free. Alcohol, distracted crowds and changes in activity after closing matter. The city has ambassador services and is served by the Los Angeles County Sheriff's Department; it is not part of LAPD's City of LA jurisdiction.",
+      "planning": "Decide on a venue-to-hotel route or pickup point before going out. Keep drinks and belongings in sight, and reassess the walk when the last venue closes. Wait near venue staff while arranging a ride if the surrounding streets have emptied.",
+      "hotel": "Stay convenient to the venues you will use, checking the final walk and room noise. Being near the Sunset Strip does not make every property equally convenient.",
+      "sourceLabel": "West Hollywood community safety",
+      "sourceUrl": "https://www.weho.org/city-government/city-departments/community-safety"
+    },
+    {
+      "id": "beverly-hills",
+      "question": "Is Beverly Hills practical for an evening stay?",
+      "answer": "Planned restaurant visits and hotel dining can suit a Beverly Hills stay. Retail streets may become much quieter once shops close, even while restaurants remain open. Its separate police jurisdiction and reputation do not establish a guarantee for a particular walk.",
+      "planning": "Check the route at the hour you expect to return, not only during shopping hours. For a dinner elsewhere in LA, plan the whole ride back and confirm the hotel's arrival or valet arrangements before leaving.",
+      "hotel": "Choose this base if its hotels and restaurants fit the itinerary. If most evenings are in Hollywood or Downtown, include those return journeys in the comparison.",
+      "sourceLabel": "Beverly Hills Police Department",
+      "sourceUrl": "https://beverlyhills.org/police"
+    },
+    {
+      "id": "koreatown",
+      "question": "What should you check for an evening in Koreatown?",
+      "answer": "Koreatown can be part of a restaurant, karaoke or bar itinerary, but the dossier did not establish authoritative block-level nighttime risk comparisons. A venue being open late does not establish equal activity along every nearby residential or parking street.",
+      "planning": "Identify the exact restaurant, garage or station and the hotel route before going. Check the parking exit and pickup access if staying late. Arrange a direct ride if the final walk or transfer is uncertain rather than following a neighborhood-wide time rule.",
+      "hotel": "Compare the property with your actual dining destinations and return connections. Review arrival and parking arrangements rather than treating the area name as a safety label.",
+      "sourceLabel": "LA offense records and their geographic scope",
+      "sourceUrl": "https://data.lacity.org/Public-Safety/LAPD-NIBRS-Offenses-Dataset/k7nn-b2ep"
+    },
+    {
+      "id": "little-tokyo",
+      "question": "How should you plan dinner in Little Tokyo?",
+      "answer": "Little Tokyo is a distinct Downtown district with concentrated dining and cultural destinations. Activity around those businesses should not be generalized to every adjoining Downtown block. Community maintenance and services are useful context, not comparative crime evidence.",
+      "planning": "Plan directly between your restaurant and the hotel, station or parking facility. Check the station entrance and service before leaving; do not assume a route into an adjoining district has the same activity as the restaurant area.",
+      "hotel": "Check whether the property is convenient to the particular dinner and return route, even if it is advertised as a Downtown hotel.",
+      "sourceLabel": "Official Downtown district geography",
+      "sourceUrl": "https://planning.lacity.gov/plans-policies/community-plan-area/downtown-community-plan"
+    },
+    {
+      "id": "arts-district",
+      "question": "Is the Arts District practical after dark?",
+      "answer": "A planned dinner, brewery or gallery outing can fit an Arts District evening. Activity clusters around individual destinations, while industrial blocks may be quieter. District services are useful context, but the research does not establish that it is Downtown's safest neighborhood.",
+      "planning": "Map the route between the venue and your transport or accommodation. Check parking and the pickup location before going, and choose a direct ride if the walk would take you through unfamiliar quiet blocks after venues close.",
+      "hotel": "Compare the actual location with your chosen restaurant or venue rather than assuming every Arts District stay is close to the same cluster.",
+      "sourceLabel": "Official Downtown district geography",
+      "sourceUrl": "https://planning.lacity.gov/plans-policies/community-plan-area/downtown-community-plan"
+    },
+    {
+      "id": "universal-city",
+      "question": "What about Universal City and CityWalk at night?",
+      "answer": "Universal CityWalk is a planned entertainment outing with hours that vary by date. Its managed visitor setting does not describe all nearby Universal City or Studio City streets. Check the operating calendar for your visit rather than assuming a year-round closing time.",
+      "planning": "Confirm the departure point and last service for any hotel shuttle, plus a backup ride. If walking, check the usable pedestrian route and property entrance rather than relying on a short map distance.",
+      "hotel": "A hotel with a verified connection to your Universal plans can simplify the return. Confirm shuttle details with the property instead of assuming nearby means walkable.",
+      "sourceLabel": "Universal's official operating calendar",
+      "sourceUrl": "https://www.universalstudioshollywood.com/calendar-and-hours/"
     }
   ],
-
-  "personaSafetyBlocks": [
+  "hotelChecks": [
     {
-      "personaName": "Solo Female Traveler",
-      "topConcerns": ["Walking alone at night", "Rideshare safety", "Parking structures"],
-      "recommendedNeighborhoods": ["Santa Monica", "West Hollywood", "Beverly Hills"],
-      "avoidZones": ["Skid Row", "South LA", "Venice Boardwalk after 10pm"],
-      "nightTips": [
-        "Rideshare instead of walking unfamiliar areas",
-        "Park near elevators on well-lit floors",
-        "Keep your phone off your lap at red lights",
-        "Let someone know your plans"
-      ]
+      "title": "Reception and late check-in",
+      "copy": "Ask whether someone is available when you expect to arrive, which entrance to use, and what happens if the show or flight is delayed. Save the property's contact number and entry instructions before going out."
+    },
+    {
+      "title": "Parking access and restrictions",
+      "copy": "Confirm whether parking is on site or elsewhere, when pedestrian and vehicle entrances close, and whether leaving and returning is allowed. Ask about valet availability and overnight charges; do not assume every garage follows reception hours."
+    },
+    {
+      "title": "The full stay price and room conditions",
+      "copy": "Check taxes, mandatory property fees, parking charges and cancellation terms before paying. If staying near nightlife, read recent room-noise reviews and ask about quieter room locations."
+    },
+    {
+      "title": "Hotel or rental arrival support",
+      "copy": "Verify the exact address and entrance, especially for a rental with self check-in. Confirm who can help with an entry problem late at night. Use recent, specific reviews to identify issues to ask about; reviews are experiences, not crime statistics."
     }
   ],
-
-  "corePrinciples": [
+  "transport": [
     {
-      "title": "Default to Rideshare",
-      "description": "The single most effective safety measure in LA at night is using Uber or Lyft instead of walking to unfamiliar areas.",
-      "example": "Rideshare from venue to hotel whenever in doubt — most locals drive or rideshare at night."
-    },
-    {
-      "title": "Read the Block",
-      "description": "Nighttime safety varies block by block in LA. Scan the lighting, foot traffic, and open businesses around you.",
-      "example": "If a block suddenly gets quiet or dark, head back toward the main tourist corridor."
-    },
-    {
-      "title": "Protect Your Car",
-      "description": "Car break-ins are the most common nighttime issue. Never leave anything visible inside your vehicle.",
-      "example": "Take your bag, charger, and jacket with you — even a jacket on the seat invites a break-in."
-    },
-    {
-      "title": "Signal Confidence",
-      "description": "Walk with purpose, keep your head up, and avoid behaviors that signal distraction.",
-      "example": "Hold your phone at chest level for navigation instead of staring down at it."
-    },
-    {
-      "title": "Trust Micro-Signals",
-      "description": "If something feels off — a person, a block, a parking structure — change course immediately.",
-      "example": "If a parking structure feels isolated, go back to the venue and ask staff to walk you out."
-    }
-  ],
-
-  "transitSafety": {
-    "rideshare": {
-      "riskLevel": "Low",
-      "bestHours": "Anytime",
-      "avoidHours": "None — but stay alert after 2 AM",
+      "id": "walking",
+      "title": "When a short walk fits the plan",
+      "copy": "A direct route between nearby active destinations may be practical. Check the actual streets rather than relying on a district's reputation. If businesses have closed or the route becomes unexpectedly isolated, return to a staffed venue and arrange another way back.",
       "tips": [
-        "Verify driver and plate",
-        "Share trip",
-        "Use the in-app emergency button if needed"
-      ],
-      "recommendedRoutes": [
-        "Venue to hotel late at night",
-        "Any trip into or out of unfamiliar areas"
+        "Save the route before leaving the hotel.",
+        "Keep your phone and bag controlled while navigating.",
+        "Include the final walk from the station or garage."
       ]
-    },
-    "subway": {
-      "riskLevel": "Moderate",
-      "bestHours": "Before 10 PM",
-      "avoidHours": "Late night with long gaps",
-      "tips": [
-        "Stay on busier Metro lines",
-        "Avoid empty cars and quiet platforms",
-        "Have a rideshare backup ready"
-      ],
-      "recommendedRoutes": [
-        "Metro B (Red) Line for Hollywood",
-        "Metro E (Expo) Line toward Santa Monica"
-      ]
-    },
-    "walking": {
-      "riskLevel": "Moderate",
-      "bestHours": "Before midnight in tourist corridors",
-      "avoidHours": "Late night in residential or beach areas",
-      "tips": [
-        "Stick to well-lit tourist corridors",
-        "Avoid Venice Boardwalk after 10pm",
-        "Rideshare to your hotel whenever in doubt"
-      ],
-      "recommendedRoutes": [
-        "Third Street Promenade (Santa Monica)",
-        "Sunset Strip (West Hollywood)"
-      ]
-    }
-  },
-
-  "neighborhoodCards": [
-    {
-      "name": "Santa Monica",
-      "nightVibe": "Bright, busy, tourist-friendly waterfront",
-      "safetyRating": "Safe",
-      "safeSpots": ["Third Street Promenade", "Santa Monica Pier area"],
-      "avoidSpots": ["Beach paths away from the pier late at night"],
-      "idealFor": "Solo women, first-time visitors, relaxed evening walks",
-      "notFor": "People who dislike touristy areas",
-      "indicators": {
-        "lighting": "Excellent",
-        "footTraffic": "Very High",
-        "policePresence": "High"
-      }
     },
     {
-      "name": "West Hollywood",
-      "nightVibe": "Lively nightlife strip with steady foot traffic",
-      "safetyRating": "Safe",
-      "safeSpots": ["Sunset Strip", "Santa Monica Blvd venues"],
-      "avoidSpots": ["Quiet residential side streets off the strip"],
-      "idealFor": "Nightlife travelers, social explorers",
-      "notFor": "People who want a quiet evening",
-      "indicators": {
-        "lighting": "Good",
-        "footTraffic": "High",
-        "policePresence": "Moderate"
-      }
+      "id": "metro",
+      "title": "Is LA Metro practical at night?",
+      "copy": "Metro reported systemwide violent crime down 6.7% in 2025 compared with 2024. That trend does not guarantee conditions for each station or journey. There is no evidence-based universal rule to stop riding after 9 p.m.; check your line, direction, departure, transfer and final walk.",
+      "tips": [
+        "Confirm the final train for your line, direction and travel date.",
+        "Check service alerts and waiting time before leaving the venue.",
+        "Use a populated waiting point where available and keep a backup plan."
+      ],
+      "sourceLabel": "Metro's 2025 public safety report",
+      "sourceUrl": "https://www.metro.net/about/media-relations/metro-public-safety-strategy-delivers-measurable-results-in-2025/"
+    },
+    {
+      "id": "rideshare",
+      "title": "Planning a rideshare or taxi pickup",
+      "copy": "A direct ride may simplify a long or unfamiliar return when transfers are awkward. It is an option rather than a risk-free default. Allow for event congestion, waits and designated pickup arrangements.",
+      "tips": [
+        "Choose a clear pickup point before the venue empties.",
+        "Verify the vehicle and driver details before entering.",
+        "Wait near a staffed business where possible and share trip details if helpful."
+      ]
+    },
+    {
+      "id": "parking",
+      "title": "Driving and parking after an evening outing",
+      "copy": "Vehicle break-ins are relevant to travel planning, but the research does not establish equal risk for every garage or street. Compare hours, access, lighting and staffing. Remove visible belongings before leaving the car and take valuables with you.",
+      "tips": [
+        "Check closing times, including event or holiday changes.",
+        "Know the pedestrian entrance and route back to the car.",
+        "Ask venue or hotel staff for help if needed."
+      ]
     }
   ],
-
-  "emergencyBlock": {
-    "call911": "For emergencies requiring immediate police, fire, or medical response.",
-    "call311": "For non-emergency city services and complaints in Los Angeles.",
-    "nypdPrecinctLocator": "https://www.lapdonline.org/police-stations/",
-    "nypdPrecinctLocatorText": "Find the LAPD station responsible for your area — helpful if you lose something or need quick assistance. Non-emergency line: (877) 275-5273.",
-    "nearestHospital": "LA has multiple 24/7 emergency rooms within 10–15 minutes of the main tourist areas in Santa Monica, Hollywood, and DTLA.",
-    "subwayHelpPoints": "Both Uber and Lyft have in-app emergency buttons that share your location with 911 — use them if needed.",
-    "lateNightTransportLinks": ["https://www.metro.net"]
-  },
-
+  "outings": [
+    {
+      "title": "A concert or game at L.A. LIVE",
+      "copy": "Crypto.com Arena lists its East and West Garages as open 6 a.m.–2 a.m. daily, with holiday exceptions. Its other event lots remain staffed for 60 minutes after an event; the published rules do not allow overnight parking or in-and-out privileges. Nearby private facilities can differ. Choose your garage, Metro departure or designated pickup before the game, and compare the actual route to your hotel.",
+      "sourceLabel": "Check official arena parking and transport",
+      "sourceUrl": "https://www.cryptoarena.com/arena-info/getting-here"
+    },
+    {
+      "title": "Sunset and an evening at Griffith Observatory",
+      "copy": "The Observatory lists Tuesday–Friday hours of noon–10 p.m. and weekend hours of 10 a.m.–10 p.m.; the building is closed Mondays. DASH Observatory/Los Feliz runs daily until 10 p.m., including Mondays. Inbound park gates close at 10 p.m., so a pickup driver must enter before then. Plan the descent and onward hotel journey before sunset, allowing for queues and congestion.",
+      "sourceLabel": "Check Observatory access and the calendar",
+      "sourceUrl": "https://griffithobservatory.lacity.gov/visit/getting-here/"
+    },
+    {
+      "title": "Santa Monica Pier followed by dinner",
+      "copy": "The Pier lists daily hours of 6 a.m.–10 p.m., while individual restaurants and amusements set their own schedules. The Pier parking deck currently lists Monday–Thursday hours of 9 a.m.–8 p.m.; other facilities differ. Check both the restaurant and the chosen lot before dinner, and plan the route to your hotel from the restaurant if finishing after the Pier closes.",
+      "sourceLabel": "Check Pier hours and parking information",
+      "sourceUrl": "https://www.santamonicapier.org/faqs"
+    }
+  ],
+  "travelers": [
+    {
+      "title": "A family finishing at the Pier or Observatory",
+      "copy": "Confirm the return before the children are tired: restaurant and parking hours at the Pier, or the DASH departure and pickup access at Griffith. Include walking distance, mobility needs and where you can wait if the ride is delayed. Choose accommodation by the journey your family can realistically manage."
+    },
+    {
+      "title": "A solo traveler leaving dinner or a show",
+      "copy": "Save the route and departure options beforehand. If the final streets or platform are unexpectedly isolated when you leave, wait near venue staff and arrange another return. For women traveling alone, verified arrival support and a backup plan are useful checks; the research does not establish a separate citywide tourist risk score."
+    },
+    {
+      "title": "A first-time visitor without a car",
+      "copy": "Avoid treating Hollywood, Downtown and Santa Monica as one compact evening area. Group dinner and entertainment geographically, check the line and direction for the return, and confirm the final walk to the property. If the last service is missed, use the backup instead of improvising a long cross-city walk."
+    }
+  ],
   "faq": [
     {
       "question": "Is LA safe to walk around at night?",
-      "answer": "In tourist areas yes — Santa Monica Promenade, Sunset Strip, Beverly Hills, and Hollywood Blvd are all fine with normal awareness. Avoid walking alone east of Highland on Hollywood Blvd or anywhere near Skid Row.",
-      "relatedLinks": ["/destination/la/safety-guide"]
+      "answer": "A short, planned walk between active visitor destinations can work, but conditions vary by block and hour. Check the actual hotel route, business activity and transport alternatives. A busy attraction does not guarantee that the surrounding streets stay active after it closes.",
+      "linkLabel": "Read the broader LA safety guide",
+      "href": "/destination/la/safety-guide"
     },
     {
-      "question": "Is Venice Beach safe at night?",
-      "answer": "The boardwalk is not recommended for solo walking after 10pm. Lighting is inconsistent and the homeless population increases after dark. Santa Monica Pier area is fine until closing time.",
-      "relatedLinks": ["/destination/la/best-areas-to-stay"]
+      "question": "Is Hollywood Boulevard practical to visit around 9 p.m.?",
+      "answer": "A planned show or dinner on active entertainment blocks can fit an evening visit. Secure belongings in crowds and check the walk to your hotel or station before going. There is no substantiated neighborhood-wide midnight cutoff; reassess the actual route when you leave."
     },
     {
-      "question": "Should I use Uber at night in LA?",
-      "answer": "Yes — rideshare is the standard choice for nighttime travel in LA. Most locals drive or rideshare at night. Pedestrians in residential areas after dark can attract unwanted attention.",
-      "relatedLinks": ["/destination/la/solo-trip-to-la"]
+      "question": "Is Downtown LA safe to walk through after dinner?",
+      "answer": "Assess the particular district and route. South Park after a game, a Little Tokyo dinner and an Arts District brewery visit have different return arrangements. Check the exact hotel, station or garage connection rather than assuming all Downtown blocks have similar evening activity.",
+      "linkLabel": "Explore LA neighborhoods",
+      "href": "/destination/la/neighborhood-guide"
     },
     {
-      "question": "Is West Hollywood safe at night?",
-      "answer": "Yes — WeHo is one of LA's safest nightlife areas. The Sunset Strip has consistent foot traffic, good lighting, and visible venue security throughout the night.",
-      "relatedLinks": ["/destination/la/best-areas-to-stay"]
+      "question": "Where should I stay in LA if I want to go out at night?",
+      "answer": "Match accommodation to the itinerary: consider West Hollywood for nightlife venues, Hollywood for theaters, Santa Monica for beach evenings, or the relevant Downtown district for events and dining. These are itinerary matches, not safety rankings. Check each hotel's entrance and return journey.",
+      "linkLabel": "Compare LA hotel locations",
+      "href": "/destination/la/hotel"
     },
     {
-      "question": "What are the most dangerous areas in LA at night?",
-      "answer": "Skid Row, parts of East Hollywood, and residential South LA (Compton, Watts, Inglewood) are the highest-risk areas. Tourists have no reason to visit any of these areas at night.",
-      "relatedLinks": ["/destination/la/safety-guide"]
+      "question": "Is Santa Monica or Hollywood a better hotel base for my trip?",
+      "answer": "Santa Monica can fit Pier, beach and local-dining evenings; Hollywood can fit theaters and Hollywood sightseeing. Compare the specific venue-to-hotel routes and total travel costs. Neither is a universal safest choice, and travel between them still needs planning.",
+      "linkLabel": "Compare areas to stay in LA",
+      "href": "/destination/la/best-areas-to-stay"
     },
     {
-      "question": "Is parking safe at night in LA?",
-      "answer": "Use attended lots or hotel parking where possible. In multi-story structures, park near the elevator on well-lit floors. Never leave anything in your car — not a bag, jacket, or charger.",
-      "relatedLinks": ["/destination/la/la-female-solo-travel-guide"]
+      "question": "Is LA Metro safe to use after 9 p.m.?",
+      "answer": "There is no evidence-based systemwide 9 p.m. cutoff. Check the line, direction, service alerts, waiting time, last departure and hotel walk. Metro's improved systemwide crime trend does not guarantee an individual journey.",
+      "linkLabel": "Plan your line and station connections",
+      "href": "/destination/la/la-metro-map"
+    },
+    {
+      "question": "Should I book a hotel with parking in Los Angeles?",
+      "answer": "If bringing a car, verify the parking location, overnight rules, late entrance access, in-and-out privileges and charges. A hotel garage can simplify arrival but does not guarantee protection from theft. Remove visible belongings and include parking in the full stay price."
+    },
+    {
+      "question": "Is Venice Beach worth visiting after dark?",
+      "answer": "Daylight is practical for the Boardwalk's recreation and sightseeing. For a sunset or dinner outing, identify the destination, parking or pickup location and hotel return beforehand. Facility closing times do not establish an official unsafe-after-10-p.m. rule."
+    },
+    {
+      "question": "What should solo female travelers check before booking accommodation?",
+      "answer": "Confirm late reception or host support, the exact entrance, and the return from dinner, a show or transit. Keep a backup if the route or service changes. The research supports practical journey planning, not a separate citywide safety score for women tourists.",
+      "linkLabel": "Plan a solo visit to LA",
+      "href": "/destination/la/la-female-solo-travel-guide"
     }
   ],
-
-  "interlinkingGrid": [
-    { "title": "Solo Trip to LA Guide", "url": "/destination/la/solo-trip-to-la" },
-    { "title": "LA Safety Guide", "url": "/destination/la/safety-guide" },
-    { "title": "Best Areas to Stay in LA", "url": "/destination/la/best-areas-to-stay" },
-    { "title": "LA Female Solo Travel Guide", "url": "/destination/la/la-female-solo-travel-guide" }
-  ],
-
-  "trustBlock": {
-    "methodology": "We analyze LAPD data, traveler patterns, and on-the-ground local insights.",
-    "localInsights": "Built with input from LA residents and frequent travelers — which venues have good lighting, where rideshare pickup is safest, and what the real risks are after dark.",
-    "dataSources": ["LAPD Crime Stats", "311 Reports", "Metro Data"],
-    "editorialProcess": "Every guide is reviewed for accuracy and clarity.",
-    "safetyExpertsConsulted": ""
-  }
+  "sources": [
+    {
+      "label": "LAPD NIBRS offenses dataset",
+      "url": "https://data.lacity.org/Public-Safety/LAPD-NIBRS-Offenses-Dataset/k7nn-b2ep",
+      "note": "City of LA offense records; counts are not tourist risk probabilities."
+    },
+    {
+      "label": "LAPD reporting-system transition",
+      "url": "https://www.lapdonline.org/newsroom/lapd-transitions-to-new-records-management-system-nr24089cm/",
+      "note": "Context for comparisons across the 2024 methodology change."
+    },
+    {
+      "label": "Metro's 2025 public safety results",
+      "url": "https://www.metro.net/about/media-relations/metro-public-safety-strategy-delivers-measurable-results-in-2025/",
+      "note": "Published February 27, 2026; systemwide results, not individual risk."
+    },
+    {
+      "label": "Metro safety reporting",
+      "url": "https://www.metro.net/safety-support/report-issue/",
+      "note": "Reporting channels and emergency guidance."
+    },
+    {
+      "label": "Downtown Community Plan",
+      "url": "https://planning.lacity.gov/plans-policies/community-plan-area/downtown-community-plan",
+      "note": "District geography, not a crime ranking."
+    },
+    {
+      "label": "Hollywood community dispatch",
+      "url": "https://hollywoodpartnership.com/clean-and-safe-services/community-dispatch-center",
+      "note": "District services, not comparative crime evidence."
+    },
+    {
+      "label": "West Hollywood community safety",
+      "url": "https://www.weho.org/city-government/city-departments/community-safety",
+      "note": "Separate city and jurisdiction."
+    },
+    {
+      "label": "Beverly Hills Police Department",
+      "url": "https://beverlyhills.org/police",
+      "note": "Separate city and jurisdiction."
+    },
+    {
+      "label": "Santa Monica Pier FAQ",
+      "url": "https://www.santamonicapier.org/faqs",
+      "note": "Pier and parking operations; individual businesses may differ."
+    },
+    {
+      "label": "Venice Beach recreation facilities",
+      "url": "https://www2.laparks.org/reccenter/venice-beach",
+      "note": "Facility hours do not establish a nighttime crime threshold."
+    },
+    {
+      "label": "Griffith Observatory getting here",
+      "url": "https://griffithobservatory.lacity.gov/visit/getting-here/",
+      "note": "Operating days, DASH service and pickup arrangements."
+    },
+    {
+      "label": "Crypto.com Arena getting here",
+      "url": "https://www.cryptoarena.com/arena-info/getting-here",
+      "note": "Parking and transport; check event and holiday details."
+    },
+    {
+      "label": "Universal operating calendar",
+      "url": "https://www.universalstudioshollywood.com/calendar-and-hours/",
+      "note": "Check the travel date and attraction."
+    }
+  ]
 }

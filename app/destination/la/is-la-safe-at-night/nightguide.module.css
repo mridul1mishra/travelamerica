@@ -1,0 +1,55 @@
+.page { background: #fff; color: #182433; padding: 0 0 3rem; }
+.page article { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
+.page p, .page li { font-size: 1rem; line-height: 1.75; }
+.page p { margin: .8rem 0; }
+.page a { color: #155a7d; text-decoration: underline; text-underline-offset: 3px; }
+.page a:hover { color: #083c57; }
+.page a:focus-visible, .page summary:focus-visible, .tableScroll:focus-visible { outline: 3px solid #ba760f; outline-offset: 4px; }
+.page h1, .page h2, .page h3 { color: #12283c; font-family: var(--font-montserrat), sans-serif; }
+.page h1 { font-size: clamp(2rem, 3.8vw, 3.1rem); line-height: 1.15; margin: .8rem 0 1.2rem; }
+.page h2 { font-size: clamp(1.6rem, 2.7vw, 2.15rem); line-height: 1.25; margin: 0 0 1rem; }
+.page h3 { font-size: 1.2rem; line-height: 1.4; margin: 1.2rem 0 .5rem; }
+.hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: center; padding: 2.5rem 0; }
+.heroImage { width: 100%; height: 430px; object-fit: cover; border-radius: 12px; }
+.breadcrumb { display: flex; flex-wrap: wrap; gap: .5rem; font-size: .85rem; }
+.page .eyebrow { color: #516c7b; font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .5rem; }
+.page .lead { font-size: 1.1rem; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.5rem; }
+.page .button { display: inline-block; padding: .8rem 1.15rem; border-radius: 6px; background: #164c65; color: #fff; font-size: .95rem; font-weight: 650; text-decoration: none; }
+.page .button:hover { background: #0f3548; color: #fff; }
+.contents { display: flex; flex-wrap: wrap; gap: .65rem 1.4rem; border-top: 1px solid #dce5e9; border-bottom: 1px solid #dce5e9; padding: 1.1rem 0; font-size: .9rem; }
+.section { padding: 2.5rem 0; border-bottom: 1px solid #dce5e9; scroll-margin-top: 1.5rem; }
+.section p { max-width: 85ch; }
+.twoColumns, .threeColumns { display: grid; gap: 1.2rem 2rem; }
+.twoColumns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.threeColumns { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tableScroll { overflow-x: auto; margin: 1.2rem 0; }
+.tableScroll table { border-collapse: collapse; width: 100%; min-width: 730px; font-size: .95rem; line-height: 1.6; }
+.tableScroll caption { text-align: left; padding: 0 0 .75rem; color: #526171; }
+.tableScroll th, .tableScroll td { padding: .9rem; border: 1px solid #d6e0e5; text-align: left; vertical-align: top; }
+.tableScroll thead { background: #edf3f6; }
+.tableScroll tbody th { width: 15%; }
+.hotelCta { background: #edf3f6; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; }
+.hotelCta h3 { margin-top: 0; }
+.areaList { margin-top: 1.5rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.areaList .area { border: 1px solid #dce5e9; border-radius: 8px; padding: 1.2rem; }
+.areaList h3 { margin-top: 0; }
+.area { padding: 1rem 0 1.4rem; border-top: 1px solid #e4eaed; scroll-margin-top: 1.5rem; }
+.area p { max-width: 85ch; }
+.page ul { padding-left: 1.3rem; }
+.faq details { border-bottom: 1px solid #dce5e9; padding: 1rem 0; }
+.faq summary { cursor: pointer; }
+.faq summary h3 { display: inline; margin: 0; font-size: 1.05rem; }
+.faq details p { padding-left: 1.2rem; }
+.related { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; margin-top: 1.5rem; }
+@media (max-width: 850px) { .hero { grid-template-columns: 1fr; gap: 1.2rem; } .heroImage { height: 260px; } .threeColumns { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .twoColumns, .areaList { grid-template-columns: 1fr; } .section { padding: 2rem 0; } .hero { padding: 1.5rem 0; } .page .button { max-width: 100%; } }
+@media (max-width: 600px) {
+  .tableScroll table { min-width: 0; }
+  .tableScroll thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .tableScroll tbody, .tableScroll tr, .tableScroll th, .tableScroll td { display: block; width: 100%; }
+  .tableScroll tr { margin-bottom: 1rem; border: 1px solid #d6e0e5; }
+  .tableScroll th, .tableScroll td { border: 0; padding: .6rem .9rem; }
+  .tableScroll tbody th { width: 100%; background: #edf3f6; }
+  .tableScroll td::before { content: attr(data-label); display: block; font-weight: 650; color: #12283c; }
+}
