@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useMember } from "@/app/components/auth/MemberProvider";
+import styles from "./HotelPriceLink.module.css";
 
 type PriceResponse = {
   results: { name: string; nightly?: string; total?: string }[];
@@ -41,16 +42,19 @@ export default function HotelPriceLink({ hotelId, className, initialPrices = nul
   }, [member, hotelId]);
 
   return <div>
-    {!prices && <a href={href} className={className} aria-busy={pending || loading || undefined}
+    {!prices && <a href={href} className={[className, styles.trigger].filter(Boolean).join(" ")} aria-busy={pending || loading || undefined}
+      aria-label={loading ? "Loading hotel price" : undefined}
       onClick={event => {
         event.preventDefault();
         if (pending || loading) return;
         if (!member) { signIn(href, "prices"); return; }
         void load();
-      }}>{loading ? "Checking price…" : "See prices"}</a>}
+      }}>{loading ? <span className={styles.arrows} aria-hidden="true">
+        <span>&gt;</span><span>&gt;</span><span>&gt;</span><span>&gt;</span><span>&gt;</span>
+      </span> : "See prices"}</a>}
     <div role="status" aria-live="polite">
       {error && <p>{error}</p>}
-      {prices && (price?.nightly ? <p><strong>{price.name}</strong>: From {price.nightly} / night</p>
+      {prices && (price?.nightly ? <p>From {price.nightly} / night</p>
         : <p>No price is available for this stay.</p>)}
     </div>
   </div>;
