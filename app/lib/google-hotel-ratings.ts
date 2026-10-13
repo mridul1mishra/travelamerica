@@ -5,7 +5,7 @@ import catalog from "@/content/cities/hotel-catalog.json";
 import selection from "@/content/cities/newyork/hotel-selection.json";
 import { handleHotelRatingRequest, readHotelRatingConfig } from "./google-hotel-ratings-core";
 import { reserveHotelRatingBudget } from "./google-hotel-rating-budget";
-import { fetchGoogleHotelRating, verifyHotelRatingTurnstile } from "./google-hotel-rating-providers";
+import { fetchGoogleHotelRating, fetchGoogleHotelPhotos, verifyHotelRatingTurnstile } from "./google-hotel-rating-providers";
 
 const globalDatabase = globalThis as typeof globalThis & { hotelRatingPool?: Pool };
 
@@ -28,7 +28,7 @@ function normalizedIp(value: string | null): string | null {
   return value;
 }
 
-export async function handleGoogleHotelRating(request: Request): Promise<Response> {
+export async function handleGoogleHotelRating(request: Request, photosOnly = false): Promise<Response> {
   const config = readHotelRatingConfig(process.env);
   return handleHotelRatingRequest(request, {
     config,
@@ -50,8 +50,10 @@ export async function handleGoogleHotelRating(request: Request): Promise<Respons
         .update(`hotel-rating:${normalizedIp(ip) ?? "shared-untrusted-client"}`).digest("hex");
       return reserveHotelRatingBudget(database(), hash, {
         daily: config!.dailyLimit, monthly: config!.monthlyLimit, ipHourly: config!.ipHourlyLimit,
-      });
+      }, photosOnly ? 4 : 1);
     },
-    fetchRating: (placeId, includeReviews) => fetchGoogleHotelRating(placeId, config!.googleApiKey, fetch, includeReviews),
+    fetchRating: (placeId, includeReviews) => photosOnly
+      ? fetchGoogleHotelPhotos(placeId, config!.googleApiKey)
+      : fetchGoogleHotelRating(placeId, config!.googleApiKey, fetch, includeReviews),
   });
 }

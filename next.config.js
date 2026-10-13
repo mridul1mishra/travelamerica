@@ -30,6 +30,7 @@ const csp = `
     https://pics.avs.io
     https://media-cdn.tripadvisor.com
     https://dynamic-media-cdn.tripadvisor.com
+    https://*.googleusercontent.com
     https://wgt-prod-storage.s3.amazonaws.com;
 
   font-src

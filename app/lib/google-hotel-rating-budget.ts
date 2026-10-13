@@ -9,8 +9,9 @@ export async function reserveHotelRatingBudget(
   pool: BudgetPool,
   ipHash: string,
   limits: HotelRatingBudgetLimits,
+  attempts = 1,
 ): Promise<"allowed" | "ip_limit" | "global_limit"> {
-  if (!/^[a-f0-9]{64}$/.test(ipHash)
+  if (!Number.isSafeInteger(attempts) || attempts < 1 || attempts > 4 || !/^[a-f0-9]{64}$/.test(ipHash)
     || Object.values(limits).some((value) => !Number.isSafeInteger(value) || value < 0)) throw new Error("Invalid budget configuration");
   const client = await pool.connect();
   let transaction = false;
@@ -39,13 +40,13 @@ export async function reserveHotelRatingBudget(
       RETURNING scope, attempts`, [day, month, ipHash, hour]);
     const counts = new Map(counters.rows.map((row) => [row.scope, Number(row.attempts)]));
     if (["day", "month", "ip"].some((scope) => !Number.isSafeInteger(counts.get(scope)) || counts.get(scope)! < 0)) throw new Error("Budget counters unavailable");
-    const result = counts.get("ip")! >= limits.ipHourly ? "ip_limit"
-      : counts.get("day")! >= limits.daily || counts.get("month")! >= limits.monthly ? "global_limit" : "allowed";
+    const result = counts.get("ip")! + attempts > limits.ipHourly ? "ip_limit"
+      : counts.get("day")! + attempts > limits.daily || counts.get("month")! + attempts > limits.monthly ? "global_limit" : "allowed";
     if (result === "allowed") {
-      const incremented = await client.query(`UPDATE hotel_rating_usage SET attempts = attempts + 1
+      const incremented = await client.query(`UPDATE hotel_rating_usage SET attempts = attempts + $2
         WHERE (scope IN ('day', 'month') AND requester_key = 'global')
           OR (scope = 'ip' AND requester_key = $1)
-        RETURNING scope`, [ipHash]);
+        RETURNING scope`, [ipHash, attempts]);
       if (incremented.rows.length !== 3) throw new Error("Budget reservation incomplete");
     }
     await client.query("COMMIT");

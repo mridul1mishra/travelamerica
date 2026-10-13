@@ -1,4 +1,4 @@
-import type { HotelRatingValue, HotelReview } from "./google-hotel-ratings-core";
+import type { HotelRatingValue, HotelReview, HotelPhoto } from "./google-hotel-ratings-core";
 
 type Fetcher = (input: string, init: RequestInit) => Promise<Response>;
 
@@ -101,4 +101,55 @@ export async function fetchGoogleHotelRating(
     });
   }
   return value;
+}
+
+// A gallery costs at most one Details request plus three Photo requests.
+// The caller reserves all four attempts atomically before entering this helper.
+export async function fetchGoogleHotelPhotos(placeId: string, apiKey: string, fetcher: Fetcher = fetch): Promise<HotelRatingValue> {
+  if (!/^[A-Za-z0-9_-]{10,256}$/.test(placeId)) throw new Error("Invalid stored place");
+  const details = await providerJson(`https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}`, {
+    method: "GET", headers: { "X-Goog-Api-Key": apiKey, "X-Goog-FieldMask": "photos" },
+  }, fetcher, 131072) as { photos?: unknown[] } | null;
+  if (!details || typeof details !== "object" || Array.isArray(details)
+    || (details.photos !== undefined && !Array.isArray(details.photos))) throw new Error("Invalid provider response");
+  const photos: HotelPhoto[] = [];
+  const usedNames = new Set<string>();
+  for (const raw of (details.photos ?? []).slice(0, 3)) {
+    if (!raw || typeof raw !== "object") continue;
+    const photo = raw as { name?: unknown; authorAttributions?: unknown };
+    const prefix = `places/${placeId}/photos/`;
+    if (typeof photo.name !== "string" || !photo.name.startsWith(prefix)
+      || !/^[A-Za-z0-9_-]{1,4096}$/.test(photo.name.slice(prefix.length)) || usedNames.has(photo.name)) continue;
+    usedNames.add(photo.name);
+    // Fail closed if the provider's required photographer attribution is malformed.
+    if (!Array.isArray(photo.authorAttributions)) continue;
+    const authors: HotelPhoto["authors"] = [];
+    let validAttribution = true;
+    for (const rawAuthor of photo.authorAttributions) {
+      if (!rawAuthor || typeof rawAuthor !== "object") { validAttribution = false; break; }
+      const author = rawAuthor as { displayName?: unknown; uri?: unknown };
+      if (typeof author.displayName !== "string" || !author.displayName.trim()) { validAttribution = false; break; }
+      let url: string | undefined;
+      if (typeof author.uri === "string") {
+        try {
+          const link = new URL(author.uri, "https://maps.google.com");
+          if (link.protocol === "https:" && !link.username && !link.password
+            && (link.hostname === "google.com" || link.hostname.endsWith(".google.com"))) url = link.href;
+        } catch { /* Display the name even when the profile link is invalid. */ }
+      }
+      authors.push({ name: author.displayName, ...(url ? { url } : {}) });
+    }
+    if (!validAttribution) continue;
+    try {
+      const media = await providerJson(`https://places.googleapis.com/v1/${photo.name}/media?maxWidthPx=1200&skipHttpRedirect=true`, {
+        method: "GET", headers: { "X-Goog-Api-Key": apiKey },
+      }, fetcher) as { photoUri?: unknown } | null;
+      if (typeof media?.photoUri !== "string") continue;
+      const url = new URL(media.photoUri);
+      if (url.protocol !== "https:" || url.username || url.password
+        || !(url.hostname === "googleusercontent.com" || url.hostname.endsWith(".googleusercontent.com"))) continue;
+      photos.push({ url: url.href, authors });
+    } catch { /* Keep successful photos; never retry failed photo requests. */ }
+  }
+  return { rating: null, reviewCount: null, photos };
 }

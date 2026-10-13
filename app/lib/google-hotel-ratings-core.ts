@@ -1,5 +1,6 @@
 export type HotelReview = { author: string; authorUrl?: string; rating: number; text: string; date: string; url?: string };
-export type HotelRatingValue = { rating: number | null; reviewCount: number | null; reviews?: HotelReview[] };
+export type HotelPhoto = { url: string; authors: { name: string; url?: string }[] };
+export type HotelRatingValue = { rating: number | null; reviewCount: number | null; reviews?: HotelReview[]; photos?: HotelPhoto[] };
 export type HotelRatingBudgetResult = "allowed" | "ip_limit" | "global_limit";
 
 export type HotelRatingConfig = {

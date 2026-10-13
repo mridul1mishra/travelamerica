@@ -89,7 +89,33 @@ Google Cloud quotas where available. Budget alerts are notifications, not a hard
 spending limit. Bots may still consume the small permitted allowance; CAPTCHA
 reduces that risk, while the shared counters cap its size.
 
-## Data handling
+## Click-to-view hotel photos
+
+Hotel detail pages keep their saved cover image and offer **View photos** beneath
+it. This button uses `/api/hotel-photos`; page loads and opening reviews do not
+request Google photos. It shares the ratings feature flag, private Google key,
+member session requirement, Turnstile verification, origin checks and quota tables.
+
+A gallery loads at most three photos. Before any Google request, it atomically
+reserves **four attempts** from the existing daily, monthly and hourly counters:
+one Details request for `photos`, plus up to three Photo requests. Unused or failed
+attempts are not refunded. With the default daily cap of 20, at most five galleries
+can load per day if no ratings are requested. With an hourly cap of 5, one gallery
+and one rating fit in a network identifier's hourly allowance. These counters cap
+request attempts, not a dollar amount; Google prices the request types separately.
+
+The key stays on the server. Photo URLs and photographer credits are returned with
+no-store headers and retained only in the mounted gallery's memory. Reopening the
+gallery or navigating between its photos makes no further Places API calls; a
+reload needs a new lookup and reservation. No photo resource names or images are
+persisted in the app. Required photographer credits appear beside the main photo,
+each thumbnail and the enlarged viewer. Photos load sequentially without retries;
+unavailable photos do not prevent other successful photos from displaying.
+
+See [Google Place Photos](https://developers.google.com/maps/documentation/places/web-service/place-photos)
+for the photo request and attribution requirements.
+
+## Rating data handling
 
 Google ratings and review counts are returned with `Cache-Control: private,
 no-store` and displayed only in the current component's memory. They are not

@@ -4,7 +4,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { loadTypescriptModule } from "./load-typescript-module.mjs";
 
-const { fetchGoogleHotelRating, verifyHotelRatingTurnstile } = await loadTypescriptModule("../../app/lib/google-hotel-rating-providers.ts");
+const { fetchGoogleHotelRating, fetchGoogleHotelPhotos, verifyHotelRatingTurnstile } = await loadTypescriptModule("../../app/lib/google-hotel-rating-providers.ts");
 const placeId = "ChIJ_mock_place_identifier";
 
 test("written reviews include attribution, original text and safe links while excluding malformed reviews", async () => {
@@ -127,4 +127,62 @@ test("CAPTCHA helper validates each token freshly and keeps its secret in POST b
   }
   assert.equal(calls[0].options.body.get("remoteip"), "192.0.2.1");
   assert.equal(calls[1].options.body.has("remoteip"), false);
+});
+
+test("photo gallery makes at most four uncached requests and preserves photographer credits", async () => {
+  const calls = [];
+  const result = await fetchGoogleHotelPhotos(placeId, "mock-secret", async (url, options) => {
+    calls.push({ url, options });
+    assert.doesNotMatch(url, /mock-secret/);
+    assert.equal(options.headers["X-Goog-Api-Key"], "mock-secret");
+    assert.equal(options.cache, "no-store");
+    assert.equal(options.redirect, "error");
+    if (calls.length === 1) {
+      assert.equal(options.headers["X-Goog-FieldMask"], "photos");
+      return Response.json({ photos: Array.from({ length: 10 }, (_, index) => ({
+        name: `places/${placeId}/photos/photo_${index}`,
+        authorAttributions: [{ displayName: "Photographer", uri: "//maps.google.com/maps/contrib/123" }],
+      })) });
+    }
+    assert.match(url, /maxWidthPx=1200&skipHttpRedirect=true$/);
+    return Response.json({ photoUri: `https://lh3.googleusercontent.com/photo_${calls.length}` });
+  });
+  assert.equal(calls.length, 4);
+  assert.equal(result.photos.length, 3);
+  assert.deepEqual(result.photos[0].authors, [{ name: "Photographer", url: "https://maps.google.com/maps/contrib/123" }]);
+  assert.doesNotMatch(JSON.stringify(result), /mock-secret|places\//);
+});
+
+test("photo gallery ignores foreign resources, malformed credits and duplicate resources", async () => {
+  let calls = 0;
+  const result = await fetchGoogleHotelPhotos(placeId, "secret", async () => {
+    calls++;
+    return Response.json({ photos: [
+      { name: "places/another_place/photos/photo_1", authorAttributions: [] },
+      { name: `places/${placeId}/photos/photo_2`, authorAttributions: [{ displayName: null }] },
+      { name: `places/${placeId}/photos/../../other`, authorAttributions: [] },
+    ] });
+  });
+  assert.equal(calls, 1);
+  assert.deepEqual(result.photos, []);
+  let duplicateCalls = 0;
+  const photo = { name: `places/${placeId}/photos/photo_1`, authorAttributions: [] };
+  const duplicate = await fetchGoogleHotelPhotos(placeId, "secret", async () => {
+    duplicateCalls++;
+    return Response.json(duplicateCalls === 1 ? { photos: [photo, photo, photo] } : { photoUri: "https://lh3.googleusercontent.com/photo" });
+  });
+  assert.equal(duplicateCalls, 2);
+  assert.equal(duplicate.photos.length, 1);
+});
+
+test("photo failures are not retried and unsafe image URLs never reach the browser", async () => {
+  let calls = 0;
+  const result = await fetchGoogleHotelPhotos(placeId, "secret", async () => {
+    calls++;
+    if (calls === 1) return Response.json({ photos: Array.from({ length: 3 }, (_, i) => ({ name: `places/${placeId}/photos/photo_${i}`, authorAttributions: [] })) });
+    if (calls === 2) throw new Error("network failure");
+    return Response.json({ photoUri: calls === 3 ? "https://attacker.example/photo" : "https://lh3.googleusercontent.com/photo" });
+  });
+  assert.equal(calls, 4);
+  assert.equal(result.photos.length, 1);
 });

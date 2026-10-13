@@ -41,6 +41,23 @@ test("quota failures roll back and release the client instead of permitting a lo
   }
 });
 
+test("gallery reserves four attempts atomically and refuses insufficient remaining quota", async () => {
+  for (const current of [0, 2]) {
+    const increments = [];
+    const pool = { connect: async () => ({
+      query: async (sql, values) => {
+        if (sql.includes("WITH current_clock")) return { rows: [{ day_start: new Date(), month_start: new Date(), hour_start: new Date() }] };
+        if (sql.includes("INSERT INTO hotel_rating_usage")) return { rows: ["day", "month", "ip"].map(scope => ({ scope, attempts: current })) };
+        if (sql.includes("UPDATE hotel_rating_usage SET attempts")) { increments.push(values); return { rows: ["day", "month", "ip"].map(scope => ({ scope })) }; }
+        return { rows: [] };
+      }, release: () => {},
+    }) };
+    const result = await reserveHotelRatingBudget(pool, "a".repeat(64), { daily: 5, monthly: 5, ipHourly: 5 }, 4);
+    assert.equal(result, current === 0 ? "allowed" : "ip_limit");
+    assert.deepEqual(increments, current === 0 ? [["a".repeat(64), 4]] : []);
+  }
+});
+
 // Opt-in integration coverage touches only a unique temporary schema and never
 // imports the rating route/providers or queries/modifies the hotel inventory.
 test("PostgreSQL reservations enforce shared day/month/IP caps under concurrency", {

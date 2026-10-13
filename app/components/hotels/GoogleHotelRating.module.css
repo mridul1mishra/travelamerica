@@ -24,6 +24,11 @@
   cursor: pointer;
 }
 
+.photosButton { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1px solid #d8dfe6; border-radius: 8px; background: #fff; color: #172438; font: inherit; font-weight: 600; cursor: pointer; }
+.photosButton:hover:not(:disabled) { border-color: #98442e; color: #98442e; }
+.photosButton:disabled { cursor: wait; opacity: .6; }
+.photosButton:focus-visible { outline: 3px solid #98442e; outline-offset: 3px; }
+
 .button:hover:not(:disabled) {
   color: #b54f3a;
 }

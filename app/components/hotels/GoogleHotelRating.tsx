@@ -1,13 +1,15 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { Eye, EyeOff, Star } from "lucide-react";
+import { Camera, Eye, EyeOff, Star } from "lucide-react";
+import HotelPhotoViewer from "./HotelPhotoViewer";
+import type { HotelPhoto } from "@/app/lib/google-hotel-ratings-core";
 import { useMember } from "@/app/components/auth/MemberProvider";
 import styles from "./GoogleHotelRating.module.css";
 
 const TURNSTILE_URL = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
 type Turnstile = NonNullable<Window["turnstile"]>;
-type Rating = { rating: number | null; reviewCount: number | null; reviews?: { author: string; authorUrl?: string; rating: number; text: string; date: string; url?: string }[] };
+type Rating = { rating: number | null; reviewCount: number | null; reviews?: { author: string; authorUrl?: string; rating: number; text: string; date: string; url?: string }[]; photos?: HotelPhoto[] };
 type Phase = "idle" | "challenge" | "loading" | "loaded" | "unavailable" | "signin";
 let turnstileLoad: Promise<Turnstile> | undefined;
 
@@ -55,11 +57,12 @@ function isRating(value: unknown): value is Rating {
     && (reviewCount === null || (typeof reviewCount === "number" && Number.isInteger(reviewCount) && reviewCount >= 0));
 }
 
-export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, showReviews = false }: {
+export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, showReviews = false, photosOnly = false }: {
   hotelId: string;
   hotelName: string;
   googleMapsUrl?: string;
   showReviews?: boolean;
+  photosOnly?: boolean;
 }) {
   const { member, pending: memberPending, signIn, invalidate } = useMember();
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim();
@@ -122,8 +125,8 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
       clearTimeout(timer);
       setPhase("loading");
       controller = new AbortController();
-      timer = setTimeout(unavailable, 30000);
-      void fetch("/api/hotel-ratings", {
+      timer = setTimeout(unavailable, photosOnly ? 60000 : 30000);
+      void fetch(photosOnly ? "/api/hotel-photos" : "/api/hotel-ratings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ hotelId, turnstileToken: token, ...(showReviews ? { includeReviews: true } : {}) }),
@@ -147,6 +150,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
         if (!response.ok) throw new Error("Rating unavailable");
         const data: unknown = await response.json();
         if (!isRating(data)) throw new Error("Rating unavailable");
+        if (photosOnly && (!Array.isArray(data.photos) || data.photos.length > 3)) throw new Error("Photos unavailable");
         if (!active || settled) return;
         settled = true;
         clearTimeout(timer);
@@ -185,7 +189,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
       controller?.abort();
       removeWidget();
     };
-  }, [requested, siteKey, hotelId, localTurnstileBypass, member, memberPending, invalidate, showReviews]);
+  }, [requested, siteKey, hotelId, localTurnstileBypass, member, memberPending, invalidate, showReviews, photosOnly]);
 
   const begin = () => {
     if (memberPending) return;
@@ -208,16 +212,17 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
   };
 
   return (
-    <div className={`${styles.rating}${showReviews ? ` ${styles.withReviews}` : ""}`} aria-label={`Google rating for ${hotelName}`} aria-busy={pending}>
-      {!expanded && <span aria-hidden="true" className={phase === "loading" && member ? styles.loadingStars : undefined}>
+    <div className={`${styles.rating}${showReviews || photosOnly ? ` ${styles.withReviews}` : ""}`} aria-label={`Google ${photosOnly ? "photos" : "rating"} for ${hotelName}`} aria-busy={pending}>
+      {!expanded && !photosOnly && <span aria-hidden="true" className={phase === "loading" && member ? styles.loadingStars : undefined}>
         {[0, 1, 2, 3].map(index => <span key={index}>*</span>)}
       </span>}
       <div id={messageId} className={styles.message} aria-live="polite">
-        {!member && phase === "signin" && <p>Sign in again to view this rating.</p>}
-        {member && phase === "challenge" && <p>Complete the security check to view this rating.</p>}
-        {member && phase === "loading" && <span className={styles.srOnly}>Loading rating…</span>}
-        {expanded && unavailable && <p>Google rating is unavailable right now.</p>}
-        {expanded && phase === "loaded" && result && <>
+        {!member && phase === "signin" && <p>Sign in again to view {photosOnly ? "photos" : "this rating"}.</p>}
+        {member && phase === "challenge" && <p>Complete the security check to view {photosOnly ? "photos" : "this rating"}.</p>}
+        {member && phase === "loading" && <span className={photosOnly ? undefined : styles.srOnly}>Loading {photosOnly ? "photos" : "rating"}…</span>}
+        {expanded && unavailable && <p>Google {photosOnly ? "photos are" : "rating is"} unavailable right now.</p>}
+        {expanded && phase === "loaded" && result && photosOnly && <HotelPhotoViewer photos={result.photos ?? []} hotelName={hotelName} mapsUrl={mapsUrl} />}
+        {expanded && phase === "loaded" && result && !photosOnly && <>
           <span>{result.rating === null ? "No Google rating available." : `${result.rating.toFixed(1)} rating`}</span>
           {!showReviews && result.reviewCount !== null && <span>{result.reviewCount.toLocaleString()} {result.reviewCount === 1 ? "review" : "reviews"}</span>}
           {showReviews && <section className={styles.reviews} aria-label="Guest reviews from Google Maps" tabIndex={0}>
@@ -245,11 +250,11 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
           </section>}
         </>}
       </div>
-      <button type="button" className={styles.button} disabled={pending || memberPending} onClick={toggle}
-        aria-label={`${expanded ? "Hide" : "Show"} Google ${showReviews ? "reviews" : "rating"} for ${hotelName}`}
-        title={`${expanded ? "Hide" : "Show"} Google ${showReviews ? "reviews" : "rating"}`}
+      <button type="button" className={photosOnly ? styles.photosButton : styles.button} disabled={pending || memberPending} onClick={toggle}
+        aria-label={`${expanded ? "Hide" : photosOnly ? "View" : "Show"} Google ${photosOnly ? "photos" : showReviews ? "reviews" : "rating"} for ${hotelName}`}
+        title={`${expanded ? "Hide" : "Show"} Google ${photosOnly ? "photos" : showReviews ? "reviews" : "rating"}`}
         aria-controls={messageId} aria-expanded={expanded}>
-        {expanded ? <EyeOff size={18} aria-hidden="true" /> : <Eye size={18} aria-hidden="true" />}
+        {photosOnly ? <><Camera size={18} aria-hidden="true" /> {expanded ? "Hide photos" : "View photos"}</> : expanded ? <EyeOff size={18} aria-hidden="true" /> : <Eye size={18} aria-hidden="true" />}
       </button>
       {member && requested && <div ref={challengeElement} className={styles.challenge} hidden={phase !== "challenge"} />}
       {expanded && <a className={styles.attribution} href={mapsUrl} translate="no"

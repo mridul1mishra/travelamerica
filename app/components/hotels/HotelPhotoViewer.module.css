@@ -1,0 +1,22 @@
+.gallery { width: 100%; min-width: 0; }
+.frame { position: relative; background: #e9edf1; border-radius: 14px; overflow: hidden; }
+.photo { display: block; width: 100%; height: 360px; object-fit: contain; }
+.gallery button { cursor: pointer; font: inherit; }
+.enlarge { position: absolute; right: 12px; bottom: 12px; display: inline-flex; padding: 10px; border: 0; border-radius: 8px; background: #fff; color: #172438; }
+.caption { font-size: .8rem; color: #657083; margin: 10px 0; overflow-wrap: anywhere; }
+.caption a, .thumbnail a, .unavailable a { color: #98442e; }
+.thumbnails { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.thumbnail { margin: 0; min-width: 0; }
+.thumbnail button { width: 100%; padding: 3px; border: 2px solid transparent; border-radius: 8px; background: transparent; }
+.thumbnail button[aria-pressed="true"] { border-color: #98442e; }
+.thumbnail img { display: block; width: 100%; height: 80px; object-fit: cover; border-radius: 4px; }
+.thumbnail figcaption { font-size: .65rem; color: #657083; overflow-wrap: anywhere; }
+.gallery button:focus-visible { outline: 3px solid #98442e; outline-offset: 3px; }
+.dialog { width: min(1100px, 94vw); max-height: 94vh; padding: 20px; border: 0; border-radius: 16px; color: #172438; }
+.dialog::backdrop { background: rgb(10 20 35 / 80%); }
+.largePhoto { display: block; width: 100%; height: min(65vh, 700px); object-fit: contain; background: #e9edf1; border-radius: 8px; }
+.toolbar, .controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.toolbar { margin-bottom: 12px; }
+.toolbar button, .controls button { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #d8dfe6; border-radius: 8px; padding: 8px 12px; background: #fff; color: #172438; }
+.unavailable { padding: 48px 20px; }
+@media (max-width: 600px) { .photo { height: 260px; } .dialog { padding: 12px; } .thumbnail img { height: 65px; } }
