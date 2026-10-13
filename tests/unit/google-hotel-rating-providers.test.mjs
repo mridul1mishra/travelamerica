@@ -66,6 +66,25 @@ test("malformed stored Place IDs cannot make a provider request", async () => {
   }
 });
 
+test("Google failure logs only an allowlisted reason and HTTP status", async () => {
+  const entries = [];
+  const original = console.error;
+  console.error = (...args) => entries.push(args);
+  try {
+    for (const reason of ["API_KEY_IP_ADDRESS_BLOCKED", "mock-secret"]) {
+      await assert.rejects(fetchGoogleHotelRating(placeId, "mock-secret", async () =>
+        Response.json({ error: { message: "mock-secret sensitive body", details: [{ reason, metadata: { key: "mock-secret" } }] } }, { status: 403 })));
+    }
+    assert.deepEqual(entries, [
+      ["Google hotel rating lookup failed", { httpStatus: 403, reason: "API_KEY_IP_ADDRESS_BLOCKED" }],
+      ["Google hotel rating lookup failed", { httpStatus: 403 }],
+    ]);
+    assert.doesNotMatch(JSON.stringify(entries), /mock-secret|sensitive/);
+  } finally {
+    console.error = original;
+  }
+});
+
 for (const [name, value] of [
   ["wrong JSON shape", []],
   ["rating string", { rating: "4.7" }],

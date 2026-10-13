@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff, Star } from "lucide-react";
 import { useMember } from "@/app/components/auth/MemberProvider";
 import styles from "./GoogleHotelRating.module.css";
 
@@ -208,7 +208,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
   };
 
   return (
-    <div className={styles.rating} aria-label={`Google rating for ${hotelName}`} aria-busy={pending}>
+    <div className={`${styles.rating}${showReviews ? ` ${styles.withReviews}` : ""}`} aria-label={`Google rating for ${hotelName}`} aria-busy={pending}>
       {!expanded && <span aria-hidden="true" className={phase === "loading" && member ? styles.loadingStars : undefined}>
         {[0, 1, 2, 3].map(index => <span key={index}>*</span>)}
       </span>}
@@ -220,16 +220,28 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
         {expanded && phase === "loaded" && result && <>
           <span>{result.rating === null ? "No Google rating available." : `${result.rating.toFixed(1)} rating`}</span>
           {!showReviews && result.reviewCount !== null && <span>{result.reviewCount.toLocaleString()} {result.reviewCount === 1 ? "review" : "reviews"}</span>}
-          {showReviews && <section className={styles.reviews} aria-label="Guest reviews from Google Maps">
+          {showReviews && <section className={styles.reviews} aria-label="Guest reviews from Google Maps" tabIndex={0}>
             <h2>Guest reviews</h2>
             <p>Reviews from Google Maps · Sorted by relevance</p>
-            {result.reviews?.length ? result.reviews.map((review, index) => <article key={index} className={styles.review}>
-              <strong>{review.authorUrl ? <a href={review.authorUrl} target="_blank" rel="noopener noreferrer">{review.author}</a> : review.author}</strong>
-              <p>{review.rating} / 5 · <time dateTime={review.date}>{new Date(review.date).toLocaleDateString()}</time></p>
-              <p className={styles.reviewText}>{review.text}</p>
-              {review.url && <a href={review.url} target="_blank" rel="noopener noreferrer">Read on Google Maps ↗</a>}
-            </article>) : <p>No written reviews are available for this hotel.</p>}
-            <a href={mapsUrl} target="_blank" rel="noopener noreferrer">Read more reviews on Google Maps ↗</a>
+            {result.reviews?.length ? <div className={styles.reviewGrid}>{result.reviews.map((review, index) => <article key={index} className={styles.review}>
+              <header className={styles.reviewHeader}>
+                <span className={styles.avatar} aria-hidden="true">{review.author.trim().split(/\s+/).slice(0, 2).map(part => Array.from(part)[0]).join("").toUpperCase()}</span>
+                <div>
+                  <strong>{review.authorUrl ? <a href={review.authorUrl} target="_blank" rel="noopener noreferrer">{review.author}</a> : review.author}</strong>
+                  <time className={styles.reviewDate} dateTime={review.date}>{new Date(review.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</time>
+                </div>
+              </header>
+              <div className={styles.reviewStars} aria-label={`${review.rating} out of 5 stars`}>
+                {Array.from({ length: 5 }, (_, star) => <Star key={star} size={16} aria-hidden="true" fill={star < Math.round(review.rating) ? "currentColor" : "none"} />)}
+                <span aria-hidden="true">{review.rating}/5</span>
+              </div>
+              {review.text.length > 280 ? <details className={styles.reviewDetails}>
+                <summary><span className={styles.reviewPreview}>{review.text.slice(0, 280).trimEnd()}…</span><span className={styles.readMore}>Read full review</span><span className={styles.readLess}>Show less</span></summary>
+                <p className={styles.reviewText}>{review.text}</p>
+              </details> : <p className={styles.reviewText}>{review.text}</p>}
+              {review.url && <a className={styles.reviewLink} href={review.url} target="_blank" rel="noopener noreferrer">Read on Google Maps ↗</a>}
+            </article>)}</div> : <p>No written reviews are available for this hotel.</p>}
+            <a className={styles.moreReviews} href={mapsUrl} target="_blank" rel="noopener noreferrer">Read more reviews on Google Maps ↗</a>
           </section>}
         </>}
       </div>

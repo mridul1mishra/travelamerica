@@ -13,8 +13,31 @@ async function providerJson(url: string, init: RequestInit, fetcher: Fetcher, ma
       redirect: "error",
       signal: controller.signal,
     });
-    // Do not include upstream bodies, URLs or credentials in errors/logs.
-    if (!response.ok) throw new Error("Provider unavailable");
+    // Log only known Google error identifiers, never bodies, URLs or credentials.
+    if (!response.ok) {
+      if (url.startsWith("https://places.googleapis.com/v1/places/")) {
+        const diagnostic: { httpStatus: number; reason?: string } = { httpStatus: response.status };
+        try {
+          const text = await response.text();
+          if (text.length <= 8192) {
+            const data = JSON.parse(text);
+            const knownReasons = new Set([
+              "API_KEY_IP_ADDRESS_BLOCKED", "API_KEY_HTTP_REFERRER_BLOCKED",
+              "API_KEY_SERVICE_BLOCKED", "API_KEY_INVALID", "API_KEY_EXPIRED",
+              "SERVICE_DISABLED", "BILLING_DISABLED", "CONSUMER_INVALID",
+              "RATE_LIMIT_EXCEEDED", "QUOTA_EXCEEDED",
+            ]);
+            if (Array.isArray(data?.error?.details)) {
+              const detail = data.error.details.find((item: { reason?: unknown } | null) =>
+                typeof item?.reason === "string" && knownReasons.has(item.reason));
+              if (detail) diagnostic.reason = detail.reason;
+            }
+          }
+        } catch { /* An unreadable error still has a useful HTTP status. */ }
+        console.error("Google hotel rating lookup failed", diagnostic);
+      }
+      throw new Error("Provider unavailable");
+    }
     const text = await response.text();
     if (text.length > maxLength) throw new Error("Invalid provider response");
     return JSON.parse(text);

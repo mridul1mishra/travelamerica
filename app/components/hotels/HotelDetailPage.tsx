@@ -60,11 +60,13 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
           {hotel.hotelTier && <span className={styles.tier}>{hotel.hotelTier}{hotel.hotelTierIsProvisional ? " · Provisional" : ""}</span>}
           {hotel.neighborhood && <p className={styles.location}>{hotel.neighborhood}</p>}
           {hotel.address && <p>{hotel.address}</p>}
-          {hotel.googleRatingAvailable && hotel.hotelId && <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={hotel.googleMapsUrl} showReviews />}
           <HotelPriceLink hotelId={hotel.hotelId!} className={styles.button} initialPrices={cachedPrices} />
         </div>
         <Image className={styles.photo} src={hotel.img} alt={hotel.title} width={720} height={600} unoptimized />
       </div>
+      {hotel.googleRatingAvailable && hotel.hotelId && <div className={styles.guestReviews}>
+        <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={hotel.googleMapsUrl} showReviews />
+      </div>}
       <div className={styles.sections}>
         <section className={styles.panel}>
           <h2>Location</h2>
