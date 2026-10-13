@@ -63,10 +63,9 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
           <HotelPriceLink hotelId={hotel.hotelId!} className={styles.button} initialPrices={cachedPrices} />
         </div>
         <div>
-          <Image className={styles.photo} src={hotel.img} alt={hotel.title} width={720} height={600} unoptimized />
-          {hotel.googleRatingAvailable && hotel.hotelId && <div className={styles.photoGallery}>
-            <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={hotel.googleMapsUrl} photosOnly />
-          </div>}
+          {hotel.googleRatingAvailable && hotel.hotelId
+            ? <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={hotel.googleMapsUrl} photosOnly coverImage={hotel.img} />
+            : <Image className={styles.photo} src={hotel.img} alt={hotel.title} width={720} height={600} unoptimized />}
         </div>
       </div>
       {hotel.googleRatingAvailable && hotel.hotelId && <div className={styles.guestReviews}>

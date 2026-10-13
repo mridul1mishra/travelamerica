@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import Image from "next/image";
 import { Camera, Eye, EyeOff, Star } from "lucide-react";
 import HotelPhotoViewer from "./HotelPhotoViewer";
 import type { HotelPhoto } from "@/app/lib/google-hotel-ratings-core";
@@ -10,7 +11,7 @@ import styles from "./GoogleHotelRating.module.css";
 const TURNSTILE_URL = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
 type Turnstile = NonNullable<Window["turnstile"]>;
 type Rating = { rating: number | null; reviewCount: number | null; reviews?: { author: string; authorUrl?: string; rating: number; text: string; date: string; url?: string }[]; photos?: HotelPhoto[] };
-type Phase = "idle" | "challenge" | "loading" | "loaded" | "unavailable" | "signin";
+type Phase = "idle" | "challenge" | "loading" | "loaded" | "unavailable" | "security_failed" | "signin";
 let turnstileLoad: Promise<Turnstile> | undefined;
 
 function loadTurnstile(): Promise<Turnstile> {
@@ -57,12 +58,13 @@ function isRating(value: unknown): value is Rating {
     && (reviewCount === null || (typeof reviewCount === "number" && Number.isInteger(reviewCount) && reviewCount >= 0));
 }
 
-export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, showReviews = false, photosOnly = false }: {
+export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, showReviews = false, photosOnly = false, coverImage }: {
   hotelId: string;
   hotelName: string;
   googleMapsUrl?: string;
   showReviews?: boolean;
   photosOnly?: boolean;
+  coverImage?: string;
 }) {
   const { member, pending: memberPending, signIn, invalidate } = useMember();
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim();
@@ -74,6 +76,9 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
   const [phase, setPhase] = useState<Phase>("idle");
   const [result, setResult] = useState<Rating | null>(null);
   const [hidden, setHidden] = useState(false);
+  const [securityMessage, setSecurityMessage] = useState("");
+  const [securityAttempt, setSecurityAttempt] = useState(0);
+  const [lookupMessage, setLookupMessage] = useState("");
   const messageId = useId();
   const started = useRef(false);
   const lookupStarted = useRef(false);
@@ -89,6 +94,8 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
       setRequested(false);
       setResult(null);
       setHidden(false);
+      setSecurityMessage("");
+      setLookupMessage("");
       setPhase(current => current === "signin" ? "signin" : "idle");
     }, 0);
     return () => clearTimeout(reset);
@@ -117,9 +124,19 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
       removeWidget();
       setPhase("unavailable");
     };
+    const securityFailed = (reason: string, message: string, code?: unknown) => {
+      if (!active || settled || submitted) return;
+      settled = true;
+      clearTimeout(timer);
+      removeWidget();
+      const safeCode = typeof code === "string" && /^\d{6}$/.test(code) ? code : undefined;
+      console.error("Hotel security check failed", { feature: photosOnly ? "photos" : "ratings", reason, ...(safeCode ? { code: safeCode } : {}) });
+      setSecurityMessage(message);
+      setPhase("security_failed");
+    };
     const loadRating = (token: string) => {
       if (!active || submitted || settled) return;
-      if (!localTurnstileBypass && !token?.trim()) { unavailable(); return; }
+      if (!localTurnstileBypass && !token?.trim()) { securityFailed("empty_token", "The security check did not complete. Please try again."); return; }
       submitted = true;
       lookupStarted.current = true;
       clearTimeout(timer);
@@ -147,6 +164,9 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
           invalidate();
           return;
         }
+        if (response.status === 429 && photosOnly) {
+          setLookupMessage("The photo lookup limit has been reached. Please try again later or view this hotel on Google Maps.");
+        }
         if (!response.ok) throw new Error("Rating unavailable");
         const data: unknown = await response.json();
         if (!isRating(data)) throw new Error("Rating unavailable");
@@ -159,7 +179,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
         setPhase("loaded");
       }).catch(unavailable);
     };
-    timer = setTimeout(unavailable, 90000);
+    timer = setTimeout(() => securityFailed("challenge_timeout", "The security check timed out. Please try again."), 90000);
 
     if (localTurnstileBypass) loadRating("");
     else void loadTurnstile().then(api => {
@@ -174,13 +194,14 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
         "refresh-expired": "never",
         "refresh-timeout": "never",
         "response-field": false,
-        "error-callback": unavailable,
-        "expired-callback": unavailable,
-        "timeout-callback": unavailable,
+        "error-callback": (code: unknown) => securityFailed("turnstile_error", "The security check failed. Please try again.", code),
+        "expired-callback": () => securityFailed("token_expired", "The security check expired. Please try again."),
+        "timeout-callback": () => securityFailed("widget_timeout", "The security check timed out. Please try again."),
+        "unsupported-callback": () => securityFailed("unsupported_browser", "This browser cannot complete the security check. Please try another browser."),
         callback: loadRating,
       });
       if (settled) removeWidget();
-    }).catch(unavailable);
+    }).catch(() => securityFailed("script_or_widget_load", "The security check could not load. Please reload the page or check your browser's content blocker."));
 
     return () => {
       if (submitted && !settled) unavailable();
@@ -189,7 +210,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
       controller?.abort();
       removeWidget();
     };
-  }, [requested, siteKey, hotelId, localTurnstileBypass, member, memberPending, invalidate, showReviews, photosOnly]);
+  }, [requested, siteKey, hotelId, localTurnstileBypass, member, memberPending, invalidate, showReviews, photosOnly, securityAttempt]);
 
   const begin = () => {
     if (memberPending) return;
@@ -199,19 +220,34 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
     }
     if (started.current) return;
     started.current = true;
-    setPhase(localTurnstileBypass ? "loading" : siteKey ? "challenge" : "unavailable");
+    setLookupMessage("");
+    if (!localTurnstileBypass && !siteKey) {
+      console.error("Hotel security check failed", { feature: photosOnly ? "photos" : "ratings", reason: "missing_site_key" });
+      setSecurityMessage("The security check is not configured. Please use Google Maps for now.");
+      setPhase("security_failed");
+      return;
+    }
+    setPhase(localTurnstileBypass ? "loading" : "challenge");
     if (localTurnstileBypass || siteKey) setRequested(true);
   };
   const pending = member && (phase === "challenge" || phase === "loading");
-  const unavailable = phase === "unavailable";
+  const unavailable = phase === "unavailable" || phase === "security_failed";
   const expanded = member && (phase === "loaded" || unavailable) && !hidden;
   const toggle = () => {
     if (!member) { begin(); return; }
     if (phase === "loaded" || unavailable) setHidden(value => !value);
     else begin();
   };
+  const retrySecurity = () => {
+    if (lookupStarted.current || memberPending || !member) return;
+    started.current = false;
+    setSecurityAttempt(value => value + 1);
+    begin();
+  };
 
-  return (
+  return (<>
+    {photosOnly && coverImage && !(expanded && phase === "loaded" && result?.photos?.length) &&
+      <Image className={styles.coverPhoto} src={coverImage} alt={hotelName} width={720} height={600} unoptimized />}
     <div className={`${styles.rating}${showReviews || photosOnly ? ` ${styles.withReviews}` : ""}`} aria-label={`Google ${photosOnly ? "photos" : "rating"} for ${hotelName}`} aria-busy={pending}>
       {!expanded && !photosOnly && <span aria-hidden="true" className={phase === "loading" && member ? styles.loadingStars : undefined}>
         {[0, 1, 2, 3].map(index => <span key={index}>*</span>)}
@@ -220,8 +256,9 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
         {!member && phase === "signin" && <p>Sign in again to view {photosOnly ? "photos" : "this rating"}.</p>}
         {member && phase === "challenge" && <p>Complete the security check to view {photosOnly ? "photos" : "this rating"}.</p>}
         {member && phase === "loading" && <span className={photosOnly ? undefined : styles.srOnly}>Loading {photosOnly ? "photos" : "rating"}…</span>}
-        {expanded && unavailable && <p>Google {photosOnly ? "photos are" : "rating is"} unavailable right now.</p>}
-        {expanded && phase === "loaded" && result && photosOnly && <HotelPhotoViewer photos={result.photos ?? []} hotelName={hotelName} mapsUrl={mapsUrl} />}
+        {expanded && unavailable && <p>{photosOnly && lookupMessage ? lookupMessage : `Google ${photosOnly ? "photos are" : "rating is"} unavailable right now.`}</p>}
+        {expanded && phase === "security_failed" && <p>{securityMessage}</p>}
+        {expanded && phase === "loaded" && result && photosOnly && <HotelPhotoViewer photos={result.photos ?? []} hotelName={hotelName} mapsUrl={mapsUrl} mainImage={Boolean(coverImage)} />}
         {expanded && phase === "loaded" && result && !photosOnly && <>
           <span>{result.rating === null ? "No Google rating available." : `${result.rating.toFixed(1)} rating`}</span>
           {!showReviews && result.reviewCount !== null && <span>{result.reviewCount.toLocaleString()} {result.reviewCount === 1 ? "review" : "reviews"}</span>}
@@ -256,9 +293,11 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
         aria-controls={messageId} aria-expanded={expanded}>
         {photosOnly ? <><Camera size={18} aria-hidden="true" /> {expanded ? "Hide photos" : "View photos"}</> : expanded ? <EyeOff size={18} aria-hidden="true" /> : <Eye size={18} aria-hidden="true" />}
       </button>
+      {expanded && phase === "security_failed" && siteKey && <button type="button" className={styles.photosButton} disabled={memberPending} onClick={retrySecurity}>Retry security check</button>}
       {member && requested && <div ref={challengeElement} className={styles.challenge} hidden={phase !== "challenge"} />}
       {expanded && <a className={styles.attribution} href={mapsUrl} translate="no"
         target="_blank" rel="noopener noreferrer">{phase === "loaded" ? "Google Maps" : "View on Google Maps"}</a>}
     </div>
+    </>
   );
 }

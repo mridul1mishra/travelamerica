@@ -68,6 +68,9 @@ export async function getCityHotels(city: HotelCity, tag?: HotelTag): Promise<Ho
     } : city === "nyc" ? getNycHotelTierAssessment(hotelSource, hotel.hotelSourceId) : {};
     return {
       ...hotel,
+      // User-selected Edison cover replaces the provider thumbnail.
+      img: city === "nyc" && hotelSource === "travel-advisor" && hotel.hotelSourceId === "93437"
+        ? "https://lh3.googleusercontent.com/grass-cs/AABkmLf5zATfjewZ7DqQlHtQRC4PVv3xYUcZa_-XrmRzQUmc52mgipKZg2GSNsjF6WYYExJEpogkd085ZM6UCpJX2v8NXhxfwsNF5OV7qJUoMLpe-jUo2FmLDMBRSvTqgzIOCJiMc2fpmg=s4800-w1200" : hotel.img,
       ...tierAssessment,
       googleRatingAvailable: Boolean(googlePlaceId),
       googleMapsUrl: googlePlaceId

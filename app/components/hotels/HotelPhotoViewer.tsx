@@ -12,7 +12,7 @@ function Attribution({ photo }: { photo: HotelPhoto }) {
     : author.name}</span>)}</span>;
 }
 
-export default function HotelPhotoViewer({ photos, hotelName, mapsUrl }: { photos: HotelPhoto[]; hotelName: string; mapsUrl: string }) {
+export default function HotelPhotoViewer({ photos, hotelName, mapsUrl, mainImage = false }: { photos: HotelPhoto[]; hotelName: string; mapsUrl: string; mainImage?: boolean }) {
   const [selected, setSelected] = useState(0);
   const [failed, setFailed] = useState<string[]>([]);
   const dialog = useRef<HTMLDialogElement>(null);
@@ -21,7 +21,7 @@ export default function HotelPhotoViewer({ photos, hotelName, mapsUrl }: { photo
   const image = (large = false) => failed.includes(photo.url)
     ? <p className={styles.unavailable}>This photo is unavailable. Select another photo or <a href={mapsUrl} target="_blank" rel="noopener noreferrer">view Google Maps</a>.</p>
     : <Image src={photo.url} alt={`${hotelName} — photo ${selected + 1}`} width={1200} height={800}
-        className={large ? styles.largePhoto : styles.photo} unoptimized referrerPolicy="no-referrer"
+        className={large ? styles.largePhoto : `${styles.photo}${mainImage ? ` ${styles.mainPhoto}` : ""}`} unoptimized referrerPolicy="no-referrer"
         onError={() => setFailed(current => current.includes(photo.url) ? current : [...current, photo.url])} />;
   const navigate = (offset: number) => setSelected(current => (current + offset + photos.length) % photos.length);
   return <section className={styles.gallery} aria-label={`Photos of ${hotelName}`}>

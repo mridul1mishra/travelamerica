@@ -115,6 +115,12 @@ unavailable photos do not prevent other successful photos from displaying.
 See [Google Place Photos](https://developers.google.com/maps/documentation/places/web-service/place-photos)
 for the photo request and attribution requirements.
 
+For a one-off gallery check, temporarily override the environment limits to
+`GOOGLE_RATINGS_DAILY_LIMIT=100`, `GOOGLE_RATINGS_MONTHLY_LIMIT=1000` and
+`GOOGLE_RATINGS_IP_HOURLY_LIMIT=50`. Restart locally or redeploy the hosted app.
+After testing, restore 20, 500 and 5 respectively and restart/redeploy again.
+The code defaults stay conservative. Existing request counters are not cleared.
+
 ## Rating data handling
 
 Google ratings and review counts are returned with `Cache-Control: private,

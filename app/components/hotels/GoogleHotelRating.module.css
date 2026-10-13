@@ -8,6 +8,8 @@
   font-size: 0.8rem;
   line-height: 1.5;
 }
+.coverPhoto { display: block; width: 100%; height: 480px; object-fit: cover; border-radius: 16px; margin-bottom: 14px; }
+@media (max-width: 760px) { .coverPhoto { height: 320px; } }
 
 .button {
   display: inline-flex;
