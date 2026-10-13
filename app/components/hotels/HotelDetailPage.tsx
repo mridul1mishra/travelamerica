@@ -4,7 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { headers } from "next/headers";
 import { getMemberSession } from "@/app/lib/auth";
-import { defaultHotelPriceStay } from "@/app/lib/hotel-price-stay";
+import { defaultHotelPriceStay, findHotelPriceStay } from "@/app/lib/hotel-price-stay";
 import { priceCacheKey, readPriceCache } from "@/app/lib/serpapi-hotel-prices";
 import NavigationHeader from "@/app/components/Header/NavigationHeader";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -42,8 +42,8 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
     const stay = defaultHotelPriceStay();
     const query = `${hotel.title} ${hotel.address ?? cityNames[city]}`;
     try {
-      const cached = await readPriceCache(priceCacheKey(hotel.hotelId!, query, stay));
-      if (cached) cachedPrices = { ...cached, stay };
+      cachedPrices = await findHotelPriceStay(stay, candidate =>
+        readPriceCache(priceCacheKey(hotel.hotelId!, query, candidate)));
     } catch { /* Keep the hotel page usable when the cache is unavailable. */ }
   }
   return <>

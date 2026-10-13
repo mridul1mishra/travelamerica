@@ -3,11 +3,12 @@ import { getHotelPriceIdentity } from "@/app/lib/hotels";
 import { MEMBER_NO_STORE_HEADERS, validHotelId } from "@/app/lib/member-hotel-access";
 import { memberSignInUrl } from "@/app/lib/member-access";
 import { lookupHotelPrices, priceCacheKey } from "@/app/lib/serpapi-hotel-prices";
-import { defaultHotelPriceStay } from "@/app/lib/hotel-price-stay";
+import { defaultHotelPriceStay, findHotelPriceStay } from "@/app/lib/hotel-price-stay";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
+export const maxDuration = 90;
 
 export async function GET(request: Request, context: { params: Promise<{ hotelId: string }> }): Promise<Response> {
   const { hotelId } = await context.params;
@@ -33,8 +34,9 @@ export async function POST(request: Request, context: { params: Promise<{ hotelI
     if (!hotel) return reply({ message: "Hotel not found." }, 404);
     const cities = { nyc: "New York City", la: "Los Angeles", orlando: "Orlando", lasvegas: "Las Vegas" };
     const query = `${hotel.name} ${hotel.address ?? cities[hotel.city]}`;
-    const result = await lookupHotelPrices(priceCacheKey(hotelId, query, stay), query, stay, member.user.id);
+    const result = await findHotelPriceStay(stay, candidate =>
+      lookupHotelPrices(priceCacheKey(hotelId, query, candidate), query, candidate, member.user.id));
     if (!result) return reply({ message: "The price lookup limit has been reached. Please try again later." }, 429);
-    return reply({ ...result, stay });
+    return reply(result);
   } catch { return reply({ message: "Pricing is temporarily unavailable. Please try again later." }, 503); }
 }

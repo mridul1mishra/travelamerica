@@ -93,7 +93,9 @@ export async function fetchHotelPriceSnapshot(query: string, stay: ReturnType<ty
   const response = await fetch(`https://serpapi.com/search.json?${params}`, { cache: "no-store", signal: AbortSignal.timeout(20000) });
   if (!response.ok) throw new Error("Pricing is temporarily unavailable. Please try again later.");
   const data = await response.json();
-  if (data.error) throw new Error("Pricing is temporarily unavailable. Please try again later.");
+  const noResults = data.search_metadata?.status === "Success"
+    && data.error === "Google Hotels hasn't returned any results for this query.";
+  if (data.error && !noResults) throw new Error("Pricing is temporarily unavailable. Please try again later.");
   const properties: Property[] = Array.isArray(data.properties) ? data.properties : data.name ? [data] : [];
   const results = properties.filter(p => typeof p.name === "string" && (p.rate_per_night?.lowest || p.total_rate?.lowest)).slice(0, 5).map(p => ({
     name: p.name!, nightly: p.rate_per_night?.lowest, total: p.total_rate?.lowest,

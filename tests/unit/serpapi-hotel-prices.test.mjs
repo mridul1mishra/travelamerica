@@ -46,6 +46,16 @@ test("SerpApi cached responses retain their original source timestamp", async ()
   } finally { globalThis.fetch = original; }
 });
 
+test("successful Google Hotels searches with no matches return an empty result, while provider failures still throw", async () => {
+  const original = globalThis.fetch;
+  try {
+    globalThis.fetch = async () => Response.json({ search_metadata: { status: "Success" }, error: "Google Hotels hasn't returned any results for this query." });
+    assert.deepEqual(await fetchHotelPrices("query", stay), []);
+    globalThis.fetch = async () => Response.json({ search_metadata: { status: "Error" }, error: "Google Hotels hasn't returned any results for this query." });
+    await assert.rejects(fetchHotelPrices("query", stay), /temporarily unavailable/);
+  } finally { globalThis.fetch = original; }
+});
+
 test("rejects invalid calendar dates, reversed stays, long stays and guest counts", () => {
   assert.deepEqual(validateStay(stay), stay);
   for (const change of [{ checkIn: "2099-02-30" }, { checkOut: stay.checkIn }, { checkOut: future(50) }, { adults: 0 }, { adults: 1.5 }, { childrenAges: [18] }, { childrenAges: "5" }]) {
