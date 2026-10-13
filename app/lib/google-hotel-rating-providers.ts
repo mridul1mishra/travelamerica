@@ -1,8 +1,8 @@
-import type { HotelRatingValue } from "./google-hotel-ratings-core";
+import type { HotelRatingValue, HotelReview } from "./google-hotel-ratings-core";
 
 type Fetcher = (input: string, init: RequestInit) => Promise<Response>;
 
-async function providerJson(url: string, init: RequestInit, fetcher: Fetcher): Promise<unknown> {
+async function providerJson(url: string, init: RequestInit, fetcher: Fetcher, maxLength = 8192): Promise<unknown> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 7000);
   try {
@@ -16,7 +16,7 @@ async function providerJson(url: string, init: RequestInit, fetcher: Fetcher): P
     // Do not include upstream bodies, URLs or credentials in errors/logs.
     if (!response.ok) throw new Error("Provider unavailable");
     const text = await response.text();
-    if (text.length > 8192) throw new Error("Invalid provider response");
+    if (text.length > maxLength) throw new Error("Invalid provider response");
     return JSON.parse(text);
   } finally {
     clearTimeout(timeout);
@@ -39,18 +39,43 @@ export async function fetchGoogleHotelRating(
   placeId: string,
   apiKey: string,
   fetcher: Fetcher = fetch,
+  includeReviews = false,
 ): Promise<HotelRatingValue> {
   if (!/^[A-Za-z0-9_-]{10,256}$/.test(placeId)) throw new Error("Invalid stored place");
   // Exactly one attempt, with the key in a header rather than the URL.
   const result = await providerJson(`https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}`, {
     method: "GET",
-    headers: { "X-Goog-Api-Key": apiKey, "X-Goog-FieldMask": "rating,userRatingCount" },
-  }, fetcher);
+    headers: { "X-Goog-Api-Key": apiKey, "X-Goog-FieldMask": includeReviews ? "rating,userRatingCount,reviews" : "rating,userRatingCount" },
+  }, fetcher, includeReviews ? 131072 : 8192);
   if (!result || typeof result !== "object" || Array.isArray(result)) throw new Error("Invalid provider response");
   const data = result as Record<string, unknown>;
   const rating = data.rating ?? null;
   const reviewCount = data.userRatingCount ?? null;
   if (rating !== null && (typeof rating !== "number" || !Number.isFinite(rating) || rating < 0 || rating > 5)) throw new Error("Invalid provider response");
   if (reviewCount !== null && (typeof reviewCount !== "number" || !Number.isSafeInteger(reviewCount) || reviewCount < 0)) throw new Error("Invalid provider response");
-  return { rating: rating as number | null, reviewCount: reviewCount as number | null };
+  const value: HotelRatingValue = { rating: rating as number | null, reviewCount: reviewCount as number | null };
+  if (includeReviews) {
+    const safeUrl = (input: unknown): string | undefined => {
+      if (typeof input !== "string") return undefined;
+      try {
+        const url = new URL(input);
+        return url.protocol === "https:" && !url.username && !url.password
+          && (url.hostname === "google.com" || url.hostname.endsWith(".google.com") || url.hostname === "maps.app.goo.gl") ? url.href : undefined;
+      } catch { return undefined; }
+    };
+    value.reviews = (Array.isArray(data.reviews) ? data.reviews : []).slice(0, 5).flatMap((raw): HotelReview[] => {
+      if (!raw || typeof raw !== "object") return [];
+      const review = raw as Record<string, unknown>;
+      const author = review.authorAttribution as { displayName?: unknown; uri?: unknown } | undefined;
+      const original = review.originalText as { text?: unknown } | undefined;
+      const translated = review.text as { text?: unknown } | undefined;
+      const text = original?.text ?? translated?.text;
+      if (typeof author?.displayName !== "string" || typeof text !== "string" || !text.trim()
+        || typeof review.rating !== "number" || review.rating < 0 || review.rating > 5
+        || typeof review.publishTime !== "string" || !Number.isFinite(Date.parse(review.publishTime))) return [];
+      return [{ author: author.displayName, authorUrl: safeUrl(author.uri), rating: review.rating,
+        text, date: review.publishTime, url: safeUrl(review.googleMapsUri) }];
+    });
+  }
+  return value;
 }

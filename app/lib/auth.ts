@@ -4,6 +4,7 @@ import { betterAuth, type BetterAuthOptions } from "better-auth";
 import { APIError, createAuthMiddleware } from "better-auth/api";
 import { emailOTP } from "better-auth/plugins";
 import { Pool } from "pg";
+import { notifyMemberRegistration } from "./member-registration-notification";
 
 const PRODUCTION_ORIGINS = [
   "https://www.travelsamericas.com",
@@ -123,6 +124,7 @@ const PROTECTED_MEMBER_INPUTS = [
 export function createMemberAuth(
   config: MemberAuthConfig,
   sendOTP: (data: MemberOTP) => Promise<void>,
+  notifyRegistration: (member: { name: string; email: string }) => Promise<void> = async () => {},
 ) {
   requireConfiguredOriginsOnly();
   if (!config.secret || config.secret.trim().length < 32 || !config.database) {
@@ -249,6 +251,10 @@ export function createMemberAuth(
       user: {
         create: {
           before: async (user) => ({ data: { ...user, name: memberName(user.name), phone: memberPhone(user.phone) } }),
+          after: async (user) => {
+            try { await notifyRegistration({ name: user.name, email: user.email }); }
+            catch { console.error("[member-auth] REGISTRATION_NOTIFICATION_FAILED"); }
+          },
         },
       },
     },
@@ -363,7 +369,7 @@ export function getAuth() {
     trustedIPHeader: process.env.VERCEL === "1"
       ? "x-vercel-forwarded-for"
       : process.env.AUTH_TRUST_CLOUDFLARE_PROXY === "true" ? "cf-connecting-ip" : undefined,
-  }, sendOTP);
+  }, sendOTP, notifyMemberRegistration);
   return memberAuth;
 }
 

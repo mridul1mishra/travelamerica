@@ -1,9 +1,27 @@
 import assert from "node:assert/strict";
+
+// Written reviews are requested only when the detail-page button asks for them.
 import test from "node:test";
 import { loadTypescriptModule } from "./load-typescript-module.mjs";
 
 const { fetchGoogleHotelRating, verifyHotelRatingTurnstile } = await loadTypescriptModule("../../app/lib/google-hotel-rating-providers.ts");
 const placeId = "ChIJ_mock_place_identifier";
+
+test("written reviews include attribution, original text and safe links while excluding malformed reviews", async () => {
+  const review = { authorAttribution: { displayName: "Guest", uri: "https://www.google.com/maps/contrib/123" },
+    rating: 4, originalText: { text: "A comfortable stay." }, text: { text: "Translated text" }, publishTime: "2026-10-01T12:00:00Z",
+    googleMapsUri: "https://www.google.com/maps/reviews/123" };
+  const result = await fetchGoogleHotelRating(placeId, "secret", async (_url, options) => {
+    assert.equal(options.headers["X-Goog-FieldMask"], "rating,userRatingCount,reviews");
+    return Response.json({ rating: 4, reviews: [review, { ...review, authorAttribution: null },
+      { ...review, authorAttribution: { displayName: "Other guest", uri: "javascript:alert(1)" }, googleMapsUri: "https://untrusted.example" }] });
+  }, true);
+  assert.equal(result.reviews.length, 2);
+  assert.equal(result.reviews[0].text, "A comfortable stay.");
+  assert.equal(result.reviews[0].author, "Guest");
+  assert.equal(result.reviews[1].authorUrl, undefined);
+  assert.equal(result.reviews[1].url, undefined);
+});
 
 test("Google helper requests only rating fields, keeps key out of URL and disables all caches", async () => {
   const calls = [];

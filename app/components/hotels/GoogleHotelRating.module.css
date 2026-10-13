@@ -52,6 +52,13 @@
   margin: 0;
 }
 
+.reviews { flex-basis: 100%; width: 100%; font-size: .95rem; }
+.reviews h2 { font-size: 1.2rem; margin: 12px 0; }
+.review { padding: 16px 0; border-bottom: 1px solid #d8dfe6; }
+.review p { margin: 8px 0; }
+.reviewText { white-space: pre-wrap; overflow-wrap: anywhere; }
+.reviews a { color: #9e492d; }
+
 .loadingStars > span { display: inline-block; animation: ratingPulse 1s ease-in-out infinite; }
 .loadingStars > span:nth-child(2) { animation-delay: .12s; }
 .loadingStars > span:nth-child(3) { animation-delay: .24s; }

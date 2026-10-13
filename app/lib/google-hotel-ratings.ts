@@ -52,6 +52,6 @@ export async function handleGoogleHotelRating(request: Request): Promise<Respons
         daily: config!.dailyLimit, monthly: config!.monthlyLimit, ipHourly: config!.ipHourlyLimit,
       });
     },
-    fetchRating: (placeId) => fetchGoogleHotelRating(placeId, config!.googleApiKey),
+    fetchRating: (placeId, includeReviews) => fetchGoogleHotelRating(placeId, config!.googleApiKey, fetch, includeReviews),
   });
 }

@@ -1,4 +1,5 @@
-export type HotelRatingValue = { rating: number | null; reviewCount: number | null };
+export type HotelReview = { author: string; authorUrl?: string; rating: number; text: string; date: string; url?: string };
+export type HotelRatingValue = { rating: number | null; reviewCount: number | null; reviews?: HotelReview[] };
 export type HotelRatingBudgetResult = "allowed" | "ip_limit" | "global_limit";
 
 export type HotelRatingConfig = {
@@ -18,7 +19,7 @@ export type HotelRatingDependencies = {
   findHotel: (hotelId: string) => Promise<{ placeId: string } | null>;
   verifyTurnstile: (token: string, ip: string | null) => Promise<unknown>;
   reserveBudget: (ip: string | null) => Promise<HotelRatingBudgetResult>;
-  fetchRating: (placeId: string) => Promise<HotelRatingValue>;
+  fetchRating: (placeId: string, includeReviews?: boolean) => Promise<HotelRatingValue>;
   now?: () => number;
 };
 
@@ -204,7 +205,8 @@ export async function handleHotelRatingRequest(request: Request, deps: HotelRati
   const token = data.turnstileToken;
   const validToken = (localTurnstileBypass && token === undefined)
     || (typeof token === "string" && token.length <= 2048 && (localTurnstileBypass || Boolean(token.trim())));
-  if (Object.keys(data).some((key) => key !== "hotelId" && key !== "turnstileToken")
+  if (Object.keys(data).some((key) => key !== "hotelId" && key !== "turnstileToken" && key !== "includeReviews")
+    || (data.includeReviews !== undefined && typeof data.includeReviews !== "boolean")
     || typeof hotelId !== "string" || !/^[1-9]\d{0,18}$/.test(hotelId) || BigInt(hotelId) > BigInt("9223372036854775807")
     || !validToken) {
     return reply({ code: "invalid_request", message: "Invalid request." }, 400);
@@ -230,7 +232,7 @@ export async function handleHotelRatingRequest(request: Request, deps: HotelRati
   }
   try {
     // Reservation is committed before the attempt. Failed attempts consume it.
-    return reply(await deps.fetchRating(hotel.placeId), 200);
+    return reply(await deps.fetchRating(hotel.placeId, data.includeReviews === true), 200);
   } catch {
     return reply({ code: "lookup_failed", message: "Google ratings could not be loaded. Please try again later." }, 502);
   }

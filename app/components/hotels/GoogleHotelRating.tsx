@@ -7,7 +7,7 @@ import styles from "./GoogleHotelRating.module.css";
 
 const TURNSTILE_URL = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
 type Turnstile = NonNullable<Window["turnstile"]>;
-type Rating = { rating: number | null; reviewCount: number | null };
+type Rating = { rating: number | null; reviewCount: number | null; reviews?: { author: string; authorUrl?: string; rating: number; text: string; date: string; url?: string }[] };
 type Phase = "idle" | "challenge" | "loading" | "loaded" | "unavailable" | "signin";
 let turnstileLoad: Promise<Turnstile> | undefined;
 
@@ -55,10 +55,11 @@ function isRating(value: unknown): value is Rating {
     && (reviewCount === null || (typeof reviewCount === "number" && Number.isInteger(reviewCount) && reviewCount >= 0));
 }
 
-export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl }: {
+export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, showReviews = false }: {
   hotelId: string;
   hotelName: string;
   googleMapsUrl?: string;
+  showReviews?: boolean;
 }) {
   const { member, pending: memberPending, signIn, invalidate } = useMember();
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY?.trim();
@@ -125,7 +126,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl }:
       void fetch("/api/hotel-ratings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ hotelId, turnstileToken: token }),
+        body: JSON.stringify({ hotelId, turnstileToken: token, ...(showReviews ? { includeReviews: true } : {}) }),
         credentials: "same-origin",
         cache: "no-store",
         signal: controller.signal,
@@ -184,7 +185,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl }:
       controller?.abort();
       removeWidget();
     };
-  }, [requested, siteKey, hotelId, localTurnstileBypass, member, memberPending, invalidate]);
+  }, [requested, siteKey, hotelId, localTurnstileBypass, member, memberPending, invalidate, showReviews]);
 
   const begin = () => {
     if (memberPending) return;
@@ -218,12 +219,23 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl }:
         {expanded && unavailable && <p>Google rating is unavailable right now.</p>}
         {expanded && phase === "loaded" && result && <>
           <span>{result.rating === null ? "No Google rating available." : `${result.rating.toFixed(1)} rating`}</span>
-          {result.reviewCount !== null && <span>{result.reviewCount.toLocaleString()} {result.reviewCount === 1 ? "review" : "reviews"}</span>}
+          {!showReviews && result.reviewCount !== null && <span>{result.reviewCount.toLocaleString()} {result.reviewCount === 1 ? "review" : "reviews"}</span>}
+          {showReviews && <section className={styles.reviews} aria-label="Guest reviews from Google Maps">
+            <h2>Guest reviews</h2>
+            <p>Reviews from Google Maps · Sorted by relevance</p>
+            {result.reviews?.length ? result.reviews.map((review, index) => <article key={index} className={styles.review}>
+              <strong>{review.authorUrl ? <a href={review.authorUrl} target="_blank" rel="noopener noreferrer">{review.author}</a> : review.author}</strong>
+              <p>{review.rating} / 5 · <time dateTime={review.date}>{new Date(review.date).toLocaleDateString()}</time></p>
+              <p className={styles.reviewText}>{review.text}</p>
+              {review.url && <a href={review.url} target="_blank" rel="noopener noreferrer">Read on Google Maps ↗</a>}
+            </article>) : <p>No written reviews are available for this hotel.</p>}
+            <a href={mapsUrl} target="_blank" rel="noopener noreferrer">Read more reviews on Google Maps ↗</a>
+          </section>}
         </>}
       </div>
       <button type="button" className={styles.button} disabled={pending || memberPending} onClick={toggle}
-        aria-label={`${expanded ? "Hide" : "Show"} Google rating for ${hotelName}`}
-        title={expanded ? "Hide Google rating" : "Show Google rating"}
+        aria-label={`${expanded ? "Hide" : "Show"} Google ${showReviews ? "reviews" : "rating"} for ${hotelName}`}
+        title={`${expanded ? "Hide" : "Show"} Google ${showReviews ? "reviews" : "rating"}`}
         aria-controls={messageId} aria-expanded={expanded}>
         {expanded ? <EyeOff size={18} aria-hidden="true" /> : <Eye size={18} aria-hidden="true" />}
       </button>
