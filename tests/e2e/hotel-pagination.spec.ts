@@ -11,8 +11,10 @@ test("hotel listing uses desktop space and fits mobile screens", async ({ page }
   const cards = page.locator("[data-hotel-card]");
   await expect(cards).toHaveCount(12);
   const first = await cards.nth(0).boundingBox();
+  const third = await cards.nth(2).boundingBox();
   const fourth = await cards.nth(3).boundingBox();
-  expect(Math.abs(first!.y - fourth!.y)).toBeLessThan(2);
+  expect(Math.abs(first!.y - third!.y)).toBeLessThan(2);
+  expect(fourth!.y).toBeGreaterThan(first!.y);
   await page.setViewportSize({ width: 390, height: 844 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });

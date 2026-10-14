@@ -8,15 +8,11 @@
 .hotelPage .stats,
 .hotelPage .bookingShell,
 .hotelPage .related {
-  width: min(1600px, calc(100% - 48px));
+  width: min(1500px, calc(100% - 64px));
 }
 
 @media (min-width: 981px) {
   .hotelPage .workspace { grid-template-columns: minmax(0, 1fr) 240px; }
-}
-
-@media (min-width: 1440px) {
-  .hotelPage .cardGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
 @media (max-width: 720px) {
