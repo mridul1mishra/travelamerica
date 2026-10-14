@@ -4,6 +4,7 @@
 
 import React, { Suspense, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import NavigationHeader from "@/app/components/Header/NavigationHeader";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -535,6 +536,15 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                     {hasHotelFilters && <button type="button" className={styles.clearFilters} onClick={clearHotelFilters}>Clear filters</button>}
                   </div>}
                   {config.category === "hotels" && hotelAreasKey && <p>Hotel areas: {requestedHotelAreas.join(" · ")}</p>}
+                  {config.category === "hotels" && hotelPageCount > 1 && <nav className={styles.topPagination} aria-label="Hotel page navigation">
+                    <span>Page {hotelPage} of {hotelPageCount}</span>
+                    <button type="button" aria-label="Previous page" disabled={hotelPage === 1} onClick={() => changeHotelPage(hotelPage - 1)}>
+                      <ChevronLeft size={28} aria-hidden="true" />
+                    </button>
+                    <button type="button" aria-label="Next page" disabled={hotelPage === hotelPageCount} onClick={() => changeHotelPage(hotelPage + 1)}>
+                      <ChevronRight size={28} aria-hidden="true" />
+                    </button>
+                  </nav>}
                   <div className={styles.cardGrid}>
                     {displayedHotels.map((hotel) => {
                       const key = hotel.hotelId ?? hotel.hotelSourceId ?? hotel.title;
