@@ -290,7 +290,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
   };
 
   return (
-    <div className={styles.page}>
+    <div className={`${styles.page}${config.category === "hotels" ? ` ${styles.hotelPage}` : ""}`}>
       <NavigationHeader prefetch={config.category ? false : undefined} memberReturnTo={config.category === "hotels" ? config.bookingHref : undefined} />
 
       <main>

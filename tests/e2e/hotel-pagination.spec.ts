@@ -1,5 +1,22 @@
 import { expect, test } from "@playwright/test";
 
+test("hotel listing uses desktop space and fits mobile screens", async ({ page }) => {
+  await page.route(/\/api\/auth\/get-session/, route => route.fulfill({ contentType: "application/json", body: "null" }));
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto("/destination/nyc/hotel");
+  const tools = page.getByRole("region", { name: "Booking tools" });
+  await expect(tools).toBeVisible();
+  const box = await tools.boundingBox();
+  expect(box!.width).toBeGreaterThan(1350);
+  const cards = page.locator("[data-hotel-card]");
+  await expect(cards).toHaveCount(12);
+  const first = await cards.nth(0).boundingBox();
+  const fourth = await cards.nth(3).boundingBox();
+  expect(Math.abs(first!.y - fourth!.y)).toBeLessThan(2);
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
 test("hotel pages paginate without provider requests and reset after searching", async ({ page }) => {
   await page.route(/\/api\/auth\/get-session/, route => route.fulfill({ contentType: "application/json", body: "null" }));
   let providerCalls = 0;
