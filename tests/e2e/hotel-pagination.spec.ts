@@ -48,5 +48,10 @@ test("hotel pages paginate without provider requests and reset after searching",
   await page.getByRole("searchbox", { name: "Search hotels" }).fill("");
   await expect(cards).toHaveCount(12);
   await expect(pagination.getByRole("button", { name: "Page 1", exact: true })).toHaveAttribute("aria-current", "page");
+  await topPagination.getByRole("button", { name: "Next page", exact: true }).click();
+  await page.getByRole("combobox", { name: "Sort hotels", exact: true }).selectOption("name");
+  await expect(topPagination).toContainText("Page 1 of 5");
+  const names = await cards.getByRole("heading", { level: 3 }).allTextContents();
+  expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)));
   expect(providerCalls).toBe(0);
 });

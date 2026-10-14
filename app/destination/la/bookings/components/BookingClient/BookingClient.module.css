@@ -1031,3 +1031,7 @@
 .pagination button:disabled { opacity: .45; cursor: default; }
 .pagination button:focus-visible { outline: 3px solid #99472f; outline-offset: 3px; }
 .hotelResultsSummary { scroll-margin-top: 150px; }
+.hotelSort { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-left: auto; font-size: .85rem; font-weight: 600; }
+.hotelSort select { max-width: 100%; min-height: 42px; padding: 8px 12px; border: 1px solid #d8dfe6; border-radius: 8px; background: #fff; color: #172438; font: inherit; }
+.hotelSort select:focus-visible { outline: 3px solid #98442e; outline-offset: 3px; }
+@media (max-width: 600px) { .hotelSort { margin-left: 0; } }

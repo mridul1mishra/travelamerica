@@ -226,6 +226,13 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
       .filter((hotel) => selectedHotelTags.every(tag => hotel.tags?.includes(tag)))
       .filter((hotel) => !showHotelTierFilter || hotelTierFilter === "all" || hotel.hotelTier === hotelTierFilter)
       .toSorted((a, b) => {
+        if (hotelSort === "name") return a.title.localeCompare(b.title);
+        if (hotelSort === "name-desc") return b.title.localeCompare(a.title);
+        if (hotelSort === "neighborhood") return (a.neighborhood ?? "\uffff").localeCompare(b.neighborhood ?? "\uffff") || a.title.localeCompare(b.title);
+        if (hotelSort === "tier") {
+          const rank = { Luxury: 0, Premium: 1, Standard: 2 };
+          return (a.hotelTier ? rank[a.hotelTier] : 3) - (b.hotelTier ? rank[b.hotelTier] : 3) || a.title.localeCompare(b.title);
+        }
         if (hasHotelPrices && hotelSort === "price") return priceNumber(a.price) - priceNumber(b.price);
         if (!useOnDemandGoogleRatings && hotelSort === "rating") return (b.rating ?? 0) - (a.rating ?? 0);
         if (!useOnDemandGoogleRatings && hotelSort === "reviews") return (b.reviews ?? 0) - (a.reviews ?? 0);
@@ -505,7 +512,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                         <option value="4">4.0+</option>
                       </select>
                     </label>}
-                    {(!useOnDemandGoogleRatings || hasHotelPrices) && <label>
+                    {config.category !== "hotels" && (!useOnDemandGoogleRatings || hasHotelPrices) && <label>
                       Sort
                       <select value={useOnDemandGoogleRatings && ["rating", "reviews"].includes(hotelSort) ? "recommended" : hotelSort} onChange={(event) => setHotelSort(event.target.value)}>
                         <option value="recommended">Recommended</option>
@@ -533,6 +540,17 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                   </div>
                   {config.category === "hotels" && <div className={styles.hotelResultsSummary} ref={hotelResultsRef} tabIndex={-1}>
                     <p role="status">{filteredHotels.length ? `Showing ${hotelPageStart + 1}–${hotelPageStart + displayedHotels.length} of ${filteredHotels.length} hotels${hasHotelFilters ? ` (${hotels.length} total)` : ""}` : "No matching hotels"}</p>
+                    <label className={styles.hotelSort}>Sort hotels
+                      <select value={hotelSort} onChange={event => setHotelSort(event.target.value)}>
+                        <option value="recommended">Recommended</option>
+                        <option value="name">Name: A–Z</option>
+                        <option value="name-desc">Name: Z–A</option>
+                        <option value="neighborhood">Neighborhood: A–Z</option>
+                        {showHotelTierFilter && <option value="tier">Hotel tier: Luxury first</option>}
+                        {hasHotelPrices && <option value="price">Lowest price</option>}
+                        {!useOnDemandGoogleRatings && <><option value="rating">Highest rating</option><option value="reviews">Most reviewed</option></>}
+                      </select>
+                    </label>
                     {hasHotelFilters && <button type="button" className={styles.clearFilters} onClick={clearHotelFilters}>Clear filters</button>}
                   </div>}
                   {config.category === "hotels" && hotelAreasKey && <p>Hotel areas: {requestedHotelAreas.join(" · ")}</p>}
