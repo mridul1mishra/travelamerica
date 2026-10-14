@@ -553,7 +553,6 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                         },
                       };
                       const details = <>
-                          <span className={styles.badge}>Hotel</span>
                           {showHotelTierFilter && hotel.hotelTier && <div className={styles.hotelTier}>
                             <span>{hotel.hotelTier}{hotel.hotelTierIsProvisional && " · Provisional"}</span>
                             {hotel.hotelTierIsProvisional && <small>
@@ -562,7 +561,6 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                             </small>}
                           </div>}
                           <h3>{hotel.title}</h3>
-                          {hotel.area && <p>{hotel.area}</p>}
                           {hotel.neighborhood && <p>{hotel.neighborhood}</p>}
                           {hotel.address && <p>{hotel.address}</p>}
                           {!!hotel.tags?.length && <div className={styles.hotelTags} aria-label="Hotel tags">
