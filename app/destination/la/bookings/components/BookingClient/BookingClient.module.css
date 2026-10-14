@@ -1000,3 +1000,10 @@
     padding: 18px 20px;
   }
 }
+
+.pagination { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 28px; }
+.pagination button { min-width: 40px; min-height: 40px; padding: 8px 12px; border: 1px solid #d8dfe6; border-radius: 8px; background: #fff; color: #172438; font: inherit; cursor: pointer; }
+.pagination button[aria-current='page'] { background: #99472f; border-color: #99472f; color: #fff; }
+.pagination button:disabled { opacity: .45; cursor: default; }
+.pagination button:focus-visible { outline: 3px solid #99472f; outline-offset: 3px; }
+.hotelResultsSummary { scroll-margin-top: 150px; }

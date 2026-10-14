@@ -52,7 +52,7 @@ test("guests can browse and filter hotels; revealing a rating sends them to sign
     await route.abort();
   });
   await page.goto(`${hotelPath}?from=member-test`);
-  await expect(page.locator("[data-hotel-card]")).toHaveCount(50);
+  await expect(page.locator("[data-hotel-card]")).toHaveCount(12);
   await page.getByRole("combobox", { name: /^Hotel tier/ }).selectOption("Premium");
   await expect(page.locator("[data-hotel-card]").first()).toBeVisible();
   const eye = page.getByRole("button", { name: /^Show Google rating for / }).first();
@@ -69,7 +69,7 @@ test("guests can browse and filter hotels; revealing a rating sends them to sign
 test("public hotel cards expose only internal price links and no actual prices", async ({ page }) => {
   await guestSession(page);
   const response = await page.goto(hotelPath);
-  await expect(page.locator("[data-hotel-card]")).toHaveCount(50);
+  await expect(page.locator("[data-hotel-card]")).toHaveCount(12);
   const links = await page.locator('[data-hotel-card] a[data-booking-type="hotel"]').evaluateAll((anchors) =>
     anchors.map((anchor) => anchor.getAttribute("href")));
   expect(links.length).toBeGreaterThanOrEqual(50);
@@ -167,7 +167,7 @@ test("email verification creates a member session and returns to the hotel page"
   await page.getByRole("button", { name: "Verify and continue", exact: true }).click();
   await expect(page).toHaveURL(`${hotelPath}?from=member-test`);
   await expect(page.getByRole("button", { name: "Account menu", exact: true }).first()).toHaveText("TM");
-  await expect(page.locator("[data-hotel-card]")).toHaveCount(50);
+  await expect(page.locator("[data-hotel-card]")).toHaveCount(12);
   expect(explicitCodeRequests).toBe(0);
 });
 

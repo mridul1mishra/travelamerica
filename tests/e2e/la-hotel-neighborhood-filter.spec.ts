@@ -19,7 +19,7 @@ test("LA neighborhood selection persists in the URL and clears without losing at
   await page.getByRole("button", { name: /^(Filter hotels|Refine your search)$/ }).click();
   await expect(cards).toHaveCount(5);
   await page.getByRole("dialog").getByRole("button", { name: "Clear filters", exact: true }).click();
-  await expect(cards).toHaveCount(50);
+  await expect(cards).toHaveCount(12);
   await expect.poll(() => new URL(page.url()).searchParams.has("areas")).toBe(false);
   expect(new URL(page.url()).searchParams.get("from")).toBe("is-la-safe-at-night");
 });
@@ -36,7 +36,7 @@ test("LA itinerary choices select only matching properties and preserve access c
   await expect(page.getByLabel("Price", { exact: true })).toHaveCount(0);
   await expect(page.getByRole("link", { name: "See prices", exact: true }).first()).toHaveAttribute("href", /\/api\/hotel-prices\//);
   await page.getByRole("checkbox", { name: "L.A. LIVE events 6 hotels", exact: true }).uncheck();
-  await expect(cards).toHaveCount(50);
+  await expect(cards).toHaveCount(12);
 });
 
 test("an unavailable requested area does not silently display unrelated hotels", async ({ page }) => {
@@ -44,7 +44,7 @@ test("an unavailable requested area does not silently display unrelated hotels",
   await expect(page.locator("[data-hotel-card]")).toHaveCount(0);
   await expect(page.getByText("No hotels match those filters.", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Clear filters", exact: true }).first().click();
-  await expect(page.locator("[data-hotel-card]")).toHaveCount(50);
+  await expect(page.locator("[data-hotel-card]")).toHaveCount(12);
 });
 
 test("article neighborhood link opens the matching LA hotel results", async ({ page }) => {
@@ -88,7 +88,7 @@ test("LA hotel tags filter the reviewed properties", async ({ page }) => {
   const cards = page.locator("[data-hotel-card]");
   await page.getByText("Hotel preferences", { exact: true }).click();
   await expect(page.getByRole("dialog").getByRole("combobox")).toHaveCount(0);
-  await expect(cards).toHaveCount(50);
+  await expect(cards).toHaveCount(12);
   for (const [tag, count] of [["Family friendly", 7], ["Near transit", 2], ["Walkable area", 5], ["Nightlife access", 2], ["Business friendly", 48]] as const) {
     const choice = page.getByRole("checkbox", { name: `${tag} (${count})`, exact: true });
     await choice.check();
@@ -96,7 +96,7 @@ test("LA hotel tags filter the reviewed properties", async ({ page }) => {
     await choice.uncheck();
   }
   await page.getByRole("dialog").getByRole("button", { name: "Clear filters", exact: true }).click();
-  await expect(cards).toHaveCount(50);
+  await expect(cards).toHaveCount(12);
 });
 
 
@@ -121,7 +121,7 @@ test("plan cards combine without duplicates, persist on reload and support keybo
   await page.keyboard.press("Space");
   await expect(page.locator("[data-hotel-card]")).toHaveCount(6);
   await page.getByRole("button", { name: "Clear plans", exact: true }).click();
-  await expect(page.locator("[data-hotel-card]")).toHaveCount(50);
+  await expect(page.locator("[data-hotel-card]")).toHaveCount(12);
   await expect.poll(() => new URL(page.url()).searchParams.has("plans")).toBe(false);
   expect(new URL(page.url()).searchParams.get("from")).toBe("is-la-safe-at-night");
 });
@@ -164,7 +164,7 @@ test("hotel preference checkboxes combine requirements", async ({ page }) => {
   await page.getByRole("checkbox", { name: "Walkable area (5)", exact: true }).check();
   await expect(page.locator("[data-hotel-card]")).toHaveCount(2);
   await page.getByRole("dialog").getByRole("button", { name: "Clear filters", exact: true }).click();
-  await expect(page.locator("[data-hotel-card]")).toHaveCount(50);
+  await expect(page.locator("[data-hotel-card]")).toHaveCount(12);
   await expect(page.getByRole("checkbox", { name: "Family friendly (7)", exact: true })).not.toBeChecked();
 });
 
@@ -180,7 +180,7 @@ test("hotel text search matches names, areas and addresses alongside filters", a
   await search.fill("Little Tokyo");
   await expect(cards).toHaveCount(2);
   await page.getByRole("button", { name: "Clear search", exact: true }).click();
-  await expect(cards).toHaveCount(50);
+  await expect(cards).toHaveCount(12);
   await page.getByRole("button", { name: "Filter hotels", exact: true }).click();
   await page.getByRole("checkbox", { name: "Hollywood shows 4 hotels", exact: true }).check();
   await page.getByRole("button", { name: "Show 4 hotels", exact: true }).click();
@@ -192,6 +192,6 @@ test("hotel text search matches names, areas and addresses alongside filters", a
   await page.getByRole("button", { name: "Clear search", exact: true }).click();
   await expect(cards).toHaveCount(4);
   await page.getByRole("button", { name: "Clear filters", exact: true }).first().click();
-  await expect(cards).toHaveCount(50);
+  await expect(cards).toHaveCount(12);
 });
 

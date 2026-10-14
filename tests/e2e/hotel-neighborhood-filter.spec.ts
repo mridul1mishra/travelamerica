@@ -16,7 +16,7 @@ test("neighborhood checkboxes preselect linked areas and support multiple select
   await page.getByRole("checkbox", { name: "Midtown / Times Square (25)", exact: true }).uncheck();
   await expect(cards).toHaveCount(14);
   await page.getByRole("button", { name: "Clear filters" }).click();
-  await expect(cards).toHaveCount(50);
+  await expect(cards).toHaveCount(12);
   await page.getByRole("button", { name: "Neighborhood All neighborhoods", exact: true }).click();
   await expect(page.locator('fieldset input:checked')).toHaveCount(0);
   await page.keyboard.press("Escape");

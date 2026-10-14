@@ -85,7 +85,7 @@ test("NYC hotel page and filters make no rating or CAPTCHA request", async ({ pa
     await route.abort();
   });
   await page.goto("/destination/nyc/hotel");
-  await expect(page.locator('[data-hotel-card]')).toHaveCount(50);
+  await expect(page.locator('[data-hotel-card]')).toHaveCount(12);
   const button = page.getByRole("button", { name: /Show Google rating for / }).first();
   await expect(button.locator("xpath=..").getByText("****", { exact: true })).toBeVisible();
   await expect(button).toHaveText("");
@@ -109,7 +109,7 @@ test("NYC hotel page and filters make no rating or CAPTCHA request", async ({ pa
   await expect(page.locator('[data-hotel-card]').getByText(/^\d(?:\.\d+)? rating$/)).toHaveCount(0);
   await filters.getByRole("combobox", { name: /^Hotel tier/ }).selectOption("Premium");
   await filters.getByRole("combobox", { name: /^Hotel tier/ }).selectOption("all");
-  await expect(page.locator('[data-hotel-card]')).toHaveCount(50);
+  await expect(page.locator('[data-hotel-card]')).toHaveCount(12);
   expect(requests).toEqual([]);
   await expect(page.locator('script[src*="challenges.cloudflare.com/turnstile"]')).toHaveCount(0);
   mkdirSync(".scratch", { recursive: true });
@@ -172,7 +172,7 @@ test("one explicit click fetches a rating; hide and keyboard show reuse the resu
   });
   try {
     await page.goto("/destination/nyc/hotel");
-    await expect(page.locator('[data-hotel-card]')).toHaveCount(50);
+    await expect(page.locator('[data-hotel-card]')).toHaveCount(12);
     expect(scriptRequests).toBe(0);
     expect(ratingRequests).toBe(0);
     const button = page.getByRole("button", { name: /Show Google rating for / }).first();
@@ -299,7 +299,7 @@ test("explicit local bypass fetches on click without CAPTCHA and reuses hidden r
   });
   try {
     await page.goto("/destination/nyc/hotel");
-    await expect(page.locator('[data-hotel-card]')).toHaveCount(50);
+    await expect(page.locator('[data-hotel-card]')).toHaveCount(12);
     const showButton = page.getByRole("button", { name: /^Show Google rating for / }).first();
     const cardId = await showButton.locator('xpath=ancestor::article').getAttribute("data-hotel-card");
     const card = page.locator(`[data-hotel-card="${cardId}"]`);

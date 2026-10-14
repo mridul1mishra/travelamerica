@@ -19,6 +19,6 @@ for (const slug of ["nyc-safety-guide", "is-nyc-safe-at-night", "nyc-female-solo
       await expect(card).toContainText(/Midtown \/ Times Square|Upper West Side|Tribeca/);
     }
     await page.getByRole("button", { name: "Clear filters", exact: true }).click();
-    await expect(cards).toHaveCount(50);
+    await expect(cards).toHaveCount(12);
   });
 }

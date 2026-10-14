@@ -18,7 +18,7 @@ for (const city of cities) {
     await page.route(/\/api\/hotel-ratings|places\.googleapis\.com|challenges\.cloudflare\.com/, async route => { providerCalls++; await route.abort(); });
     const response = await page.goto(path);
     await expect(page.getByRole("heading", { name: `Find Your ${city.name} Hotel`, exact: true })).toBeVisible();
-    await expect(page.locator("[data-hotel-card]")).toHaveCount(city.count);
+    await expect(page.locator("[data-hotel-card]")).toHaveCount(Math.min(city.count, 12));
     await expect(page.getByRole("combobox", { name: /Hotel tier/ })).toHaveCount(0);
     await expect(page.locator("[data-hotel-card]").getByText(/\d[.,]\d rating|[\d,]+ reviews/)).toHaveCount(0);
     const links = await page.locator('[data-hotel-card] a[data-booking-type="hotel"]').evaluateAll(elements => elements.map(element => element.getAttribute("href")));
@@ -50,13 +50,13 @@ for (const city of cities) {
   test(`${city.name} legacy hotel tab opens the dedicated listing`, async ({ page }) => {
     await page.goto(`/destination/${city.slug}/bookings?tab=hotels`);
     await expect(page).toHaveURL(new RegExp(`/destination/${city.slug}/hotel$`));
-    await expect(page.locator("[data-hotel-card]")).toHaveCount(city.count);
+    await expect(page.locator("[data-hotel-card]")).toHaveCount(Math.min(city.count, 12));
   });
 
   test(`${city.name} cards fit a mobile viewport`, async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(path);
-    await expect(page.locator("[data-hotel-card]")).toHaveCount(city.count);
+    await expect(page.locator("[data-hotel-card]")).toHaveCount(Math.min(city.count, 12));
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   });
 }

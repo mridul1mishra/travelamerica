@@ -178,6 +178,8 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
   const [hotelSearch, setHotelSearch] = useState("");
   const [hotelTierFilter, setHotelTierFilter] = useState<HotelTier | "all">("all");
   const [hotelSort, setHotelSort] = useState("recommended");
+  const [hotelPagination, setHotelPagination] = useState({ filters: "", page: 1 });
+  const hotelResultsRef = useRef<HTMLDivElement>(null);
   const [selectedHotelAreas, setSelectedHotelAreas] = useState<string[] | null>(null);
   const [selectedHotelPlans, setSelectedHotelPlans] = useState<string[] | null>(null);
   const neighborhoodOptions = Array.from(new Set(hotels.map(hotel => hotel.neighborhood).filter((area): area is string => Boolean(area)))).sort();
@@ -229,6 +231,18 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
         return 0;
       });
   }, [hotelSearch, hotelAreasKey, hotelPriceFilter, hotelRatingFilter, hotelTagFilter, selectedHotelTags, hotelTierFilter, hotelSort, hotels, showHotelTierFilter, useOnDemandGoogleRatings, hasHotelPrices]);
+  const hotelPageSize = 12;
+  const hotelPaginationKey = JSON.stringify([cityHref, hotelSearch, hotelAreasKey, hotelPriceFilter, hotelRatingFilter, hotelTagFilter, selectedHotelTags, hotelTierFilter, hotelSort]);
+  if (hotelPagination.filters !== hotelPaginationKey) setHotelPagination({ filters: hotelPaginationKey, page: 1 });
+  const hotelPageCount = Math.max(1, Math.ceil(filteredHotels.length / hotelPageSize));
+  const hotelPage = hotelPagination.filters === hotelPaginationKey ? Math.min(hotelPagination.page, hotelPageCount) : 1;
+  const hotelPageStart = (hotelPage - 1) * hotelPageSize;
+  const displayedHotels = config.category === "hotels" ? filteredHotels.slice(hotelPageStart, hotelPageStart + hotelPageSize) : filteredHotels;
+  const changeHotelPage = (page: number) => {
+    setHotelPagination({ filters: hotelPaginationKey, page });
+    hotelResultsRef.current?.focus({ preventScroll: true });
+    hotelResultsRef.current?.scrollIntoView({ behavior: "auto", block: "start" });
+  };
   const filteredActivities = useMemo(() => {
     return activities
       .filter((activity) => activityCategory === "all" || activity.category === activityCategory)
@@ -516,13 +530,13 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                   {config.category === "hotels" && !areaPresets.length && !neighborhoodOptions.length && !showHotelTierFilter && !hotels.some(hotel => hotel.tags?.length) && <p>Use the search box to find a hotel by name or address. More filters will appear as hotel details become available.</p>}
                   </HotelFilterPanel>
                   </div>
-                  {config.category === "hotels" && <div className={styles.hotelResultsSummary}>
-                    <p role="status">Showing {filteredHotels.length} of {hotels.length} hotels</p>
+                  {config.category === "hotels" && <div className={styles.hotelResultsSummary} ref={hotelResultsRef} tabIndex={-1}>
+                    <p role="status">{filteredHotels.length ? `Showing ${hotelPageStart + 1}–${hotelPageStart + displayedHotels.length} of ${filteredHotels.length} hotels${hasHotelFilters ? ` (${hotels.length} total)` : ""}` : "No matching hotels"}</p>
                     {hasHotelFilters && <button type="button" className={styles.clearFilters} onClick={clearHotelFilters}>Clear filters</button>}
                   </div>}
                   {config.category === "hotels" && hotelAreasKey && <p>Hotel areas: {requestedHotelAreas.join(" · ")}</p>}
                   <div className={styles.cardGrid}>
-                    {filteredHotels.map((hotel) => {
+                    {displayedHotels.map((hotel) => {
                       const key = hotel.hotelId ?? hotel.hotelSourceId ?? hotel.title;
                       const priceUrl = useOnDemandGoogleRatings && hotel.hotelId ? `/api/hotel-prices/${hotel.hotelId}` : hotel.url;
                       const linkProps = {
@@ -584,6 +598,12 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                       </a>;
                     })}
                   </div>
+                  {config.category === "hotels" && hotelPageCount > 1 && <nav className={styles.pagination} aria-label="Hotel results pages">
+                    <button type="button" disabled={hotelPage === 1} onClick={() => changeHotelPage(hotelPage - 1)}>Previous</button>
+                    {Array.from({ length: hotelPageCount }, (_, index) => index + 1).map(page => <button type="button" key={page}
+                      aria-label={`Page ${page}`} aria-current={hotelPage === page ? "page" : undefined} onClick={() => changeHotelPage(page)}>{page}</button>)}
+                    <button type="button" disabled={hotelPage === hotelPageCount} onClick={() => changeHotelPage(hotelPage + 1)}>Next</button>
+                  </nav>}
                   {filteredHotels.length === 0 && <div className={styles.emptyState}>
                     <p>No hotels match those filters.</p>
                     {hasHotelFilters && <button type="button" className={styles.clearFilters} onClick={clearHotelFilters}>Clear filters</button>}

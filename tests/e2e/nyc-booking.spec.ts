@@ -7,7 +7,7 @@ test("NYC booking categories use dedicated pages", async ({ page }) => {
   await expect(page.locator('[data-hotel-card]').first()).toBeVisible();
   await expect(page.locator('[data-booking-type="flight"]')).toHaveCount(0);
   await expect(page.locator('[data-booking-type="activity"]')).toHaveCount(0);
-  await expect(page.locator('[data-hotel-card]')).toHaveCount(50);
+  await expect(page.locator('[data-hotel-card]')).toHaveCount(12);
   await page.getByRole("combobox", { name: /^Hotel tags/ }).selectOption("FamilyFriendly");
   await expect(page.locator('[data-hotel-card]').filter({ hasText: "Motto by Hilton New York City Chelsea" })).toBeVisible();
   await expect(page.locator('[data-hotel-card]').filter({ hasText: "Hotel Edison" })).toHaveCount(0);

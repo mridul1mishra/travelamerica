@@ -4,10 +4,10 @@ for(const city of ['nyc','orlando','lasvegas']) {
   await page.route(/googletagmanager\.com/,r=>r.abort());
   await page.route(/\/api\/auth\/get-session/,r=>r.fulfill({contentType:'application/json',body:'null'}));
   await page.goto(`/destination/${city}/hotel`);
-  const cards=page.locator('[data-hotel-card]');await expect(cards).toHaveCount(50);
+  const cards=page.locator('[data-hotel-card]');await expect(cards).toHaveCount(12);
   const search=page.getByRole('searchbox',{name:'Search hotels',exact:true});
   await search.fill('no-such-hotel-xyz');await expect(cards).toHaveCount(0);
-  await page.getByRole('button',{name:'Clear search',exact:true}).click();await expect(cards).toHaveCount(50);
+  await page.getByRole('button',{name:'Clear search',exact:true}).click();await expect(cards).toHaveCount(12);
   await page.getByRole('button',{name:'Filter hotels',exact:true}).click();
   const panel=page.getByRole('dialog',{name:'Filter hotels'});await expect(panel).toBeVisible();
   if(city==='nyc'){
@@ -16,7 +16,7 @@ for(const city of ['nyc','orlando','lasvegas']) {
    expect(await cards.count()).toBeLessThan(50);
    await panel.getByText('Hotel tier',{exact:true}).click();
    await expect(panel.getByRole('radio',{name:'All tiers',exact:true})).toBeChecked();
-   await panel.getByRole('button',{name:'Clear filters',exact:true}).click();await expect(cards).toHaveCount(50);
+   await panel.getByRole('button',{name:'Clear filters',exact:true}).click();await expect(cards).toHaveCount(12);
   } else {await expect(panel.getByText(/More filters will appear/)).toBeVisible();}
   await page.keyboard.press('Escape');await expect(panel).not.toBeVisible();
   await page.setViewportSize({width:390,height:844});
@@ -41,7 +41,7 @@ test('NYC base plans combine locations, deduplicate overlapping areas and persis
  await page.getByRole('button',{name:'Refine your search',exact:true}).click();
  await expect(panel.getByRole('checkbox',{name:'Central Park visits 9 hotels',exact:true})).toBeChecked();
  await panel.getByRole('button',{name:'Clear filters',exact:true}).click();
- await expect(page.locator('[data-hotel-card]')).toHaveCount(50);
+ await expect(page.locator('[data-hotel-card]')).toHaveCount(12);
  expect(new URL(page.url()).searchParams.get('from')).toBe('is-nyc-safe-at-night');
 });
 
