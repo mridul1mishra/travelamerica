@@ -330,14 +330,14 @@
     "planningZone": true
   },
   {
-    "sourceId": "ta-77931",
-    "name": "Holiday Inn Express Los Angeles - LAX Airport by IHG",
-    "address": "8620 Airport Boulevard, Los Angeles, CA 90045",
-    "latitude": 33.959217,
-    "longitude": -118.385216,
-    "neighborhood": "LAX airport area",
-    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g32655-d77931-Reviews.html",
-    "rationale": "Saved street address and coordinates locate this property in the LAX airport area hotel-planning area. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "sourceId": "ta-2257239",
+    "name": "Shore Hotel",
+    "address": "1515 Ocean Ave, Santa Monica, CA 90401",
+    "latitude": 34.01256,
+    "longitude": -118.495415,
+    "neighborhood": "Santa Monica",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g33052-d2257239-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property on Ocean Avenue in the City of Santa Monica, across from Palisades Park near the pier. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
     "planningZone": true
   },
   {
@@ -363,14 +363,14 @@
     "planningZone": true
   },
   {
-    "sourceId": "ta-77888",
-    "name": "Hilton Checkers Los Angeles",
-    "address": "535 South Grand Avenue, Los Angeles, CA 90071",
-    "latitude": 34.04948,
-    "longitude": -118.25477,
-    "neighborhood": "Downtown / Financial District",
-    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g32655-d77888-Reviews.html",
-    "rationale": "Saved street address and coordinates locate this property in the Downtown / Financial District hotel-planning area. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "sourceId": "ta-82065",
+    "name": "Fairmont Miramar - Hotel & Bungalows",
+    "address": "101 Wilshire Boulevard, Santa Monica, CA 90401",
+    "latitude": 34.017735,
+    "longitude": -118.50198,
+    "neighborhood": "Santa Monica",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g33052-d82065-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property at Wilshire Boulevard and Ocean Avenue in the City of Santa Monica. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
     "planningZone": true
   },
   {
@@ -418,25 +418,25 @@
     "planningZone": true
   },
   {
-    "sourceId": "ta-77917",
-    "name": "Embassy Suites By Hilton Los Angeles International Airport North",
-    "address": "9801 Airport Boulevard, Los Angeles, CA 90045",
-    "latitude": 33.946968,
-    "longitude": -118.38644,
-    "neighborhood": "LAX airport area",
-    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g32655-d77917-Reviews.html",
-    "rationale": "Saved street address and coordinates locate this property in the LAX airport area hotel-planning area. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "sourceId": "ta-17331934",
+    "name": "Santa Monica Proper Hotel",
+    "address": "700 Wilshire Boulevard Entrance On 7th Street, Santa Monica, CA 90401",
+    "latitude": 34.020866,
+    "longitude": -118.49452,
+    "neighborhood": "Santa Monica",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g33052-d17331934-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property on Wilshire Boulevard in downtown Santa Monica. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
     "planningZone": true
   },
   {
-    "sourceId": "ta-5418166",
-    "name": "Stile Downtown Los Angeles",
-    "address": "929 S Broadway, Los Angeles, CA 90015",
-    "latitude": 34.04184,
-    "longitude": -118.25686,
-    "neighborhood": "Downtown / Historic Core & Broadway",
-    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g32655-d5418166-Reviews.html",
-    "rationale": "Saved street address and coordinates locate this property in the Downtown / Historic Core & Broadway hotel-planning area. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "sourceId": "ta-125138",
+    "name": "Beverly Wilshire, Beverly Hills, A Four Seasons Hotel",
+    "address": "9500 Wilshire Boulevard, Beverly Hills, CA 90212",
+    "latitude": 34.066875,
+    "longitude": -118.40042,
+    "neighborhood": "Beverly Hills",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g32070-d125138-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property at Wilshire Boulevard and Rodeo Drive inside the City of Beverly Hills. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
     "planningZone": true
   },
   {
@@ -473,14 +473,14 @@
     "planningZone": true
   },
   {
-    "sourceId": "ta-84286",
-    "name": "Holiday Inn Express & Suites Los Angeles Downtown West By IHG",
-    "address": "611 South Westlake Avenue, Los Angeles, CA 90057",
-    "latitude": 34.058693,
-    "longitude": -118.27426,
-    "neighborhood": "Westlake",
-    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g32655-d84286-Reviews.html",
-    "rationale": "Saved street address and coordinates locate this property in the Westlake hotel-planning area. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "sourceId": "ta-76093",
+    "name": "The Beverly Hills Hotel",
+    "address": "9641 Sunset Boulevard, Beverly Hills, CA 90210",
+    "latitude": 34.08182,
+    "longitude": -118.41341,
+    "neighborhood": "Beverly Hills",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g32070-d76093-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property on Sunset Boulevard inside the City of Beverly Hills. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
     "planningZone": true
   },
   {
@@ -539,14 +539,14 @@
     "planningZone": true
   },
   {
-    "sourceId": "ta-7389126",
-    "name": "Residence Inn by Marriott Los Angeles LAX/Century Boulevard",
-    "address": "5933 West Century Boulevard, Los Angeles, CA 90045",
-    "latitude": 33.946,
-    "longitude": -118.38697,
-    "neighborhood": "LAX airport area",
-    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g32655-d7389126-Reviews.html",
-    "rationale": "Saved street address and coordinates locate this property in the LAX airport area hotel-planning area. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "sourceId": "ta-113239",
+    "name": "Avalon Hotel Beverly Hills",
+    "address": "9400 West Olympic Boulevard, Beverly Hills, CA 90212",
+    "latitude": 34.059017,
+    "longitude": -118.39728,
+    "neighborhood": "Beverly Hills",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g32070-d113239-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property on West Olympic Boulevard inside the City of Beverly Hills. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
     "planningZone": true
   }
 ]

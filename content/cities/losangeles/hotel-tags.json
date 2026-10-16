@@ -390,15 +390,10 @@
     ]
   },
   {
-    "sourceId": "ta-77931",
-    "name": "Holiday Inn Express Los Angeles - LAX Airport by IHG",
-    "tags": [
-      {
-        "key": "BusinessFriendly",
-        "sourceUrl": "https://www.ihg.com/holidayinnexpress/hotels/us/en/los-angeles/laxat/hoteldetail/events-facilities",
-        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
-      }
-    ]
+    "sourceId": "ta-2257239",
+    "name": "Shore Hotel",
+    "tags": [],
+    "pendingReason": "Added to give the Santa Monica and Beverly Hills safety-guide cards real hotel links; official property information not yet reviewed, so no optional tags assigned."
   },
   {
     "sourceId": "ta-77944",
@@ -433,15 +428,10 @@
     ]
   },
   {
-    "sourceId": "ta-77888",
-    "name": "Hilton Checkers Los Angeles",
-    "tags": [
-      {
-        "key": "BusinessFriendly",
-        "sourceUrl": "https://www.hilton.com/en/hotels/laxchhf-hilton-checkers-los-angeles/events/",
-        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
-      }
-    ]
+    "sourceId": "ta-82065",
+    "name": "Fairmont Miramar - Hotel & Bungalows",
+    "tags": [],
+    "pendingReason": "Added to give the Santa Monica and Beverly Hills safety-guide cards real hotel links; official property information not yet reviewed, so no optional tags assigned."
   },
   {
     "sourceId": "ta-77237",
@@ -493,21 +483,16 @@
     ]
   },
   {
-    "sourceId": "ta-77917",
-    "name": "Embassy Suites By Hilton Los Angeles International Airport North",
-    "tags": [
-      {
-        "key": "BusinessFriendly",
-        "sourceUrl": "https://www.hilton.com/en/hotels/laxabes-embassy-suites-los-angeles-international-airport-north/events/",
-        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
-      }
-    ]
+    "sourceId": "ta-17331934",
+    "name": "Santa Monica Proper Hotel",
+    "tags": [],
+    "pendingReason": "Added to give the Santa Monica and Beverly Hills safety-guide cards real hotel links; official property information not yet reviewed, so no optional tags assigned."
   },
   {
-    "sourceId": "ta-5418166",
-    "name": "Stile Downtown Los Angeles",
+    "sourceId": "ta-125138",
+    "name": "Beverly Wilshire, Beverly Hills, A Four Seasons Hotel",
     "tags": [],
-    "pendingReason": "Current official property information could not be verified; no optional tags assigned."
+    "pendingReason": "Added to give the Santa Monica and Beverly Hills safety-guide cards real hotel links; official property information not yet reviewed, so no optional tags assigned."
   },
   {
     "sourceId": "ta-77264",
@@ -543,15 +528,10 @@
     ]
   },
   {
-    "sourceId": "ta-84286",
-    "name": "Holiday Inn Express & Suites Los Angeles Downtown West By IHG",
-    "tags": [
-      {
-        "key": "BusinessFriendly",
-        "sourceUrl": "https://www.ihg.com/holidayinnexpress/hotels/us/en/los-angeles/laxwd/hoteldetail/events-facilities",
-        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
-      }
-    ]
+    "sourceId": "ta-76093",
+    "name": "The Beverly Hills Hotel",
+    "tags": [],
+    "pendingReason": "Added to give the Santa Monica and Beverly Hills safety-guide cards real hotel links; official property information not yet reviewed, so no optional tags assigned."
   },
   {
     "sourceId": "ta-119443",
@@ -609,14 +589,9 @@
     ]
   },
   {
-    "sourceId": "ta-7389126",
-    "name": "Residence Inn by Marriott Los Angeles LAX/Century Boulevard",
-    "tags": [
-      {
-        "key": "BusinessFriendly",
-        "sourceUrl": "https://www.marriott.com/en-us/hotels/laxax-residence-inn-los-angeles-lax-century-boulevard/events/",
-        "rationale": "Official property information documents meeting or conference facilities; confirm room availability, equipment and fees with the hotel."
-      }
-    ]
+    "sourceId": "ta-113239",
+    "name": "Avalon Hotel Beverly Hills",
+    "tags": [],
+    "pendingReason": "Added to give the Santa Monica and Beverly Hills safety-guide cards real hotel links; official property information not yet reviewed, so no optional tags assigned."
   }
 ]

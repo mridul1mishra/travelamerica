@@ -132,6 +132,17 @@
     "planningZone": true
   },
   {
+    "sourceId": "ta-4605231",
+    "name": "The Alfond Inn At Rollins",
+    "address": "300 E New England Ave, Winter Park, FL 32789",
+    "latitude": 28.595867,
+    "longitude": -81.34785,
+    "neighborhood": "Winter Park",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34747-d4605231-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property on East New England Avenue in Winter Park, a block from Park Avenue and next to Rollins College. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "planningZone": true
+  },
+  {
     "sourceId": "ta-1595615",
     "name": "DASKK Orlando Hotel Near Universal Blvd, Ascend Hotel Collection",
     "address": "7400 Canada Ave, Orlando, FL 32819",
@@ -297,6 +308,17 @@
     "planningZone": true
   },
   {
+    "sourceId": "ta-2554285",
+    "name": "Embassy Suites by Hilton Orlando Lake Buena Vista South",
+    "address": "4955 Kyngs Heath Road, Kissimmee, FL 34746",
+    "latitude": 28.33627,
+    "longitude": -81.48121,
+    "neighborhood": "Kissimmee / US-192",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34352-d2554285-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property on or just off US-192 (Irlo Bronson Memorial Highway) in Kissimmee. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "planningZone": true
+  },
+  {
     "sourceId": "ta-144433",
     "name": "Hyatt Regency Grand Cypress Resort",
     "address": "One Grand Cypress Boulevard, Orlando, FL 32836-6799",
@@ -327,6 +349,17 @@
     "neighborhood": "International Drive / Universal Blvd",
     "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34515-d263315-Reviews.html",
     "rationale": "Saved street address and coordinates locate this property in the International Drive / Universal Blvd hotel-planning area. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "planningZone": true
+  },
+  {
+    "sourceId": "ta-84723",
+    "name": "Holiday Inn Resort Kissimmee by the Parks by IHG",
+    "address": "3011 Maingate Lane, Kissimmee, FL 34747",
+    "latitude": 28.337133,
+    "longitude": -81.58749,
+    "neighborhood": "Kissimmee / US-192",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34352-d84723-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property on or just off US-192 (Irlo Bronson Memorial Highway) in Kissimmee. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
     "planningZone": true
   },
   {
@@ -459,6 +492,28 @@
     "neighborhood": "International Drive / Universal Blvd",
     "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34515-d265927-Reviews.html",
     "rationale": "Saved street address and coordinates locate this property in the International Drive / Universal Blvd hotel-planning area. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "planningZone": true
+  },
+  {
+    "sourceId": "ta-609962",
+    "name": "Celebration Suites",
+    "address": "5820 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746",
+    "latitude": 28.332193,
+    "longitude": -81.517624,
+    "neighborhood": "Kissimmee / US-192",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34352-d609962-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property on or just off US-192 (Irlo Bronson Memorial Highway) in Kissimmee. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "planningZone": true
+  },
+  {
+    "sourceId": "ta-84832",
+    "name": "Staybridge Suites Orlando Royale Parc Suites",
+    "address": "5876 W Irlo Bronson Memorial Hwy, Kissimmee, FL 34746",
+    "latitude": 28.331676,
+    "longitude": -81.51979,
+    "neighborhood": "Kissimmee / US-192",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g34352-d84832-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property on or just off US-192 (Irlo Bronson Memorial Highway) in Kissimmee. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
     "planningZone": true
   },
   {

@@ -77,6 +77,17 @@
     "planningZone": true
   },
   {
+    "sourceId": "ta-596543",
+    "name": "Red Rock Casino Resort & Spa",
+    "address": "11011 West Charleston Blvd, Las Vegas, NV 89135-1402",
+    "latitude": 36.157154,
+    "longitude": -115.33355,
+    "neighborhood": "Summerlin",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g45963-d596543-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property on West Charleston Boulevard in Summerlin, beside Downtown Summerlin. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "planningZone": true
+  },
+  {
     "sourceId": "ta-143336",
     "name": "Paris Las Vegas",
     "address": "3655 S Las Vegas Blvd, Las Vegas, NV 89109",
@@ -308,6 +319,17 @@
     "planningZone": true
   },
   {
+    "sourceId": "ta-124741",
+    "name": "JW Marriott Las Vegas Resort & Spa",
+    "address": "221 N Rampart Blvd, Las Vegas, NV 89145",
+    "latitude": 36.174362,
+    "longitude": -115.29064,
+    "neighborhood": "Summerlin",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g45963-d124741-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property on North Rampart Boulevard in Summerlin. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "planningZone": true
+  },
+  {
     "sourceId": "ta-186114",
     "name": "The LINQ Hotel + Experience",
     "address": "3535 Las Vegas Blvd South, Las Vegas, NV 89109",
@@ -316,6 +338,17 @@
     "neighborhood": "The Strip",
     "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g45963-d186114-Reviews.html",
     "rationale": "Saved street address and coordinates locate this property in the The Strip hotel-planning area. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "planningZone": true
+  },
+  {
+    "sourceId": "ta-1149361",
+    "name": "Element by Marriott Las Vegas Summerlin",
+    "address": "10555 Discovery Drive, Las Vegas, NV 89135",
+    "latitude": 36.121605,
+    "longitude": -115.32398,
+    "neighborhood": "Summerlin",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g45963-d1149361-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property on Discovery Drive in Summerlin. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
     "planningZone": true
   },
   {
@@ -338,6 +371,17 @@
     "neighborhood": "The Strip",
     "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g45963-d91762-Reviews.html",
     "rationale": "Saved street address and coordinates locate this property in the The Strip hotel-planning area. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "planningZone": true
+  },
+  {
+    "sourceId": "ta-226023",
+    "name": "Green Valley Ranch Casino Resort & Spa",
+    "address": "2300 Paseo Verde Pkwy, Henderson, NV 89052-2672",
+    "latitude": 36.02025,
+    "longitude": -115.089966,
+    "neighborhood": "Henderson",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g45953-d226023-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property on Paseo Verde Parkway in the Green Valley area of Henderson. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
     "planningZone": true
   },
   {
@@ -385,6 +429,17 @@
     "planningZone": true
   },
   {
+    "sourceId": "ta-1235866",
+    "name": "M Resort",
+    "address": "12300 Las Vegas Blvd S, Henderson, NV 89044-9506",
+    "latitude": 35.965233,
+    "longitude": -115.16956,
+    "neighborhood": "Henderson",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g45953-d1235866-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property at the southern end of Las Vegas Boulevard inside Henderson city limits, well south of the Strip. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "planningZone": true
+  },
+  {
     "sourceId": "ta-91687",
     "name": "Planet Hollywood Resort & Casino",
     "address": "3667 Las Vegas Boulevard South, Las Vegas, NV 89109",
@@ -393,6 +448,17 @@
     "neighborhood": "The Strip",
     "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g45963-d91687-Reviews.html",
     "rationale": "Saved street address and coordinates locate this property in the The Strip hotel-planning area. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
+    "planningZone": true
+  },
+  {
+    "sourceId": "ta-268447",
+    "name": "Hilton Lake Las Vegas Resort & Spa",
+    "address": "1610 Lake Las Vegas Parkway, Henderson, NV 89011",
+    "latitude": 36.102264,
+    "longitude": -114.931755,
+    "neighborhood": "Henderson",
+    "sourceUrl": "https://www.tripadvisor.com/Hotel_Review-g45953-d268447-Reviews.html",
+    "rationale": "Saved street address and coordinates locate this property at Lake Las Vegas in Henderson. This is a geographic assignment, not a safety, amenity or hotel-tier assessment.",
     "planningZone": true
   },
   {

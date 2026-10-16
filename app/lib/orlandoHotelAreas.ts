@@ -8,6 +8,8 @@ const lakeBuenaVista = "Disney Springs / Lake Buena Vista";
 const disneyResorts = "Bonnet Creek / Walt Disney World resorts";
 const downtown = "Downtown Orlando";
 const airport = "Orlando International Airport area";
+const kissimmee = "Kissimmee / US-192";
+const winterPark = "Winter Park";
 
 export const orlandoHotelAreaPresets: HotelAreaChoice[] = [
   { label: "I-Drive & convention stays", areas: [iDrive] },
@@ -16,6 +18,8 @@ export const orlandoHotelAreaPresets: HotelAreaChoice[] = [
   { label: "SeaWorld visits", areas: [seaWorld] },
   { label: "Downtown stays", areas: [downtown] },
   { label: "Airport stays", areas: [airport] },
+  { label: "Kissimmee & US-192 stays", areas: [kissimmee] },
+  { label: "Winter Park stays", areas: [winterPark] },
 ];
 
 // Recommended-areas module shown after the hero on both Orlando safety pages.
@@ -25,16 +29,15 @@ export const orlandoRecommendedHotelAreas: HotelAreaChoice[] = [
   { label: "Universal area", areas: [universal] },
 ];
 
-// Keyed by the safety-guide neighborhood card name. Kissimmee has no reviewed
-// hotels yet, so it intentionally has no link.
+// Keyed by the safety-guide neighborhood card name.
 export const orlandoSafetyGuideHotelAreas: Record<string, HotelAreaChoice> = {
   "International Drive (I-Drive)": { label: "International Drive", areas: [iDrive] },
   "Disney Springs / Lake Buena Vista": { label: "Disney Springs / Lake Buena Vista", areas: [lakeBuenaVista, disneyResorts] },
   "Downtown Orlando": { label: "Downtown Orlando", areas: [downtown] },
+  "Kissimmee (US-192)": { label: "Kissimmee", areas: [kissimmee] },
 };
 
-// Keyed by the night-guide area id. Winter Park and Kissimmee have no
-// reviewed hotels yet, so they intentionally have no link.
+// Keyed by the night-guide area id.
 export const orlandoNightHotelAreas: Record<string, HotelAreaChoice> = {
   "international-drive-universal": { label: "I-Drive and Universal Blvd", areas: [iDrive, universal] },
   "convention-center": { label: "the convention-center district", areas: [iDrive] },
@@ -44,4 +47,6 @@ export const orlandoNightHotelAreas: Record<string, HotelAreaChoice> = {
   "disney-resorts": { label: "Disney-area resorts", areas: [disneyResorts] },
   downtown: { label: "Downtown Orlando", areas: [downtown] },
   airport: { label: "the airport area", areas: [airport] },
+  kissimmee: { label: "Kissimmee and US-192", areas: [kissimmee] },
+  "winter-park": { label: "Winter Park", areas: [winterPark] },
 };

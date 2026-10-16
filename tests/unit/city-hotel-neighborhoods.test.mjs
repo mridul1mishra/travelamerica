@@ -53,10 +53,44 @@ test("every safety-article hotel link targets reviewed neighborhoods", () => {
   }
 });
 
-test("areas without reviewed hotels intentionally have no link", () => {
-  assert.equal(orlandoSafetyGuideHotelAreas["Kissimmee (US-192)"], undefined);
-  assert.equal(orlandoNightHotelAreas.kissimmee, undefined);
-  assert.equal(orlandoNightHotelAreas["winter-park"], undefined);
-  for (const name of ["Arts District", "Summerlin", "Henderson"]) assert.equal(lasvegasSafetyGuideHotelAreas[name], undefined);
-  for (const name of ["Santa Monica", "Beverly Hills"]) assert.equal(laSafetyGuideHotelAreas[name], undefined);
+test("Santa Monica, Beverly Hills and Winter Park link to hotels inside those cities", () => {
+  const la = validateLaNeighborhoodAssignments();
+  for (const [area, pattern] of [["Santa Monica", /Santa Monica, CA/], ["Beverly Hills", /Beverly Hills, CA/]]) {
+    const hotels = la.filter(entry => entry.neighborhood === area);
+    assert.equal(hotels.length, 3);
+    for (const entry of hotels) assert.match(entry.address, pattern);
+    assert.deepEqual(laSafetyGuideHotelAreas[area].areas, [area]);
+  }
+  const winterPark = validateCityNeighborhoodAssignments("orlando").filter(entry => entry.neighborhood === "Winter Park");
+  assert.equal(winterPark.length, 1);
+  assert.match(winterPark[0].address, /Winter Park, FL/);
+  assert.deepEqual(orlandoNightHotelAreas["winter-park"].areas, ["Winter Park"]);
+});
+
+test("Kissimmee links to the swapped-in US-192 hotels while Orlando stays at 50", async () => {
+  const { readFileSync } = await import("node:fs");
+  const catalog = JSON.parse(readFileSync(new URL("../../content/cities/hotel-catalog.json", import.meta.url), "utf8"));
+  const orlando = catalog.filter(hotel => hotel.city === "orlando");
+  assert.equal(orlando.length, 50);
+  const kissimmee = validateCityNeighborhoodAssignments("orlando").filter(entry => entry.neighborhood === "Kissimmee / US-192");
+  assert.equal(kissimmee.length, 4);
+  for (const entry of kissimmee) assert.match(entry.address, /Kissimmee, FL/);
+  assert.deepEqual(orlandoSafetyGuideHotelAreas["Kissimmee (US-192)"].areas, ["Kissimmee / US-192"]);
+  assert.deepEqual(orlandoNightHotelAreas.kissimmee.areas, ["Kissimmee / US-192"]);
+});
+
+test("Summerlin, Henderson and Arts District cards link to real Las Vegas hotels while staying at 50", async () => {
+  const { readFileSync } = await import("node:fs");
+  const catalog = JSON.parse(readFileSync(new URL("../../content/cities/hotel-catalog.json", import.meta.url), "utf8"));
+  assert.equal(catalog.filter(hotel => hotel.city === "lasvegas").length, 50);
+  const assignments = validateCityNeighborhoodAssignments("lasvegas");
+  assert.equal(assignments.filter(entry => entry.neighborhood === "Summerlin").length, 3);
+  const henderson = assignments.filter(entry => entry.neighborhood === "Henderson");
+  assert.equal(henderson.length, 3);
+  for (const entry of henderson) assert.match(entry.address, /Henderson, NV/);
+  assert.deepEqual(lasvegasSafetyGuideHotelAreas.Summerlin.areas, ["Summerlin"]);
+  assert.deepEqual(lasvegasSafetyGuideHotelAreas.Henderson.areas, ["Henderson"]);
+  // No hotels inside the Arts District itself; the label must say it is the neighboring Downtown area.
+  assert.deepEqual(lasvegasSafetyGuideHotelAreas["Arts District"].areas, ["Downtown / Fremont Street"]);
+  assert.match(lasvegasSafetyGuideHotelAreas["Arts District"].label, /next to the Arts District/);
 });
