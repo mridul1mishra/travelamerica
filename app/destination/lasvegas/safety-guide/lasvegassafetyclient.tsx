@@ -16,6 +16,9 @@ import sectionsData from "./components/infosection/infosection.json";
 import EmergencyContactBlock from './components/emergencycontactblock/EmergencyContactBlock';
 import SafetyNarrative from './components/safetynarrative/SafetyNarrative';
 import BookingCTA from './components/BookingCTA/BookingCTA';
+import SafetyArticleTracker from '@/app/components/analytics/SafetyArticleTracker';
+import CitySafetyHotelCTA from '@/app/components/hotels/CitySafetyHotelCTA';
+import { lasvegasRecommendedHotelAreas } from '@/app/lib/lasvegasHotelAreas';
 
 export default function LasVegasSafetyClient() {
   return (
@@ -26,9 +29,13 @@ export default function LasVegasSafetyClient() {
           { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
           { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
         ]} />
-        <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=hotels&from=safety-guide" label="See Las Vegas hotels" />
+        <SafetyArticleTracker />
+        <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/hotel?from=safety-guide" label="See Las Vegas hotels" ctaId="safe-area-hotels-top-banner" placement="top_banner" />
         <div className={styles.container}>
         <SafetyHero />
+        <CitySafetyHotelCTA city="lasvegas" title="Stay where Las Vegas stays busy at night"
+          intro="The Strip and Fremont Street have steady crowds, resort security and late-night transport. Compare hotels there, then check how you will get back after a late show."
+          choices={lasvegasRecommendedHotelAreas} source="safety-guide" trackingId="recommended-lasvegas-hotel-areas" />
         <InfoSection sections={sectionsData.sections} />
         <SafetyNarrative />
         <ScenarioSection />
@@ -39,7 +46,7 @@ export default function LasVegasSafetyClient() {
         <LinkHubGrid />
         <WhyTrustThisGuide data={cityWhyTrustData} />
         </div>
-        <BookingCTA variant="full" text="Choose a hotel in a safe Las Vegas area" href="/destination/lasvegas/bookings?tab=hotels&from=safety-guide" label="See Las Vegas hotels" />
+        <BookingCTA variant="full" text="Choose a hotel in a safe Las Vegas area" href="/destination/lasvegas/hotel?from=safety-guide" label="See Las Vegas hotels" ctaId="safe-area-hotels-bottom" placement="bottom_booking_band" />
         <Footer />
     </>
   );

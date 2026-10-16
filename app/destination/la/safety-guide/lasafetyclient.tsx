@@ -17,6 +17,9 @@ import sectionsData from "./components/infosection/infosection.json";
 import EmergencyContactBlock from './components/emergencycontactblock/EmergencyContactBlock';
 import SafetyNarrative from './components/safetynarrative/SafetyNarrative';
 import BookingCTA from './components/BookingCTA/BookingCTA';
+import SafetyArticleTracker from '@/app/components/analytics/SafetyArticleTracker';
+import CitySafetyHotelCTA from '@/app/components/hotels/CitySafetyHotelCTA';
+import { laRecommendedHotelAreas } from '@/app/lib/laHotelAreas';
 import laWhyTrustData from "@/content/destination/la/safety-guide/whyTrustItems/whyTrustItems.json";
 
 export default function LASafetyClient() {
@@ -28,10 +31,14 @@ export default function LASafetyClient() {
           { href: "/destination/la/safety-guide", label: "LA Safety" },
           { href: "/destination/la/la-female-solo-travel-guide", label: "Female Travel Guide" },
         ]} />
-        <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/bookings?tab=hotels&from=safety-guide" label="See LA hotels" />
+        <SafetyArticleTracker />
+        <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/hotel?from=safety-guide" label="See LA hotels" ctaId="safe-area-hotels-top-banner" placement="top_banner" />
         <div className={styles.container}>
         {/* banner component */}
         <SafetyHero />
+        <CitySafetyHotelCTA city="la" title="Stay close to your LA plans"
+          intro="These areas put hotels near shows, dining and events, which keeps late returns short. Compare hotels there, then check the entrance and route back before you book."
+          choices={laRecommendedHotelAreas} source="safety-guide" trackingId="recommended-la-hotel-areas" />
         <InfoSection sections={sectionsData.sections}  />
         <SafetyNarrative />
         <ScenarioSection />
@@ -42,7 +49,7 @@ export default function LASafetyClient() {
         <LinkHubGrid />
         <WhyTrustThisGuide data={laWhyTrustData} />
         </div>
-        <BookingCTA variant="full" text="Choose a hotel in a safe LA neighborhood" href="/destination/la/bookings?tab=hotels&from=safety-guide" label="See LA hotels" />
+        <BookingCTA variant="full" text="Choose a hotel in a safe LA neighborhood" href="/destination/la/hotel?from=safety-guide" label="See LA hotels" ctaId="safe-area-hotels-bottom" placement="bottom_booking_band" />
         <Footer />
 
     </>

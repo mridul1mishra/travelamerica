@@ -5,6 +5,7 @@ import Footer from "@/app/components/Header/Footer/footer";
 import data from "./is-la-safe-at-night.json";
 import styles from "./nightguide.module.css";
 import { laNightHotelAreas, laHotelAreasUrl } from "@/app/lib/laHotelAreas";
+import SafetyArticleTracker from "@/app/components/analytics/SafetyArticleTracker";
 
 const hotelUrl = "/destination/la/hotel?from=is-la-safe-at-night";
 const navLinks = [
@@ -30,13 +31,15 @@ const related = [
 
 function HotelLink({ placement, children }: { placement: string; children: React.ReactNode }) {
   return <Link href={hotelUrl} className={styles.button} data-track="booking_cta"
-    data-cta-label="Compare LA hotel locations" data-cta-placement={placement}>{children}</Link>;
+    data-cta-label="Compare LA hotel locations" data-cta-placement={placement}
+    data-hotel-cta="true" data-cta-id={`safe-area-hotels-${placement.replace(/_/g, "-")}`}>{children}</Link>;
 }
 
 export default function Page() {
   return <>
     <Header links={navLinks} />
     <main className={styles.page}>
+      <SafetyArticleTracker />
       <article>
         <header className={styles.hero}>
           <div>
@@ -57,7 +60,8 @@ export default function Page() {
             priority sizes="(max-width: 850px) 100vw, 40vw" className={styles.heroImage} />
         </header>
 
-        <aside className={styles.hotelCta} aria-label="Recommended LA hotel bases" id="la-evening-hotel-cta">
+        <aside className={styles.hotelCta} aria-label="Recommended LA hotel bases" id="la-evening-hotel-cta"
+          data-hotel-cta-module="true" data-cta-id="la-evening-hotel-cta" data-cta-placement="after_hero">
           <h2>Stay close to your LA evening plans</h2>
           <p>Consider Santa Monica for beach evenings, Hollywood for shows, West Hollywood for nightlife, or the relevant Downtown district for an event. Compare the actual hotel entrance and return route before booking.</p>
           <HotelLink placement="after_hero">Find a hotel for your LA itinerary</HotelLink>
@@ -79,9 +83,11 @@ export default function Page() {
         </section>
 
         <section id="neighborhoods" className={styles.section} aria-labelledby="areas-heading">
+          <div id="neighborhood-advice" data-safety-section>
           <p className={styles.eyebrow}>Destination by destination</p>
           <h2 id="areas-heading">Hollywood, Downtown, Santa Monica and other LA areas after dark</h2>
           <p>Plan around an actual venue and its surrounding route. Official operating hours tell you when a facility is available; they do not establish when a neighborhood becomes unsafe. Our <Link href="/destination/la/neighborhood-guide">LA neighborhood guide</Link> can help orient your itinerary.</p>
+          </div>
           <div className={styles.areaList}>{data.neighborhoods.map(area => <section key={area.id} id={area.id} className={styles.area} aria-labelledby={`${area.id}-heading`}>
             <h3 id={`${area.id}-heading`}>{area.question}</h3>
             <p>{area.answer}</p><p><strong>Getting back:</strong> {area.planning}</p>
@@ -89,7 +95,7 @@ export default function Page() {
             <a href={area.sourceUrl}>{area.sourceLabel}</a>
             {laNightHotelAreas[area.id] && <p><Link href={laHotelAreasUrl(laNightHotelAreas[area.id].areas)}
               data-track="booking_cta" data-cta-label={laNightHotelAreas[area.id].label}
-              data-cta-placement={`neighborhood_${area.id}`}>{laNightHotelAreas[area.id].label}</Link></p>}
+              data-hotel-cta="true" data-cta-id={`safe_neighborhoods-${area.id}`} data-cta-placement="safe_neighborhoods">{laNightHotelAreas[area.id].label}</Link></p>}
           </section>)}</div>
         </section>
 

@@ -1,12 +1,15 @@
+import type { ReactNode } from "react";
 import styles from "./neighborhoodsafety.module.css";
 
 interface Props {
   name: string;
   safetyLevel: string;
   tips: string[];
+  /** Optional hotel link for this area (see AreaHotelLink). */
+  children?: ReactNode;
 }
 
-export default function NeighborhoodSafetyCard({ name, safetyLevel, tips }: Props) {
+export default function NeighborhoodSafetyCard({ name, safetyLevel, tips, children }: Props) {
   return (
     <div className={styles.card}>
       <div className={styles.header}>
@@ -21,6 +24,7 @@ export default function NeighborhoodSafetyCard({ name, safetyLevel, tips }: Prop
           <li key={index}>{tip}</li>
         ))}
       </ul>
+      {children}
     </div>
   );
 }

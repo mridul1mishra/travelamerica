@@ -20,6 +20,9 @@ function cleanPath(url: URL) {
   return `${url.pathname}${url.search || ""}`;
 }
 
+// Hotel destinations that count as a tagged hotel recommendation click.
+const HOTEL_CTA_PATH = /^\/destination\/(nyc|orlando|lasvegas|la)\/(hotel|booking|bookings)$/;
+
 function getBookingEventName(type: string) {
   if (type === "flight") return "booking_flight_click";
   if (type === "hotel") return "booking_hotel_click";
@@ -71,7 +74,7 @@ export default function LinkClickTracker() {
       };
 
       if (link.dataset.hotelCta === "true" && !isExternal &&
-          ["/destination/nyc/hotel", "/destination/nyc/booking"].includes(url.pathname)) {
+          HOTEL_CTA_PATH.test(url.pathname)) {
         window.gtag("event", "hotel_cta_click", {
           page_location: window.location.href,
           cta_id: link.dataset.ctaId,

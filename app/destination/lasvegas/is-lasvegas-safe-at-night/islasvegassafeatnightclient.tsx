@@ -16,6 +16,9 @@ import data from "./is-lasvegas-safe-at-night.json";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
 import BookingCTA from './components/BookingCTA/BookingCTA';
+import SafetyArticleTracker from "@/app/components/analytics/SafetyArticleTracker";
+import CitySafetyHotelCTA from "@/app/components/hotels/CitySafetyHotelCTA";
+import { lasvegasRecommendedHotelAreas } from "@/app/lib/lasvegasHotelAreas";
 
 export default function IsLasVegasSafeAtNightClient() {
   return (
@@ -26,10 +29,14 @@ export default function IsLasVegasSafeAtNightClient() {
         { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
         { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
       ]} />
-      <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=hotels&from=is-lasvegas-safe-at-night" label="See safe-area hotels" />
+      <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/hotel?from=is-lasvegas-safe-at-night" label="See safe-area hotels" ctaId="safe-area-hotels-top-banner" placement="top_banner" />
+      <SafetyArticleTracker />
 
       {/* 1. Hero Section */}
       <HeroSafety {...data.heroSafety} />
+      <CitySafetyHotelCTA city="lasvegas" title="Stay where Las Vegas stays busy at night"
+        intro="The Strip and Fremont Street have steady crowds, resort security and late-night transport. Staying there keeps the walk back after a show short."
+        choices={lasvegasRecommendedHotelAreas} source="is-lasvegas-safe-at-night" trackingId="recommended-lasvegas-hotel-areas" />
 
       {/* 2. Safety Verdict Snapshot */}
       <SectionWrapper id="safetyMeter">
@@ -81,7 +88,7 @@ export default function IsLasVegasSafeAtNightClient() {
         <TrustBlock {...data.trustBlock} />
       </SectionWrapper>
 
-      <BookingCTA variant="full" text="Book a hotel in a safe, well-connected area" href="/destination/lasvegas/bookings?tab=hotels&from=is-lasvegas-safe-at-night" label="See safe-area hotels" />
+      <BookingCTA variant="full" text="Book a hotel in a safe, well-connected area" href="/destination/lasvegas/hotel?from=is-lasvegas-safe-at-night" label="See safe-area hotels" ctaId="safe-area-hotels-bottom" placement="bottom_booking_band" />
       <Footer />
     </>
   );

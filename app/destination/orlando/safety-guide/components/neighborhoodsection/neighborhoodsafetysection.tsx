@@ -1,15 +1,19 @@
 import styles from "./neighborhoodsafety.module.css";
 import NeighborhoodSafetyCard from "./neighborhoodsafetycard";
 import neighborhoods from "./neighborhoodsafetydata";
+import AreaHotelLink from "@/app/components/hotels/AreaHotelLink";
+import { orlandoSafetyGuideHotelAreas } from "@/app/lib/orlandoHotelAreas";
 
 export default function NeighborhoodSafetySection() {
   return (
-    <section className={styles.section}>
+    <section id="neighborhood-safety" className={styles.section}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Neighborhood Safety Breakdown</h2>
-        <p className={styles.subtitle}>
-          How safe are Orlando areas for solo travelers?
-        </p>
+        <div id="neighborhood-advice" data-safety-section>
+          <h2 className={styles.title}>Neighborhood Safety Breakdown</h2>
+          <p className={styles.subtitle}>
+            How safe are Orlando areas for solo travelers?
+          </p>
+        </div>
 
         <div className={styles.grid}>
           {neighborhoods.map((item) => (
@@ -18,7 +22,10 @@ export default function NeighborhoodSafetySection() {
               name={item.name}
               safetyLevel={item.safetyLevel}
               tips={item.tips}
-            />
+            >
+              <AreaHotelLink city="orlando" choice={orlandoSafetyGuideHotelAreas[item.name]} source="safety-guide"
+                placement="safe_neighborhoods" idKey={item.name} />
+            </NeighborhoodSafetyCard>
           ))}
         </div>
       </div>

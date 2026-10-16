@@ -4,6 +4,7 @@ import pg from "pg";
 import nextEnv from "@next/env";
 import { seedLaHotelNeighborhoods } from "./seed-la-hotel-neighborhoods.mjs";
 import { seedLaHotelTags } from "./seed-la-hotel-tags.mjs";
+import { seedCityHotelNeighborhoods } from "./seed-city-hotel-neighborhoods.mjs";
 
 const catalog = JSON.parse(readFileSync(new URL("../content/cities/hotel-catalog.json", import.meta.url), "utf8"));
 let placeIds = [];
@@ -43,6 +44,8 @@ export async function seedCityHotels(client) {
     }
     await seedLaHotelNeighborhoods(client);
     await seedLaHotelTags(client);
+    await seedCityHotelNeighborhoods(client, "orlando");
+    await seedCityHotelNeighborhoods(client, "lasvegas");
     await client.query("COMMIT");
   } catch (error) {
     await client.query("ROLLBACK");

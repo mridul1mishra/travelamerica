@@ -1,11 +1,15 @@
 import styles from "./NeighborhoodCards.module.css";
 import type { NeighborhoodCardsProps } from "../typesafeatnight";
+import AreaHotelLink from "@/app/components/hotels/AreaHotelLink";
+import { lasvegasNightHotelAreas } from "@/app/lib/lasvegasHotelAreas";
 
 export default function NeighborhoodCards({ neighborhoods }: NeighborhoodCardsProps) {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2 className={styles.heading}>Neighborhood Deep Dives</h2>
+        <div id="neighborhood-advice" data-safety-section>
+          <h2 className={styles.heading}>Neighborhood Deep Dives</h2>
+        </div>
 
         <div className={styles.grid}>
           {neighborhoods.map((n, index) => (
@@ -50,7 +54,7 @@ export default function NeighborhoodCards({ neighborhoods }: NeighborhoodCardsPr
                 </div>
 
                 <div className={styles.column}>
-                  <h4 className={styles.subheading}>Avoid Spots</h4>
+                  <h4 className={styles.subheading}>Use Extra Care</h4>
                   <ul className={styles.list}>
                     {n.avoidSpots.map((spot, i) => (
                       <li key={i}>{spot}</li>
@@ -63,6 +67,8 @@ export default function NeighborhoodCards({ neighborhoods }: NeighborhoodCardsPr
               <footer className={styles.footer}>
                 <p><strong>Ideal For:</strong> {n.idealFor}</p>
                 <p><strong>Not For:</strong> {n.notFor}</p>
+                <AreaHotelLink city="lasvegas" choice={lasvegasNightHotelAreas[n.name]} source="is-lasvegas-safe-at-night"
+                  placement="safe_neighborhoods" idKey={n.name} />
               </footer>
             </article>
           ))}
