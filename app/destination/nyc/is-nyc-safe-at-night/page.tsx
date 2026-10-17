@@ -3,16 +3,16 @@ import SafeNightClient from "./isnycsafeatnightclient";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Is NYC Safe at Night? 2026 Neighborhood Safety Guide",
+  title: "Is NYC Safe at Night? Manhattan, Brooklyn & the Subway",
   description:
-    "Is NYC safe at night? A neighborhood-by-neighborhood guide (DUMBO, Battery Park, Midtown, Times Square) plus subway-after-dark and solo night-safety tips, backed by NYPD data.",
+    "Which parts of Manhattan and Brooklyn stay busy after dark, from Midtown to the Financial District and Battery Park, plus subway tips for late trips.",
   alternates: {
     canonical: "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
   },
   openGraph: {
-    title: "Is NYC Safe at Night? 2026 Neighborhood Safety Guide",
+    title: "Is NYC Safe at Night? Manhattan, Brooklyn & the Subway",
     description:
-      "Is NYC safe after dark? Neighborhood-by-neighborhood night safety, subway-at-night tips, scams, and solo advice, backed by NYPD and MTA data.",
+      "Which parts of Manhattan and Brooklyn stay busy after dark, from Midtown to the Financial District and Battery Park, plus subway tips for late trips.",
     url: "https://www.travelsamericas.com/destination/nyc/is-nyc-safe-at-night",
     type: "article",
     siteName: "Travels Americas",
@@ -27,6 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: "Is NYC Safe at Night? Manhattan, Brooklyn & the Subway",
+    description: "Which parts of Manhattan and Brooklyn stay busy after dark, from Midtown to the Financial District and Battery Park, plus subway tips for late trips.",
     images: ["https://www.travelsamericas.com/data/metadataimage/nyc-safety-guide-og.webp"],
   },
 };

@@ -1,5 +1,5 @@
 "use client";
-import router from "next/router";
+import Link from "next/link";
 import type { HeroSection } from "../../nyc-subway-map";
 import styles from "./herobanner.module.css";
 
@@ -20,7 +20,7 @@ export default function Hero({
         <p className={styles.subtitle}>{subtitle}</p>
 
         <div className={styles.actions}>
-          <button className={styles.primaryBtn} onClick={() => router.push("/destination/nyc/nyc-subway-map/full")}>{ctaPrimary}</button>
+          <Link href="/destination/nyc/nyc-subway-map/full" className={styles.primaryBtn}>{ctaPrimary}</Link>
           <a href="/data/majorcities/newyork/assets/map/nyc-subway-map.pdf" download className={styles.secondaryBtn} > {ctaSecondary} </a>
         </div>
 

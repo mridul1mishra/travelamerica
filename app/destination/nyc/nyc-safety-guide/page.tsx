@@ -1,9 +1,9 @@
 import NYCSafetyGuideClient from "./nycsafetyguideclient";
 
 export const metadata = {
-  title: "Is NYC Safe in 2026? An Honest, Data-Backed Visitor Guide",
+  title: "Is NYC Safe Right Now? 2026 Crime Data, Safe Areas & Scams",
   description:
-    "Is New York City safe to visit in 2026? A data-backed visitor guide covering safe areas to stay, night safety, tourist scams, solo travel, and emergency steps.",
+    "Is New York safe to visit right now? NYPD crime data for Manhattan, Brooklyn and Lower Manhattan, the safest areas to stay, and tourist scams to avoid.",
   alternates: {
     canonical: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
   },
@@ -19,9 +19,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Is NYC Safe in 2026? An Honest, Data-Backed Visitor Guide",
+    title: "Is NYC Safe Right Now? 2026 Crime Data, Safe Areas & Scams",
     description:
-      "Is NYC safe in 2026? A data-backed visitor guide covering safe areas to stay, night safety, tourist scams, solo travel, and emergency steps.",
+      "Is New York safe to visit right now? NYPD crime data for Manhattan, Brooklyn and Lower Manhattan, the safest areas to stay, and tourist scams to avoid.",
     url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
     siteName: "Travels Americas",
     type: "article",
@@ -37,9 +37,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Is NYC Safe in 2026? An Honest, Data-Backed Visitor Guide",
+    title: "Is NYC Safe Right Now? 2026 Crime Data, Safe Areas & Scams",
     description:
-      "Is NYC safe in 2026? A data-backed visitor guide covering where to stay, night safety, tourist scams, solo travel, and emergency actions.",
+      "Is New York safe to visit right now? NYPD crime data for Manhattan, Brooklyn and Lower Manhattan, the safest areas to stay, and tourist scams to avoid.",
     images: ["https://www.travelsamericas.com/data/metadataimage/nyc-night-hero.webp"],
   },
 };
@@ -53,7 +53,7 @@ export default function NYCSafetyGuide() {
       "A practical safety guide for visiting New York City with neighborhood, night, solo travel, tourist scam, and emergency guidance.",
     url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
     inLanguage: "en-US",
-    dateModified: "2026-06-27",
+    dateModified: "2026-10-16",
     author: {
       "@type": "Organization",
       name: "Travels Americas",
@@ -74,7 +74,7 @@ export default function NYCSafetyGuide() {
         name: "Is New York City safe to visit in 2026?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes for most visitors who stay in active areas and plan late-night routes carefully. The data supports it: citywide major crime fell 6.2% year-to-date through May 2026, and the NYPD recorded the fewest murders for the first five months of any year on record. Most visitor incidents involve pickpocketing or scams in crowded areas, not violent crime.",
+          text: "Yes for most visitors who stay in active areas and plan late-night routes carefully. The data supports it: citywide major crime fell 6.6% year-to-date through September 2026, and the NYPD recorded the fewest murders for the first nine months of any year on record. Most visitor incidents involve pickpocketing or scams in crowded areas, not violent crime.",
         },
       },
       {
@@ -82,7 +82,7 @@ export default function NYCSafetyGuide() {
         name: "How safe is New York City right now?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Safer than it has been in years. Year-to-date major crime dropped 6.2% through May 2026 (44,955 vs. 47,929 incidents) with declines in every borough, and murders are at historic lows. Risk for visitors is concentrated in petty theft in busy tourist zones rather than serious crime.",
+          text: "Safer than it has been in years. Year-to-date major crime dropped 6.6% through September 2026 (86,023 vs. 92,057 incidents) with declines in every borough, and murders reached a record low for the first nine months of any year. Risk for visitors is concentrated in petty theft in busy tourist zones rather than serious crime.",
         },
       },
       {

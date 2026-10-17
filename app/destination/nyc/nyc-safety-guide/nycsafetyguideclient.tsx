@@ -121,7 +121,7 @@ const situationCards = [
 const sourceCards = [
   {
     title: "NYPD crime context",
-    text: "As of May 2026, citywide major crime is down 6.2% year-to-date and murders are at the lowest level on record for the first five months of any year. Check official CompStat reporting for current citywide and precinct-level trends instead of relying on viral anecdotes.",
+    text: "As of September 2026, citywide major crime is down 6.6% year-to-date (86,023 vs. 92,057 incidents). Murders fell 19.8% (203 vs. 253). Check official CompStat reporting for current citywide and precinct-level trends instead of relying on viral anecdotes.",
     href: "https://www.nyc.gov/site/nypd/stats/crime-statistics/compstat.page",
     label: "Open NYPD CompStat",
   },
@@ -154,11 +154,11 @@ const emergencyCards = [
 const faqs = [
   {
     question: "Is New York City safe to visit in 2026?",
-    answer: "Yes for most visitors who stay in active areas and plan late-night routes carefully. The data supports it: citywide major crime fell 6.2% year-to-date through May 2026, and the NYPD recorded the fewest murders for the first five months of any year on record. Most visitor incidents involve pickpocketing or scams in crowded areas, not violent crime.",
+    answer: "Yes for most visitors who stay in active areas and plan late-night routes carefully. The data supports it: citywide major crime fell 6.6% year-to-date through September 2026, and the NYPD recorded the fewest murders for the first nine months of any year on record. Most visitor incidents involve pickpocketing or scams in crowded areas, not violent crime.",
   },
   {
     question: "How safe is New York City right now?",
-    answer: "Safer than it has been in years. Year-to-date major crime dropped 6.2% through May 2026 (44,955 vs. 47,929 incidents) with declines in every borough, and murders are at historic lows. Risk for visitors is concentrated in petty theft in busy tourist zones rather than serious crime.",
+    answer: "Safer than it has been in years. Year-to-date major crime dropped 6.6% through September 2026 (86,023 vs. 92,057 incidents) with declines in every borough, and murders reached a record low for the first nine months of any year. Risk for visitors is concentrated in petty theft in busy tourist zones rather than serious crime.",
   },
   {
     question: "Is Manhattan safe for tourists?",
@@ -206,7 +206,7 @@ export default function NYCSafetyGuideClient() {
             <p className={styles.eyebrow}>NYC safety guide</p>
             <h1>Is New York City Safe to Visit in 2026?</h1>
             <p className={styles.lede}>
-              Yes for most visitors, with smart routing. Citywide major crime is down 6.2% year-to-date through May 2026 and murders are at record lows — but street smarts still matter. This guide shows where to stay, what changes after dark, how to avoid tourist scams, and what to do when a situation feels off.
+              Yes for most visitors, with smart routing. Citywide major crime is down 6.6% year-to-date through September 2026 and murders are at record lows — but street smarts still matter. This guide shows where to stay, what changes after dark, how to avoid tourist scams, and what to do when a situation feels off.
             </p>
 
             <div className={styles.actions}>
@@ -219,7 +219,7 @@ export default function NYCSafetyGuideClient() {
             </div>
 
             <div className={styles.contextLine}>
-              <span>Updated June 2026</span>
+              <span>Last updated October 16, 2026</span>
               <span>No safety guarantee</span>
               <span>Official source links included</span>
             </div>

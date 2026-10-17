@@ -221,7 +221,7 @@ export default function FemaleSoloTravelGuide() {
               Yes, for most first-time solo women who choose an active base, keep late-night routes simple, and trust the moment when a street, station, or interaction starts to feel off. This solo female travel in NYC guide focuses on the women-specific decisions that broader itinerary pages usually skip.
             </p>
             <p className={styles.byline}>
-              By <Link href="/about#manisha-shukla">Manisha Shukla</Link> · Updated June 2026 · Fact-checked against NYPD &amp; MTA data
+              By <Link href="/about#manisha-shukla">Manisha Shukla</Link> · Updated October 2026 · Fact-checked against NYPD &amp; MTA data
             </p>
 
             <div className={styles.actions}>
@@ -272,7 +272,7 @@ export default function FemaleSoloTravelGuide() {
             <p className={styles.eyebrow}>Source-backed context</p>
             <h2 id="source-box-heading">Use data for reassurance, and scenarios for decisions</h2>
             <p>
-              NYPD reported citywide major crime down 6.2% year-to-date through May 2026. NYPD and MTA also reported 2025 as the safest subway year since 2009, excluding pandemic years, with major subway crime down 4%. Those numbers are helpful context, but your best solo choices still depend on the exact block, station, hour, and route.
+              NYPD reported citywide major crime down 6.6% year-to-date through September 2026 (86,023 vs. 92,057 incidents), with murders down 19.8% (203 vs. 253). NYPD and MTA also reported 2025 as the safest subway year since 2009, excluding pandemic years, with major subway crime down 4%. Those numbers are helpful context, but your best solo choices still depend on the exact block, station, hour, and route.
             </p>
           </div>
           <div className={styles.sourceActions}>

@@ -67,6 +67,7 @@ next-env.d.ts
 /analytics-dashboard/
 
 # Local supporting documents, research, and generated reports
+/reports/
 /outreach/
 /tmp/
 /healthcheck.html

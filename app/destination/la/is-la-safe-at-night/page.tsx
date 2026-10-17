@@ -3,8 +3,8 @@ import IsLASafeAtNightClient from "./isLAsafeatnightclient";
 import data from "./is-la-safe-at-night.json";
 
 const url = "https://www.travelsamericas.com/destination/la/is-la-safe-at-night";
-const title = "Is LA Safe at Night? Neighborhoods & Where to Stay";
-const description = "Is LA safe at night? Compare visitor areas, choose a hotel near your evening plans, and plan walks, Metro trips, parking and rideshares after dark.";
+const title = "Is LA Safe at Night? Safest Areas & Getting Around";
+const description = "Is LA safe at night? Where visitors can walk after dark, which hotel areas suit evening plans, and how to handle the Metro and rideshares.";
 
 export const metadata: Metadata = {
   title,

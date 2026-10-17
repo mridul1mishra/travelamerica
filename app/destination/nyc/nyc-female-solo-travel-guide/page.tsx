@@ -147,7 +147,7 @@ const Article = {
   },
   "url": "https://www.travelsamericas.com/destination/nyc/nyc-female-solo-travel-guide",
   "datePublished": "2026-01-01",
-  "dateModified": "2026-07-03",
+  "dateModified": "2026-10-16",
   "about": [
     { "@type": "Thing", "name": "Solo female travel in New York City" },
     { "@type": "Thing", "name": "NYC safety for women travelers" },

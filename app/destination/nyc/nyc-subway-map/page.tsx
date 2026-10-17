@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "NYC Subway Map (2026): Simple, Safe & Solo‑Traveler Friendly",
+  title: "NYC Subway Map 2026: Full MTA Map, Zoomable + PDF",
   description:
-    "View and download the updated 2026 NYC subway map. A beginner‑friendly guide with routes, safety tips, and navigation help for solo travelers.",
+    "Open the full NYC subway map and zoom into every line and station, download the free PDF, and get quick tips for your first ride.",
   alternates: {
     canonical: "https://www.travelsamericas.com/destination/nyc/nyc-subway-map",
   },
@@ -19,9 +19,9 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "NYC Subway Map (2026): Easy Guide for Solo Travelers",
+    title: "NYC Subway Map 2026: Full MTA Map, Zoomable + PDF",
     description:
-      "Download the official 2025 NYC subway map and learn how to navigate the system safely and confidently as a solo traveler.",
+      "Open the full NYC subway map and zoom into every line and station, download the free PDF, and get quick tips for your first ride.",
     url: "https://www.travelsamericas.com/destination/nyc/nyc-subway-map",
     siteName: "Travels Americas",
     type: "article",
@@ -31,16 +31,16 @@ export const metadata = {
         url: "https://www.travelsamericas.com/data/metadataimage/nyc-subway-map.webp",
         width: 1200,
         height: 630,
-        alt: "NYC Subway Map 2026 – Solo Traveler Guide"
+        alt: "NYC Subway Map 2026 – full MTA map"
       }
     ]
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "NYC Subway Map (2026): Simple, Safe & Solo‑Traveler Friendly",
+    title: "NYC Subway Map 2026: Full MTA Map, Zoomable + PDF",
     description:
-      "Updated NYC subway map with beginner‑friendly routes, safety tips, and offline downloads.",
+      "Open the full NYC subway map and zoom into every line and station, download the free PDF, and get quick tips for your first ride.",
     images: ["https://www.travelsamericas.com/data/metadataimage/nyc-subway-map.webp"],
     
   }
