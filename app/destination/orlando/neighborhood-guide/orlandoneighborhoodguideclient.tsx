@@ -27,7 +27,7 @@ export default function OrlandoNeighborhoodGuideClient() {
   return (
     <>
       <Header links={navLinks} />
-      <BookingCTA variant="slim" text="Book your Orlando trip â†’" href="/destination/orlando/bookings?tab=hotels&from=neighborhood-guide" label="See Orlando hotels" />
+      <BookingCTA variant="slim" text="Book your Orlando trip â†’" href="/destination/orlando/hotel?from=neighborhood-guide" label="See Orlando hotels" />
       <div className={styles.container}>
         <IntroSection />
         <CityOrganization />
@@ -40,7 +40,7 @@ export default function OrlandoNeighborhoodGuideClient() {
         <FAQAccordion faqs={orlandoFaqData} />
         <NeighborhoodGuideCTA />
       </div>
-      <BookingCTA variant="full" text="See hotels in the best Orlando areas" href="/destination/orlando/bookings?tab=hotels&from=neighborhood-guide" label="See Orlando hotels" />
+      <BookingCTA variant="full" text="See hotels in the best Orlando areas" href="/destination/orlando/hotel?from=neighborhood-guide" label="See Orlando hotels" />
       <Footer />
     </>
   );

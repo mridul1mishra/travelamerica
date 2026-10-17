@@ -1,68 +1,9 @@
-import { redirect } from "next/navigation";
-export const generateMetadata = () => ({
-  title: "Book Your Las Vegas Trip | Flights, Hotels & More",
-  description:
-    "Plan and book your Las Vegas trip — compare cheap flights to LAS, browse top hotels, and find the best things to do.",
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: 'https://www.travelsamericas.com/destination/lasvegas/bookings',
-  },
-  openGraph: {
-    title: 'Book Your Las Vegas Trip | Cheap Flights to LAS, Hotels & Things to Do',
-    description: 'Plan and book your Las Vegas trip — compare the cheapest flights to LAS, browse top Las Vegas hotels, and find the best things to do.',
-    url: 'https://www.travelsamericas.com/destination/lasvegas/bookings',
-    type: 'website',
-    images: ['https://www.travelsamericas.com/data/majorcities/lasvegas/assets/lasvegas.webp'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Book Your Las Vegas Trip: Cheap Flights to LAS, Hotels & Things to Do',
-    description: 'Compare cheap flights to Las Vegas (LAS), hotels, and activities in one place.',
-    images: ['https://www.travelsamericas.com/data/majorcities/lasvegas/assets/lasvegas.webp'],
-  },
-});
-
-import LasVegasBookingsClient from './lasvegasbookingsclient';
-
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.travelsamericas.com/",
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Las Vegas",
-      "item": "https://www.travelsamericas.com/destination/lasvegas",
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Book your trip",
-      "item": "https://www.travelsamericas.com/destination/lasvegas/bookings",
-    },
-  ],
-};
-
-export default async function LasVegasBookingsPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
-  const params = await searchParams;
-  if (params.tab === "hotels") redirect("/destination/lasvegas/hotel");
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <LasVegasBookingsClient />
-    </>
-  );
+import { permanentRedirect } from "next/navigation";
+export default async function BookingsPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+ const params = await searchParams;
+ const routes: Record<string, string> = { hotels: "hotel", flights: "flight", activities: "tours-and-tickets", restaurants: "tours-and-tickets" };
+ const tab = typeof params.tab === "string" ? params.tab.toLowerCase() : "hotels";
+ const query = new URLSearchParams();
+ for (const [key, value] of Object.entries(params)) { if (key !== "tab" && value !== undefined) for (const entry of Array.isArray(value) ? value : [value]) query.append(key, entry); }
+ permanentRedirect(`/destination/lasvegas/${routes[tab] ?? "hotel"}${query.size ? `?${query}` : ""}`);
 }

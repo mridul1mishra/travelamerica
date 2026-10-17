@@ -33,7 +33,7 @@ export default function SoloTripToLasVegasClient() {
         <>
         <LasVegasNavHeader />
         <HeroSection />
-        <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=flights&from=solo-trip-to-lasvegas" label="Book your trip" />
+        <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/flight?from=solo-trip-to-lasvegas" label="Book your trip" />
         <QuickActionBar />
         <InfoSection sections={sectionsData.sections} />
         <WhyTrustThisGuide data={lasvegasWhyTrustData} />
@@ -46,7 +46,7 @@ export default function SoloTripToLasVegasClient() {
         <ScenarioSection />
         <FemaleSoloTiles tiles={femaleSolo.tiles}  ctaLink={femaleSolo.ctaLink} cityName="Las Vegas" />
         <FAQAccordion faqs={faqData} />
-        <BookingCTA variant="full" text="Start your trip: book flights and hotels" href="/destination/lasvegas/bookings?tab=flights&from=solo-trip-to-lasvegas" label="Book your trip" />
+        <BookingCTA variant="full" text="Start your trip: book flights and hotels" href="/destination/lasvegas/flight?from=solo-trip-to-lasvegas" label="Book your trip" />
         <Footer></Footer>
 
         </>

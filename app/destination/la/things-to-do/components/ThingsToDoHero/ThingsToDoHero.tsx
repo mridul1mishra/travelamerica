@@ -23,7 +23,7 @@ export default function ThingsToDoHero() {
           days around the city&apos;s traffic.
         </p>
         <div className={styles.heroCtas}>
-          <Link href="/destination/la/bookings?tab=activities&from=things-to-do" className={styles.primaryCta}>
+          <Link href="/destination/la/tours-and-tickets?from=things-to-do" className={styles.primaryCta}>
             Book tickets &amp; tours
           </Link>
           <Link href="/destination/la/itinerary" className={styles.secondaryCta}>

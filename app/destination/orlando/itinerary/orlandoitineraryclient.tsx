@@ -47,14 +47,14 @@ export default function OrlandoItineraryClient() {
       <BookingCTA
         variant="slim"
         text="Book flights to MCO, park-area hotels, and theme park tickets â†’"
-        href="/destination/orlando/bookings"
+        href="/destination/orlando/hotel"
         label="Book your trip"
       />
       <section className={styles.hero}>
         <h1>Orlando 5-Day Itinerary</h1>
         <p>A practical day-by-day plan built around real park logistics â€” rope drop times, where queues build, and how to pace a week without burning out by day 3.</p>
         <div className={styles.heroCtas}>
-          <Link href="/destination/orlando/bookings?tab=activities" className={styles.primaryCta}>Book tickets</Link>
+          <Link href="/destination/orlando/tours-and-tickets" className={styles.primaryCta}>Book tickets</Link>
           <Link href="/destination/orlando/best-areas-to-stay" className={styles.secondaryCta}>Where to stay</Link>
         </div>
       </section>
@@ -72,7 +72,7 @@ export default function OrlandoItineraryClient() {
         variant="full"
         headline="Book your Orlando trip"
         text="Cheap flights to MCO, park-area hotels, and skip-the-line tickets."
-        href="/destination/orlando/bookings"
+        href="/destination/orlando/hotel"
         label="Compare flights, hotels & tickets"
       />
       <Footer />

@@ -27,7 +27,7 @@ export default function FreeThingsToDoClient() {
       <BookingCTA
         variant="slim"
         text="Book your New York trip →"
-        href="/destination/nyc/booking?tab=activities&from=free-things-to-do"
+        href="/destination/nyc/tours-and-tickets?from=free-things-to-do"
         label="Book your trip"
       />
       <FreeCategories />
@@ -47,7 +47,7 @@ export default function FreeThingsToDoClient() {
       <BookingCTA
         variant="full"
         text="Book guided tours and experiences for your NYC trip"
-        href="/destination/nyc/booking?tab=activities&from=free-things-to-do"
+        href="/destination/nyc/tours-and-tickets?from=free-things-to-do"
         label="See tours & tickets"
       />
       <Footer />

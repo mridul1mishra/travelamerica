@@ -11,7 +11,7 @@ export default function ItineraryHero() {
         actually fits in a day.
       </p>
       <div className={styles.heroCtas}>
-        <Link href="/destination/la/bookings?tab=activities" className={styles.primaryCta}>
+        <Link href="/destination/la/tours-and-tickets" className={styles.primaryCta}>
           Book tickets &amp; tours
         </Link>
         <Link href="/destination/la/best-areas-to-stay" className={styles.secondaryCta}>

@@ -28,7 +28,7 @@ export default function LasVegasLandmarkClient() {
         bannerText=""
         variant="wide"
       />
-      <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=activities&from=landmark" label="See tickets" />
+      <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/tours-and-tickets?from=landmark" label="See tickets" />
 
       <section className={styles.intro} style={{ textAlign: "center" }}>
         <h1 className={styles.sectionheading}>Las Vegas Landmarks: A Practical Solo Traveler Guide</h1>
@@ -216,7 +216,7 @@ export default function LasVegasLandmarkClient() {
           </Link>
         </div>
       </section>
-      <BookingCTA variant="full" text="Book tickets to Las Vegas landmarks" href="/destination/lasvegas/bookings?tab=activities&from=landmark" label="Book tickets" />
+      <BookingCTA variant="full" text="Book tickets to Las Vegas landmarks" href="/destination/lasvegas/tours-and-tickets?from=landmark" label="Book tickets" />
       <Footer />
     </>
   );

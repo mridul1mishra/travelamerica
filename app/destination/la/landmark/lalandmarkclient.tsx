@@ -17,13 +17,13 @@ export default function LALandmarkClient() {
         image="/data/majorcities/losangeles/assets/losangeles.webp"
         bannerText=""
       />
-      <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/bookings?tab=activities&from=landmark" label="See tickets" />
+      <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/tours-and-tickets?from=landmark" label="See tickets" />
       <LandmarkIntro />
       <LandmarkList />
       <LandmarkRoutes />
       <LandmarkFAQ />
       <LandmarkRelatedLinks />
-      <BookingCTA variant="full" text="Get tickets to LA’s top landmarks" href="/destination/la/bookings?tab=activities&from=landmark" label="See tickets" />
+      <BookingCTA variant="full" text="Get tickets to LA’s top landmarks" href="/destination/la/tours-and-tickets?from=landmark" label="See tickets" />
       <Footer />
     </>
   );

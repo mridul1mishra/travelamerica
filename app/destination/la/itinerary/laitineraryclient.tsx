@@ -19,7 +19,7 @@ export default function LAItineraryClient() {
       <BookingCTA
         variant="slim"
         text="Book flights, hotels and activity tickets for your LA trip →"
-        href="/destination/la/bookings"
+        href="/destination/la/hotel"
         label="Book your trip"
       />
       <ThreeDayItinerary />
@@ -28,7 +28,7 @@ export default function LAItineraryClient() {
         variant="full"
         headline="Book your Los Angeles trip"
         text="Cheap flights to LAX, LA hotels, and skip-the-line tickets — all in one place."
-        href="/destination/la/bookings"
+        href="/destination/la/hotel"
         label="Compare flights, hotels & tickets"
       />
       <Footer />

@@ -13,7 +13,7 @@ const config: CityBookingConfig = {
   cityName: "New York",
   hotelAreaPresets: nycHotelAreaPresets,
   cityHref: "/destination/nyc",
-  bookingHref: "/destination/nyc/booking",
+  bookingHref: "/destination/nyc/hotel",
   headerImage: "/data/majorcities/newyork/assets/newyork.jpeg",
   bannerText: "Book your New York trip",
   pageTitle: "Book Your New York Trip: Flights, Hotels & Things to Do",

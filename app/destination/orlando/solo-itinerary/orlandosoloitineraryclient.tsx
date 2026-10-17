@@ -48,14 +48,14 @@ export default function OrlandoSoloItineraryClient({ grouped }: OrlandoSoloItine
       <BookingCTA
         variant="slim"
         text="Book solo park tickets, tours and activities â†’"
-        href="/destination/orlando/bookings?tab=activities"
+        href="/destination/orlando/tours-and-tickets"
         label="Book activities"
       />
       <section className={styles.hero}>
         <h1>Orlando Solo Travel Itinerary: 3 Days</h1>
         <p>Orlando is genuinely better solo in some ways â€” single-rider queues at Universal cut wait times dramatically, and you set the pace at every park. This itinerary makes the most of those advantages.</p>
         <div className={styles.heroCtas}>
-          <Link href="/destination/orlando/bookings?tab=activities" className={styles.primaryCta}>Book solo activities</Link>
+          <Link href="/destination/orlando/tours-and-tickets" className={styles.primaryCta}>Book solo activities</Link>
           <Link href="/destination/orlando/safety-guide" className={styles.secondaryCta}>Safety guide</Link>
         </div>
       </section>
@@ -76,7 +76,7 @@ export default function OrlandoSoloItineraryClient({ grouped }: OrlandoSoloItine
         variant="full"
         headline="Book your solo Orlando trip"
         text="Flights to MCO, solo-friendly hotels, and park tickets â€” all in one place."
-        href="/destination/orlando/bookings?tab=hotels&from=solo-itinerary" label="Book your trip" />
+        href="/destination/orlando/hotel?from=solo-itinerary" label="Book your trip" />
       <Footer />
     </main>
   );

@@ -41,7 +41,8 @@ const ROUTES: Entry[] = [
   // ── Los Angeles ───────────────────────────────────────────────────────────
   { path: "/destination/la",                               priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/la/hotel", priority: 0.9, changeFrequency: "weekly" },
-  { path: "/destination/la/bookings",                      priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/la/flight", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/la/tours-and-tickets", priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/la/best-areas-to-stay",            priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/la/food",                          priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/la/group-travel",                  priority: 0.8, changeFrequency: "weekly" },
@@ -60,7 +61,8 @@ const ROUTES: Entry[] = [
   // ── Las Vegas ─────────────────────────────────────────────────────────────
   { path: "/destination/lasvegas",                                    priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/lasvegas/hotel", priority: 0.9, changeFrequency: "weekly" },
-  { path: "/destination/lasvegas/bookings",                           priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/lasvegas/flight", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/lasvegas/tours-and-tickets", priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/lasvegas/best-areas-to-stay",                 priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/lasvegas/food",                               priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/lasvegas/group-travel",                       priority: 0.8, changeFrequency: "weekly" },
@@ -77,7 +79,8 @@ const ROUTES: Entry[] = [
   // ── Orlando ───────────────────────────────────────────────────────────────
   { path: "/destination/orlando",                                     priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/orlando/hotel", priority: 0.9, changeFrequency: "weekly" },
-  { path: "/destination/orlando/bookings",                            priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/orlando/flight", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/orlando/tours-and-tickets", priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/orlando/best-areas-to-stay",                  priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/orlando/food",                                priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/orlando/group-travel",                        priority: 0.8, changeFrequency: "weekly" },

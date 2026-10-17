@@ -31,7 +31,7 @@ export default function LANeighborhoodGuideClient({tripType, interest, duration}
           { href: "/destination/la/safety-guide", label: "LA Safety" },
           { href: "/destination/la/la-female-solo-travel-guide", label: "Female Travel Guide" },
         ]} />
-        <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/bookings?tab=hotels&from=neighborhood-guide" label="See LA hotels" />
+        <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/hotel?from=neighborhood-guide" label="See LA hotels" />
         <div className={styles.container}>
         <IntroSection tripType={tripType} interest={interest}/>
         <CityOrganization />
@@ -44,7 +44,7 @@ export default function LANeighborhoodGuideClient({tripType, interest, duration}
         <WhyTrustThisGuide data={laWhyTrustData} />
         <FAQAccordion faqs={laFaqData} />
         </div>
-        <BookingCTA variant="full" text="See hotels in the best LA neighborhoods" href="/destination/la/bookings?tab=hotels&from=neighborhood-guide" label="See LA hotels" />
+        <BookingCTA variant="full" text="See hotels in the best LA neighborhoods" href="/destination/la/hotel?from=neighborhood-guide" label="See LA hotels" />
         <Footer />
         </>
     )

@@ -19,7 +19,7 @@ export default function LAThingsToDoClient() {
       { href: "/destination/la/safety-guide", label: "LA Safety" },
       { href: "/destination/la/la-female-solo-travel-guide", label: "Female Travel Guide" },
     ]} />
-    <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/bookings?tab=activities&from=things-to-do" label="See tickets & tours" />
+    <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/tours-and-tickets?from=things-to-do" label="See tickets & tours" />
     <main className={styles.container}>
       <ThingsToDoHero />
       <ExperienceBuckets />
@@ -28,7 +28,7 @@ export default function LAThingsToDoClient() {
       <PlanningCTA />
       <NavigationResource />
     </main>
-    <BookingCTA variant="full" text="Book skip-the-line tickets and guided tours" href="/destination/la/bookings?tab=activities&from=things-to-do" label="See tickets & tours" />
+    <BookingCTA variant="full" text="Book skip-the-line tickets and guided tours" href="/destination/la/tours-and-tickets?from=things-to-do" label="See tickets & tours" />
     <Footer />
     </>
   );

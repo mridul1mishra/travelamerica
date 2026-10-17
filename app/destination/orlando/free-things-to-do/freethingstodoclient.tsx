@@ -27,7 +27,7 @@ export default function FreeThingsToDoClient() {
       <BookingCTA
         variant="slim"
         text="Book your Orlando trip â†’"
-        href="/destination/orlando/bookings?tab=activities&from=free-things-to-do"
+        href="/destination/orlando/tours-and-tickets?from=free-things-to-do"
         label="Book your trip"
       />
       <FreeCategories />
@@ -39,7 +39,7 @@ export default function FreeThingsToDoClient() {
       <BookingCTA
         variant="full"
         text="Book guided tours and experiences for your Orlando trip"
-        href="/destination/orlando/bookings?tab=activities&from=free-things-to-do"
+        href="/destination/orlando/tours-and-tickets?from=free-things-to-do"
         label="See tours & tickets"
       />
       <Footer />

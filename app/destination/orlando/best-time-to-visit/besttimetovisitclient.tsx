@@ -26,7 +26,7 @@ export default function BestTimeToVisitClient() {
       <BookingCTA
         variant="slim"
         text="Book your Orlando trip â†’"
-        href="/destination/orlando/bookings?tab=hotels&from=best-time-to-visit"
+        href="/destination/orlando/hotel?from=best-time-to-visit"
         label="Book your trip"
       />
       <SeasonCards />
@@ -37,7 +37,7 @@ export default function BestTimeToVisitClient() {
       <BookingCTA
         variant="full"
         text="Book flights and hotels for your Orlando trip"
-        href="/destination/orlando/bookings?tab=hotels&from=best-time-to-visit"
+        href="/destination/orlando/hotel?from=best-time-to-visit"
         label="Book your trip"
       />
       <Footer />

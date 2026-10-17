@@ -26,7 +26,7 @@ export default function GettingToOrlandoClient() {
       <BookingCTA
         variant="slim"
         text="Book your Orlando trip â†’"
-        href="/destination/orlando/bookings?tab=hotels&from=getting-to-orlando"
+        href="/destination/orlando/hotel?from=getting-to-orlando"
         label="Book your trip"
       />
       <AirportTabs />
@@ -37,7 +37,7 @@ export default function GettingToOrlandoClient() {
       <BookingCTA
         variant="full"
         text="Book flights and hotels for your Orlando trip"
-        href="/destination/orlando/bookings?tab=hotels&from=getting-to-orlando"
+        href="/destination/orlando/hotel?from=getting-to-orlando"
         label="Book your trip"
       />
       <Footer />

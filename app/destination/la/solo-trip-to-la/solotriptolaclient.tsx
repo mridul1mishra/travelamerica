@@ -32,7 +32,7 @@ export default function SoloTripToLAClient() {
         <>
         <LaNavHeader />
         <HeroSection />
-        <BookingCTA variant="slim" text="Book hotels for your Los Angeles trip →" href="/destination/la/bookings?tab=hotels&from=solo-trip-to-la" label="Book your trip" />
+        <BookingCTA variant="slim" text="Book hotels for your Los Angeles trip →" href="/destination/la/hotel?from=solo-trip-to-la" label="Book your trip" />
         <QuickActionBar />
         <SoloQuickVerdict />
         <InfoSection sections={sectionsData.sections} />
@@ -45,7 +45,7 @@ export default function SoloTripToLAClient() {
         <SoloTripNarrative />
         <SoloLaQa />
         <FAQAccordion faqs={faqData} />
-        <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/la/bookings?tab=hotels&from=solo-trip-to-la" label="Book your trip" />
+        <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/la/hotel?from=solo-trip-to-la" label="Book your trip" />
         <Footer></Footer>
 
         </>

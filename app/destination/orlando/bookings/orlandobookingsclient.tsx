@@ -5,11 +5,12 @@ import FAQAccordion from "./components/FAQAccordion/faqsection";
 import faqData from "@/content/destination/orlando/booking/faq/faqsection.json";
 import bookFlights from "@/content/cities/orlando/bookflights.json";
 import thingsToDoData from "@/content/cities/orlando/thingstodo.json";
+import { orlandoHotelAreaPresets } from "@/app/lib/orlandoHotelAreas";
 
 const config: CityBookingConfig = {
   cityName: "Orlando",
   cityHref: "/destination/orlando",
-  bookingHref: "/destination/orlando/bookings",
+  bookingHref: "/destination/orlando/hotel",
   headerImage: "/data/majorcities/orlando/assets/orlando.webp",
   bannerText: "Book your Orlando trip",
   pageTitle: "Book Your Orlando Trip",
@@ -82,7 +83,31 @@ const config: CityBookingConfig = {
   activities: thingsToDoData as CityBookingConfig["activities"],
 };
 
-export default function OrlandoBookingsClient({ hotels }: { hotels?: CityBookingConfig["hotels"] }) {
-  if (hotels) return <BookingClient config={{ ...config, hotels, category: "hotels", onDemandGoogleRatings: true, bookingHref: "/destination/orlando/hotel", pageTitle: "Find Your Orlando Hotel", introText: "Browse Orlando hotels and sign in to check current prices with the provider.", bookingTips: config.bookingTips?.filter(tip => tip.heading === "Hotels"), categoryRoutes: { hotels: "/destination/orlando/hotel", flights: "/destination/orlando/bookings?tab=flights", activities: "/destination/orlando/bookings?tab=activities" } }} />;
-  return <BookingClient config={config} faqSection={<FAQAccordion faqs={faqData} />} />;
+type Category = "hotels" | "flights" | "activities";
+
+const routes: Record<Category, string> = {
+  hotels: "/destination/orlando/hotel",
+  flights: "/destination/orlando/flight",
+  activities: "/destination/orlando/tours-and-tickets",
+};
+
+const titles = {
+  flights: "Compare Flights to Orlando",
+  activities: "Book Orlando Activities, Tours & Tickets",
+};
+
+const intros = {
+  flights: "Compare sample fares to Orlando and plan your airport transfer. Check current prices with the provider.",
+  activities: "Browse Orlando tours, attractions, and tickets. Compare experiences by category and check availability with the provider.",
+};
+
+export default function OrlandoBookingsClient({ hotels, category = hotels ? "hotels" : "flights" }: { hotels?: CityBookingConfig["hotels"]; category?: Category }) {
+  if (category === "hotels") return <BookingClient config={{ ...config, hotels: hotels ?? [], category: "hotels", onDemandGoogleRatings: true, bookingHref: routes.hotels,
+    hotelAreaPresets: orlandoHotelAreaPresets, pageTitle: "Find Your Orlando Hotel", introText: "Browse Orlando hotels and sign in to check current prices with the provider.", bookingTips: config.bookingTips?.filter(tip => tip.heading === "Hotels"),
+    categoryRoutes: routes,
+  }} />;
+  return <BookingClient config={{ ...config, category, categoryRoutes: routes, bookingHref: routes[category],
+    bannerText: titles[category], pageTitle: titles[category], introText: intros[category],
+    bookingTips: config.bookingTips?.filter(tip => tip.heading !== "Hotels"),
+  }} faqSection={<FAQAccordion faqs={faqData} />} />;
 }

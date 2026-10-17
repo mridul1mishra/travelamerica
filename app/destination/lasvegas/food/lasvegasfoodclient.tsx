@@ -17,7 +17,7 @@ export default function LasVegasFoodClient() {
         <>
         <NavigationHeader />
         <HeroBanner image={`/data/majorcities/lasvegas/assets/group/food/lasvegas-group-food.png`} bannerText="" variant="wide" />
-        <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=activities&from=food" label="See food tours" />
+        <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/tours-and-tickets?from=food" label="See food tours" />
 
         {/* H1 / Intro */}
         <section className={styles.introSection}>
@@ -243,7 +243,7 @@ export default function LasVegasFoodClient() {
         </section>
         <FAQAccordion faqs={faqData} />
 
-        <BookingCTA variant="full" text="Book a guided Las Vegas food tour" href="/destination/lasvegas/bookings?tab=activities&from=food" label="See food tours" />
+        <BookingCTA variant="full" text="Book a guided Las Vegas food tour" href="/destination/lasvegas/tours-and-tickets?from=food" label="See food tours" />
 
         <Footer />
         </>

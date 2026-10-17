@@ -25,14 +25,14 @@ export default function OrlandoLandmarkClient() {
       <BookingCTA
         variant="slim"
         text="Book skip-the-line tickets and guided Orlando tours â†’"
-        href="/destination/orlando/bookings?tab=activities"
+        href="/destination/orlando/tours-and-tickets"
         label="Browse tickets"
       />
       <section className={styles.hero}>
         <h1>Orlando Landmarks & Attractions</h1>
         <p>Orlando has the world&apos;s highest concentration of major theme parks â€” but also some genuinely overlooked gems. This guide covers the full range with honest costs and the tips that change each experience.</p>
         <div className={styles.heroCtas}>
-          <Link href="/destination/orlando/bookings?tab=activities" className={styles.primaryCta}>Book attraction tickets</Link>
+          <Link href="/destination/orlando/tours-and-tickets" className={styles.primaryCta}>Book attraction tickets</Link>
           <Link href="/destination/orlando/itinerary" className={styles.secondaryCta}>See 3-day itinerary</Link>
         </div>
       </section>
@@ -53,7 +53,7 @@ export default function OrlandoLandmarkClient() {
         variant="full"
         headline="Book Orlando attraction tickets"
         text="Disney, Universal, Kennedy Space Center and more â€” compare prices and book in advance."
-        href="/destination/orlando/bookings?tab=activities"
+        href="/destination/orlando/tours-and-tickets"
         label="Browse Orlando activities"
       />
       <Footer />

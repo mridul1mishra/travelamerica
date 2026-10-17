@@ -16,13 +16,13 @@ export default function LAGroupTravelClient() {
     <>
       <NavigationHeader />
       <HeroBanner image="/data/majorcities/losangeles/assets/group/la-group-travel-packing-flatlay-essentials.webp" bannerText="" variant="wide" />
-      <BookingCTA variant="slim" text="Book hotels for your Los Angeles trip →" href="/destination/la/bookings?tab=hotels&from=group-travel" label="Book your trip" />
+      <BookingCTA variant="slim" text="Book hotels for your Los Angeles trip →" href="/destination/la/hotel?from=group-travel" label="Book your trip" />
       <GroupTravelHero />
       <GroupItinerary />
       <GroupLandmarks />
       <GroupDining />
       <GroupSafetyPacking />
-      <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/la/bookings?tab=hotels&from=group-travel" label="Book your trip" />
+      <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/la/hotel?from=group-travel" label="Book your trip" />
       <FAQAccordion faqs={faqData} />
       <Footer />
     </>

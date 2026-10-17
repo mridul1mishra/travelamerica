@@ -16,7 +16,7 @@ export default function LAMetroMapClient() {
   return (
     <>
     <Header />
-      <BookingCTA variant="slim" text="Browse Los Angeles hotels →" href="/destination/la/bookings?tab=hotels&from=la-metro-map" label="See LA hotels" />
+      <BookingCTA variant="slim" text="Browse Los Angeles hotels →" href="/destination/la/hotel?from=la-metro-map" label="See LA hotels" />
       <div className="page-container">
   <div className={styles.pagestack}>
 
@@ -50,7 +50,7 @@ export default function LAMetroMapClient() {
   </div>
 </div>
 
-    <BookingCTA variant="full" text="Find a hotel near the LA Metro routes you plan to use" href="/destination/la/bookings?tab=hotels&from=la-metro-map" label="See LA hotels" />
+    <BookingCTA variant="full" text="Find a hotel near the LA Metro routes you plan to use" href="/destination/la/hotel?from=la-metro-map" label="See LA hotels" />
     <Footer />
     </>
   );

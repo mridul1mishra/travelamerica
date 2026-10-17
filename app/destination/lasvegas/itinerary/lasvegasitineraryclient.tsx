@@ -37,14 +37,14 @@ export default function LasVegasItineraryClient() {
       <BookingCTA
         variant="slim"
         text="Book flights, hotels and activity tickets for your Las Vegas trip →"
-        href="/destination/lasvegas/bookings"
+        href="/destination/lasvegas/hotel"
         label="Book your trip"
       />
       <section className={styles.hero}>
         <h1>Las Vegas 3-Day Itinerary</h1>
         <p>A practical day-by-day plan covering the Strip, a Hoover Dam day trip, Fremont Street, and the best museums. Built around real logistics — not an aspirational list of everything Vegas has to offer.</p>
         <div className={styles.heroCtas}>
-          <Link href="/destination/lasvegas/bookings?tab=activities" className={styles.primaryCta}>Book tickets & tours</Link>
+          <Link href="/destination/lasvegas/tours-and-tickets" className={styles.primaryCta}>Book tickets & tours</Link>
           <Link href="/destination/lasvegas/best-areas-to-stay" className={styles.secondaryCta}>Where to stay</Link>
         </div>
       </section>
@@ -78,7 +78,7 @@ export default function LasVegasItineraryClient() {
         variant="full"
         headline="Book your Las Vegas trip"
         text="Cheap flights to LAS, Strip hotels, and skip-the-line tickets — all in one place."
-        href="/destination/lasvegas/bookings"
+        href="/destination/lasvegas/hotel"
         label="Compare flights, hotels & tickets"
       />
       <Footer />

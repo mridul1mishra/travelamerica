@@ -1,49 +1,9 @@
-import { redirect } from "next/navigation";
-export const generateMetadata = () => ({
-  title: "Book Your LA Trip | Flights, Hotels & Things to Do",
-  description:
-    'Plan and book your Los Angeles trip — compare the cheapest flights to LAX, browse top LA hotels, and find the best things to do in Los Angeles.',
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: 'https://www.travelsamericas.com/destination/la/bookings',
-  },
-  openGraph: {
-    title: 'Book Your Los Angeles Trip | Cheap Flights to LAX, Hotels & Things to Do',
-    description: 'Plan and book your Los Angeles trip — compare the cheapest flights to LAX, browse top LA hotels, and find the best things to do.',
-    url: 'https://www.travelsamericas.com/destination/la/bookings',
-    type: 'website',
-    images: ['https://www.travelsamericas.com/data/majorcities/losangeles/assets/losangeles.webp'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Book Your LA Trip: Cheap Flights, Hotels & Things to Do',
-    description: 'Compare cheap flights to Los Angeles (LAX), hotels, and activities in one place.',
-    images: ['https://www.travelsamericas.com/data/majorcities/losangeles/assets/losangeles.webp'],
-  },
-});
-
-import LABookingsClient from './labookingsclient';
-
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.travelsamericas.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Los Angeles", "item": "https://www.travelsamericas.com/destination/la" },
-  ],
-};
-
-export default async function LABookingsPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
-  const params = await searchParams;
-  if (params.tab === "hotels") redirect("/destination/la/hotel");
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <LABookingsClient />
-    </>
-  );
+import { permanentRedirect } from "next/navigation";
+export default async function BookingsPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+ const params = await searchParams;
+ const routes: Record<string, string> = { hotels: "hotel", flights: "flight", activities: "tours-and-tickets", restaurants: "tours-and-tickets" };
+ const tab = typeof params.tab === "string" ? params.tab.toLowerCase() : "hotels";
+ const query = new URLSearchParams();
+ for (const [key, value] of Object.entries(params)) { if (key !== "tab" && value !== undefined) for (const entry of Array.isArray(value) ? value : [value]) query.append(key, entry); }
+ permanentRedirect(`/destination/la/${routes[tab] ?? "hotel"}${query.size ? `?${query}` : ""}`);
 }

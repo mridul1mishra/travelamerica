@@ -152,7 +152,7 @@ export default function LasVegasBestAreasClient() {
       <BookingCTA
         variant="slim"
         text="Compare live hotel prices across the Strip and Downtown"
-        href="/destination/lasvegas/bookings?tab=hotels&from=best-areas-to-stay"
+        href="/destination/lasvegas/hotel?from=best-areas-to-stay"
         label="Browse Las Vegas hotels"
       />
       <SoloTripIntro
@@ -210,7 +210,7 @@ export default function LasVegasBestAreasClient() {
       <div className={styles.container}>
         <FAQAccordion faqs={faqData} />
       </div>
-      <BookingCTA variant="full" text="Find the right hotel in Las Vegas for your stay" href="/destination/lasvegas/bookings?tab=hotels&from=best-areas-to-stay" label="Book your trip" />
+      <BookingCTA variant="full" text="Find the right hotel in Las Vegas for your stay" href="/destination/lasvegas/hotel?from=best-areas-to-stay" label="Book your trip" />
     </>
   );
 }

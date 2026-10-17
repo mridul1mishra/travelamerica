@@ -7,12 +7,12 @@ import Footer from '../../../../app/components/Header/Footer/footer';
 import BookingCTA from './components/BookingCTA/BookingCTA';
 
 const categories = [
-  { title: 'Shows & Residencies', blurb: 'Cirque du Soleil is the headline act — "O" at Bellagio (water stage, ~$110+) and "Mystère" at Treasure Island are the picks. Pop residencies rotate through the Colosseum at Caesars Palace, Dolby Live at Park MGM, and the Sphere. Book 3–5 days ahead; same-day Tix4Tonight booths sell discounted seats from ~$30.', href: '/destination/lasvegas/bookings?tab=activities&from=things-to-do' },
-  { title: 'The Strip & Free Attractions', blurb: 'Walk the 4-mile boulevard — best done in two halves, after dark. Free: the Bellagio fountains (every 15–30 min, afternoon to midnight), the Conservatory, the Venetian\'s canals, and the Park MGM district. The Sphere\'s exterior "Exosphere" is free to view from outside.', href: '/destination/lasvegas/bookings?tab=activities&from=things-to-do' },
-  { title: 'Fremont Street & Downtown', blurb: 'Downtown\'s covered LED canopy (Viva Vision) runs free light-and-music shows nightly. SlotZilla zip line flies the length of it (~$49–$69). Grittier, cheaper, older Vegas — worth one evening, plus the Arts District for craft cocktails.', href: '/destination/lasvegas/bookings?tab=activities&from=things-to-do' },
-  { title: 'Pools, Dayclubs & Gondolas', blurb: 'Summer days belong to the pools and dayclubs — Encore Beach Club, Marquee at Cosmopolitan, Wet Republic at MGM ($30–$75 cover). Indoor and outdoor gondola rides glide through the Venetian\'s canals (~$39 per person). Book pool cabanas well ahead in peak heat.', href: '/destination/lasvegas/bookings?tab=activities&from=things-to-do' },
-  { title: 'Museums & Culture', blurb: 'The Neon Museum is the standout — an outdoor boneyard of restored casino signs, best on the lit night tour (~$25–$40). The Mob Museum downtown ($30, allow 2–3 hrs) is genuinely excellent. AREA15 is an immersive art-and-entertainment campus; the Atomic Museum covers Nevada\'s nuclear-test history.', href: '/destination/lasvegas/bookings?tab=activities&from=things-to-do' },
-  { title: 'Day Trips', blurb: 'Hoover Dam is 45 min away (dam tour ~$30). Red Rock Canyon is 30 min — a 13-mile scenic loop drive ($20/car) plus hiking. Valley of Fire is ~1 hr of stunning red sandstone. Grand Canyon West is ~2.5 hrs; the South Rim is a long ~4.5-hr day or an overnight.', href: '/destination/lasvegas/bookings?tab=activities&from=things-to-do' },
+  { title: 'Shows & Residencies', blurb: 'Cirque du Soleil is the headline act — "O" at Bellagio (water stage, ~$110+) and "Mystère" at Treasure Island are the picks. Pop residencies rotate through the Colosseum at Caesars Palace, Dolby Live at Park MGM, and the Sphere. Book 3–5 days ahead; same-day Tix4Tonight booths sell discounted seats from ~$30.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
+  { title: 'The Strip & Free Attractions', blurb: 'Walk the 4-mile boulevard — best done in two halves, after dark. Free: the Bellagio fountains (every 15–30 min, afternoon to midnight), the Conservatory, the Venetian\'s canals, and the Park MGM district. The Sphere\'s exterior "Exosphere" is free to view from outside.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
+  { title: 'Fremont Street & Downtown', blurb: 'Downtown\'s covered LED canopy (Viva Vision) runs free light-and-music shows nightly. SlotZilla zip line flies the length of it (~$49–$69). Grittier, cheaper, older Vegas — worth one evening, plus the Arts District for craft cocktails.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
+  { title: 'Pools, Dayclubs & Gondolas', blurb: 'Summer days belong to the pools and dayclubs — Encore Beach Club, Marquee at Cosmopolitan, Wet Republic at MGM ($30–$75 cover). Indoor and outdoor gondola rides glide through the Venetian\'s canals (~$39 per person). Book pool cabanas well ahead in peak heat.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
+  { title: 'Museums & Culture', blurb: 'The Neon Museum is the standout — an outdoor boneyard of restored casino signs, best on the lit night tour (~$25–$40). The Mob Museum downtown ($30, allow 2–3 hrs) is genuinely excellent. AREA15 is an immersive art-and-entertainment campus; the Atomic Museum covers Nevada\'s nuclear-test history.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
+  { title: 'Day Trips', blurb: 'Hoover Dam is 45 min away (dam tour ~$30). Red Rock Canyon is 30 min — a 13-mile scenic loop drive ($20/car) plus hiking. Valley of Fire is ~1 hr of stunning red sandstone. Grand Canyon West is ~2.5 hrs; the South Rim is a long ~4.5-hr day or an overnight.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
 ];
 
 const buckets = [
@@ -26,7 +26,7 @@ export default function LasVegasThingsToDoClient() {
   return (
     <>
       <LasVegasNavHeader />
-      <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=activities&from=things-to-do" label="See tickets & tours" />
+      <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/tours-and-tickets?from=things-to-do" label="See tickets & tours" />
 
       {/* ── Full-width banner ── */}
       <section className={styles.banner}>
@@ -50,7 +50,7 @@ export default function LasVegasThingsToDoClient() {
           Fremont Street, the museums, and the day trips into the desert.
         </p>
         <div className={styles.heroCtas}>
-          <Link href="/destination/lasvegas/bookings?tab=activities&from=things-to-do" className={styles.primaryCta}>
+          <Link href="/destination/lasvegas/tours-and-tickets?from=things-to-do" className={styles.primaryCta}>
             Book tickets &amp; tours
           </Link>
           <Link href="/destination/lasvegas/itinerary" className={styles.secondaryCta}>
@@ -232,7 +232,7 @@ export default function LasVegasThingsToDoClient() {
         </p>
       </section>
 
-      <BookingCTA variant="full" text="Book skip-the-line tickets and show seats" href="/destination/lasvegas/bookings?tab=activities&from=things-to-do" label="See tickets & tours" />
+      <BookingCTA variant="full" text="Book skip-the-line tickets and show seats" href="/destination/lasvegas/tours-and-tickets?from=things-to-do" label="See tickets & tours" />
       <Footer />
     </>
   );

@@ -42,7 +42,7 @@ export default function LAMetroSafetyClient(){
         <>
 
         <Header />
-        <BookingCTA variant="slim" text="Browse Los Angeles hotels →" href="/destination/la/bookings?tab=hotels&from=metro-safety-guide" label="See LA hotels" />
+        <BookingCTA variant="slim" text="Browse Los Angeles hotels →" href="/destination/la/hotel?from=metro-safety-guide" label="See LA hotels" />
         <div className={styles.pageWrapper}>
       <MetroBanner hero={hero} />
 
@@ -61,7 +61,7 @@ export default function LAMetroSafetyClient(){
       <InternalLinks items={internal_links} />
       </div>
 
-      <BookingCTA variant="full" text="Compare hotels near the LA Metro routes you plan to use" href="/destination/la/bookings?tab=hotels&from=metro-safety-guide" label="See LA hotels" />
+      <BookingCTA variant="full" text="Compare hotels near the LA Metro routes you plan to use" href="/destination/la/hotel?from=metro-safety-guide" label="See LA hotels" />
       <Footer />
 
     </>

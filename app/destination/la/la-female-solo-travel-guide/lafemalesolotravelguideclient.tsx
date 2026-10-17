@@ -33,7 +33,7 @@ export default function FemaleSoloTravelGuide() {
   return (
       <>
       <Header links={headerLinks} />
-      <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/bookings?tab=hotels&from=female-solo" label="See LA hotels" />
+      <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/hotel?from=female-solo" label="See LA hotels" />
       <div className={styles.container}>
       <Hero />
       <InfoSection sections={sectionsData.sections}/>
@@ -50,7 +50,7 @@ export default function FemaleSoloTravelGuide() {
       <LinkHubGrid />
       <WhyTrustThisGuide data={laWhyTrustData} />
       </div>
-      <BookingCTA variant="full" text="Book a safe, central hotel for solo travelers" href="/destination/la/bookings?tab=hotels&from=female-solo" label="See LA hotels" />
+      <BookingCTA variant="full" text="Book a safe, central hotel for solo travelers" href="/destination/la/hotel?from=female-solo" label="See LA hotels" />
       <Footer />
     </>
   );

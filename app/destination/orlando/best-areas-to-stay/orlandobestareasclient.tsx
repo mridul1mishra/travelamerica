@@ -99,7 +99,7 @@ export default function OrlandoBestAreasClient() {
       <BookingCTA
         variant="slim"
         text="Compare live hotel prices across all Orlando areas"
-        href="/destination/orlando/bookings?tab=hotels&from=best-areas-to-stay"
+        href="/destination/orlando/hotel?from=best-areas-to-stay"
         label="Browse Orlando hotels"
       />
       <Banner
@@ -167,7 +167,7 @@ export default function OrlandoBestAreasClient() {
         variant="full"
         headline="Find the right Orlando hotel"
         text="On-site, near-park, and budget options - compare live prices."
-        href="/destination/orlando/bookings?tab=hotels&from=best-areas-to-stay"
+        href="/destination/orlando/hotel?from=best-areas-to-stay"
         label="Book your trip"
       />
     </main>

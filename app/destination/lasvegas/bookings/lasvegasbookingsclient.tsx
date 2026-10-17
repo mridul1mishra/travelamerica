@@ -5,11 +5,12 @@ import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
 import faqData from "@/content/destination/lasvegas/booking/faq/faqsection.json";
 import bookFlights from "@/content/cities/lasvegas/bookflights.json";
 import thingsToDoData from "@/content/cities/lasvegas/thingstodo.json";
+import { lasvegasHotelAreaPresets } from "@/app/lib/lasvegasHotelAreas";
 
 const config: CityBookingConfig = {
   cityName: "Las Vegas",
   cityHref: "/destination/lasvegas",
-  bookingHref: "/destination/lasvegas/bookings",
+  bookingHref: "/destination/lasvegas/hotel",
   headerImage: "/data/majorcities/lasvegas/assets/lasvegas.webp",
   bannerText: "Book your Las Vegas trip",
   pageTitle: "Book Your Las Vegas Trip",
@@ -82,7 +83,31 @@ const config: CityBookingConfig = {
   activities: thingsToDoData as CityBookingConfig["activities"],
 };
 
-export default function LasVegasBookingsClient({ hotels }: { hotels?: CityBookingConfig["hotels"] }) {
-  if (hotels) return <BookingClient config={{ ...config, hotels, category: "hotels", onDemandGoogleRatings: true, bookingHref: "/destination/lasvegas/hotel", pageTitle: "Find Your Las Vegas Hotel", introText: "Browse Las Vegas hotels and sign in to check current prices with the provider.", bookingTips: config.bookingTips?.filter(tip => tip.heading === "Hotels"), categoryRoutes: { hotels: "/destination/lasvegas/hotel", flights: "/destination/lasvegas/bookings?tab=flights", activities: "/destination/lasvegas/bookings?tab=activities" } }} />;
-  return <BookingClient config={config} faqSection={<FAQAccordion faqs={faqData} />} />;
+type Category = "hotels" | "flights" | "activities";
+
+const routes: Record<Category, string> = {
+  hotels: "/destination/lasvegas/hotel",
+  flights: "/destination/lasvegas/flight",
+  activities: "/destination/lasvegas/tours-and-tickets",
+};
+
+const titles = {
+  flights: "Compare Flights to Las Vegas",
+  activities: "Book Las Vegas Activities, Tours & Tickets",
+};
+
+const intros = {
+  flights: "Compare sample fares to Las Vegas and plan your airport transfer. Check current prices with the provider.",
+  activities: "Browse Las Vegas tours, attractions, and tickets. Compare experiences by category and check availability with the provider.",
+};
+
+export default function LasVegasBookingsClient({ hotels, category = hotels ? "hotels" : "flights" }: { hotels?: CityBookingConfig["hotels"]; category?: Category }) {
+  if (category === "hotels") return <BookingClient config={{ ...config, hotels: hotels ?? [], category: "hotels", onDemandGoogleRatings: true, bookingHref: routes.hotels,
+    hotelAreaPresets: lasvegasHotelAreaPresets, pageTitle: "Find Your Las Vegas Hotel", introText: "Browse Las Vegas hotels and sign in to check current prices with the provider.", bookingTips: config.bookingTips?.filter(tip => tip.heading === "Hotels"),
+    categoryRoutes: routes,
+  }} />;
+  return <BookingClient config={{ ...config, category, categoryRoutes: routes, bookingHref: routes[category],
+    bannerText: titles[category], pageTitle: titles[category], introText: intros[category],
+    bookingTips: config.bookingTips?.filter(tip => tip.heading !== "Hotels"),
+  }} faqSection={<FAQAccordion faqs={faqData} />} />;
 }

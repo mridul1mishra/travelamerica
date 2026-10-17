@@ -1,68 +1,9 @@
-import { redirect } from "next/navigation";
-export const generateMetadata = () => ({
-  title: "Book Your Orlando Trip | Flights, Hotels & More",
-  description:
-    "Plan and book your Orlando trip — compare cheap flights to MCO, browse top hotels, and find the best things to do.",
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: 'https://www.travelsamericas.com/destination/orlando/bookings',
-  },
-  openGraph: {
-    title: 'Book Your Orlando Trip | Cheap Flights to MCO, Hotels & Things to Do',
-    description: 'Plan and book your Orlando trip — compare the cheapest flights to MCO, browse top Orlando hotels, and find the best things to do.',
-    url: 'https://www.travelsamericas.com/destination/orlando/bookings',
-    type: 'website',
-    images: ['https://www.travelsamericas.com/data/majorcities/orlando/assets/orlando.webp'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Book Your Orlando Trip: Cheap Flights to MCO, Hotels & Things to Do',
-    description: 'Compare cheap flights to Orlando (MCO), hotels, and activities in one place.',
-    images: ['https://www.travelsamericas.com/data/majorcities/orlando/assets/orlando.webp'],
-  },
-});
-
-import OrlandoBookingsClient from './orlandobookingsclient';
-
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.travelsamericas.com/",
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Orlando",
-      "item": "https://www.travelsamericas.com/destination/orlando",
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-       "name": "Book your trip",
-      "item": "https://www.travelsamericas.com/destination/orlando/bookings",
-    },
-  ],
-};
-
-export default async function OrlandoBookingsPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
-  const params = await searchParams;
-  if (params.tab === "hotels") redirect("/destination/orlando/hotel");
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <OrlandoBookingsClient />
-    </>
-  );
+import { permanentRedirect } from "next/navigation";
+export default async function BookingsPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
+ const params = await searchParams;
+ const routes: Record<string, string> = { hotels: "hotel", flights: "flight", activities: "tours-and-tickets", restaurants: "tours-and-tickets" };
+ const tab = typeof params.tab === "string" ? params.tab.toLowerCase() : "hotels";
+ const query = new URLSearchParams();
+ for (const [key, value] of Object.entries(params)) { if (key !== "tab" && value !== undefined) for (const entry of Array.isArray(value) ? value : [value]) query.append(key, entry); }
+ permanentRedirect(`/destination/orlando/${routes[tab] ?? "hotel"}${query.size ? `?${query}` : ""}`);
 }

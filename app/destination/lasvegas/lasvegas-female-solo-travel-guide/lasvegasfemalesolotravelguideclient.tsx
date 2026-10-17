@@ -31,7 +31,7 @@ export default function LasVegasFemaleSoloClient() {
         { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
         { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
       ]} />
-      <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=hotels&from=female-solo" label="See Las Vegas hotels" />
+      <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/hotel?from=female-solo" label="See Las Vegas hotels" />
       <div className={styles.container}>
       <Hero />
       <InfoSection sections={sectionsData.sections}/>
@@ -48,7 +48,7 @@ export default function LasVegasFemaleSoloClient() {
       <LinkHubGrid />
       <WhyTrustThisGuide data={cityWhyTrustData} />
       </div>
-      <BookingCTA variant="full" text="Book a safe, central hotel for solo travelers" href="/destination/lasvegas/bookings?tab=hotels&from=female-solo" label="See Las Vegas hotels" />
+      <BookingCTA variant="full" text="Book a safe, central hotel for solo travelers" href="/destination/lasvegas/hotel?from=female-solo" label="See Las Vegas hotels" />
       <Footer />
     </>
   );

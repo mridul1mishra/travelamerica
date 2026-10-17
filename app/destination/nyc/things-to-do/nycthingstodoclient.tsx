@@ -138,7 +138,7 @@ export default function NYCThingsToDoClient() {
               cluster nearby neighborhoods around it, and leave room for the city to surprise you.
             </p>
             <div className={styles.heroActions}>
-              <Link href="/destination/nyc/booking?tab=activities&from=things-to-do" className={styles.primaryButton}>
+              <Link href="/destination/nyc/tours-and-tickets?from=things-to-do" className={styles.primaryButton}>
                 See tickets and tours
               </Link>
               <a href="#planner" className={styles.secondaryButton}>Browse by trip style</a>
@@ -349,7 +349,7 @@ export default function NYCThingsToDoClient() {
               reserving early. Keep neighborhood wandering flexible around them.
             </p>
           </div>
-          <Link href="/destination/nyc/booking?tab=activities&from=things-to-do" className={styles.bookingButton}>
+          <Link href="/destination/nyc/tours-and-tickets?from=things-to-do" className={styles.bookingButton}>
             See tickets and tours
           </Link>
         </section>

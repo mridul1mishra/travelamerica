@@ -103,7 +103,7 @@ export default function FoodClientPage() {
       <BookingCTA
         variant="slim"
         text="Book your New York trip"
-        href="/destination/nyc/booking?tab=activities&from=food"
+        href="/destination/nyc/tours-and-tickets?from=food"
         label="See food tours"
       />
 
@@ -305,7 +305,7 @@ export default function FoodClientPage() {
         <BookingCTA
           variant="full"
           text="Book a guided NYC food tour"
-          href="/destination/nyc/booking?tab=activities&from=food"
+          href="/destination/nyc/tours-and-tickets?from=food"
           label="See food tours"
         />
         <FAQAccordion faqs={faqData} />

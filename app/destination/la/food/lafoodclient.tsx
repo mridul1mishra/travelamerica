@@ -15,9 +15,9 @@ export default function LAFoodClient() {
         <>
         <NavigationHeader />
         <HeroBanner image={`/data/majorcities/losangeles/assets/la-solo-dining.webp`} bannerText="" variant="wide" />
-        <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/bookings?tab=restaurants&from=food" label="See food tours" />
+        <BookingCTA variant="slim" text="Book your Los Angeles trip →" href="/destination/la/tours-and-tickets?from=food" label="See food tours" />
         <SoloDiningGuide />
-        <BookingCTA variant="full" text="Book a guided LA food tour" href="/destination/la/bookings?tab=restaurants&from=food" label="See food tours" />
+        <BookingCTA variant="full" text="Book a guided LA food tour" href="/destination/la/tours-and-tickets?from=food" label="See food tours" />
         <FAQAccordion faqs={faqData} />
         <Footer />
         </>

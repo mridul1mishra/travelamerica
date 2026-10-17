@@ -84,7 +84,7 @@ export default function LABestAreasClient() {
       <BookingCTA
         variant="slim"
         text="Compare live hotel prices across LA neighborhoods"
-        href="/destination/la/bookings?tab=hotels&from=best-areas-to-stay"
+        href="/destination/la/hotel?from=best-areas-to-stay"
         label="Browse LA hotels"
       />
       <Banner
@@ -134,7 +134,7 @@ export default function LABestAreasClient() {
         variant="full"
         headline="Find the right Los Angeles hotel"
         text="Compare Santa Monica, Hollywood, WeHo, and DTLA hotels - live prices and real reviews."
-        href="/destination/la/bookings?tab=hotels&from=best-areas-to-stay"
+        href="/destination/la/hotel?from=best-areas-to-stay"
         label="Browse Los Angeles hotels"
       />
       <Footer />

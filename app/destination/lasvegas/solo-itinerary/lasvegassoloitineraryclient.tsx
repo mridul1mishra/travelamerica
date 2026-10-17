@@ -26,7 +26,7 @@ export default function LasVegasSoloItineraryClient({ grouped }: SoloItineraryCl
     <div className="App">
       <NavigationHeader />
       <HeroBanner image={`/data/majorcities/lasvegas/assets/solo-travel-itinerary.png`} bannerText="" variant="wide" />
-      <BookingCTA variant="slim" text="Book hotels for your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=hotels&from=solo-itinerary" label="Book this trip" />
+      <BookingCTA variant="slim" text="Book hotels for your Las Vegas trip →" href="/destination/lasvegas/hotel?from=solo-itinerary" label="Book this trip" />
       <section className={styles.introSection}>
         <div className={styles.introCard}>
           <p className={styles.eyebrow}>Las Vegas Solo Itinerary</p>
@@ -95,7 +95,7 @@ export default function LasVegasSoloItineraryClient({ grouped }: SoloItineraryCl
         </div>
       </section>
       <FAQ groupedFaqs={grouped}/>
-      <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/lasvegas/bookings?tab=hotels&from=solo-itinerary" label="Book this trip" />
+      <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/lasvegas/hotel?from=solo-itinerary" label="Book this trip" />
       <Footer />
     </div>
     </>

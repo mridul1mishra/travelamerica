@@ -254,7 +254,7 @@ const DRIP_SCHEDULE = [
       </p>
 
       <p style="margin:0 0 12px;text-align:center">
-        <a href="https://www.travelsamericas.com/destination/nyc/booking?from=drip-email"
+        <a href="https://www.travelsamericas.com/destination/nyc/hotel?from=drip-email"
            style="background:#2563eb;color:#fff;padding:15px 36px;border-radius:6px;
                   text-decoration:none;font-weight:700;font-size:16px;display:inline-block">
           Compare flights &amp; hotels for NYC →

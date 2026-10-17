@@ -31,7 +31,7 @@ export default function LasVegasNeighborhoodGuideClient({tripType, interest, dur
           { href: "/destination/lasvegas/safety-guide", label: "Las Vegas Safety" },
           { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
         ]} />
-        <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=hotels&from=neighborhood-guide" label="See Las Vegas hotels" />
+        <BookingCTA variant="slim" text="Book your Las Vegas trip →" href="/destination/lasvegas/hotel?from=neighborhood-guide" label="See Las Vegas hotels" />
         <div className={styles.container}>
         <IntroSection tripType={tripType} interest={interest}/>
         <CityOrganization />
@@ -44,7 +44,7 @@ export default function LasVegasNeighborhoodGuideClient({tripType, interest, dur
         <WhyTrustThisGuide data={cityWhyTrustData} />
         <FAQAccordion faqs={cityFaqData} />
         </div>
-        <BookingCTA variant="full" text="See hotels in the best Las Vegas neighborhoods" href="/destination/lasvegas/bookings?tab=hotels&from=neighborhood-guide" label="See Las Vegas hotels" />
+        <BookingCTA variant="full" text="See hotels in the best Las Vegas neighborhoods" href="/destination/lasvegas/hotel?from=neighborhood-guide" label="See Las Vegas hotels" />
         <Footer />
         </>
     )

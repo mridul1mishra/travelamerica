@@ -100,7 +100,7 @@ export default function LandmarkPage() {
               feels exciting instead of exhausting.
             </p>
             <div className={styles.heroActions}>
-              <Link href="/destination/nyc/booking?tab=activities&from=landmark" className={styles.primaryButton}>
+              <Link href="/destination/nyc/tours-and-tickets?from=landmark" className={styles.primaryButton}>
                 See landmark tickets
               </Link>
               <a href="#landmarks" className={styles.secondaryButton}>Compare landmarks</a>
@@ -225,7 +225,7 @@ export default function LandmarkPage() {
               ahead. Keep bridge walks, parks, and plazas flexible.
             </p>
           </div>
-          <Link href="/destination/nyc/booking?tab=activities&from=landmark" className={styles.bookingButton}>
+          <Link href="/destination/nyc/tours-and-tickets?from=landmark" className={styles.bookingButton}>
             See landmark tickets
           </Link>
         </section>

@@ -17,7 +17,7 @@ return (
     <>
         <NavigationHeader />
         <HeroBanner image={`/data/majorcities/lasvegas/assets/group/lasvegas-group-travel-packing-flatlay-essentials.webp`} bannerText="" variant="wide" />
-        <BookingCTA variant="slim" text="Book hotels for your Las Vegas trip →" href="/destination/lasvegas/bookings?tab=hotels&from=group-travel" label="Book your trip" />
+        <BookingCTA variant="slim" text="Book hotels for your Las Vegas trip →" href="/destination/lasvegas/hotel?from=group-travel" label="Book your trip" />
         <section className={styles.introSection}>
                 <div className={styles.introCard}>
                 <p className={styles.eyebrow}>Las Vegas Group Travel Guide</p>
@@ -266,7 +266,7 @@ return (
         </div>
         </section>
 
-        <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/lasvegas/bookings?tab=hotels&from=group-travel" label="Book your trip" />
+        <BookingCTA variant="full" text="Find the right hotel for your stay" href="/destination/lasvegas/hotel?from=group-travel" label="Book your trip" />
         <FAQAccordion faqs={faqData} />
         <Footer />
 
