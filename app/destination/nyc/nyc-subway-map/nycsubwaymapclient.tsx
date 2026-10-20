@@ -225,6 +225,9 @@ export default function NYCSubwayMapClient() {
     </div>
 
   </div>
+      <div className={styles.backToTopWrap}>
+        <a className={styles.backToTop} href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
 </div>
 
     <BookingCTA variant="full" text="Booked your flight? Plan your NYC trip" href="/destination/nyc/hotel?from=nyc-subway-map" label="Book your trip" />

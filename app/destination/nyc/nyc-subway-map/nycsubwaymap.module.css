@@ -350,6 +350,36 @@
   padding: 0 0.9rem;
 }
 
+.backToTopWrap {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto 2rem;
+  width: min(calc(100% - 32px), 1080px);
+}
+
+.backToTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.65rem 1rem;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.backToTop:hover {
+  background: #dbeafe;
+}
+
+.backToTop:focus-visible {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 3px;
+}
+
 @media (max-width: 760px) {
   .planningGrid {
     grid-template-columns: 1fr;
