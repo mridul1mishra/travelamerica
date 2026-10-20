@@ -39,20 +39,20 @@ export default function LasVegasStripTransportationMapClient() {
       <header className={styles.hero}>
         <p className={styles.eyebrow}>Las Vegas visitor guide</p>
         <h1>Las Vegas Strip Transportation Map</h1>
-        <p className={styles.intro}>Compare the Las Vegas Monorail and Deuce bus routes to plan journeys between your hotel and the places you want to visit. Start with the right map, then check your stops, walking connections and return journey.</p>
+        <p className={styles.intro}>Find official Las Vegas Monorail and Deuce bus maps, compare their coverage, and plan journeys between your hotel and the places you want to visit.</p>
         <div className={styles.actions}><a className={styles.primary} href={monorailMap} target="_blank" rel="noreferrer">View Monorail Map ↗</a><a className={styles.secondary} href={rtcMaps} target="_blank" rel="noreferrer">View Deuce Bus Map ↗</a></div>
         <p className={styles.ticketNote}>These services use separate tickets. Check each operator’s current routes, fares and service information before traveling.</p>
-        <p className={styles.sourceNote}>Independent visitor guide. Content reviewed October 20, 2026; this review date is not a map edition date. Official map resources: Las Vegas Monorail and RTC of Southern Nevada. Operator maps and service information may change.</p>
+        <p className={styles.sourceNote}>Independent visitor guide · Reviewed October 20, 2026<br />Check operator links for current maps and service updates.</p>
       </header>
 
       <section className={styles.mapSection} aria-labelledby="choose-map-heading">
-        <header className={styles.mapIntro}><p className={styles.eyebrow}>Choose your map</p><h2 id="choose-map-heading">Choose Your Map</h2></header>
+        <header className={styles.mapIntro}><h2 id="choose-map-heading">Choose Your Map</h2></header>
         <div className={styles.mapGrid}>
-        <article className={styles.mapPanel}><p className={styles.eyebrow}>Official operator map</p><h2>Las Vegas Monorail Map</h2><p>The Monorail route runs from MGM Grand to SAHARA and serves seven stations. Check station access and current hours before your trip.</p>
-          <ol className={styles.stationLine} aria-label="Monorail stations from south to north">{stations.map((name) => <li key={name}>{name}</li>)}</ol>
-          <a className={styles.textLink} href={monorailMap} target="_blank" rel="noreferrer">Open Official Monorail Map ↗</a><p className={styles.panelNote}>Station sequence is an original text orientation aid, not a reproduction of the operator’s map.</p>
+        <article className={styles.mapPanel}><p className={styles.eyebrow}>Monorail route overview</p><h2>Las Vegas Monorail Route Overview</h2><p>The Monorail route runs from MGM Grand to SAHARA and serves seven stations. Check station access and current hours before your trip.</p>
+          <p className={styles.routeDirection}>Station order · south to north</p><ol className={styles.stationLine} aria-label="Monorail station sequence from south to north">{stations.map((name) => <li key={name}>{name}</li>)}</ol>
+          <a className={styles.textLink} href={monorailMap} target="_blank" rel="noreferrer">Open Official Monorail Map ↗</a><p className={styles.panelNote}>This sequence is an original text orientation aid, not an official map or a geographic scale.</p>
         </article>
-        <article className={styles.mapPanel}><p className={styles.eyebrow}>Official operator maps</p><h2>Deuce Bus Map</h2><p>The Deuce serves the Strip and downtown Las Vegas. Use RTC’s current route map and schedule to identify the stop, direction and service changes for your journey.</p>
+        <article className={styles.mapPanel}><p className={styles.eyebrow}>Deuce service overview</p><h2>Deuce Bus Service Overview</h2><p>The Deuce serves the Strip and downtown Las Vegas. Use RTC’s current route map and schedule to identify the stop, direction and service changes for your journey.</p>
           <div className={styles.busRoute} aria-label="Deuce service area summary"><span>Las Vegas Strip</span><span aria-hidden="true">↕</span><span>Downtown Las Vegas</span></div>
           <a className={styles.textLink} href={rtcMaps} target="_blank" rel="noreferrer">Open Current RTC Maps ↗</a><p className={styles.panelNote}>This is a service-area summary, not an RTC route map. Confirm the current route with RTC.</p>
         </article>
@@ -80,7 +80,7 @@ export default function LasVegasStripTransportationMapClient() {
       <section className={styles.section} id="fremont-street"><p className={styles.eyebrow}>03 · Downtown</p><h2>Getting to Fremont Street</h2>
         <p>For a Strip-to-downtown journey, check the Deuce route and RTC trip-planning resources. The Monorail’s published route ends at SAHARA in the north; it does not provide a direct ride to Fremont Street.</p>
         <p>Plan from your exact starting point to your exact destination. Find the appropriate downtown stop on the current map and check the walk from that stop to the place you want to visit. Plan the return stop and direction as well.</p>
-        <p><a className={styles.textLink} href={rtcMaps} target="_blank" rel="noreferrer">Check RTC Routes to Downtown ↗</a></p><Resources items={[["RTC current routes and schedules", rtcMaps]]} />
+        <p><a className={styles.textLink} href={rtcMaps} target="_blank" rel="noreferrer">Check RTC Routes to Downtown ↗</a></p>
       </section>
 
       <section className={styles.section} id="hotel-connections"><p className={styles.eyebrow}>04 · Door to door</p><h2>Reaching Your Hotel</h2>
@@ -93,7 +93,7 @@ export default function LasVegasStripTransportationMapClient() {
         <p>The Monorail’s published route connects MGM Grand and SAHARA, not Harry Reid International Airport. Plan the airport portion separately and check the terminal used by your airline.</p>
         <p>RTC’s current airport guidance lists Route 108 and the RED LINE at Terminal 1, Ground Level Zero. For travel between Terminal 3 and Terminal 1, RTC directs travelers to use the airport inter-terminal shuttle. Check RTC’s airport page for current routes, boarding locations and payment information. The South Strip Transit Terminal is a transit hub, not an airport terminal.</p>
         <p>Include transfers, luggage and your airline’s recommended arrival time when planning. Do not assume that every airport route serves every terminal.</p>
-        <p><a className={styles.textLink} href={airportUrl} target="_blank" rel="noreferrer">Check Official Airport Bus Connections ↗</a></p><Resources items={[["RTC airport transit routes", airportUrl], ["RTC schedules and maps", rtcMaps]]} />
+        <p><a className={styles.textLink} href={airportUrl} target="_blank" rel="noreferrer">Check Official Airport Bus Connections ↗</a></p><Resources items={[["RTC schedules and maps", rtcMaps]]} />
       </section>
 
       <section className={styles.section} id="travel-tips"><p className={styles.eyebrow}>06 · Before you go</p><h2>Return Trips &amp; Travel Tips</h2>
