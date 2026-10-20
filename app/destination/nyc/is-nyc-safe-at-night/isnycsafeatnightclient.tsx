@@ -166,8 +166,8 @@ export default function Page() {
             <p className={styles.eyebrow}>Updated 2026 - NYC safety after dark</p>
             <h1>Is New York Safe at Night? A Neighborhood-by-Neighborhood 2026 Guide</h1>
             <p>
-              Mostly yes - in 2026 New York is safe at night in busy, well-lit areas of Manhattan
-              and the main Brooklyn visitor zones like DUMBO and Battery Park. It is not risk-free:
+              Mostly yes - in 2026 New York is safe at night in busy, well-lit areas of Manhattan,
+              including Battery Park, and Brooklyn visitor areas such as DUMBO. It is not risk-free:
               subway platforms get quieter late, some neighborhoods change after dark, and side
               streets feel different after midnight. Below is a neighborhood-by-neighborhood read.
             </p>
