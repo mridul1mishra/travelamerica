@@ -19,15 +19,18 @@
   "quickNav": [
     {
       "label": "How to Read the Map",
-      "anchor": "how-to-read"
+      "anchor": "how-to-read",
+      "description": "Understand line labels, station symbols and transfer points so you can follow your route with confidence."
     },
     {
       "label": "Best Routes for First‑Timers",
-      "anchor": "best-routes"
+      "anchor": "best-routes",
+      "description": "Explore suggested subway journeys between popular sights, with clear directions and manageable transfers."
     },
     {
-      "label": "Safest Stations for Solo Travelers",
-      "anchor": "safety"
+      "label": "Choosing Stations as a Solo Traveler",
+      "anchor": "safety",
+      "description": "Learn what to consider when choosing a station, including entrances, transfers and access to assistance."
     },
     {
       "label": "Using Google Maps & MTA App",

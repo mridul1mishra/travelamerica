@@ -40,6 +40,209 @@
   background: #ffffff;
 }
 
+.subwayGuideSections {
+  --guide-text: #172033;
+  --guide-muted: #4b5563;
+  --guide-accent: #1d4ed8;
+  --guide-border: #e2e8f0;
+  display: grid;
+  gap: 32px;
+  width: min(calc(100% - 32px), 1080px);
+  margin: 40px auto;
+  color: var(--guide-text);
+}
+
+.subwayGuide {
+  min-width: 0;
+  padding: clamp(24px, 4vw, 44px);
+  background: #fff;
+  border: 1px solid var(--guide-border);
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgb(15 23 42 / 4%);
+  scroll-margin-top: 104px;
+}
+
+.subwayGuide,
+.subwayGuide * {
+  box-sizing: border-box;
+}
+
+.guideEyebrow {
+  margin: 0 0 10px;
+  color: var(--guide-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.guideHeader h2 {
+  max-width: 28ch;
+  margin: 0;
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.guideIntro {
+  max-width: 70ch;
+  margin: 16px 0 0;
+  color: var(--guide-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.guideSteps,
+.guideTips {
+  display: grid;
+  gap: 0;
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+
+.guideSteps {
+  counter-reset: guide-step;
+}
+
+.guideSteps > li,
+.guideTips > li {
+  position: relative;
+  min-width: 0;
+  padding: 20px 0 20px 52px;
+  border-top: 1px solid var(--guide-border);
+}
+
+.guideSteps > li::before {
+  counter-increment: guide-step;
+  content: counter(guide-step);
+  position: absolute;
+  top: 20px;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: var(--guide-accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.guideTips > li {
+  padding-left: 24px;
+}
+
+.guideTips > li::before {
+  content: "";
+  position: absolute;
+  top: 29px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--guide-accent);
+}
+
+.subwayGuide h3 {
+  margin: 0 0 6px;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.subwayGuide li p,
+.guideNote p {
+  max-width: 70ch;
+  margin: 0;
+  color: var(--guide-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.guideNote {
+  margin-top: 12px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--guide-accent);
+  border-radius: 0 12px 12px 0;
+  background: #eff6ff;
+}
+
+.guideNoteImportant {
+  border-left-color: #92400e;
+  background: #fffbeb;
+}
+
+.guideFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--guide-border);
+}
+
+.guideResources {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.guideResources h3 {
+  font-size: 0.875rem;
+}
+
+.guideResources ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  padding: 0;
+  margin: 8px 0 0;
+  list-style: none;
+}
+
+.subwayGuide a {
+  color: var(--guide-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.subwayGuide a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.subwayGuide a:focus-visible {
+  outline: 3px solid var(--guide-accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.guideCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  max-width: 100%;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: var(--guide-accent);
+  color: #fff !important;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.guideCta:hover {
+  background: #1e40af;
+}
+
 .mapSection {
   max-width: 1100px;
   margin: 0 auto;
@@ -150,5 +353,38 @@
 @media (max-width: 760px) {
   .planningGrid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .guideTipsColumns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .subwayGuideSections {
+    gap: 20px;
+    margin-block: 28px;
+  }
+
+  .subwayGuide {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .guideFooter {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .guideResources {
+    flex: initial;
+    width: 100%;
+  }
+
+  .guideCta {
+    width: 100%;
   }
 }
