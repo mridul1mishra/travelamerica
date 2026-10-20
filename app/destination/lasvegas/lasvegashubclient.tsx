@@ -16,6 +16,7 @@ import BookingCTA from './components/BookingCTA/BookingCTA';
 const navLinks = [
   { href: "/destination/lasvegas/best-areas-to-stay", label: "Best Areas to Stay" },
   { href: "/destination/lasvegas/solo-trip-to-lasvegas", label: "Solo Trip to Vegas" },
+  { href: "/destination/lasvegas/strip-transportation-map", label: "Strip Transportation Map" },
   { href: "/destination/lasvegas/safety-guide", label: "Vegas Safety" },
   { href: "/destination/lasvegas/lasvegas-female-solo-travel-guide", label: "Female Travel Guide" },
 ];

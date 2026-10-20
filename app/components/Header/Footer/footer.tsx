@@ -5,7 +5,7 @@ import AffiliateDisclosure from "@/app/components/AffiliateDisclosure/AffiliateD
 import "./footer.css"; // optional if you want to style it
 
 
-const Footer = ({ prefetch }: { prefetch?: boolean }) => {
+const Footer = ({ prefetch, destination }: { prefetch?: boolean; destination?: "lasvegas" }) => {
     return (
         <footer className="travel-footer">
       <AffiliateDisclosure />
@@ -54,6 +54,15 @@ const Footer = ({ prefetch }: { prefetch?: boolean }) => {
         <li className="link"><Link prefetch={prefetch} href="/about">About Us</Link></li>
       </ul>
     </div>
+    {destination === "lasvegas" && <div>
+      <h3>Las Vegas</h3>
+      <ul className="vertical-list">
+        <li className="link"><Link prefetch={prefetch} href="/destination/lasvegas">Las Vegas Travel Hub</Link></li>
+        <li className="link"><Link prefetch={prefetch} href="/destination/lasvegas/strip-transportation-map">Strip Transportation Map</Link></li>
+        <li className="link"><Link prefetch={prefetch} href="/destination/lasvegas/is-lasvegas-safe-at-night">Las Vegas Night Safety</Link></li>
+        <li className="link"><Link prefetch={prefetch} href="/destination/lasvegas/hotel">Las Vegas Hotels</Link></li>
+      </ul>
+    </div>}
   </div>
   <div className="footer-bottom">
     <p>© {new Date().getFullYear()} Travels Americas | Designed with ❤️ for explorers</p>

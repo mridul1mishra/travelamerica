@@ -73,6 +73,9 @@ export default function TransitSafety({ subway, bus, rideshare, yellowCabs, walk
               </article>
             ))}
         </div>
+        <p className={styles.mapGuideLink}>
+          For route maps, airport connections and current operator information, see the <a href="/destination/lasvegas/strip-transportation-map">Las Vegas Strip transportation map</a>.
+        </p>
       </div>
     </section>
   );

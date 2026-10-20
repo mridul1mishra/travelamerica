@@ -74,6 +74,7 @@ const ROUTES: Entry[] = [
   { path: "/destination/lasvegas/safety-guide",                       priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/lasvegas/solo-itinerary",                     priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/lasvegas/solo-trip-to-lasvegas",              priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/lasvegas/strip-transportation-map",           priority: 0.8, changeFrequency: "weekly" },
   { path: "/destination/lasvegas/things-to-do",                       priority: 0.8, changeFrequency: "weekly" },
 
   // ── Orlando ───────────────────────────────────────────────────────────────

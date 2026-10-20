@@ -54,6 +54,7 @@ const ROUTES = [
   '/destination/lasvegas/safety-guide',
   '/destination/lasvegas/solo-itinerary',
   '/destination/lasvegas/solo-trip-to-lasvegas',
+  '/destination/lasvegas/strip-transportation-map',
   '/destination/lasvegas/things-to-do',
   // NYC
   '/destination/nyc',

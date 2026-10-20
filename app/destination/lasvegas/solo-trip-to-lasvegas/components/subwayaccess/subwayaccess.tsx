@@ -22,6 +22,9 @@ export function SubwayAccessSection() {
             <SubwayRow key={index} {...item} />
           ))}
         </div>
+        <p className="subway-section__intro">
+          Compare routes with the <a href="/destination/lasvegas/strip-transportation-map">Las Vegas Strip transportation map</a> and check current operator schedules before traveling.
+        </p>
       </div>
     </section>
   );
