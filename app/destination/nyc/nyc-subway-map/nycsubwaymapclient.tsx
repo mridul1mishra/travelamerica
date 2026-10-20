@@ -19,7 +19,6 @@ export default function NYCSubwayMapClient() {
   return (
     <>
     <Header />
-      <BookingCTA variant="slim" text="Book your New York trip →" href="/destination/nyc/hotel?from=nyc-subway-map" label="Book your trip" />
       <div className="page-container">
       <div className={styles.pagestack} id="top">
 
@@ -30,14 +29,20 @@ export default function NYCSubwayMapClient() {
     <section className={styles.mapSection} aria-labelledby="map-heading">
       <h2 id="map-heading">NYC Subway Map</h2>
       <figure>
-        <Image
-          src={data.map.imageUrl}
-          alt={data.map.alt}
-          width={1600}
-          height={1200}
-          sizes="(max-width: 960px) 100vw, 960px"
-          priority
-        />
+        <Link
+          href="/destination/nyc/nyc-subway-map/full"
+          className={styles.mapPreviewLink}
+          aria-label="Open the full-size NYC subway map"
+        >
+          <Image
+            src={data.map.imageUrl}
+            alt={data.map.alt}
+            width={1600}
+            height={1200}
+            sizes="(max-width: 960px) 100vw, 960px"
+            priority
+          />
+        </Link>
         <figcaption>{data.map.caption}</figcaption>
       </figure>
       <div className={styles.relatedLinks}>
@@ -65,12 +70,6 @@ export default function NYCSubwayMapClient() {
       <ScenarioCards routes={data.routes} />
       </div>
     </div>
-    <div className={styles.section}>
-      <div className={styles.sectioninner}>
-      <SafetyChecklist items={data.safety} />
-      </div>
-    </div>
-
     <section className={styles.subwayPlanning} id="subway-trip-planning" aria-labelledby="apps-heading">
       <p className={styles.eyebrow}>Route planning</p>
       <h2 id="apps-heading">Using Google Maps &amp; the MTA App</h2>
@@ -130,6 +129,12 @@ export default function NYCSubwayMapClient() {
       </div>
     </section>
 
+    <div className={styles.section}>
+      <div className={styles.sectioninner}>
+        <SafetyChecklist items={data.safety} />
+      </div>
+    </div>
+
     <section className={styles.subwayPlanning} id="subway-etiquette" aria-labelledby="etiquette-heading">
       <p className={styles.eyebrow}>Riding together</p>
       <h2 id="etiquette-heading">Subway Etiquette 101</h2>
@@ -161,33 +166,6 @@ export default function NYCSubwayMapClient() {
       </p>
       <div className={styles.relatedLinks}>
         <Link href="#top">Back to the NYC Subway Map</Link>
-      </div>
-    </section>
-
-    <section className={styles.subwayPlanning} aria-labelledby="subway-planning-heading">
-      <p className={styles.eyebrow}>Subway planning shortcut</p>
-      <h2 id="subway-planning-heading">Use the map with a route app, then sanity-check the station choice</h2>
-      <p>
-        The NYC subway map is best for understanding line colors, transfers, borough direction, and local versus express stops. For the exact train, use Google Maps, Citymapper, or the MTA app, then check whether the station, exit, and late-night route make sense for your hotel.
-      </p>
-      <div className={styles.planningGrid}>
-        <article>
-          <h3>First-time visitor</h3>
-          <p>Use the map to understand Uptown, Downtown, Brooklyn, and Queens direction before following app instructions.</p>
-        </article>
-        <article>
-          <h3>Solo traveler</h3>
-          <p>Favor busy transfer stations, avoid empty cars, and compare the last walk from the subway exit to your hotel.</p>
-        </article>
-        <article>
-          <h3>Late night</h3>
-          <p>Check service changes, train frequency, and whether a cab or rideshare is simpler after shows or bars.</p>
-        </article>
-      </div>
-      <div className={styles.relatedLinks}>
-        <Link href="/destination/nyc/subway-safety-guide">Subway safety guide</Link>
-        <Link href="/destination/nyc/is-nyc-safe-at-night">NYC night safety</Link>
-        <Link href="/destination/nyc/best-areas-to-stay">Best areas to stay</Link>
       </div>
     </section>
 
