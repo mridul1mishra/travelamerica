@@ -462,23 +462,61 @@
 }
 
 .backToTopWrap {
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  z-index: 1000;
   display: flex;
-  justify-content: flex-end;
-  padding: 0 2px 8px;
+  width: auto;
+  margin: 0;
+  pointer-events: none;
 }
 
 .backToTop {
   display: inline-flex;
+  width: 48px;
+  height: 48px;
   min-height: 44px;
   align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
   border: 1px solid #c6d7f6;
   border-radius: 999px;
-  background: #fff;
+  background: #eef4ff;
   color: #164fc5;
   font-weight: 750;
   text-decoration: none;
+  box-shadow: 0 6px 18px rgb(15 23 42 / 18%);
+  pointer-events: auto;
+  transition: width 180ms ease, gap 180ms ease, padding 180ms ease, background-color 180ms ease;
+}
+
+.backToTopArrow {
+  flex: 0 0 auto;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.backToTopLabel {
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  white-space: nowrap;
+  transition: max-width 180ms ease, opacity 120ms ease;
+}
+
+.backToTop:hover,
+.backToTop:focus-visible {
+  width: 136px;
+  gap: 0.5rem;
+  padding-inline: 0.75rem;
+}
+
+.backToTop:hover .backToTopLabel,
+.backToTop:focus-visible .backToTopLabel {
+  max-width: 80px;
+  opacity: 1;
 }
 
 .backToTop:hover {
@@ -498,6 +536,11 @@
 }
 
 @media (max-width: 640px) {
+  .backToTopWrap {
+    right: max(14px, env(safe-area-inset-right));
+    bottom: max(14px, env(safe-area-inset-bottom));
+  }
+
   .laMetroPage {
     padding: 16px 12px 4px;
   }

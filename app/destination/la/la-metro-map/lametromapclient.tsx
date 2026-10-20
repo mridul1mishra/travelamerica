@@ -269,7 +269,10 @@ export default function LAMetroMapClient() {
           </section>
 
           <div className={styles.backToTopWrap}>
-            <a className={styles.backToTop} href="#top">Back to top <span aria-hidden="true">↑</span></a>
+            <a className={styles.backToTop} href="#top" aria-label="Back to top">
+              <span className={styles.backToTopArrow} aria-hidden="true">↑</span>
+              <span className={styles.backToTopLabel} aria-hidden="true">Back to top</span>
+            </a>
           </div>
         </div>
       </main>

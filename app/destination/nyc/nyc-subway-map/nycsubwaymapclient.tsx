@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import HeroBanner from "./components/herobanner/herobanner";
@@ -27,29 +26,27 @@ export default function NYCSubwayMapClient() {
     </div>
 
     <section className={styles.mapSection} aria-labelledby="map-heading">
-      <h2 id="map-heading">NYC Subway Map</h2>
-      <figure>
-        <Link
-          href="/destination/nyc/nyc-subway-map/full"
-          className={styles.mapPreviewLink}
-          aria-label="Open the full-size NYC subway map"
-        >
-          <Image
-            src={data.map.imageUrl}
-            alt={data.map.alt}
-            width={1600}
-            height={1200}
-            sizes="(max-width: 960px) 100vw, 960px"
-            priority
-          />
-        </Link>
-        <figcaption>{data.map.caption}</figcaption>
-      </figure>
-      <div className={styles.relatedLinks}>
-        <Link href="/destination/nyc/nyc-subway-map/full">View Full-Size Map</Link>
-        <a href="/data/majorcities/newyork/assets/map/nyc-subway-map.pdf" download>
-          {data.map.downloadLabel}
-        </a>
+      <div className={styles.mapPreviewMark} aria-hidden="true">
+        <span className={styles.mapLineBlue} />
+        <span className={styles.mapLineRed} />
+        <span className={styles.mapLineGold} />
+        <span className={styles.mapStationOne} />
+        <span className={styles.mapStationTwo} />
+        <span className={styles.mapStationThree} />
+      </div>
+      <div className={styles.mapPreviewContent}>
+        <p className={styles.mapEyebrow}>Official subway map</p>
+        <h2 id="map-heading">NYC Subway Map</h2>
+        <p className={styles.mapCaption}>Map source: MTA · Check service notices before traveling.</p>
+        <p className={styles.mapDescription}>
+          Use the map to check stations, lines and transfers. The graphic is decorative; open the full-size MTA map for station details or download its PDF for reference while planning your journey.
+        </p>
+        <div className={styles.relatedLinks}>
+          <Link href="/destination/nyc/nyc-subway-map/full">View Full-Size Map</Link>
+          <a href="/data/majorcities/newyork/assets/map/nyc-subway-map.pdf" download>
+            {data.map.downloadLabel}
+          </a>
+        </div>
       </div>
     </section>
 
@@ -226,7 +223,10 @@ export default function NYCSubwayMapClient() {
 
   </div>
       <div className={styles.backToTopWrap}>
-        <a className={styles.backToTop} href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        <a className={styles.backToTop} href="#top" aria-label="Back to top">
+          <span className={styles.backToTopArrow} aria-hidden="true">↑</span>
+          <span className={styles.backToTopLabel} aria-hidden="true">Back to top</span>
+        </a>
       </div>
 </div>
 

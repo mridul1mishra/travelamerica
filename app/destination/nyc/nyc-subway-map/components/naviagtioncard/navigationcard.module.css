@@ -4,7 +4,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
 }
 
@@ -42,8 +42,9 @@
 }
 
 .icon {
-  font-size: 1.4rem;
   color: white;
+  width: 24px;
+  height: 24px;
 }
 
 .label {
@@ -58,4 +59,16 @@
   color: #526173;
   font-size: 0.88rem;
   line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
