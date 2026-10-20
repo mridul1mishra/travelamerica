@@ -22,6 +22,7 @@ export default function IconCardGrid({ items }: IconCardGridProps) {
             </div>
 
             <p className={styles.label}>{item.label}</p>
+            {item.description && <p className={styles.description}>{item.description}</p>}
           </a>
         ))}
       </div>

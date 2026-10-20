@@ -1,29 +1,50 @@
 {
   "hero": {
     "title": "NYC Subway Map: Simple, Safe & Solo‑Traveler Friendly",
-    "subtitle": "Your quick guide to navigating NYC’s subway without confusion.",
+    "subtitle": "View the NYC subway map to find stations, lines and transfers. Open the full-size map or download the PDF for reference while planning your journey.",
     "ctaPrimary": "View Full Subway Map",
     "ctaSecondary": "Download PDF Map",
     "supportingText": "Updated for 2026. Works offline.",
-    "badges": ["Official MTA Source", "Updated January 2026"]
+    "badges": [
+      "Official MTA Source",
+      "Updated January 2026"
+    ]
   },
-
   "map": {
-    "imageUrl": "/images/nyc-subway-map-2026.png",
+    "imageUrl": "/data/majorcities/newyork/assets/map/nyc-subway-map.webp",
     "alt": "Official MTA NYC Subway Map 2026",
     "caption": "Official MTA Subway Map — Updated 2025",
     "downloadLabel": "Download High‑Resolution Map"
   },
-
   "quickNav": [
-    { "label": "How to Read the Map", "anchor": "how-to-read" },
-    { "label": "Best Routes for First‑Timers", "anchor": "best-routes" },
-    { "label": "Safest Stations for Solo Travelers", "anchor": "safety" },
-    { "label": "Using Google Maps & MTA App", "anchor": "apps" },
-    { "label": "Late‑Night Subway Tips", "anchor": "late-night" },
-    { "label": "Subway Etiquette 101", "anchor": "etiquette" }
+    {
+      "label": "How to Read the Map",
+      "anchor": "how-to-read"
+    },
+    {
+      "label": "Best Routes for First‑Timers",
+      "anchor": "best-routes"
+    },
+    {
+      "label": "Safest Stations for Solo Travelers",
+      "anchor": "safety"
+    },
+    {
+      "label": "Using Google Maps & MTA App",
+      "anchor": "subway-trip-planning",
+      "description": "Use Google Maps for directions, then check the MTA app for arrivals and service updates."
+    },
+    {
+      "label": "Late‑Night Subway Tips",
+      "anchor": "late-night-subway-tips",
+      "description": "Check your return journey, stay aware on the platform and know where to get help."
+    },
+    {
+      "label": "Subway Etiquette 101",
+      "anchor": "subway-etiquette",
+      "description": "Learn the small habits that make boarding, riding and changing trains easier for everyone."
+    }
   ],
-
   "howToRead": [
     "Colors represent subway lines, not boroughs.",
     "Letters and numbers indicate specific services.",
@@ -32,7 +53,6 @@
     "Uptown = northbound; Downtown = southbound.",
     "Weekend service changes are common—always check the MTA app."
   ],
-
   "routes": [
     {
       "title": "JFK → Manhattan",
@@ -80,17 +100,15 @@
       ]
     }
   ],
-
   "safety": [
-  "Stand near the conductor’s car at night.",
-  "Avoid empty subway cars, even if they look convenient.",
-  "Keep your bag in front of you at all times.",
-  "Use Google Maps live navigation for real‑time alerts.",
-  "Choose well‑lit station exits.",
-  "Avoid the last car late at night.",
-  "Safest stations for solo travelers: Times Square–42nd St, 34th St–Penn Station, Fulton Center (all with high visibility, staff presence, and good lighting)."
-],
-
+    "Stand near the conductor’s car at night.",
+    "Avoid empty subway cars, even if they look convenient.",
+    "Keep your bag in front of you at all times.",
+    "Use Google Maps live navigation for real‑time alerts.",
+    "Choose well‑lit station exits.",
+    "Avoid the last car late at night.",
+    "Safest stations for solo travelers: Times Square–42nd St, 34th St–Penn Station, Fulton Center (all with high visibility, staff presence, and good lighting)."
+  ],
   "etiquette": {
     "do": [
       "Let riders exit before you board.",
@@ -105,30 +123,40 @@
       "Don’t play loud music."
     ]
   },
-
   "apps": [
     {
       "name": "MTA Subway Time",
       "benefit": "Real‑time train arrivals and service changes.",
-      "platforms": ["iOS", "Android"]
+      "platforms": [
+        "iOS",
+        "Android"
+      ]
     },
     {
       "name": "Google Maps",
       "benefit": "Best for step‑by‑step subway navigation.",
-      "platforms": ["iOS", "Android"]
+      "platforms": [
+        "iOS",
+        "Android"
+      ]
     },
     {
       "name": "Citymapper",
       "benefit": "Great for comparing subway vs bus vs walking.",
-      "platforms": ["iOS", "Android"]
+      "platforms": [
+        "iOS",
+        "Android"
+      ]
     },
     {
       "name": "Transit App",
       "benefit": "Live crowding data and delay alerts.",
-      "platforms": ["iOS", "Android"]
+      "platforms": [
+        "iOS",
+        "Android"
+      ]
     }
   ],
-
   "downloads": [
     {
       "label": "PDF Subway Map",
@@ -147,7 +175,6 @@
       "file": "/downloads/nyc-accessibility-map.pdf"
     }
   ],
-
   "accessibility": [
     {
       "title": "Stations with Elevators",
@@ -166,14 +193,12 @@
       "content": "Avoid older stations without elevators; plan extra time for transfers."
     }
   ],
-
   "mistakes": [
     "Boarding an express train when you need a local stop.",
     "Ignoring weekend service changes.",
     "Confusing Uptown vs Downtown platforms.",
     "Expecting to tap out—NYC subway only requires tap‑in."
   ],
-
   "faq": [
     {
       "q": "Is the NYC subway safe at night for solo travelers?",
@@ -192,7 +217,6 @@
       "a": "Most lines run 24/7, but frequency drops late at night."
     }
   ],
-
   "relatedLinks": [
     {
       "label": "Solo Trip to NYC (Pillar Guide)",

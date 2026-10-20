@@ -17,6 +17,7 @@ export interface MapSection {
 export interface QuickNavItem {
   label: string;
   anchor: string;
+  description?: string;
 }
 
 export interface RouteScenario {

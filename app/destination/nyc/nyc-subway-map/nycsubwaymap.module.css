@@ -40,6 +40,39 @@
   background: #ffffff;
 }
 
+.mapSection {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.mapSection h2 {
+  margin: 0 0 1rem;
+  color: #101828;
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+}
+
+.mapSection figure {
+  margin: 0;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.mapSection figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mapSection figcaption {
+  padding: 0.65rem 0.85rem;
+  color: #526173;
+  font-size: 0.9rem;
+}
+
 .eyebrow {
   margin: 0 0 0.75rem;
   color: #2459e6;
