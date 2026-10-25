@@ -8,95 +8,32 @@ export default function SafetyNarrative() {
     <article className={styles.narrative} aria-label="Orlando safety guide deep dive">
 
       <section id="is-orlando-safe-2026" className={styles.section}>
-        <h2>Is Orlando Safe for Tourists in 2026?</h2>
+        <h2>Plan for common travel risks</h2>
         <p className={styles.lead}>
-          <strong>Yes.</strong> Orlando is one of the safest major tourist destinations in
-          the United States for the way most people visit it. The resort corridors &mdash;
-          Walt Disney World, Universal, International Drive, and Lake Buena Vista &mdash; are
-          heavily staffed, well-lit, and security-conscious, and violent crime affecting
-          tourists in these zones is very rare. The realistic risks here aren&apos;t about
-          crime at all: they&apos;re the Florida heat, busy-highway driving, car break-ins
-          in dark lots, and a handful of scams aimed squarely at visitors.
+          Orlando is a major visitor destination, and practical trip safety includes more
+          than crime: Florida heat, highway driving, protecting belongings, and avoiding
+          tourist scams all deserve attention. Conditions vary by location and activity, so
+          use current local information when making plans.
         </p>
         <p>
-          Orlando is also spread out and car-centric in a way that big transit-first cities are not.
-          That changes the safety calculus: instead of late-night transit, your decisions
-          are about parking, rideshare, and the distances between resort areas. This guide
-          is built around what visitors actually run into &mdash; not abstract worst cases.
+          Orlando is spread out and many visitors rely on a car, hotel transport or rideshare.
+          Check the arrangements for your itinerary and property before you travel.
         </p>
       </section>
 
       <section id="crime-data-2026" className={styles.section}>
-        <h2>What the Numbers Actually Say</h2>
+        <h2>Everyday safety checks</h2>
         <p>
-          Orlando welcomes well over 70 million visitors a year, and the overwhelming
-          majority never experience anything worse than a sunburn. Crime in the metro area
-          is concentrated in specific residential neighborhoods that tourists have no reason
-          to visit &mdash; not in the resort and attraction corridors where you&apos;ll spend
-          your time.
+          Citywide statistics cannot predict what will happen at a specific address or
+          along a particular route. For recent reported incidents within Orlando city
+          limits, consult the <a href="https://www.orlando.gov/Our-Government/Departments-Offices/Orlando-Police-Department">Orlando Police Department Crime &amp; Cases Dashboard</a>.
         </p>
         <p>
-          Two things to take seriously regardless of the headline numbers:
+          Practical steps that apply across a trip:
         </p>
         <ul>
-          <li><strong>Car break-ins are the most common tourist incident.</strong> Rental cars sitting in large, dark lots are a target. Never leave anything visible &mdash; bags, electronics, even chargers &mdash; and use lit, attended garages where you can.</li>
-          <li><strong>Heat is the genuine health risk.</strong> Far more visitors are hurt by Florida&apos;s summer heat than by crime. Treat hydration and sun protection as safety equipment, not comfort.</li>
-        </ul>
-      </section>
-
-      <section id="day-vs-night" className={styles.section}>
-        <h2>Day vs. Night: When Is Orlando Safest?</h2>
-        <p>
-          <strong>The tourist corridors are safe day and night.</strong> Disney Springs,
-          Universal CityWalk, and International Drive stay busy and patrolled well into the
-          evening. The window where you add a little extra care is late at night, and even
-          then the rule is location- and parking-specific rather than blanket.
-        </p>
-        <h3>Daytime</h3>
-        <p>
-          No special precautions beyond heat management. The biggest daytime risk is the
-          sun, not strangers &mdash; pace yourself, hydrate, and take indoor breaks midday in
-          summer.
-        </p>
-        <h3>Evening</h3>
-        <p>
-          Still safe across the resort and attraction areas, which stay well-populated.
-          Downtown Orlando&apos;s Church Street and Wall Street Plaza get lively; use the
-          same ordinary urban awareness you would in any city after dark.
-        </p>
-        <h3>Late night</h3>
-        <p>
-          This is where you make calls based on where you are and how you&apos;re getting
-          back. Inside the resort districts you&apos;re fine; between them, take a rideshare
-          rather than walking long, dark stretches. Be deliberate in large parking
-          structures &mdash; have your keys ready and your car located before you set off.
-        </p>
-      </section>
-
-      <section id="area-safety" className={styles.section}>
-        <h2>Orlando Area Safety: A Realistic Breakdown</h2>
-        <p>
-          Most tourist-facing areas are safe at the times tourists are in them. Here is a
-          more useful framing &mdash; where to feel relaxed, where to stay alert, and what to
-          watch for.
-        </p>
-        <h3>Reliably safe, day and night</h3>
-        <ul>
-          <li><strong>Disney Springs &amp; Lake Buena Vista.</strong> Heavily staffed retail-and-dining district with strong private security. Among the safest places in the metro at any hour.</li>
-          <li><strong>Universal CityWalk.</strong> Gated entertainment complex with constant security presence; safe to enjoy late.</li>
-          <li><strong>International Drive (I-Drive).</strong> Busy, well-lit tourist corridor. Stay on the main drive and watch your belongings in attraction crowds.</li>
-          <li><strong>Winter Park &amp; Lake Eola / Thornton Park.</strong> Upscale, walkable, low-crime areas that are pleasant in the evening.</li>
-        </ul>
-        <h3>Safe with normal awareness</h3>
-        <ul>
-          <li><strong>Downtown Orlando (Church Street).</strong> Lively nightlife; crowds get rowdier near closing. Stay on the busy, staffed strips and plan your ride home in advance.</li>
-          <li><strong>Kissimmee (US-192).</strong> Fine near the attractions; the long budget-hotel corridor gets quieter and less predictable at night, so a car or rideshare is essential.</li>
-        </ul>
-        <h3>Stay extra alert / skip after dark</h3>
-        <ul>
-          <li><strong>Orange Blossom Trail (OBT) corridor, south of I-4.</strong> Higher reported crime, not a tourist area. No reason to be here at night.</li>
-          <li><strong>Pine Hills (northwest of downtown).</strong> A residential area with higher crime statistics and nothing tourist-related to visit.</li>
-          <li><strong>Large, empty parking lots late at night.</strong> Anywhere &mdash; resort or mall &mdash; treat a deserted lot as the moment to ask security for an escort.</li>
+          <li><strong>Protect belongings in your vehicle.</strong> Keep bags, electronics and other valuables out of sight, and lock the vehicle whenever it is unattended.</li>
+          <li><strong>Plan for Florida heat.</strong> Hydrate, use sun protection and take indoor breaks during hot weather.</li>
         </ul>
       </section>
 
@@ -105,25 +42,24 @@ export default function SafetyNarrative() {
         <p>
           <strong>Orlando is built for cars, so transport safety here is mostly about
           driving, parking, and rideshare</strong> &mdash; there is no subway, and public
-          transit is limited at night.
+          transit coverage and schedules vary by route.
         </p>
         <h3>Driving and parking</h3>
         <ul>
           <li><strong>I-4 demands defensive driving.</strong> It&apos;s one of the busier, more accident-prone interstate stretches in the country. Leave room, expect sudden slowdowns, and avoid aggressive lane changes.</li>
           <li><strong>Never leave valuables visible</strong> in a parked rental &mdash; car break-ins are the most common tourist crime.</li>
-          <li><strong>Park in lit, attended garages</strong> and note your spot so you&apos;re not wandering a lot after dark.</li>
+          <li><strong>Choose parking that fits your plans</strong> and note your space and route back to the hotel or venue.</li>
         </ul>
         <h3>Rideshare and transit</h3>
         <ul>
-          <li><strong>Uber and Lyft</strong> are the easiest and safest option at night &mdash; request from inside a lobby and verify the plate, car, and driver before getting in. They&apos;re often cheaper than parking on a park day.</li>
-          <li><strong>The I-Ride Trolley</strong> covers International Drive in the evening; most resorts run their own shuttles to the parks.</li>
+          <li><strong>Rideshare:</strong> use the venue&apos;s designated pickup area and verify the driver, vehicle and plate in the app before getting in.</li>
+          <li><strong>Local transport:</strong> check current LYNX, I-Ride Trolley and hotel or resort schedules for your specific route.</li>
         </ul>
         <p className={styles.resourceLink}>
-          For where to base yourself, see our{" "}
-          <a href="/destination/orlando/best-areas-to-stay">best areas to stay guide</a>{" "}
-          and the{" "}
-          <a href="/destination/orlando/is-orlando-safe-at-night">is Orlando safe at night</a>{" "}
-          breakdown.
+          For hotel locations, see our{" "}
+          <a href="/destination/orlando/best-areas-to-stay">best areas to stay guide</a>.{" "}
+          For nighttime area comparisons and return planning, see our{" "}
+          <a href="/destination/orlando/is-orlando-safe-at-night">Orlando night-safety guide</a>.
         </p>
       </section>
 
@@ -164,7 +100,7 @@ export default function SafetyNarrative() {
         </ul>
         <h3>While you&apos;re here</h3>
         <ul>
-          <li>Use rideshare between areas at night rather than walking long, dark stretches.</li>
+          <li>Use the designated pickup and verify the driver and vehicle before entering a rideshare.</li>
           <li>Keep a portable phone charger on you &mdash; long park days drain batteries, and your phone is your map, ticket, and lifeline.</li>
           <li>Build in midday heat breaks; pushing through Florida summer afternoons is how solo travelers end up unwell.</li>
           <li>Trust the &ldquo;something feels off&rdquo; signal &mdash; head toward a staffed, busy area and reassess.</li>
@@ -211,10 +147,9 @@ export default function SafetyNarrative() {
       <section id="quick-takeaways" className={styles.section}>
         <h2>The TL;DR</h2>
         <p>
-          Orlando in 2026 is very safe for tourists in the resort and attraction corridors.
-          The real risks are the heat, highway driving, car break-ins, and tourist scams &mdash;
-          not violent crime. Hydrate and protect against the sun, never leave valuables in
-          your car, use rideshare at night, and you&apos;ll have the trip you came for.
+          Build your plans around the practical risks: heat, driving, belongings and scams.
+          Check current local information and transport details for the places you intend
+          to visit.
         </p>
         <p>
           If you take only three habits from this guide:
@@ -222,7 +157,7 @@ export default function SafetyNarrative() {
         <ol>
           <li>Treat the Florida heat as a safety issue &mdash; water and SPF 50 all day.</li>
           <li>Leave nothing visible in a parked car, and park in lit, attended lots.</li>
-          <li>Rideshare between areas at night instead of walking long, dark stretches.</li>
+          <li>Verify rideshare and hotel transport details before each trip.</li>
         </ol>
       </section>
 

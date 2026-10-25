@@ -8,7 +8,7 @@ const linkHubData = [
   {
     id: 2,
     title: "Is Orlando Safe at Night?",
-    description: "An honest look at the tourist corridors, downtown, and areas to skip after dark.",
+    description: "Evening area guidance, walking checks, and how to plan your return.",
     href: "/destination/orlando/is-orlando-safe-at-night"
   },
   {

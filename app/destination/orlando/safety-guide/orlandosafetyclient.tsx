@@ -3,7 +3,6 @@ import Header from './components/Header/header';
 import SafetyHero from './components/herobanner/safetyhero';
 import Footer from './components/Footer/footer';
 import ScenarioSection from './components/scenariosection/scenariosection';
-import NeighborhoodSafetySection from './components/neighborhoodsection/neighborhoodsafetysection';
 import { WhyTrustThisGuide } from './components/WhyTrustThisGuide/whytrustthisguide';
 import cityWhyTrustData from "@/content/destination/orlando/safety-guide/whyTrustItems/whyTrustItems.json";
 import SafetyTipsGrid from './components/SafetyTips/safetytipcardgrid';
@@ -44,7 +43,6 @@ export default function OrlandoSafetyClient() {
         <SafetyNarrative />
         <ScenarioSection />
         <SafetyTipsGrid />
-        <NeighborhoodSafetySection />
         <EmergencyContactBlock />
         <FAQAccordion faqs={faqData} />
         <LinkHubGrid />

@@ -16,13 +16,13 @@ export default function SafetyHero() {
 
         {/* Title + Subtitle */}
         <div className={styles.heroContent}>
-          <h1>Is Orlando Safe for Tourists in 2026? Complete Safety Guide</h1>
+          <h1>Orlando Travel Safety Guide for Visitors</h1>
           <p className={styles.subtitle}>
-            Honest, practical Orlando safety tips for tourists, families, and solo travelers — based on the real situations you'll face around the parks and beyond.
+            Practical guidance on Florida heat, driving, protecting your belongings, tourist scams, and emergency resources for your Orlando trip.
           </p>
 
           <p className={styles.topics}>
-            Areas · Scams · Heat · Driving · Emergencies · Solo Travelers
+            Scams · Heat · Driving · Emergencies · Solo Travelers
           </p>
         </div>
 
@@ -34,10 +34,10 @@ export default function SafetyHero() {
           </h2>
 
           <ul>
-            <li>Which Orlando areas are safest for tourists — and which to skip after dark</li>
+            <li>How to check current local safety information for your itinerary</li>
             <li>How to handle the Florida heat safely at the parks in 2026</li>
             <li>Common tourist scams in Orlando — and how to spot them fast</li>
-            <li>Driving, parking, and rideshare safety around the parks and I-4</li>
+            <li>Driving, parking, and rideshare basics around the parks and I-4</li>
             <li>Safety tips for solo and solo female travelers visiting Orlando</li>
           </ul>
         </div>

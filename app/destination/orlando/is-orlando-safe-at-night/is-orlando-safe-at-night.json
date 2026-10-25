@@ -1,8 +1,8 @@
 {
-  "title": "Is Orlando Safe at Night? Where to Stay and How to Get Back",
+  "title": "Is Orlando Safe at Night? A Neighborhood-by-Neighborhood Guide",
   "heroImage": "/data/majorcities/orlando/assets/orlando.webp",
-  "modified": "2026-10-12",
-  "lead": "Orlando evenings are easier to plan when your hotel, outing and return journey work together. Conditions vary by location and route: a resort bus, a connected convention hotel and a walk across a long commercial corridor are different situations. Choose your base around the nights you will actually have.",
+  "modified": "2026-10-25",
+  "lead": "Yes — Orlando is generally safe at night in the main tourist areas, including International Drive, Disney Springs, Universal CityWalk and the Lake Buena Vista resort corridor. Conditions vary by block, venue and return route, so plan how you will get back before heading out. This guide compares the areas and practical checks for your evening.",
   "areas": [
     {
       "id": "international-drive-universal",
@@ -191,35 +191,31 @@
   "faq": [
     {
       "question": "Is Orlando safe at night for tourists?",
-      "answer": "Nighttime conditions vary by area, activity and return route. Choose a hotel around your evening plans, inspect the actual walking connection and verify transport. No citywide statistic or tourist-area label can guarantee conditions at an individual hotel."
+      "answer": "Orlando's main visitor districts are commonly active in the evening, but conditions vary by venue, block and route. Check the actual walk and transport for your plans; no area label guarantees safety at every address."
     },
     {
-      "question": "Can you walk along International Drive at night?",
-      "answer": "Some trips have useful pedestrian connections, especially around parts of the convention-center district. International Drive is a long corridor, so check sidewalks, crossings and the exact hotel entrance before treating a short map distance as a practical walk."
+      "question": "Is it safe to walk around Orlando at night?",
+      "answer": "It depends on the specific route. Check sidewalks, crossings, lighting and whether businesses are open along the full way. If the route is isolated or unclear, use a verified ride or your hotel's documented transport."
     },
     {
-      "question": "Is Downtown Orlando safe after dark?",
-      "answer": "Downtown is an evening dining and event destination, but conditions vary by block and occasion. Check the route between your venue and hotel and arrange transport that fits the event finish rather than relying on a general label for Downtown."
+      "question": "Is Downtown Orlando safe at night?",
+      "answer": "Downtown has restaurants, venues and nightlife, and conditions can vary by block and event. Stay on your planned route, check the venue's current pickup guidance, and arrange your return before going out."
     },
     {
-      "question": "Should you stay near Disney or Universal?",
-      "answer": "Choose around the resort you will visit most, particularly for late returns. Compare the actual hotel transport, transfer time and total cost. A mixed itinerary may need a different plan for each evening."
+      "question": "Is International Drive safe at night?",
+      "answer": "International Drive is a long corridor with different pedestrian conditions from one section to another. Use active, marked routes, check major-road crossings and don't assume a nearby hotel is within an easy walk."
     },
     {
-      "question": "Can you visit Orlando without renting a car?",
-      "answer": "Yes, with itinerary-specific planning. Resort transport, hotel services and public transit can cover useful journeys, but connections and late returns need checking. Include rideshare costs when comparing hotel bases."
+      "question": "Are Disney Springs and Universal CityWalk safe at night?",
+      "answer": "They are major evening visitor destinations. Follow each venue's current rules and transport instructions, and confirm how you will get from the venue to your particular hotel afterward."
     },
     {
-      "question": "Do Orlando hotels offer free theme-park shuttles?",
-      "answer": "Some properties provide transport, but do not assume it is free or serves every park and evening venue. Check the exact destinations, fee, reservation rules and last return directly with the hotel."
+      "question": "Is Orlando safe for solo female travelers at night?",
+      "answer": "Solo travelers can use the same route and transport checks: choose a clear return, use the venue's designated pickup, verify the driver's name, vehicle and plate, and share trip status with someone you trust if helpful."
     },
     {
-      "question": "How do you get back after CityWalk or Disney Springs?",
-      "answer": "Use the transport documented for your specific property or arrange a taxi, rideshare or driving return. Confirm that an off-site hotel shuttle serves the evening destination and still operates when you plan to leave."
-    },
-    {
-      "question": "Are airport hotels a good base for a theme-park trip?",
-      "answer": "They can be practical for a late arrival or early flight. For the rest of the trip, compare the repeated park journeys and transport arrangements. An airport shuttle does not establish a convenient theme-park connection."
+      "question": "How can I use rideshare safely in Orlando?",
+      "answer": "Request from the venue's designated pickup area, match the app's driver and vehicle details before entering, and share the trip status if useful. Do not accept a ride from someone who approaches you outside the app."
     }
   ]
 }

@@ -17,6 +17,7 @@ const navLinks = [
   { href: "/destination/orlando/best-areas-to-stay", label: "Best Areas to Stay" },
   { href: "/destination/orlando/solo-trip-to-orlando", label: "Solo Trip to Orlando" },
   { href: "/destination/orlando/safety-guide", label: "Orlando Safety" },
+  { href: "/destination/orlando/is-orlando-safe-at-night", label: "Orlando Night Safety" },
   { href: "/destination/orlando/orlando-female-solo-travel-guide", label: "Female Travel Guide" },
 ];
 

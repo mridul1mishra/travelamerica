@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Is Orlando Safe for Tourists? 2026 Safety Guide',
-  description: 'Honest Orlando safety guide — which areas to avoid, theme park safety, Florida heat and sun tips, tourist scams, and what solo travelers should know.',
+  title: 'Orlando Travel Safety Guide: Heat, Driving & Scams',
+  description: 'Practical Orlando safety advice for visitors, including Florida heat, driving, protecting your belongings, tourist scams, and emergency resources.',
   alternates: { canonical: 'https://www.travelsamericas.com/destination/orlando/safety-guide' },
-  openGraph: { title: 'Is Orlando Safe in 2026?', description: 'Real Orlando safety advice for tourists — areas, scams, heat, and driving.', url: 'https://www.travelsamericas.com/destination/orlando/safety-guide', type: 'article' },
+  openGraph: { title: 'Orlando Travel Safety Guide', description: 'Practical advice on heat, driving, belongings, scams, and emergency resources for Orlando visitors.', url: 'https://www.travelsamericas.com/destination/orlando/safety-guide', type: 'article' },
 };
 import OrlandoSafetyClient from './orlandosafetyclient';
 
@@ -20,8 +20,8 @@ export default function OrlandoSafetyPage() {
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Is Orlando Safe for Tourists? 2026 Safety Guide",
-      "description": "Honest Orlando safety guide — which areas to avoid, theme park safety, Florida heat and sun tips, tourist scams, and what solo travelers should know.",
+      "headline": "Orlando Travel Safety Guide: Heat, Driving & Scams",
+      "description": "Practical Orlando safety advice for visitors, including Florida heat, driving, protecting your belongings, tourist scams, and emergency resources.",
       "url": "https://www.travelsamericas.com/destination/orlando/safety-guide",
       "inLanguage": "en-US",
       "publisher": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },

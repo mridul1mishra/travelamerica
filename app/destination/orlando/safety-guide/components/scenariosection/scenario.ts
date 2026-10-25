@@ -64,11 +64,11 @@ const scenarios = [
   },
   {
     id: 8,
-    title: "A Night Out in Downtown Orlando",
+    title: "Checking Local Safety Information",
     content: [
-      "Keep your drink in sight at all times",
-      "Stay on the busy, staffed strips like Church Street",
-      "Arrange your ride home before the bars close"
+      "Use the Orlando Police Department Crime & Cases Dashboard for reports within city limits",
+      "Check the relevant county or municipality for locations outside Orlando city limits",
+      "Use emergency services for an immediate threat"
     ]
   }
 ];
