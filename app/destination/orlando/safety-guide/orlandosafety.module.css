@@ -1,7 +1,27 @@
-.container { 
-  max-width: 720px; /* or 800px depending on your editorial width */ 
-  margin: 0 auto; 
-  padding: 0 1rem; /* mobile breathing room */ 
-  box-sizing: border-box;
+.page { min-height: 100vh; background: #fff; }
+
+.pageShell {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  column-gap: 48px;
+  align-items: start;
+  width: min(calc(100% - 64px), 1120px);
+  margin: 0 auto;
+  color: #334155;
 }
-body { background-color: #f5f7fa; }
+
+@media (min-width: 768px) and (max-width: 1099px) {
+  .pageShell { width: calc(100% - 48px); }
+}
+
+@media (max-width: 767px) {
+  .pageShell {
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 360px) {
+  .pageShell { width: calc(100% - 32px); }
+}

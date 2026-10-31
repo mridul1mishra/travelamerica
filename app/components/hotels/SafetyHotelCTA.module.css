@@ -8,3 +8,30 @@
 .link:hover { background: #843823; }
 .link:focus-visible { outline: 3px solid #172438; outline-offset: 4px; }
 @media (max-width: 600px) { .block { padding: 24px 20px; } .block ul { flex-direction: column; } }
+
+/* Opt-in presentation for the Orlando safety-guide hotel action only. */
+.link.orlandoGuideLink,
+.link.orlandoGuideLink:visited {
+  box-sizing: border-box;
+  min-height: 48px;
+  max-width: 100%;
+  padding: 12px 20px;
+  gap: 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: #1d4ed8;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.link.orlandoGuideLink:hover { background: #1e40af; color: #fff; text-decoration: none; }
+.link.orlandoGuideLink:active { background: #1e3a8a; color: #fff; text-decoration: none; }
+.link.orlandoGuideLink:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 3px; }
+
+@media (max-width: 639px) {
+  .link.orlandoGuideLink { width: 100%; justify-content: space-between; }
+}
