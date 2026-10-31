@@ -1,8 +1,8 @@
 {
-  "title": "Is Orlando Safe at Night? A Neighborhood-by-Neighborhood Guide",
+  "title": "Is Orlando Safe at Night? An Area-by-Area Guide",
   "heroImage": "/data/majorcities/orlando/assets/orlando.webp",
-  "modified": "2026-10-25",
-  "lead": "Yes — Orlando is generally safe at night in the main tourist areas, including International Drive, Disney Springs, Universal CityWalk and the Lake Buena Vista resort corridor. Conditions vary by block, venue and return route, so plan how you will get back before heading out. This guide compares the areas and practical checks for your evening.",
+  "modified": "2026-10-31",
+  "lead": "You can plan an evening out in Orlando, but do not treat every route as equally suitable for walking after dark. Start with the place you want to visit, check its current hours and access arrangements, and decide how you will return before leaving your hotel. This guide compares International Drive, Disney Springs, Universal CityWalk and Downtown Orlando, with practical checks for walking, pickups and getting back.",
   "areas": [
     {
       "id": "international-drive-universal",
@@ -190,32 +190,24 @@
   ],
   "faq": [
     {
-      "question": "Is Orlando safe at night for tourists?",
-      "answer": "Orlando's main visitor districts are commonly active in the evening, but conditions vary by venue, block and route. Check the actual walk and transport for your plans; no area label guarantees safety at every address."
-    },
-    {
       "question": "Is it safe to walk around Orlando at night?",
-      "answer": "It depends on the specific route. Check sidewalks, crossings, lighting and whether businesses are open along the full way. If the route is isolated or unclear, use a verified ride or your hotel's documented transport."
-    },
-    {
-      "question": "Is Downtown Orlando safe at night?",
-      "answer": "Downtown has restaurants, venues and nightlife, and conditions can vary by block and event. Stay on your planned route, check the venue's current pickup guidance, and arrange your return before going out."
+      "answer": "It depends on the specific route. Before walking, check sidewalks, crossings, distance and your return plan. Do not assume that two places in the same tourist area have a suitable walking connection. If the route is uncertain, arrange transport."
     },
     {
       "question": "Is International Drive safe at night?",
-      "answer": "International Drive is a long corridor with different pedestrian conditions from one section to another. Use active, marked routes, check major-road crossings and don't assume a nearby hotel is within an easy walk."
+      "answer": "Treat International Drive as a collection of specific routes rather than one uniform walking area. Check the stretch between your hotel and evening destination, particularly road crossings and the return journey. Use transport if you cannot confirm a route you are comfortable walking."
     },
     {
-      "question": "Are Disney Springs and Universal CityWalk safe at night?",
-      "answer": "They are major evening visitor destinations. Follow each venue's current rules and transport instructions, and confirm how you will get from the venue to your particular hotel afterward."
+      "question": "Is Downtown Orlando safe at night?",
+      "answer": "Plan around your actual venue and the blocks you will use, rather than relying on a blanket verdict for Downtown. Decide where you will meet your return transport and avoid an unplanned walk to an unfamiliar pickup location."
     },
     {
-      "question": "Is Orlando safe for solo female travelers at night?",
-      "answer": "Solo travelers can use the same route and transport checks: choose a clear return, use the venue's designated pickup, verify the driver's name, vehicle and plate, and share trip status with someone you trust if helpful."
+      "question": "Is Disney Springs safe at night?",
+      "answer": "Check current venue information and distinguish visiting Disney Springs from walking back to a hotel elsewhere in Lake Buena Vista. Confirm the exit, pickup point and return service for your accommodation before you go."
     },
     {
-      "question": "How can I use rideshare safely in Orlando?",
-      "answer": "Request from the venue's designated pickup area, match the app's driver and vehicle details before entering, and share the trip status if useful. Do not accept a ride from someone who approaches you outside the app."
+      "question": "What should solo travelers plan before an evening out?",
+      "answer": "Decide on your return transport, keep your phone charged and share your plans with someone you trust. For a booked ride, verify the vehicle and driver details in the app before entering, and do not accept a ride that does not match your booking."
     }
   ]
 }

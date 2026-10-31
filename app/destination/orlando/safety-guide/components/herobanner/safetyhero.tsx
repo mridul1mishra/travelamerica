@@ -1,4 +1,5 @@
 import styles from "./safetyhero.module.css";
+import Link from "next/link";
 
 export default function SafetyHero() {
   return (
@@ -7,9 +8,9 @@ export default function SafetyHero() {
 
         {/* Breadcrumb */}
         <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-          <a href="/">Home</a>
+          <Link href="/">Home</Link>
           <span>›</span>
-          <a href="/destination/orlando/solo-trip-to-orlando">Solo Trip to Orlando</a>
+          <Link href="/destination/orlando">Orlando</Link>
           <span>›</span>
           <span className={styles.current}>Orlando Safety Guide</span>
         </nav>
@@ -18,27 +19,26 @@ export default function SafetyHero() {
         <div className={styles.heroContent}>
           <h1>Orlando Travel Safety Guide for Visitors</h1>
           <p className={styles.subtitle}>
-            Practical guidance on Florida heat, driving, protecting your belongings, tourist scams, and emergency resources for your Orlando trip.
+            Planning an Orlando trip? Start with the places you will visit, how you will travel between them and the precautions your itinerary needs. This guide covers area context, belongings, scams, driving and parking, heat precautions and emergency planning. For detailed evening routes and return transport, use our <Link href="/destination/orlando/is-orlando-safe-at-night">Orlando night-safety guide</Link>.
           </p>
 
           <p className={styles.topics}>
-            Scams · Heat · Driving · Emergencies · Solo Travelers
+            General trip precautions · Heat · Driving · Emergency planning
           </p>
         </div>
 
         {/* Info Section */}
         <div className={styles.infoBox}>
-          <h2>
+          <p className={styles.infoLabel}>
             <span className={styles.infoIcon}>ℹ</span>
-            In this Orlando safety guide, you'll learn:
-          </h2>
+            In this Orlando safety guide
+          </p>
 
           <ul>
-            <li>How to check current local safety information for your itinerary</li>
-            <li>How to handle the Florida heat safely at the parks in 2026</li>
-            <li>Common tourist scams in Orlando — and how to spot them fast</li>
-            <li>Driving, parking, and rideshare basics around the parks and I-4</li>
-            <li>Safety tips for solo and solo female travelers visiting Orlando</li>
+            <li>How to assess the area around your accommodation and planned stops.</li>
+            <li>Practical precautions for belongings, bookings, driving and transport.</li>
+            <li>Heat and sun precautions for daytime outings.</li>
+            <li>What to do if plans go wrong and where to find emergency resources.</li>
           </ul>
         </div>
 

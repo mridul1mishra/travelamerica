@@ -4,13 +4,14 @@ import { cityHotelUrl, uniqueAreas, type HotelAreaChoice, type SafetyHotelCity }
 
 // City-aware version of SafetyHotelCTA. The module itself is a view target
 // (hotel_cta_view) and its button is a click target (hotel_cta_click).
-export default function CitySafetyHotelCTA({ city, title, intro, choices, source, trackingId, placement = "after_hero", buttonLabel = "Find Hotels in These Areas" }: {
+export default function CitySafetyHotelCTA({ city, title, intro, choices, source, trackingId, placement = "after_hero", buttonLabel = "Find Hotels in These Areas", headingLevel = 2 }: {
   city: SafetyHotelCity; title: string; intro?: string; choices: HotelAreaChoice[]; source: string;
-  trackingId: string; placement?: string; buttonLabel?: string;
+  trackingId: string; placement?: string; buttonLabel?: string; headingLevel?: 2 | 3;
 }) {
+  const Heading = headingLevel === 3 ? "h3" : "h2";
   return <aside className={styles.block} aria-label={title} data-safety-hotel-cta
     id={trackingId} data-hotel-cta-module="true" data-cta-id={trackingId} data-cta-placement={placement}>
-    <h2>{title}</h2>
+    <Heading>{title}</Heading>
     {intro && <p>{intro}</p>}
     <ul>
       {choices.map(choice => <li key={choice.label}><span aria-hidden="true">✓</span>{choice.label}</li>)}
