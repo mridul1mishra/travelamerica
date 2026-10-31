@@ -1,68 +1,104 @@
-.desktopContents {
-  grid-column: 1;
+.sectionNavigation {
+  grid-column: 1 / -1;
   grid-row: 2;
   position: sticky;
-  top: 24px;
-  align-self: start;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  max-height: calc(100dvh - 40px);
-  padding: 0 12px 0 0;
+  top: 0;
+  z-index: 5;
+  min-width: 0;
+  width: 100%;
+  margin: 0 0 24px;
+  padding-top: 8px;
+  background: #fff;
   color: #334155;
 }
 
-.desktopContents h2 {
-  flex: 0 0 auto;
+.sectionNavigationLabel {
+  display: block;
   margin: 0 0 12px;
-  color: #0f172a;
-  font-size: 0.875rem;
-  font-weight: 700;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 1.4;
 }
 
+.navigationRow {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.navigationRow > .contentsList:only-child { grid-column: 1 / -1; }
+
+.scrollArrow {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+  color: #334155;
+  font: inherit;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.scrollArrow:hover:not(:disabled) { border-color: #1d4ed8; color: #1d4ed8; }
+.scrollArrow:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 2px; }
+.scrollArrow:disabled { color: #94a3b8; cursor: default; }
+
 .contentsList {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-wrap: nowrap;
+  gap: 0 24px;
+  min-width: 0;
   margin: 0;
-  padding: 3px 3px 16px;
+  padding: 0;
+  border-bottom: 1px solid #e2e8f0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
   list-style: none;
 }
 
-.contentsList li { margin: 0; padding: 0; }
+.contentsList::-webkit-scrollbar { display: none; }
+.contentsList li { flex: 0 0 auto; margin: 0; padding: 0; scroll-snap-align: start; }
 .contentsList a {
-  display: block;
   box-sizing: border-box;
-  width: 100%;
-  padding: 10px 12px;
-  border-left: 3px solid transparent;
-  border-radius: 6px;
-  color: #475569;
-  font-size: 0.9375rem;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 0 8px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  background: transparent;
+  color: #334155;
+  font-size: 15px;
   font-weight: 500;
-  line-height: 1.45;
+  line-height: 1.35;
   text-align: left;
   text-decoration: none;
-  overflow-wrap: break-word;
+  white-space: nowrap;
 }
 
-.desktopContents .contentsList { flex: 0 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #94a3b8 transparent; }
-.desktopContents .contentsList::-webkit-scrollbar { width: 6px; }
-.desktopContents .contentsList::-webkit-scrollbar-thumb { border-radius: 999px; background: #94a3b8; }
-.desktopContents .contentsList::-webkit-scrollbar-track { background: transparent; }
-.contentsList a:visited { color: #475569; text-decoration: none; }
-.contentsList a:hover { background: #f8fafc; color: #0f172a; text-decoration: none; }
-.contentsList a[aria-current="location"] { border-left-color: #1d4ed8; background: #eff6ff; color: #1d4ed8; font-weight: 600; }
-.contentsList a:focus-visible { outline: 2px solid #1d4ed8; outline-offset: 2px; }
-
-.mobileContents { display: none; }
+.contentsList a:visited { color: #334155; text-decoration: none; }
+.contentsList a:hover { color: #1d4ed8; text-decoration: none; }
+.contentsList a[aria-current="location"] { border-bottom-color: #1d4ed8; color: #1d4ed8; text-decoration: none; }
+.contentsList a:focus-visible { outline: 2px solid #1d4ed8; outline-offset: -2px; }
 
 .narrative {
-  grid-column: 2;
-  grid-row: 2;
+  grid-column: 1;
+  grid-row: 3;
   min-width: 0;
-  width: min(100%, 760px);
+  width: 100%;
   margin: 0;
   padding: 0 0 24px;
   color: #334155;
@@ -107,8 +143,10 @@
   margin: 0 0 44px;
   padding: 0 0 40px;
   border-bottom: 1px solid #cbd5e1;
-  scroll-margin-top: 24px;
+  scroll-margin-top: 104px;
 }
+
+.narrative > [id="stay"] { scroll-margin-top: 104px; }
 
 .section:focus { outline: none; }
 .section:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 6px; border-radius: 4px; }
@@ -122,55 +160,14 @@
 .areaBlock h3 { margin-top: 0; }
 
 @media (max-width: 1099px) {
-  .desktopContents { display: none; }
-  .mobileContents {
-    display: block;
-    grid-column: 1;
-    grid-row: 2;
-    min-width: 0;
-    margin: 0 0 20px;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    background: #fff;
-    color: #0f172a;
-  }
-  .mobileContents summary {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 48px;
-    padding: 0 16px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    font-weight: 700;
-    list-style: none;
-  }
-  .mobileContents summary::-webkit-details-marker { display: none; }
-  .mobileContents summary:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 3px; border-radius: 7px; }
-  .chevron {
-    width: 10px;
-    height: 10px;
-    margin: -5px 2px 0 12px;
-    border-right: 2px solid #334155;
-    border-bottom: 2px solid #334155;
-    transform: rotate(45deg);
-    transition: transform 120ms ease;
-  }
-  .mobileContents[open] .chevron { margin-top: 5px; transform: rotate(225deg); }
-  .mobileContents nav { padding: 0 13px 13px; }
-  .mobileContents .contentsList { gap: 4px; }
-  .mobileContents .contentsList a { padding-top: 10px; padding-bottom: 10px; }
+  .contentsList { gap: 0 20px; }
+  .scrollArrow { width: 32px; height: 32px; }
   .narrative { grid-column: 1; grid-row: 3; width: 100%; font-size: 1rem; line-height: 1.65; }
   .narrative h2 { font-size: 1.5rem; line-height: 1.3; }
   .narrative h3 { margin-top: 22px; font-size: 1.1875rem; }
-  .section { margin-bottom: 36px; padding-bottom: 32px; scroll-margin-top: 20px; }
+  .section { margin-bottom: 36px; padding-bottom: 32px; scroll-margin-top: 104px; }
 }
 
-@media (max-width: 360px) {
-  .mobileContents summary { padding-right: 12px; padding-left: 12px; }
-  .mobileContents nav { padding-right: 9px; padding-left: 9px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .chevron { transition: none; }
+@media (max-width: 767px) {
+  .contentsList { gap: 0 8px; }
 }
