@@ -14,10 +14,23 @@
 .breadcrumb { display: flex; flex-wrap: wrap; gap: .5rem; font-size: .85rem; }
 .page .eyebrow { color: #516c7b; font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .5rem; }
 .page .lead { font-size: 1.1rem; }
+.page .byline { margin-top: 1rem; color: #516c7b; font-size: .85rem; }
+.byline a { font-weight: 650; }
+.heroActions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin-top: 1rem; }
+.page .heroPrimaryButton, .page .heroSecondaryButton { display: flex; align-items: center; justify-content: center; min-width: 0; min-height: 52px; box-sizing: border-box; padding: .85rem 1rem; border: 1px solid transparent; border-radius: 7px; font-size: .95rem; font-weight: 750; line-height: 1.4; text-align: center; text-decoration: none; }
+.page .heroPrimaryButton { background: #1d4ed8; color: #fff; }
+.page .heroPrimaryButton:hover { background: #1e40af; color: #fff; }
+.page .heroSecondaryButton { border-color: #b9d4ff; background: #edf4ff; color: #1d4ed8; }
+.page .heroSecondaryButton:hover { background: #dceaff; color: #1e40af; }
+.heroDetails { margin-top: .6rem; color: #516c7b; font-size: .85rem; line-height: 1.65; }
+.heroDetails strong { color: #12283c; }
+.factCheck { font-size: .75rem; }
+.verdict { font-size: .8rem; }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.5rem; }
 .page .button { display: inline-block; padding: .8rem 1.15rem; border-radius: 6px; background: #164c65; color: #fff; font-size: .95rem; font-weight: 650; text-decoration: none; }
 .page .button:hover { background: #0f3548; color: #fff; }
-.section { padding: 2.5rem 0; border-bottom: 1px solid #dce5e9; scroll-margin-top: 1.5rem; }
+.section { padding: 2.5rem 0; border-bottom: 1px solid #dce5e9; scroll-margin-top: calc(var(--night-guide-navigation-height, 0px) + 1.5rem); }
+.section [id] { scroll-margin-top: calc(var(--night-guide-navigation-height, 0px) + 1.5rem); }
 .section p { max-width: 85ch; }
 .twoColumns, .threeColumns { display: grid; gap: 1.2rem 2rem; }
 .twoColumns { grid-template-columns: repeat(2, minmax(0, 1fr)); }

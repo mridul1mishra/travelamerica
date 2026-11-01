@@ -1,0 +1,97 @@
+[
+  {
+    "url": "https://www.golynx.com/maps-schedules/routes-schedules.stml",
+    "status": 200,
+    "finalUrl": "https://www.golynx.com/maps-schedules/routes-schedules.stml"
+  },
+  {
+    "url": "https://sunrail.com/",
+    "status": 200,
+    "finalUrl": "https://sunrail.com/"
+  },
+  {
+    "url": "https://flymco.com/ground-transportation/hotel-shuttles/",
+    "status": 200,
+    "finalUrl": "https://flymco.com/ground-transportation/hotel-shuttles/"
+  },
+  {
+    "url": "https://www.occc.net/Attendee-Getting-Here",
+    "status": 200,
+    "finalUrl": "https://www.occc.net/Attendee-Getting-Here"
+  },
+  {
+    "url": "https://www.ocso.com/tourist-safety/",
+    "status": 200,
+    "finalUrl": "https://www.ocso.com/tourist-safety/"
+  },
+  {
+    "url": "https://www.ocso.com/upd/",
+    "status": 200,
+    "finalUrl": "https://www.ocso.com/upd/"
+  },
+  {
+    "url": "https://www.roseninn9000.com/",
+    "status": 200,
+    "finalUrl": "https://www.roseninn9000.com/"
+  },
+  {
+    "url": "https://www.internationaldriveorlando.com/iride-trolley/i-ride-trolley-faqs.html",
+    "status": 200,
+    "finalUrl": "https://www.internationaldriveorlando.com/iride-trolley/i-ride-trolley-faqs.html"
+  },
+  {
+    "url": "https://pointeorlando.com/",
+    "status": 200,
+    "finalUrl": "https://pointeorlando.com/"
+  },
+  {
+    "url": "https://www.disneysprings.com/plan-your-visit/",
+    "status": 200,
+    "finalUrl": "https://www.disneysprings.com/plan-your-visit/"
+  },
+  {
+    "url": "https://www.hilton.com/en/hotels/orldwhh-hilton-orlando-lake-buena-vista/",
+    "status": 403,
+    "finalUrl": "https://www.hilton.com/en/hotels/orldwhh-hilton-orlando-lake-buena-vista/"
+  },
+  {
+    "url": "https://www.universalorlando.com/web/en/us/places-to-stay/universals-cabana-bay-beach-resort",
+    "status": 200,
+    "finalUrl": "https://www.universalorlando.com/web/en/us/places-to-stay/universals-cabana-bay-beach-resort"
+  },
+  {
+    "url": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/directions-and-parking",
+    "status": 200,
+    "finalUrl": "https://www.universalorlando.com/web/en/us/plan-your-visit/hours-information/directions-and-parking"
+  },
+  {
+    "url": "https://www.golynx.com/plan-trip/riding-lynx/lymmo.stml",
+    "status": 200,
+    "finalUrl": "https://www.golynx.com/plan-trip/riding-lynx/lymmo.stml"
+  },
+  {
+    "url": "https://www.orlando.gov/Public-Safety/OPD/OPD-Records-Open-Data",
+    "status": 200,
+    "finalUrl": "https://www.orlando.gov/Public-Safety/OPD/OPD-Records-Open-Data"
+  },
+  {
+    "url": "https://www.golynx.com/maps-schedules/routes-detail.stml?calendar_entry_id=9314&portalProcess_dd_0_1_1=showPublicPosting",
+    "status": 200,
+    "finalUrl": "https://www.golynx.com/maps-schedules/routes-detail.stml?calendar_entry_id=9314&portalProcess_dd_0_1_1=showPublicPosting"
+  },
+  {
+    "url": "https://www.golynx.com/maps-schedules/routes-detail.stml?calendar_entry_id=9315&portalProcess_dd_0_1_1=showPublicPosting",
+    "status": 200,
+    "finalUrl": "https://www.golynx.com/maps-schedules/routes-detail.stml?calendar_entry_id=9315&portalProcess_dd_0_1_1=showPublicPosting"
+  },
+  {
+    "url": "https://www.kissimmee.gov/Services/Police/Agency-Initiatives/Neighborhood-Watch",
+    "status": 200,
+    "finalUrl": "https://www.kissimmee.gov/Services/Police/Agency-Initiatives/Neighborhood-Watch"
+  },
+  {
+    "url": "https://www.myoldtownusa.com/frequently-asked-questions",
+    "status": 200,
+    "finalUrl": "https://www.myoldtownusa.com/frequently-asked-questions"
+  }
+]

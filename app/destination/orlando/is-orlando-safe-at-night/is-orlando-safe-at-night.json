@@ -108,13 +108,13 @@
     ]
   ],
   "checklist": [
-    "Inspect the route to the hotel entrance, including sidewalks, crossings and parking-lot approaches.",
-    "Ask which destinations the shuttle serves. A theme-park shuttle may not serve CityWalk or Disney Springs.",
-    "Confirm reservations, fees, frequency and the final return on your travel dates.",
-    "Check parking charges, access and whether a planned event lot allows the stay you need.",
-    "Confirm late check-in instructions and save the reception or shuttle contact before traveling.",
-    "Check room occupancy and sleeping arrangements rather than assuming a family can use every room type.",
-    "Confirm accessible rooms and vehicles, reservation requirements and the final route from drop-off to door."
+    "Confirm the exact hotel entrance and a continuous pedestrian connection, including controlled crossings, curb ramps and parking-lot approaches; daytime mapping does not verify nighttime lighting.",
+    "Ask which named destinations the shuttle serves and who may use it. A theme-park service does not establish a CityWalk or Disney Springs return.",
+    "Get reservations, fees, boarding location and the final return in writing for your dates; check weekends, holidays and special events separately.",
+    "Check parking charges, access, event-lot restrictions and the route back to your vehicle. Keep belongings out of view.",
+    "Confirm late check-in, lobby or pedestrian-gate access and where a return vehicle can drop you. Save reception and shuttle contacts before leaving.",
+    "Confirm room occupancy and sleeping arrangements for your party, then verify seats, stroller arrangements and any child-restraint requirements with the transport provider.",
+    "Confirm accessible rooms, vehicle boarding and reservations, plus the complete route from drop-off to door. Venue accessibility does not verify the hotel shuttle or every crossing."
   ],
   "transport": [
     [
@@ -191,23 +191,23 @@
   "faq": [
     {
       "question": "Is it safe to walk around Orlando at night?",
-      "answer": "It depends on the specific route. Before walking, check sidewalks, crossings, distance and your return plan. Do not assume that two places in the same tourist area have a suitable walking connection. If the route is uncertain, arrange transport."
+      "answer": "An Orlando night walk needs a route-specific plan: check the venue exit, continuous sidewalks, controlled crossings and the hotel entrance, then consider the return time and any closures. A short map distance or a documented resort path is not proof that current lighting, surfaces or accessibility have been inspected. This guide does not provide a completed nighttime audit of every route. If you cannot establish a usable connection, arrange transport and keep a separate backup."
     },
     {
       "question": "Is International Drive safe at night?",
-      "answer": "Treat International Drive as a collection of specific routes rather than one uniform walking area. Check the stretch between your hotel and evening destination, particularly road crossings and the return journey. Use transport if you cannot confirm a route you are comfortable walking."
+      "answer": "International Drive is a long corridor, not one uniform walking area. The Pointe Orlando–Rosen Inn at Pointe Orlando reference journey still requires checking the road crossing and the approach to the hotel entrance. I-RIDE’s published daily hours end at 10:30 p.m.; that is an operating span, not a guaranteed final pickup at your stop. For a later dinner or event, confirm a separate return and the venue’s designated pickup instructions."
     },
     {
       "question": "Is Downtown Orlando safe at night?",
-      "answer": "Plan around your actual venue and the blocks you will use, rather than relying on a blanket verdict for Downtown. Decide where you will meet your return transport and avoid an unplanned walk to an unfamiliar pickup location."
+      "answer": "Downtown advice depends on the actual venue, hotel block and event date. Choose your parking or pickup location before going out, and recheck road closures for sports, performances or other events. LYMMO’s ordinary Orange and Grapefruit hours end at 8:25 p.m.; do not count on an extension unless LYNX confirms it. The Lake Eola-to-hotel example in the research is a planning reference, not a route we have inspected after dark."
     },
     {
       "question": "Is Disney Springs safe at night?",
-      "answer": "Check current venue information and distinguish visiting Disney Springs from walking back to a hotel elsewhere in Lake Buena Vista. Confirm the exit, pickup point and return service for your accommodation before you go."
+      "answer": "Disney documents pedestrian connections to select nearby hotels, but that does not verify every Lake Buena Vista hotel walk. Confirm your property’s route or transport, the relevant exit and your return time. A documented connection does not establish current lighting or accessibility. Check access and closures for your date rather than treating the whole district as one safety category."
     },
     {
       "question": "What should solo travelers plan before an evening out?",
-      "answer": "Decide on your return transport, keep your phone charged and share your plans with someone you trust. For a booked ride, verify the vehicle and driver details in the app before entering, and do not accept a ride that does not match your booking."
+      "answer": "Save your hotel address, return instructions and a backup payment method before leaving. Keep enough phone charge for maps and transport, share your plans with someone you trust if useful, and choose an identifiable meeting point. Match the driver and vehicle to your booking before entering. If they do not match, step back to a staffed public place and use the provider’s support process; call 911 for immediate danger."
     }
   ]
 }
