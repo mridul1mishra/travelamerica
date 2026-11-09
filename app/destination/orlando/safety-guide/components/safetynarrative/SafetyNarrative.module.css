@@ -159,6 +159,37 @@
 }
 .areaBlock h3 { margin-top: 0; }
 
+.emergencyTableScroll {
+  margin: 0 0 16px;
+  overflow-x: auto;
+}
+
+.emergencyTableScroll:focus-visible {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 3px;
+}
+
+.emergencyTable {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.emergencyTable th,
+.emergencyTable td {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  vertical-align: top;
+}
+
+.emergencyTable thead th {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.emergencyTable a[href^="tel:"] { white-space: nowrap; }
+
 @media (max-width: 1099px) {
   .contentsList { gap: 0 20px; }
   .scrollArrow { width: 32px; height: 32px; }

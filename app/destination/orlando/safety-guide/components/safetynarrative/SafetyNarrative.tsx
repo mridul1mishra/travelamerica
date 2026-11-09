@@ -141,119 +141,472 @@ export default function SafetyNarrative() {
   return <>
     <ContentsNavigation />
     <article className={styles.narrative} aria-label="Orlando safety guide">
-    <section id="essentials" className={styles.section} tabIndex={-1}><span id="safety" /><span id="is-orlando-safe-2026" /><span id="quick-takeaways" /><h2>Orlando tourist safety: the essentials</h2>
-      <p>An Orlando itinerary can cross the City of Orlando, unincorporated Orange County, Lake Buena Vista and Kissimmee. A hotel marketed to Orlando visitors may sit outside city limits, so its actual address matters when checking transport and the agency responsible for a non-emergency. Plan around your busiest park, convention or downtown day rather than treating the whole attraction area as one compact neighbourhood. Before booking, confirm your accommodation’s exact address and transport arrangements. Use these checks to turn a broad safety question into a practical trip plan:</p>
-      <ul>
-        <li><strong>Accommodation:</strong> Can the property confirm parking, access arrangements and the transport you need?</li>
-        <li><strong>Walking:</strong> Can you identify a continuous route with suitable sidewalks and crossings?</li>
-        <li><strong>Driving:</strong> Have you chosen a toll-payment method and checked parking terms?</li>
-        <li><strong>Tickets:</strong> Do you know who supplies the ticket, what it includes and the conditions attached to the offer?</li>
-        <li><strong>Outdoor plans:</strong> Have you identified water, cooling breaks and an indoor shelter option?</li>
-        <li><strong>Help:</strong> Have you saved your accommodation address and the appropriate emergency information?</li>
-      </ul>
-    </section>
+      <section id="essentials" className={styles.section} tabIndex={-1}>
+        <span id="safety" />
+        <span id="is-orlando-safe-2026" />
+        <span id="quick-takeaways" />
+        <h2>Orlando tourist safety: the essentials</h2>
+        <p>
+          Start with the places you will actually visit rather than searching for a single safety label for the whole trip. Build a plan for your accommodation, journeys, outdoor activities and essential belongings, then identify what you would do if transport, weather or a booking changes.
+        </p>
+        <p>
+          The <a href="https://www.ocso.com/tourist-safety/">Orange County Sheriff’s visitor guidance</a> recommends planning airport-to-hotel transport, securing valuables, learning hotel emergency exits and verifying unexpected callers at your room before opening the door. These are useful starting points for an itinerary, not a guarantee about any individual property.
+        </p>
+        <h3>Before you leave home</h3>
+        <ul>
+          <li><strong>Save the essentials:</strong> Keep your hotel address, booking reference, arrival instructions and transport confirmation accessible offline as well as in email.</li>
+          <li><strong>Plan the arrival:</strong> Decide how you will reach the accommodation if your flight is late or a booked transfer fails to arrive.</li>
+          <li><strong>Read the conditions:</strong> Check deposits, cancellation deadlines, parking, included transport and ticket restrictions before paying.</li>
+          <li><strong>Prepare a fallback:</strong> Choose an alternative journey and a way to contact your booking provider if your phone battery or connection becomes a problem.</li>
+        </ul>
+        <p>
+          These are preparation steps; choose the options that match your party’s needs rather than assuming a hotel, app or transport provider will supply a backup.
+        </p>
+        <h3>When you reach the hotel</h3>
+        <p>
+          Find the emergency exits, use the room’s locks, and confirm an unexpected staff visit with reception before admitting the person, following the <a href="https://www.ocso.com/tourist-safety/">Sheriff’s hotel-safety advice</a>. The same guidance advises keeping valuables in a room or hotel safe rather than in the vehicle.
+        </p>
+        <p>
+          If you are travelling with children, give them a way to identify the hotel and contact an adult, as recommended by the <a href="https://www.ocso.com/tourist-safety/">Sheriff’s visitor guidance</a>. As an additional planning step, agree on a meeting point for busy outings and identify staff members you would approach if separated.
+        </p>
+      </section>
 
-    <section id="numbers" className={styles.section} tabIndex={-1}><span id="crime-data-2026" /><h2>Understanding local safety information</h2>
-      <p>Use incident information as one input, not as a prediction of what will happen at a hotel or along a walking route. Start with the exact property or destination address, then check which authority and geographical area a dataset covers. Before comparing figures, check the date range, incident definitions and whether the information concerns reports or another measure. City of Orlando figures do not automatically describe a hotel elsewhere in Orange County or Kissimmee. Calls for service and documented incidents answer different questions; a call alone does not establish that a crime occurred. Avoid comparing datasets with different coverage or definitions.</p>
-      <p>The <a href="https://www.orlando.gov/Public-Safety/OPD/OPD-Records-Open-Data">Orlando Police Department’s records and open-data resources</a> are a starting point for finding the department’s published information. Read the coverage and definitions supplied with the particular resource before using it to compare locations. Look at the incident types and dates relevant to your planned stops, then assess the hotel entrance, parking setup and walking connections. A citywide trend or an old neighbourhood reputation cannot establish what conditions will be like at a particular property during your visit.</p>
-    </section>
+      <section id="numbers" className={styles.section} tabIndex={-1}>
+        <span id="crime-data-2026" />
+        <h2>Understanding local safety information</h2>
+        <p>
+          Use local records to understand what a source actually measures, not to manufacture a “safe street” verdict. The <a href="https://www.orlando.gov/Public-Safety/OPD/OPD-Records-Open-Data">Orlando Police Department’s open-data page</a> offers active calls, a crime-and-cases dashboard and Citizen Connect information covering dispatched and officer-initiated calls.
+        </p>
+        <h3>Calls are not the same as confirmed crimes</h3>
+        <p>
+          The City’s <a href="https://www.orlando.gov/Our-Government/Mayor-City-Council/Tom-Keen/District-1-Crime-Stats">District 1 statistics explanation</a> distinguishes citizen calls from documented incidents and warns that several calls can concern the same incident. Do not interpret every map marker as a separate confirmed offence or compare a calls total with a crime total.
+        </p>
+        <p>
+          Before drawing a conclusion, check:
+        </p>
+        <ul>
+          <li><strong>Geography:</strong> Does the resource cover the property’s actual location?</li>
+          <li><strong>Time period:</strong> Is it a recent period, an annual total or historical information?</li>
+          <li><strong>Measure:</strong> Are you viewing calls, reports, recorded crimes or case outcomes?</li>
+          <li><strong>Context:</strong> Are several entries associated with the same event or location?</li>
+        </ul>
+        <h3>Check which agency’s information you are using</h3>
+        <p>
+          OPD states that it holds records for incidents in the City of Orlando and directs readers seeking Orange County records to the Sheriff’s Office. A resource from one agency should therefore not be treated as a complete dataset for every place in an Orlando itinerary. (<a href="https://www.orlando.gov/Public-Safety/OPD/OPD-Records-Open-Data/Request-an-Orlando-Police-Department-Record">City of Orlando records guidance</a>)
+        </p>
+        <p>
+          For a practical accommodation decision, combine appropriately scoped local information with the property’s entrance, transport, parking and access arrangements. A hotel address or citywide statistic alone is not a substitute for checking the journeys you will make.
+        </p>
+      </section>
 
-    <section id="areas" className={styles.section} tabIndex={-1}><span id="neighborhood-safety" /><h2>Orlando area safety: what to check</h2>
-      <div className={styles.areaBlock}>
-      <h3>International Drive</h3>
-      <p>Compare the exact hotel address with each stop on your itinerary rather than using “International Drive” as a guarantee of proximity. Trace the walking route entrance to entrance, including crossings and parking-lot access. International Drive combines hotels, restaurants, attractions and convention destinations over a long visitor corridor. Compare properties on the side of the road closest to your main stops where practical, while still checking the complete pedestrian connection.</p>
-      <p>Before booking, ask: “Which of my planned destinations can I reach on foot using sidewalks and crossings? Which need transport? Where is the hotel’s designated pickup point?” If the answer does not resolve your route, budget for transport instead of assuming you will walk. Consider wide intersections, highway approaches and distances between building entrances. In crowded attraction and hotel car parks, put bags and purchases out of sight and lock the vehicle before walking away, consistent with <a href="https://www.ocso.com/tourist-safety/">OCSO’s tourist-safety precautions</a>.</p>
+      <section id="areas" className={styles.section} tabIndex={-1}>
+        <span id="neighborhood-safety" />
+        <h2>Orlando area safety: what to check</h2>
+        <p>
+          Compare these areas by the activities and transport your trip requires, not by unsupported “safe” and “unsafe” badges. The useful question is whether your chosen property and route work for you, including crossings, luggage, mobility needs and the return journey.
+        </p>
+        <div className={styles.areaBlock}>
+          <h3>International Drive</h3>
+          <p>
+            For journeys within the International Drive area, the <a href="https://www.internationaldriveorlando.com/iride-trolley/i-ride-trolley-faqs.html">I-RIDE Trolley</a> is a local option: its operator describes a service confined to the I-Drive area, with marked stops and a route map. That is different from a transport service covering an entire Orlando holiday.
+          </p>
+          <p>
+            Before booking, locate both the hotel and the stops you would use. Check the walk from the hotel entrance to the correct stop and the route at your destination; do not equate being on International Drive with being next door to every attraction.
+          </p>
+          <p>
+            I-RIDE’s <a href="https://www.internationaldriveorlando.com/iride-trolley/i-ride-trolley-faqs.html">FAQ</a> says cash fares require exact change, passes are not sold on board, and luggage is accepted only as space permits, with no dedicated storage rack. Those details matter if you intend to use it with bags rather than simply for sightseeing.
+          </p>
+          <p>
+            For hotel-specific precautions, the <a href="https://www.internationaldriveorlando.com/visitor-information/safety-tips/">I-Drive district’s visitor advice</a> recommends securing room doors, verifying unexpected service visits and keeping valuables out of cars. Apply those checks to the actual property rather than treating the corridor’s reputation as a security guarantee.
+          </p>
+        </div>
+        <h3>Disney Springs and Lake Buena Vista</h3>
+        <p>
+          Distinguish being near Disney Springs from having a confirmed journey to each Disney park or your hotel. Disney’s <a href="https://disneyworld.disney.go.com/guest-services/bus-transportation/">bus-service information</a> explains that some journeys require connections and recommends checking transportation signs or asking a Cast Member for current routes.
+        </p>
+        <p>
+          For buses from Disney Springs to Disney Resort hotels, the specific <a href="https://disneyworld.disney.go.com/guest-services/bus-transportation/">bus-service page</a> sets out eligibility for Resort guests and visitors with qualifying dining or experience reservations, and notes that proof may be requested. Do not build an off-site hotel plan on an assumed unrestricted resort-bus connection.
+        </p>
+        <p>
+          Ask your own accommodation to name the destinations its transport serves, the pickup location, any reservation requirement and the return arrangements. If the answer is simply “Disney shuttle,” request the actual destination and timetable before relying on it.
+        </p>
+        <h3>Universal area</h3>
+        <p>
+          Match your hotel to the particular Universal destinations on your itinerary. Universal’s <a href="https://www.universalorlando.com/web/en/us/places-to-stay/hotels/at-a-glance/hotels-benefits">hotel-benefits page</a> describes complimentary transport but states that water taxis and walking paths are available only at select hotels.
+        </p>
+        <p>
+          The same <a href="https://www.universalorlando.com/web/en/us/places-to-stay/hotels/at-a-glance/hotels-benefits">official comparison</a> identifies specific Epic Universe access arrangements, including a walking path from Stella Nova and a dedicated entrance for Helios Grand guests, subject to valid admission. Do not assume the transport or walking access shown for one hotel applies to every Universal property.
+        </p>
+        <p>
+          Before booking, compare your hotel’s actual arrangements for CityWalk, the parks you will visit and airport transport. Ask separately about accessibility, luggage and return options rather than treating “complimentary transport” as one uniform service.
+        </p>
+        <h3>Downtown Orlando and Lake Eola</h3>
+        <p>
+          Plan around the exact venue, parking facility and connecting route. The City’s <a href="https://www.orlando.gov/Parking-Transportation/Parking/Downtown-Guide">Downtown Parking Guide</a> identifies parking by destination, including Central Boulevard options for Lake Eola, and warns that event and construction needs can change road access.
+        </p>
+        <p>
+          For local connections, <a href="https://www.golynx.com/plan-trip/riding-lynx/lymmo.stml">LYNX describes LYMMO</a> as a fare-free downtown circulator, with different routes and operating patterns. Check the line serving your actual stops; it is not a substitute for planning the rest of a journey from a hotel elsewhere.
+        </p>
+        <p>
+          Save the garage entrance and the route back to the vehicle, not just the venue’s map pin. For detailed evening routes and pickup planning, continue to the <a href="/destination/orlando/is-orlando-safe-at-night">Orlando night-safety guide</a>.
+        </p>
+        <h3>Kissimmee and US-192</h3>
+        <p>
+          Check your property’s position on the corridor and the stops or road crossings you would need. LYNX publishes separate services for <a href="https://www.golynx.com/maps-schedules/routes-detail.stml?portalProcess_dd_0_1_1=showPublicPosting&amp;calendar_entry_id=9314">Link 55: West US-192/Four Corners</a> and <a href="https://www.golynx.com/maps-schedules/routes-detail.stml?portalProcess_dd_0_1_1=showPublicPosting&amp;calendar_entry_id=9315">Link 56: West US-192/Magic Kingdom</a>, so the route number and direction matter.
+        </p>
+        <p>
+          Both operator pages warn that precise service times depend on where you board. Use the current route map and trip planner for the hotel’s actual stop rather than copying a route-end departure time into your plan. (<a href="https://www.golynx.com/maps-schedules/routes-detail.stml?portalProcess_dd_0_1_1=showPublicPosting&amp;calendar_entry_id=9314">LYNX Link 55</a>; <a href="https://www.golynx.com/maps-schedules/routes-detail.stml?portalProcess_dd_0_1_1=showPublicPosting&amp;calendar_entry_id=9315">LYNX Link 56</a>)
+        </p>
+        <p>
+          If you are using a hotel shuttle instead, confirm its pickup, destination, booking requirements and final return. Compare those arrangements with your park booking before committing to the accommodation.
+        </p>
+      </section>
+
+      <div id="stay" aria-label="Hotel options" tabIndex={-1}>
+        <CitySafetyHotelCTA city="orlando" title="Stay near the places you plan to visit" intro="Compare accommodation by the journeys it removes and the arrangements it provides, not by a safety promise. For your busiest day, map the hotel entrance, attraction or venue entrance, transport stop and return route before comparing the total cost." choices={orlandoRecommendedHotelAreas} source="safety-guide" trackingId="recommended-orlando-hotel-areas" buttonVariant="orlandoSafetyGuide" />
+        <ul>
+          <li><strong>Location:</strong> Does the property fit your main activities without an uncertain walking connection?</li>
+          <li><strong>Transport:</strong> Which destinations are served, and what happens if you miss the return?</li>
+          <li><strong>Parking:</strong> What are the charges, access arrangements and re-entry conditions?</li>
+          <li><strong>Arrival:</strong> How will you check in if delayed, and who can resolve an access problem?</li>
+          <li><strong>Access needs:</strong> Can the property confirm the room and transport arrangements you require?</li>
+        </ul>
+        <p>
+          A useful booking question is: “For these dates and destinations, what transport is included, where do I board, and do I need to reserve?” Save the answer with your confirmation.
+        </p>
       </div>
 
-      <h3>Disney Springs and Lake Buena Vista</h3>
-      <p>Distinguish access to Disney Springs from transport to the other destinations on your itinerary. Ask the property to name the destinations its transport serves and explain any booking, timing or accessibility requirements. The Disney-area resort district is geographically extensive. A property with Disney, Lake Buena Vista or Orlando in its marketing name may still require transport to your planned park or restaurant; compare its street address with the actual destination.</p>
-      <p>Confirm the outward and return arrangements separately. Do not treat “near Disney” or “shuttle available” as confirmation that a particular service fits your trip. Match the timetable to your planned park visit, meal or event and ask how you will get back if the service does not fit. Check any suggested walk for the whole route rather than assuming proximity means pedestrian access.</p>
+      <section id="evening" className={styles.section} tabIndex={-1}>
+        <h2>Planning an evening in Orlando</h2>
+        <p>
+          Plan the return at the same time as the outing: identify the exit you will use, your pickup or transport stop, and a fallback if the original plan changes. Keep the venue and accommodation addresses available without having to search through several apps.
+        </p>
+        <p>
+          For area-by-area after-dark advice, walking checks and evening pickup planning, read <a href="/destination/orlando/is-orlando-safe-at-night">Is Orlando Safe at Night?</a>. This general guide focuses on the rest of your trip rather than repeating that article.
+        </p>
+      </section>
 
-      <h3>Downtown Orlando and Lake Eola</h3>
-      <p>Build your plan around the exact venues and parking or transport stops you will use. Check the route between each stop rather than judging the whole visit by a neighbourhood label. A daytime Lake Eola visit, a major event and a late return can involve different street activity and access arrangements. The <a href="https://www.orlando.gov/Parking-Transportation/Parking/Downtown-Guide">City of Orlando’s downtown parking guide</a> advises planning ahead for events and changing road access. For dining stops in Mills 50, Ivanhoe Village or Thornton Park, apply the same exact-route, parking and pickup checks rather than assigning the whole district a safety rating.</p>
-      <p>Before driving, identify where you intend to park, its entry and exit arrangements and the route back to the vehicle. For detailed evening walking and pickup planning, use the <a href="/destination/orlando/is-orlando-safe-at-night">Orlando night-safety guide</a>. Save the parking location and a meeting point that your group can identify without needing to coordinate in a crowd.</p>
+      <section id="getting-around" className={styles.section} tabIndex={-1}>
+        <h2>Getting around Orlando safely</h2>
+        <h3>Start with the airport-to-hotel journey</h3>
+        <p>
+          Orlando International Airport’s <a href="https://flymco.com/ground-transportation/local-bus/">local-bus information</a> identifies LYNX services and directs passengers to route maps and schedules for destinations including Downtown, the convention area and SeaWorld. Confirm the complete journey, including any transfer and the walk from the final stop, before choosing it for an arrival with luggage.
+        </p>
+        <p>
+          For any booked transfer, keep the operator’s name, pickup instructions, contact method and booking reference together. If the pickup arrangement is unclear, use the provider’s official contact details rather than accepting a replacement offered by an unidentified person.
+        </p>
+        <h3>Choose one rental-car toll arrangement</h3>
+        <p>
+          SunPass’s <a href="https://www.sunpass.com/en/tolls/rentalVehicles.shtml">rental-vehicle guidance</a> explains that rental-company programmes and fees vary and that cashless toll use can result in tolls plus service or administrative charges under the rental agreement. Decide how you will pay before driving, not after the first bill.
+        </p>
+        <p>
+          <a href="https://www.visitortollpass.com/faq">Visitor Toll Pass</a> is an option for eligible rental customers making a round trip through MCO, subject to participating-company and pickup/return restrictions. Its FAQ warns users to decline the rental company’s toll programme to avoid double billing.
+        </p>
+        <p>
+          If using that service, follow the operator’s <a href="https://www.visitortollpass.com/faq">setup and return instructions</a>: register the rental plate, display the hangtag and return it when the trip ends. The programme has return conditions and an unreturned-pass charge, so “no service fee” does not mean there are no responsibilities or possible charges.
+        </p>
+        <p>
+          If using your own SunPass account, add the rental plate and rental dates and remove your transponder when returning the vehicle, following <a href="https://www.sunpass.com/en/tolls/rentalVehicles.shtml">SunPass’s instructions</a>. Keep the rental agreement and toll records for checking later charges.
+        </p>
+        <h3>Parking and belongings</h3>
+        <p>
+          Lock the car, take valuables to your accommodation and avoid leaving items on display, as advised by the <a href="https://www.ocso.com/tourist-safety/">Orange County Sheriff</a>. Do not leave essential travel documents in the vehicle as your only accessible copy.
+        </p>
+        <p>
+          Before leaving a garage, save its name, level, bay or nearby marker and check how to re-enter. For downtown events, consult the City’s <a href="https://www.orlando.gov/Parking-Transportation/Parking/Downtown-Guide">destination-based parking guidance</a> rather than assuming the entrance closest to a venue will remain accessible.
+        </p>
+        <h3>Walking, buses and accessibility</h3>
+        <p>
+          Trace walking routes entrance to entrance, looking for sidewalks, crossings and the final approach to the property. A short map distance is not enough to establish that a route works with children, luggage or a mobility device.
+        </p>
+        <p>
+          I-RIDE states that its vehicles have accessible lifts and two wheelchair positions, with weight limitations. If those facilities matter to your trip, review the operator’s <a href="https://www.internationaldriveorlando.com/iride-trolley/i-ride-trolley-faqs.html">accessibility information in its FAQ</a> and confirm your needs before relying on a connection.
+        </p>
+        <h3>Verify an app-booked ride</h3>
+        <p>
+          Before boarding an Uber, match the registration plate, vehicle make/model and driver photo with the app; Uber also advises requesting the ride while inside and sharing trip status with someone you trust. (<a href="https://www.uber.com/us/en/ride/safety/tips/">Uber rider-safety guidance</a>)
+        </p>
+        <p>
+          Use equivalent checks for the service you choose and follow its official support process if details do not match. These precautions do not establish that one rideshare brand is the safest.
+        </p>
+      </section>
 
-      <h3>Kissimmee and US-192</h3>
-      <p>Use the full property address when comparing accommodation and activities. Ask about the route from the property entrance to your planned stops, not just the straight-line distance shown in a listing. Kissimmee and US-192 should not be treated as the City of Orlando simply because accommodation is marketed to theme-park visitors. Confirm the property's location and the relevant local agency for a non-emergency.</p>
-      <p>Confirm transport directly with the property you are booking. If your itinerary depends on a shuttle, ask which destinations it serves, whether you must reserve and what your alternative will be if its timetable does not fit. Compare the journeys required by your actual itinerary instead of assuming all attraction-area hotels are interchangeable. Include the final connection from the shuttle drop-off point to your accommodation.</p>
-    </section>
+      <section id="scams" className={styles.section} tabIndex={-1}>
+        <span id="common-scams-2026" />
+        <h2>Common Orlando scams and booking precautions</h2>
+        <h3>Buy valid tickets, not someone else’s unused days</h3>
+        <p>
+          The <a href="https://www.ocso.com/tourist-safety/">Orange County Sheriff</a> recommends buying theme-park tickets from the park itself or an authorized vendor. Disney specifically states that once a person uses a ticket, its remaining admissions cannot be transferred to another person. (<a href="https://disneyworld.disney.go.com/faq/tickets/transfer-policy/">Disney ticket-transfer FAQ</a>)
+        </p>
+        <p>
+          Do not buy a stranger’s “remaining days” on a used Disney ticket. Before buying any ticket, establish the seller, supplier, valid dates, included parks and restrictions rather than judging validity by the displayed discount.
+        </p>
+        <p>
+          A discount is not automatically a warning sign: <a href="https://www.visitorlando.com/blog/post/orlando-frequently-asked-questions-blog/">Visit Orlando identifies its BestofOrlando.com ticket channel as an authorized reseller</a>. Verify the actual seller’s status instead of assuming every third-party offer is either genuine or fraudulent.
+        </p>
+        <h3>Verify accommodation and payment requests</h3>
+        <p>
+          The Florida Attorney General’s <a href="https://www.myfloridalegal.com/newsrelease/video-summer-scams-series-sunny-days-and-shady-deals-ag-moody-warns-floridians-about-0">vacation-rental alert</a> warns about fake listings and recommends checking the address and reviews, keeping communications on the rental platform, and avoiding direct payments by wire transfer, gift card or cryptocurrency.
+        </p>
+        <p>
+          Before paying, read the cancellation policy, deposit, final amount and access instructions. If a message suddenly changes the payment method or bank details, pause and contact the provider using details you obtained independently.
+        </p>
+        <h3>Be cautious with unexpected hotel-room approaches</h3>
+        <p>
+          The <a href="https://www.ocso.com/tourist-safety/">Sheriff’s visitor advice</a> specifically discusses unsolicited food flyers left at hotel doors and recommends checking their legitimacy with reception before placing an order that requires payment details. Do not assume a flyer came from the hotel because it was delivered to your room.
+        </p>
+        <p>
+          The same <a href="https://www.ocso.com/tourist-safety/">guidance</a> recommends verifying unexpected people claiming to be hotel employees with the front desk. Use the property’s known contact method rather than a number the visitor supplies.
+        </p>
+        <h3>Read promotional conditions before accepting</h3>
+        <p>
+          For a discounted stay or ticket linked to a presentation, appointment or eligibility requirement, ask for the commitment and full cost in writing. Treat a countdown or insistence on immediate payment as a reason to slow down, not skip verification.
+        </p>
+        <p>
+          For an aggressive timeshare pitch, the <a href="https://www.myfloridalegal.com/consumer-protection/how-to-protect-yourself-timeshare-sales-resales">Florida Attorney General advises leaving if pressured, understanding the contract and checking applicable cancellation rights</a>. Do not assume every promotion is a scam or that every travel purchase has the same cancellation period.
+        </p>
+      </section>
 
-    <div id="stay" aria-label="Hotel options" tabIndex={-1}><CitySafetyHotelCTA city="orlando" title="Stay near the places you plan to visit" intro="Compare the exact hotel address with your main park cluster, convention venue or downtown plans. Verify transport destinations, return times and parking arrangements before booking so your location fits the journeys you actually need." choices={orlandoRecommendedHotelAreas} source="safety-guide" trackingId="recommended-orlando-hotel-areas" buttonVariant="orlandoSafetyGuide" /></div>
+      <section id="solo" className={styles.section} tabIndex={-1}>
+        <span id="solo-traveler-essentials" />
+        <h2>Solo traveler essentials</h2>
+        <h3>Make the trip manageable without a second person’s phone</h3>
+        <p>
+          Keep your hotel address, booking contacts and a backup way to access essential information. As a planning precaution, choose a check-in arrangement with someone you trust and agree what they should do if you miss it.
+        </p>
+        <p>
+          For rides, use the provider’s identity checks and trip-sharing tools; <a href="https://www.uber.com/us/en/ride/safety/tips/">Uber’s guidance</a> describes sharing the driver, vehicle and location details through the app. Send useful trip information rather than assuming someone will know where you are.
+        </p>
+        <h3>Use the hotel as a point of support</h3>
+        <p>
+          On arrival, learn how to contact reception and what to do if you cannot get into your room. If someone unexpectedly requests access, verify the visit with the front desk; the <a href="https://www.ocso.com/tourist-safety/">Sheriff’s hotel advice</a> also recommends learning exits and using the room’s security devices.
+        </p>
+        <p>
+          Keep a backup payment method separate from the one you carry, if practical, and avoid relying on one device for tickets, maps, payment and emergency contact access. Make sure your fallback remains usable if your main phone or wallet is missing.
+        </p>
+        <h3>Plan around your own access and health needs</h3>
+        <p>
+          Ask a property or transport provider for specific arrangements rather than a general “accessible” label. For example, clarify the room access you need, whether your mobility device fits the relevant vehicle and how you will handle a disrupted connection.
+        </p>
+        <p>
+          If heat affects your health or medication, make a plan with your clinician before travelling; the <a href="https://www.cdc.gov/heat-health/about/index.html">CDC advises not stopping or changing medication without medical advice</a>. For evening-specific preparation, use the <a href="/destination/orlando/is-orlando-safe-at-night">night-safety guide</a>.
+        </p>
+      </section>
 
-    <section id="evening" className={styles.section} tabIndex={-1}><h2>Planning an evening in Orlando</h2><p>For evening plans, check the route between your destination and accommodation and decide how you will return before you leave. Venue access, walking conditions and transport options need to be checked for your particular outing. For area-by-area planning, walking checks and pickup guidance, read <a href="/destination/orlando/is-orlando-safe-at-night">Is Orlando Safe at Night?</a> Save your lodging address, keep enough phone battery for maps and transport apps, and agree on a meeting point with your group. Check the designated pickup location and any event-related changes to parking or street access. Keep drinks attended and arrange the return before drinking or entering a crowded venue.</p></section>
+      <section id="heat" className={styles.section} tabIndex={-1}>
+        <h2>Heat, sun and thunderstorms</h2>
+        <h3>Build cooling into the itinerary</h3>
+        <p>
+          The <a href="https://www.cdc.gov/heat-health/about/index.html">CDC recommends carrying water, staying hydrated, taking breaks, seeking shade or air conditioning and checking local HeatRisk</a>. Use the forecast for the place you will visit rather than assuming a day that begins comfortably will stay that way.
+        </p>
+        <p>
+          As a planning step, identify an indoor break before a long outing and allow yourself to shorten the activity. Carry what you need for the journey back as well as the attraction; do not use a non-refundable booking as a reason to ignore illness.
+        </p>
+        <h3>Recognize when heat needs medical attention</h3>
+        <p>
+          Headache, dizziness, nausea, weakness and heavy sweating are among the warning signs described in the <a href="https://www.cdc.gov/heat-health/about/index.html">CDC’s heat guidance</a>. Stop the activity, seek a cooler place and get appropriate medical help rather than treating symptoms as something to push through.
+        </p>
+        <p>
+          Confusion, slurred speech, seizures or loss of consciousness can indicate heatstroke, which requires an emergency response; call 911 and follow dispatcher instructions while helping the person cool if it is safe to do so. (<a href="https://www.cdc.gov/niosh/heat-stress/about/illnesses.html">CDC heat-illness guidance</a>)
+        </p>
+        <p>
+          This is general recognition guidance, not a diagnosis or individualized treatment plan. Do not wait for every listed symptom before seeking urgent help.
+        </p>
+        <h3>Thunder means shelter, not just rain cover</h3>
+        <p>
+          The <a href="https://www.weather.gov/mlb/lightning_rules">National Weather Service in Melbourne</a> advises going indoors when thunder is heard and waiting 30 minutes after the last thunder before returning outside. A completely enclosed building or appropriate hard-topped enclosed vehicle is shelter; an open pavilion, covered patio or tree is not, according to the same <a href="https://www.weather.gov/mlb/lightning_rules">NWS rules</a>.
+        </p>
+        <p>
+          Identify shelter before a pool visit or outdoor outing and follow venue instructions if activities stop. The <a href="https://www.weather.gov/mlb/lightning_rules">NWS</a> also advises getting out of pools and other water during lightning.
+        </p>
+        <h3>Check storm information for your travel dates</h3>
+        <p>
+          Orange County’s <a href="https://www.ocfl.net/EmergencySafety/EmergencyInformation.aspx">emergency-information page</a> identifies the Atlantic hurricane season as June 1–November 30 and links to weather and preparedness resources. Those dates describe the season, not a prediction that a particular trip will be disrupted.
+        </p>
+        <p>
+          If severe weather threatens your plans, check official instructions, ask the property about its procedures and review transport and cancellation arrangements. Orange County offers <a href="https://www.ocfl.net/EmergencySafety/EmergencyInformation.aspx">OCAlert notifications</a> for severe weather and other emergencies; use information relevant to your accommodation’s actual location.
+        </p>
+        <h3>Pool breaks still require supervision</h3>
+        <p>
+          The <a href="https://www.cdc.gov/drowning/prevention/index.html">CDC recommends close, constant adult supervision of children around water, including when lifeguards are present</a>. Agree explicitly who is supervising instead of assuming another adult has taken over.
+        </p>
+        <p>
+          After swimming, secure doors or other access to water, and do not rely on inflatable toys as safety equipment, following the <a href="https://www.cdc.gov/drowning/prevention/index.html">CDC’s drowning-prevention guidance</a>. For a rental with a pool, ask about barriers and access arrangements before booking.
+        </p>
+      </section>
 
-    <section id="getting-around" className={styles.section} tabIndex={-1}><h2>Getting around Orlando safely</h2>
-      <h3>Driving, rental-car tolls and parking</h3>
-      <p>Before collecting a rental car, choose how you will pay tolls and read the associated fees; rental-company toll programmes have different terms and charges. <a href="https://www.sunpass.com/en/tolls/rentalVehicles.shtml">SunPass’s rental-vehicle guidance</a> explains the available arrangements and why the rental agreement matters. Keep the chosen toll arrangement with your rental paperwork so you can check a later charge against the terms you accepted.</p>
-      <p>If you are collecting and returning an eligible rental car at Orlando International Airport, check whether <a href="https://www.visitortollpass.com/faq">Visitor Toll Pass</a> fits your trip; its FAQ lists participating companies and warns that failing to decline the rental company’s toll programme can result in double billing. Confirm eligibility and the collection and return arrangements for your particular rental rather than assuming every company or journey qualifies.</p>
-      <p>Before leaving a car park, save the location of your vehicle and check the parking terms. Keep the return instructions and rental-company contact details accessible outside the vehicle. Lock the doors and remove bags and electronics from view. Where practical, put purchases away before arriving at the next stop. For downtown events, identify parking in advance and check for road closures rather than searching for a space after arrival. Buckle up and arrange child seats before collecting a rental car. <a href="https://www.flsenate.gov/Laws/Statutes/2026/316.613">Florida’s child-restraint statute</a> generally requires an approved restraint for children five and younger; review its age-specific requirements and exceptions for your circumstances. Set navigation before moving and follow <a href="https://www.flsenate.gov/Laws/Statutes/2026/316.305">Florida’s prohibition on texting while driving</a>.</p>
+      <section id="what-next" className={styles.section} tabIndex={-1}>
+        <span id="decision-tree" />
+        <h2>If something feels off: what to do next</h2>
+        <h3>A booked ride does not match</h3>
+        <p>
+          Do not enter a vehicle if its details or driver do not match the booking; <a href="https://www.uber.com/us/en/ride/safety/tips/">Uber’s safety advice</a> instructs passengers to check the plate, vehicle and driver before boarding. Use the provider’s official support process and ask venue staff to help identify the correct pickup area if needed.
+        </p>
+        <p>
+          Avoid accepting an unverified substitute simply because you are worried about missing the ride. Immediate threats belong with emergency services, not just a booking-support queue.
+        </p>
+        <h3>A wallet, phone or bag goes missing</h3>
+        <p>
+          Start with the venue or transport provider’s lost-property process. If theft is suspected, record when and where you last had the item, what is missing and any identifying details you have.
+        </p>
+        <p>
+          OPD’s <a href="https://www.orlando.gov/Public-Safety/OPD/Report-a-Crime/Report-a-Non-Violent-Crime">non-violent reporting page</a> lists lost property, theft and vehicle break-ins among reportable categories, but sets eligibility conditions including an incident within city limits, no known suspect and no firearm among the missing items. Follow the relevant agency’s instructions rather than assuming the same online form covers every location or incident.
+        </p>
+        <p>
+          Separately, contact card issuers or account providers through verified channels if access may be compromised. Keep any report or booking reference for follow-up, and obtain current airline or identity-document guidance directly from the responsible organization if documents are missing.
+        </p>
+        <h3>A room or payment request seems wrong</h3>
+        <p>
+          Pause further payment and verify the reservation through the original booking channel. Preserve confirmations, the listing, payment records and messages before making changes to the booking.
+        </p>
+        <p>
+          The Florida Attorney General’s <a href="https://www.myfloridalegal.com/newsrelease/video-summer-scams-series-sunny-days-and-shady-deals-ag-moody-warns-floridians-about-0">rental-scam guidance</a> recommends keeping communications on the platform and provides a complaint route for suspected scams. A complaint is not a guarantee of immediate replacement accommodation or a refund.
+        </p>
+        <h3>Someone needs urgent help</h3>
+        <p>
+          For serious medical situations, a crime in progress, an injury crash or another life-threatening situation, call 911, following <a href="https://www.ocso.com/911-or-non-emergency/">Orange County Sheriff’s emergency guidance</a>. Give the address, business or intersection and, inside a large property, the building, floor or room details requested by the dispatcher.
+        </p>
+        <p>
+          If a call is not answered immediately, stay on the line rather than hanging up and redialling, as the <a href="https://www.ocso.com/911-or-non-emergency/">Sheriff’s guidance</a> instructs. Follow the dispatcher’s directions and do not delay an emergency call while trying to determine agency boundaries.
+        </p>
+      </section>
 
-      <h3>Checking a walking route</h3>
-      <p>Check the complete route between entrances, not just the distance between map pins. Look for sidewalks, road crossings and a practical way back. If you cannot establish a suitable route, choose transport rather than improvising around a missing connection. Preview highway ramps, major crossings and the final block around your destination. Consider lighting and street activity at the time you will travel, including the return. Repeated crossings of wide roads can make a short map distance a poor basis for deciding to walk.</p>
+      <section id="emergency-resources" className={styles.section} tabIndex={-1}>
+        <h2 id="emergency-resources-heading">Emergency numbers and resources</h2>
+        <p>
+          Save your accommodation’s full address and an offline copy of important contacts. The distinction below is between immediate danger, agency-specific non-emergency help and specialist advice; it is not a complete jurisdiction map.
+        </p>
+        <div className={styles.emergencyTableScroll} role="region" aria-labelledby="emergency-resources-heading" tabIndex={0}>
+          <table className={styles.emergencyTable}>
+            <thead>
+              <tr>
+                <th scope="col">Need</th>
+                <th scope="col">Contact</th>
+                <th scope="col">How to use it</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Immediate danger, serious medical emergency or crime in progress</th>
+                <td><a href="tel:911">911</a></td>
+                <td>Call for an emergency response and be ready to give a precise location. (<a href="https://www.ocso.com/911-or-non-emergency/">Orange County Sheriff</a>)</td>
+              </tr>
+              <tr>
+                <th scope="row">Orlando Police non-emergency dispatch</th>
+                <td><a href="tel:+13212355300">321-235-5300</a></td>
+                <td>OPD identifies this as its 24-hour non-emergency line. (<a href="https://www.orlando.gov/Public-Safety/OPD/Report-a-Crime/Report-a-Non-Violent-Crime">City of Orlando</a>)</td>
+              </tr>
+              <tr>
+                <th scope="row">Orange County Sheriff non-emergency</th>
+                <td><a href="tel:+14078364357">407-836-4357</a></td>
+                <td>For the agency’s routine calls, including after-the-fact theft where the suspect is gone. (<a href="https://www.ocso.com/911-or-non-emergency/">Sheriff’s guidance</a>)</td>
+              </tr>
+              <tr>
+                <th scope="row">Possible poisoning</th>
+                <td><a href="tel:+18002221222">1-800-222-1222</a></td>
+                <td>Connects to Poison Help; do not wait for symptoms before seeking expert advice. (<a href="https://poisonhelp.hrsa.gov/what-you-can-do">HRSA Poison Help</a>)</td>
+              </tr>
+              <tr>
+                <th scope="row">Severe-weather information</th>
+                <td><a href="https://www.ocfl.net/EmergencySafety/EmergencyInformation.aspx">Orange County emergency information</a></td>
+                <td>Official alert and preparedness resources, not a substitute for 911.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Poison Help says to call 911 if the person is not breathing; do not use a non-emergency number when immediate medical assistance is required. (<a href="https://poisonhelp.hrsa.gov/what-you-can-do">HRSA Poison Help</a>)
+        </p>
+        <p>
+          For reports, use the agency responsible for the incident’s location. OPD’s <a href="https://www.orlando.gov/Public-Safety/OPD/Report-a-Crime/Report-a-Non-Violent-Crime">online reporting page</a> sets out eligibility and explains that a tracking number is issued on submission, while a case number follows review and approval.
+        </p>
+      </section>
 
-      <h3>Booked rides and hotel transport</h3>
-      <p>Use the pickup instructions in your booking or ask venue staff to identify the designated pickup location. For an app-booked ride, compare the vehicle, registration and driver details with the booking before entering; do not accept a substitute that does not match. Wait somewhere visible and check the make, model, registration and driver in the app before approaching the car. <a href="https://www.uber.com/us/en/ride/safety/tips/">Uber’s rider-safety guidance</a> recommends matching the plate, car and driver photo and asking who the driver is there to pick up; apply your booked provider’s instructions. Do not rely only on a stranger asking whether you need a ride. Check that the journey starts in the expected direction.</p>
-      <p>For hotel transport, confirm the actual destination, reservation requirements and return arrangements. Save a backup option if your day depends on a particular departure. If using <a href="https://www.golynx.com/">LYNX</a>, the downtown LYMMO circulator or <a href="https://sunrail.com/">SunRail</a>, check the operator’s current service information for your intended day and plan the final connection from the stop or station. Do not assume commuter rail has the same service pattern as a large-city subway.</p>
-    </section>
+      <section id="faq" className={styles.section} tabIndex={-1}>
+        <h2>Frequently asked questions</h2>
+        <h3>Is Orlando safe for tourists?</h3>
+        <p>
+          Do not treat a single citywide label as a property or route assessment. The <a href="https://www.ocso.com/tourist-safety/">Orange County Sheriff’s tourist guidance</a> provides practical precautions for travel, hotel rooms, cars and ticket purchases, but that is not an individual security audit of your itinerary.
+        </p>
+        <p>
+          For your trip, make the accommodation and transport checks in this guide, use appropriately scoped local information and plan for weather and help. Assess the actual property and journeys you are considering rather than relying on a citywide label.
+        </p>
+        <h3>Which Orlando area should I choose for my hotel?</h3>
+        <p>
+          Start with the attractions or venues you will use most and compare the full journey from each property. Check the actual service rather than an area label: <a href="https://www.internationaldriveorlando.com/iride-trolley/i-ride-trolley-faqs.html">I-RIDE serves the International Drive area</a>, while <a href="https://www.universalorlando.com/web/en/us/places-to-stay/hotels/at-a-glance/hotels-benefits">Universal’s walking and water-taxi access varies by hotel</a>.
+        </p>
+        <p>
+          Read the area section above and ask the property to confirm the arrangements your itinerary requires. Do not choose a hotel solely because a listing calls its neighbourhood “safe.”
+        </p>
+        <h3>Can I visit Orlando without renting a car?</h3>
+        <p>
+          Plan the complete itinerary before deciding: airport transfer, daily activities, meal stops and return journeys. Official options include <a href="https://flymco.com/ground-transportation/local-bus/">LYNX services at MCO</a>, the <a href="https://www.internationaldriveorlando.com/iride-trolley/i-ride-trolley-faqs.html">I-RIDE service within its corridor</a> and <a href="https://www.golynx.com/plan-trip/riding-lynx/lymmo.stml">LYMMO downtown</a>, but they are not interchangeable networks covering every hotel and attraction.
+        </p>
+        <p>
+          Compare the connections and walking involved with your party’s needs. A hotel shuttle only solves the journeys it actually serves.
+        </p>
+        <h3>How do I avoid unexpected rental-car toll charges?</h3>
+        <p>
+          Select a payment arrangement before driving and read the rental agreement’s fee rules. <a href="https://www.sunpass.com/en/tolls/rentalVehicles.shtml">SunPass</a> warns that rental toll programmes can add service or administrative fees; eligible <a href="https://www.visitortollpass.com/faq">Visitor Toll Pass</a> users must follow its setup, competing-programme and return instructions.
+        </p>
+        <p>
+          Keep your records until later toll charges have been checked. Do not assume another person’s rental-company fee arrangement applies to yours.
+        </p>
+        <h3>Are discounted theme-park tickets legitimate?</h3>
+        <p>
+          Some are: <a href="https://www.visitorlando.com/blog/post/orlando-frequently-asked-questions-blog/">Visit Orlando’s ticket FAQ</a> identifies its sales channel as an authorized reseller. The issue is verifying the actual seller and ticket conditions, not treating every discount as suspicious.
+        </p>
+        <p>
+          Do not purchase a used Disney ticket for its “remaining days,” because <a href="https://disneyworld.disney.go.com/faq/tickets/transfer-policy/">Disney says admissions after first use stay with the original user</a>.
+        </p>
+        <h3>What should I do with valuables while sightseeing?</h3>
+        <p>
+          Take essential items with you and use appropriate secure storage for what you leave at the hotel. The <a href="https://www.ocso.com/tourist-safety/">Sheriff’s visitor guidance</a> recommends not leaving valuables in vehicles and securing hotel-room access.
+        </p>
+        <p>
+          Keep a backup way to retrieve booking and contact information so losing one bag or phone does not remove every way to continue the trip.
+        </p>
+        <h3>What should I do when I hear thunder?</h3>
+        <p>
+          Go to an enclosed building or suitable hard-topped enclosed vehicle, not a tree or open-sided shelter. The <a href="https://www.weather.gov/mlb/lightning_rules">National Weather Service</a> advises staying sheltered until 30 minutes after the last thunder.
+        </p>
+        <p>
+          Follow venue instructions, including leaving water when directed. Do not assume a pause in rain means the lightning risk has ended.
+        </p>
+        <h3>Where can I find advice about Orlando after dark?</h3>
+        <p>
+          Use the <a href="/destination/orlando/is-orlando-safe-at-night">Orlando night-safety guide</a> for evening destinations, walking checks, pickup points and return planning. This general guide keeps its focus on accommodation, travel, booking precautions, weather and help.
+        </p>
+      </section>
 
-    <section id="scams" className={styles.section} tabIndex={-1}><span id="common-scams-2026" /><h2>Common Orlando scams and booking precautions</h2>
-      <h3>Theme-park tickets and discounted offers</h3>
-      <p>A discount alone does not establish that a ticket offer is fraudulent: <a href="https://www.visitorlando.com/blog/post/orlando-frequently-asked-questions-blog/">Visit Orlando identifies itself as an authorized reseller for the tickets it sells through BestofOrlando.com</a>. Independently checking a seller's authorization is more useful than judging an offer by the size of its discount.</p>
-      <p>Before paying, identify the seller and ticket supplier, verify the seller’s relationship with the attraction where possible, and read the date, admission, eligibility and cancellation conditions. If you cannot establish who will supply the ticket or how you will receive it, pause the purchase and check with the attraction. Buy directly from the attraction or verify a reseller's authorization independently. Park logos, a professional-looking site or a prominent search result do not establish that a seller is genuine; the <a href="https://consumer.ftc.gov/consumer-alerts/2025/06/how-avoid-travel-website-scams">FTC describes how travel websites can impersonate genuine businesses</a>.</p>
-      <p>If a “free” or discounted offer requires a presentation, appointment or other commitment, get those conditions in writing before accepting. Do not assume a low price includes every park, date or extra you want. Urgency and unclear conditions are reasons to pause: verify the supplier before committing to a presentation or sending money.</p>
+      <section id="resources" className={styles.section} tabIndex={-1}>
+        <h2>More Orlando resources</h2>
+        <p>
+          Choose the next guide based on the decision you need to make:
+        </p>
+        <ul>
+          <li><strong>After-dark planning:</strong> <a href="/destination/orlando/is-orlando-safe-at-night">Orlando night-safety guide</a> for evening routes and return arrangements.</li>
+          <li><strong>Accommodation:</strong> <a href="/destination/orlando/best-areas-to-stay">Best areas to stay in Orlando</a> to compare locations around your itinerary.</li>
+          <li><strong>Local orientation:</strong> <a href="/destination/orlando/neighborhood-guide">Orlando neighbourhood guide</a> for planning the areas you will visit.</li>
+          <li><strong>Solo preparation:</strong> <a href="/destination/orlando/solo-trip-to-orlando">Orlando solo-travel guide</a> for organizing an independent trip.</li>
+        </ul>
+        <p>
+          Use the official operator and agency links within this article for changing schedules, eligibility and reporting rules. A related travel article does not replace current instructions from the service you will use.
+        </p>
+      </section>
 
-      <h3>Accommodation and payment checks</h3>
-      <p>Check the full property address, final price, parking charges, deposit and cancellation terms before paying. If someone asks you to move a booking or payment outside the channel you selected, pause and verify the request through independently obtained contact details. For vacation rentals, search the address independently and compare the photos and listing details across sources; the <a href="https://consumer.ftc.gov/articles/rental-listing-scams">FTC’s rental-listing guidance</a> explains how copied listings and changed contact details divert payments. Obtain the contract before sending a deposit. Pressure to pay immediately by gift card, wire transfer or cryptocurrency is a warning sign identified in the <a href="https://consumer.ftc.gov/articles/avoid-scams-when-you-travel">FTC’s travel-scam guidance</a>.</p>
-      <p>Keep your confirmation and the terms shown at purchase. If the accommodation cannot locate your reservation, contact the booking provider through its official support channel before sending a second payment. Rental-car trips also make toll-payment messages worth checking carefully. The <a href="https://consumer.ftc.gov/consumer-alerts/2025/01/got-text-about-unpaid-tolls-its-probably-scam">FTC warns about fake unpaid-toll texts</a>. Do not follow an unsolicited message to enter payment details: contact the toll agency through an independently obtained official channel and check the rental agreement’s toll arrangements.</p>
-    </section>
-
-    <section id="solo" className={styles.section} tabIndex={-1}><span id="solo-traveler-essentials" /><h2>Solo traveler essentials</h2>
-      <ul><li>Keep essential booking information and your lodging address accessible, with a backup way to retrieve them if your phone is unavailable. Keep a second payment method separate from your main wallet.</li><li>Keep your phone charged and plan transport between stops, including the final return to your accommodation. Make the return arrangements before drinking or entering a crowded venue.</li><li>Share your lodging address, itinerary and expected return time with someone you trust if that is useful to you. Agree how to get in touch if plans change so you have a backup when no travelling companion is available to help.</li><li>For evening routes and return planning, use the dedicated <a href="/destination/orlando/is-orlando-safe-at-night">night-safety guide</a>.</li></ul>
-    </section>
-
-    <section id="heat" className={styles.section} tabIndex={-1}><h2>Heat, sun and thunderstorms</h2>
-      <h3>Plan cooling breaks before a long outing</h3>
-      <p>Carry water, take breaks and plan access to shade or air conditioning; the <a href="https://www.cdc.gov/extreme-heat/about/">CDC recommends staying cool, staying hydrated and checking local HeatRisk when planning activity</a>. Outdoor queues, paved areas and humidity can make cooling breaks especially relevant during an Orlando park day. Follow <a href="https://wwwnc.cdc.gov/travel/page/travel-to-hot-climates">CDC travel guidance on fluids, sun protection, clothing and cooler activity times</a>; alternate outdoor activities with indoor shows, shops or meals where practical. Take breaks before anyone feels unwell.</p>
-      <p>Do not dismiss dizziness, headache, weakness or nausea as simply part of a tiring day; these are among the symptoms described in the <a href="https://www.cdc.gov/extreme-heat/about/">CDC’s heat-health guidance</a>. Stop activity and seek a cooler place and appropriate help rather than trying to finish the itinerary. For suspected heat stroke or loss of consciousness, call 911. The <a href="https://wwwnc.cdc.gov/travel/page/travel-to-hot-climates">CDC’s heat-illness guidance</a> describes warning signs and identifies children, older adults and people with chronic conditions as more vulnerable.</p>
-      <p>If your health or medication affects how you manage heat, discuss your plan with your clinician rather than changing medication yourself, as advised by the <a href="https://www.cdc.gov/extreme-heat/about/">CDC</a>. The <a href="https://www.cdc.gov/heat-health/hcp/clinical-guidance/heat-and-medications-guidance-for-clinicians.html">CDC’s heat-and-medications guidance</a> supports making a medication plan with your clinician. Plan cooling breaks throughout the day, including the return journey.</p>
-
-      <h3>Know where you will shelter</h3>
-      <p>If you hear thunder, move into a fully enclosed building or an enclosed hard-topped vehicle; do not rely on a tree, open-sided pavilion or covered patio as lightning shelter. <a href="https://www.weather.gov/mlb/lightning_rules">National Weather Service Melbourne advises staying sheltered for 30 minutes after the last thunder</a>. Leave pools and other bodies of water when lightning threatens. Identify substantial shelter before starting an outdoor activity rather than relying on a nearby covered seating area.</p>
-      <p>Before an outdoor outing, identify an indoor alternative and follow venue staff instructions if activities are suspended. Keep the return journey flexible rather than waiting outdoors for conditions to improve. For a forecast tropical storm or hurricane, follow National Hurricane Center, National Weather Service and Orange County emergency information, check airline, hotel and attraction policies, and obey local shelter or evacuation instructions. Keep identification and essential supplies accessible. The <a href="https://oceanservice.noaa.gov/facts/hurricane.html">Atlantic hurricane season runs from June 1 through November 30</a>, although storms can occur outside those dates. Use <a href="https://www.weather.gov/safety/hurricane">National Weather Service hurricane guidance</a> and <a href="https://newsroom.ocfl.net/mobile-apps-alerts/ocfl-alert/">Orange County’s OCFL Alert information</a> for preparation and local updates.</p>
-    </section>
-
-    <section id="what-next" className={styles.section} tabIndex={-1}><span id="decision-tree" /><h2>If something feels off: what to do next</h2>
-      <h3>Your booked ride does not match</h3>
-      <p>Do not enter a vehicle that does not match your booking. Recheck the booking in the app, use the provider’s support process and ask venue staff for help locating the correct pickup point if needed. Step back into a staffed or well-lit public area while checking. If the driver or vehicle behaves suspiciously, cancel and arrange another ride; call 911 for an immediate threat.</p>
-
-      <h3>Your belongings are missing</h3>
-      <p>First check with the venue or transport provider’s official lost-property process. If you suspect theft, preserve relevant booking details and use the appropriate reporting route; <a href="https://www.ocso.com/911-or-non-emergency/">Orange County Sheriff’s Office distinguishes theft after the suspect has left from emergencies such as a crime in progress</a>. Keep the booking information and details of where and when you last had the item available for a report. OCSO’s <a href="https://www.ocso.com/tourist-safety/">tourist guidance</a> notes that it does not respond to lost items; use the agency’s published reporting process where appropriate.</p>
-      <p>If payment cards or an account may be compromised, contact the issuer or provider through an independently verified support channel. Use contact information obtained separately from an unexpected message about the missing item or account.</p>
-
-      <h3>Someone needs urgent help</h3>
-      <p>Call 911 for a serious medical emergency, crime in progress or other life-threatening situation. Be ready to give the address, venue, nearby intersection or another precise description of where help is needed, following the <a href="https://www.ocso.com/911-or-non-emergency/">Sheriff’s guidance for emergency calls</a>. Call 911 instead of delaying while choosing a hospital from a travel guide; explain your location and follow the call handler’s instructions. For LGBTQ visitors who are victims of crime, participating locations in <a href="https://www.orlando.gov/Public-Safety/OPD/Community-Programs/LGBTQ-Safe-Place">OPD’s Safe Place program</a> agree to let victims remain while police are called. The program is an assistance option, not a safety rating for the surrounding area.</p>
-    </section>
-
-    <section id="emergency-resources" className={styles.section} tabIndex={-1}><h2>Emergency numbers and resources</h2>
-      <p>Save your accommodation’s full address before your trip. When asking for help, identify your actual location rather than relying on “Orlando” as the address. Keep the location of your current outing available as well as your hotel address. A venue name, street address or nearby intersection helps explain where assistance is needed; the agency for a non-emergency may change during a day of sightseeing.</p>
-      <ul>
-        <li><strong>Emergency:</strong> Call <a href="tel:911">911</a> for immediate danger or a serious medical emergency, following <a href="https://www.ocso.com/911-or-non-emergency/">Orange County Sheriff’s emergency guidance</a>. The same guidance confirms Text-to-911 for people with hearing or speech impairments or who cannot safely speak; call if you can. Include your precise location and what help is needed in an emergency text.</li>
-        <li><strong>Orlando Police Department, non-emergency:</strong> <a href="tel:+13212355300">321-235-5300</a>, as published on the <a href="https://www.orlando.gov/Our-Government/Departments-Offices/Orlando-Police-Department/Contact-Us">City of Orlando contact page</a>.</li>
-        <li><strong>Orange County Sheriff’s Office, non-emergency:</strong> <a href="tel:+14078364357">407-836-4357</a>, as published in the <a href="https://www.ocso.com/911-or-non-emergency/">Sheriff’s non-emergency guidance</a>.</li>
-      </ul>
-      <p>The two non-emergency numbers are agency-specific contacts, not a complete list for every destination on your trip. For a non-emergency, confirm the relevant agency for your location; for an emergency, call 911 rather than delaying while you research boundaries. Theft discovered after the suspect has left or vandalism may belong on a non-emergency reporting route. An active crime, serious medical emergency or immediate danger calls for 911. Keep these contacts accessible outside a single phone or booking app. For a poisoning question or exposure, <a href="https://floridapoisoncontrol.org/contact/contact-us/">Florida’s Poison Control Centers</a> publish <a href="tel:+18002221222">1-800-222-1222</a>; immediate life-threatening emergencies still require 911. For traffic conditions, use <a href="https://fl511.com/faq">FL511</a> or dial 511. For Orange County government information, OCSO lists <a href="https://www.ocso.com/911-or-non-emergency/">311 as a government-services contact</a>; it does not replace emergency dispatch.</p>
-    </section>
-
-    <section id="faq" className={styles.section} tabIndex={-1}><h2>Frequently asked questions</h2>
-      <h3>How should I assess safety for an Orlando trip?</h3><p>Start with your accommodation address and the journeys your itinerary requires. Check walking connections, parking or transport, outdoor-weather plans and how you will get help. Use local incident information with its date range and geographical coverage in mind, rather than relying on a single citywide safety label. Check that local data applies to the property's jurisdiction, distinguish calls for service from documented incidents, and assess the exact route and time of day you intend to use. Hotel access and parking arrangements matter alongside the surrounding area.</p>
-      <h3>What should I check before booking accommodation?</h3><p>Ask the property to confirm parking terms, access arrangements and any transport your itinerary depends on. If a shuttle is important, ask for its destinations, reservation requirements and return arrangements. Save the answer with your booking confirmation. Independently search the street address and compare property details across sources, especially for vacation rentals. Obtain written cancellation terms and verify unusual payment requests directly through independently obtained contact details before sending a deposit.</p>
-      <h3>What should I do with valuables while sightseeing?</h3><p>Carry only what you need, keep belongings attended and avoid leaving valuables visible in a parked vehicle. Make a plan for important documents and a backup way to access essential booking information. Secure the car every time you leave it and put purchases away before the next stop where practical. A separate payment method and a backup of essential documents can help if your main wallet or phone becomes unavailable.</p>
-      <h3>Where can I find advice about Orlando after dark?</h3><p>For area-by-area evening planning, walking checks and return transport, read our <a href="/destination/orlando/is-orlando-safe-at-night">Orlando night-safety guide</a>. Confirm the venue, parking or designated pickup point and the final connection to your accommodation before leaving. Check whether an event changes street access and agree on a meeting point with companions.</p>
-    </section>
-
-    <section id="resources" className={styles.section} tabIndex={-1}><h2>More Orlando resources</h2><ul><li><a href="/destination/orlando/is-orlando-safe-at-night">Orlando at night: walking and return-trip advice</a> — use this dedicated guide for detailed evening routes and pickup planning.</li><li><a href="/destination/orlando/best-areas-to-stay">Best areas to stay in Orlando</a> — compare accommodation locations around the places you will visit most.</li><li><a href="/destination/orlando/getting-to-orlando">Getting to Orlando</a> — plan your arrival journey alongside the connection to your accommodation.</li><li><a href="/destination/orlando/neighborhood-guide">Orlando neighborhood guide</a> — use district context with the exact property and route checks in this safety guide.</li></ul></section>
-
-    <section id="sources" className={styles.section} tabIndex={-1}><h2>About this guide and its sources</h2><p>This guide provides general trip-planning precautions, not a safety guarantee for a property, route or neighbourhood. Weather guidance comes from the CDC and National Weather Service; emergency contacts and incident-information resources come from the relevant local agencies. Verify changing booking, venue and transport arrangements with the provider for your travel dates. Use the linked primary resources for the question they actually cover: police data for incident context, local agencies for emergency reporting, transport providers for current arrangements and weather agencies for changing hazards. Additional citations link to FTC scam guidance, Florida statutes, OPD’s Safe Place program, Florida Poison Control and local alert resources. Safety conditions, service hours and regulations can change. The practical aim is to help you assess a specific hotel, route, time of day, transport method and weather condition for your own itinerary.</p></section>
-  </article>
+      <section id="sources" className={styles.section} tabIndex={-1}>
+        <h2>About this guide and its sources</h2>
+        <p>
+          This guide combines practical trip-planning recommendations with linked first-party information. It does not provide a hotel security inspection, a neighbourhood crime ranking, individualized medical advice or a guarantee of safety.
+        </p>
+        <p>
+          Local safety and reporting information is drawn from the <a href="https://www.ocso.com/tourist-safety/">Orange County Sheriff</a> and <a href="https://www.orlando.gov/Public-Safety/OPD/OPD-Records-Open-Data">City of Orlando</a>; transport details come from the operators linked beside the relevant statements. Weather and health guidance comes from the <a href="https://www.weather.gov/mlb/lightning_rules">National Weather Service</a>, <a href="https://www.cdc.gov/heat-health/about/index.html">CDC</a> and other public agencies cited above.
+        </p>
+        <p>
+          Service arrangements and policies can change. Recheck the operator’s instructions for your travel dates, and use the actual location of your hotel or incident when choosing local information and reporting channels.
+        </p>
+      </section>
+    </article>
   </>;
 }

@@ -14,7 +14,7 @@ export default function SafetyHero() {
           <span aria-current="page">Orlando Safety Guide</span>
         </nav>
         <p className={styles.eyebrow}>Orlando safety guide</p>
-        <h1>Orlando Travel Safety Guide for Visitors</h1>
+        <h1 id="orlando-safety-title" tabIndex={-1}>Orlando Travel Safety Guide for Visitors</h1>
         <p className={styles.introduction}>
           Enjoy Orlando with a little preparation. Know what to check before booking, how to plan your journeys and what to watch for along the way. Find practical advice on hotel locations, driving, ticket offers, Florida heat and getting help when you need it.
         </p>

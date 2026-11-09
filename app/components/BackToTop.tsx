@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
 import styles from "./BackToTop.module.css";
 
-export default function BackToTop() {
+export default function BackToTop({ targetId = "orlando-night-title" }: { targetId?: string }) {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const update = () => setVisible(window.scrollY > 600);
@@ -16,6 +16,6 @@ export default function BackToTop() {
   return <button type="button" className={styles.button} aria-label="Back to top" title="Back to top"
     onClick={() => {
       window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
-      document.getElementById("orlando-night-title")?.focus({ preventScroll: true });
+      document.getElementById(targetId)?.focus({ preventScroll: true });
     }}><ArrowUp size={22} aria-hidden="true" /></button>;
 }
