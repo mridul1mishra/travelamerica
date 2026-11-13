@@ -20,7 +20,7 @@
 /* ── Hero text block ── */
 .heroSection {
   background: #fff;
-  padding: 56px 40px 48px;
+  padding: 36px 40px 40px;
 }
 
 .heroSection h1 {
@@ -28,7 +28,7 @@
   font-weight: 700;
   line-height: 1.15;
   margin: 0 0 16px;
-  max-width: 720px;
+  max-width: none;
 }
 
 .heroSection p {
@@ -168,7 +168,7 @@
 /* ── Grid section ── */
 .gridSection {
   background: #f7f9ff;
-  padding: 64px 40px;
+  padding: 40px;
 }
 
 .gridSection h2 {
@@ -305,18 +305,398 @@
   text-underline-offset: 2px;
 }
 
+/* Keep full-width section backgrounds, with a consistent centered reading area. */
+.heroSection,
+.textSection,
+.tintSection,
+.gridSection,
+.faqSection,
+.ctaSection,
+.navStrip {
+  padding-inline: max(32px, calc((100% - 1160px) / 2));
+}
+
+.grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.textSection > .grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.heroLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(280px, 1fr);
+  align-items: start;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.heroLayout > div,
+.guideNav {
+  min-width: 0;
+}
+
+.heroLayout p {
+  max-width: none;
+}
+
+.heroLayout .heroCtas {
+  margin-top: 20px;
+}
+
+.guideNav {
+  padding: 20px;
+  border: 1px solid #dfe5ef;
+  border-radius: 10px;
+  background: #f7f9ff;
+}
+
+.guideNav h2 {
+  margin: 0 0 12px;
+  color: #26364d;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.guideLinks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 16px;
+}
+
+.guideLinks a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding-block: 6px;
+  color: #1d4ed8;
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.guideLinks a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.sectionHeading {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.85fr) minmax(0, 1.6fr);
+  align-items: start;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.sectionHeading h2,
+.sectionHeading .sectionIntro {
+  margin: 0;
+  max-width: none;
+}
+
+.planningSection {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 40px;
+  padding: 36px max(32px, calc((100% - 1160px) / 2));
+  border-top: 1px solid #dbeafe;
+  background: #eff6ff;
+}
+
+.planningSection .ctaSection,
+.planningSection .navStrip {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.planningSection .ctaSection h2 {
+  font-size: 1.45rem;
+  line-height: 1.35;
+}
+
+.planningSection .ctaSection p,
+.planningSection .navStrip p {
+  max-width: none;
+  font-size: 0.94rem;
+}
+
+.planningSection .ctaSection p {
+  margin-bottom: 18px;
+}
+
+.planningSection .primaryCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.planningSection .navStrip {
+  padding-left: 32px;
+  border-left: 1px solid #cdddf3;
+}
+
+.heroSection ~ section[id] {
+  scroll-margin-top: 110px;
+}
+
+/* The comparison section is a shortlist, not a long sequence of bullet lists. */
+.attractionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.attractionCard {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #dfe5ef;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(23, 32, 51, 0.035);
+  scroll-margin-top: 110px;
+}
+
+.attractionMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.attractionNumber {
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.admissionBadge,
+.freeBadge {
+  max-width: 100%;
+  padding: 5px 9px;
+  border-radius: 5px;
+  background: #eff4ff;
+  color: #254d91;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.freeBadge {
+  background: #eaf6ef;
+  color: #20613e;
+}
+
+.textSection .attractionCard h3 {
+  margin: 0 0 8px;
+  color: #172033;
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.textSection .attractionArea {
+  margin: 0 0 18px;
+  color: #576579;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.textSection .attractionWhy {
+  margin: 0 0 20px;
+  color: #39475b;
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.attractionTime {
+  margin: 0 0 20px;
+  padding: 14px 16px;
+  border-radius: 7px;
+  background: #f5f7fb;
+}
+
+.attractionTime dt,
+.attractionFacts dt {
+  margin-bottom: 5px;
+  color: #26364d;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.attractionTime dd,
+.attractionFacts dd {
+  margin: 0;
+  color: #445268;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.attractionDetails {
+  border-block: 1px solid #e7ebf2;
+}
+
+.attractionDetails summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+  padding-block: 12px;
+  color: #26364d;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+  list-style: none;
+}
+
+.attractionDetails summary::-webkit-details-marker {
+  display: none;
+}
+
+.detailsIndicator {
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  margin-right: 3px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.attractionDetails[open] .detailsIndicator {
+  transform: rotate(225deg);
+}
+
+.attractionFacts {
+  margin: 0;
+  padding: 3px 0 18px;
+}
+
+.attractionFacts > div + div {
+  margin-top: 16px;
+}
+
+.attractionSource {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  margin-top: 12px;
+  color: #1d4ed8;
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.attractionSource:hover,
+.attractionNextSteps a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.attractionNextSteps {
+  margin-top: 32px;
+  padding: 24px;
+  border-radius: 10px;
+  background: #f5f7fb;
+}
+
+.textSection .attractionNextSteps p {
+  margin-bottom: 16px;
+  color: #39475b;
+  font-size: 0.94rem;
+}
+
+.attractionNextSteps nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+}
+
+.attractionNextSteps a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  color: #1d4ed8;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.attractionSource:focus-visible,
+.attractionDetails summary:focus-visible,
+.attractionNextSteps a:focus-visible,
+.guideLinks a:focus-visible,
+.heroCtas a:focus-visible,
+.planningSection a:focus-visible,
+.card:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+@media (max-width: 1100px) {
+  .attractionGrid,
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .heroLayout {
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 1fr);
+    gap: 24px;
+  }
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .banner { height: 240px; }
-  .heroSection { padding: 36px 20px 32px; }
+  .heroSection { padding: 28px 20px; }
   .heroSection h1 { font-size: 1.8rem; }
+  .heroLayout,
+  .sectionHeading,
+  .planningSection { grid-template-columns: 1fr; gap: 24px; }
+  .heroLayout { margin-top: 16px; }
+  .sectionHeading { gap: 12px; }
   .textSection,
   .tintSection,
   .gridSection,
   .faqSection,
   .ctaSection { padding: 48px 20px; }
   .navStrip { padding: 32px 20px; }
-  .grid { grid-template-columns: 1fr; }
+  .gridSection,
+  .planningSection { padding: 32px 20px; }
+  .planningSection .navStrip {
+    padding: 24px 0 0;
+    border-left: 0;
+    border-top: 1px solid #cdddf3;
+  }
+  .grid,
+  .textSection > .grid { grid-template-columns: 1fr; }
+  .attractionGrid { gap: 18px; }
+  .attractionCard { padding: 20px; }
+}
+
+@media (max-width: 640px) {
+  .attractionGrid { grid-template-columns: 1fr; }
+  .attractionNextSteps { padding: 20px; }
+  .attractionNextSteps nav { flex-direction: column; gap: 4px; }
 }
 
 @media (max-width: 480px) {

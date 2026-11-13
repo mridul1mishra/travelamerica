@@ -18,6 +18,7 @@ const categories = [
 const topAttractions = [
   {
     id: 'bellagio-fountains',
+    admission: 'Free',
     name: 'Fountains of Bellagio',
     why: 'Choose this for a short, classic Vegas spectacle without buying a ticket. It fits easily into a center-Strip walk or an evening near Bellagio.',
     area: 'Center Strip, outside Bellagio.',
@@ -30,6 +31,7 @@ const topAttractions = [
   },
   {
     id: 'sphere',
+    admission: 'Free outside · Paid inside',
     name: 'Sphere',
     why: 'Choose between seeing the Exosphere outside and attending a ticketed event inside. The exterior display and an indoor show are different experiences.',
     area: 'East of the Strip, behind The Venetian.',
@@ -42,6 +44,7 @@ const topAttractions = [
   },
   {
     id: 'o-cirque-du-soleil',
+    admission: 'Paid',
     name: '"O" by Cirque du Soleil',
     why: 'Choose this if a major theatrical production matters more than another sightseeing stop. Its water-based stage makes it a distinct evening experience.',
     area: 'O Theatre at Bellagio, Center Strip.',
@@ -54,6 +57,7 @@ const topAttractions = [
   },
   {
     id: 'fremont-street',
+    admission: 'Free · Optional paid ride',
     name: 'Fremont Street Experience',
     why: 'Choose this for downtown atmosphere, the Viva Vision canopy and live entertainment rather than a conventional ticketed attraction.',
     area: 'Downtown Las Vegas.',
@@ -66,6 +70,7 @@ const topAttractions = [
   },
   {
     id: 'high-roller',
+    admission: 'Paid',
     name: 'High Roller Observation Wheel',
     why: 'Choose this for a skyline view from an observation cabin and a predictable ride length that fits into a center-Strip evening.',
     area: 'LINQ Promenade, Center Strip.',
@@ -78,6 +83,7 @@ const topAttractions = [
   },
   {
     id: 'venetian-gondolas',
+    admission: 'Paid ride · Free to explore',
     name: 'Gondola Rides at The Venetian',
     why: 'Choose this if the gondola ride itself appeals to you. You can explore the resort canals and St. Mark’s Square without paying for a ride.',
     area: 'The Venetian, on the Strip.',
@@ -90,6 +96,7 @@ const topAttractions = [
   },
   {
     id: 'strip-after-dark',
+    admission: 'Free',
     name: 'The Strip after dark',
     why: 'Choose a flexible self-guided walk to see the resort lights and free spectacles. Pick one manageable section instead of trying to cover the entire boulevard.',
     area: 'The Strip; choose a section near your hotel or evening plans.',
@@ -102,6 +109,7 @@ const topAttractions = [
   },
   {
     id: 'neon-museum',
+    admission: 'Paid',
     name: 'The Neon Museum',
     why: 'Choose this for vintage casino signs, design and Las Vegas history in an outdoor setting, rather than another casino or show.',
     area: 'North of Fremont Street, in the downtown area.',
@@ -114,6 +122,7 @@ const topAttractions = [
   },
   {
     id: 'mob-museum',
+    admission: 'Paid',
     name: 'The Mob Museum',
     why: 'Choose this for a substantial indoor museum on organised crime and law enforcement. It pairs well with Fremont Street later in the day.',
     area: 'Downtown Las Vegas, at 300 Stewart Avenue.',
@@ -153,30 +162,47 @@ export default function LasVegasThingsToDoClient() {
       {/* ── Hero ── */}
       <section className={styles.heroSection}>
         <h1>The Best Things to Do in Las Vegas</h1>
-        <p>
-          Las Vegas is more than casinos. The difference between a great visit and an exhausting
-          one usually comes down to pacing — the city runs hot and late, so you group the right
-          things together and save the walking for after dark. This guide breaks Vegas into what&apos;s
-          actually worth your time: the shows, the free Strip spectacle, the pools, downtown&apos;s
-          Fremont Street, the museums, and the day trips into the desert.
-        </p>
-        <div className={styles.heroCtas}>
-          <Link href="/destination/lasvegas/tours-and-tickets?from=things-to-do" className={styles.primaryCta}>
-            Book tickets &amp; tours
-          </Link>
-          <Link href="/destination/lasvegas/itinerary" className={styles.secondaryCta}>
-            See 3-day itinerary
-          </Link>
+        <div className={styles.heroLayout}>
+          <div>
+            <p>
+              Las Vegas is more than casinos. The difference between a great visit and an exhausting
+              one usually comes down to pacing — the city runs hot and late, so you group the right
+              things together and save the walking for after dark. This guide breaks Vegas into what&apos;s
+              actually worth your time: the shows, the free Strip spectacle, the pools, downtown&apos;s
+              Fremont Street, the museums, and the day trips into the desert.
+            </p>
+            <div className={styles.heroCtas}>
+              <Link href="/destination/lasvegas/tours-and-tickets?from=things-to-do" className={styles.primaryCta}>
+                Book tickets &amp; tours
+              </Link>
+              <Link href="/destination/lasvegas/itinerary" className={styles.secondaryCta}>
+                See 3-day itinerary
+              </Link>
+            </div>
+          </div>
+          <nav className={styles.guideNav} aria-label="On this page">
+            <h2>On this page</h2>
+            <div className={styles.guideLinks}>
+              <a href="#top-attractions">Top attractions</a>
+              <a href="#free-things">Free things to do</a>
+              <a href="#museums">Museums</a>
+              <a href="#by-area">Explore by area</a>
+              <a href="#budget">Budget tips</a>
+              <a href="#common-questions">Common questions</a>
+            </div>
+          </nav>
         </div>
       </section>
 
       {/* ── Category grid ── */}
       <section className={styles.gridSection}>
-        <h2>What to Do in Las Vegas</h2>
-        <p className={styles.sectionIntro}>
-          Six categories that cover the full range of what Vegas offers. Prioritise by what
-          matters most to you, then compare the signature attractions below.
-        </p>
+        <div className={styles.sectionHeading}>
+          <h2>What to Do in Las Vegas</h2>
+          <p className={styles.sectionIntro}>
+            Six categories that cover the full range of what Vegas offers. Prioritise by what
+            matters most to you, then compare the signature attractions below.
+          </p>
+        </div>
         <div className={styles.grid}>
           {categories.map(({ title, blurb, href }) => (
             <Link key={title} href={href} className={styles.card}>
@@ -197,32 +223,49 @@ export default function LasVegasThingsToDoClient() {
           travel between attractions. Prices, schedules and availability change; use the official
           links to check your travel date.
         </p>
-        {topAttractions.map(({ id, name, why, area, cost, time, timing, booking, href, linkLabel }) => (
-          <article key={id} id={id} aria-labelledby={`${id}-heading`}>
-            <h3 id={`${id}-heading`}>{name}</h3>
-            <p>{why}</p>
-            <ul>
-              <li><strong>Location:</strong> {area}</li>
-              <li><strong>Cost:</strong> {cost}</li>
-              <li><strong>Time to allow:</strong> {time}</li>
-              <li><strong>When to go:</strong> {timing}</li>
-              <li><strong>Booking:</strong> {booking}</li>
-            </ul>
-            <p><a href={href}>{linkLabel}</a></p>
-          </article>
-        ))}
-        <p>Pick <strong>one</strong> headline show and <strong>one</strong> view — the tickets add up fast on the Strip.</p>
-        <p>
-          Next, use our <Link href="/destination/lasvegas/landmark">Las Vegas landmarks guide</Link>{' '}
-          for more sightseeing detail, the{' '}
-          <Link href="/destination/lasvegas/itinerary">3-day itinerary</Link> to group your days,
-          or the <Link href="/destination/lasvegas/strip-transportation-map">Strip transportation guide</Link>{' '}
-          to plan how to get around.
-        </p>
+        <div className={styles.attractionGrid}>
+          {topAttractions.map(({ id, admission, name, why, area, cost, time, timing, booking, href, linkLabel }, index) => (
+            <article key={id} id={id} aria-labelledby={`${id}-heading`} className={styles.attractionCard}>
+              <div className={styles.attractionMeta}>
+                <span className={styles.attractionNumber} aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                <span className={admission === 'Free' ? styles.freeBadge : styles.admissionBadge}>{admission}</span>
+              </div>
+              <h3 id={`${id}-heading`}>{name}</h3>
+              <p className={styles.attractionArea}>{area}</p>
+              <p className={styles.attractionWhy}>{why}</p>
+              <dl className={styles.attractionTime}>
+                <dt>Time to allow</dt>
+                <dd>{time}</dd>
+              </dl>
+              <details className={styles.attractionDetails}>
+                <summary>
+                  <span>Cost, timing &amp; booking</span>
+                  <span className={styles.detailsIndicator} aria-hidden="true" />
+                </summary>
+                <dl className={styles.attractionFacts}>
+                  <div><dt>Cost</dt><dd>{cost}</dd></div>
+                  <div><dt>When to go</dt><dd>{timing}</dd></div>
+                  <div><dt>Booking</dt><dd>{booking}</dd></div>
+                </dl>
+              </details>
+              <a href={href} className={styles.attractionSource}>
+                {linkLabel} <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+          ))}
+        </div>
+        <div className={styles.attractionNextSteps}>
+          <p>Pick <strong>one</strong> headline show and <strong>one</strong> view. The tickets add up fast on the Strip.</p>
+          <nav aria-label="Plan your Las Vegas attractions">
+            <Link href="/destination/lasvegas/landmark">Las Vegas landmarks guide <span aria-hidden="true">→</span></Link>
+            <Link href="/destination/lasvegas/itinerary">3-day itinerary <span aria-hidden="true">→</span></Link>
+            <Link href="/destination/lasvegas/strip-transportation-map">Strip transportation guide <span aria-hidden="true">→</span></Link>
+          </nav>
+        </div>
       </section>
 
       {/* ── Free things ── tinted */}
-      <section className={styles.tintSection}>
+      <section className={styles.tintSection} id="free-things">
         <h2>Free things to do in Las Vegas</h2>
         <p>
           You can have a genuinely great Vegas night for almost nothing. Some of the best
@@ -239,7 +282,7 @@ export default function LasVegasThingsToDoClient() {
       </section>
 
       {/* ── Museums ── white */}
-      <section className={styles.textSection}>
+      <section className={styles.textSection} id="museums">
         <h2>Museums worth the ticket</h2>
         <ul>
           <li><strong>The Neon Museum</strong> — restored vintage casino signs in an outdoor setting. Compare daytime and evening admission in the attraction shortlist above.</li>
@@ -251,7 +294,7 @@ export default function LasVegasThingsToDoClient() {
       </section>
 
       {/* ── By area ── tinted */}
-      <section className={styles.tintSection}>
+      <section className={styles.tintSection} id="by-area">
         <h2>Things to do by area</h2>
         <p>Group your days by area to cut down on Strip traffic and walking in the heat.</p>
         <ul>
@@ -292,7 +335,7 @@ export default function LasVegasThingsToDoClient() {
       </section>
 
       {/* ── Budget ── white */}
-      <section className={styles.textSection}>
+      <section className={styles.textSection} id="budget">
         <h2>Las Vegas on a budget</h2>
         <ul>
           <li>Lean on the free spectacle — the fountains, Fremont Street, and the casino interiors cost nothing.</li>
@@ -304,7 +347,7 @@ export default function LasVegasThingsToDoClient() {
       </section>
 
       {/* ── FAQ ── */}
-      <section className={styles.faqSection}>
+      <section className={styles.faqSection} id="common-questions">
         <h2>Common questions</h2>
         <h3>What are the top free things to do in Las Vegas?</h3>
         <p>
@@ -330,33 +373,34 @@ export default function LasVegasThingsToDoClient() {
         </p>
       </section>
 
-      {/* ── Assisted CTA ── */}
-      <section className={styles.ctaSection}>
-        <h2>Not sure how to shape your Las Vegas experience?</h2>
-        <p>
-          Tell us what you want to focus on, and we&apos;ll help you plan where to stay and how to
-          structure your visit.
-        </p>
-        <Link href="/destination/lasvegas#planning-intent" className={styles.primaryCta}>
-          Get help planning my Las Vegas trip
-        </Link>
-      </section>
+      {/* ── Compact planning and navigation area ── */}
+      <div className={styles.planningSection}>
+        <section className={styles.ctaSection}>
+          <h2>Not sure how to shape your Las Vegas experience?</h2>
+          <p>
+            Tell us what you want to focus on, and we&apos;ll help you plan where to stay and how to
+            structure your visit.
+          </p>
+          <Link href="/destination/lasvegas#planning-intent" className={styles.primaryCta}>
+            Get help planning my Las Vegas trip
+          </Link>
+        </section>
 
-      {/* ── Nav resource strip ── */}
-      <section className={styles.navStrip}>
-        <h3>Navigate Las Vegas with Confidence</h3>
-        <p>
-          Getting around is essential to doing what you want to do in Vegas. Check out our{' '}
-          <Link href="/destination/lasvegas/neighborhood-guide">Strip &amp; neighbourhood guide</Link>{' '}
-          to plan your routes and understand the layout.
-        </p>
-        <p>
-          Also useful:{' '}
-          <Link href="/destination/lasvegas/food">Las Vegas food guide</Link>,{' '}
-          <Link href="/destination/lasvegas/best-areas-to-stay">best areas to stay</Link>,{' '}
-          <Link href="/destination/lasvegas/itinerary">3-day itinerary</Link>.
-        </p>
-      </section>
+        <section className={styles.navStrip}>
+          <h3>Navigate Las Vegas with Confidence</h3>
+          <p>
+            Getting around is essential to doing what you want to do in Vegas. Check out our{' '}
+            <Link href="/destination/lasvegas/neighborhood-guide">Strip &amp; neighbourhood guide</Link>{' '}
+            to plan your routes and understand the layout.
+          </p>
+          <p>
+            Also useful:{' '}
+            <Link href="/destination/lasvegas/food">Las Vegas food guide</Link>,{' '}
+            <Link href="/destination/lasvegas/best-areas-to-stay">best areas to stay</Link>,{' '}
+            <Link href="/destination/lasvegas/itinerary">3-day itinerary</Link>.
+          </p>
+        </section>
+      </div>
 
       <BookingCTA variant="full" text="Book skip-the-line tickets and show seats" href="/destination/lasvegas/tours-and-tickets?from=things-to-do" label="See tickets & tours" />
       <Footer />
