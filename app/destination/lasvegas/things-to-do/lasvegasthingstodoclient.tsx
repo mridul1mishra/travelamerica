@@ -7,12 +7,123 @@ import Footer from '../../../../app/components/Header/Footer/footer';
 import BookingCTA from './components/BookingCTA/BookingCTA';
 
 const categories = [
-  { title: 'Shows & Residencies', blurb: 'Cirque du Soleil is the headline act — "O" at Bellagio (water stage, ~$110+) and "Mystère" at Treasure Island are the picks. Pop residencies rotate through the Colosseum at Caesars Palace, Dolby Live at Park MGM, and the Sphere. Book 3–5 days ahead; same-day Tix4Tonight booths sell discounted seats from ~$30.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
-  { title: 'The Strip & Free Attractions', blurb: 'Walk the 4-mile boulevard — best done in two halves, after dark. Free: the Bellagio fountains (every 15–30 min, afternoon to midnight), the Conservatory, the Venetian\'s canals, and the Park MGM district. The Sphere\'s exterior "Exosphere" is free to view from outside.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
-  { title: 'Fremont Street & Downtown', blurb: 'Downtown\'s covered LED canopy (Viva Vision) runs free light-and-music shows nightly. SlotZilla zip line flies the length of it (~$49–$69). Grittier, cheaper, older Vegas — worth one evening, plus the Arts District for craft cocktails.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
-  { title: 'Pools, Dayclubs & Gondolas', blurb: 'Summer days belong to the pools and dayclubs — Encore Beach Club, Marquee at Cosmopolitan, Wet Republic at MGM ($30–$75 cover). Indoor and outdoor gondola rides glide through the Venetian\'s canals (~$39 per person). Book pool cabanas well ahead in peak heat.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
-  { title: 'Museums & Culture', blurb: 'The Neon Museum is the standout — an outdoor boneyard of restored casino signs, best on the lit night tour (~$25–$40). The Mob Museum downtown ($30, allow 2–3 hrs) is genuinely excellent. AREA15 is an immersive art-and-entertainment campus; the Atomic Museum covers Nevada\'s nuclear-test history.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
+  { title: 'Shows & Residencies', blurb: 'Choose a headline show such as "O" at Bellagio or "Mystère" at Treasure Island, or check the residency calendars at Caesars Palace, Park MGM and Sphere. Reserve ahead when a particular performance matters; availability and prices depend on the show, date and seat.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
+  { title: 'The Strip & Free Attractions', blurb: 'Explore the resort corridor in manageable sections, preferably after dark. Free stops include the Bellagio fountains and Conservatory, the Venetian\'s canals and the Park MGM district. Sphere\'s exterior Exosphere is free to view; indoor events require tickets.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
+  { title: 'Fremont Street & Downtown', blurb: 'Downtown\'s covered Viva Vision canopy and live entertainment make it worth an evening. The SlotZilla zip line is a separate paid activity with prices that vary by ride and day. Pair Fremont Street with a downtown museum or the Arts District.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
+  { title: 'Pools, Dayclubs & Gondolas', blurb: 'Summer days belong to the pools and dayclubs — Encore Beach Club, Marquee at Cosmopolitan, Wet Republic at MGM ($30–$75 cover). Indoor and outdoor gondola rides glide through the Venetian\'s canals; the ride is paid, but the canals are free to explore. Book pool cabanas well ahead in peak heat.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
+  { title: 'Museums & Culture', blurb: 'Choose the Neon Museum for restored casino signs outdoors, or the Mob Museum for an indoor look at organised crime and law enforcement. AREA15 is an immersive art-and-entertainment campus; the Atomic Museum covers Nevada\'s nuclear-test history.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
   { title: 'Day Trips', blurb: 'Hoover Dam is 45 min away (dam tour ~$30). Red Rock Canyon is 30 min — a 13-mile scenic loop drive ($20/car) plus hiking. Valley of Fire is ~1 hr of stunning red sandstone. Grand Canyon West is ~2.5 hrs; the South Rim is a long ~4.5-hr day or an overnight.', href: '/destination/lasvegas/tours-and-tickets?from=things-to-do' },
+];
+
+const topAttractions = [
+  {
+    id: 'bellagio-fountains',
+    name: 'Fountains of Bellagio',
+    why: 'Choose this for a short, classic Vegas spectacle without buying a ticket. It fits easily into a center-Strip walk or an evening near Bellagio.',
+    area: 'Center Strip, outside Bellagio.',
+    cost: 'Free to watch.',
+    time: 'Allow about 20–30 minutes, including the wait for a show.',
+    timing: 'After dark is a good choice for the illuminated setting. Check the official schedule for your day; weather can cancel performances.',
+    booking: 'No ticket or reservation needed.',
+    href: 'https://bellagio.mgmresorts.com/en/entertainment/fountains-of-bellagio.html',
+    linkLabel: 'Check the official Bellagio fountain schedule',
+  },
+  {
+    id: 'sphere',
+    name: 'Sphere',
+    why: 'Choose between seeing the Exosphere outside and attending a ticketed event inside. The exterior display and an indoor show are different experiences.',
+    area: 'East of the Strip, behind The Venetian.',
+    cost: 'Free to view the exterior; indoor events are paid. Check the event calendar for prices by show, date and seat.',
+    time: 'Allow about 15–30 minutes outside. For The Wizard of Oz at Sphere, allow about two hours including pre-show entry and the 75-minute presentation; other events vary.',
+    timing: 'After dark for the exterior. For an indoor event, follow the arrival instructions on your ticket; late seating is not permitted for The Wizard of Oz.',
+    booking: 'No reservation for exterior viewing. A ticket is required for an indoor event; book ahead if a specific date matters.',
+    href: 'https://thesphere.com/shows/wizard-of-oz-experience',
+    linkLabel: 'Check official Sphere show details and tickets',
+  },
+  {
+    id: 'o-cirque-du-soleil',
+    name: '"O" by Cirque du Soleil',
+    why: 'Choose this if a major theatrical production matters more than another sightseeing stop. Its water-based stage makes it a distinct evening experience.',
+    area: 'O Theatre at Bellagio, Center Strip.',
+    cost: 'Paid. Check the live calendar for your performance, seat category, taxes and fees.',
+    time: 'The show runs 90 minutes without an intermission. Allow about 2–2¼ hours including arrival and seating.',
+    timing: 'Choose a performance that fits your dinner and travel plans, and check the live calendar rather than assuming a fixed showtime.',
+    booking: 'A show ticket is required. Reserve ahead when a particular date or seat matters; there is no universal booking lead time.',
+    href: 'https://bellagio.mgmresorts.com/en/entertainment/o-by-cirque-du-soleil.html',
+    linkLabel: 'Check official "O" performances and tickets',
+  },
+  {
+    id: 'fremont-street',
+    name: 'Fremont Street Experience',
+    why: 'Choose this for downtown atmosphere, the Viva Vision canopy and live entertainment rather than a conventional ticketed attraction.',
+    area: 'Downtown Las Vegas.',
+    cost: 'The pedestrian area and Viva Vision shows are free. SlotZilla is a separate paid ride.',
+    time: 'Allow about 1½–3 hours if you also want to explore the surrounding blocks.',
+    timing: 'Visit after dark for the canopy and downtown lights. Check the official calendar for featured shows and entertainment.',
+    booking: 'No ticket needed for the public area and free canopy shows. Check SlotZilla separately if you want to ride.',
+    href: 'https://fremontstreetexperience.com/',
+    linkLabel: 'Check official Fremont Street events and visitor information',
+  },
+  {
+    id: 'high-roller',
+    name: 'High Roller Observation Wheel',
+    why: 'Choose this for a skyline view from an observation cabin and a predictable ride length that fits into a center-Strip evening.',
+    area: 'LINQ Promenade, Center Strip.',
+    cost: 'Paid. Check current operator prices and ticket conditions for your visit.',
+    time: 'The ride takes about 30 minutes. Allow about one hour total for entry, the ride and exit.',
+    timing: 'Aim for sunset if changing light is your priority, or after dark for the city lights.',
+    booking: 'A ride ticket is required. Check ticket validity and availability ahead if your schedule is tight.',
+    href: 'https://www.caesars.com/linq/things-to-do/attractions/high-roller',
+    linkLabel: 'Check official High Roller information and tickets',
+  },
+  {
+    id: 'venetian-gondolas',
+    name: 'Gondola Rides at The Venetian',
+    why: 'Choose this if the gondola ride itself appeals to you. You can explore the resort canals and St. Mark’s Square without paying for a ride.',
+    area: 'The Venetian, on the Strip.',
+    cost: 'The ride is paid; exploring the resort canals is free. Check current shared and private ride prices for your date.',
+    time: 'The ride takes about 10–13 minutes. Allow about 30–45 minutes total with ticketing and waiting.',
+    timing: 'Choose an indoor or outdoor ride to suit the conditions and experience you want.',
+    booking: 'A ride ticket is required. Check current reservation arrangements and availability with the operator.',
+    href: 'https://www.venetianlasvegas.com/resort/attractions/gondola-rides.html',
+    linkLabel: 'Check official Venetian gondola options and tickets',
+  },
+  {
+    id: 'strip-after-dark',
+    name: 'The Strip after dark',
+    why: 'Choose a flexible self-guided walk to see the resort lights and free spectacles. Pick one manageable section instead of trying to cover the entire boulevard.',
+    area: 'The Strip; choose a section near your hotel or evening plans.',
+    cost: 'Free to walk; individual attractions, food and transport cost extra.',
+    time: 'Allow about 1½–3 hours for one section with stops, not the entire Strip. The STRAT-to-Mandalay Bay span is roughly 4.5 miles before detours.',
+    timing: 'After dark for the lights. Account for pedestrian bridges, detours and the weather when choosing your route.',
+    booking: 'No reservation for a self-guided walk. Check any ticketed stops separately.',
+    href: 'https://www.visitlasvegas.com/experience/post/walking-the-las-vegas-strip/',
+    linkLabel: 'Read the official Las Vegas Strip walking guide',
+  },
+  {
+    id: 'neon-museum',
+    name: 'The Neon Museum',
+    why: 'Choose this for vintage casino signs, design and Las Vegas history in an outdoor setting, rather than another casino or show.',
+    area: 'North of Fremont Street, in the downtown area.',
+    cost: 'Paid. Daytime and evening admission differ; check current prices, processing fees and any tour add-ons.',
+    time: 'Allow about 60–90 minutes. Allow additional time if you book a separate History Tour.',
+    timing: 'Choose an evening admission for illuminated signs. Check seasonal hours and weather before choosing your time.',
+    booking: 'Advance booking is strongly recommended, especially for timed evening admission.',
+    href: 'https://neonmuseum.org/',
+    linkLabel: 'Check official Neon Museum admission and hours',
+  },
+  {
+    id: 'mob-museum',
+    name: 'The Mob Museum',
+    why: 'Choose this for a substantial indoor museum on organised crime and law enforcement. It pairs well with Fremont Street later in the day.',
+    area: 'Downtown Las Vegas, at 300 Stewart Avenue.',
+    cost: 'Paid. Compare current general admission and experience packages; discounts and eligibility conditions vary.',
+    time: 'Plan about 2–3 hours for a first visit without rushing the exhibits.',
+    timing: 'Morning or early afternoon works well if you want to continue to Fremont Street after dark.',
+    booking: 'Online reservations are strongly encouraged. Choose the admission package that matches the experiences you want.',
+    href: 'https://themobmuseum.org/plan-your-visit/purchase-tickets/',
+    linkLabel: 'Check official Mob Museum admission options',
+  },
 ];
 
 const buckets = [
@@ -63,8 +174,8 @@ export default function LasVegasThingsToDoClient() {
       <section className={styles.gridSection}>
         <h2>What to Do in Las Vegas</h2>
         <p className={styles.sectionIntro}>
-          Six categories that cover the full range of what Vegas offers, with real prices and
-          time estimates — prioritise by what matters most to you.
+          Six categories that cover the full range of what Vegas offers. Prioritise by what
+          matters most to you, then compare the signature attractions below.
         </p>
         <div className={styles.grid}>
           {categories.map(({ title, blurb, href }) => (
@@ -76,23 +187,38 @@ export default function LasVegasThingsToDoClient() {
         </div>
       </section>
 
-      {/* ── The Icons ── white */}
-      <section className={styles.textSection}>
-        <h2>The icons (do at least a few)</h2>
+      {/* ── Top attractions ── white */}
+      <section className={styles.textSection} id="top-attractions" aria-labelledby="top-attractions-heading">
+        <h2 id="top-attractions-heading">Top Las Vegas attractions to compare</h2>
         <p>
-          These are the names everyone knows, and they&apos;re famous for a reason. You don&apos;t need all
-          of them — pick the ones that match your trip.
+          You don&apos;t need all of them. Choose a few signature experiences by where they are,
+          what they cost, how long they take and whether they need a reservation. Time allowances
+          below are planning estimates unless a show or ride duration is stated, and exclude
+          travel between attractions. Prices, schedules and availability change; use the official
+          links to check your travel date.
         </p>
-        <ul>
-          <li><strong>The Bellagio Fountains</strong> — free, every 15–30 minutes from afternoon to midnight. The single best free show in the city.</li>
-          <li><strong>The Sphere</strong> — the 366-foot LED dome at the Venetian. The exterior &quot;Exosphere&quot; is free to see; immersive shows inside run from ~$59.</li>
-          <li><strong>Cirque du Soleil</strong> — &quot;O&quot; at Bellagio is the flagship (~$110+); &quot;Mystère&quot; at Treasure Island is the value pick.</li>
-          <li><strong>Fremont Street Experience</strong> — downtown&apos;s free LED-canopy light shows run every night, with live bands and the SlotZilla zip line overhead.</li>
-          <li><strong>The High Roller</strong> — a 550-foot observation wheel at the LINQ, ~$25–$37. Sunset and after-dark cabins are the best.</li>
-          <li><strong>Venetian Gondola Rides</strong> — indoor and outdoor canal rides with a singing gondolier, ~$39 per person.</li>
-          <li><strong>The Strip after dark</strong> — worth walking once, end to end in two halves, for the sheer sensory overload. See it, then duck into a casino to cool off.</li>
-        </ul>
+        {topAttractions.map(({ id, name, why, area, cost, time, timing, booking, href, linkLabel }) => (
+          <article key={id} id={id} aria-labelledby={`${id}-heading`}>
+            <h3 id={`${id}-heading`}>{name}</h3>
+            <p>{why}</p>
+            <ul>
+              <li><strong>Location:</strong> {area}</li>
+              <li><strong>Cost:</strong> {cost}</li>
+              <li><strong>Time to allow:</strong> {time}</li>
+              <li><strong>When to go:</strong> {timing}</li>
+              <li><strong>Booking:</strong> {booking}</li>
+            </ul>
+            <p><a href={href}>{linkLabel}</a></p>
+          </article>
+        ))}
         <p>Pick <strong>one</strong> headline show and <strong>one</strong> view — the tickets add up fast on the Strip.</p>
+        <p>
+          Next, use our <Link href="/destination/lasvegas/landmark">Las Vegas landmarks guide</Link>{' '}
+          for more sightseeing detail, the{' '}
+          <Link href="/destination/lasvegas/itinerary">3-day itinerary</Link> to group your days,
+          or the <Link href="/destination/lasvegas/strip-transportation-map">Strip transportation guide</Link>{' '}
+          to plan how to get around.
+        </p>
       </section>
 
       {/* ── Free things ── tinted */}
@@ -116,8 +242,8 @@ export default function LasVegasThingsToDoClient() {
       <section className={styles.textSection}>
         <h2>Museums worth the ticket</h2>
         <ul>
-          <li><strong>The Neon Museum</strong> — an outdoor boneyard of restored vintage casino signs; the lit night tour (~$25–$40) is far better than daytime.</li>
-          <li><strong>The Mob Museum</strong> — downtown, in the old federal courthouse ($30). Genuinely excellent on organised crime and law enforcement; allow 2–3 hours.</li>
+          <li><strong>The Neon Museum</strong> — restored vintage casino signs in an outdoor setting. Compare daytime and evening admission in the attraction shortlist above.</li>
+          <li><strong>The Mob Museum</strong> — downtown, in the old federal courthouse, with exhibits on organised crime and law enforcement. See the shortlist above for visit planning and official admission options.</li>
           <li><strong>AREA15</strong> — an immersive art-and-entertainment campus off-Strip; Omega Mart is the headline attraction.</li>
           <li><strong>The Atomic Museum</strong> — a Smithsonian-affiliate covering Nevada&apos;s nuclear-testing history; surprising and well done.</li>
           <li><strong>The Las Vegas Natural History Museum &amp; The Discovery</strong> — the best picks with kids, both near downtown.</li>
