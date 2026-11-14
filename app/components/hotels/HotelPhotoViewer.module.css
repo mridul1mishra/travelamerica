@@ -21,3 +21,5 @@
 .toolbar button, .controls button { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #d8dfe6; border-radius: 8px; padding: 8px 12px; background: #fff; color: #172438; }
 .unavailable { padding: 48px 20px; }
 @media (max-width: 600px) { .photo { height: 260px; } .dialog { padding: 12px; } .thumbnail img { height: 65px; } }
+
+.morePhotos { align-self: start; min-height: 44px; padding: 8px; border: 1px solid #d8dfe6; border-radius: 8px; background: white; color: #172438; }

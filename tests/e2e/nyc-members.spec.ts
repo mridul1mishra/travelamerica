@@ -683,3 +683,23 @@ test(`email-code HTTP ${status} errors appear in dark red below the email field`
   await expect(page.getByLabel("Six-digit code", { exact: true })).toHaveCount(0);
 });
 }
+
+test("profile asks for confirmation before deleting an account", async ({ page }) => {
+  await page.route(sessionRoute, route => route.fulfill({ json: memberSession() }));
+  let deletions = 0;
+  await page.route("**/api/auth/delete-user", route => {
+    deletions++;
+    return route.fulfill({ json: { success: true } });
+  });
+  await page.goto("/profile", { waitUntil: "domcontentloaded" });
+  const open = page.getByRole("button", { name: "Delete account", exact: true });
+  const dialog = page.getByRole("dialog", { name: "Delete your account?" });
+  await open.click();
+  await dialog.getByRole("button", { name: "Cancel" }).click();
+  await expect(dialog).toBeHidden();
+  expect(deletions).toBe(0);
+  await open.click();
+  await dialog.getByRole("button", { name: "Permanently delete account" }).click();
+  await expect(page).toHaveURL("/");
+  expect(deletions).toBe(1);
+});

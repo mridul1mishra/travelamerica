@@ -35,7 +35,6 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
   const { hotel, previous, next } = await findHotel(city, params);
   const path = `/destination/${city}/hotel/${hotel.hotelId}`;
   const cityLabel = city === "nyc" ? "NYC" : cityNames[city];
-  const mapsUrl = hotel.googleMapsUrl ?? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotel.address ?? `${hotel.title}, ${cityNames[city]}`)}`;
   const bookingUrl = await getHotelBookingUrl(hotel.hotelId!);
   const safeBookingUrl = bookingUrl && safeHotelBookingUrl(bookingUrl);
   const booking = safeBookingUrl ? new URL(safeBookingUrl) : undefined;
@@ -53,13 +52,12 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
         <h1>{hotel.title}</h1>
         <p className={styles.location}>
           {hotel.neighborhood ?? hotel.area ?? cityNames[city]}
-          {" · "}<a href="#location">View map</a>
         </p>
       </header>
       <div className={booking ? styles.hero : undefined}>
         <div className={styles.media}>
           {hotel.googleRatingAvailable && hotel.hotelId
-            ? <GoogleHotelRating key={hotel.hotelId} hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={mapsUrl} photosOnly />
+            ? <GoogleHotelRating key={hotel.hotelId} hotelId={hotel.hotelId} hotelName={hotel.title} photosOnly />
             : <p className={styles.photoUnavailable}>No hotel photos are available from Google.</p>}
         </div>
         {booking && <div className={styles.priceAction}>
@@ -70,13 +68,12 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
       </div>
       {hotel.googleRatingAvailable && hotel.hotelId && <section className={styles.guestReviews}>
         <h2>Google ratings &amp; reviews</h2>
-        <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={mapsUrl} showReviews />
+        <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} showReviews />
       </section>}
       <div className={styles.sections}>
         <section id="location" className={styles.panel}>
           <h2>Location</h2>
           <p>{hotel.address ?? hotel.neighborhood ?? hotel.area ?? cityNames[city]}</p>
-          <a href={mapsUrl} target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>
         </section>
         {!!hotel.tags?.length && <section className={styles.panel}>
           <h2>Good to know</h2>

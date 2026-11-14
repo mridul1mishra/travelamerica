@@ -30,12 +30,6 @@ for (const city of ["nyc", "la", "orlando", "lasvegas"]) {
       expect(title!.y + title!.height).toBeLessThan(900);
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 
-      await page.getByRole("link", { name: "View map", exact: true }).click();
-      await expect.poll(async () => {
-        const stickyHeader = await page.getByRole("banner").boundingBox();
-        const location = await page.getByRole("heading", { name: "Location", exact: true }).boundingBox();
-        return location!.y >= stickyHeader!.y + stickyHeader!.height && location!.y < 900;
-      }).toBe(true);
     }
     await page.evaluate(() => window.scrollTo(0, 0));
     await page.setViewportSize({ width: 1280, height: 900 });
@@ -66,7 +60,7 @@ test("guests can book without requesting Google photos or reviews", async ({ pag
   await page.goto("/destination/nyc/hotel/1", { waitUntil: "domcontentloaded" });
   await expect(page.getByRole("button", { name: "Sign in to view photos" })).toBeVisible();
   await expect(page.getByRole("link", { name: "Check availability" })).toBeVisible();
-  await expect(page.getByRole("button", { name: "View photos", exact: true })).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "Show more photos", exact: true })).toHaveCount(0);
   expect(requests).toEqual([]);
   await page.getByRole("button", { name: "Sign in to view photos" }).click();
   await expect(page).toHaveURL(/\/signin\?/);
@@ -99,8 +93,9 @@ test("members load a lead photo on visibility and additional photos on demand", 
   await expect(photoSection).toBeVisible();
   expect(requests).toEqual([]);
   await page.setViewportSize({ width: 390, height: 844 });
-  const open = photoSection.getByRole("button", { name: "View photos", exact: true });
+  const open = photoSection.getByRole("button", { name: "Show more photos", exact: true });
   await expect(open).toBeVisible();
+  await expect(photoSection.getByRole("button", { name: "Show hotel photo 1" })).toBeVisible();
   expect(requests).toEqual(["lead"]);
   await open.click();
   await expect(photoSection.getByRole("button", { name: "Show hotel photo 2" })).toBeVisible();

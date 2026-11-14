@@ -160,7 +160,7 @@ export function createMemberAuth(
         phone: { type: "string", required: false, input: true, transform: { input: memberPhone } },
       },
       changeEmail: { enabled: false },
-      deleteUser: { enabled: false },
+      deleteUser: { enabled: true },
     },
     session: {
       modelName: "member_session",

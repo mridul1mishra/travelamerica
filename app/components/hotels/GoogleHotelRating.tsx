@@ -282,7 +282,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
       begin();
     };
     return <section ref={photoSection} className={lead ? undefined : styles.photoSection} data-hotel-photo={lead || coverImage ? "available" : undefined} aria-label="Hotel photos">
-      {lead ? <HotelPhotoViewer photos={photos} hotelName={hotelName} mapsUrl={mapsUrl} mainImage
+      {lead ? <HotelPhotoViewer photos={photos} hotelName={hotelName} mainImage
         onViewPhotos={photoMode === "lead" ? openGallery : undefined} />
         : coverImage && <HotelCoverImage className={styles.coverPhoto} src={coverImage} hotelName={hotelName} width={720} height={450} />}
       {!lead && <h2>Hotel photos</h2>}
@@ -337,7 +337,6 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
               </details> : <p className={styles.reviewText}>{review.text}</p>}
               {review.url && <a className={styles.reviewLink} href={review.url} target="_blank" rel="noopener noreferrer">Read on Google Maps ↗</a>}
             </article>)}</div> : <p>No written reviews are available for this hotel.</p>}
-            <a className={styles.moreReviews} href={mapsUrl} target="_blank" rel="noopener noreferrer">Read more reviews on Google Maps ↗</a>
           </section>}
         </>}
       </div>
@@ -348,7 +347,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
       </button>
       {expanded && phase === "security_failed" && siteKey && <button type="button" className={styles.photosButton} disabled={memberPending} onClick={retrySecurity}>Retry security check</button>}
       {member && requested && <div ref={challengeElement} className={styles.challenge} hidden={phase !== "challenge"} />}
-      {expanded && <a className={styles.attribution} href={mapsUrl} translate="no"
+      {expanded && !showReviews && <a className={styles.attribution} href={mapsUrl} translate="no"
         target="_blank" rel="noopener noreferrer">{phase === "loaded" ? "Google Maps" : "View on Google Maps"}</a>}
     </div>
   );

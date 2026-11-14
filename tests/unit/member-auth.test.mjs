@@ -429,3 +429,23 @@ test("environment origin overrides cannot widen or replace the configured allowl
     else process.env.BETTER_AUTH_TRUSTED_ORIGINS = previous;
   }
 });
+
+test("account deletion requires a fresh session and removes the profile and all sessions", async () => {
+  const f = fixture();
+  const { cookie } = await signIn(f);
+  const guest = await f.request("/delete-user", { body: {} });
+  assert.equal(guest.status, 401);
+  f.database.member_session[0].created_at = new Date(Date.now() - 25 * 60 * 60 * 1000);
+  const stale = await f.request("/delete-user", { body: {}, cookie });
+  assert.equal((await stale.json()).code, "SESSION_EXPIRED");
+  assert.equal(f.database.member_user.length, 1);
+
+  const fresh = await f.request("/sign-in/email", { body: { email, password } });
+  assert.equal(fresh.status, 200);
+  const freshCookie = fresh.headers.get("set-cookie").split(";")[0];
+  const deleted = await f.request("/delete-user", { body: {}, cookie: freshCookie });
+  assert.equal(deleted.status, 200);
+  assert.equal(f.database.member_user.length, 0);
+  assert.equal(f.database.member_account.length, 0);
+  assert.equal(f.database.member_session.length, 0);
+});
