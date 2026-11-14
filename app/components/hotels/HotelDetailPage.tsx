@@ -20,13 +20,15 @@ type Params = Promise<{ hotelId: string }>;
 async function findHotel(city: HotelCity, params: Params) {
   const { hotelId } = await params;
   if (!/^[1-9]\d{0,18}$/.test(hotelId)) notFound();
-  const hotel = (await getCityHotels(city)).find(h => h.hotelId === hotelId);
+  const hotels = await getCityHotels(city);
+  const index = hotels.findIndex(h => h.hotelId === hotelId);
+  const hotel = hotels[index];
   if (!hotel) notFound();
-  return hotel;
+  return { hotel, previous: hotels[index - 1], next: hotels[index + 1] };
 }
 
 export async function hotelDetailMetadata(city: HotelCity, params: Params): Promise<Metadata> {
-  const hotel = await findHotel(city, params);
+  const { hotel } = await findHotel(city, params);
   return {
     title: `${hotel.title} | ${cityNames[city]} Hotels`,
     description: `Explore ${hotel.title} in ${cityNames[city]}${hotel.neighborhood ? `, ${hotel.neighborhood}` : ""}. View hotel information and sign in to check ratings and prices.`,
@@ -35,7 +37,7 @@ export async function hotelDetailMetadata(city: HotelCity, params: Params): Prom
 }
 
 export default async function HotelDetailPage({ city, params }: { city: HotelCity; params: Params }) {
-  const hotel = await findHotel(city, params);
+  const { hotel, previous, next } = await findHotel(city, params);
   const path = `/destination/${city}/hotel/${hotel.hotelId}`;
   let cachedPrices = null;
   if (await getMemberSession(await headers())) {
@@ -53,6 +55,16 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
         <Link href={`/destination/${city}`}>{cityNames[city]}</Link><span aria-hidden="true">/</span>
         <Link href={`/destination/${city}/hotel`}>Hotels</Link>
       </nav>
+      {(previous || next) && <nav className={styles.hotelNavigation} aria-label="Browse hotels">
+        {previous && <Link href={`/destination/${city}/hotel/${previous.hotelId}`} prefetch={false} rel="prev">
+          <span>← Previous hotel</span>
+          <strong>{previous.title}</strong>
+        </Link>}
+        {next && <Link className={styles.nextHotel} href={`/destination/${city}/hotel/${next.hotelId}`} prefetch={false} rel="next">
+          <span>Next hotel →</span>
+          <strong>{next.title}</strong>
+        </Link>}
+      </nav>}
       <div className={styles.hero}>
         <div className={styles.intro}>
           <p className={styles.eyebrow}>Your stay in {cityNames[city]}</p>

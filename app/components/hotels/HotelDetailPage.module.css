@@ -19,3 +19,29 @@
 .tags li { background: #f5f1eb; padding: 7px 12px; border-radius: 8px; }
 .main a:focus-visible { outline: 3px solid #99472f; outline-offset: 5px; }
 @media (max-width: 760px) { .main { padding: 150px 20px 44px; } .hero { grid-template-columns: 1fr; gap: 28px; } .photo { height: 320px; } .sections { margin-top: 28px; } }
+
+.hotelNavigation {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.hotelNavigation a {
+  display: grid;
+  gap: 4px;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: inherit;
+  overflow-wrap: anywhere;
+}
+
+.hotelNavigation a:hover {
+  background: #f1f5f9;
+}
+
+.nextHotel {
+  grid-column: 2;
+  text-align: right;
+}
