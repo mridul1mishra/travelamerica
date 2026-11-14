@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import HotelCoverImage from "@/app/components/hotels/HotelCoverImage";
 import { notFound } from "next/navigation";
 import { headers } from "next/headers";
 import { getMemberSession } from "@/app/lib/auth";
@@ -65,7 +65,7 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
         <div>
           {hotel.googleRatingAvailable && hotel.hotelId
             ? <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={hotel.googleMapsUrl} photosOnly coverImage={hotel.img} />
-            : <Image className={styles.photo} src={hotel.img} alt={hotel.title} width={720} height={600} unoptimized />}
+            : <HotelCoverImage className={styles.photo} src={hotel.img} hotelName={hotel.title} width={720} height={600} />}
         </div>
       </div>
       {hotel.googleRatingAvailable && hotel.hotelId && <div className={styles.guestReviews}>

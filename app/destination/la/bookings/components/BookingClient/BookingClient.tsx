@@ -11,6 +11,7 @@ import Footer from "@/app/components/Header/Footer/footer";
 import styles from "./BookingClient.module.css";
 import { HOTEL_TAGS, type HotelTag } from "@/app/lib/hotelTags";
 import GoogleHotelRating from "@/app/components/hotels/GoogleHotelRating";
+import HotelCoverImage from "@/app/components/hotels/HotelCoverImage";
 import HotelFilterPanel from "@/app/components/hotels/HotelFilterPanel";
 import HotelFilterGroup from "@/app/components/hotels/HotelFilterGroup";
 import { useMember } from "@/app/components/auth/MemberProvider";
@@ -601,7 +602,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                       </div>;
                       return useOnDemandGoogleRatings ? <article className={styles.bookingCard} key={key} data-hotel-card={key}>
                         <a className={styles.hotelBookingLink} href={`/destination/${hotel.city}/hotel/${hotel.hotelId}`}>
-                          <img src={hotel.img} alt={hotel.title} />
+                          <HotelCoverImage src={hotel.img} hotelName={hotel.title} />
                           <div className={`${styles.cardBody} ${styles.hotelCardInfo}`}>{details}</div>
                         </a>
                         {hotel.googleRatingAvailable && hotel.hotelId && <div className={styles.hotelRatingSlot}>
@@ -612,7 +613,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
                           <a className={styles.detailsLink} href={`/destination/${hotel.city}/hotel/${hotel.hotelId}`}>View details <span aria-hidden="true">→</span></a>
                         </div>
                       </article> : <a className={styles.bookingCard} key={key} {...linkProps}>
-                        <img src={hotel.img} alt={hotel.title} />
+                        <HotelCoverImage src={hotel.img} hotelName={hotel.title} />
                         <div className={styles.cardBody}>
                           {details}
                           <div className={styles.metaRow}>

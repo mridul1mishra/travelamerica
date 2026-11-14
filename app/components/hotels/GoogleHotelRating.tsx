@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import Image from "next/image";
+import HotelCoverImage from "@/app/components/hotels/HotelCoverImage";
 import { Camera, Eye, EyeOff, Star } from "lucide-react";
 import HotelPhotoViewer from "./HotelPhotoViewer";
 import type { HotelPhoto } from "@/app/lib/google-hotel-ratings-core";
@@ -247,7 +247,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
 
   return (<>
     {photosOnly && coverImage && !(expanded && phase === "loaded" && result?.photos?.length) &&
-      <Image className={styles.coverPhoto} src={coverImage} alt={hotelName} width={720} height={600} unoptimized />}
+      <HotelCoverImage className={styles.coverPhoto} src={coverImage} hotelName={hotelName} width={720} height={600} />}
     <div className={`${styles.rating}${showReviews || photosOnly ? ` ${styles.withReviews}` : ""}`} aria-label={`Google ${photosOnly ? "photos" : "rating"} for ${hotelName}`} aria-busy={pending}>
       {!expanded && !photosOnly && <span aria-hidden="true" className={phase === "loading" && member ? styles.loadingStars : undefined}>
         {[0, 1, 2, 3].map(index => <span key={index}>*</span>)}
