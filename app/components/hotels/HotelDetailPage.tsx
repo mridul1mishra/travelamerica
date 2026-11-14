@@ -55,6 +55,39 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
         <Link href={`/destination/${city}`}>{cityNames[city]}</Link><span aria-hidden="true">/</span>
         <Link href={`/destination/${city}/hotel`}>Hotels</Link>
       </nav>
+      <header className={styles.intro}>
+        <h1>{hotel.title}</h1>
+        <p className={styles.location}>{hotel.neighborhood ?? hotel.area ?? cityNames[city]}</p>
+      </header>
+      <div className={styles.hero}>
+        <div className={styles.media}>
+          {hotel.googleRatingAvailable && hotel.hotelId
+            ? <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={hotel.googleMapsUrl} photosOnly coverImage={hotel.img} />
+            : <HotelCoverImage className={styles.photo} src={hotel.img} hotelName={hotel.title} width={720} height={600} />}
+        </div>
+        <section className={styles.panel} aria-label="Location and prices">
+          <h2>Location and prices</h2>
+          {hotel.address && <p>{hotel.address}</p>}
+          {hotel.googleMapsUrl && <a href={hotel.googleMapsUrl} target="_blank" rel="noopener noreferrer">View location on Google Maps ↗</a>}
+          <div className={styles.priceAction}>
+            <HotelPriceLink hotelId={hotel.hotelId!} className={styles.button} initialPrices={cachedPrices} />
+          </div>
+          {hotel.googleRatingAvailable && hotel.hotelId && <div className={styles.guestReviews}>
+            <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={hotel.googleMapsUrl} showReviews />
+          </div>}
+        </section>
+      </div>
+      <div className={styles.sections}>
+        {!!hotel.tags?.length && <section className={styles.panel}>
+          <h2>Good to know</h2>
+          <ul className={styles.tags}>{hotel.tags.map(tag => <li key={tag}>{HOTEL_TAGS[tag]}</li>)}</ul>
+        </section>}
+        {hotel.hotelTier && <section className={styles.panel}>
+          <h2>{hotel.hotelTier} tier{hotel.hotelTierIsProvisional ? " · Provisional" : ""}</h2>
+          <p>{hotel.hotelTier} reflects our assessment of rooms, guest service, dining, wellness and design.</p>
+          {hotel.hotelTierIsProvisional && <p>This tier uses available evidence and may change as more details are confirmed.</p>}
+        </section>}
+      </div>
       {(previous || next) && <nav className={styles.hotelNavigation} aria-label="Browse hotels">
         {previous && <Link href={`/destination/${city}/hotel/${previous.hotelId}`} prefetch={false} rel="prev">
           <span>← Previous hotel</span>
@@ -65,41 +98,6 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
           <strong>{next.title}</strong>
         </Link>}
       </nav>}
-      <div className={styles.hero}>
-        <div className={styles.intro}>
-          <p className={styles.eyebrow}>Your stay in {cityNames[city]}</p>
-          <h1>{hotel.title}</h1>
-          {hotel.hotelTier && <span className={styles.tier}>{hotel.hotelTier}{hotel.hotelTierIsProvisional ? " · Provisional" : ""}</span>}
-          {hotel.neighborhood && <p className={styles.location}>{hotel.neighborhood}</p>}
-          {hotel.address && <p>{hotel.address}</p>}
-          <HotelPriceLink hotelId={hotel.hotelId!} className={styles.button} initialPrices={cachedPrices} />
-        </div>
-        <div>
-          {hotel.googleRatingAvailable && hotel.hotelId
-            ? <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={hotel.googleMapsUrl} photosOnly coverImage={hotel.img} />
-            : <HotelCoverImage className={styles.photo} src={hotel.img} hotelName={hotel.title} width={720} height={600} />}
-        </div>
-      </div>
-      {hotel.googleRatingAvailable && hotel.hotelId && <div className={styles.guestReviews}>
-        <GoogleHotelRating hotelId={hotel.hotelId} hotelName={hotel.title} googleMapsUrl={hotel.googleMapsUrl} showReviews />
-      </div>}
-      <div className={styles.sections}>
-        <section className={styles.panel}>
-          <h2>Location</h2>
-          <p>{hotel.neighborhood ?? hotel.area ?? cityNames[city]}</p>
-          {hotel.address && <p>{hotel.address}</p>}
-          {hotel.googleMapsUrl && <a href={hotel.googleMapsUrl} target="_blank" rel="noopener noreferrer">View location on Google Maps ↗</a>}
-        </section>
-        {!!hotel.tags?.length && <section className={styles.panel}>
-          <h2>Good to know</h2>
-          <ul className={styles.tags}>{hotel.tags.map(tag => <li key={tag}>{HOTEL_TAGS[tag]}</li>)}</ul>
-        </section>}
-        {hotel.hotelTier && <section className={styles.panel}>
-          <h2>Our hotel tier</h2>
-          <p>{hotel.hotelTier} reflects our assessment of rooms, guest service, dining, wellness and design.</p>
-          {hotel.hotelTierIsProvisional && <p>This tier uses available evidence and may change as more details are confirmed.</p>}
-        </section>}
-      </div>
       <Link className={styles.back} href={`/destination/${city}/hotel`}>← Browse all {cityNames[city]} hotels</Link>
     </main>
     <Footer />
