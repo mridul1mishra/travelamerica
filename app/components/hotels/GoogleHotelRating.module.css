@@ -122,3 +122,13 @@
   text-underline-offset: 2px;
   white-space: nowrap;
 }
+
+
+
+.photoSection {
+  padding: 20px;
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+}
+.photoSection h2 { margin: 0 0 10px; font-size: 1.25rem; }
+.photoSection p { margin: 0 0 10px; }

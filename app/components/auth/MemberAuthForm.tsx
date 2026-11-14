@@ -54,6 +54,7 @@ export default function MemberAuthForm({ returnTo, mode, action, verified = fals
   const [otp, setOtp] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [emailError, setEmailError] = useState("");
   const [notice, setNotice] = useState(verified && mode === "signin"
     ? "Your email is verified. Sign in with your password or an email code to continue." : "");
   const [resendAt, setResendAt] = useState(0);
@@ -76,7 +77,7 @@ export default function MemberAuthForm({ returnTo, mode, action, verified = fals
     if (verifying) otpInput.current?.focus();
   }, [verifying, stage]);
 
-  const clearFeedback = () => { setError(""); setNotice(""); };
+  const clearFeedback = () => { setError(""); setEmailError(""); setNotice(""); };
   const backToSignIn = () => {
     setStage("details");
     setPassword("");
@@ -116,11 +117,26 @@ export default function MemberAuthForm({ returnTo, mode, action, verified = fals
     }
     setBusy(true);
     clearFeedback();
+    const showSendError = purpose === "sign-in" && stage === "details" ? setEmailError : setError;
     try {
       const response = purpose === "forget-password"
         ? await authClient.emailOtp.requestPasswordReset({ email: address })
         : await authClient.emailOtp.sendVerificationOtp({ email: address, type: purpose });
-      if (response.error) throw new Error("Code unavailable");
+      if (response.error) {
+        if (purpose === "sign-in" && response.error.code === "REGISTRATION_REQUIRED") {
+          showSendError("You need to register before signing in. Use Create account below.");
+          return;
+        }
+        if (purpose === "sign-in" && response.error.code === "EMAIL_VERIFICATION_REQUIRED") {
+          showSendError("Verify your email before signing in with a code. You can sign in with your password to request a verification code.");
+          return;
+        }
+        if (response.error.status === 429) {
+          showSendError("Too many code requests. Wait a few minutes before trying again.");
+          return;
+        }
+        throw new Error("Code unavailable");
+      }
       rememberCode(address, purpose);
       setStage(nextStage);
       setNotice(purpose === "forget-password"
@@ -130,7 +146,7 @@ export default function MemberAuthForm({ returnTo, mode, action, verified = fals
           : "A verification code is on its way. Check your inbox and spam folder.");
       otpInput.current?.focus();
     } catch {
-      setError("We couldn't send a code. Please try again in a moment.");
+      showSendError("We couldn't send a code. Please try again in a moment.");
     } finally {
       setBusy(false);
     }
@@ -266,7 +282,10 @@ export default function MemberAuthForm({ returnTo, mode, action, verified = fals
     <label htmlFor="member-email">Email address</label>
     <input ref={emailInput} id="member-email" name="email" type="email" autoComplete="email"
       inputMode="email" required maxLength={254} value={email} disabled={busy}
-      onChange={event => setEmail(event.target.value)} aria-describedby="member-form-error" />
+      onChange={event => { setEmail(event.target.value); setEmailError(""); }}
+      aria-invalid={emailError ? true : undefined}
+      aria-describedby={emailError ? "member-email-error" : "member-form-error"} />
+    {emailError && <p id="member-email-error" className={styles.emailError} role="alert">{emailError}</p>}
   </>;
 
   if (member) return <div className={styles.form}>

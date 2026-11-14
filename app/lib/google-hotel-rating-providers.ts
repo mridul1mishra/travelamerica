@@ -58,6 +58,15 @@ export async function verifyHotelRatingTurnstile(
   return providerJson("https://challenges.cloudflare.com/turnstile/v0/siteverify", { method: "POST", body }, fetcher);
 }
 
+const safeUrl = (input: unknown): string | undefined => {
+  if (typeof input !== "string") return undefined;
+  try {
+    const url = new URL(input);
+    return url.protocol === "https:" && !url.username && !url.password
+      && (url.hostname === "google.com" || url.hostname.endsWith(".google.com") || url.hostname === "maps.app.goo.gl") ? url.href : undefined;
+  } catch { return undefined; }
+};
+
 export async function fetchGoogleHotelRating(
   placeId: string,
   apiKey: string,
@@ -78,14 +87,6 @@ export async function fetchGoogleHotelRating(
   if (reviewCount !== null && (typeof reviewCount !== "number" || !Number.isSafeInteger(reviewCount) || reviewCount < 0)) throw new Error("Invalid provider response");
   const value: HotelRatingValue = { rating: rating as number | null, reviewCount: reviewCount as number | null };
   if (includeReviews) {
-    const safeUrl = (input: unknown): string | undefined => {
-      if (typeof input !== "string") return undefined;
-      try {
-        const url = new URL(input);
-        return url.protocol === "https:" && !url.username && !url.password
-          && (url.hostname === "google.com" || url.hostname.endsWith(".google.com") || url.hostname === "maps.app.goo.gl") ? url.href : undefined;
-      } catch { return undefined; }
-    };
     value.reviews = (Array.isArray(data.reviews) ? data.reviews : []).slice(0, 5).flatMap((raw): HotelReview[] => {
       if (!raw || typeof raw !== "object") return [];
       const review = raw as Record<string, unknown>;
@@ -103,9 +104,9 @@ export async function fetchGoogleHotelRating(
   return value;
 }
 
-// A gallery costs at most one Details request plus three Photo requests.
-// The caller reserves all four attempts atomically before entering this helper.
-export async function fetchGoogleHotelPhotos(placeId: string, apiKey: string, fetcher: Fetcher = fetch): Promise<HotelRatingValue> {
+export type HotelPhotoMode = "lead" | "gallery" | "all";
+
+export async function fetchGoogleHotelPhotos(placeId: string, apiKey: string, fetcher: Fetcher = fetch, mode: HotelPhotoMode = "all"): Promise<HotelRatingValue> {
   if (!/^[A-Za-z0-9_-]{10,256}$/.test(placeId)) throw new Error("Invalid stored place");
   const details = await providerJson(`https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}`, {
     method: "GET", headers: { "X-Goog-Api-Key": apiKey, "X-Goog-FieldMask": "photos" },
@@ -114,9 +115,11 @@ export async function fetchGoogleHotelPhotos(placeId: string, apiKey: string, fe
     || (details.photos !== undefined && !Array.isArray(details.photos))) throw new Error("Invalid provider response");
   const photos: HotelPhoto[] = [];
   const usedNames = new Set<string>();
-  for (const raw of (details.photos ?? []).slice(0, 3)) {
+  const candidates = mode === "lead" ? [0, 1] : mode === "gallery" ? [1, 3] : [0, 3];
+  let mediaFailed = false;
+  for (const raw of (details.photos ?? []).slice(...candidates)) {
     if (!raw || typeof raw !== "object") continue;
-    const photo = raw as { name?: unknown; authorAttributions?: unknown };
+    const photo = raw as { name?: unknown; authorAttributions?: unknown; googleMapsUri?: unknown };
     const prefix = `places/${placeId}/photos/`;
     if (typeof photo.name !== "string" || !photo.name.startsWith(prefix)
       || !/^[A-Za-z0-9_-]{1,4096}$/.test(photo.name.slice(prefix.length)) || usedNames.has(photo.name)) continue;
@@ -144,12 +147,14 @@ export async function fetchGoogleHotelPhotos(placeId: string, apiKey: string, fe
       const media = await providerJson(`https://places.googleapis.com/v1/${photo.name}/media?maxWidthPx=1200&skipHttpRedirect=true`, {
         method: "GET", headers: { "X-Goog-Api-Key": apiKey },
       }, fetcher) as { photoUri?: unknown } | null;
-      if (typeof media?.photoUri !== "string") continue;
+      if (typeof media?.photoUri !== "string") throw new Error("Invalid photo response");
       const url = new URL(media.photoUri);
       if (url.protocol !== "https:" || url.username || url.password
-        || !(url.hostname === "googleusercontent.com" || url.hostname.endsWith(".googleusercontent.com"))) continue;
-      photos.push({ url: url.href, authors });
-    } catch { /* Keep successful photos; never retry failed photo requests. */ }
+        || !(url.hostname === "googleusercontent.com" || url.hostname.endsWith(".googleusercontent.com"))) throw new Error("Invalid photo URL");
+      const mapsUrl = safeUrl(photo.googleMapsUri);
+      photos.push({ url: url.href, authors, ...(mapsUrl ? { mapsUrl } : {}) });
+    } catch { mediaFailed = true; }
   }
+  if (mode !== "all" && mediaFailed && !photos.length) throw new Error("Hotel photos unavailable");
   return { rating: null, reviewCount: null, photos };
 }

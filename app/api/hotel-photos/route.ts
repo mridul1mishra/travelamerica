@@ -8,8 +8,9 @@ export const revalidate = 0;
 export const maxDuration = 60;
 
 export async function POST(request: Request): Promise<Response> {
+  const mode = new URL(request.url).searchParams.get("mode") === "gallery" ? "gallery" : "lead";
   return handleMemberHotelRating(request, {
     getMember: getMemberSession,
-    lookup: (verifiedRequest) => handleGoogleHotelRating(verifiedRequest, true),
+    lookup: (verifiedRequest) => handleGoogleHotelRating(verifiedRequest, mode),
   });
 }

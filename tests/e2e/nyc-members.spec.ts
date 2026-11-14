@@ -294,38 +294,25 @@ test("existing members can sign in with an email code instead of a password", as
   await expect(page.getByRole("button", { name: "Account menu", exact: true }).first()).toHaveText("TM");
 });
 
-test("an unregistered email request shows conditional code guidance and a registration link", async ({ page }) => {
+test("an unregistered email request stays on sign-in and offers registration", async ({ page }) => {
   await guestSession(page);
   let requests = 0;
   await page.route("**/api/auth/email-otp/send-verification-otp", async (route) => {
     requests += 1;
     expect(route.request().postDataJSON()).toEqual({ email: "unknown@example.test", type: "sign-in" });
-    // Unknown accounts intentionally receive the same success response without mail.
-    await route.fulfill({ contentType: "application/json", body: '{"success":true}' });
-  });
-  await page.route("**/api/auth/sign-in/email-otp", async (route) => {
-    expect(route.request().postDataJSON()).toEqual({ email: "unknown@example.test", otp: "123456" });
-    await route.fulfill({ status: 400, contentType: "application/json", body: '{"code":"INVALID_OTP","message":"Invalid OTP"}' });
+    await route.fulfill({ status: 400, json: { code: "REGISTRATION_REQUIRED" } });
   });
   const context = new URLSearchParams({ next: "/api/hotel-prices/42", action: "prices" }).toString();
   await page.goto(`/signin?${context}`);
   await page.getByRole("tab", { name: "Email code", exact: true }).click();
   await page.getByLabel("Email address", { exact: true }).fill("unknown@example.test");
   await page.getByRole("button", { name: "Email me a code", exact: true }).click();
-  await expect(page.getByText("If you've registered and verified unknown@example.test, check your inbox for a sign-in code.", { exact: true })).toBeVisible();
-  await expect(page.getByText("Sign-in codes are sent only to registered, verified accounts. Check your inbox and spam folder.", { exact: true })).toBeVisible();
-  await expect(page.getByText(/^Enter the code sent to /)).toHaveCount(0);
+  await expect(page.locator("#member-email + #member-email-error")).toHaveText("You need to register before signing in. Use Create account below.");
+  await expect(page.locator("#member-email-error")).toHaveCSS("color", "rgb(138, 24, 32)");
+  await expect(page.getByLabel("Six-digit code", { exact: true })).toHaveCount(0);
   const registration = page.getByRole("main").getByRole("link", { name: "Create account", exact: true });
   await expect(registration).toHaveCount(1);
   await expect(registration).toHaveAttribute("href", `/register?${context}`);
-  await expect(page.locator("form").getByRole("link", { name: "Create account", exact: true })).toBeVisible();
-  await expect(page.getByLabel("Six-digit code", { exact: true })).toBeFocused();
-  await page.evaluate(() => document.fonts.ready);
-  mkdirSync(".scratch", { recursive: true });
-  await page.screenshot({ path: ".scratch/member-signin-code-message.png", fullPage: true });
-  await page.getByLabel("Six-digit code", { exact: true }).fill("123456");
-  await page.getByRole("button", { name: "Verify and continue", exact: true }).click();
-  await expect(page.locator("#member-form-error")).toHaveText("We couldn't verify that code. Check it and try again, or request a new code.");
   await expect(page).toHaveURL(`/signin?${context}`);
   await registration.click();
   await expect(page).toHaveURL(`/register?${context}`);
@@ -680,3 +667,19 @@ test("unverified and expired client sessions retain the guest rating gate", asyn
     await page.unroute(sessionRoute);
   }
 });
+
+for (const [status, message] of [[429, "Too many code requests. Wait a few minutes before trying again."], [503, "We couldn't send a code. Please try again in a moment."]] as const) {
+test(`email-code HTTP ${status} errors appear in dark red below the email field`, async ({ page }) => {
+  await guestSession(page);
+  await page.route("**/api/auth/email-otp/send-verification-otp", route =>
+    route.fulfill({ status, json: { message: "Code unavailable" } }));
+  await page.goto("/signin");
+  await page.getByRole("tab", { name: "Email code", exact: true }).click();
+  await page.getByLabel("Email address", { exact: true }).fill("member@example.test");
+  await page.getByRole("button", { name: "Email me a code", exact: true }).click();
+  const error = page.locator("#member-email + #member-email-error");
+  await expect(error).toHaveText(message);
+  await expect(error).toHaveCSS("color", "rgb(138, 24, 32)");
+  await expect(page.getByLabel("Six-digit code", { exact: true })).toHaveCount(0);
+});
+}

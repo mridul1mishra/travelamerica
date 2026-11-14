@@ -186,3 +186,29 @@ test("photo failures are not retried and unsafe image URLs never reach the brows
   assert.equal(calls, 4);
   assert.equal(result.photos.length, 1);
 });
+
+test("lead and gallery requests fetch distinct photo ranges without caching names", async () => {
+  const placeId = "ChIJ_test_place";
+  const requests = [];
+  const provider = async (url, options) => {
+    requests.push(url);
+    assert.equal(options.cache, "no-store");
+    if (!url.includes("/media?")) return Response.json({
+      photos: [0, 1, 2].map(index => ({
+        name: `places/${placeId}/photos/photo_${index}`,
+        authorAttributions: [],
+      })),
+    });
+    return Response.json({ photoUri: `https://lh3.googleusercontent.com/photo_${url.match(/photo_(\d)/)[1]}` });
+  };
+  const lead = await fetchGoogleHotelPhotos(placeId, "test-key", provider, "lead");
+  assert.equal(requests.length, 2);
+  assert.deepEqual(lead.photos.map(photo => photo.url), ["https://lh3.googleusercontent.com/photo_0"]);
+  const gallery = await fetchGoogleHotelPhotos(placeId, "test-key", provider, "gallery");
+  assert.equal(requests.length, 5);
+  assert.equal(requests[2], requests[0]);
+  assert.deepEqual(gallery.photos.map(photo => photo.url), [
+    "https://lh3.googleusercontent.com/photo_1",
+    "https://lh3.googleusercontent.com/photo_2",
+  ]);
+});

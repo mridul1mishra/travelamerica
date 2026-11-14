@@ -218,7 +218,8 @@ test("email-code sign-in preserves existing profiles, including old code-only ac
 test("email codes cannot create an unknown account or bypass required profile registration", async () => {
   const f = fixture();
   const requested = await f.request("/email-otp/send-verification-otp", { body: { email, type: "sign-in" } });
-  assert.equal(requested.status, 200);
+  assert.equal(requested.status, 400);
+  assert.equal((await requested.json()).code, "REGISTRATION_REQUIRED");
   assert.deepEqual(f.delivered, []);
   const response = await f.request("/sign-in/email-otp", { body: { email, otp: "123456", name: "Bypassed profile" } });
   assert.equal(response.status, 400);
@@ -231,7 +232,8 @@ test("an unverified profile cannot sign in with an email sign-in code", async ()
   const f = fixture();
   const { otp } = await register(f);
   const requested = await f.request("/email-otp/send-verification-otp", { body: { email, type: "sign-in" } });
-  assert.equal(requested.status, 200);
+  assert.equal(requested.status, 400);
+  assert.equal((await requested.json()).code, "EMAIL_VERIFICATION_REQUIRED");
   assert.equal(f.delivered.length, 1, "Only the registration verification code may be sent");
   const response = await f.request("/sign-in/email-otp", { body: { email, otp } });
   assert.equal(response.status, 400);

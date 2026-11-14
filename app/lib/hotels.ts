@@ -80,8 +80,7 @@ export async function getCityHotels(city: HotelCity, tag?: HotelTag): Promise<Ho
   });
 }
 
-// Resolve destinations only after the prices route has verified the session.
-// Neither the public page nor its React payload includes booking destinations.
+// Resolve the configured provider destination for a published hotel.
 export async function getHotelBookingUrl(hotelId: string): Promise<string | null> {
   const result = await database().query<{ url: string }>(`SELECT booking_url AS url FROM hotels
     WHERE id = $1::bigint AND active = TRUE

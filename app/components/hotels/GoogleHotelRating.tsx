@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 import HotelCoverImage from "@/app/components/hotels/HotelCoverImage";
-import { Camera, Eye, EyeOff, Star } from "lucide-react";
+import { Eye, EyeOff, Star } from "lucide-react";
 import HotelPhotoViewer from "./HotelPhotoViewer";
 import type { HotelPhoto } from "@/app/lib/google-hotel-ratings-core";
 import { useMember } from "@/app/components/auth/MemberProvider";
@@ -78,7 +78,9 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
   const [hidden, setHidden] = useState(false);
   const [securityMessage, setSecurityMessage] = useState("");
   const [securityAttempt, setSecurityAttempt] = useState(0);
-  const [lookupMessage, setLookupMessage] = useState("");
+  const [photoMode, setPhotoMode] = useState<"lead" | "gallery">("lead");
+  const [photoLimited, setPhotoLimited] = useState(false);
+  const photoSection = useRef<HTMLElement>(null);
   const messageId = useId();
   const started = useRef(false);
   const lookupStarted = useRef(false);
@@ -95,14 +97,15 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
       setResult(null);
       setHidden(false);
       setSecurityMessage("");
-      setLookupMessage("");
+      setPhotoMode("lead");
+      setPhotoLimited(false);
       setPhase(current => current === "signin" ? "signin" : "idle");
     }, 0);
     return () => clearTimeout(reset);
   }, [member, memberPending]);
 
   useEffect(() => {
-    if (!member || memberPending || !requested || lookupStarted.current || (!localTurnstileBypass && (!siteKey || !challengeElement.current))) return;
+    if (!member || !requested || lookupStarted.current || (!localTurnstileBypass && (!siteKey || !challengeElement.current))) return;
     let active = true;
     let submitted = false;
     let settled = false;
@@ -143,7 +146,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
       setPhase("loading");
       controller = new AbortController();
       timer = setTimeout(unavailable, photosOnly ? 60000 : 30000);
-      void fetch(photosOnly ? "/api/hotel-photos" : "/api/hotel-ratings", {
+      void fetch(photosOnly ? `/api/hotel-photos?mode=${photoMode}` : "/api/hotel-ratings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ hotelId, turnstileToken: token, ...(showReviews ? { includeReviews: true } : {}) }),
@@ -164,9 +167,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
           invalidate();
           return;
         }
-        if (response.status === 429 && photosOnly) {
-          setLookupMessage("The photo lookup limit has been reached. Please try again later or view this hotel on Google Maps.");
-        }
+        if (response.status === 429 && photosOnly && active && !settled) setPhotoLimited(true);
         if (!response.ok) throw new Error("Rating unavailable");
         const data: unknown = await response.json();
         if (!isRating(data)) throw new Error("Rating unavailable");
@@ -175,7 +176,9 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
         settled = true;
         clearTimeout(timer);
         removeWidget();
-        setResult(data);
+        setResult(previous => photosOnly && photoMode === "gallery"
+          ? { ...data, photos: [...(previous?.photos ?? []), ...(data.photos ?? [])].filter((photo, index, photos) => photos.findIndex(item => item.url === photo.url) === index) }
+          : data);
         setPhase("loaded");
       }).catch(unavailable);
     };
@@ -210,9 +213,9 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
       controller?.abort();
       removeWidget();
     };
-  }, [requested, siteKey, hotelId, localTurnstileBypass, member, memberPending, invalidate, showReviews, photosOnly, securityAttempt]);
+  }, [requested, siteKey, hotelId, localTurnstileBypass, member, invalidate, showReviews, photosOnly, photoMode, securityAttempt]);
 
-  const begin = () => {
+  const begin = useCallback(() => {
     if (memberPending) return;
     if (!member) {
       signIn(`${window.location.pathname}${window.location.search}`, "rating");
@@ -220,7 +223,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
     }
     if (started.current) return;
     started.current = true;
-    setLookupMessage("");
+    setPhotoLimited(false);
     if (!localTurnstileBypass && !siteKey) {
       console.error("Hotel security check failed", { feature: photosOnly ? "photos" : "ratings", reason: "missing_site_key" });
       setSecurityMessage("The security check is not configured. Please use Google Maps for now.");
@@ -229,7 +232,21 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
     }
     setPhase(localTurnstileBypass ? "loading" : "challenge");
     if (localTurnstileBypass || siteKey) setRequested(true);
-  };
+  }, [member, memberPending, signIn, localTurnstileBypass, siteKey, photosOnly]);
+
+  useEffect(() => {
+    const section = photoSection.current;
+    if (!photosOnly || !member || memberPending || !section || started.current) return;
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        observer.disconnect();
+        begin();
+      }
+    });
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, [photosOnly, member, memberPending, begin]);
+
   const pending = member && (phase === "challenge" || phase === "loading");
   const unavailable = phase === "unavailable" || phase === "security_failed";
   const expanded = member && (phase === "loaded" || unavailable) && !hidden;
@@ -245,21 +262,58 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
     begin();
   };
 
-  return (<>
-    {photosOnly && coverImage && !(expanded && phase === "loaded" && result?.photos?.length) &&
-      <HotelCoverImage className={styles.coverPhoto} src={coverImage} hotelName={hotelName} width={720} height={600} />}
-    <div className={`${styles.rating}${showReviews || photosOnly ? ` ${styles.withReviews}` : ""}`} aria-label={`Google ${photosOnly ? "photos" : "rating"} for ${hotelName}`} aria-busy={pending}>
-      {!expanded && !photosOnly && <span aria-hidden="true" className={phase === "loading" && member ? styles.loadingStars : undefined}>
+  if (photosOnly) {
+    const photos = member ? result?.photos ?? [] : [];
+    const lead = photos[0];
+    const canRetry = member && unavailable && !photoLimited;
+    const openGallery = () => {
+      if (pending || photoMode === "gallery") return;
+      setPhotoMode("gallery");
+      started.current = false;
+      lookupStarted.current = false;
+      setSecurityAttempt(value => value + 1);
+      begin();
+    };
+    const retryPhotos = () => {
+      if (!canRetry || pending) return;
+      started.current = false;
+      lookupStarted.current = false;
+      setSecurityAttempt(value => value + 1);
+      begin();
+    };
+    return <section ref={photoSection} className={lead ? undefined : styles.photoSection} data-hotel-photo={lead || coverImage ? "available" : undefined} aria-label="Hotel photos">
+      {lead ? <HotelPhotoViewer photos={photos} hotelName={hotelName} mapsUrl={mapsUrl} mainImage
+        onViewPhotos={photoMode === "lead" ? openGallery : undefined} />
+        : coverImage && <HotelCoverImage className={styles.coverPhoto} src={coverImage} hotelName={hotelName} width={720} height={450} />}
+      {!lead && <h2>Hotel photos</h2>}
+      <div aria-live="polite">
+        {!member && !memberPending && <p>Sign in to view hotel photos from Google.</p>}
+        {pending && <p>Loading hotel photos…</p>}
+        {member && phase === "challenge" && <p>Complete the security check if prompted.</p>}
+        {member && phase === "loaded" && !lead && <p>No hotel photos are available from Google.</p>}
+        {member && unavailable && <p>{photoLimited
+          ? "Hotel photos are temporarily unavailable. Please try again later."
+          : "We couldn’t load hotel photos. Please try again."}</p>}
+      </div>
+      {!member && !memberPending && <button type="button" className={styles.photosButton} onClick={begin}>Sign in to view photos</button>}
+      {canRetry && <button type="button" className={styles.photosButton} onClick={retryPhotos}>Try again</button>}
+      {member && requested && <div ref={challengeElement} className={styles.challenge} hidden={phase !== "challenge"} />}
+    </section>;
+  }
+
+  return (
+    <div className={`${styles.rating}${showReviews ? ` ${styles.withReviews}` : ""}`} aria-label={`Google rating for ${hotelName}`} aria-busy={pending}>
+      {showReviews && !member && !memberPending && <p>Sign in to view guest feedback for this hotel.</p>}
+      {!expanded && !showReviews && <span aria-hidden="true" className={phase === "loading" && member ? styles.loadingStars : undefined}>
         {[0, 1, 2, 3].map(index => <span key={index}>*</span>)}
       </span>}
       <div id={messageId} className={styles.message} aria-live="polite">
-        {!member && phase === "signin" && <p>Sign in again to view {photosOnly ? "photos" : "this rating"}.</p>}
-        {member && phase === "challenge" && <p>Complete the security check to view {photosOnly ? "photos" : "this rating"}.</p>}
-        {member && phase === "loading" && <span className={photosOnly ? undefined : styles.srOnly}>Loading {photosOnly ? "photos" : "rating"}…</span>}
-        {expanded && unavailable && <p>{photosOnly && lookupMessage ? lookupMessage : `Google ${photosOnly ? "photos are" : "rating is"} unavailable right now.`}</p>}
+        {!member && phase === "signin" && <p>Sign in again to view this rating.</p>}
+        {member && phase === "challenge" && <p>Complete the security check to view this rating.</p>}
+        {member && phase === "loading" && <span className={styles.srOnly}>Loading rating…</span>}
+        {expanded && unavailable && <p>{"Google rating is unavailable right now."}</p>}
         {expanded && phase === "security_failed" && <p>{securityMessage}</p>}
-        {expanded && phase === "loaded" && result && photosOnly && <HotelPhotoViewer photos={result.photos ?? []} hotelName={hotelName} mapsUrl={mapsUrl} mainImage={Boolean(coverImage)} />}
-        {expanded && phase === "loaded" && result && !photosOnly && <>
+        {expanded && phase === "loaded" && result && <>
           <span>{result.rating === null ? "No Google rating available." : `${result.rating.toFixed(1)} rating`}</span>
           {!showReviews && result.reviewCount !== null && <span>{result.reviewCount.toLocaleString()} {result.reviewCount === 1 ? "review" : "reviews"}</span>}
           {showReviews && <section className={styles.reviews} aria-label="Guest reviews from Google Maps" tabIndex={0}>
@@ -287,17 +341,15 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
           </section>}
         </>}
       </div>
-      <button type="button" className={photosOnly ? styles.photosButton : styles.button} disabled={pending || memberPending} onClick={toggle}
-        aria-label={`${expanded ? "Hide" : photosOnly ? "View" : "Show"} Google ${photosOnly ? "photos" : showReviews ? "reviews" : "rating"} for ${hotelName}`}
-        title={`${expanded ? "Hide" : "Show"} Google ${photosOnly ? "photos" : showReviews ? "reviews" : "rating"}`}
+      <button type="button" className={showReviews ? styles.photosButton : styles.button} disabled={pending || memberPending} onClick={toggle}
+        aria-label={showReviews ? undefined : `${expanded ? "Hide" : "Show"} Google rating for ${hotelName}`}
         aria-controls={messageId} aria-expanded={expanded}>
-        {photosOnly ? <><Camera size={18} aria-hidden="true" /> {expanded ? "Hide photos" : "View photos"}</> : expanded ? <EyeOff size={18} aria-hidden="true" /> : <Eye size={18} aria-hidden="true" />}
+        {showReviews ? (!member ? "Sign in to view" : expanded ? "Hide reviews" : "View ratings & reviews") : expanded ? <EyeOff size={18} aria-hidden="true" /> : <Eye size={18} aria-hidden="true" />}
       </button>
       {expanded && phase === "security_failed" && siteKey && <button type="button" className={styles.photosButton} disabled={memberPending} onClick={retrySecurity}>Retry security check</button>}
       {member && requested && <div ref={challengeElement} className={styles.challenge} hidden={phase !== "challenge"} />}
       {expanded && <a className={styles.attribution} href={mapsUrl} translate="no"
         target="_blank" rel="noopener noreferrer">{phase === "loaded" ? "Google Maps" : "View on Google Maps"}</a>}
     </div>
-    </>
   );
 }

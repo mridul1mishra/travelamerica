@@ -238,6 +238,23 @@ export function createMemberAuth(
           && !["sign-in", "email-verification"].includes(context.body?.type)) {
           throw new APIError("BAD_REQUEST", { message: "Use a sign-in or email verification code." });
         }
+        if (context.path === "/email-otp/send-verification-otp" && context.body?.type === "sign-in"
+          && typeof context.body.email === "string") {
+          const origin = context.request?.headers.get("origin");
+          if (origin && !trustedOrigins(config.environment).includes(origin)) {
+            throw new APIError("FORBIDDEN", { message: "Untrusted origin." });
+          }
+          const email = context.body.email.trim().toLowerCase();
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            throw new APIError("BAD_REQUEST", { message: "Enter a valid email address." });
+          }
+          const member = await context.context.internalAdapter.findUserByEmail(email);
+          if (!member) throw new APIError("BAD_REQUEST", { code: "REGISTRATION_REQUIRED", message: "You need to register before signing in." });
+          if (!member.user.emailVerified) {
+            throw new APIError("BAD_REQUEST", { code: "EMAIL_VERIFICATION_REQUIRED", message: "Verify your email before signing in with a code." });
+          }
+          context.body.email = email;
+        }
         if (context.path === "/sign-in/email-otp" && typeof context.body?.email === "string") {
           const member = await context.context.internalAdapter.findUserByEmail(context.body.email.toLowerCase());
           if (member?.user.emailVerified !== true) {

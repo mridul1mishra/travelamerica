@@ -9,10 +9,16 @@ import styles from "./HotelPhotoViewer.module.css";
 function Attribution({ photo }: { photo: HotelPhoto }) {
   return <span>Google Maps{photo.authors.map((author, index) => <span key={index}> · {author.url
     ? <a href={author.url} target="_blank" rel="noopener noreferrer">{author.name}</a>
-    : author.name}</span>)}</span>;
+    : author.name}</span>)}{photo.mapsUrl && <> · <a href={photo.mapsUrl} target="_blank" rel="noopener noreferrer">View this photo on Google Maps</a></>}</span>;
 }
 
-export default function HotelPhotoViewer({ photos, hotelName, mapsUrl, mainImage = false }: { photos: HotelPhoto[]; hotelName: string; mapsUrl: string; mainImage?: boolean }) {
+export default function HotelPhotoViewer({ photos, hotelName, mapsUrl, mainImage = false, onViewPhotos }: {
+  photos: HotelPhoto[];
+  hotelName: string;
+  mapsUrl: string;
+  mainImage?: boolean;
+  onViewPhotos?: () => void;
+}) {
   const [selected, setSelected] = useState(0);
   const [failed, setFailed] = useState<string[]>([]);
   const dialog = useRef<HTMLDialogElement>(null);
@@ -27,17 +33,19 @@ export default function HotelPhotoViewer({ photos, hotelName, mapsUrl, mainImage
   return <section className={styles.gallery} aria-label={`Photos of ${hotelName}`}>
     <div className={styles.frame}>
       {image()}
-      {!failed.includes(photo.url) && <button className={styles.enlarge} type="button" onClick={() => dialog.current?.showModal()} aria-label="Enlarge hotel photo"><Maximize2 size={18} /></button>}
+      {onViewPhotos
+        ? <button className={styles.enlarge} type="button" onClick={onViewPhotos}>View photos</button>
+        : !failed.includes(photo.url) && <button className={styles.enlarge} type="button" onClick={() => dialog.current?.showModal()} aria-label="Enlarge hotel photo"><Maximize2 size={18} /></button>}
     </div>
     <p className={styles.caption}><Attribution photo={photo} /></p>
-    <div className={styles.thumbnails} aria-label="Choose a hotel photo">
+    {photos.length > 1 && <div className={styles.thumbnails} aria-label="Choose a hotel photo">
       {photos.map((item, index) => <figure key={item.url} className={styles.thumbnail}>
         <button type="button" aria-label={`Show hotel photo ${index + 1}`} aria-pressed={selected === index} onClick={() => setSelected(index)}>
           <Image src={item.url} alt="" width={180} height={120} unoptimized referrerPolicy="no-referrer" />
         </button>
         <figcaption><Attribution photo={item} /></figcaption>
       </figure>)}
-    </div>
+    </div>}
     <dialog ref={dialog} className={styles.dialog} aria-label={`${hotelName} photo viewer`}
       onKeyDown={event => { if (event.key === "ArrowLeft") { event.preventDefault(); navigate(-1); } if (event.key === "ArrowRight") { event.preventDefault(); navigate(1); } }}>
       <div className={styles.toolbar}>

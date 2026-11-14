@@ -62,3 +62,27 @@
   .hero { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .panel { padding: 18px; }
 }
+
+.main { max-width: 860px; }
+.location a { color: #98442e; }
+.priceAction { margin: 16px 0 28px; }
+.priceAction .button { display: block; text-align: center; }
+.priceAction p { margin: 8px 0 0; color: #526174; font-size: .9rem; }
+.guestReviews { padding: 20px; border: 1px solid #e1e4e8; border-radius: 12px; }
+.guestReviews h2 { margin: 0 0 10px; font-size: 1.25rem; }
+.assessment { margin: 0 0 24px; padding: 16px 0; border-block: 1px solid #e1e4e8; }
+.assessment summary { cursor: pointer; font-weight: 700; }
+
+.stickyHeader { position: sticky; top: 0; z-index: 1000; }
+.main { max-width: 1200px; padding-top: 24px; }
+.hero { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+.hero .priceAction { margin: 0; padding: 20px; border: 1px solid #e1e4e8; border-radius: 12px; min-width: 0; overflow-wrap: anywhere; }
+.panel[id] { scroll-margin-top: 140px; }
+.photoUnavailable { margin: 0; padding: 16px; border: 1px solid #e1e4e8; border-radius: 12px; color: #526174; }
+@media (max-width: 760px) {
+  .main { padding-top: 20px; }
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .hero .priceAction { padding: 0; border: 0; }
+}
+
+.hero:not(:has([data-hotel-photo="available"])) { grid-template-columns: minmax(0, 1fr); }
