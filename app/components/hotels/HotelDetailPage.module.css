@@ -85,4 +85,14 @@
   .hero .priceAction { padding: 0; border: 0; }
 }
 
-.hero:not(:has([data-hotel-photo="available"])) { grid-template-columns: minmax(0, 1fr); }
+.hero:not(:has([data-hotel-photo])) { grid-template-columns: minmax(0, 1fr); }
+
+.bookingLink {
+  display: inline-block;
+  margin-top: 12px;
+  color: #98442e;
+  text-underline-offset: 4px;
+}
+
+.hotelSidebar { display: grid; gap: 16px; min-width: 0; }
+.overview p { margin: 0; color: #435066; }

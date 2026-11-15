@@ -38,7 +38,7 @@ for (const city of ["nyc", "la", "orlando", "lasvegas"]) {
     const signIn = await page.getByRole("menuitem", { name: "Sign in", exact: true }).getAttribute("href");
     expect(new URL(signIn!, page.url()).searchParams.get("next")).toBe(path);
     await page.getByRole("button", { name: "Account menu", exact: true }).click();
-    const availability = page.getByRole("link", { name: "Check availability", exact: true });
+    const availability = page.getByRole("link", { name: /^Book hotel/ });
     await expect(availability).toHaveAttribute("href", /^https:\/\//);
     await expect(availability).toHaveAttribute("target", "_blank");
   });
@@ -59,7 +59,7 @@ test("guests can book without requesting Google photos or reviews", async ({ pag
   });
   await page.goto("/destination/nyc/hotel/1", { waitUntil: "domcontentloaded" });
   await expect(page.getByRole("button", { name: "Sign in to view photos" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "Check availability" })).toBeVisible();
+  await expect(page.getByRole("link", { name: /^Book hotel/ })).toBeVisible();
   await expect(page.getByRole("button", { name: "Show more photos", exact: true })).toHaveCount(0);
   expect(requests).toEqual([]);
   await page.getByRole("button", { name: "Sign in to view photos" }).click();
@@ -82,6 +82,10 @@ test("members load a lead photo on visibility and additional photos on demand", 
     contentType: "image/png",
     body: Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jv9sAAAAASUVORK5CYII=", "base64"),
   }));
+  await page.route("**/api/hotel-prices/1", route => route.fulfill({ json: {
+    results: [{ name: "Example provider", nightly: "$240" }],
+    stay: { checkIn: "2026-12-03", checkOut: "2026-12-04", adults: 2 },
+  } }));
   const requests: (string | null)[] = [];
   await page.route(/\/api\/hotel-(photos|ratings)/, route => {
     const mode = new URL(route.request().url()).searchParams.get("mode");
@@ -101,4 +105,16 @@ test("members load a lead photo on visibility and additional photos on demand", 
   await expect(photoSection.getByRole("button", { name: "Show hotel photo 2" })).toBeVisible();
   expect(requests).toEqual(["lead", "gallery"]);
   await expect(page.getByRole("button", { name: "View ratings & reviews" })).toBeVisible();
+  const hotelUrl = page.url();
+  const bookingUrl = await page.getByRole("link", { name: /^Book hotel/ }).getAttribute("href");
+  await page.getByRole("link", { name: "Check prices", exact: true }).click();
+  const price = page.getByRole("link", { name: /^From \$240 \/ night/ });
+  await expect(price).toHaveAttribute("href", bookingUrl!);
+  await expect(price).toHaveAttribute("target", "_blank");
+  await expect(price).toHaveCSS("background-color", "rgb(153, 71, 47)");
+  await expect(price).toHaveCSS("color", "rgb(255, 255, 255)");
+  await expect(page.getByRole("link", { name: /^Book hotel/ })).toHaveCount(0);
+  await expect(page.getByText(/Check availability on Google Hotels/)).toHaveCount(0);
+  await expect(page).toHaveURL(hotelUrl);
+  expect(page.context().pages()).toHaveLength(1);
 });

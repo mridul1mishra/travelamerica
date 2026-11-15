@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import HotelCoverImage from "@/app/components/hotels/HotelCoverImage";
-import { Eye, EyeOff, Star } from "lucide-react";
+import { Eye, EyeOff, ImageIcon, Star } from "lucide-react";
 import HotelPhotoViewer from "./HotelPhotoViewer";
 import type { HotelPhoto } from "@/app/lib/google-hotel-ratings-core";
 import { useMember } from "@/app/components/auth/MemberProvider";
@@ -281,6 +281,14 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
       setSecurityAttempt(value => value + 1);
       begin();
     };
+    if (!member && !memberPending && !coverImage) {
+      return <section className={styles.photoPlaceholder} data-hotel-photo="placeholder" aria-label="Hotel photos">
+        <ImageIcon size={36} aria-hidden="true" />
+        <h2>Hotel photos</h2>
+        <p>Sign in to see photos of this hotel.</p>
+        <button type="button" className={styles.photosButton} onClick={begin}>Sign in to view photos</button>
+      </section>;
+    }
     return <section ref={photoSection} className={lead ? undefined : styles.photoSection} data-hotel-photo={lead || coverImage ? "available" : undefined} aria-label="Hotel photos">
       {lead ? <HotelPhotoViewer photos={photos} hotelName={hotelName} mainImage
         onViewPhotos={photoMode === "lead" ? openGallery : undefined} />

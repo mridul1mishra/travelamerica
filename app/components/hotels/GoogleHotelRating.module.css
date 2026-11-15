@@ -132,3 +132,24 @@
 }
 .photoSection h2 { margin: 0 0 10px; font-size: 1.25rem; }
 .photoSection p { margin: 0 0 10px; }
+
+.photoPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+  aspect-ratio: 16 / 10;
+  min-height: 190px;
+  max-height: 460px;
+  padding: 18px;
+  border: 1px solid #d8dfe6;
+  border-radius: 14px;
+  background: #e9edf1;
+  color: #435066;
+  text-align: center;
+}
+.photoPlaceholder h2,
+.photoPlaceholder p { margin: 0; }
+.photoPlaceholder h2 { color: #172438; font-size: 1.25rem; }

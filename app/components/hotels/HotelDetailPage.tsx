@@ -7,6 +7,7 @@ import { getCityHotels, getHotelBookingUrl, type HotelCity } from "@/app/lib/hot
 import { HOTEL_TAGS } from "@/app/lib/hotelTags";
 import { safeHotelBookingUrl } from "@/app/lib/member-hotel-access";
 import GoogleHotelRating from "./GoogleHotelRating";
+import HotelPriceLink from "./HotelPriceLink";
 import styles from "./HotelDetailPage.module.css";
 
 const cityNames = { nyc: "New York City", la: "Los Angeles", orlando: "Orlando", lasvegas: "Las Vegas" };
@@ -38,8 +39,6 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
   const bookingUrl = await getHotelBookingUrl(hotel.hotelId!);
   const safeBookingUrl = bookingUrl && safeHotelBookingUrl(bookingUrl);
   const booking = safeBookingUrl ? new URL(safeBookingUrl) : undefined;
-  const provider = booking?.hostname === "www.google.com" && booking.pathname.startsWith("/travel/")
-    ? "Google Hotels" : booking?.hostname.replace(/^www\./, "");
   return <>
     <div className={styles.stickyHeader}>
       <NavigationHeader fixed={false} prefetch={false} memberReturnTo={path} />
@@ -54,17 +53,23 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
           {hotel.neighborhood ?? hotel.area ?? cityNames[city]}
         </p>
       </header>
-      <div className={booking ? styles.hero : undefined}>
+      <div className={styles.hero}>
         <div className={styles.media}>
           {hotel.googleRatingAvailable && hotel.hotelId
             ? <GoogleHotelRating key={hotel.hotelId} hotelId={hotel.hotelId} hotelName={hotel.title} photosOnly />
             : <p className={styles.photoUnavailable}>No hotel photos are available from Google.</p>}
         </div>
-        {booking && <div className={styles.priceAction}>
-          <a className={styles.button} href={booking.href} target="_blank" rel="noopener noreferrer sponsored" data-track="booking_cta">Check availability</a>
-          <p>See current prices on {provider}.</p>
-          {hotel.systemMetadata?.affiliateEnabled && <p>We may earn a commission if you book through this link.</p>}
-        </div>}
+        <div className={styles.hotelSidebar}>
+          <div className={styles.priceAction}>
+            <HotelPriceLink key={hotel.hotelId} hotelId={hotel.hotelId!} className={styles.button}
+              bookingUrl={booking?.href} bookingLinkClassName={styles.bookingLink} />
+            {booking && hotel.systemMetadata?.affiliateEnabled && <p>We may earn a commission if you book through this link.</p>}
+          </div>
+          {hotel.overview && <section className={`${styles.panel} ${styles.overview}`}>
+            <h2>Hotel overview</h2>
+            <p>{hotel.overview}</p>
+          </section>}
+        </div>
       </div>
       {hotel.googleRatingAvailable && hotel.hotelId && <section className={styles.guestReviews}>
         <h2>Google ratings &amp; reviews</h2>

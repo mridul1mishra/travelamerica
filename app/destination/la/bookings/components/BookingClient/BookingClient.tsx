@@ -43,6 +43,7 @@ export type Hotel = {
   hotelTierEvidenceCoverage?: number;
   hotelId?: string;
   hotelSourceId?: string;
+  overview?: string | null;
   googleRatingAvailable?: boolean;
   googleMapsUrl?: string;
   firstTimeVisitor?: boolean | null;
