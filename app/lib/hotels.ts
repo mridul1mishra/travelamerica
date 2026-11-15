@@ -4,6 +4,8 @@ import type { HotelTag } from "./hotelTags";
 import { getNycHotelTierAssessment } from "./hotelTiers";
 import catalog from "@/content/cities/hotel-catalog.json";
 import selection from "@/content/cities/newyork/hotel-selection.json";
+import nycBookingSlugs from "@/content/cities/newyork/hotel-booking-slugs.json";
+import otherCityBookingSlugs from "@/content/cities/hotel-booking-slugs.json";
 
 const globalDatabase = globalThis as typeof globalThis & { hotelPool?: Pool };
 
@@ -81,18 +83,26 @@ export async function getCityHotels(city: HotelCity, tag?: HotelTag): Promise<Ho
   });
 }
 
-const riuPlazaCjBookingUrl = `https://www.anrdoezrs.net/click-101909153-17293132?url=${encodeURIComponent("https://www.booking.com/hotel/us/riu-plaza-new-york-times-square.html")}`;
+const bookingSlugsByCity: Record<HotelCity, Readonly<Partial<Record<string, string>>>> = {
+  nyc: nycBookingSlugs,
+  ...otherCityBookingSlugs,
+};
 
 // Resolve the configured provider destination for a published hotel.
 export async function getHotelBookingUrl(hotelId: string): Promise<string | null> {
-  const result = await database().query<{ url: string }>(`SELECT CASE
-      WHEN city_slug = 'nyc' AND source = 'travel-advisor' AND source_id = '8515751' THEN $5::text
-      ELSE booking_url END AS url FROM hotels
+  const result = await database().query<{ url: string | null; city: HotelCity; sourceId: string }>(`
+    SELECT booking_url AS url, city_slug AS city, source_id AS "sourceId" FROM hotels
     WHERE id = $1::bigint AND active = TRUE
       AND ((city_slug = 'nyc' AND source = 'travel-advisor' AND source_id = ANY($2::text[]))
         OR (city_slug = ANY($3::text[]) AND source = 'saved-listing' AND source_id = ANY($4::text[])))
-      LIMIT 1`, [hotelId, selection.sourceIds, ['la', 'orlando', 'lasvegas'], catalog.map(h => h.sourceId), riuPlazaCjBookingUrl]);
-  return result.rows[0]?.url ?? null;
+      LIMIT 1`, [hotelId, selection.sourceIds, ['la', 'orlando', 'lasvegas'], catalog.map(h => h.sourceId)]);
+  const hotel = result.rows[0];
+  const slug = hotel && bookingSlugsByCity[hotel.city]?.[hotel.sourceId];
+  if (slug) {
+    const destination = `https://www.booking.com/hotel/us/${slug}.html`;
+    return `https://www.anrdoezrs.net/click-101909153-17293132?url=${encodeURIComponent(destination)}`;
+  }
+  return hotel?.url ?? null;
 }
 
 export function getNycHotels(tag?: HotelTag) { return getCityHotels("nyc", tag); }
