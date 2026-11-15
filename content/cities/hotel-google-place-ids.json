@@ -466,9 +466,9 @@
     {
       "city": "orlando",
       "sourceId": "ta-85438",
-      "googlePlaceId": null,
-      "matchedOn": "2026-10-11",
-      "status": "NeedsHumanReview"
+      "googlePlaceId": "ChIJk-VQZCx-54gRE4Qjfa0GcjY",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
     },
     {
       "city": "orlando",
@@ -564,9 +564,9 @@
     {
       "city": "orlando",
       "sourceId": "ta-144433",
-      "googlePlaceId": null,
-      "matchedOn": "2026-10-11",
-      "status": "NeedsHumanReview"
+      "googlePlaceId": "ChIJadvOfyGA3YgRX-PPA1ICFUw",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
     },
     {
       "city": "orlando",
@@ -921,9 +921,9 @@
     {
       "city": "lasvegas",
       "sourceId": "ta-1123368",
-      "googlePlaceId": null,
-      "matchedOn": "2026-10-11",
-      "status": "NeedsHumanReview"
+      "googlePlaceId": "ChIJS0B4ZMzCyIARxg2SVf4dIZk",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
     },
     {
       "city": "lasvegas",
@@ -949,9 +949,9 @@
     {
       "city": "lasvegas",
       "sourceId": "ta-186114",
-      "googlePlaceId": null,
-      "matchedOn": "2026-10-11",
-      "status": "NeedsHumanReview"
+      "googlePlaceId": "ChIJuVjYCjzEyIARReNTnhGbd3o",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
     },
     {
       "city": "lasvegas",
@@ -962,10 +962,17 @@
     },
     {
       "city": "lasvegas",
+      "sourceId": "ta-596543",
+      "googlePlaceId": "ChIJPyboc06-yIAR_JCJkTTID9M",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "lasvegas",
       "sourceId": "ta-91828",
-      "googlePlaceId": null,
-      "matchedOn": "2026-10-11",
-      "status": "NeedsHumanReview"
+      "googlePlaceId": "ChIJM5pPyaHDyIARi2GWubblECA",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
     },
     {
       "city": "lasvegas",
@@ -1049,6 +1056,125 @@
       "sourceId": "ta-1200920",
       "googlePlaceId": "ChIJ3xLqpW_EyIARm2KM3atkk94",
       "matchedOn": "2026-10-11",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "la",
+      "sourceId": "ta-76093",
+      "googlePlaceId": "ChIJXVs5lQa8woARSWRNqYGVUNo",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "la",
+      "sourceId": "ta-17331934",
+      "googlePlaceId": "ChIJGayEIMmkwoARvutBp7SwpfI",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "la",
+      "sourceId": "ta-2257239",
+      "googlePlaceId": "ChIJW11x-dCkwoARnlcGCw4druY",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "la",
+      "sourceId": "ta-125138",
+      "googlePlaceId": "ChIJz-22Hfm7woARmoLOmvYW4J0",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "la",
+      "sourceId": "ta-82065",
+      "googlePlaceId": "ChIJBx8nTcSkwoAR1bDfXdfVf20",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "la",
+      "sourceId": "ta-113239",
+      "googlePlaceId": "ChIJGdDgP-O7woAR9NrM6OSh2fI",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "orlando",
+      "sourceId": "ta-4605231",
+      "googlePlaceId": "ChIJFZzjLxtw54gRZ9sWI8w2jAE",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "orlando",
+      "sourceId": "ta-2554285",
+      "googlePlaceId": "ChIJDzPhBZiB3YgRA4x7Pwh0-WM",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "orlando",
+      "sourceId": "ta-609962",
+      "googlePlaceId": "ChIJcSXr8lh_3YgR1WA2CxGBVFs",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "orlando",
+      "sourceId": "ta-84832",
+      "googlePlaceId": "ChIJcZIDbVl_3YgRVgHKDVyw2aw",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "lasvegas",
+      "sourceId": "ta-124741",
+      "googlePlaceId": "ChIJJ4gNeYy_yIAR0ggUAavcT3g",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "orlando",
+      "sourceId": "ta-84723",
+      "googlePlaceId": "ChIJH4rVXpp_3YgRNTHxROWw_YU",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "lasvegas",
+      "sourceId": "silverton-casino-lodge",
+      "googlePlaceId": "ChIJPf9vN0rPyIARTcLUJbURQ9A",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "lasvegas",
+      "sourceId": "ta-1149361",
+      "googlePlaceId": "ChIJrQZ-vCW_yIAR3Num4SZwT5I",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "lasvegas",
+      "sourceId": "ta-226023",
+      "googlePlaceId": "ChIJxfy2Ut7RyIAR0LOPVNgrwYc",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "lasvegas",
+      "sourceId": "ta-1235866",
+      "googlePlaceId": "ChIJ5_f_SRTMyIARY8g0l5VzTMA",
+      "matchedOn": "2026-11-14",
+      "status": "MatchedNameAddressAndLocation"
+    },
+    {
+      "city": "lasvegas",
+      "sourceId": "ta-268447",
+      "googlePlaceId": "ChIJdwf4uZPXyIARKQj9Nhhmh1E",
+      "matchedOn": "2026-11-14",
       "status": "MatchedNameAddressAndLocation"
     }
   ]

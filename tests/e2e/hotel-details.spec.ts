@@ -104,12 +104,13 @@ test("members load a lead photo on visibility and additional photos on demand", 
   await open.click();
   await expect(photoSection.getByRole("button", { name: "Show hotel photo 2" })).toBeVisible();
   expect(requests).toEqual(["lead", "gallery"]);
-  await expect(page.getByRole("button", { name: "View ratings & reviews" })).toBeVisible();
+  await page.getByRole("heading", { name: "Google ratings & reviews" }).scrollIntoViewIfNeeded();
+  await expect(page.getByRole("region", { name: "Guest reviews from Google Maps" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "View ratings & reviews" })).toHaveCount(0);
   const hotelUrl = page.url();
-  const bookingUrl = await page.getByRole("link", { name: /^Book hotel/ }).getAttribute("href");
-  await page.getByRole("link", { name: "Check prices", exact: true }).click();
+  await expect(page.getByRole("link", { name: "Check prices", exact: true })).toHaveCount(0);
   const price = page.getByRole("link", { name: /^From \$240 \/ night/ });
-  await expect(price).toHaveAttribute("href", bookingUrl!);
+  await expect(price).toHaveAttribute("href", /^https:\/\//);
   await expect(price).toHaveAttribute("target", "_blank");
   await expect(price).toHaveCSS("background-color", "rgb(153, 71, 47)");
   await expect(price).toHaveCSS("color", "rgb(255, 255, 255)");

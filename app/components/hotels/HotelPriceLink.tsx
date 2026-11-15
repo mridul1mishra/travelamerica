@@ -10,12 +10,13 @@ type PriceResponse = {
   stay: { checkIn: string; checkOut: string; adults: number };
 };
 
-export default function HotelPriceLink({ hotelId, className, bookingUrl, bookingLinkClassName, initialPrices = null }: {
+export default function HotelPriceLink({ hotelId, className, bookingUrl, bookingLinkClassName, initialPrices = null, autoLoad = false }: {
   hotelId: string;
   className?: string;
   bookingUrl?: string;
   bookingLinkClassName?: string;
   initialPrices?: PriceResponse | null;
+  autoLoad?: boolean;
 }) {
   const { member, pending, signIn } = useMember();
   const [loading, setLoading] = useState(false);
@@ -42,14 +43,14 @@ export default function HotelPriceLink({ hotelId, className, bookingUrl, booking
   }
 
   useEffect(() => {
-    if (member && new URLSearchParams(window.location.search).get("prices") === "1"
+    if (member && (autoLoad || new URLSearchParams(window.location.search).get("prices") === "1")
       && window.location.pathname.endsWith(`/hotel/${hotelId}`)) void load();
-    // Auto-load only when returning from the prices entry point.
+    // Load once on hotel details or when returning from the prices entry point.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [member, hotelId]);
+  }, [member, hotelId, autoLoad]);
 
   return <div>
-    {!prices && <a href={href} className={[className, styles.trigger].filter(Boolean).join(" ")} aria-busy={pending || loading || undefined}
+    {!prices && !(autoLoad && (member || pending)) && <a href={href} className={[className, styles.trigger].filter(Boolean).join(" ")} aria-busy={pending || loading || undefined}
       aria-label={loading ? "Loading hotel price" : undefined}
       onClick={event => {
         event.preventDefault();
@@ -60,6 +61,7 @@ export default function HotelPriceLink({ hotelId, className, bookingUrl, booking
         <span>&gt;</span><span>&gt;</span><span>&gt;</span><span>&gt;</span><span>&gt;</span>
       </span> : "Check prices"}</a>}
     <div role="status" aria-live="polite">
+      {autoLoad && loading && <p>Loading hotel price…</p>}
       {error && <p>{error}</p>}
       {prices && (priceLabel ? <>
         {bookingUrl

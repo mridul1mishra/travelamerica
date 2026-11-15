@@ -81,6 +81,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
   const [photoMode, setPhotoMode] = useState<"lead" | "gallery">("lead");
   const [photoLimited, setPhotoLimited] = useState(false);
   const photoSection = useRef<HTMLElement>(null);
+  const reviewSection = useRef<HTMLDivElement>(null);
   const messageId = useId();
   const started = useRef(false);
   const lookupStarted = useRef(false);
@@ -235,8 +236,8 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
   }, [member, memberPending, signIn, localTurnstileBypass, siteKey, photosOnly]);
 
   useEffect(() => {
-    const section = photoSection.current;
-    if (!photosOnly || !member || memberPending || !section || started.current) return;
+    const section = photosOnly ? photoSection.current : reviewSection.current;
+    if (!(photosOnly || showReviews) || !member || memberPending || !section || started.current) return;
     const observer = new IntersectionObserver(entries => {
       if (entries.some(entry => entry.isIntersecting)) {
         observer.disconnect();
@@ -245,7 +246,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
     });
     observer.observe(section);
     return () => observer.disconnect();
-  }, [photosOnly, member, memberPending, begin]);
+  }, [photosOnly, showReviews, member, memberPending, begin]);
 
   const pending = member && (phase === "challenge" || phase === "loading");
   const unavailable = phase === "unavailable" || phase === "security_failed";
@@ -289,7 +290,9 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
         <button type="button" className={styles.photosButton} onClick={begin}>Sign in to view photos</button>
       </section>;
     }
-    return <section ref={photoSection} className={lead ? undefined : styles.photoSection} data-hotel-photo={lead || coverImage ? "available" : undefined} aria-label="Hotel photos">
+    const photoState = lead || coverImage ? "available"
+      : member && phase === "loaded" ? "unavailable" : undefined;
+    return <section ref={photoSection} className={lead ? undefined : styles.photoSection} data-hotel-photo={photoState} aria-label="Hotel photos">
       {lead ? <HotelPhotoViewer photos={photos} hotelName={hotelName} mainImage
         onViewPhotos={photoMode === "lead" ? openGallery : undefined} />
         : coverImage && <HotelCoverImage className={styles.coverPhoto} src={coverImage} hotelName={hotelName} width={720} height={450} />}
@@ -310,7 +313,7 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
   }
 
   return (
-    <div className={`${styles.rating}${showReviews ? ` ${styles.withReviews}` : ""}`} aria-label={`Google rating for ${hotelName}`} aria-busy={pending}>
+    <div ref={reviewSection} className={`${styles.rating}${showReviews ? ` ${styles.withReviews}` : ""}`} aria-label={`Google rating for ${hotelName}`} aria-busy={pending}>
       {showReviews && !member && !memberPending && <p>Sign in to view guest feedback for this hotel.</p>}
       {!expanded && !showReviews && <span aria-hidden="true" className={phase === "loading" && member ? styles.loadingStars : undefined}>
         {[0, 1, 2, 3].map(index => <span key={index}>*</span>)}
@@ -348,11 +351,11 @@ export default function GoogleHotelRating({ hotelId, hotelName, googleMapsUrl, s
           </section>}
         </>}
       </div>
-      <button type="button" className={showReviews ? styles.photosButton : styles.button} disabled={pending || memberPending} onClick={toggle}
+      {(!showReviews || (!member && !memberPending)) && <button type="button" className={showReviews ? styles.photosButton : styles.button} disabled={pending || memberPending} onClick={toggle}
         aria-label={showReviews ? undefined : `${expanded ? "Hide" : "Show"} Google rating for ${hotelName}`}
         aria-controls={messageId} aria-expanded={expanded}>
-        {showReviews ? (!member ? "Sign in to view" : expanded ? "Hide reviews" : "View ratings & reviews") : expanded ? <EyeOff size={18} aria-hidden="true" /> : <Eye size={18} aria-hidden="true" />}
-      </button>
+        {showReviews ? "Sign in to view" : expanded ? <EyeOff size={18} aria-hidden="true" /> : <Eye size={18} aria-hidden="true" />}
+      </button>}
       {expanded && phase === "security_failed" && siteKey && <button type="button" className={styles.photosButton} disabled={memberPending} onClick={retrySecurity}>Retry security check</button>}
       {member && requested && <div ref={challengeElement} className={styles.challenge} hidden={phase !== "challenge"} />}
       {expanded && !showReviews && <a className={styles.attribution} href={mapsUrl} translate="no"

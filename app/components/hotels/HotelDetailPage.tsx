@@ -57,12 +57,15 @@ export default async function HotelDetailPage({ city, params }: { city: HotelCit
         <div className={styles.media}>
           {hotel.googleRatingAvailable && hotel.hotelId
             ? <GoogleHotelRating key={hotel.hotelId} hotelId={hotel.hotelId} hotelName={hotel.title} photosOnly />
-            : <p className={styles.photoUnavailable}>No hotel photos are available from Google.</p>}
+            : <section className={styles.photoUnavailable} data-hotel-photo="unavailable">
+              <h2>Hotel photos</h2>
+              <p>Hotel photos unavailable.</p>
+            </section>}
         </div>
         <div className={styles.hotelSidebar}>
           <div className={styles.priceAction}>
             <HotelPriceLink key={hotel.hotelId} hotelId={hotel.hotelId!} className={styles.button}
-              bookingUrl={booking?.href} bookingLinkClassName={styles.bookingLink} />
+              bookingUrl={booking?.href} bookingLinkClassName={styles.bookingLink} autoLoad />
             {booking && hotel.systemMetadata?.affiliateEnabled && <p>We may earn a commission if you book through this link.</p>}
           </div>
           {hotel.overview && <section className={`${styles.panel} ${styles.overview}`}>

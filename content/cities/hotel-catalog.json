@@ -1796,16 +1796,12 @@
   },
   {
     "city": "lasvegas",
-    "sourceId": "ta-570084",
-    "providerSourceId": "570084",
-    "name": "South Point Hotel Casino and Spa",
-    "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/0a/b8/07/09/casino--v11694664.jpg",
+    "sourceId": "silverton-casino-lodge",
+    "name": "Silverton Casino Lodge",
+    "imageUrl": "/data/majorcities/lasvegas/assets/lasvegas.webp",
     "area": "Las Vegas, Nevada",
-    "address": "9777 S Las Vegas Blvd, Las Vegas, NV 89183",
-    "latitude": 36.01153,
-    "longitude": -115.17455,
-    "bookingUrl": "https://www.google.com/travel/hotels/South%20Point%20Hotel%20Casino%20and%20Spa%20Las%20Vegas",
-    "directorySourceUrl": "https://www.tripadvisor.com/Hotel_Review-g45963-d570084-Reviews.html"
+    "address": "3333 Blue Diamond Road, Las Vegas, NV 89139",
+    "bookingUrl": "https://www.booking.com/hotel/us/silverton-casino.html"
   },
   {
     "city": "lasvegas",
