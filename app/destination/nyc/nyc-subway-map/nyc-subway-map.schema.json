@@ -69,7 +69,7 @@
           "name": "How much does a subway ride cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A single ride is $2.90 with OMNY or MetroCard."
+            "text": "A single ride is $3 with OMNY or MetroCard."
           }
         },
         {

@@ -143,12 +143,12 @@ export default function FlightGuide() {
         <p>
           When we flew into JFK in July 2026, we took the AirTrain to Jamaica, the Long Island Rail Road
           from Jamaica to Penn Station, and then the subway on into Midtown. The whole trip took
-          about an hour and cost about $17 per person.
+          about an hour and cost $17 per person.
         </p>
         <ul className={styles.list}>
           <li>AirTrain, JFK to Jamaica: $8.75</li>
           <li>LIRR, Jamaica to Penn Station: $5.25 (off-peak weekend fare)</li>
-          <li>Subway: $2.90</li>
+          <li>Subway: $3</li>
         </ul>
         <p>Fares change, so check current prices before you go.</p>
         <p>

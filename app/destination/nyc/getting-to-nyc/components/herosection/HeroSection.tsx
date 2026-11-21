@@ -38,7 +38,7 @@ export default function HeroSection() {
             </div>
             <div className={styles.statCard}>
               <span className={styles.statIcon}>🚇</span>
-              <span className={styles.statValue}>$2.90</span>
+              <span className={styles.statValue}>$3</span>
               <span className={styles.statLabel}>Cheapest Option</span>
             </div>
             <div className={styles.statCard}>

@@ -13,7 +13,7 @@ const airports = [
       {
         icon: '🚇',
         name: 'AirTrain + Subway',
-        cost: '$10.40 / person',
+        cost: '$11.75 / person',
         time: '50–70 min',
         bestFor: 'Solo travelers, budget trips',
         badge: 'Best Value',
@@ -77,7 +77,7 @@ const airports = [
       {
         icon: '🚌',
         name: 'Q70 Bus + Subway',
-        cost: '$2.90 / person',
+        cost: '$3 / person',
         time: '40–60 min',
         bestFor: 'Budget travelers',
         badge: 'Cheapest',
@@ -99,7 +99,7 @@ const airports = [
       {
         icon: '🚌',
         name: 'M60 Bus',
-        cost: '$2.90 / person',
+        cost: '$3 / person',
         time: '45–65 min',
         bestFor: 'Upper West Side / Harlem stays',
         badge: '',
@@ -141,13 +141,13 @@ const airports = [
       {
         icon: '🚆',
         name: 'NJ Transit + AirTrain',
-        cost: '~$17.85 / person',
+        cost: '~$17 / person',
         time: '45–60 min',
         bestFor: 'Most travelers',
         badge: 'Most Reliable',
         badgeColor: 'green',
         description:
-          'One ticket covers both legs. AirTrain to Newark Airport Station, then NJ Transit to Penn Station (34th St, Midtown). Don\'t board Amtrak — it also stops here but costs significantly more.',
+          'One ticket covers both legs. AirTrain to Newark Airport Station, then NJ Transit to Penn Station (34th St, Midtown). Don\'t board Amtrak — it also stops here but costs significantly more. Check NJ Transit for the current fare and the Port Authority\'s Newark page for AirTrain service changes.',
       },
       {
         icon: '🚌',

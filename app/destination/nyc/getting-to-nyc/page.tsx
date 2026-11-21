@@ -4,7 +4,7 @@ import { authorshipSchema } from '@/app/lib/authors';
 
 export const metadata: Metadata = {
   title: 'JFK, LGA & EWR to Manhattan: Airport Transfer Guide 2026',
-  description: 'Cheapest JFK option costs $10.40. LaGuardia free bus. Newark train $17.85. Every NYC airport transfer compared with real 2026 prices and times.',
+  description: 'Cheapest JFK option costs $11.75. LaGuardia free bus. Newark train about $17. Every NYC airport transfer compared with real 2026 prices and times.',
   robots: { index: true, follow: true },
   alternates: {
     canonical: 'https://www.travelsamericas.com/destination/nyc/getting-to-nyc',
@@ -46,17 +46,17 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What is the cheapest way to get from JFK to Manhattan?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The AirTrain + subway is the cheapest at $10.40 per person (AirTrain $8.50 + subway $2.90) and takes 50-70 minutes to Midtown Manhattan.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The AirTrain + subway is the cheapest at $11.75 per person (AirTrain $8.75 + subway $3) and takes 50-70 minutes to Midtown Manhattan.' },
     },
     {
       '@type': 'Question',
       name: 'How do I get from LaGuardia Airport to Manhattan?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Take the free Q70 LaGuardia Link bus to Jackson Heights subway station, then the E, F, M, or 7 train into Manhattan. Total cost is $2.90 and takes 40-60 minutes.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Take the free Q70 LaGuardia Link bus to Jackson Heights subway station, then the E, F, M, or 7 train into Manhattan. Total cost is $3 and takes 40-60 minutes.' },
     },
     {
       '@type': 'Question',
       name: 'What is the best way to get from Newark Airport to Manhattan?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The NJ Transit train from Newark Airport Station to Penn Station costs $17.85 and takes 30-45 minutes -- the fastest and most reliable rail option of any NYC airport.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The NJ Transit train from Newark Airport Station to Penn Station costs about $17 (check NJ Transit for the current fare) and takes about 30 minutes on the train -- the fastest and most reliable rail option of any NYC airport.' },
     },
     {
       '@type': 'Question',
@@ -78,7 +78,7 @@ const howToSchema = {
   description: 'Step-by-step guide to choosing and using the right transport option from JFK, LaGuardia, or Newark airport to Manhattan.',
   step: [
     { '@type': 'HowToStep', name: 'Identify your airport', text: 'Confirm whether you are arriving at JFK (Queens), LaGuardia (Queens), or Newark (New Jersey) -- each has different transport options and costs.' },
-    { '@type': 'HowToStep', name: 'Choose your transfer method', text: 'For budget travel, take the subway (JFK AirTrain + subway, $10.40) or free bus (LaGuardia Q70, $2.90). For speed, book a rideshare or car service in advance.' },
+    { '@type': 'HowToStep', name: 'Choose your transfer method', text: 'For budget travel, take the subway (JFK AirTrain + subway, $11.75) or free bus (LaGuardia Q70, $3). For speed, book a rideshare or car service in advance.' },
     { '@type': 'HowToStep', name: 'Follow signs to the correct exit or AirTrain platform', text: 'At JFK, follow AirTrain signs from baggage claim. At LaGuardia, follow LaGuardia Link Bus Q70 signs. At Newark, follow AirTrain signs to the train station.' },
     { '@type': 'HowToStep', name: 'Avoid unofficial taxis and touts', text: 'Never accept a ride from anyone approaching you in the arrivals hall. Only use licensed yellow cabs from the official taxi queue, or rideshares booked through the app.' },
     { '@type': 'HowToStep', name: 'Pay the correct fare', text: 'JFK yellow cabs charge a flat $70 rate to Manhattan. LaGuardia and Newark cabs use the meter. All three airports have official car service flat rates available on the NYC TLC website.' },
