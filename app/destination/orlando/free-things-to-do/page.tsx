@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import FreeThingsToDoClient from './freethingstodoclient';
+import { authorshipSchema } from '@/app/lib/authors';
 
 export const metadata: Metadata = {
   title: 'Free Things to Do in Orlando 2026: Parks, Nature & Events',
@@ -29,7 +30,7 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'Free Things to Do in Orlando 2026: Parks, Nature & Events',
   description: 'A complete guide to free things to do in Orlando, including parks, nature trails, free museum hours, Disney Springs, neighbourhood walks, and seasonal events that cost nothing.',
-  author: { '@type': 'Person', name: 'Mridul' },
+  ...authorshipSchema("manisha", "mridul"),
   publisher: { '@type': 'Organization', name: 'Travels Americas', url: 'https://www.travelsamericas.com' },
   datePublished: '2026-06-15',
   dateModified: '2026-06-15',

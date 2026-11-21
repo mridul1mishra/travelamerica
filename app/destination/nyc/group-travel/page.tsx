@@ -26,6 +26,7 @@ export const generateMetadata = () => ({
 
 import GroupTravelClient from './grouptravelclient';
 import faqData from '@/content/destination/nyc/group-travel/faq/faqsection.json';
+import { authorshipSchema } from '@/app/lib/authors';
 
 
 // Schema markup (moved from client component)
@@ -121,10 +122,7 @@ const schema2 = {
   "height": 600,
   "width": 1200
 },
-"author": {
-  "@type": "Organization",
-  "name": "Travels Americas"
-},
+...authorshipSchema(),
 "publisher": {
   "@type": "Organization",
   "name": "Travels Americas",

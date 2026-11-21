@@ -1,10 +1,12 @@
 import styles from './introsection.module.css';
+import Byline from "@/app/components/Byline/Byline";
 
 export default function IntroSection() {
   return (
     <section className={`${styles.background ?? ''}`}>
       <div className={styles.wrapper}>
       <h1 className={styles.heading}>New York City Neighborhood Guide</h1>
+      <Byline />
       <p className={styles.description}>
         New York City is made up of many distinct neighborhoods, each with its own
         personality, pace, and atmosphere. This guide helps you understand how NYC neighborhoods differ so you can

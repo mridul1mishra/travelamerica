@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import BookingCTA from "./components/BookingCTA/BookingCTA";
 import EmailSignup from "@/app/components/destination/EmailSignup/EmailSignup";
 import styles from "./nycsafetyguide.module.css";
+import Byline from "@/app/components/Byline/Byline";
 
 const safetyDefaults = [
   {
@@ -205,6 +206,7 @@ export default function NYCSafetyGuideClient() {
 
             <p className={styles.eyebrow}>NYC safety guide</p>
             <h1>Is New York City Safe to Visit in 2026?</h1>
+            <Byline />
             <p className={styles.lede}>
               Yes for most visitors, with smart routing. Citywide major crime is down 6.6% year-to-date through September 2026 and murders are at record lows — but street smarts still matter. This guide shows where to stay, what changes after dark, how to avoid tourist scams, and what to do when a situation feels off.
             </p>

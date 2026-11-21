@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import GettingToNYCClient from './gettingtonyclient';
+import { authorshipSchema } from '@/app/lib/authors';
 
 export const metadata: Metadata = {
   title: 'JFK, LGA & EWR to Manhattan: Airport Transfer Guide 2026',
@@ -29,7 +30,7 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'JFK, LGA & EWR to Manhattan: Airport Transfer Guide 2026',
   description: 'A complete guide to every transport option from JFK, LaGuardia, and Newark airports to Manhattan, with 2026 prices, journey times, and scam warnings.',
-  author: { '@type': 'Person', name: 'Mridul' },
+  ...authorshipSchema("manisha", "mridul"),
   publisher: { '@type': 'Organization', name: 'Travels Americas', url: 'https://www.travelsamericas.com' },
   datePublished: '2026-06-08',
   dateModified: '2026-06-08',

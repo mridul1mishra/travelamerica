@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./editorial.module.css";
+import Byline from "@/app/components/Byline/Byline";
 
 // Copy revised after an outside fact-check against attraction and operator sites.
 // Re-confirm before deploy: Met admission categories, sightseeing pass names and
@@ -9,6 +10,7 @@ export default function ToursGuide() {
   return (
     <section className={styles.wrap} aria-labelledby="nyc-tours-heading">
       <h2 id="nyc-tours-heading">Planning NYC tours and tickets without overbooking</h2>
+      <Byline updated="November 2026" />
       <p className={styles.lead}>
         Some major New York attractions use timed entry, and popular time slots can sell out in
         advance, especially at busy times. Booking rules vary, so check the attraction&apos;s official

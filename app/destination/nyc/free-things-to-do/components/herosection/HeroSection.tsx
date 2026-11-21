@@ -1,4 +1,5 @@
 import styles from './HeroSection.module.css';
+import Byline from "@/app/components/Byline/Byline";
 
 export default function HeroSection() {
   return (
@@ -13,6 +14,7 @@ export default function HeroSection() {
           <div className={styles.heroText}>
             <div className={styles.badge}>🆓 Completely Free · 2026</div>
             <h1>Free Things to Do in New York City</h1>
+            <Byline author="manisha" reviewer="mridul" />
             <p className={styles.subtitle}>
               Parks, museums with free hours, the Staten Island Ferry, iconic walks, and seasonal events — all at zero cost. A genuinely great day in NYC can cost under $15.
             </p>

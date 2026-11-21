@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import BestTimeToVisitClient from './besttimetovisitclient';
+import { authorshipSchema } from '@/app/lib/authors';
 
 export const metadata: Metadata = {
   title: 'Best Time to Visit Orlando 2026: Crowds, Weather & Theme Park Tips',
@@ -29,7 +30,7 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'Best Time to Visit Orlando 2026: Crowds, Weather & Theme Park Tips',
   description: 'A month-by-month guide to visiting Orlando, Florida, covering theme-park crowd levels, weather, hotel prices, and the major events to plan around.',
-  author: { '@type': 'Person', name: 'Mridul' },
+  ...authorshipSchema("manisha", "mridul"),
   publisher: { '@type': 'Organization', name: 'Travels Americas', url: 'https://www.travelsamericas.com' },
   datePublished: '2026-06-15',
   dateModified: '2026-06-15',

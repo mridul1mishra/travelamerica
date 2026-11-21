@@ -1,4 +1,5 @@
 import NYCSafetyGuideClient from "./nycsafetyguideclient";
+import { authorshipSchema } from '@/app/lib/authors';
 
 export const metadata = {
   title: "Is NYC Safe Right Now? 2026 Crime Data, Safe Areas & Scams",
@@ -54,10 +55,7 @@ export default function NYCSafetyGuide() {
     url: "https://www.travelsamericas.com/destination/nyc/nyc-safety-guide",
     inLanguage: "en-US",
     dateModified: "2026-10-16",
-    author: {
-      "@type": "Organization",
-      name: "Travels Americas",
-    },
+    ...authorshipSchema(),
     isPartOf: {
       "@type": "WebSite",
       name: "Travels Americas",

@@ -28,6 +28,7 @@ export const generateMetadata = () => ({
 
 
 import BestAreatoStatyClient from './bestareatostayclientnew';
+import { authorshipSchema } from '@/app/lib/authors';
 
 export default async function SoloTripToNYC() {
   const schemaObject = {
@@ -35,10 +36,7 @@ export default async function SoloTripToNYC() {
   "@type": "Guide",
   "headline": "Best Areas to Stay in NYC (2026): Safest and Most Convenient Neighborhoods",
   "description": "Best Areas to Stay in NYC (Safe and Central Neighborhoods) – 2026",
-  "author": {
-    "@type": "Person",
-    "name": "Mridul"
-  },
+  ...authorshipSchema("manisha", "mridul"),
   "datePublished": "2026-01-01",
   "dateModified": "2026-07-03",
   "mainEntity": {

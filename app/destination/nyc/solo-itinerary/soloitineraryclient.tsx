@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import BookingCTA from "./components/BookingCTA/BookingCTA";
 import EmailSignup from "@/app/components/destination/EmailSignup/EmailSignup";
 import styles from "./SoloItinerary.module.css";
+import Byline from "@/app/components/Byline/Byline";
 
 interface FaqItem {
   id?: string;
@@ -144,6 +145,7 @@ export default function SoloItineraryClient({ grouped }: SoloItineraryClientProp
 
             <p className={styles.eyebrow}>3-day solo NYC plan</p>
             <h1>New York City Solo Itinerary That Actually Flows</h1>
+            <Byline />
             <p className={styles.lede}>
               A practical 3-day route for solo travelers: one city anchor each day, neighborhood-friendly pacing, easy food stops, and evenings that do not leave you stranded.
             </p>

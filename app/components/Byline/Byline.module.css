@@ -1,0 +1,13 @@
+.byline {
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+  color: inherit;
+  opacity: 0.85;
+}
+
+.byline a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

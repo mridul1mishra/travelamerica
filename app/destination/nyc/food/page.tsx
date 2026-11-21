@@ -25,6 +25,7 @@ export const generateMetadata = () => ({
 });
 
 import FoodClientPage from './foodclient';
+import { authorshipSchema } from '@/app/lib/authors';
 
 
 // Schema markup (moved from client component)
@@ -33,10 +34,7 @@ const Article = {
   "@type": "Article",
   "headline": "Where to Eat in New York City: The 2026 Food Guide",
   "description": "Where to eat in New York City — best restaurants by cuisine and neighborhood, food halls, pizza, bagels, and price ranges. A 2026 NYC food guide.",
-  "author": {
-"@type": "Organization",
-"name": "Travels Americas"
-  },
+  ...authorshipSchema(),
   "datePublished": "2025-10-19",
   "dateModified": "2026-06-03",
   "publisher": {

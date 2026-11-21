@@ -2,6 +2,7 @@
 import Link from "next/link";
 import type { HeroSection } from "../../nyc-subway-map";
 import styles from "./herobanner.module.css";
+import Byline from "@/app/components/Byline/Byline";
 
 export default function Hero({
   title,
@@ -16,6 +17,7 @@ export default function Hero({
     <section className={styles.hero}>
       <div className={styles.content}>
         <h1 className={styles.title}>{title}</h1>
+        <Byline />
 
         <p className={styles.subtitle}>{subtitle}</p>
 

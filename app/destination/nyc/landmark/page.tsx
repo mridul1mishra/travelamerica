@@ -27,6 +27,7 @@ export const generateMetadata = () => ({
 });
 
 import LandmarkClientPage from './landmarkclient';
+import { authorshipSchema } from '@/app/lib/authors';
 
 
 // Schema markup (moved from client component)
@@ -38,7 +39,7 @@ const article = {
   "url": "https://www.travelsamericas.com/destination/nyc/landmark",
   "inLanguage": "en-US",
   "image": "https://www.travelsamericas.com/data/majorcities/newyork/assets/statue-of-liberty.webp",
-  "author": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },
+  ...authorshipSchema(),
   "publisher": {
     "@type": "Organization",
     "name": "Travels Americas",

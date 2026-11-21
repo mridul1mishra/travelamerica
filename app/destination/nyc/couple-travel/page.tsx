@@ -5,6 +5,7 @@ import NavigationHeader from '@/app/components/Header/NavigationHeader';
 import Footer from '@/app/components/Header/Footer/footer';
 import styles from '../solo-itinerary/SoloItinerary.module.css';
 import { days, faqs } from './content';
+import Byline from "@/app/components/Byline/Byline";
 
 const url = 'https://www.travelsamericas.com/destination/nyc/couple-travel';
 const title = 'NYC Couple Travel: A 3-Day Itinerary for Time Together';
@@ -36,6 +37,7 @@ export default function CoupleTravelPage() {
           <nav className={styles.breadcrumb} aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/destination/nyc">New York City</Link><span>/</span><span aria-current="page">Couple Travel</span></nav>
           <p className={styles.eyebrow}>Three days in NYC together</p>
           <h1 id="couple-heading">New York City, Made for Time Together</h1>
+          <Byline />
           <p className={styles.lede}>Scenic walks, food worth sharing, art that starts a conversation, and an evening you will remember. Build your three-day NYC getaway around experiences for two—not a checklist.</p>
           <div className={styles.actions}><Link className={styles.primaryButton} href="#day-plan">Explore the 3-day route</Link><Link className={styles.secondaryButton} href="#optional-experiences">Make it your own</Link></div>
           <div className={styles.statsRow} aria-label="Trip highlights">{[['Views', 'Park + skyline'], ['Discoveries', 'Food + culture'], ['Evenings', 'Dinner + a show']].map(([label, value]) => <div key={label}><span>{label}</span><strong>{value}</strong></div>)}</div>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./HeroSection.module.css";
+import Byline from "@/app/components/Byline/Byline";
 
 export function HeroSection() {
   return (
@@ -8,6 +9,7 @@ export function HeroSection() {
       <div className={styles.herocontainer}>
         <div className={styles.herotext}>
           <h1>Solo Trip to NYC</h1>
+          <Byline author="manisha" reviewer="mridul" />
           <p className={styles.subtext}>
             NYC is one of the easiest U.S. cities to enjoy alone: transit runs all day, solo dining is normal, and busy streets make first-time exploring feel less exposed. Plan around well-lit neighborhoods, simple subway routes, and a few smart scam checks, and a solo trip feels confident instead of complicated.
           </p>

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import styles from './nycthingstodoclient.module.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Byline from "@/app/components/Byline/Byline";
 
 const quickChoices = [
   {
@@ -133,6 +134,7 @@ export default function NYCThingsToDoClient() {
             </nav>
             <p className={styles.eyebrow}>NYC things to do</p>
             <h1>The Best Things to Do in New York City</h1>
+            <Byline />
             <p>
               New York gets easier when you stop treating it like a checklist. Pick one big anchor,
               cluster nearby neighborhoods around it, and leave room for the city to surprise you.

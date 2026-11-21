@@ -172,7 +172,7 @@ export default function Page() {
               streets feel different after midnight. Below is a neighborhood-by-neighborhood read.
             </p>
             <p style={{ fontSize: "0.85rem", color: "#475569", margin: "0.4rem 0 0" }}>
-              By <a href="/about" style={{ color: "#1d4ed8", fontWeight: 600, textDecoration: "none" }}>Mridul Mishra</a> · Updated June 2026 · Fact-checked against NYPD &amp; MTA data
+              By <a href="/about" style={{ color: "#1d4ed8", fontWeight: 600, textDecoration: "none" }}>Mridul Mishra</a> · Reviewed by <a href="/about#manisha-shukla" style={{ color: "#1d4ed8", fontWeight: 600, textDecoration: "none" }}>Manisha Shukla</a> · Updated June 2026 · Fact-checked against NYPD &amp; MTA data
             </p>
             <div className={styles.heroActions}>
               <Link href="/destination/nyc/hotel?from=is-nyc-safe-at-night" className={styles.primaryButton}

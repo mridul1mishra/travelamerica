@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
 import faqData from "@/content/destination/nyc/group-travel/faq/faqsection.json";
 import styles from "./grouptravel.module.css";
+import Byline from "@/app/components/Byline/Byline";
 
 const tripRules = [
   ["Stay central", "Midtown or Downtown Brooklyn keeps subway transfers simple."],
@@ -139,6 +140,7 @@ export default function GroupTravelPage() {
             </nav>
             <p className={styles.eyebrow}>NYC group travel guide</p>
             <h1>New York City Group Travel Guide</h1>
+            <Byline />
             <p>
               A practical 3-day plan for keeping your group close to good food, easy subway routes,
               Broadway, and the landmarks people actually want to see.

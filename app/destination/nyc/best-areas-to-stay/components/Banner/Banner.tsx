@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./Banner.module.css";
+import Byline from "@/app/components/Byline/Byline";
 
 interface BannerProps {
   cityName: string;
@@ -54,6 +55,7 @@ export default function Banner({
         <div className={styles.herocontent}>
           <p className={styles.eyebrow}>New York City stay guide</p>
           <h1>Best Areas to Stay in {cityName}</h1>
+          <Byline author="manisha" reviewer="mridul" />
           <p>{description}</p>
         </div>
 

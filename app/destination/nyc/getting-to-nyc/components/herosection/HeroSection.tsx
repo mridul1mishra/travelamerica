@@ -1,4 +1,5 @@
 import styles from './HeroSection.module.css';
+import Byline from "@/app/components/Byline/Byline";
 
 export default function HeroSection() {
   return (
@@ -16,6 +17,7 @@ export default function HeroSection() {
           <div className={styles.heroText}>
             <div className={styles.badge}>2026 Airport Guide</div>
             <h1>Getting to NYC from the Airport</h1>
+            <Byline author="manisha" reviewer="mridul" />
             <p className={styles.subtitle}>
               JFK, LaGuardia, or Newark — every transport option with real 2026
               costs, travel times, and the scams to avoid.

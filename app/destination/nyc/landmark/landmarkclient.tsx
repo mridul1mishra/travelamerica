@@ -6,6 +6,7 @@ import NavigationHeader from "./components/NavigationHeader/NavigationHeader";
 import Footer from "./components/Footer/Footer";
 import styles from "./landmark.module.css";
 import { LANDMARKS } from "./landmarks-data";
+import Byline from "@/app/components/Byline/Byline";
 
 const priorityPicks = [
   {
@@ -94,6 +95,7 @@ export default function LandmarkPage() {
             </nav>
             <p className={styles.eyebrow}>NYC landmarks guide</p>
             <h1>New York City Landmarks Guide</h1>
+            <Byline />
             <p>
               The best NYC landmark days are not about seeing everything. They are about choosing
               the right anchors, booking the tickets that matter, and grouping sights so the city

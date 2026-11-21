@@ -1,5 +1,6 @@
 
 import ClientPage from "./solofemaletravelguideclient";
+import { personSchema } from '@/app/lib/authors';
 
 
 
@@ -137,6 +138,7 @@ const Article = {
       "name": "Banaras Hindu University"
     }
   },
+  reviewedBy: personSchema("mridul"),
   "publisher": {
     "@type": "Organization",
     "name": "Travels Americas",

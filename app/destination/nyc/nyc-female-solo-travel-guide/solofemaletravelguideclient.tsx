@@ -221,7 +221,7 @@ export default function FemaleSoloTravelGuide() {
               Yes, for most first-time solo women who choose an active base, keep late-night routes simple, and trust the moment when a street, station, or interaction starts to feel off. This solo female travel in NYC guide focuses on the women-specific decisions that broader itinerary pages usually skip.
             </p>
             <p className={styles.byline}>
-              By <Link href="/about#manisha-shukla">Manisha Shukla</Link> · Updated October 2026 · Fact-checked against NYPD &amp; MTA data
+              By <Link href="/about#manisha-shukla">Manisha Shukla</Link> · Reviewed by <Link href="/about">Mridul Mishra</Link> · Updated October 2026 · Fact-checked against NYPD &amp; MTA data
             </p>
 
             <div className={styles.actions}>

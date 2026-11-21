@@ -8,6 +8,7 @@ import BookingCTA from "./components/BookingCTA/BookingCTA";
 import FAQAccordion from "./components/FAQAccordion/FAQAccordion";
 import faqData from "@/content/destination/nyc/food/faq/faqsection.json";
 import styles from "./food.module.css";
+import Byline from "@/app/components/Byline/Byline";
 
 const mustEats = [
   {
@@ -122,6 +123,7 @@ export default function FoodClientPage() {
           <div className={styles.heroCopy}>
             <p className={styles.eyebrow}>NYC food guide</p>
             <h1>Where to Eat in New York City</h1>
+            <Byline />
             <p>
               New York rewards a good plan. Use this guide to pick the right food neighborhood,
               decide what needs a reservation, and avoid wasting meals on generic Midtown traps.

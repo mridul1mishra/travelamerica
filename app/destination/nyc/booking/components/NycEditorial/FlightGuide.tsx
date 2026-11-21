@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./editorial.module.css";
+import Byline from "@/app/components/Byline/Byline";
 
 // REVIEW BEFORE DEPLOY: this copy was revised after an outside fact-check. Confirm against the
 // official Port Authority, MTA, NJ Transit and NYC TLC pages before publishing: the LIRR time from
@@ -10,6 +11,7 @@ export default function FlightGuide() {
   return (
     <section className={styles.wrap} aria-labelledby="nyc-airports-heading">
       <h2 id="nyc-airports-heading">Flying to New York: which airport fits your trip</h2>
+      <Byline updated="November 2026" />
       <p className={styles.lead}>
         New York&apos;s three principal airports, JFK, LaGuardia and Newark, serve different parts of
         the region well. The cheapest fare is not always the cheapest or easiest trip overall, so
@@ -141,12 +143,12 @@ export default function FlightGuide() {
         <p>
           When we flew into JFK in July 2026, we took the AirTrain to Jamaica, the Long Island Rail Road
           from Jamaica to Penn Station, and then the subway on into Midtown. The whole trip took
-          about an hour and cost $17 per person.
+          about an hour and cost about $17 per person.
         </p>
         <ul className={styles.list}>
           <li>AirTrain, JFK to Jamaica: $8.75</li>
           <li>LIRR, Jamaica to Penn Station: $5.25 (off-peak weekend fare)</li>
-          <li>Subway: $3</li>
+          <li>Subway: $2.90</li>
         </ul>
         <p>Fares change, so check current prices before you go.</p>
         <p>

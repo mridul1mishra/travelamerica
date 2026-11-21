@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import GettingToOrlandoClient from './gettingtoorlandoclient';
+import { authorshipSchema } from '@/app/lib/authors';
 
 export const metadata: Metadata = {
   title: 'Getting to Orlando 2026: MCO, Sanford & Brightline Guide',
@@ -29,7 +30,7 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'Getting to Orlando 2026: MCO, Sanford Airport & Brightline Complete Guide',
   description: 'A complete guide to getting to Orlando, covering Orlando International Airport (MCO), Orlando Sanford Airport (SFB), Brightline train from South Florida, and how to reach the theme park areas.',
-  author: { '@type': 'Person', name: 'Mridul' },
+  ...authorshipSchema("manisha", "mridul"),
   publisher: { '@type': 'Organization', name: 'Travels Americas', url: 'https://www.travelsamericas.com' },
   datePublished: '2026-06-15',
   dateModified: '2026-06-15',

@@ -1,4 +1,5 @@
 import NYCThingsToDoClient from './nycthingstodoclient';
+import { authorshipSchema } from '@/app/lib/authors';
 
 export const metadata = {
   title: 'The Best Things to Do in New York City (2026 Guide)',
@@ -40,7 +41,7 @@ const article = {
     'The best things to do in NYC — landmarks, free activities, museums, food halls, and skyline views, organized by vibe and budget. Updated for 2026.',
   url: 'https://www.travelsamericas.com/destination/nyc/things-to-do',
   inLanguage: 'en-US',
-  author: { '@type': 'Organization', name: 'Travels Americas', url: 'https://www.travelsamericas.com' },
+  ...authorshipSchema(),
   publisher: {
     '@type': 'Organization',
     name: 'Travels Americas',

@@ -1,4 +1,5 @@
 import SoloTripNYCClient from "./solotriptonycclient";
+import { personSchema } from '@/app/lib/authors';
 
 export const generateMetadata = () => ({
   title: "Solo Trip to NYC Guide: Safety, Best Areas to Stay, Budget Tips & Itinerary",
@@ -38,6 +39,7 @@ const articleSchema = {
     name: "Manisha Shukla",
     url: "https://www.travelsamericas.com/about#manisha-shukla"
   },
+  reviewedBy: personSchema("mridul"),
   publisher: {
     "@type": "Organization",
     name: "Travels Americas",
