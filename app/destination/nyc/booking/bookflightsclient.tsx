@@ -85,11 +85,11 @@ const config: CityBookingConfig = {
   activities: thingsToDoData as CityBookingConfig["activities"],
 };
 
-export default function BookFlightsClient({ category = "flights", hotels = [] }: { hotels?: CityBookingConfig["hotels"]; category?: "flights" | "hotels" | "activities" }) {
+export default function BookFlightsClient({ category = "flights", hotels = [], editorial }: { hotels?: CityBookingConfig["hotels"]; category?: "flights" | "hotels" | "activities"; editorial?: React.ReactNode }) {
   const titles = { flights: "Compare Flights to New York City", hotels: "Find Your New York City Hotel", activities: "Book NYC Activities, Tours & Tickets" };
   const intros = { flights: "Compare sample fares to New York and plan your airport transfer. Check current prices with the provider.", hotels: "Find a NYC hotel that fits your neighborhood, budget, and travel plans. Filter stays by tier and hotel tags. Register or sign in to check prices and use the eye icon to view a hotel's current Google rating and review count.", activities: "Browse NYC tours, museums, and attraction tickets. Compare experiences by category and check availability with the provider." };
   const routes = { flights: "/destination/nyc/flight", hotels: "/destination/nyc/hotel", activities: "/destination/nyc/tours-and-tickets" };
   const focused = { ...config, hotels, category, onDemandGoogleRatings: category === "hotels", categoryRoutes: routes, bookingHref: routes[category], bannerText: titles[category], pageTitle: titles[category], introText: intros[category], bookingTips: config.bookingTips?.filter((_, index) => index === (category === "hotels" ? 0 : category === "flights" ? 1 : 2)) };
   const faqs = category === "hotels" ? hotelFaqs : category === "flights" ? flightFaqs : activityFaqs;
-  return <BookingClient config={focused} faqSection={faqs.length >= 5 ? <FAQAccordion faqs={faqs} /> : undefined} />;
+  return <BookingClient config={focused} editorialSection={editorial} faqSection={faqs.length >= 5 ? <FAQAccordion faqs={faqs} /> : undefined} />;
 }

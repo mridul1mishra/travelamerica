@@ -17,7 +17,7 @@ const privacyPageSchema = {
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Customer Support",
-      "email": "support@travelsamericas.com",
+      "email": "info@travelsamericas.com",
     },
   },
   "isPartOf": {
@@ -76,6 +76,7 @@ return (
                 <li>Measure engagement and traffic patterns</li>
                 <li>Monitor and prevent fraud or abuse</li>
                 <li>Track conversions for affiliate partnerships</li>
+                <li>Show advertising through Google AdSense</li>
             </ul>
             <p>We do not sell or rent personal information.</p>
         </div>
@@ -89,6 +90,8 @@ return (
                 <li>Analyze usage through analytics tools</li>
             </ul>
             <p>You may disable cookies through your browser settings, but some features may not function properly.</p>
+            <p><strong>Advertising.</strong> We use Google AdSense to show ads on this Site. Google and its partners, as third-party vendors, use cookies and similar technologies to serve ads based on your visits to this Site and other websites. Google&apos;s use of advertising cookies enables it and its partners to serve ads to you based on your visit to this Site and/or other sites on the Internet.</p>
+            <p>You can opt out of personalized advertising by visiting <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>, or opt out of some third-party vendors&apos; use of cookies for personalized advertising at <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer">aboutads.info</a>. To learn how Google uses data from sites that use its services, see <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use our services</a>.</p>
         </div>
         <div>
             <h2>4. Third Party links</h2>

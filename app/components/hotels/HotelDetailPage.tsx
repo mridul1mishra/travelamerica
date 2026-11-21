@@ -10,6 +10,10 @@ import GoogleHotelRating from "./GoogleHotelRating";
 import HotelPriceLink from "./HotelPriceLink";
 import styles from "./HotelDetailPage.module.css";
 
+// Detail pages currently have only a short overview, address and tags, so they are kept
+// out of search results. Add a city here once its detail pages carry enough original content.
+const INDEXABLE_DETAIL_CITIES: HotelCity[] = [];
+
 const cityNames = { nyc: "New York City", la: "Los Angeles", orlando: "Orlando", lasvegas: "Las Vegas" };
 type Params = Promise<{ hotelId: string }>;
 
@@ -29,6 +33,7 @@ export async function hotelDetailMetadata(city: HotelCity, params: Params): Prom
     title: `${hotel.title} | ${cityNames[city]} Hotels`,
     description: `Explore ${hotel.title} in ${cityNames[city]}${hotel.neighborhood ? `, ${hotel.neighborhood}` : ""}. View hotel information and check availability and sign in for guest reviews.`,
     alternates: { canonical: `https://www.travelsamericas.com/destination/${city}/hotel/${hotel.hotelId}` },
+    robots: INDEXABLE_DETAIL_CITIES.includes(city) ? undefined : { index: false, follow: true },
   };
 }
 

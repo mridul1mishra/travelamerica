@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Travels Americas – AdSense To-Do</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --text: #1b2330; --muted: #5b6676; --line: #e1e5ec;
+    --accent: #2563eb; --accent-soft: #e8efff; --ok: #15803d; --ok-soft: #e3f5e8;
+    --warn: #b45309; --warn-soft: #fdf0dc; --bad: #b91c1c; --bad-soft: #fde8e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12161d; --card: #1a202a; --text: #e6e9ef; --muted: #98a2b3; --line: #2a3240;
+      --accent: #6ea0ff; --accent-soft: #1d2a47; --ok: #5fd08a; --ok-soft: #173326;
+      --warn: #f0b35a; --warn-soft: #3a2c14; --bad: #ff8a8a; --bad-soft: #3d1c1c;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { margin: 0 0 4px; font-size: 1.5rem; }
+  .sub { margin: 0 0 16px; color: var(--muted); }
+  .reason { background: var(--warn-soft); color: var(--text); border-left: 4px solid var(--warn);
+    padding: 10px 14px; border-radius: 6px; margin-bottom: 16px; font-size: .92rem; }
+  .progress { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; }
+  .bar { height: 10px; background: var(--line); border-radius: 99px; overflow: hidden; margin-top: 8px; }
+  .bar > span { display: block; height: 100%; background: var(--ok); width: 0; transition: width .25s; }
+  .stats { display: flex; gap: 14px; flex-wrap: wrap; color: var(--muted); font-size: .88rem; margin-top: 8px; }
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
+  .toolbar input[type=search] { flex: 1 1 200px; }
+  input, select, textarea, button { font: inherit; color: var(--text); }
+  input[type=text], input[type=search], select, textarea {
+    background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; }
+  textarea { width: 100%; resize: vertical; min-height: 64px; }
+  button { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip[aria-pressed=true] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+  details.group { background: var(--card); border: 1px solid var(--line); border-radius: 10px; margin-bottom: 12px; }
+  details.group > summary { cursor: pointer; padding: 12px 16px; font-weight: 700; list-style: none;
+    display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  details.group > summary::-webkit-details-marker { display: none; }
+  details.group > summary::before { content: "\25B8"; margin-right: 8px; color: var(--muted); }
+  details.group[open] > summary::before { content: "\25BE"; }
+  details.group > summary > span:first-child { flex: 1; }
+  .count { color: var(--muted); font-weight: 400; font-size: .85rem; }
+  .items { border-top: 1px solid var(--line); }
+  .item { padding: 10px 16px; border-bottom: 1px solid var(--line); }
+  .item:last-child { border-bottom: 0; }
+  .row { display: flex; align-items: flex-start; gap: 10px; }
+  .row input[type=checkbox] { margin-top: 5px; width: 17px; height: 17px; flex: none; }
+  .title { flex: 1; min-width: 0; cursor: pointer; }
+  .item.done .title { text-decoration: line-through; color: var(--muted); }
+  .badge { font-size: .72rem; font-weight: 700; padding: 2px 8px; border-radius: 99px; text-transform: uppercase; letter-spacing: .03em; flex: none; margin-top: 3px; }
+  .p-high { background: var(--bad-soft); color: var(--bad); }
+  .p-med { background: var(--warn-soft); color: var(--warn); }
+  .p-low { background: var(--accent-soft); color: var(--accent); }
+  .detail { margin: 8px 0 4px 27px; color: var(--muted); font-size: .9rem; }
+  .detail textarea { margin-top: 8px; }
+  .meta { display: flex; gap: 8px; margin-top: 8px; align-items: center; flex-wrap: wrap; }
+  code { background: var(--accent-soft); padding: 1px 5px; border-radius: 4px; font-size: .85em; word-break: break-word; }
+  .del { color: var(--bad); }
+  .add { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-bottom: 14px; }
+  .add form { display: flex; gap: 8px; flex-wrap: wrap; }
+  .add input[type=text] { flex: 1 1 240px; min-width: 0; }
+  .add select { flex: 1 1 140px; min-width: 0; max-width: 100%; }
+  .empty { padding: 14px 16px; color: var(--muted); }
+  .notice { background: var(--bad-soft); color: var(--bad); padding: 8px 12px; border-radius: 8px; margin-bottom: 12px; font-size: .88rem; }
+  footer { color: var(--muted); font-size: .82rem; margin-top: 24px; }
+  @media (max-width: 560px) { .row { flex-wrap: wrap; } .badge { order: 3; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Travels Americas – AdSense To-Do</h1>
+  <p class="sub">Tracks every recommendation for getting travelsamericas.com approved for AdSense. Your progress and notes are saved in this browser.</p>
+  <div class="reason"><strong>AdSense decision (Sites page):</strong> “Low value content” – the site must provide substantial unique value, show consistent ongoing curation, and generate genuine user interest. Booking/affiliate pages are only part of this; the whole site is judged.</div>
+  <div id="notice"></div>
+
+  <div class="progress">
+    <strong id="progressText"></strong>
+    <div class="bar"><span id="progressBar"></span></div>
+    <div class="stats" id="stats"></div>
+  </div>
+
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="Search tasks and notes…" aria-label="Search tasks">
+    <div class="chips" id="statusChips" role="group" aria-label="Filter by status"></div>
+    <select id="priorityFilter" aria-label="Filter by priority">
+      <option value="all">All priorities</option><option value="high">High</option><option value="med">Medium</option><option value="low">Low</option>
+    </select>
+  </div>
+
+  <div class="add">
+    <form id="addForm">
+      <input type="text" id="addTitle" placeholder="Add a task…" aria-label="New task" required>
+      <select id="addCat" aria-label="Category"></select>
+      <select id="addPri" aria-label="Priority"><option value="high">High</option><option value="med" selected>Medium</option><option value="low">Low</option></select>
+      <button class="primary" type="submit">Add</button>
+    </form>
+  </div>
+
+  <div id="groups"></div>
+
+  <div class="toolbar">
+    <button id="exportBtn">Export JSON</button>
+    <button id="importBtn">Import JSON</button>
+    <input type="file" id="importFile" accept="application/json" hidden>
+    <button id="resetBtn" class="del">Reset to defaults</button>
+  </div>
+  <footer>Tip: use Export to back up your progress or move it to another browser. Last review of the code: 2026-11-20.</footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var KEY = "travelsamericas-adsense-todo-v1";
+
+  var CATS = [
+    "Deploy & verify",
+    "Content (the main fix for “low value content”)",
+    "Compliance & ad setup",
+    "Resubmit",
+    "Site structure & cleanup",
+    "After approval",
+    "Completed in code"
+  ];
+
+  // Seed tasks. To add new built-in tasks later, append items with NEW ids; they are merged into
+  // existing saved lists without touching your progress or notes.
+  var SEED = [
+    // ---- Deploy & verify
+    { id: "d1", cat: 0, pri: "high", status: "todo", title: "Run `npm run build` (and `npm run lint`) locally and fix any errors",
+      detail: "The contact form, `/api/contact`, the CSP change and the hotel-detail noindex change were never type-checked or built (the compiler timed out on the slow mount). A syntax check on `next.config.js` passed." },
+    { id: "d2", cat: 0, pri: "high", status: "todo", title: "Set production environment variables for the contact form",
+      detail: "In Vercel: `SMTP2GO_API_KEY` (plus `SMTP2GO_FROM_EMAIL` / `SMTP2GO_FROM_NAME`). Optional `CONTACT_TO_EMAIL` (defaults to info@travelsamericas.com). Confirm the info@ mailbox actually receives mail and hello@ is a verified SMTP2GO sender." },
+    { id: "d3", cat: 0, pri: "high", status: "todo", title: "Test the contact form end to end",
+      detail: "Submit a real message on `/contact`; confirm it reaches info@ with the sender as Reply-To; test the error messages; the rate limit is 3 messages per 30 minutes per IP. If the Turnstile keys are set, check the widget shows up." },
+    { id: "d4", cat: 0, pri: "high", status: "todo", title: "Deploy, then verify NYC flight and tours pages render on the server",
+      detail: "`view-source:https://www.travelsamericas.com/destination/nyc/flight` should contain the page text (confirmed on localhost only so far). In Search Console: URL Inspection → Test live URL → View tested page for `/destination/nyc/flight` and `/destination/nyc/tours-and-tickets`." },
+    { id: "d5", cat: 0, pri: "med", status: "todo", title: "Verify noindex and the sitemap after deploying",
+      detail: "`/sitemap.xml` should no longer list LA / Las Vegas / Orlando hotel, flight and tours-and-tickets pages. Check the robots meta shows noindex on those pages and on all hotel detail pages (`/destination/*/hotel/[id]`)." },
+    { id: "d6", cat: 0, pri: "med", status: "todo", title: "Check the new two-column `/contact` layout on desktop and phone",
+      detail: "Info on the left, form on the right; at 900px wide or less it stacks with the form first. Not yet viewed in a real browser." },
+    { id: "d7", cat: 0, pri: "med", status: "todo", title: "Review Search Console",
+      detail: "How many pages are indexed, is impressions/clicks growing, any “Crawled – currently not indexed” pages? Noindexed pages drop out over time; no manual removal needed." },
+
+    // ---- Content
+    { id: "c1", cat: 1, pri: "high", status: "todo", title: "Write original editorial copy for the NYC `/flight` page",
+      detail: "300–500 words above the widget: which airport (JFK / LGA / EWR) suits which neighborhood, real transfer times and costs, when to book, common mistakes. Use first-hand detail – the About page promises human-written content. A draft can be prepared from the existing guides and data for you to edit." },
+    { id: "c2", cat: 1, pri: "high", status: "todo", title: "Write original editorial copy for the NYC `/tours-and-tickets` page",
+      detail: "How to choose tours and tickets, which to book ahead (observation decks, Broadway, museums), what to skip, whether a city pass pays off." },
+    { id: "c3", cat: 1, pri: "high", status: "todo", title: "Enrich the NYC `/hotel` list page",
+      detail: "About 450 words today, mostly FAQ; hotel cards show only name, address and tags. Add short neighborhood summaries and a “how we choose” explanation." },
+    { id: "c4", cat: 1, pri: "high", status: "todo", title: "Audit the main guides for depth and originality",
+      detail: "Read the rendered NYC safety, neighborhood, itinerary, subway and solo guides, and the indexed LA / Las Vegas / Orlando equivalents. Look for template-like repeated text across cities, thin sections, missing first-hand details and stale facts. Add “last updated” dates, bylines and sources." },
+    { id: "c5", cat: 1, pri: "med", status: "todo", title: "Strengthen the homepage",
+      detail: "About 450 words, mostly a generic FAQ. Add a clear statement of what the site is, featured guides, your editorial promise and city highlights." },
+    { id: "c6", cat: 1, pri: "med", status: "todo", title: "Decide what to do with the other cities’ guide pages (Option B follow-up)",
+      detail: "LA, Las Vegas and Orlando hubs and guides are still indexed. Check each for depth; noindex any that are thin, or expand them before resubmitting." },
+    { id: "c7", cat: 1, pri: "low", status: "todo", title: "Enrich the NYC hotel detail pages, then allow indexing",
+      detail: "Each has only a ~35-word overview plus address, tags and price links. Once they have real content, add `'nyc'` to `INDEXABLE_DETAIL_CITIES` in `app/components/hotels/HotelDetailPage.tsx`." },
+    { id: "c8", cat: 1, pri: "low", status: "todo", title: "Keep author information consistent",
+      detail: "The About page names Mridul Mishra (founder/editor) and Manisha Shukla (writer/reviewer). Make sure bylines and schema markup on guide pages match." },
+
+    { id: "n1", cat: 1, pri: "high", status: "todo", title: "Review and edit the new NYC flight and tours copy before deploying",
+      detail: "Drafted in `app/destination/nyc/booking/components/NycEditorial/` (`FlightGuide.tsx`, `ToursGuide.tsx`). Verify against official sources: JFK AirTrain stations and connections; the Q70 LaGuardia Link route and that it is free; Newark AirTrain / NJ Transit / Amtrak to Penn Station and the express bus stops; the JFK flat taxi fare (kept generic in the text); the Met admission rule; Bronx Zoo travel time. Then add your own first-hand notes (the copy deliberately makes no personal-experience claims)." },
+    { id: "n2", cat: 1, pri: "high", status: "todo", title: "Sample flight fares show old dates (e.g. “Jul 13”, “Jul 6”)",
+      detail: "`content/cities/newyork/bookflights.json` rows are stale. Refresh them (`scripts/fetch-nyc-flights.mjs`) or stop showing dates; the same is likely true for the other cities. Out-of-date content hurts the “ongoing curation” test." },
+
+    // ---- Compliance & ad setup
+    { id: "a1", cat: 2, pri: "high", status: "todo", title: "Add `public/ads.txt`",
+      detail: "Contents: `google.com, pub-2151960872039687, DIRECT, f08c47fec0942fa0`. It should load at https://www.travelsamericas.com/ads.txt." },
+    { id: "a2", cat: 2, pri: "high", status: "todo", title: "Add a consent banner (Google-certified CMP) for EEA / UK / Switzerland",
+      detail: "Required to serve ads to those visitors. Nothing exists in the code today. The simplest route is Google’s own free CMP: in AdSense go to Privacy & messaging, create a GDPR message for the site and publish it (this needs your account). Afterwards, check the CSP still allows its scripts, and add a sentence about consent to the Privacy Policy." },
+    { id: "a3", cat: 2, pri: "high", status: "todo", title: "Update the Privacy Policy for AdSense",
+      detail: "Mention Google AdSense and ad cookies, interest-based advertising, and how to opt out (Google Ad Settings, aboutads.info). Today it only lists “Google Ads” in a bullet." },
+    { id: "a4", cat: 2, pri: "med", status: "todo", title: "Check the Contact link appears on every city’s pages",
+      detail: "Orlando has many per-page `Footer` / `AffiliateDisclosure` component copies. Confirm the new “Contact Us” footer link shows on Orlando, Las Vegas and LA pages too." },
+
+    // ---- Resubmit
+    { id: "r1", cat: 3, pri: "high", status: "todo", title: "Request a review in AdSense → Sites",
+      detail: "Only after the content, ads.txt, consent and deployment items are done. Google’s three tests: authentic high-quality information, ongoing curation, genuine user interest. Site age and traffic matter – keep publishing steadily and building presence while you wait." },
+
+    // ---- Site structure & cleanup
+    { id: "s1", cat: 4, pri: "low", status: "todo", title: "Footer is NYC-centric",
+      detail: "It links NYC pages only (Las Vegas appears via a prop). Fine for Option B; revisit if other cities become indexable again." },
+    { id: "s2", cat: 4, pri: "low", status: "todo", title: "Consolidate the duplicated Orlando Footer / AffiliateDisclosure components",
+      detail: "About 17 per-page copies under `app/destination/orlando/**/components/Footer`. A maintenance risk: one footer change needs many edits." },
+    { id: "s3", cat: 4, pri: "low", status: "todo", title: "Clean up the local project folder",
+      detail: "`.next` (~18,000 files, mostly image cache), `.scratch/**/node_modules`, `debug.log`. All are gitignored; it only slows your machine." },
+
+    // ---- After approval
+    { id: "p1", cat: 5, pri: "med", status: "todo", title: "Verify the CSP with ads live",
+      detail: "Open a page that shows ads with DevTools open and look for “Refused to load…” errors; add any reported host, or `'unsafe-eval'` if reported. Google’s official guidance is a nonce-based strict CSP (not implemented)." },
+    { id: "p2", cat: 5, pri: "med", status: "todo", title: "Place ads manually on guide pages only",
+      detail: "Don’t enable Auto ads site-wide, and keep ads off the flight / tours / hotel widget pages." },
+
+    // ---- Completed in code
+    { id: "x1", cat: 6, pri: "high", status: "done", title: "NYC `/flight` and `/tours-and-tickets` now render on the server",
+      detail: "Added `export const dynamic = \"force-dynamic\"`. The body is now in the server HTML (confirmed on localhost). Files: `app/destination/nyc/flight/page.tsx`, `tours-and-tickets/page.tsx`." },
+    { id: "x2", cat: 6, pri: "high", status: "done", title: "noindex LA / Las Vegas / Orlando `/flight`, `/tours-and-tickets`, `/hotel` (9 pages) and removed them from the sitemap",
+      detail: "Option B: focus the indexed site on NYC. Files: the nine `page.tsx` files plus `app/sitemap.ts`." },
+    { id: "x3", cat: 6, pri: "high", status: "done", title: "Added the `/contact` page, footer link and sitemap entry", detail: "" },
+    { id: "x4", cat: 6, pri: "high", status: "done", title: "Added the contact form and `/api/contact`",
+      detail: "SMTP2GO delivery with Reply-To, honeypot, minimum fill time, optional Turnstile, and a per-IP rate limit reusing `signup_rate_limits`." },
+    { id: "x5", cat: 6, pri: "med", status: "done", title: "Unified the contact email to info@travelsamericas.com", detail: "Privacy and Terms schema markup now match." },
+    { id: "x6", cat: 6, pri: "med", status: "done", title: "noindex on all hotel detail pages",
+      detail: "Controlled per city by `INDEXABLE_DETAIL_CITIES` in `HotelDetailPage.tsx`." },
+    { id: "x7", cat: 6, pri: "high", status: "done", title: "CSP updated to allow Google ad hosts",
+      detail: "`googleAds` constant in `next.config.js` covers script, image, connect and frame sources." },
+    { id: "x8", cat: 6, pri: "med", status: "done", title: "Two-column contact layout (content left, form right)",
+      detail: "`app/contact/contact.module.css`; stacks on screens 900px wide or less." },
+    { id: "x9", cat: 6, pri: "low", status: "done", title: "Already in place: AdSense snippet and `google-adsense-account` meta tag in `app/layout.tsx`", detail: "" },
+    { id: "x10", cat: 6, pri: "low", status: "done", title: "Contact form: name and email now share one row", detail: "Stacks on screens 480px wide or narrower." },
+    { id: "x11", cat: 6, pri: "high", status: "done", title: "Added `public/ads.txt`", detail: "`google.com, pub-2151960872039687, DIRECT, f08c47fec0942fa0`. Check it loads at /ads.txt after deploying." },
+    { id: "x12", cat: 6, pri: "high", status: "done", title: "Privacy Policy now describes Google AdSense", detail: "Added an Advertising paragraph with opt-out links and a “Show advertising through Google AdSense” use. Add a consent sentence once the CMP is live." },
+    { id: "x13", cat: 6, pri: "med", status: "done", title: "Contact link added to all 16 Orlando footer copies", detail: "LA and Las Vegas use the shared footer, which already had it." }
+  ];
+
+  // One-time changes to saved lists. Each key is applied once, so later edits you make are never overwritten.
+  var UPDATES = [
+    { key: "u1", id: "a1", set: { status: "done" } },
+    { key: "u2", id: "a3", set: { status: "done" } },
+    { key: "u3", id: "a4", set: { status: "done" } },
+    { key: "u4", id: "c1", set: { status: "doing" } },
+    { key: "u5", id: "c2", set: { status: "doing" } },
+    { key: "u7", id: "n1", set: { detail: "Drafted in `app/destination/nyc/booking/components/NycEditorial/` (`FlightGuide.tsx`, `ToursGuide.tsx`). Verify against official sources: JFK AirTrain stations and connections; the Q70 LaGuardia Link route and that it is free; Newark AirTrain / NJ Transit / Amtrak to Penn Station and the express bus stops; the Newark AirTrain status (the MTA site mentions weekday shuttle buses, NJ Transit’s page does not, so check the Port Authority’s Newark page); that PATH reaches the airport only via NJ Transit to Newark Penn Station and then PATH to the World Trade Center; the PATH 33rd Street station location (Sixth Avenue near Herald Square) and the walk to Penn Station; the Met admission rule; Bronx Zoo travel time. Taxi fares are kept generic on purpose. Then add your own first-hand notes (the copy makes no personal-experience claims)." } },
+    { key: "u6", id: "d1", set: { status: "doing", detail: "Type-check passed on every file changed so far (checked with a temporary config). Still to do: a full build and lint. ESLint timed out on the slow mount, so run `npm run lint` yourself. Note: `npm run build` runs `scripts/migrate.mjs` first, which connects to the database in `.env.local`; use `npx next build` if you only want a compile check." } }
+  ];
+
+  var memoryOnly = false;
+  var state;
+
+  function load() {
+    var saved = null;
+    try { saved = JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) { memoryOnly = true; }
+    if (!saved || !Array.isArray(saved.items)) saved = { items: [], removed: [] };
+    saved.removed = saved.removed || [];
+    var have = {};
+    saved.items.forEach(function (i) { have[i.id] = true; });
+    SEED.forEach(function (s) {
+      if (!have[s.id] && saved.removed.indexOf(s.id) < 0) {
+        var copy = {}; for (var k in s) copy[k] = s[k]; copy.note = "";
+        saved.items.push(copy);
+      }
+    });
+    saved.applied = saved.applied || [];
+    UPDATES.forEach(function (u) {
+      if (saved.applied.indexOf(u.key) >= 0) return;
+      saved.items.forEach(function (i) { if (i.id === u.id) for (var k in u.set) i[k] = u.set[k]; });
+      saved.applied.push(u.key);
+    });
+    return saved;
+  }
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { memoryOnly = true; renderNotice(); }
+  }
+
+  var filter = { status: "all", priority: "all", q: "" };
+  var openItems = {};
+
+  function h(tag, attrs, kids) {
+    var el = document.createElement(tag);
+    if (attrs) for (var k in attrs) {
+      if (k === "class") el.className = attrs[k];
+      else if (k === "text") el.textContent = attrs[k];
+      else if (k.slice(0, 2) === "on") el.addEventListener(k.slice(2), attrs[k]);
+      else el.setAttribute(k, attrs[k]);
+    }
+    (kids || []).forEach(function (c) { if (c) el.appendChild(c); });
+    return el;
+  }
+  // Render `code` spans safely (no innerHTML).
+  function rich(parent, str) {
+    String(str || "").split("`").forEach(function (part, i) {
+      if (!part) return;
+      parent.appendChild(i % 2 ? h("code", { text: part }) : document.createTextNode(part));
+    });
+    return parent;
+  }
+
+  var STATUS_LABEL = { todo: "To do", doing: "In progress", done: "Done" };
+  var PRI_LABEL = { high: "High", med: "Medium", low: "Low" };
+
+  function matches(i) {
+    if (filter.status !== "all" && i.status !== filter.status) return false;
+    if (filter.priority !== "all" && i.pri !== filter.priority) return false;
+    if (filter.q) {
+      var hay = (i.title + " " + (i.detail || "") + " " + (i.note || "")).toLowerCase();
+      if (hay.indexOf(filter.q) < 0) return false;
+    }
+    return true;
+  }
+
+  function render() {
+    var total = state.items.length;
+    var done = state.items.filter(function (i) { return i.status === "done"; }).length;
+    var doing = state.items.filter(function (i) { return i.status === "doing"; }).length;
+    var todo = total - done - doing;
+    var highOpen = state.items.filter(function (i) { return i.pri === "high" && i.status !== "done"; }).length;
+    document.getElementById("progressText").textContent = done + " of " + total + " done (" + (total ? Math.round(done * 100 / total) : 0) + "%)";
+    document.getElementById("progressBar").style.width = (total ? done * 100 / total : 0) + "%";
+    document.getElementById("stats").textContent = todo + " to do · " + doing + " in progress · " + highOpen + " high-priority still open";
+
+    var chips = document.getElementById("statusChips");
+    chips.textContent = "";
+    [["all", "All"], ["todo", "To do"], ["doing", "In progress"], ["done", "Done"]].forEach(function (c) {
+      chips.appendChild(h("button", { class: "chip", type: "button", "aria-pressed": String(filter.status === c[0]), text: c[1],
+        onclick: function () { filter.status = c[0]; render(); } }));
+    });
+
+    var root = document.getElementById("groups");
+    root.textContent = "";
+    CATS.forEach(function (name, ci) {
+      var all = state.items.filter(function (i) { return i.cat === ci; });
+      var shown = all.filter(matches);
+      if (!shown.length && (filter.q || filter.status !== "all" || filter.priority !== "all")) return;
+      var doneHere = all.filter(function (i) { return i.status === "done"; }).length;
+      var d = h("details", { class: "group" }, [
+        h("summary", null, [h("span", { text: name }), h("span", { class: "count", text: doneHere + "/" + all.length + " done" })]),
+        h("div", { class: "items" }, shown.length ? shown.map(itemEl) : [h("div", { class: "empty", text: "No tasks yet." })])
+      ]);
+      var allDone = all.length && doneHere === all.length;
+      if (!allDone || filter.q || filter.status !== "all") d.open = true;
+      root.appendChild(d);
+    });
+    if (!root.children.length) root.appendChild(h("div", { class: "empty", text: "Nothing matches the current filters." }));
+
+    var sel = document.getElementById("addCat");
+    if (!sel.options.length) CATS.forEach(function (n, i) { sel.appendChild(h("option", { value: String(i), text: n })); });
+  }
+
+  function itemEl(i) {
+    var isOpen = !!openItems[i.id];
+    var cb = h("input", { type: "checkbox", "aria-label": "Mark done", onchange: function () {
+      i.status = cb.checked ? "done" : "todo"; save(); render(); } });
+    cb.checked = i.status === "done";
+    var titleEl = rich(h("div", { class: "title", role: "button", tabindex: "0", "aria-expanded": String(isOpen),
+      onclick: function () { openItems[i.id] = !isOpen; render(); },
+      onkeydown: function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openItems[i.id] = !isOpen; render(); } } }), i.title);
+    var row = h("div", { class: "row" }, [cb, titleEl, h("span", { class: "badge p-" + i.pri, text: PRI_LABEL[i.pri] })]);
+    var el = h("div", { class: "item" + (i.status === "done" ? " done" : "") }, [row]);
+    if (isOpen) {
+      var detail = h("div", { class: "detail" });
+      if (i.detail) detail.appendChild(rich(h("div"), i.detail));
+      var status = h("select", { "aria-label": "Status", onchange: function () { i.status = status.value; save(); render(); } },
+        ["todo", "doing", "done"].map(function (s) { return h("option", { value: s, text: STATUS_LABEL[s] }); }));
+      status.value = i.status;
+      var pri = h("select", { "aria-label": "Priority", onchange: function () { i.pri = pri.value; save(); render(); } },
+        ["high", "med", "low"].map(function (s) { return h("option", { value: s, text: PRI_LABEL[s] + " priority" }); }));
+      pri.value = i.pri;
+      var del = h("button", { class: "del", type: "button", text: "Delete", onclick: function () {
+        if (!confirm("Delete this task?")) return;
+        state.items = state.items.filter(function (x) { return x.id !== i.id; });
+        if (state.removed.indexOf(i.id) < 0) state.removed.push(i.id);
+        save(); render(); } });
+      var note = h("textarea", { placeholder: "Notes…", "aria-label": "Notes", oninput: function () { i.note = note.value; save(); } });
+      note.value = i.note || "";
+      detail.appendChild(h("div", { class: "meta" }, [status, pri, del]));
+      detail.appendChild(note);
+      el.appendChild(detail);
+    }
+    return el;
+  }
+
+  function renderNotice() {
+    var n = document.getElementById("notice");
+    n.textContent = "";
+    if (memoryOnly) n.appendChild(h("div", { class: "notice", text: "This browser is blocking local storage, so changes will be lost when you close the page. Use Export JSON to keep a copy." }));
+  }
+
+  document.getElementById("search").addEventListener("input", function (e) { filter.q = e.target.value.trim().toLowerCase(); render(); });
+  document.getElementById("priorityFilter").addEventListener("change", function (e) { filter.priority = e.target.value; render(); });
+  document.getElementById("addForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var t = document.getElementById("addTitle");
+    if (!t.value.trim()) return;
+    state.items.push({ id: "u" + Date.now(), cat: Number(document.getElementById("addCat").value), pri: document.getElementById("addPri").value,
+      status: "todo", title: t.value.trim(), detail: "", note: "" });
+    t.value = ""; save(); render();
+  });
+  document.getElementById("exportBtn").addEventListener("click", function () {
+    var blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
+    var a = h("a", { href: URL.createObjectURL(blob), download: "adsense-todo-backup.json" });
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+  document.getElementById("importBtn").addEventListener("click", function () { document.getElementById("importFile").click(); });
+  document.getElementById("importFile").addEventListener("change", function (e) {
+    var f = e.target.files[0]; if (!f) return;
+    var r = new FileReader();
+    r.onload = function () {
+      try {
+        var data = JSON.parse(r.result);
+        if (!data || !Array.isArray(data.items)) throw new Error("bad file");
+        if (!confirm("Replace the current list with the imported file?")) return;
+        state = data; state.removed = state.removed || []; save(); state = load(); render();
+      } catch (err) { alert("That file is not a valid backup."); }
+    };
+    r.readAsText(f); e.target.value = "";
+  });
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    if (!confirm("Reset everything to the built-in list? Your progress and notes will be lost.")) return;
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    state = load(); render();
+  });
+
+  state = load();
+  renderNotice();
+  render();
+})();
+</script>
+</body>
+</html>

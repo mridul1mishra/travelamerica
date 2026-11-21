@@ -7,6 +7,21 @@ const withBundleAnalyzer = bundleAnalyzer({
 // Tightened CSP and added the standard hardening headers (HSTS, X-Content-Type-Options,
 // Referrer-Policy, Permissions-Policy). img-src now lists the hosts we actually use
 // instead of wildcard `https:`, which previously allowed any HTTPS image host.
+// Google AdSense / ad-serving hosts. Google does not publish a stable allowlist (its ad domains
+// change over time), and its officially supported policy is a nonce-based strict CSP. Because
+// this site already allows 'unsafe-inline' scripts, we allow the Google ad ecosystem by wildcard
+// here instead. After AdSense approval, open a page that shows ads with DevTools open and look
+// for "Refused to ..." CSP errors; add any host or 'unsafe-eval' it reports.
+const googleAds = [
+  "https://pagead2.googlesyndication.com",
+  "https://*.googlesyndication.com",
+  "https://*.doubleclick.net",
+  "https://*.googleadservices.com",
+  "https://*.adtrafficquality.google",
+  "https://*.google.com",
+  "https://*.gstatic.com",
+].join(" ");
+
 const csp = `
   default-src 'self';
 
@@ -14,7 +29,8 @@ const csp = `
     'self'
     'unsafe-inline'
     https://challenges.cloudflare.com
-    https://www.googletagmanager.com;
+    https://www.googletagmanager.com
+    ${googleAds};
 
   style-src
     'self'
@@ -31,7 +47,8 @@ const csp = `
     https://media-cdn.tripadvisor.com
     https://dynamic-media-cdn.tripadvisor.com
     https://*.googleusercontent.com
-    https://wgt-prod-storage.s3.amazonaws.com;
+    https://wgt-prod-storage.s3.amazonaws.com
+    ${googleAds};
 
   font-src
     'self'
@@ -41,10 +58,12 @@ const csp = `
     'self'
     https://www.googletagmanager.com
     https://www.google-analytics.com
-    https://sentry.avs.io;
+    https://sentry.avs.io
+    ${googleAds};
 
   frame-src
-    https://challenges.cloudflare.com;
+    https://challenges.cloudflare.com
+    ${googleAds};
   base-uri 'self';
   form-action 'self';
   upgrade-insecure-requests;

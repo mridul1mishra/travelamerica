@@ -12,119 +12,119 @@
     {
       "airline": {
         "name": "Frontier",
-        "logo": "https://pics.avs.io/100/100/F9.png"
+        "logo": "https://www.gstatic.com/flights/airline_logos/70px/F9.png"
       },
       "departure": {
-        "time": "20:53",
-        "date": "Jul 13",
+        "time": "06:16",
+        "date": "Dec 22",
         "city": "Atlanta (ATL)"
       },
       "arrival": {
-        "time": "23:14",
+        "time": "08:30",
         "city": "New York (LGA)"
       },
-      "duration": "2h 21m",
-      "price": "from $69",
+      "duration": "2h 14m",
+      "price": "from $55",
       "buttonText": "View Prices",
-      "buttonUrl": "https://www.aviasales.com/search/ATL1307NYC1?marker=733422",
+      "buttonUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20from%20ATL%20to%20New%20York%20on%202026-12-22%20one%20way",
       "highlight": true
     },
     {
       "airline": {
-        "name": "American",
-        "logo": "https://pics.avs.io/100/100/AA.png"
+        "name": "JetBlue",
+        "logo": "https://www.gstatic.com/flights/airline_logos/70px/B6.png"
       },
       "departure": {
-        "time": "06:30",
-        "date": "Jul 6",
-        "city": "Boston (BOS)"
-      },
-      "arrival": {
-        "time": "08:00",
-        "city": "New York (JFK)"
-      },
-      "duration": "1h 30m",
-      "price": "from $70",
-      "buttonText": "View Prices",
-      "buttonUrl": "https://www.aviasales.com/search/BOS0607NYC1?marker=733422"
-    },
-    {
-      "airline": {
-        "name": "United",
-        "logo": "https://pics.avs.io/100/100/UA.png"
-      },
-      "departure": {
-        "time": "06:00",
-        "date": "Jul 30",
+        "time": "06:17",
+        "date": "Dec 22",
         "city": "Washington (DCA)"
       },
       "arrival": {
-        "time": "07:19",
-        "city": "New York (EWR)"
+        "time": "07:29",
+        "city": "New York (JFK)"
       },
-      "duration": "1h 19m",
-      "price": "from $78",
+      "duration": "1h 12m",
+      "price": "from $96",
       "buttonText": "View Prices",
-      "buttonUrl": "https://www.aviasales.com/search/DCA3007NYC1?marker=733422",
+      "buttonUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20from%20DCA%20to%20New%20York%20on%202026-12-22%20one%20way"
+    },
+    {
+      "airline": {
+        "name": "Delta",
+        "logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png"
+      },
+      "departure": {
+        "time": "12:01",
+        "date": "Dec 22",
+        "city": "Boston (BOS)"
+      },
+      "arrival": {
+        "time": "13:29",
+        "city": "New York (LGA)"
+      },
+      "duration": "1h 28m",
+      "price": "from $109",
+      "buttonText": "View Prices",
+      "buttonUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20from%20BOS%20to%20New%20York%20on%202026-12-22%20one%20way",
       "highlight": true
     },
     {
       "airline": {
         "name": "Frontier",
-        "logo": "https://pics.avs.io/100/100/F9.png"
+        "logo": "https://www.gstatic.com/flights/airline_logos/70px/F9.png"
       },
       "departure": {
-        "time": "13:05",
-        "date": "Jul 17",
+        "time": "20:34",
+        "date": "Dec 22",
         "city": "Orlando (MCO)"
       },
       "arrival": {
-        "time": "16:01",
+        "time": "23:15",
         "city": "New York (LGA)"
       },
-      "duration": "2h 56m",
-      "price": "from $82",
+      "duration": "2h 41m",
+      "price": "from $124",
       "buttonText": "View Prices",
-      "buttonUrl": "https://www.aviasales.com/search/MCO1707NYC1?marker=733422"
+      "buttonUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20from%20MCO%20to%20New%20York%20on%202026-12-22%20one%20way"
     },
     {
       "airline": {
-        "name": "American",
-        "logo": "https://pics.avs.io/100/100/AA.png"
+        "name": "United",
+        "logo": "https://www.gstatic.com/flights/airline_logos/70px/UA.png"
       },
       "departure": {
-        "time": "16:44",
-        "date": "Jul 20",
+        "time": "11:59",
+        "date": "Dec 22",
         "city": "Chicago (ORD)"
       },
       "arrival": {
-        "time": "20:15",
-        "city": "New York (JFK)"
+        "time": "15:12",
+        "city": "New York (LGA)"
       },
-      "duration": "2h 31m",
-      "price": "from $84",
+      "duration": "2h 13m",
+      "price": "from $159",
       "buttonText": "View Prices",
-      "buttonUrl": "https://www.aviasales.com/search/ORD2007NYC1?marker=733422",
+      "buttonUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20from%20ORD%20to%20New%20York%20on%202026-12-22%20one%20way",
       "highlight": true
     },
     {
       "airline": {
         "name": "United",
-        "logo": "https://pics.avs.io/100/100/UA.png"
+        "logo": "https://www.gstatic.com/flights/airline_logos/70px/UA.png"
       },
       "departure": {
-        "time": "20:40",
-        "date": "Jul 30",
+        "time": "08:00",
+        "date": "Dec 22",
         "city": "Miami (MIA)"
       },
       "arrival": {
-        "time": "23:59",
+        "time": "11:11",
         "city": "New York (EWR)"
       },
-      "duration": "3h 19m",
-      "price": "from $93",
+      "duration": "3h 11m",
+      "price": "from $184",
       "buttonText": "View Prices",
-      "buttonUrl": "https://www.aviasales.com/search/MIA3007NYC1?marker=733422"
+      "buttonUrl": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20from%20MIA%20to%20New%20York%20on%202026-12-22%20one%20way"
     }
   ]
 }

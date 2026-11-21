@@ -52,6 +52,7 @@ const Footer = ({ prefetch, destination }: { prefetch?: boolean; destination?: "
         <li className="link"><Link prefetch={prefetch} href="/termsandcondition">Terms of Service</Link></li>
         <li className="link"><Link prefetch={prefetch} href="/privacy">Privacy Policy</Link></li>
         <li className="link"><Link prefetch={prefetch} href="/about">About Us</Link></li>
+        <li className="link"><Link prefetch={prefetch} href="/contact">Contact Us</Link></li>
       </ul>
     </div>
     {destination === "lasvegas" && <div>

@@ -164,7 +164,7 @@ const fallbackTips: BookingTip[] = [
   { heading: "Hotels", text: "Book around the neighborhood that matches your itinerary, not only the nightly rate." },
 ];
 
-function BookingClientInner({ config, faqSection }: { config: CityBookingConfig; faqSection?: React.ReactNode }) {
+function BookingClientInner({ config, faqSection, editorialSection }: { config: CityBookingConfig; faqSection?: React.ReactNode; editorialSection?: React.ReactNode }) {
   const { member, pending: memberPending, signIn } = useMember();
   const { cityName, cityHref, headerImage, bannerText, pageTitle, tabs, tabRail, relatedGroups, flights, hotels, activities } = config;
   const validTabs = new Set<TabKey>(tabs.map((tab) => tab.key));
@@ -708,6 +708,8 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
           </div>
         </section>
 
+        {editorialSection}
+
         {faqSection}
 
         <section className={`${styles.related} ${config.category ? styles.categoryRelated : ""}`} aria-label={`Related ${cityName} guides`}>
@@ -733,7 +735,7 @@ function BookingClientInner({ config, faqSection }: { config: CityBookingConfig;
   );
 }
 
-export default function BookingClient(props: { config: CityBookingConfig; faqSection?: React.ReactNode }) {
+export default function BookingClient(props: { config: CityBookingConfig; faqSection?: React.ReactNode; editorialSection?: React.ReactNode }) {
   return (
     <Suspense>
       <BookingClientInner {...props} />

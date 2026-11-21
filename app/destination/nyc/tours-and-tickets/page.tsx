@@ -1,4 +1,6 @@
 import BookFlightsClient from "../booking/bookflightsclient";
+import ToursGuide from "../booking/components/NycEditorial/ToursGuide";
+export const dynamic = "force-dynamic";
 
 const url = "https://www.travelsamericas.com/destination/nyc/tours-and-tickets";
 
@@ -21,6 +23,6 @@ export default function ToursAndTicketsPage() {
 
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-    <BookFlightsClient category="activities" />
+    <BookFlightsClient category="activities" editorial={<ToursGuide />} />
   </>;
 }

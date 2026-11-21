@@ -17,7 +17,7 @@ const termsPageSchema = {
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Customer Support",
-      "email": "support@travelsamericas.com",
+      "email": "info@travelsamericas.com",
     },
   },
   "isPartOf": {

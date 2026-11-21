@@ -5,6 +5,8 @@ import LinkClickTracker from "./components/analytics/LinkClickTracker";
 import MemberProvider from "./components/auth/MemberProvider";
 import "./globals.css";
 
+const adsensePublisherId = "ca-pub-2151960872039687";
+
 export const viewport = {
   width: "device-width",
   initialScale: 1,
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
   verification: {
     other: {
       "p:domain_verify": "a1a3fe64a852528625934e4bfde52015",
-      "google-adsense-account": "ca-pub-2151960872039687",
+      "google-adsense-account": adsensePublisherId,
     },
   },
   title: {
@@ -58,12 +60,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ID"
-      crossOrigin="anonymous"
-    />
-  </head>      
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsensePublisherId}`}
+          crossOrigin="anonymous"
+        />
+      </head>
       <body
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}>
