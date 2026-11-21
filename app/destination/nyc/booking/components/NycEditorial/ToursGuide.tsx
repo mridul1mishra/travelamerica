@@ -33,6 +33,27 @@ export default function ToursGuide() {
         </ul>
       </div>
 
+      <aside className={styles.experience} aria-labelledby="nyc-edge-heading">
+        <h3 id="nyc-edge-heading">Our experience: visiting Edge at Hudson Yards</h3>
+        <p>
+          We visited Edge in July 2026. We booked on our phones once we were at Hudson Yards, paid
+          around $46 per person, and arrived about five minutes before our scheduled entry time. The
+          entrance is on Level 4 of The Shops &amp; Restaurants at Hudson Yards and was easy to find.
+          Check-in took only a minute or two, including scanning our mobile tickets and a brief
+          security check.
+        </p>
+        <p>
+          A 52-second elevator ride took us up 100 stories to the outdoor sky deck. We took in the
+          360-degree views of the skyline, took plenty of photos and walked out onto the glass floor.
+          Seeing the city lit up at night was one of the highlights of our trip.
+        </p>
+        <p>
+          <strong>Our tip:</strong> we did not book a sunset slot, but if you can, book one in
+          advance. The view feels different after dark, when the skyline lights up, and a sunset
+          entry lets you see both daylight and nighttime views.
+        </p>
+      </aside>
+
       <div className={styles.block}>
         <h3>Choose by what you want from the day</h3>
         <ul className={styles.list}>
