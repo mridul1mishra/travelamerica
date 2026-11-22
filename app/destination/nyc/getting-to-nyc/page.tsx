@@ -33,7 +33,7 @@ const articleSchema = {
   ...authorshipSchema("manisha", "mridul"),
   publisher: { '@type': 'Organization', name: 'Travels Americas', url: 'https://www.travelsamericas.com' },
   datePublished: '2026-06-08',
-  dateModified: '2026-06-08',
+  dateModified: '2026-11-21',
   mainEntityOfPage: 'https://www.travelsamericas.com/destination/nyc/getting-to-nyc',
   image: 'https://www.travelsamericas.com/social/nyc-getting-to-nyc.png',
   keywords: 'JFK to Manhattan, LaGuardia to Manhattan, Newark airport to NYC, NYC airport transfer, how to get to NYC from airport',

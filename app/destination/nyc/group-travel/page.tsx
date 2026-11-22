@@ -132,7 +132,7 @@ const schema2 = {
   }
 },
 "datePublished": "2025-11-29",
-"dateModified": "2026-06-03",
+"dateModified": "2026-11-21",
 "about": [
   { "@type": "Thing", "name": "Group Travel" },
   { "@type": "Place", "name": "New York City" }

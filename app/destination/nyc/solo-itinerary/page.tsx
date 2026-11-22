@@ -1,5 +1,6 @@
 import nycItineraryFaq from "@/content/destination/nyc/solo-itinerary/faq/itineraryfaq.json";
 import SoloItineraryClient from "./soloitineraryclient";
+import { pageSchema } from "@/app/lib/authors";
 
 export const generateMetadata = () => ({
   title: "NYC Solo Itinerary 2026: A Practical 3-Day New York City Plan",
@@ -151,6 +152,14 @@ export default async function SoloItineraryPage() {
     ],
   };
 
+  const pageNode = pageSchema({
+    name: "3-Day Solo Travel Itinerary for New York City",
+    description: "A practical three-day New York City itinerary for solo travelers, organized by neighborhood zones, transit flow, dining, and evening plans.",
+    url: "https://www.travelsamericas.com/destination/nyc/solo-itinerary",
+    datePublished: "2026-05-29",
+    dateModified: "2026-11-21",
+  });
+
   return (
     <>
       <script
@@ -159,7 +168,7 @@ export default async function SoloItineraryPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [touristTripSchema, itemListSchema, faqSchema, breadcrumbSchema],
+            "@graph": [pageNode, touristTripSchema, itemListSchema, faqSchema, breadcrumbSchema],
           }),
         }}
       />

@@ -33,3 +33,34 @@ export function personSchema(key: AuthorKey) {
 export function authorshipSchema(author: AuthorKey = "mridul", reviewer: AuthorKey = "manisha") {
   return { author: personSchema(author), reviewedBy: personSchema(reviewer) };
 }
+
+// A WebPage node carrying the freshness and authorship signals. WebPage is a
+// CreativeWork, so dateModified and author are valid on it; Article is not used
+// here because these are guide and listing pages, not news or blog posts.
+export function pageSchema(opts: {
+  name: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified: string;
+  author?: AuthorKey;
+  reviewer?: AuthorKey;
+}) {
+  return {
+    "@type": "WebPage",
+    name: opts.name,
+    description: opts.description,
+    url: opts.url,
+    inLanguage: "en-US",
+    datePublished: opts.datePublished,
+    dateModified: opts.dateModified,
+    ...authorshipSchema(opts.author ?? "mridul", opts.reviewer ?? "manisha"),
+    publisher: {
+      "@type": "Organization",
+      name: "Travels Americas",
+      url: "https://www.travelsamericas.com",
+      logo: { "@type": "ImageObject", url: "https://www.travelsamericas.com/logo.png" },
+    },
+    isPartOf: { "@type": "WebSite", name: "Travels Americas", url: "https://www.travelsamericas.com" },
+  };
+}

@@ -83,3 +83,6 @@ next-env.d.ts
 /content/cities/newyork/hotel-neighborhood-report.json
 /content/cities/newyork/hotel-rebalance-candidates.json
 /content/cities/newyork/hotel-tag-ids.json
+
+# Local AdSense to-do tracker (kept out of git; use its Export button to back it up)
+/app/adsense-todo.html

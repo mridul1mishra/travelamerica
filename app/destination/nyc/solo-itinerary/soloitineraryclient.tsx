@@ -145,7 +145,7 @@ export default function SoloItineraryClient({ grouped }: SoloItineraryClientProp
 
             <p className={styles.eyebrow}>3-day solo NYC plan</p>
             <h1>New York City Solo Itinerary That Actually Flows</h1>
-            <Byline />
+            <Byline updated="November 2026" />
             <p className={styles.lede}>
               A practical 3-day route for solo travelers: one city anchor each day, neighborhood-friendly pacing, easy food stops, and evenings that do not leave you stranded.
             </p>

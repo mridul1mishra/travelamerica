@@ -2,6 +2,7 @@
 
 
 import NeighborhoodguideClient from "./neighborhoodguide";
+import { authorshipSchema } from '@/app/lib/authors';
 
 /* =========================
    Metadata
@@ -52,6 +53,10 @@ export default async function NYCSafetyGuide({searchParams}: PageProps) {
             description:
               'A guide to New York City neighborhoods designed for tourists, helping visitors understand different areas and choose where to stay and explore.',
             url: 'https://www.travelsamericas.com/destination/nyc/neighborhood-guide',
+            inLanguage: 'en-US',
+            datePublished: '2026-01-02',
+            dateModified: '2026-11-21',
+            ...authorshipSchema(),
             touristType: 'Urban tourism',
             geo: {
               '@type': 'GeoCoordinates',
