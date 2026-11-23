@@ -5,6 +5,7 @@ import styles from "@/app/destination/city-hub.module.css";
 import ItineraryHero from "./components/ItineraryHero/ItineraryHero";
 import ThreeDayItinerary from "./components/ThreeDayItinerary/ThreeDayItinerary";
 import ItineraryFAQ from "./components/ItineraryFAQ/ItineraryFAQ";
+import AirportLogistics from "./components/AirportLogistics/AirportLogistics";
 
 export default function LAItineraryClient() {
   return (
@@ -23,6 +24,7 @@ export default function LAItineraryClient() {
         label="Book your trip"
       />
       <ThreeDayItinerary />
+      <AirportLogistics />
       <ItineraryFAQ />
       <BookingCTA
         variant="full"

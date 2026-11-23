@@ -27,7 +27,7 @@ export default function OrlandoNeighborhoodGuideClient() {
   return (
     <>
       <Header links={navLinks} />
-      <BookingCTA variant="slim" text="Book your Orlando trip â†’" href="/destination/orlando/hotel?from=neighborhood-guide" label="See Orlando hotels" />
+      <BookingCTA variant="slim" text="Book your Orlando trip →" href="/destination/orlando/hotel?from=neighborhood-guide" label="See Orlando hotels" />
       <div className={styles.container}>
         <IntroSection />
         <CityOrganization />

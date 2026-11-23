@@ -1,28 +1,28 @@
 {
   "heading": "Discover America’s Most Iconic Cities",
-  "storydescription": "From the bustling streets of New York to the golden sunsets of Los Angeles, explore the vibrant charm, rich culture, and unique attractions of the USA’s major cities. Whether you’re seeking world-famous landmarks, local hidden gems, or unforgettable food experiences, these destinations have something for every traveler. Scroll through and find your next adventure!",
+  "storydescription": "From the streets of New York to the sunsets of Los Angeles, these are practical guides to four US cities: where to stay, how to get around, what a ride or a ticket actually costs, and what is worth booking before you go. Pick a city to start planning.",
   "stories": [
     {
       "title": "New York City, New York",
-      "description": "The Statue of Liberty, Times Square, Central Park, Broadway shows, world-class museums...",
+      "description": "Five boroughs, three airports and a subway that runs all night. Our NYC guides cover getting in from JFK, LaGuardia or Newark, choosing a neighborhood to stay in, and what to book ahead before you arrive.",
       "image": "/nycbanner.jpeg",
       "link": "destination/nyc"
     },
     {
       "title": "Los Angeles, California",
-      "description": "Hollywood, Santa Monica Pier, Venice Beach, Universal Studios, vibrant arts scene....",
+      "description": "A city you navigate by neighborhood, not by downtown. Our LA guides cover where to stay, how to get around without renting a car, which areas feel comfortable after dark, and where to eat.",
       "image": "/data/home/la-card.webp",
       "link": "destination/la"
     },
     {
       "title": "Las Vegas, Nevada",
-      "description": "Famous casinos and nightlife, the Strip, world-class entertainment, nearby natural attractions like Red Rock Canyon......",
+      "description": "More walkable than it looks and bigger than it feels. Our Las Vegas guides cover getting along the Strip, where to stay for what you came for, staying safe, and where to eat beyond the casino floor.",
       "image": "/data/home/lasvegas-card.webp",
       "link": "destination/lasvegas"
     },
     {
       "title": "Orlando, Florida",
-      "description": "Theme parks including Walt Disney World, Universal Studios, SeaWorld, family-friendly attractions......",
+      "description": "Theme parks are the draw, but the trip is won on planning. Our Orlando guides cover when to go, getting in from the airport, what is free, and how to make the days work for your group.",
       "image": "/data/home/orlando-card.webp",
       "link": "destination/orlando"
     }

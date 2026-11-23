@@ -1,4 +1,4 @@
-// Server Component â€” no hooks used. Interactive bits (header, planning intent) are client components.
+// Server Component — no hooks used. Interactive bits (header, planning intent) are client components.
 import HeroSection from './components/Hero/HeroSection';
 import PlanningIntent from './components/PlanningIntent/PlanningIntent';
 import WhyVisit from './components/WhyVisit/WhyVisit';
@@ -26,7 +26,7 @@ export default function OrlandoHubClient() {
     <main className={styles.container}>
       <Header links={navLinks} />
       <HeroSection />
-      <BookingCTA variant="slim" text="Book hotels for your Orlando trip â†’" href="/destination/orlando/hotel?from=orlando-hub" label="Book your Orlando trip" />
+      <BookingCTA variant="slim" text="Book hotels for your Orlando trip →" href="/destination/orlando/hotel?from=orlando-hub" label="Book your Orlando trip" />
       <PlanningIntent />
       <WhyVisit />
       <AttractionsHub />

@@ -1,0 +1,83 @@
+/* Editorial block on the homepage: what the site is and how the guides are made. */
+.wrap {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 8px 0 48px;
+  color: #172033;
+}
+
+.wrap h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  line-height: 1.2;
+}
+
+.wrap h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.wrap p {
+  margin: 0 0 14px;
+  line-height: 1.65;
+  color: #2d3850;
+}
+
+.lead {
+  max-width: 72ch;
+  font-size: 1.05rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0 32px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid rgba(23, 32, 51, 0.1);
+  border-radius: 12px;
+  padding: 20px 22px 8px;
+}
+
+.start {
+  margin: 0;
+  padding: 22px 24px 10px;
+  background: #f6f3ec;
+  border-left: 4px solid #6b5b3e;
+  border-radius: 0 12px 12px 0;
+}
+
+.startGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.startGrid h3 {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b5b3e;
+}
+
+.list {
+  margin: 0 0 14px;
+  padding-left: 1.1rem;
+  line-height: 1.7;
+  color: #2d3850;
+}
+
+.list a {
+  color: #1d4ed8;
+}
+
+@media (max-width: 860px) {
+  .cards,
+  .startGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -9,6 +9,7 @@ import CategoriesGrid from './components/CategoriesGrid/CategoriesGrid';
 import DecisionBridge from './components/DecisionBridge/DecisionBridge';
 import PlanningCTA from './components/PlanningCTA/PlanningCTA';
 import NavigationResource from './components/NavigationResource/NavigationResource';
+import MuseumAdmission from './components/MuseumAdmission/MuseumAdmission';
 
 export default function LAThingsToDoClient() {
   return (
@@ -24,6 +25,7 @@ export default function LAThingsToDoClient() {
       <ThingsToDoHero />
       <ExperienceBuckets />
       <CategoriesGrid />
+      <MuseumAdmission />
       <DecisionBridge />
       <PlanningCTA />
       <NavigationResource />

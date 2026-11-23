@@ -8,18 +8,18 @@ const days = [
   { day: "Day 1", title: "The Strip & Bellagio Fountains", items: [
     "Morning: Check in, walk the Strip from your hotel south to Mandalay Bay (or north to the Stratosphere). Budget 3 hours.",
     "Afternoon: Free hotel lobbies — Bellagio conservatory, Venetian canals, Caesar's Forum. All free and worth 1–2 hours.",
-    "Evening: Bellagio Fountains at night (free, every 15 min). Dinner on the Strip — Gordon Ramsay, Nobu, or Eiffel Tower restaurant if budget allows.",
+    "Evening: The Bellagio fountains run free to watch through the evening; check the resort for the current schedule. Dinner on the Strip — Gordon Ramsay, Nobu, or Eiffel Tower restaurant if budget allows.",
     "Night: Book a show in advance. Cirque du Soleil O is the best; residency concerts sell out weeks ahead.",
   ]},
   { day: "Day 2", title: "Hoover Dam Day Trip", items: [
-    "Morning: Leave by 8am to beat the heat. Hoover Dam is 30 min from the Strip via US-93.",
-    "Midday: Self-guided tour of the dam ($10) or guided powerplant tour ($30). Lake Mead viewpoint is worth 20 min.",
+    "Morning: Leave by 8am to beat the heat. Hoover Dam is 30 miles southeast of Las Vegas via US-93; allow longer than the distance suggests at busy times.",
+    "Midday: Tour the dam. Self-guided and guided powerplant tours are sold at the visitor centre at different prices, and guided tours can sell out, so check the Bureau of Reclamation site for current times and costs. The Lake Mead viewpoint is worth 20 min.",
     "Afternoon: Stop at Boulder City on the way back — a rare dry town in Nevada with good local lunch spots.",
     "Evening: Fremont Street Experience. Free light show starts at dusk. SlotZilla zipline if you want the rush ($35–$60).",
   ]},
   { day: "Day 3", title: "Museums & Red Rock Canyon", items: [
     "Morning: The Mob Museum in Downtown (allow 2–3 hrs). Get there at opening to beat tour groups.",
-    "Midday: Red Rock Canyon Scenic Drive (30 min from the Strip, $15 vehicle entry). 13-mile loop with pull-offs for photos.",
+    "Midday: Red Rock Canyon Scenic Drive, 17 miles west of the Strip on Charleston Boulevard. Entry is $20 per vehicle, and from 1 October to 31 May a timed-entry reservation is required to enter between 8am and 5pm \u2014 book it before you set off. The 13-mile loop has pull-offs for photos.",
     "Afternoon: High Roller Observation Wheel (book sunset slot, $30–$40). Best views over the entire valley.",
     "Evening: AREA15 or a comedy club for the final night. Pack your bags ready for morning checkout.",
   ]},
@@ -73,6 +73,33 @@ export default function LasVegasItineraryClient() {
             <p style={{ marginTop: '8px', color: '#444', fontSize: '0.9rem', lineHeight: 1.6 }}>{a}</p>
           </details>
         ))}
+      </section>
+      <section className={styles.section} aria-labelledby="lv-logistics">
+        <h2 id="lv-logistics" className={styles.sectionTitle}>Getting between the stops</h2>
+        <p className={styles.sectionIntro}>The Strip is longer than it looks from a map, and walking it end to end takes most of a morning. These are the current options, with fares from the operators themselves.</p>
+        <div className={styles.grid}>
+          <article className={styles.card}>
+            <h3 className={styles.cardTitle}>The Monorail</h3>
+            <p className={styles.cardBody}>Runs 3.9 miles along the east side of the Strip from MGM Grand to SAHARA, with seven stations. End to end takes about 15 minutes and trains come every 4 to 8 minutes. It runs 7am to midnight on Mondays, 7am to 2am Tuesday to Thursday, and 7am to 3am Friday to Sunday. Buying online is cheaper than buying at the station: a single ride is $5.75 online against $6.25 on paper, and a 24-hour pass is $13.95 against $15.50. Worth knowing that the stations sit at the back of the resorts, so the walk from the platform to the Boulevard can be long.</p>
+            <p className={styles.cardMeta}>Source: Las Vegas Monorail</p>
+          </article>
+          <article className={styles.card}>
+            <h3 className={styles.cardTitle}>The Deuce bus</h3>
+            <p className={styles.cardBody}>The double-decker Deuce runs 24 hours a day along Las Vegas Boulevard between the South Strip Transit Terminal and the Fremont Street Experience downtown, stopping at the Bonneville Transit Center on the way. Buses come roughly every 10 to 15 minutes from 7am to 1am, and about every 20 minutes overnight. It is the simplest way to reach downtown without a car, and unlike the Monorail it stops on the Boulevard itself.</p>
+            <p className={styles.cardMeta}>Source: RTC Southern Nevada route timetable</p>
+          </article>
+          <article className={styles.card}>
+            <h3 className={styles.cardTitle}>What RTC fares cost</h3>
+            <p className={styles.cardBody}>Strip and All Access fares are $4 for a single ride, $6 for two hours, $8 for 24 hours and $20 for three days. Residential routes away from the Strip are cheaper at $2 single and $5 for 24 hours, but the Deuce is a Strip route, so budget for the higher fare. For two or more trips in a day the 24-hour pass pays for itself.</p>
+            <p className={styles.cardMeta}>Source: RTC Southern Nevada, fares and passes</p>
+          </article>
+          <article className={styles.card}>
+            <h3 className={styles.cardTitle}>Red Rock Canyon needs planning</h3>
+            <p className={styles.cardBody}>The Scenic Drive is 17 miles west of the Strip on Charleston Boulevard. From 1 October to 31 May you need a timed-entry reservation to enter between 8am and 5pm, booked through Recreation.gov or by phone. Entry is $20 per private vehicle, $10 per motorcycle, $8 per bicycle and $5 on foot. From November to February the Scenic Drive itself is open 6am to 5pm, so a late-afternoon visit does not work in winter. There is no public transport, so this is a car or tour day.</p>
+            <p className={styles.cardMeta}>Source: Bureau of Land Management</p>
+          </article>
+        </div>
+        <p className={styles.sectionIntro}>Fares and seasonal hours change, and the Monorail closes early on some event days. Check the operator before you build a tight connection around any of these.</p>
       </section>
       <BookingCTA
         variant="full"

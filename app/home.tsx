@@ -2,6 +2,7 @@
 import HeroBanner from './components/Header/HeroBanner';
 import NavigationHeader from './components/Header/NavigationHeader';
 import Majorcities from "./components/Home/majorcities/majorcities";
+import HomeEditorial from "./components/Home/HomeEditorial/HomeEditorial";
 import { StorySection } from './models/story';
 import mySectionData from "@/content/home/mysection.json";
 import Footer from './components/Header/Footer/footer';
@@ -21,6 +22,7 @@ export default async function Home(){
           />
           <div id="major-cities" >
               <Majorcities section={section} />
+              <HomeEditorial />
               <FAQ groupedFaqs={faqTravelHubData}/>
           </div>
           <Footer />

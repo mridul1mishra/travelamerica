@@ -32,7 +32,7 @@ export default function SoloTripToOrlandoClient() {
     <>
       <OrlandoNavHeader />
       <HeroSection />
-      <BookingCTA variant="slim" text="Book hotels for your Orlando trip â†’" href="/destination/orlando/hotel?from=solo-trip-to-orlando" label="Book your trip" />
+      <BookingCTA variant="slim" text="Book hotels for your Orlando trip →" href="/destination/orlando/hotel?from=solo-trip-to-orlando" label="Book your trip" />
       <QuickActionBar />
       <InfoSection sections={sectionsData.sections} />
       <EmailSignup source="solo-trip-to-orlando" city="Orlando" />

@@ -57,7 +57,7 @@ const Footer = () => {
     </div>
   </div>
   <div className="footer-bottom">
-    <p>Â© {new Date().getFullYear()} Travels Americas | Designed with â¤ï¸ for explorers</p>
+    <p>© {new Date().getFullYear()} Travels Americas | Designed with â¤ï¸ for explorers</p>
   </div>
 </footer>
     )

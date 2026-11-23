@@ -75,7 +75,10 @@ const ROUTES: Entry[] = [
   // ── Orlando ───────────────────────────────────────────────────────────────
   { path: "/destination/orlando",                                     priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/orlando/best-areas-to-stay",                  priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/orlando/best-time-to-visit",                   priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/orlando/food",                                priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/orlando/free-things-to-do",                    priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/orlando/getting-to-orlando",                   priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/orlando/group-travel",                        priority: 0.8, changeFrequency: "weekly" },
   { path: "/destination/orlando/is-orlando-safe-at-night",            priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/orlando/itinerary",                           priority: 0.9, changeFrequency: "weekly" },

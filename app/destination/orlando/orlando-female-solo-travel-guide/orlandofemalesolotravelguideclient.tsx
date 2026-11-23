@@ -34,7 +34,7 @@ export default function OrlandoFemaleSoloClient() {
   return (
       <>
       <Header links={navLinks} />
-      <BookingCTA variant="slim" text="Book your Orlando trip â†’" href="/destination/orlando/hotel?from=female-solo" label="See Orlando hotels" />
+      <BookingCTA variant="slim" text="Book your Orlando trip →" href="/destination/orlando/hotel?from=female-solo" label="See Orlando hotels" />
       <div className={styles.container}>
       <Hero />
       <InfoSection sections={sectionsData.sections}/>
