@@ -1,10 +1,10 @@
 import styles from "../../bestareatostay.module.css";
 
 const quickTips = [
-  "LA has no reliable public transit for most tourist attractions. Budget $15-$30/day for Uber or a rental car on top of hotel costs.",
-  "Parking in Santa Monica and Beverly Hills can be $25-$40/day. Factor this into hotel cost comparisons.",
-  "Weekday rates are typically 20-30% cheaper. Avoid arriving during major awards season (Jan-Mar) when prices spike.",
-  "Resort fees are less common than Vegas but do exist - check the full nightly total, not just the base rate.",
+  "Hotel tax differs by city: Santa Monica lists 15%, West Hollywood 12.5%, and the City of Los Angeles and Beverly Hills 14%. Compare the all-in total, not just the nightly rate.",
+  "Parking and destination fees are set by each hotel and can be separate from the room rate. Check the fee and what it includes on your own booking.",
+  "Rates change with the season and with events. If your dates are flexible, compare several nights before you commit.",
+  "If you plan to use Metro, bus or shuttle services, check the current fares and timetables, since they change.",
 ];
 
 export default function HotelBookingTips() {

@@ -3,45 +3,45 @@ import styles from "../../bestareatostay.module.css";
 const areas = [
   {
     name: "Santa Monica",
-    badge: "Best overall",
-    summary: "Beach access, Third Street Promenade, the pier, and LA's most walkable visitor grid.",
-    note: "$200-$400/night, but you reduce rideshare and car dependency.",
-    bestFor: "First-timers, couples, beach + walkability",
+    badge: "Beach base",
+    summary: "Beach, Third Street Promenade and the pier, at the end of the Metro E Line.",
+    note: "15% hotel tax; check your rate for assessments.",
+    bestFor: "Beach and pier trips",
   },
   {
     name: "West Hollywood",
-    badge: "Best nightlife",
-    summary: "Sunset Strip, restaurants, nightlife, and walkable bars in the most social LA base.",
-    note: "$150-$300/night, central for evenings but quieter during the day.",
-    bestFor: "Nightlife, dining, LGBTQ+ travelers",
+    badge: "Bus-served",
+    summary: "Sunset Strip and Santa Monica Boulevard, served by free CityLine buses.",
+    note: "12.5% hotel tax; the city's district assessment rate is unclear, so confirm it.",
+    bestFor: "Evenings on Sunset and Santa Monica Blvd",
   },
   {
     name: "Hollywood",
-    badge: "Best sightseeing",
-    summary: "Walk of Fame, TCL Chinese Theatre, and easy access to Griffith Observatory.",
-    note: "$100-$200/night, but quality changes fast by block.",
-    bestFor: "Sightseeing, budget, central access",
+    badge: "B Line stops",
+    summary: "Walk of Fame and TCL Chinese Theatre, with three Metro B Line stations.",
+    note: "City of Los Angeles 14% hotel tax.",
+    bestFor: "Hollywood sightseeing",
   },
   {
     name: "Silver Lake / Los Feliz",
-    badge: "Best local feel",
-    summary: "Coffee shops, independent restaurants, local nightlife, and the reservoir walk.",
-    note: "Limited hotels; expect rideshare or a car for most tourist sights.",
-    bestFor: "Repeat visitors, food, culture",
+    badge: "East side",
+    summary: "East of Hollywood, covered here for comparison only.",
+    note: "Silver Lake Pool & Inn lists overnight valet at $35 per vehicle per day plus tax. We have not researched transit here.",
+    bestFor: "Visitors happy to research their own routes",
   },
   {
     name: "Downtown LA",
-    badge: "Best value",
-    summary: "Grand Central Market, The Broad, sports venues, and Arts District galleries.",
-    note: "$120-$180/night value; stay near Grand Ave or the Arts District.",
-    bestFor: "Budget travelers, arts, concerts",
+    badge: "Rail hub",
+    summary: "Grand Central Market, The Broad, sports venues and the Arts District.",
+    note: "Metro A, B, D and E lines; City of Los Angeles 14% hotel tax.",
+    bestFor: "Rail connections, arts and sports venues",
   },
   {
     name: "Beverly Hills / Bel Air",
-    badge: "Best luxury",
-    summary: "Rodeo Drive, polished streets, luxury hotels, and the calmest high-end base.",
-    note: "$350-$700+/night, and you still need a car for almost everything.",
-    bestFor: "Luxury, business, special occasions",
+    badge: "D Line station",
+    summary: "Rodeo Drive and Wilshire Boulevard, with a weekend trolley and the new D Line station nearby.",
+    note: "14% hotel tax; Bel Air is not covered by our transit research.",
+    bestFor: "Visitors focused on Beverly Hills",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function AreasCompared() {
         <p className={styles.eyebrow}>Neighborhood comparison</p>
         <h2 id="areas-la">All Los Angeles Areas Compared</h2>
         <p className={styles.sectionIntro}>
-          Pick the area by trade-off: beach, nightlife, budget, local feel, or luxury.
+          Pick the area by what is near it and how you will get around.
         </p>
       </div>
       <div className={styles.grid}>

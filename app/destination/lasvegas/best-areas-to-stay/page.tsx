@@ -5,6 +5,7 @@ export const metadata = {
   openGraph: { title: 'Best Areas to Stay in Las Vegas 2026', description: 'Strip vs Downtown vs off-Strip — honest hotel location advice for Las Vegas.', url: 'https://www.travelsamericas.com/destination/lasvegas/best-areas-to-stay', type: 'article' },
 };
 import LasVegasBestAreasClient from './lasvegasbestareasstoclient';
+import { authorshipSchema } from "@/app/lib/authors";
 
 export default function LasVegasBestAreasPage() {
   const schema = [
@@ -19,11 +20,13 @@ export default function LasVegasBestAreasPage() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Best Areas in Las Vegas 2026 | Strip vs Downtown",
+      "@type": "WebPage",
+      "name": "Best Areas in Las Vegas 2026 | Strip vs Downtown",
       "description": "Where to stay in Las Vegas — Strip hotel tiers, Downtown Fremont, Henderson, and Summerlin compared for every budget.",
       "url": "https://www.travelsamericas.com/destination/lasvegas/best-areas-to-stay",
       "inLanguage": "en-US",
+      "dateModified": "2026-11-22",
+      ...authorshipSchema(),
       "publisher": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },
     },
   ];

@@ -18,54 +18,54 @@ const lasvegasNeighborhoods: Neighborhood[] = [
     why: "Walking distance to the Bellagio, Cosmopolitan, and Aria — the heart of Las Vegas with zero logistics.",
     image: "/data/majorcities/losangeles/assets/bestareas/midstrip.jpg",
     color: "var(--tint-blue)",
-    safety: "🟢 Very Safe — busy and well-lit",
+    safety: "See our Las Vegas safety guide for current advice",
     vibe: "Central, high-energy, walkable",
-    transit: "Walk to everything; Deuce bus, Tram",
+    transit: "Walkable to nearby resorts; Deuce bus and Monorail also serve the Strip",
     bestFor: ["First-timers", "Short trips", "Maximum convenience"],
     pros: ["Walk to top shows and restaurants", "No transport needed", "Best hotel selection"],
-    cons: ["Most expensive ($150–$400/night)", "Can feel overwhelming"],
+    cons: ["Rates are often higher than elsewhere on the Strip", "Can feel overwhelming"],
   },
   {
     id: "south-strip",
     rank: "#2 Best Mid-Budget",
     name: "South Strip",
-    why: "Mandalay Bay, Luxor, and MGM Grand — cheaper than mid-Strip with easy tram access.",
+    why: "Mandalay Bay, Luxor, Excalibur and MGM Grand — often lower-priced than mid-Strip, with a tram linking Mandalay Bay, Luxor and Excalibur.",
     image: "/data/majorcities/losangeles/assets/bestareas/southstrip.jpg",
     color: "var(--tint-green)",
-    safety: "🟢 Safe",
+    safety: "See our Las Vegas safety guide for current advice",
     vibe: "Budget-friendly, slightly removed",
-    transit: "Strip Tram, 15-min walk or $10 Uber to mid-Strip",
+    transit: "Tram between Mandalay Bay, Luxor and Excalibur; Monorail from MGM Grand; Deuce bus",
     bestFor: ["Budget travelers", "Groups", "Families"],
-    pros: ["Cheaper than mid-Strip ($90–$220)", "Good hotel quality", "Still on the Strip"],
-    cons: ["Long walk to mid-Strip in summer heat", "Less walkable to top venues"],
+    pros: ["Often lower-priced than mid-Strip", "Wide range of hotels", "Still on the Strip"],
+    cons: ["A longer trip to mid-Strip venues", "Less walkable to some top venues"],
   },
   {
     id: "downtown-fremont",
     rank: "#3 Best Alternative",
     name: "Downtown / Fremont Street",
-    why: "Save $40–$80/night versus the Strip and experience a grittier, more local Old Vegas.",
+    why: "A different base from the Strip, centered on Fremont Street and the Downtown Loop, with an older-Vegas feel.",
     image: "/data/majorcities/losangeles/assets/bestareas/fermont_street.jpg",
     color: "var(--tint-purple)",
-    safety: "🟡 Generally safe — stay aware off the canopy",
+    safety: "See our Las Vegas safety guide for current advice",
     vibe: "Old Vegas, local, atmospheric",
-    transit: "Deuce bus or 15-min drive to Strip",
+    transit: "Deuce bus to the Strip; free Downtown Loop shuttle within Downtown",
     bestFor: ["Repeat visitors", "Budget travelers", "A different Vegas vibe"],
-    pros: ["$40–$80 cheaper per night", "Fremont Street Experience", "Less crowded"],
-    cons: ["15 min from the Strip", "Grittier surrounding blocks"],
+    pros: ["Fremont Street Experience", "Free Downtown Loop shuttle", "Often lower hotel rates than the Strip"],
+    cons: ["Not on the Strip, so you need the bus or a ride to get there", "Surroundings vary block to block"],
   },
   {
     id: "north-strip",
     rank: "#4 Lowest Cost on Strip",
     name: "North Strip",
-    why: "Cheapest Strip hotels — a solid base if you plan to Uber or tram everywhere.",
+    why: "Resorts World, SAHARA and The STRAT — a base if you plan to use rideshare or the bus for the rest of the Strip.",
     image: "/data/majorcities/losangeles/assets/bestareas/northstrip.jpg",
     color: "var(--tint-yellow)",
-    safety: "🟢 Safe",
+    safety: "See our Las Vegas safety guide for current advice",
     vibe: "Quiet, budget-focused, in transition",
-    transit: "25-min walk or short cab to mid-Strip",
+    transit: "Monorail (SAHARA station), Deuce bus or rideshare to mid-Strip",
     bestFor: ["Very budget stays", "Travelers who Uber everywhere"],
-    pros: ["Lowest Strip room rates ($70–$150)", "Still technically on the Strip", "Less crowded"],
-    cons: ["Far from the action", "Long walk in heat"],
+    pros: ["Often lower-priced than mid-Strip", "Still on the Strip", "Monorail station at SAHARA"],
+    cons: ["Farther from the mid-Strip resorts", "Long walk to mid-Strip, especially in summer"],
   },
 ];
 
@@ -73,7 +73,7 @@ const areas = [
   {
     name: "Mid-Strip",
     label: "Best overall",
-    price: "$150-$400/night",
+    price: "Rates vary widely",
     summary: "Closest to the core shows, restaurants, Bellagio fountains, Aria, Cosmo, and Park MGM.",
     tradeoff: "Highest hotel rates, lowest logistics.",
     bestFor: "First-timers, short trips, maximum convenience",
@@ -81,50 +81,50 @@ const areas = [
   {
     name: "South Strip",
     label: "Best value on Strip",
-    price: "$90-$220/night",
-    summary: "Mandalay Bay, Luxor, Excalibur, and MGM Grand with easier prices than mid-Strip.",
+    price: "Rates vary widely",
+    summary: "Mandalay Bay, Luxor, Excalibur and MGM Grand, where a tram links the first three.",
     tradeoff: "A longer walk or tram ride to the center action.",
     bestFor: "Budget travelers, groups, families",
   },
   {
     name: "North Strip",
     label: "Cheapest Strip base",
-    price: "$70-$150/night",
-    summary: "Resorts World, SAHARA, and the Strat. Quieter, cheaper, and still technically Strip.",
-    tradeoff: "Far from the main action; plan on cabs or rideshare.",
+    price: "Rates vary widely",
+    summary: "Resorts World, SAHARA and The STRAT at the northern end of the Strip.",
+    tradeoff: "Farther from mid-Strip; plan on the Monorail, Deuce bus or rideshare.",
     bestFor: "Very budget stays, Uber-heavy trips",
   },
   {
     name: "Downtown / Fremont",
     label: "Best alternate Vegas",
-    price: "$40-$80 less than Strip",
-    summary: "Older, louder, more local, and centered around the Fremont Street Experience canopy.",
-    tradeoff: "Grittier edges; stay near the canopy at night.",
+    price: "Rates vary widely",
+    summary: "Centered on the Fremont Street Experience, with a free Downtown Loop shuttle linking nearby attractions.",
+    tradeoff: "Not on the Strip; check the area around your hotel before booking.",
     bestFor: "Repeat visitors, nightlife, budget trips",
   },
   {
     name: "Henderson",
     label: "Best quiet base",
-    price: "Usually lower than Strip",
-    summary: "Residential, family-friendly, and close to Lake Las Vegas with calmer evenings.",
-    tradeoff: "A car is basically required.",
+    price: "Check live rates",
+    summary: "A suburb southeast of the Strip, home to Green Valley Ranch and near Lake Las Vegas.",
+    tradeoff: "Most visitors will want a car or rideshare for Strip trips.",
     bestFor: "Families, outdoor time, week-long stays",
   },
   {
     name: "Summerlin",
     label: "Best nature access",
-    price: "Varies by resort",
-    summary: "Upscale west-side base near Red Rock Canyon, Downtown Summerlin, and Red Rock Resort.",
-    tradeoff: "Peaceful, but far from classic Strip energy.",
+    price: "Check live rates",
+    summary: "A west-side suburb with Red Rock Resort and Downtown Summerlin; Red Rock Canyon is nearby.",
+    tradeoff: "A longer trip to the Strip; plan on a car or rideshare.",
     bestFor: "Hiking, quieter upscale stays",
   },
 ];
 
 const quickTips = [
-  "Resort fees ($35–$50/night) are charged on top of advertised room rates at virtually every Strip hotel. Always calculate the full nightly cost, not just the base rate.",
-  "Most Strip hotels now charge $15–$25/day for self-parking. A few still waive it for loyalty members — call ahead to confirm.",
-  "Weekday rates are 30–50% cheaper than weekends. Monday–Thursday is the sweet spot. Avoid major conventions like CES (January) when prices spike citywide.",
-  "Booking directly through hotel sites often beats OTAs — better odds of upgrades, fee waivers, and loyalty points on Strip properties.",
+  "Resort fees are charged on top of the advertised room rate at many Strip resorts. Compare the all-in nightly cost, including the fee and tax, not just the base rate.",
+  "Parking can be an extra daily charge or can be included in a resort fee. Check your hotel's own parking page before you book, especially if you are renting a car.",
+  "Room rates tend to move with weekends, conventions and big events. If your dates are flexible, compare several nights on the hotel page before you commit.",
+  "Compare the hotel's own site with other booking sites for the same room type, and check what each rate includes and how it can be cancelled.",
 ];
 
 export default function LasVegasBestAreasClient() {
@@ -144,7 +144,7 @@ export default function LasVegasBestAreasClient() {
         guideBullets={[
           "Mid-Strip vs. South Strip vs. Downtown compared",
           "Where to stay for nightlife, budget, or luxury",
-          "Areas to avoid and why",
+          "Resort fees, parking and getting around from each base",
           "How to decode resort fees and true nightly cost",
           "Local tips most first-timers miss",
         ]}
@@ -165,14 +165,14 @@ export default function LasVegasBestAreasClient() {
         ]}
       />
       <SectionSafestNeighborhoods
-        title="Safest Areas in Las Vegas"
+        title="Staying safe in Las Vegas"
         paragraphs={[
-          "The Las Vegas Strip - particularly the mid and south sections - is among the most heavily policed and surveilled areas in the United States. Casino security, constant foot traffic, and bright lighting make it comfortable for solo travelers at any hour.",
-          "Fremont Street is generally safe within the Experience canopy itself, though the surrounding blocks become rougher the further you walk from the main strip. Stay within the covered area at night.",
-          "Henderson and Summerlin are quiet suburban areas with very low crime rates - ideal for families or travelers who want a peaceful base outside the casino energy.",
+          "Most Strip resorts have their own security staff, and the main sidewalks are busy for much of the day and night. Conditions still vary by block and time of day, so read our Las Vegas safety guide before you choose a base.",
+          "Fremont Street Experience is a pedestrian attraction with its own security presence. Check the area around any Downtown hotel before booking, and plan how you will get back at night.",
+          "Henderson and Summerlin are suburban areas away from the Strip. They suit travelers who want a calmer base and are happy to drive or use rideshare for Strip trips.",
         ]}
-        tip="The mid-Strip between the Bellagio and Park MGM has the densest foot traffic and most security presence - the safest and most comfortable walking area at any hour."
-        warning="Avoid walking east of the Strip toward the industrial areas, or venturing off Fremont Street into the surrounding blocks late at night."
+        tip="Wherever you stay, plan your late-night route back to the hotel before you go out."
+        warning="Check recent local advice and your hotel's surroundings before booking, and avoid unfamiliar areas late at night."
       />
       <NeighborhoodRankingCards cityName="Las Vegas" neighborhoods={lasvegasNeighborhoods} />
       <section aria-labelledby="areas-lv" className={styles.section}>
@@ -195,6 +195,91 @@ export default function LasVegasBestAreasClient() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+      <section aria-labelledby="cost-lv" className={styles.section}>
+        <h2 id="cost-lv">What a Las Vegas stay costs beyond the room rate</h2>
+        <p className={styles.sectionIntro}>
+          Resort fees and parking can change which base is cheaper. The figures below are the ones
+          each operator publishes on its own site, as we checked them in November 2026. Fees are
+          set by the resorts and can change, so confirm the total on your booking before you pay.
+        </p>
+        <div className={styles.areaList}>
+          <article className={styles.areaItem}>
+            <h3>Resort fees at some popular bases</h3>
+            <p className={styles.areaSummary}>
+              Wynn Las Vegas and Encore list a resort fee of $55 plus tax per night, and say it
+              includes self-parking for up to two vehicles. The Venetian lists a resort fee of $55
+              plus tax. Red Rock Resort (Summerlin) lists $62.15 and Green Valley Ranch (Henderson)
+              lists $62.70, both shown as tax-inclusive on the Station Casinos fee page; check on
+              your reservation whether the fee is charged nightly or per stay. Station Casinos says
+              its fee covers items such as Wi-Fi and fitness-center access.
+            </p>
+          </article>
+          <article className={styles.areaItem}>
+            <h3>Parking at some popular bases</h3>
+            <p className={styles.areaSummary}>
+              At the Venetian, registered guests pay $20 a day for self-parking and $40 a day for
+              valet, and Sapphire Rewards members and above park free. MGM Resorts lists $20 a day
+              for registered guests at MGM Grand, Mandalay Bay, Luxor and Excalibur. Golden Nugget
+              Downtown lists free self-parking for registered guests, with a clearance of 6 ft 7 in
+              in its garage, and guest valet at $20 per vehicle per day. Because the Wynn fee already
+              includes parking, the same car can cost different amounts at different resorts. Add
+              the fee and parking together when you compare.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section aria-labelledby="getting-around-lv" className={styles.section}>
+        <h2 id="getting-around-lv">Getting around from each base</h2>
+        <p className={styles.sectionIntro}>
+          Where you stay decides how you reach the rest of the Strip. These are the public options
+          the operators publish; check each operator&apos;s current schedule before you rely on one.
+        </p>
+        <div className={styles.areaList}>
+          <article className={styles.areaItem}>
+            <h3>Las Vegas Monorail</h3>
+            <p className={styles.areaSummary}>
+              The Monorail has seven stations along about 3.9 miles of track, and an end-to-end ride
+              takes around 15 minutes. Check the station map against your hotel before you choose a
+              base, because not every resort has its own station.
+            </p>
+          </article>
+          <article className={styles.areaItem}>
+            <h3>The Deuce bus</h3>
+            <p className={styles.areaSummary}>
+              The RTC&apos;s Deuce runs 24 hours a day. Its published frequency is roughly every 10
+              to 15 minutes between 7 a.m. and 1 a.m., and about every 20 minutes overnight. Routes
+              can be changed temporarily for events, so check the RTC for notices on your dates.
+            </p>
+          </article>
+          <article className={styles.areaItem}>
+            <h3>The Mandalay Bay tram</h3>
+            <p className={styles.areaSummary}>
+              A tram connects Mandalay Bay, Luxor and Excalibur. The operators&apos; pages give
+              different hours and do not state one fare policy, so check with the resort before you
+              plan a day around it.
+            </p>
+          </article>
+          <article className={styles.areaItem}>
+            <h3>Downtown Loop</h3>
+            <p className={styles.areaSummary}>
+              The Downtown Loop is a free shuttle. It runs Sunday to Thursday from 11 a.m. to 6 p.m.
+              and Friday and Saturday from 3 p.m. to 10 p.m., with stops including Bonneville Transit
+              Center, the Arts District, Pawn Plaza, Fremont Street Experience (temporarily relocated
+              during construction), The Mob Museum, Symphony Park, The STRAT and Circa. Hours may
+              change, so check the RTC.
+            </p>
+          </article>
+          <article className={styles.areaItem}>
+            <h3>From Harry Reid International Airport</h3>
+            <p className={styles.areaSummary}>
+              The RTC lists Routes 108 and 109 and the Centennial Express (CX) at Terminal 1, Level
+              Zero (ground level). The CX also serves Terminal 3. We do not give a single airport-to-
+              Strip distance because it depends on which resort you are going to. Ask your hotel
+              about its own airport transfer options.
+            </p>
+          </article>
         </div>
       </section>
       <section aria-labelledby="tips-lv" className={styles.section}>

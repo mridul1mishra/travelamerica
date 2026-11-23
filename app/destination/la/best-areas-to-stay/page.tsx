@@ -5,6 +5,7 @@ export const metadata = {
   openGraph: { title: 'Best Areas to Stay in Los Angeles 2026', description: 'Honest neighborhood comparison for LA — Santa Monica, Hollywood, Silver Lake, DTLA and beyond.', url: 'https://www.travelsamericas.com/destination/la/best-areas-to-stay', type: 'article' },
 };
 import LABestAreasClient from './labestareasstoclient';
+import { authorshipSchema } from "@/app/lib/authors";
 
 export default function LABestAreasPage() {
   const schema = [
@@ -19,11 +20,13 @@ export default function LABestAreasPage() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Best Areas to Stay in Los Angeles 2026 | Neighborhoods Guide",
+      "@type": "WebPage",
+      "name": "Best Areas to Stay in Los Angeles 2026 | Neighborhoods Guide",
       "description": "Where to stay in LA — honest comparison of Santa Monica, Hollywood, Silver Lake, DTLA, and more for every travel style.",
       "url": "https://www.travelsamericas.com/destination/la/best-areas-to-stay",
       "inLanguage": "en-US",
+      "dateModified": "2026-11-22",
+      ...authorshipSchema(),
       "publisher": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },
     },
   ];
