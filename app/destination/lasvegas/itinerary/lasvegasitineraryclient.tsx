@@ -1,3 +1,4 @@
+import Byline from "@/app/components/Byline/Byline";
 import Link from "next/link";
 import Header from "@/app/components/destination/header/header";
 import Footer from "@/app/components/Header/Footer/footer";
@@ -42,6 +43,7 @@ export default function LasVegasItineraryClient() {
       />
       <section className={styles.hero}>
         <h1>Las Vegas 3-Day Itinerary</h1>
+        <Byline updated="November 2026" />
         <p>A practical day-by-day plan covering the Strip, a Hoover Dam day trip, Fremont Street, and the best museums. Built around real logistics — not an aspirational list of everything Vegas has to offer.</p>
         <div className={styles.heroCtas}>
           <Link href="/destination/lasvegas/tours-and-tickets" className={styles.primaryCta}>Book tickets & tours</Link>

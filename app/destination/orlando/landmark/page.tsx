@@ -4,6 +4,7 @@ export const metadata = {
   alternates: { canonical: 'https://www.travelsamericas.com/destination/orlando/landmark' },
   openGraph: { title: 'Orlando Landmarks 2026', description: "Orlando's most iconic attractions — what to expect at each and the honest cost breakdown.", url: 'https://www.travelsamericas.com/destination/orlando/landmark', type: 'article' },
 };
+import { authorshipSchema } from "@/app/lib/authors";
 import OrlandoLandmarkClient from './orlandolandmarkclient';
 
 export default function OrlandoLandmarkPage() {
@@ -19,11 +20,13 @@ export default function OrlandoLandmarkPage() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Orlando Landmarks 2026 | Beyond the Theme Parks",
+      "@type": "WebPage",
+      "name": "Orlando Landmarks 2026 | Beyond the Theme Parks",
       "description": "Orlando's most iconic landmarks — Walt Disney World, Universal Studios, Kennedy Space Center, ICON Park, Wekiva Springs and more.",
       "url": "https://www.travelsamericas.com/destination/orlando/landmark",
       "inLanguage": "en-US",
+      "dateModified": "2026-11-22",
+      ...authorshipSchema("manisha", "mridul"),
       "publisher": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },
     },
   ];

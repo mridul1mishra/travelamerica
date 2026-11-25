@@ -55,29 +55,48 @@ export default function HotelGuide() {
       </div>
 
       <div className={styles.block}>
-        <h3>What the Standard, Premium and Luxury labels mean here</h3>
+        <h3>How we assign Standard, Premium and Luxury</h3>
         <p>
           The tier on each hotel card is our own assessment, not a star rating and not the
-          hotel&apos;s own marketing. We group the stays in this list into three bands so you can
-          compare like with like before you look at prices:
+          hotel&apos;s own marketing. Each hotel is assessed by our editor from published hotel
+          information, such as the hotel&apos;s own pages, and we do not accept payment for
+          inclusion or for a higher tier. We score five areas, with these weights:
         </p>
         <ul className={styles.list}>
           <li>
-            <strong>Standard:</strong> a clean, well-located room and little else. Expect a small
-            room, a limited or no restaurant, and few extras.
+            <strong>Rooms and bathrooms (30%):</strong> from minimal provision to documented
+            upgrades in bedding, materials and bathroom fixtures.
           </li>
           <li>
-            <strong>Premium:</strong> the middle of the list and where most New York hotels sit.
-            Usually a full-service front desk, a restaurant or bar, and a better address.
+            <strong>Guest service (30%):</strong> from reception and basic housekeeping to a staffed
+            concierge, in-room dining and individually tailored help.
           </li>
           <li>
-            <strong>Luxury:</strong> the top band, judged on the building, the service and the
-            facilities rather than the headline rate.
+            <strong>Dining (15%):</strong> from no property-run dining to multiple venues and
+            in-room dining.
+          </li>
+          <li>
+            <strong>Wellness and facilities (15%):</strong> from no guest facilities to an equipped
+            fitness center, a pool or staffed treatments.
+          </li>
+          <li>
+            <strong>Design and finish (10%):</strong> from functional, conventional rooms to
+            documented high-quality finishes across the property.
           </li>
         </ul>
         <p>
-          Some tiers are marked provisional, which means we had less evidence to work from. Treat
-          those as a starting point and read the hotel&apos;s own page before you book.
+          Each area is rated from 0 to 4 against a written description, and the ratings combine
+          into a score out of 100. A hotel scoring under 50 is labelled <strong>Standard</strong>.
+          A score of 50 or more is <strong>Premium</strong>. A score of 75 or more is{" "}
+          <strong>Luxury</strong>, but only if the hotel also rates at least 3 out of 4 for both
+          rooms and guest service. We assess a hotel&apos;s regular offering across the property, so
+          a suite-only or special-floor perk does not raise the label for every room.
+        </p>
+        <p>
+          If we cannot find published information for one of the five areas, we leave that area
+          out of the score instead of counting it as zero, and we mark the tier as provisional.
+          Treat a provisional tier as a starting point and read the hotel&apos;s own page before
+          you book.
         </p>
         <p className={styles.links}>
           Deciding on an area first? See our{" "}

@@ -1,3 +1,4 @@
+import Byline from "@/app/components/Byline/Byline";
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../../lathingstodo.module.css';
@@ -16,6 +17,7 @@ export default function ThingsToDoHero() {
       </section>
       <section className={styles.hero}>
         <h1>Things to Do in Los Angeles</h1>
+        <Byline updated="November 2026" />
         <p>
           Los Angeles spreads across the coast, the hills, and the basin, so the
           experience changes a lot depending on what you want to focus on.

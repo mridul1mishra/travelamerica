@@ -4,6 +4,7 @@ export const metadata = {
   alternates: { canonical: 'https://www.travelsamericas.com/destination/la/itinerary' },
   openGraph: { title: 'Los Angeles 3-Day Itinerary 2026', description: 'Day-by-day LA itinerary built around real logistics — not an aspirational list.', url: 'https://www.travelsamericas.com/destination/la/itinerary', type: 'article' },
 };
+import { authorshipSchema } from "@/app/lib/authors";
 import LAItineraryClient from './laitineraryclient';
 
 export default function LAItineraryPage() {
@@ -19,11 +20,13 @@ export default function LAItineraryPage() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "LA 3-Day Itinerary 2026 | Best Route for First-Timers",
+      "@type": "WebPage",
+      "name": "LA 3-Day Itinerary 2026 | Best Route for First-Timers",
       "description": "The best 3-day Los Angeles itinerary — Griffith Observatory, Venice Beach, Hollywood, the Getty, and where to eat.",
       "url": "https://www.travelsamericas.com/destination/la/itinerary",
       "inLanguage": "en-US",
+      "dateModified": "2026-11-22",
+      ...authorshipSchema(),
       "publisher": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },
     },
   ];

@@ -4,6 +4,7 @@ export const metadata = {
   alternates: { canonical: 'https://www.travelsamericas.com/destination/orlando/best-areas-to-stay' },
   openGraph: { title: 'Best Areas to Stay in Orlando 2026', description: 'On-site vs off-site Disney and Universal hotels, I-Drive, Kissimmee compared.', url: 'https://www.travelsamericas.com/destination/orlando/best-areas-to-stay', type: 'article' },
 };
+import { authorshipSchema } from "@/app/lib/authors";
 import OrlandoBestAreasClient from './orlandobestareasclient';
 
 export default function OrlandoBestAreasPage() {
@@ -19,11 +20,13 @@ export default function OrlandoBestAreasPage() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Best Areas to Stay in Orlando 2026 | Near Disney",
+      "@type": "WebPage",
+      "name": "Best Areas to Stay in Orlando 2026 | Near Disney",
       "description": "Where to stay in Orlando — on-site vs off-site Disney hotels, Universal area, International Drive, and Kissimmee.",
       "url": "https://www.travelsamericas.com/destination/orlando/best-areas-to-stay",
       "inLanguage": "en-US",
+      "dateModified": "2026-11-22",
+      ...authorshipSchema("manisha", "mridul"),
       "publisher": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },
     },
   ];

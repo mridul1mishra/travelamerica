@@ -4,6 +4,7 @@ export const metadata = {
   alternates: { canonical: 'https://www.travelsamericas.com/destination/orlando/food' },
   openGraph: { title: 'Best Food in Orlando 2026', description: 'Honest Orlando food guide — Restaurant Row, local markets, theme park dining, and where to splurge.', url: 'https://www.travelsamericas.com/destination/orlando/food', type: 'article' },
 };
+import { authorshipSchema } from "@/app/lib/authors";
 import OrlandoFoodClient from './orlandofoodclient';
 
 export default function OrlandoFoodPage() {
@@ -19,11 +20,13 @@ export default function OrlandoFoodPage() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Best Food in Orlando 2026 | Beyond Theme Parks",
+      "@type": "WebPage",
+      "name": "Best Food in Orlando 2026 | Beyond Theme Parks",
       "description": "Where to eat in Orlando — best restaurants on Restaurant Row, local food markets, and theme park dining worth trying.",
       "url": "https://www.travelsamericas.com/destination/orlando/food",
       "inLanguage": "en-US",
+      "dateModified": "2026-11-22",
+      ...authorshipSchema("manisha", "mridul"),
       "publisher": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },
     },
   ];

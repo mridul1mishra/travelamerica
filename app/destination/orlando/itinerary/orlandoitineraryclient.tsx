@@ -1,3 +1,4 @@
+import Byline from "@/app/components/Byline/Byline";
 import Link from "next/link";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
@@ -52,6 +53,7 @@ export default function OrlandoItineraryClient() {
       />
       <section className={styles.hero}>
         <h1>Orlando 5-Day Itinerary</h1>
+        <Byline author="manisha" reviewer="mridul" updated="November 2026" />
         <p>A practical day-by-day plan built around real park logistics — rope drop times, where queues build, and how to pace a week without burning out by day 3.</p>
         <div className={styles.heroCtas}>
           <Link href="/destination/orlando/tours-and-tickets" className={styles.primaryCta}>Book tickets</Link>

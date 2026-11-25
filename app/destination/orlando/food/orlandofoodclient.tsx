@@ -1,3 +1,4 @@
+import Byline from "@/app/components/Byline/Byline";
 import Link from "next/link";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
@@ -26,6 +27,7 @@ export default function OrlandoFoodClient() {
       ]} />
       <section className={styles.hero}>
         <h1>Best Food in Orlando</h1>
+        <Byline author="manisha" reviewer="mridul" updated="November 2026" />
         <p>Orlando&apos;s food scene extends well beyond theme park food courts. Restaurant Row, Winter Park, and Downtown Orlando have a genuinely strong independent dining scene — this guide covers all of it.</p>
         <div className={styles.heroCtas}>
           <Link href="/destination/orlando/tours-and-tickets" className={styles.primaryCta}>Book restaurant reservations</Link>

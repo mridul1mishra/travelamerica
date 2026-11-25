@@ -4,6 +4,7 @@ export const metadata = {
   alternates: { canonical: 'https://www.travelsamericas.com/destination/orlando/things-to-do' },
   openGraph: { title: 'Things to Do in Orlando 2026', description: 'Theme parks, day trips, springs, and what to do in Orlando beyond the rides.', url: 'https://www.travelsamericas.com/destination/orlando/things-to-do', type: 'article' },
 };
+import { authorshipSchema } from "@/app/lib/authors";
 import OrlandoThingsToDoClient from './orlandothingstodoclient';
 
 export default function OrlandoThingsToDoPage() {
@@ -19,11 +20,13 @@ export default function OrlandoThingsToDoPage() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Things to Do in Orlando 2026 | Theme Parks, Day Trips & More",
+      "@type": "WebPage",
+      "name": "Things to Do in Orlando 2026 | Theme Parks, Day Trips & More",
       "description": "Best things to do in Orlando — Walt Disney World vs Universal, water parks, Kennedy Space Center, natural springs, and day trips to Florida beaches.",
       "url": "https://www.travelsamericas.com/destination/orlando/things-to-do",
       "inLanguage": "en-US",
+      "dateModified": "2026-11-22",
+      ...authorshipSchema("manisha", "mridul"),
       "publisher": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },
     },
   ];

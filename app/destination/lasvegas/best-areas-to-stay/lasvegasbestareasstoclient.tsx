@@ -221,7 +221,8 @@ export default function LasVegasBestAreasClient() {
             <p className={styles.areaSummary}>
               At the Venetian, registered guests pay $20 a day for self-parking and $40 a day for
               valet, and Sapphire Rewards members and above park free. MGM Resorts lists $20 a day
-              for registered guests at MGM Grand, Mandalay Bay, Luxor and Excalibur. Golden Nugget
+              for registered guests at MGM Grand, Mandalay Bay, Luxor and Excalibur, and says prices
+              may be higher during special events. Golden Nugget
               Downtown lists free self-parking for registered guests, with a clearance of 6 ft 7 in
               in its garage, and guest valet at $20 per vehicle per day. Because the Wynn fee already
               includes parking, the same car can cost different amounts at different resorts. Add
@@ -248,9 +249,10 @@ export default function LasVegasBestAreasClient() {
           <article className={styles.areaItem}>
             <h3>The Deuce bus</h3>
             <p className={styles.areaSummary}>
-              The RTC&apos;s Deuce runs 24 hours a day. Its published frequency is roughly every 10
-              to 15 minutes between 7 a.m. and 1 a.m., and about every 20 minutes overnight. Routes
-              can be changed temporarily for events, so check the RTC for notices on your dates.
+              The RTC&apos;s Deuce runs 24 hours a day. Its published timetable lists service about
+              every 15 minutes from 7 a.m. to midnight and about every 20 minutes from midnight to
+              7 a.m. Frequencies and routes can change, including temporarily for events, so check
+              the RTC for notices on your dates.
             </p>
           </article>
           <article className={styles.areaItem}>

@@ -1,3 +1,4 @@
+import Byline from "@/app/components/Byline/Byline";
 import Link from "next/link";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
@@ -33,6 +34,7 @@ export default function OrlandoLandmarkClient() {
       />
       <section className={styles.hero}>
         <h1>Orlando Landmarks & Attractions</h1>
+        <Byline author="manisha" reviewer="mridul" updated="November 2026" />
         <p>Orlando has the world&apos;s highest concentration of major theme parks — but also some genuinely overlooked gems. This guide covers the full range with honest costs and the tips that change each experience.</p>
         <div className={styles.heroCtas}>
           <Link href="/destination/orlando/tours-and-tickets" className={styles.primaryCta}>Book attraction tickets</Link>

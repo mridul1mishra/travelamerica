@@ -1,3 +1,4 @@
+import Byline from "@/app/components/Byline/Byline";
 import Link from "next/link";
 import styles from "@/app/components/destination/bestareatostay/Banner/Banner.module.css";
 
@@ -29,6 +30,7 @@ export default function Banner({ cityName, cityHref, description, guideBullets =
         </nav>
         <div className={styles.herocontent}>
           <h1>Best Areas to Stay in {cityName}</h1>
+          <Byline updated="November 2026" />
           <p>{description}</p>
         </div>
         <div className={styles.infobox}>

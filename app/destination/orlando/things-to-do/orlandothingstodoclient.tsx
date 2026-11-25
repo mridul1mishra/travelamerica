@@ -1,3 +1,4 @@
+import Byline from "@/app/components/Byline/Byline";
 import Link from "next/link";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
@@ -30,6 +31,7 @@ export default function OrlandoThingsToDoClient() {
       />
       <section className={styles.hero}>
         <h1>Things to Do in Orlando</h1>
+        <Byline author="manisha" reviewer="mridul" updated="November 2026" />
         <p>Orlando is the most-visited city in the US for good reason — but what you do depends entirely on what kind of trip you want. This guide covers the six categories that shape most Orlando visits, with practical logistics for each.</p>
         <div className={styles.heroCtas}>
           <Link href="/destination/orlando/tours-and-tickets" className={styles.primaryCta}>Book tickets & tours</Link>

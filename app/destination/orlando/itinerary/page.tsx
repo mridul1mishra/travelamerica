@@ -4,6 +4,7 @@ export const metadata = {
   alternates: { canonical: 'https://www.travelsamericas.com/destination/orlando/itinerary' },
   openGraph: { title: 'Orlando 5-Day Itinerary 2026', description: 'Day-by-day Orlando plan — theme parks, space center, and how to pace it.', url: 'https://www.travelsamericas.com/destination/orlando/itinerary', type: 'article' },
 };
+import { authorshipSchema } from "@/app/lib/authors";
 import OrlandoItineraryClient from './orlandoitineraryclient';
 
 export default function OrlandoItineraryPage() {
@@ -19,11 +20,13 @@ export default function OrlandoItineraryPage() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Orlando 5-Day Itinerary 2026 | Parks & Day Trips",
+      "@type": "WebPage",
+      "name": "Orlando 5-Day Itinerary 2026 | Parks & Day Trips",
       "description": "A practical 5-day Orlando itinerary covering Magic Kingdom, Universal, EPCOT, Hollywood Studios, and Kennedy Space Center.",
       "url": "https://www.travelsamericas.com/destination/orlando/itinerary",
       "inLanguage": "en-US",
+      "dateModified": "2026-11-22",
+      ...authorshipSchema("manisha", "mridul"),
       "publisher": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },
     },
   ];

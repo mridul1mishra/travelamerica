@@ -1,3 +1,4 @@
+import Byline from "@/app/components/Byline/Byline";
 import styles from './HeroSection.module.css';
 
 export default function HeroSection() {
@@ -13,6 +14,7 @@ export default function HeroSection() {
           <div className={styles.heroText}>
             <div className={styles.badge}>🆓 Completely Free · 2026</div>
             <h1>Free Things to Do in Orlando</h1>
+            <Byline author="manisha" reviewer="mridul" tone="dark" />
             <p className={styles.subtitle}>
               Beyond the theme parks: Lake Eola, Disney Springs, Kraft Azalea Garden, nature trails, free museum hours, and neighbourhood walks — all at zero cost.
             </p>

@@ -8,15 +8,17 @@ export default function Byline({
   author = "mridul",
   reviewer = "manisha",
   updated,
+  tone = "light",
 }: {
   author?: AuthorKey;
   reviewer?: AuthorKey;
   updated?: string; // e.g. "November 2026"
+  tone?: "light" | "dark"; // "dark" for text on a dark hero
 }) {
   const a = AUTHORS[author];
   const r = AUTHORS[reviewer];
   return (
-    <p className={styles.byline}>
+    <p className={tone === "dark" ? `${styles.byline} ${styles.dark}` : styles.byline}>
       Written by <Link href={a.href}>{a.name}</Link>, {a.role.toLowerCase()} · Reviewed by{" "}
       <Link href={r.href}>{r.name}</Link>
       {updated ? <> · Last updated {updated}</> : null}

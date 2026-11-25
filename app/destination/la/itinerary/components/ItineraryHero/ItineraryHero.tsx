@@ -1,3 +1,4 @@
+import Byline from "@/app/components/Byline/Byline";
 import Link from "next/link";
 import styles from "@/app/destination/city-hub.module.css";
 
@@ -5,6 +6,7 @@ export default function ItineraryHero() {
   return (
     <section className={styles.hero}>
       <h1>Los Angeles 3-Day Itinerary</h1>
+      <Byline updated="November 2026" />
       <p>
         A practical day-by-day plan covering Hollywood, Griffith Observatory, Venice Beach, the Getty,
         and Downtown LA. Built around real travel logistics — driving times, parking costs, and what

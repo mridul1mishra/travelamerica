@@ -4,6 +4,7 @@ export const metadata = {
   alternates: { canonical: 'https://www.travelsamericas.com/destination/lasvegas/itinerary' },
   openGraph: { title: 'Las Vegas 3-Day Itinerary 2026', description: 'Day-by-day plan for Las Vegas — what to do, when, and how to book.', url: 'https://www.travelsamericas.com/destination/lasvegas/itinerary', type: 'article' },
 };
+import { authorshipSchema } from "@/app/lib/authors";
 import LasVegasItineraryClient from './lasvegasitineraryclient';
 
 export default function LasVegasItineraryPage() {
@@ -19,11 +20,13 @@ export default function LasVegasItineraryPage() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Las Vegas 3-Day Itinerary 2026 | What to Do Each Day",
+      "@type": "WebPage",
+      "name": "Las Vegas 3-Day Itinerary 2026 | What to Do Each Day",
       "description": "A practical 3-day Las Vegas itinerary — Strip walk, shows, Hoover Dam day trip, Fremont Street, and where to eat.",
       "url": "https://www.travelsamericas.com/destination/lasvegas/itinerary",
       "inLanguage": "en-US",
+      "dateModified": "2026-11-22",
+      ...authorshipSchema(),
       "publisher": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },
     },
   ];

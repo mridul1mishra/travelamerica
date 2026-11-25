@@ -1,3 +1,4 @@
+import Byline from "@/app/components/Byline/Byline";
 import styles from './Banner.module.css';
 
 interface BannerProps {
@@ -29,6 +30,7 @@ export default function Banner({ cityName, cityHref, description, guideBullets =
 
         <div className={styles.herocontent}>
           <h1>Best Areas to Stay in {cityName}</h1>
+          <Byline author="manisha" reviewer="mridul" updated="November 2026" />
           <p>{description}</p>
         </div>
 

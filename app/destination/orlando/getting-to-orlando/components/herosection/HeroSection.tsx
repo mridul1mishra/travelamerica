@@ -1,3 +1,4 @@
+import Byline from "@/app/components/Byline/Byline";
 import styles from './HeroSection.module.css';
 
 export default function HeroSection() {
@@ -13,6 +14,7 @@ export default function HeroSection() {
           <div className={styles.heroText}>
             <div className={styles.badge}>✈️ Airports & Arrival · 2026</div>
             <h1>Getting to Orlando</h1>
+            <Byline author="manisha" reviewer="mridul" tone="dark" />
             <p className={styles.subtitle}>
               MCO handles most visitors, SFB suits certain low-cost routes, and Brightline connects South Florida by rail. Here&apos;s how to arrive — and how to reach the parks from each.
             </p>

@@ -1,3 +1,4 @@
+import Byline from "@/app/components/Byline/Byline";
 import styles from './HeroSection.module.css';
 
 export default function HeroSection() {
@@ -13,6 +14,7 @@ export default function HeroSection() {
           <div className={styles.heroText}>
             <div className={styles.badge}>2026 Travel Guide</div>
             <h1>Best Time to Visit Orlando</h1>
+            <Byline author="manisha" reviewer="mridul" tone="dark" />
             <p className={styles.subtitle}>
               A month-by-month guide to theme-park crowd levels, weather, and hotel rates — so you pick the window that matches your priorities, not the travel industry&apos;s busiest season.
             </p>

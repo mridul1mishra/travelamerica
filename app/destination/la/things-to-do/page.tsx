@@ -4,6 +4,7 @@ export const metadata = {
   alternates: { canonical: 'https://www.travelsamericas.com/destination/la/things-to-do' },
   openGraph: { title: 'Things to Do in Los Angeles 2026', description: 'Top LA attractions, beaches, day trips and activities — what to prioritize and what to skip.', url: 'https://www.travelsamericas.com/destination/la/things-to-do', type: 'article' },
 };
+import { authorshipSchema } from "@/app/lib/authors";
 import LAThingsToDoClient from './lathingstodoclient';
 
 export default function LAThingsToDoPage() {
@@ -19,11 +20,13 @@ export default function LAThingsToDoPage() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Things to Do in Los Angeles 2026 | Top Attractions & Beaches",
+      "@type": "WebPage",
+      "name": "Things to Do in Los Angeles 2026 | Top Attractions & Beaches",
       "description": "Best things to do in Los Angeles — from Hollywood and Venice Beach to Griffith Observatory, museums, and food markets.",
       "url": "https://www.travelsamericas.com/destination/la/things-to-do",
       "inLanguage": "en-US",
+      "dateModified": "2026-11-22",
+      ...authorshipSchema(),
       "publisher": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },
     },
   ];
