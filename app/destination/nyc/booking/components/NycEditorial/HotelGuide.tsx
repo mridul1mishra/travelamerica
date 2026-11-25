@@ -58,9 +58,9 @@ export default function HotelGuide() {
         <h3>How we assign Standard, Premium and Luxury</h3>
         <p>
           The tier on each hotel card is our own assessment, not a star rating and not the
-          hotel&apos;s own marketing. Each hotel is assessed by our editor from published hotel
-          information, such as the hotel&apos;s own pages, and we do not accept payment for
-          inclusion or for a higher tier. We score five areas, with these weights:
+          hotel&apos;s own marketing. Each hotel is scored from published hotel and operator
+          information, such as the hotel&apos;s own pages. We do not accept payment for inclusion or
+          for a higher tier. We score five areas, with these weights:
         </p>
         <ul className={styles.list}>
           <li>
