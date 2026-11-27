@@ -25,7 +25,7 @@ export default function LasVegasBestAreasPage() {
       "description": "Where to stay in Las Vegas — Strip hotel tiers, Downtown Fremont, Henderson, and Summerlin compared for every budget.",
       "url": "https://www.travelsamericas.com/destination/lasvegas/best-areas-to-stay",
       "inLanguage": "en-US",
-      "dateModified": "2026-11-24",
+      "dateModified": "2026-11-25",
       ...authorshipSchema(),
       "publisher": { "@type": "Organization", "name": "Travels Americas", "url": "https://www.travelsamericas.com" },
     },

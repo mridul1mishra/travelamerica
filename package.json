@@ -19,7 +19,8 @@
     "import:nyc-hotels": "node scripts/import-nyc-hotels.mjs",
     "tag:nyc-hotels": "node scripts/apply-hotel-tags.mjs content/cities/newyork/hotel-tags.json",
     "tier:nyc-hotels": "node scripts/apply-hotel-tiers.mjs",
-    "tag:nyc-subway": "node scripts/tag-near-subway.mjs"
+    "tag:nyc-subway": "node scripts/tag-near-subway.mjs",
+    "snapshot:hotels": "node scripts/export-hotel-snapshot.mjs"
   },
   "browserslist": {
     "production": [

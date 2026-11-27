@@ -1,6 +1,7 @@
 import { getCityHotels } from "@/app/lib/hotels";
 import HotelClient from "../bookings/labookingsclient";
-export const dynamic = "force-dynamic";
+// Hotel data is cached in app/lib/hotels.ts; regenerate the page at most once a day.
+export const revalidate = 86400;
 export const metadata = { robots: { index: false, follow: true }, title: "Los Angeles Hotels by Neighborhood | Travels Americas", description: "Compare LA hotels by neighborhood and your travel plans, from Hollywood shows to Downtown events and Venice stays. Sign in to check current prices.", alternates: { canonical: "https://www.travelsamericas.com/destination/la/hotel" } };
 export default async function Page() {
   const hotels = await getCityHotels("la");

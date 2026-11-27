@@ -211,8 +211,8 @@ export default function LasVegasBestAreasClient() {
               Wynn Las Vegas and Encore list a resort fee of $55 plus tax per night, and say it
               includes self-parking for up to two vehicles. The Venetian lists a resort fee of $55
               plus tax. Red Rock Resort (Summerlin) lists $62.15 and Green Valley Ranch (Henderson)
-              lists $62.70, both shown as tax-inclusive on the Station Casinos fee page; check on
-              your reservation whether the fee is charged nightly or per stay. Station Casinos says
+              lists $62.70, both shown as tax-inclusive on the Station Casinos fee page; both
+              resorts describe it as a nightly fee. Station Casinos says
               its fee covers items such as Wi-Fi and fitness-center access.
             </p>
           </article>
@@ -242,44 +242,56 @@ export default function LasVegasBestAreasClient() {
             <h3>Las Vegas Monorail</h3>
             <p className={styles.areaSummary}>
               The Monorail has seven stations along about 3.9 miles of track, and an end-to-end ride
-              takes around 15 minutes. Check the station map against your hotel before you choose a
-              base, because not every resort has its own station.
+              takes around 15 minutes. Check the{" "}
+              <a href="https://www.lvmonorail.com/route-map/" target="_blank" rel="noopener noreferrer">
+                station map
+              </a>{" "}
+              against your hotel before you choose a base, because not every resort has its own
+              station.
             </p>
           </article>
           <article className={styles.areaItem}>
             <h3>The Deuce bus</h3>
             <p className={styles.areaSummary}>
-              The RTC&apos;s Deuce runs 24 hours a day. Its published timetable lists service about
-              every 15 minutes from 7 a.m. to midnight and about every 20 minutes from midnight to
-              7 a.m. Frequencies and routes can change, including temporarily for events, so check
-              the RTC for notices on your dates.
+              The RTC&apos;s Deuce runs 24 hours a day. Its published timetable lists service
+              approximately every 10 to 15 minutes from 7 a.m. to 1 a.m. and approximately every 20
+              minutes from 1 a.m. to 7 a.m. Frequencies, routes and stops can change, including
+              temporarily for events and construction, so check{" "}
+              <a href="https://www.rtcsnv.com/ways-to-travel/alerts-detours/" target="_blank" rel="noopener noreferrer">
+                RTC&apos;s alerts and detours page
+              </a>{" "}
+              for notices on your dates.
             </p>
           </article>
           <article className={styles.areaItem}>
             <h3>The Mandalay Bay tram</h3>
             <p className={styles.areaSummary}>
-              A tram connects Mandalay Bay, Luxor and Excalibur. The operators&apos; pages give
-              different hours and do not state one fare policy, so check with the resort before you
-              plan a day around it.
+              A tram connects Mandalay Bay, Luxor and Excalibur. The
+              resorts&apos; own pages publish different hours, with Excalibur listing an earlier
+              weekday opening than Mandalay Bay and Luxor, and they do not state one fare policy. Check
+              the current hours with the resort before you plan a day around it.
             </p>
           </article>
           <article className={styles.areaItem}>
             <h3>Downtown Loop</h3>
             <p className={styles.areaSummary}>
-              The Downtown Loop is a free shuttle. It runs Sunday to Thursday from 11 a.m. to 6 p.m.
-              and Friday and Saturday from 3 p.m. to 10 p.m., with stops including Bonneville Transit
-              Center, the Arts District, Pawn Plaza, Fremont Street Experience (temporarily relocated
-              during construction), The Mob Museum, Symphony Park, The STRAT and Circa. Hours may
-              change, so check the RTC.
+              The Downtown Loop is a free shuttle, listed by the RTC as a City of Las Vegas program.
+              Its hours, stops and routing can change,
+              so check the current schedule on the{" "}
+              <a href="https://www.rtcsnv.com/ways-to-travel/schedules-maps/" target="_blank" rel="noopener noreferrer">
+                RTC schedules and maps page
+              </a>{" "}
+              before you rely on it.
             </p>
           </article>
           <article className={styles.areaItem}>
             <h3>From Harry Reid International Airport</h3>
             <p className={styles.areaSummary}>
-              The RTC lists Routes 108 and 109 and the Centennial Express (CX) at Terminal 1, Level
-              Zero (ground level). The CX also serves Terminal 3. We do not give a single airport-to-
-              Strip distance because it depends on which resort you are going to. Ask your hotel
-              about its own airport transfer options.
+              The airport lists RTC Route 108 and the Red Line, which replaced Route 109, at
+              Terminal 1, Level Zero. Arrivals at Terminal 3 take the inter-terminal shuttle to reach
+              that stop. RTC changed several routes in August 2026, so check its current map. We do
+              not give a single airport-to-Strip distance because it depends on which resort you are
+              going to. Ask your hotel about its own airport transfer options.
             </p>
           </article>
         </div>

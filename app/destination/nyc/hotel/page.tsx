@@ -1,5 +1,6 @@
 import { getNycHotels } from "@/app/lib/hotels";
-export const dynamic = "force-dynamic";
+// Hotel data is cached in app/lib/hotels.ts; regenerate the page at most once a day.
+export const revalidate = 86400;
 import BookFlightsClient from "../booking/bookflightsclient";
 import HotelGuide from "../booking/components/NycEditorial/HotelGuide";
 import { pageSchema } from "@/app/lib/authors";

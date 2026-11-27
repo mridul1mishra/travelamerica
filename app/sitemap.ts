@@ -59,6 +59,8 @@ const ROUTES: Entry[] = [
   // ── Las Vegas ─────────────────────────────────────────────────────────────
   { path: "/destination/lasvegas",                                    priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/lasvegas/best-areas-to-stay",                 priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/lasvegas/flight",                           priority: 0.9, changeFrequency: "weekly" },
+  { path: "/destination/lasvegas/hotel",                            priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/lasvegas/food",                               priority: 0.9, changeFrequency: "weekly" },
   { path: "/destination/lasvegas/group-travel",                       priority: 0.8, changeFrequency: "weekly" },
   { path: "/destination/lasvegas/is-lasvegas-safe-at-night",          priority: 0.9, changeFrequency: "weekly" },

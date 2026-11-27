@@ -9,9 +9,14 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
+        // Amazonbot crawled hotel pages every few minutes and kept Neon awake.
+        userAgent: "Amazonbot",
+        disallow: "/",
+      },
+      {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/"],
+        disallow: ["/api/", "/admin/"],
       },
     ],
     sitemap: "https://www.travelsamericas.com/sitemap.xml",

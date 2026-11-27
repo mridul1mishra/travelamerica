@@ -72,8 +72,8 @@ const config: CityBookingConfig = {
     },
   ],
   bookingTips: [
-    { heading: "Flights", text: "LAS is the practical airport. Book domestic flights about 5-7 weeks ahead." },
-    { heading: "Hotels", text: "Resort fees can add $35-50/night, so compare the full nightly cost." },
+    { heading: "Flights", text: "Harry Reid International Airport (LAS) serves Las Vegas. Check your terminal and plan the transfer to your hotel." },
+    { heading: "Hotels", text: "Resort fees and parking vary by resort, so compare the full nightly cost." },
     { heading: "Activities", text: "Book Sphere, Cirque, clubs, and pool parties earlier than casual attractions." },
   ],
   flights: bookFlights as CityBookingConfig["flights"],
@@ -101,13 +101,13 @@ const intros = {
   activities: "Browse Las Vegas tours, attractions, and tickets. Compare experiences by category and check availability with the provider.",
 };
 
-export default function LasVegasBookingsClient({ hotels, category = hotels ? "hotels" : "flights" }: { hotels?: CityBookingConfig["hotels"]; category?: Category }) {
+export default function LasVegasBookingsClient({ hotels, category = hotels ? "hotels" : "flights", editorial }: { hotels?: CityBookingConfig["hotels"]; category?: Category; editorial?: React.ReactNode }) {
   if (category === "hotels") return <BookingClient config={{ ...config, hotels: hotels ?? [], category: "hotels", onDemandGoogleRatings: true, bookingHref: routes.hotels,
     hotelAreaPresets: lasvegasHotelAreaPresets, pageTitle: "Find Your Las Vegas Hotel", introText: "Browse Las Vegas hotels and sign in to check current prices with the provider.", bookingTips: config.bookingTips?.filter(tip => tip.heading === "Hotels"),
     categoryRoutes: routes,
-  }} />;
+  }} editorialSection={editorial} />;
   return <BookingClient config={{ ...config, category, categoryRoutes: routes, bookingHref: routes[category],
     bannerText: titles[category], pageTitle: titles[category], introText: intros[category],
     bookingTips: config.bookingTips?.filter(tip => tip.heading !== "Hotels"),
-  }} faqSection={<FAQAccordion faqs={faqData} />} />;
+  }} editorialSection={editorial} faqSection={<FAQAccordion faqs={faqData} />} />;
 }
