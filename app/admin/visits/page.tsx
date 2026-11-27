@@ -31,9 +31,10 @@ export default async function VisitsPage({ searchParams }: Props) {
     <p><strong>{total}</strong> visits from <strong>{rows.length}</strong> IP addresses on {day}.</p>
     <div style={{ overflowX: "auto" }}>
       <table style={{ borderCollapse: "collapse", width: "100%", fontSize: 14 }}>
-        <thead><tr>{["IP", "Visits", "Last page", "Last seen", "User agent"].map(t => <th key={t} style={cell}>{t}</th>)}</tr></thead>
+        <thead><tr>{["IP", "Location", "Visits", "Last page", "Last seen", "User agent"].map(t => <th key={t} style={cell}>{t}</th>)}</tr></thead>
         <tbody>{rows.map(r => <tr key={r.ip}>
           <td style={{ ...cell, fontFamily: "monospace" }}>{r.ip}</td>
+          <td style={cell}>{r.location}</td>
           <td style={cell}>{r.count}</td>
           <td style={cell}>{r.lastPath}</td>
           <td style={{ ...cell, whiteSpace: "nowrap" }}>{r.lastSeen ? new Date(r.lastSeen).toLocaleString("en-US", { timeZone: "America/New_York" }) : ""}</td>
