@@ -79,6 +79,7 @@ return (
                 <li>Show advertising through Google AdSense</li>
             </ul>
             <p>We do not sell or rent personal information.</p>
+            <p><strong>Visit logs.</strong> When you view our hotel pages, we record your IP address, browser user agent, the page visited and the time of the visit. We use these records only to detect automated traffic, bots and abuse. They are stored with our hosting and data storage providers (Vercel and Upstash), are not used for advertising, and are deleted automatically after 30 days.</p>
         </div>
         <div className={styles.list}>
             <h2>3. Cookies and Tracking technologies</h2>
