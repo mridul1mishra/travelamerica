@@ -15,7 +15,8 @@ export function proxy(request: NextRequest, event: NextFetchEvent) {
     const city = decode(h.get("x-vercel-ip-city"));
     const location = [city, country].filter(Boolean).join(", ") || "unknown";
     event.waitUntil(
-      recordVisit(ip, request.nextUrl.pathname, h.get("user-agent") ?? "", location)
+      // Referer: the page the visitor came from (another site, or a page on this one).
+      recordVisit(ip, request.nextUrl.pathname, h.get("user-agent") ?? "", location, h.get("referer") ?? "")
         .catch(error => console.warn("Visit log failed", error instanceof Error ? error.message : error)),
     );
   }

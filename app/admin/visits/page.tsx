@@ -77,6 +77,7 @@ export default async function VisitsPage({ searchParams }: Props) {
       {timeline.length === 0 ? <p>No visits from this IP on this day.</p> : <ol style={{ paddingLeft: 20, lineHeight: 1.7 }}>
         {timeline.map((e, i) => <li key={i}>
           <span style={{ whiteSpace: "nowrap" }}>{e.time ? newYorkTime(e.time) : "earlier"}</span> — <a href={e.path}>{e.path}</a>
+          {e.referrer && <span style={{ color: "#666", fontSize: 13 }}> (from {e.referrer})</span>}
           {e.weight > 1 && <em> ({e.weight} visits, recorded before page-by-page logging)</em>}
         </li>)}
       </ol>}

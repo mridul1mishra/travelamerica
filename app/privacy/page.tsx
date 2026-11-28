@@ -80,7 +80,7 @@ return (
                 <li>Show advertising through Google AdSense</li>
             </ul>
             <p>We do not sell or rent personal information.</p>
-            <p><strong>Visit logs.</strong> When you view pages on this Site, we record your IP address, your approximate location derived from it (country and city), browser user agent, the page visited and the time of the visit. We use these records only to detect automated traffic, bots and abuse. They are stored with our hosting and data storage providers (Vercel and Upstash), are not used for advertising, and are deleted automatically after {visitRetentionDays()} {visitRetentionDays() === 1 ? "day" : "days"}.</p>
+            <p><strong>Visit logs.</strong> When you view pages on this Site, we record your IP address, your approximate location derived from it (country and city), browser user agent, the page visited, the page that referred you to it (if your browser sends one) and the time of the visit. We use these records only to detect automated traffic, bots and abuse. They are stored with our hosting and data storage providers (Vercel and Upstash), are not used for advertising, and are deleted automatically after {visitRetentionDays()} {visitRetentionDays() === 1 ? "day" : "days"}.</p>
         </div>
         <div className={styles.list}>
             <h2>3. Cookies and Tracking technologies</h2>

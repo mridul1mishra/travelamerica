@@ -1,6 +1,6 @@
 // Site visit log, stored in Upstash Redis (not Neon, so visits never wake the database).
 // Each page view is appended to one list per day (New York time):
-//   log:<YYYY-MM-DD>  ->  JSON entries { t: ISO time, ip, l: location, p: path, ua: user agent }
+//   log:<YYYY-MM-DD>  ->  JSON entries { t: ISO time, ip, l: location, p: path, ua: user agent, r: referring URL }
 // That costs 1 Upstash command per visit (plus 1 per day to set the 30-day expiry),
 // which keeps the free plan's 500K commands/month good for roughly 15K visits a day.
 // Each day's list is kept for VISIT_LOG_RETENTION_DAYS (default 30), then deleted automatically.
@@ -44,9 +44,9 @@ export function visitDay(date = new Date()): string {
 
 const logKey = (day: string) => `log:${day}`;
 
-export async function recordVisit(ip: string, path: string, userAgent: string, location: string): Promise<void> {
+export async function recordVisit(ip: string, path: string, userAgent: string, location: string, referrer = ""): Promise<void> {
   const key = logKey(visitDay());
-  const entry = JSON.stringify({ t: new Date().toISOString(), ip, l: location.slice(0, 100), p: path.slice(0, 200), ua: userAgent.slice(0, 300) });
+  const entry = JSON.stringify({ t: new Date().toISOString(), ip, l: location.slice(0, 100), p: path.slice(0, 200), ua: userAgent.slice(0, 300), r: referrer.slice(0, 300) });
   const [push] = await pipeline([["RPUSH", key, entry]]);
   // RPUSH returns the new list length; 1 means this is the day's first visit, so set the expiry once.
   if (push?.result === 1) await pipeline([["EXPIRE", key, retentionSeconds()]]);
@@ -103,6 +103,8 @@ export function newYorkTime(iso: string): string {
 
 export type VisitEntry = {
   time: string; ip: string; location: string; path: string; userAgent: string; kind: VisitorKind; label: string;
+  /** Referring URL; "" when none was sent, undefined for visits logged before referrers were recorded. */
+  referrer?: string;
   /** Visits this entry stands for: 1, or an IP's total from the older hotel-only summary format. */
   weight: number;
 };
@@ -131,8 +133,8 @@ export async function readVisitEntries(day: string): Promise<VisitEntry[]> {
   const entries: VisitEntry[] = [];
   for (const raw of Array.isArray(log.result) ? log.result as string[] : []) {
     try {
-      const e = JSON.parse(raw) as { t: string; ip: string; l: string; p: string; ua: string };
-      entries.push({ time: e.t, ip: e.ip, location: e.l, path: e.p, userAgent: e.ua, weight: 1, ...classifyVisitor(e.ua) });
+      const e = JSON.parse(raw) as { t: string; ip: string; l: string; p: string; ua: string; r?: string };
+      entries.push({ time: e.t, ip: e.ip, location: e.l, path: e.p, userAgent: e.ua, referrer: e.r, weight: 1, ...classifyVisitor(e.ua) });
     } catch { /* skip a damaged entry */ }
   }
   const counts = toMap(count.result), agents = toMap(agent.result), paths = toMap(path.result), times = toMap(seen.result), places = toMap(location.result);
@@ -174,7 +176,7 @@ export function summarizeByPage(entries: VisitEntry[]): { path: string; human: n
 
 /** Chronological log, one line per visit. */
 export function visitsAsText(day: string, entries: VisitEntry[]): string {
-  const lines = entries.map(e => [newYorkTime(e.time), e.kind, e.label, e.ip, e.location, e.path, JSON.stringify(e.userAgent)]
+  const lines = entries.map(e => [newYorkTime(e.time), e.kind, e.label, e.ip, e.location, e.path, e.referrer ?? "", JSON.stringify(e.userAgent)]
     .concat(e.weight > 1 ? [`(${e.weight} visits, earlier summary format)`] : []).join("\t"));
-  return [`# Site visits for ${day} (times in America/New_York)`, "# time\ttype\tidentified_as\tip\tlocation\tpath\tuser_agent", ...lines, ""].join("\n");
+  return [`# Site visits for ${day} (times in America/New_York)`, "# time\ttype\tidentified_as\tip\tlocation\tpath\treferrer\tuser_agent", ...lines, ""].join("\n");
 }
