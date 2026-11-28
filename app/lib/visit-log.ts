@@ -110,6 +110,8 @@ export type VisitEntry = {
 export type VisitRow = {
   ip: string; count: number; userAgent: string; lastPath: string; lastSeen: string; location: string;
   pages: number; kind: VisitorKind; label: string;
+  /** Every page this IP visited, most visited first. */
+  pageCounts: { path: string; count: number }[];
 };
 
 function toMap(result: unknown): Record<string, string> {
@@ -144,16 +146,19 @@ export async function readVisitEntries(day: string): Promise<VisitEntry[]> {
 
 /** One row per IP: visit count, distinct pages, and its latest visit. */
 export function summarizeByIp(entries: VisitEntry[]): VisitRow[] {
-  const rows = new Map<string, VisitRow & { paths: Set<string> }>();
+  const rows = new Map<string, VisitRow & { paths: Map<string, number> }>();
   for (const e of entries) {
     const row = rows.get(e.ip) ?? { ip: e.ip, userAgent: e.userAgent, location: e.location, kind: e.kind, label: e.label,
-      count: 0, pages: 0, lastPath: e.path, lastSeen: e.time, paths: new Set<string>() };
+      count: 0, pages: 0, lastPath: e.path, lastSeen: e.time, pageCounts: [], paths: new Map<string, number>() };
     row.count += e.weight;
-    row.paths.add(e.path);
+    row.paths.set(e.path, (row.paths.get(e.path) ?? 0) + e.weight);
     if (e.time >= row.lastSeen) Object.assign(row, { lastSeen: e.time, lastPath: e.path, userAgent: e.userAgent, location: e.location, kind: e.kind, label: e.label });
     rows.set(e.ip, row);
   }
-  return [...rows.values()].map(({ paths, ...row }) => ({ ...row, pages: paths.size })).sort((a, b) => b.count - a.count);
+  return [...rows.values()].map(({ paths, ...row }) => ({
+    ...row, pages: paths.size,
+    pageCounts: [...paths].map(([path, count]) => ({ path, count })).sort((a, b) => b.count - a.count),
+  })).sort((a, b) => b.count - a.count);
 }
 
 /** Visits per page, split into humans and everyone else. */

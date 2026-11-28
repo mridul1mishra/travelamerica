@@ -7,7 +7,7 @@ import { newYorkTime, readVisitEntries, summarizeByIp, summarizeByPage, visitDay
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "Site visits", robots: { index: false, follow: false } };
 
-type Props = { searchParams: Promise<{ day?: string; type?: string; view?: string }> };
+type Props = { searchParams: Promise<{ day?: string; type?: string; view?: string; ip?: string }> };
 
 const KIND: Record<VisitorKind, { text: string; color: string; background: string }> = {
   human: { text: "Human", color: "#0f5132", background: "#d1e7dd" },
@@ -22,8 +22,10 @@ export default async function VisitsPage({ searchParams }: Props) {
   const day = params.day && days.includes(params.day) ? params.day : days[0];
   const type = params.type === "human" || params.type === "bot" || params.type === "suspicious" ? params.type : "all";
   const view = params.view === "pages" ? "pages" : "visitors";
+  const ipFilter = params.ip?.trim() || "";
   const entries = visitLogEnabled() ? await readVisitEntries(day) : [];
   const all = summarizeByIp(entries);
+  const timeline = ipFilter ? entries.filter(e => e.ip === ipFilter) : [];
   const pages = summarizeByPage(entries);
   const rows = type === "all" ? all : all.filter(r => r.kind === type);
 
@@ -69,6 +71,17 @@ export default async function VisitsPage({ searchParams }: Props) {
     {botNames.length > 0 && <p style={{ fontSize: 14 }}>Bots: {botNames.map(([name, n]) => `${name} (${n})`).join(", ")}</p>}
     <p style={{ fontSize: 13, color: "#555" }}>Labels are a best guess from the browser&apos;s user agent. Bots can pretend to be browsers, so &quot;Human&quot; means &quot;no sign of a bot&quot;.</p>
 
+    {ipFilter && <section style={{ margin: "16px 0 24px" }}>
+      <h2 style={{ fontSize: 18 }}>Timeline for <code>{ipFilter}</code> on {day}</h2>
+      <p><a href={`/admin/visits?day=${day}&type=${type}&view=${view}`}>← Back to all visitors</a></p>
+      {timeline.length === 0 ? <p>No visits from this IP on this day.</p> : <ol style={{ paddingLeft: 20, lineHeight: 1.7 }}>
+        {timeline.map((e, i) => <li key={i}>
+          <span style={{ whiteSpace: "nowrap" }}>{e.time ? newYorkTime(e.time) : "earlier"}</span> — <a href={e.path}>{e.path}</a>
+          {e.weight > 1 && <em> ({e.weight} visits, recorded before page-by-page logging)</em>}
+        </li>)}
+      </ol>}
+    </section>}
+
     {view === "pages" && <div style={{ overflowX: "auto" }}>
       <table style={{ borderCollapse: "collapse", width: "100%", fontSize: 14 }}>
         <thead><tr>{["Page", "Human visits", "Bot and suspicious visits"].map(t => <th key={t} style={cell}>{t}</th>)}</tr></thead>
@@ -88,10 +101,17 @@ export default async function VisitsPage({ searchParams }: Props) {
             <span style={{ padding: "2px 8px", borderRadius: 999, fontSize: 12, background: KIND[r.kind].background, color: KIND[r.kind].color }}>{KIND[r.kind].text}</span>
             <div style={{ fontSize: 12, color: "#555", marginTop: 4 }}>{r.label}</div>
           </td>
-          <td style={{ ...cell, fontFamily: "monospace" }}>{r.ip}</td>
+          <td style={{ ...cell, fontFamily: "monospace" }}><a href={`/admin/visits?day=${day}&type=${type}&view=${view}&ip=${encodeURIComponent(r.ip)}`} title="Show this visitor's timeline">{r.ip}</a></td>
           <td style={cell}>{r.location}</td>
           <td style={cell}>{r.count}</td>
-          <td style={cell}>{r.pages}</td>
+          <td style={cell}>
+            <details>
+              <summary style={{ cursor: "pointer" }}>{r.pages}</summary>
+              <ul style={{ margin: "6px 0 0", paddingLeft: 16, fontSize: 13, minWidth: 220 }}>
+                {r.pageCounts.map(p => <li key={p.path}><a href={p.path}>{p.path}</a> × {p.count}</li>)}
+              </ul>
+            </details>
+          </td>
           <td style={cell}>{r.lastPath}</td>
           <td style={{ ...cell, whiteSpace: "nowrap" }}>{newYorkTime(r.lastSeen)}</td>
           <td style={{ ...cell, fontSize: 12, wordBreak: "break-word" }}>{r.userAgent}</td>
