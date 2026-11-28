@@ -11,6 +11,8 @@ CREATE TABLE IF NOT EXISTS member_user (
 );
 -- Existing member rows remain valid; phone is optional profile data, not SMS authentication.
 ALTER TABLE member_user ADD COLUMN IF NOT EXISTS phone TEXT;
+-- IP address the account was registered from (set once at sign-up; never changes).
+ALTER TABLE member_user ADD COLUMN IF NOT EXISTS registration_ip TEXT;
 
 CREATE TABLE IF NOT EXISTS member_session (
   id TEXT PRIMARY KEY,

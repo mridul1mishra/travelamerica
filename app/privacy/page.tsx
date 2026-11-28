@@ -53,7 +53,7 @@ return (
       <article className={`prose ${styles.prose}`} aria-label="Terms and conditions">
         <div className={styles.list}>
         <h2>1. Information we collect</h2>
-        <p>When you register or sign in, we collect your name, email address, its verification status, and session records to provide account access. You may also provide an optional phone number for your account profile; it is not used for SMS sign-in or marketing. Passwords are stored as secure hashes, rather than readable passwords. We send temporary email verification, sign-in, and password reset codes through our email provider, SMTP2GO. Registration does not subscribe you to marketing emails; newsletter signup is separate. We also collect</p>
+        <p>When you register or sign in, we collect your name, email address, its verification status, the IP address you registered from, and session records (including the IP address and browser used to sign in) to provide account access and protect accounts from abuse. You may also provide an optional phone number for your account profile; it is not used for SMS sign-in or marketing. Passwords are stored as secure hashes, rather than readable passwords. We send temporary email verification, sign-in, and password reset codes through our email provider, SMTP2GO. Registration does not subscribe you to marketing emails; newsletter signup is separate. We also collect</p>
         <ul>
             <li>Information automatically collected
             <ul>

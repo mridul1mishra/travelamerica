@@ -1,4 +1,5 @@
 import "server-only";
+import { isIP } from "node:net";
 
 import { betterAuth, type BetterAuthOptions } from "better-auth";
 import { APIError, createAuthMiddleware } from "better-auth/api";
@@ -158,6 +159,8 @@ export function createMemberAuth(
       fields: { emailVerified: "email_verified", createdAt: "created_at", updatedAt: "updated_at" },
       additionalFields: {
         phone: { type: "string", required: false, input: true, transform: { input: memberPhone } },
+        // Set by the server at sign-up (input: false: clients can't supply it).
+        registrationIp: { type: "string", required: false, input: false, returned: false, fieldName: "registration_ip" },
       },
       changeEmail: { enabled: false },
       deleteUser: { enabled: true },
@@ -267,7 +270,10 @@ export function createMemberAuth(
     databaseHooks: {
       user: {
         create: {
-          before: async (user) => ({ data: { ...user, name: memberName(user.name), phone: memberPhone(user.phone) } }),
+          before: async (user, context) => ({ data: {
+            ...user, name: memberName(user.name), phone: memberPhone(user.phone),
+            registrationIp: requestIp(context?.request?.headers ?? context?.headers),
+          } }),
           after: async (user) => {
             try { await notifyRegistration({ name: user.name, email: user.email }); }
             catch { console.error("[member-auth] REGISTRATION_NOTIFICATION_FAILED"); }
@@ -294,6 +300,12 @@ export function createMemberAuth(
       },
     })],
   });
+}
+
+/** Visitor IP from Vercel's trusted headers (x-real-ip, else the first x-forwarded-for entry). */
+function requestIp(headers: Headers | undefined): string | null {
+  const raw = headers?.get("x-real-ip") || headers?.get("x-forwarded-for")?.split(",")[0]?.trim() || "";
+  return isIP(raw) ? raw : null;
 }
 
 const globalDatabase = globalThis as typeof globalThis & { memberAuthPool?: Pool };
