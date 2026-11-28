@@ -174,6 +174,27 @@ export function summarizeByPage(entries: VisitEntry[]): { path: string; human: n
   return [...pages.values()].sort((a, b) => b.human - a.human || b.other - a.other);
 }
 
+// Our own domains: a referrer from these is a move within the site, not a traffic source.
+const SITE_DOMAINS = ["travelsamericas.com", "travelamerica.work"];
+
+/** Where visitors came from: referring site per page view, split into humans and everyone else.
+ *  Only page views recorded after referrer logging started are counted; moves within the site are skipped. */
+export function summarizeBySource(entries: VisitEntry[]): { source: string; human: number; other: number }[] {
+  const sources = new Map<string, { source: string; human: number; other: number }>();
+  for (const e of entries) {
+    if (e.referrer === undefined) continue;
+    let source = "(direct / no referrer)";
+    if (e.referrer) {
+      try { source = new URL(e.referrer).hostname.replace(/^www\./, "").toLowerCase(); } catch { source = "(unknown)"; }
+      if (SITE_DOMAINS.some(d => source === d || source.endsWith(`.${d}`))) continue;
+    }
+    const row = sources.get(source) ?? { source, human: 0, other: 0 };
+    if (e.kind === "human") row.human += 1; else row.other += 1;
+    sources.set(source, row);
+  }
+  return [...sources.values()].sort((a, b) => b.human - a.human || b.other - a.other);
+}
+
 /** Chronological log, one line per visit. */
 export function visitsAsText(day: string, entries: VisitEntry[]): string {
   const lines = entries.map(e => [newYorkTime(e.time), e.kind, e.label, e.ip, e.location, e.path, e.referrer ?? "", JSON.stringify(e.userAgent)]

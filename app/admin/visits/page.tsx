@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { isAdmin } from "@/app/lib/admin";
-import { newYorkTime, readVisitEntries, summarizeByIp, summarizeByPage, visitDay, visitLogEnabled, visitRetentionDays, type VisitorKind } from "@/app/lib/visit-log";
+import { newYorkTime, readVisitEntries, summarizeByIp, summarizeByPage, summarizeBySource, visitDay, visitLogEnabled, visitRetentionDays, type VisitorKind } from "@/app/lib/visit-log";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { title: "Site visits", robots: { index: false, follow: false } };
@@ -21,12 +21,14 @@ export default async function VisitsPage({ searchParams }: Props) {
   const params = await searchParams;
   const day = params.day && days.includes(params.day) ? params.day : days[0];
   const type = params.type === "human" || params.type === "bot" || params.type === "suspicious" ? params.type : "all";
-  const view = params.view === "pages" ? "pages" : "visitors";
+  const view = params.view === "pages" ? "pages" : params.view === "sources" ? "sources" : "visitors";
   const ipFilter = params.ip?.trim() || "";
   const entries = visitLogEnabled() ? await readVisitEntries(day) : [];
   const all = summarizeByIp(entries);
   const timeline = ipFilter ? entries.filter(e => e.ip === ipFilter) : [];
   const pages = summarizeByPage(entries);
+  const sources = summarizeBySource(entries);
+  const untracked = entries.filter(e => e.referrer === undefined).reduce((sum, e) => sum + e.weight, 0);
   const rows = type === "all" ? all : all.filter(r => r.kind === type);
 
   const summary = (kind: VisitorKind) => {
@@ -53,7 +55,7 @@ export default async function VisitsPage({ searchParams }: Props) {
       </label>
       <label>View{" "}
         <select name="view" defaultValue={view}>
-          <option value="visitors">Visitors (by IP)</option><option value="pages">Pages</option>
+          <option value="visitors">Visitors (by IP)</option><option value="pages">Pages</option><option value="sources">Sources</option>
         </select>
       </label>
       <button type="submit">Show</button>
@@ -82,6 +84,18 @@ export default async function VisitsPage({ searchParams }: Props) {
         </li>)}
       </ol>}
     </section>}
+
+    {view === "sources" && <div style={{ overflowX: "auto" }}>
+      <p style={{ fontSize: 13, color: "#555" }}>Where page views came from: the referring site, or none (typed address, bookmark, app).
+        Moves within this site are not counted.{untracked > 0 && ` ${untracked} visits on this day were logged before referrers were recorded and aren't included.`}</p>
+      {sources.length === 0 ? <p>No referrer data for this day yet.</p> :
+      <table style={{ borderCollapse: "collapse", width: "100%", fontSize: 14 }}>
+        <thead><tr>{["Source", "Human visits", "Bot and suspicious visits"].map(t => <th key={t} style={cell}>{t}</th>)}</tr></thead>
+        <tbody>{sources.map(s => <tr key={s.source}>
+          <td style={cell}>{s.source}</td><td style={cell}>{s.human}</td><td style={cell}>{s.other}</td>
+        </tr>)}</tbody>
+      </table>}
+    </div>}
 
     {view === "pages" && <div style={{ overflowX: "auto" }}>
       <table style={{ borderCollapse: "collapse", width: "100%", fontSize: 14 }}>
