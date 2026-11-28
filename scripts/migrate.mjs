@@ -20,6 +20,7 @@ const pool = new Pool({
   connectionString: DATABASE_URL,
   ssl: { rejectUnauthorized: false },
   max: 1,
+  connectionTimeoutMillis: 15000,
 });
 
 const migrations = [
@@ -80,7 +81,19 @@ const migrations = [
 ];
 
 async function migrate() {
-  const client = await pool.connect();
+  let client;
+  try {
+    client = await pool.connect();
+  } catch (err) {
+    // The database can be unreachable (e.g. Neon compute quota used up). Don't block
+    // the deploy: the site serves cached data and the JSON hotel backup. Migrations
+    // run on the next build that can connect. A migration that fails AFTER connecting
+    // still stops the build below.
+    console.warn('\n⚠️  Database unreachable, skipping migrations for this build:', err.message);
+    console.warn('   Schema changes in this deploy will NOT be applied until a later build connects.\n');
+    await pool.end().catch(() => {});
+    process.exit(0);
+  }
   try {
     for (const { name, sql } of migrations) {
       console.log(`  → Running migration: ${name}`);

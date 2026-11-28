@@ -1,8 +1,20 @@
-// Hotel page visit log, stored in Upstash Redis (not Neon, so visits never wake the database).
-// Per day (New York time) it keeps, for each IP: visit count, last user agent,
-// last path, last visit time and approximate location (country/city from Vercel's IP lookup). Each day's data expires after 30 days.
+// Site visit log, stored in Upstash Redis (not Neon, so visits never wake the database).
+// Each page view is appended to one list per day (New York time):
+//   log:<YYYY-MM-DD>  ->  JSON entries { t: ISO time, ip, l: location, p: path, ua: user agent }
+// That costs 1 Upstash command per visit (plus 1 per day to set the 30-day expiry),
+// which keeps the free plan's 500K commands/month good for roughly 15K visits a day.
+// Each day's list is kept for VISIT_LOG_RETENTION_DAYS (default 30), then deleted automatically.
+// Lists from the earlier hotel-only version (visits:<day> hashes) are still read until they expire.
 
-const RETENTION_SECONDS = 31 * 24 * 60 * 60;
+/** Days of visit data to keep, from VISIT_LOG_RETENTION_DAYS (1-90, default 30). */
+export function visitRetentionDays(): number {
+  const days = Number.parseInt(process.env.VISIT_LOG_RETENTION_DAYS ?? "", 10);
+  return Number.isFinite(days) ? Math.min(Math.max(days, 1), 90) : 30;
+}
+
+// The expiry starts at the day's first visit (just after midnight), so one extra day
+// keeps the last N complete days available. A change applies to days logged after it.
+const retentionSeconds = () => (visitRetentionDays() + 1) * 24 * 60 * 60;
 
 function redisConfig() {
   const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
@@ -30,23 +42,15 @@ export function visitDay(date = new Date()): string {
   return new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(date);
 }
 
-const keys = (day: string) => ({
-  count: `visits:${day}`, agent: `visits:${day}:agent`, path: `visits:${day}:path`, seen: `visits:${day}:seen`,
-  location: `visits:${day}:location`,
-});
+const logKey = (day: string) => `log:${day}`;
 
-export async function recordHotelVisit(ip: string, path: string, userAgent: string, location: string): Promise<void> {
-  const k = keys(visitDay());
-  await pipeline([
-    ["HINCRBY", k.count, ip, 1],
-    ["HSET", k.agent, ip, userAgent.slice(0, 300)],
-    ["HSET", k.path, ip, path.slice(0, 200)],
-    ["HSET", k.seen, ip, new Date().toISOString()],
-    ["HSET", k.location, ip, location.slice(0, 100)],
-    ...Object.values(k).map(key => ["EXPIRE", key, RETENTION_SECONDS]),
-  ]);
+export async function recordVisit(ip: string, path: string, userAgent: string, location: string): Promise<void> {
+  const key = logKey(visitDay());
+  const entry = JSON.stringify({ t: new Date().toISOString(), ip, l: location.slice(0, 100), p: path.slice(0, 200), ua: userAgent.slice(0, 300) });
+  const [push] = await pipeline([["RPUSH", key, entry]]);
+  // RPUSH returns the new list length; 1 means this is the day's first visit, so set the expiry once.
+  if (push?.result === 1) await pipeline([["EXPIRE", key, retentionSeconds()]]);
 }
-
 
 export type VisitorKind = "human" | "bot" | "suspicious";
 
@@ -97,9 +101,15 @@ export function newYorkTime(iso: string): string {
     : date.toLocaleString("en-US", { timeZone: "America/New_York", dateStyle: "medium", timeStyle: "medium" });
 }
 
+export type VisitEntry = {
+  time: string; ip: string; location: string; path: string; userAgent: string; kind: VisitorKind; label: string;
+  /** Visits this entry stands for: 1, or an IP's total from the older hotel-only summary format. */
+  weight: number;
+};
+
 export type VisitRow = {
   ip: string; count: number; userAgent: string; lastPath: string; lastSeen: string; location: string;
-  kind: VisitorKind; label: string;
+  pages: number; kind: VisitorKind; label: string;
 };
 
 function toMap(result: unknown): Record<string, string> {
@@ -109,17 +119,57 @@ function toMap(result: unknown): Record<string, string> {
   return map;
 }
 
-export async function readVisits(day: string): Promise<VisitRow[]> {
-  const k = keys(day);
-  const [count, agent, path, seen, location] = (await pipeline([
-    ["HGETALL", k.count], ["HGETALL", k.agent], ["HGETALL", k.path], ["HGETALL", k.seen], ["HGETALL", k.location],
-  ])).map(entry => toMap(entry.result));
-  return Object.entries(count)
-    .map(([ip, value]) => ({ ip, count: Number(value) || 0, userAgent: agent[ip] ?? "", lastPath: path[ip] ?? "", lastSeen: seen[ip] ?? "", location: location[ip] ?? "", ...classifyVisitor(agent[ip] ?? "") }))
-    .sort((a, b) => b.count - a.count);
+/** Every visit for a day, oldest first. Older hotel-only data (one summary per IP) is included as single entries. */
+export async function readVisitEntries(day: string): Promise<VisitEntry[]> {
+  const legacy = `visits:${day}`;
+  const [log, count, agent, path, seen, location] = await pipeline([
+    ["LRANGE", logKey(day), 0, -1],
+    ["HGETALL", legacy], ["HGETALL", `${legacy}:agent`], ["HGETALL", `${legacy}:path`], ["HGETALL", `${legacy}:seen`], ["HGETALL", `${legacy}:location`],
+  ]);
+  const entries: VisitEntry[] = [];
+  for (const raw of Array.isArray(log.result) ? log.result as string[] : []) {
+    try {
+      const e = JSON.parse(raw) as { t: string; ip: string; l: string; p: string; ua: string };
+      entries.push({ time: e.t, ip: e.ip, location: e.l, path: e.p, userAgent: e.ua, weight: 1, ...classifyVisitor(e.ua) });
+    } catch { /* skip a damaged entry */ }
+  }
+  const counts = toMap(count.result), agents = toMap(agent.result), paths = toMap(path.result), times = toMap(seen.result), places = toMap(location.result);
+  for (const [ip, value] of Object.entries(counts)) {
+    entries.push({ time: times[ip] ?? "", ip, location: places[ip] ?? "", path: paths[ip] ?? "", userAgent: agents[ip] ?? "",
+      weight: Number(value) || 1, ...classifyVisitor(agents[ip] ?? "") });
+  }
+  entries.sort((a, b) => a.time.localeCompare(b.time));
+  return entries;
 }
 
-export function visitsAsText(day: string, rows: VisitRow[]): string {
-  const lines = rows.map(r => [newYorkTime(r.lastSeen), r.kind, r.label, r.ip, r.location, r.count, r.lastPath, JSON.stringify(r.userAgent)].join("\t"));
-  return [`# Hotel page visits for ${day} (America/New_York)`, "# last_seen (New York time)\ttype\tidentified_as\tip\tlocation\tcount\tlast_path\tuser_agent", ...lines, ""].join("\n");
+/** One row per IP: visit count, distinct pages, and its latest visit. */
+export function summarizeByIp(entries: VisitEntry[]): VisitRow[] {
+  const rows = new Map<string, VisitRow & { paths: Set<string> }>();
+  for (const e of entries) {
+    const row = rows.get(e.ip) ?? { ip: e.ip, userAgent: e.userAgent, location: e.location, kind: e.kind, label: e.label,
+      count: 0, pages: 0, lastPath: e.path, lastSeen: e.time, paths: new Set<string>() };
+    row.count += e.weight;
+    row.paths.add(e.path);
+    if (e.time >= row.lastSeen) Object.assign(row, { lastSeen: e.time, lastPath: e.path, userAgent: e.userAgent, location: e.location, kind: e.kind, label: e.label });
+    rows.set(e.ip, row);
+  }
+  return [...rows.values()].map(({ paths, ...row }) => ({ ...row, pages: paths.size })).sort((a, b) => b.count - a.count);
+}
+
+/** Visits per page, split into humans and everyone else. */
+export function summarizeByPage(entries: VisitEntry[]): { path: string; human: number; other: number }[] {
+  const pages = new Map<string, { path: string; human: number; other: number }>();
+  for (const e of entries) {
+    const page = pages.get(e.path) ?? { path: e.path, human: 0, other: 0 };
+    if (e.kind === "human") page.human += e.weight; else page.other += e.weight;
+    pages.set(e.path, page);
+  }
+  return [...pages.values()].sort((a, b) => b.human - a.human || b.other - a.other);
+}
+
+/** Chronological log, one line per visit. */
+export function visitsAsText(day: string, entries: VisitEntry[]): string {
+  const lines = entries.map(e => [newYorkTime(e.time), e.kind, e.label, e.ip, e.location, e.path, JSON.stringify(e.userAgent)]
+    .concat(e.weight > 1 ? [`(${e.weight} visits, earlier summary format)`] : []).join("\t"));
+  return [`# Site visits for ${day} (times in America/New_York)`, "# time\ttype\tidentified_as\tip\tlocation\tpath\tuser_agent", ...lines, ""].join("\n");
 }

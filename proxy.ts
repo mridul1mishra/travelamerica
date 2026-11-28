@@ -1,8 +1,9 @@
 import { NextResponse, type NextFetchEvent, type NextRequest } from "next/server";
-import { recordHotelVisit, visitLogEnabled } from "@/app/lib/visit-log";
+import { recordVisit, visitLogEnabled } from "@/app/lib/visit-log";
 
-// Runs before Vercel's cache, so cached hotel pages are still counted.
-// Logging happens after the response is sent and never blocks or breaks the page.
+// Logs every page view (see app/lib/visit-log.ts). Runs before Vercel's cache, so
+// cached pages are still counted. Logging happens after the response is sent and
+// never blocks or breaks the page.
 export function proxy(request: NextRequest, event: NextFetchEvent) {
   const h = request.headers;
   const prefetch = h.has("next-router-prefetch") || /prefetch/i.test(h.get("purpose") ?? "") || /prefetch/i.test(h.get("sec-purpose") ?? "");
@@ -14,7 +15,7 @@ export function proxy(request: NextRequest, event: NextFetchEvent) {
     const city = decode(h.get("x-vercel-ip-city"));
     const location = [city, country].filter(Boolean).join(", ") || "unknown";
     event.waitUntil(
-      recordHotelVisit(ip, request.nextUrl.pathname, h.get("user-agent") ?? "", location)
+      recordVisit(ip, request.nextUrl.pathname, h.get("user-agent") ?? "", location)
         .catch(error => console.warn("Visit log failed", error instanceof Error ? error.message : error)),
     );
   }
@@ -22,5 +23,7 @@ export function proxy(request: NextRequest, event: NextFetchEvent) {
 }
 
 export const config = {
-  matcher: ["/destination/:city/hotel", "/destination/:city/hotel/:hotelId"],
+  // Every page except API routes, Next.js internals, the admin area and files
+  // (anything with a dot: images, robots.txt, sitemap.xml, favicon.ico, ...).
+  matcher: ["/((?!api/|_next/|admin(?:/|$)|.*\\.[^/]*$).*)"],
 };
