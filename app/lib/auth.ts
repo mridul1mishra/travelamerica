@@ -6,6 +6,7 @@ import { APIError, createAuthMiddleware } from "better-auth/api";
 import { emailOTP } from "better-auth/plugins";
 import { Pool } from "pg";
 import { notifyMemberRegistration } from "./member-registration-notification";
+import { sendGuideWelcomeIfDue } from "./guide-emails";
 
 const PRODUCTION_ORIGINS = [
   "https://www.travelsamericas.com",
@@ -126,6 +127,7 @@ export function createMemberAuth(
   config: MemberAuthConfig,
   sendOTP: (data: MemberOTP) => Promise<void>,
   notifyRegistration: (member: { name: string; email: string }) => Promise<void> = async () => {},
+  onMemberVerified: (userId: string) => Promise<void> = async () => {},
 ) {
   requireConfiguredOriginsOnly();
   if (!config.secret || config.secret.trim().length < 32 || !config.database) {
@@ -161,6 +163,13 @@ export function createMemberAuth(
         phone: { type: "string", required: false, input: true, transform: { input: memberPhone } },
         // Set by the server at sign-up (input: false: clients can't supply it).
         registrationIp: { type: "string", required: false, input: false, returned: false, fieldName: "registration_ip" },
+        // Guide emails (see app/lib/guide-emails.ts). Server-set only; never returned to the browser.
+        guideEmailsConsentAt: { type: "date", required: false, input: false, returned: false, fieldName: "guide_emails_consent_at" },
+        guideEmailsSource: { type: "string", required: false, input: false, returned: false, fieldName: "guide_emails_source" },
+        guideEmailsConsentIp: { type: "string", required: false, input: false, returned: false, fieldName: "guide_emails_consent_ip" },
+        dripStep: { type: "number", required: false, input: false, returned: false, defaultValue: 1, fieldName: "drip_step" },
+        lastDripSentAt: { type: "date", required: false, input: false, returned: false, fieldName: "last_drip_sent_at" },
+        unsubscribedAt: { type: "date", required: false, input: false, returned: false, fieldName: "unsubscribed_at" },
       },
       changeEmail: { enabled: false },
       deleteUser: { enabled: true },
@@ -270,13 +279,31 @@ export function createMemberAuth(
     databaseHooks: {
       user: {
         create: {
-          before: async (user, context) => ({ data: {
-            ...user, name: memberName(user.name), phone: memberPhone(user.phone),
-            registrationIp: requestIp(context?.request?.headers ?? context?.headers),
-          } }),
+          before: async (user, context) => {
+            const headers = context?.request?.headers ?? context?.headers;
+            const ip = requestIp(headers);
+            return { data: {
+              ...user, name: memberName(user.name), phone: memberPhone(user.phone),
+              registrationIp: ip,
+              guideEmailsConsentAt: new Date(),
+              guideEmailsSource: guideSourceFromReferer(headers),
+              guideEmailsConsentIp: ip,
+              dripStep: 1,
+              lastDripSentAt: null,
+              unsubscribedAt: null,
+            } };
+          },
           after: async (user) => {
             try { await notifyRegistration({ name: user.name, email: user.email }); }
             catch { console.error("[member-auth] REGISTRATION_NOTIFICATION_FAILED"); }
+          },
+        },
+        update: {
+          // Once the email is verified, send the travel guide (only if not sent yet; see onMemberVerified).
+          after: async (user) => {
+            if (user.emailVerified !== true) return;
+            try { await onMemberVerified(user.id); }
+            catch { console.error("[member-auth] GUIDE_WELCOME_FAILED"); }
           },
         },
       },
@@ -306,6 +333,20 @@ export function createMemberAuth(
 function requestIp(headers: Headers | undefined): string | null {
   const raw = headers?.get("x-real-ip") || headers?.get("x-forwarded-for")?.split(",")[0]?.trim() || "";
   return isIP(raw) ? raw : null;
+}
+
+/**
+ * Which guide a new member gets: the ?source= of the /register link they came through (set by the
+ * guide signup boxes, e.g. "la-safety-guide"), else "register". The sign-up request is sent from
+ * the /register page on this site, so its Referer carries that link.
+ */
+function guideSourceFromReferer(headers: Headers | undefined): string {
+  try {
+    const source = new URL(headers?.get("referer") ?? "").searchParams.get("source")?.trim().toLowerCase() ?? "";
+    return /^[a-z0-9][a-z0-9-]{0,79}$/.test(source) ? source : "register";
+  } catch {
+    return "register";
+  }
 }
 
 const globalDatabase = globalThis as typeof globalThis & { memberAuthPool?: Pool };
@@ -398,7 +439,7 @@ export function getAuth() {
     trustedIPHeader: process.env.VERCEL === "1"
       ? "x-vercel-forwarded-for"
       : process.env.AUTH_TRUST_CLOUDFLARE_PROXY === "true" ? "cf-connecting-ip" : undefined,
-  }, sendOTP, notifyMemberRegistration);
+  }, sendOTP, notifyMemberRegistration, (userId) => sendGuideWelcomeIfDue(memberDatabase(databaseURL), userId));
   return memberAuth;
 }
 

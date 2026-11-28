@@ -36,17 +36,19 @@ function PasswordField({ id, label = "Password", value, onChange, disabled, newP
   </>;
 }
 
-export default function MemberAuthForm({ returnTo, mode, action, verified = false }: {
+export default function MemberAuthForm({ returnTo, mode, action, verified = false, initialEmail = "" }: {
   returnTo: string;
   mode: Mode;
   action?: "rating" | "prices";
   verified?: boolean;
+  /** Pre-filled email, e.g. from a guide signup box on a guide page. */
+  initialEmail?: string;
 }) {
   const { member, pending, email: memberEmail, refresh, invalidate } = useMember();
   const [method, setMethod] = useState<"password" | "code">("password");
   const [stage, setStage] = useState<Stage>("details");
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(initialEmail);
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
@@ -304,7 +306,7 @@ export default function MemberAuthForm({ returnTo, mode, action, verified = fals
         value={phone} disabled={busy} onChange={event => setPhone(event.target.value)} aria-describedby="member-phone-note member-form-error" />
       <p id="member-phone-note" className={styles.helper}>Include your country code, for example +1 212 555 0123.</p>
       <PasswordField id="member-password" value={password} onChange={setPassword} disabled={busy} newPassword />
-      <p className={styles.helper}>Verify your email next to finish your free registration.</p>
+      <p className={styles.helper}>Verify your email next to finish your free registration. Once your account is created, we&apos;ll email you our travel guide, followed by a few more travel guide emails. Unsubscribe anytime. See our <Link prefetch={false} href="/termsandcondition">Terms</Link> and <Link prefetch={false} href="/privacy">Privacy Policy</Link>.</p>
       <button className={styles.primaryButton} type="submit" disabled={busy || pending}>{busy ? "Creating account…" : pending ? "Please wait…" : "Create account"}</button>
     </form>}
 

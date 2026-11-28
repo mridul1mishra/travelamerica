@@ -43,9 +43,16 @@ export async function GET(req: NextRequest) {
 
   const client = await pool.connect();
   try {
+    const address = email.toLowerCase().trim();
+    // Members (guide emails) and the old newsletter list (archived; it only received the
+    // one-time policy notice from scripts/send-policy-notice.mjs).
     await client.query(
-      `UPDATE subscribers SET unsubscribed_at = NOW() WHERE email = $1 AND unsubscribed_at IS NULL`,
-      [email.toLowerCase().trim()]
+      `UPDATE member_user SET unsubscribed_at = NOW(), updated_at = NOW() WHERE email = $1 AND unsubscribed_at IS NULL`,
+      [address]
+    );
+    await client.query(
+      `UPDATE subscribers SET unsubscribed_at = NOW() WHERE lower(email) = $1 AND unsubscribed_at IS NULL`,
+      [address]
     );
     return new NextResponse(
       unsubscribePage(

@@ -1,8 +1,15 @@
 'use client';
 
-import Script from 'next/script';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import styles from './EmailSignup.module.css';
+
+// Sign-ups happen on /register (the one signup form). The box passes on the email and the page
+// it was on, so the form is pre-filled and the guide matches what the visitor was reading.
+function registerLink(email: string, source: string): string {
+  const params = new URLSearchParams({ email: email.trim(), source, next: window.location.pathname });
+  return `/register?${params}`;
+}
+
 
 declare global {
   interface Window {
@@ -41,35 +48,7 @@ export default function EmailSignup({
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
   const [hasStarted, setHasStarted] = useState(false);
-  const [turnstileToken, setTurnstileToken] = useState('');
-  const [turnstileReady, setTurnstileReady] = useState(false);
-  const formStartedAt = useRef(0);
-  const turnstileElement = useRef<HTMLDivElement>(null);
-  const turnstileWidget = useRef<string | null>(null);
-  const honeypot = useRef<HTMLInputElement>(null);
-  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
-  useEffect(() => {
-    formStartedAt.current = Date.now();
-  }, []);
-
-  useEffect(() => {
-    if (!turnstileSiteKey || !turnstileReady || !turnstileElement.current || !window.turnstile) return;
-    if (turnstileWidget.current) return;
-
-    turnstileWidget.current = window.turnstile.render(turnstileElement.current, {
-      sitekey: turnstileSiteKey,
-      callback: (token: string) => setTurnstileToken(token),
-      'expired-callback': () => setTurnstileToken(''),
-      'error-callback': () => setTurnstileToken(''),
-      appearance: 'interaction-only',
-    });
-
-    return () => {
-      if (turnstileWidget.current && window.turnstile) window.turnstile.remove(turnstileWidget.current);
-      turnstileWidget.current = null;
-    };
-  }, [turnstileReady, turnstileSiteKey]);
 
   function track(eventName: 'email_signup_start' | 'email_signup' | 'email_signup_error') {
     if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
@@ -100,43 +79,12 @@ export default function EmailSignup({
       return;
     }
 
-    if (turnstileSiteKey && !turnstileToken) {
-      setErrorMsg('Please complete the security verification and try again.');
-      setStatus('error');
-      track('email_signup_error');
-      return;
-    }
 
     setStatus('loading');
     setErrorMsg('');
 
-    try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email,
-          source,
-          website: honeypot.current?.value ?? '',
-          formStartedAt: formStartedAt.current,
-          turnstileToken,
-        }),
-      });
-      const data = await res.json();
-
-      if (!res.ok) {
-        setErrorMsg(data.message || 'Something went wrong. Please try again.');
-        setStatus('error');
-        track('email_signup_error');
-      } else {
-        setStatus('success');
-        track('email_signup');
-      }
-    } catch {
-      setErrorMsg('Network error. Please try again.');
-      setStatus('error');
-      track('email_signup_error');
-    }
+    track('email_signup');
+    window.location.assign(registerLink(email, source));
   }
 
   if (status === 'success') {
@@ -157,25 +105,15 @@ export default function EmailSignup({
 
   return (
     <div className={styles.wrapper}>
-      {turnstileSiteKey && (
-        <Script
-          src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
-          strategy="afterInteractive"
-          onReady={() => setTurnstileReady(true)}
-        />
-      )}
       <div className={styles.card}>
         <div className={styles.pdfIcon} aria-hidden="true">📄</div>
         <div className={styles.copy}>
           <p className={styles.headline}>{headline || `Get your free ${city} 3-day itinerary`}</p>
           <p className={styles.sub}>
-            {subheadline || 'Day-by-day plan, packing list, and budget breakdown. Free PDF, sent instantly.'}
+            {subheadline || 'Day-by-day plan, packing list, and budget breakdown. Free with a Travels Americas account.'}
           </p>
         </div>
         <form className={styles.form} onSubmit={handleSubmit} noValidate>
-          <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}>
-            <label>Website<input ref={honeypot} name="website" type="text" tabIndex={-1} autoComplete="off" /></label>
-          </div>
           <input
             className={styles.input}
             type="email"
@@ -191,12 +129,11 @@ export default function EmailSignup({
             type="submit"
             disabled={status === 'loading'}
           >
-            {status === 'loading' ? 'Sending...' : buttonLabel || 'Send it free'}
+            {status === 'loading' ? 'Sending...' : buttonLabel || 'Get it free'}
           </button>
-          {turnstileSiteKey && <div className={styles.turnstile} ref={turnstileElement} />}
         </form>
         {status === 'error' && <p className={styles.errorMsg}>{errorMsg}</p>}
-        <p className={styles.disclaimer}>Get the PDF plus a short {city} planning email series. Unsubscribe anytime.</p>
+        <p className={styles.disclaimer}>Next, create your free account. Once it&apos;s set up, we&apos;ll email you the {city} travel guide, followed by a few more {city} travel guide emails. Unsubscribe anytime. See our <a href="/termsandcondition">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
       </div>
     </div>
   );

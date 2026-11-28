@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { startGuideEmails } from '@/app/lib/guide-emails';
 import { Pool } from 'pg';
 import { createUnsubscribeToken } from '@/app/lib/unsubscribeToken';
 
@@ -312,14 +313,31 @@ export async function GET(req: NextRequest) {
   let sent = 0, skipped = 0, errors = 0;
 
   try {
-    const { rows } = await client.query<{ id: number; email: string; drip_step: number }>(`
+    // Retry the welcome guide for verified members who didn't get it (e.g. the email service was down).
+    const { rows: welcomeDue } = await client.query<{ id: string; email: string; guide_emails_source: string | null }>(`
+      SELECT u.id, u.email, u.guide_emails_source FROM member_user u
+      WHERE u.drip_step <= 1 AND u.guide_emails_consent_at IS NOT NULL AND u.unsubscribed_at IS NULL
+        AND u.guide_emails_consent_at <= NOW() - INTERVAL '1 hour'
+        AND u.email_verified
+    `);
+    for (const row of welcomeDue) {
+      try { if (await startGuideEmails(client, row.id, row.email, row.guide_emails_source ?? 'register')) sent++; else errors++; }
+      catch (err) { console.error(`Welcome retry error for ${row.email}:`, err); errors++; }
+    }
+
+    // Everyone on the guide-email list: verified members with consent who haven't unsubscribed.
+    // Members who registered before guide emails existed have no consent and are never selected.
+    // The old subscribers table is no longer emailed (see scripts/send-policy-notice.mjs).
+    const { rows } = await client.query<{ id: string; email: string; drip_step: number }>(`
       SELECT id, email, drip_step
-      FROM subscribers
+      FROM member_user u
       WHERE drip_step <= 5
         AND unsubscribed_at IS NULL
+        AND guide_emails_consent_at IS NOT NULL
+        AND u.email_verified
         AND (
           (drip_step = 2 AND last_drip_sent_at IS NULL
-            AND created_at <= NOW() - INTERVAL '3 days')
+            AND guide_emails_consent_at <= NOW() - INTERVAL '3 days')
           OR
           (drip_step >= 3 AND last_drip_sent_at IS NOT NULL
             AND CASE drip_step
@@ -338,7 +356,7 @@ export async function GET(req: NextRequest) {
       try {
         await sendDripEmail(row.email, drip.subject, drip.html(row.email));
         await client.query(
-          `UPDATE subscribers SET drip_step = drip_step + 1, last_drip_sent_at = NOW() WHERE id = $1`,
+          `UPDATE member_user SET drip_step = drip_step + 1, last_drip_sent_at = NOW() WHERE id = $1`,
           [row.id]
         );
         sent++;

@@ -76,6 +76,16 @@ const migrations = [
     `,
   },
   {
+    // The old newsletter list is no longer emailed (signups now require an account). It is kept
+    // as an archive; policy_notice_sent_at records the one-time "register to keep receiving
+    // guides" email sent by scripts/send-policy-notice.mjs.
+    name: 'add_subscriber_policy_notice',
+    sql: `
+      ALTER TABLE subscribers
+        ADD COLUMN IF NOT EXISTS policy_notice_sent_at TIMESTAMPTZ;
+    `,
+  },
+  {
     name: 'create_signup_rate_limits_table',
     sql: `
       CREATE TABLE IF NOT EXISTS signup_rate_limits (

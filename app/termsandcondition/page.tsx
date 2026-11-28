@@ -75,7 +75,9 @@ return (
         <p>The Site is provided “AS IS” and “AS AVAILABLE” without any express or implied warranties, including fitness for a particular purpose or non-infringement.</p>
         <h2>8. Limitation of liability</h2>
         <p>To the fullest extent permitted under U.S. law, we are not liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of the Site or reliance on any information.</p>
-        <h2>9. Contact Us</h2>
+        <h2>9. Travel Guide Emails</h2>
+        <p>By creating an account on the Site, you ask us to email you a free travel guide followed by a short series of travel guide emails. You can unsubscribe at any time using the link in any of these emails; this stops the emails and does not delete your account. See our Privacy Policy for how we handle your email address and signup details.</p>
+        <h2>10. Contact Us</h2>
         <p>info@travelsamericas.com</p>
 
       </article>

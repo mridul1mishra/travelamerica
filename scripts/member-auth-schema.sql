@@ -13,6 +13,17 @@ CREATE TABLE IF NOT EXISTS member_user (
 ALTER TABLE member_user ADD COLUMN IF NOT EXISTS phone TEXT;
 -- IP address the account was registered from (set once at sign-up; never changes).
 ALTER TABLE member_user ADD COLUMN IF NOT EXISTS registration_ip TEXT;
+-- Guide emails (welcome guide + drip series). member_user is the one list of everyone we email;
+-- registration on /register is the only signup. Only verified rows with guide_emails_consent_at
+-- set receive guide emails; members who registered before guide emails existed have it NULL.
+ALTER TABLE member_user ADD COLUMN IF NOT EXISTS guide_emails_consent_at TIMESTAMPTZ;
+ALTER TABLE member_user ADD COLUMN IF NOT EXISTS guide_emails_source TEXT;
+ALTER TABLE member_user ADD COLUMN IF NOT EXISTS guide_emails_consent_ip TEXT;
+ALTER TABLE member_user ADD COLUMN IF NOT EXISTS drip_step INTEGER NOT NULL DEFAULT 1;
+ALTER TABLE member_user ADD COLUMN IF NOT EXISTS last_drip_sent_at TIMESTAMPTZ;
+ALTER TABLE member_user ADD COLUMN IF NOT EXISTS unsubscribed_at TIMESTAMPTZ;
+CREATE INDEX IF NOT EXISTS member_user_guide_emails_idx ON member_user (drip_step)
+  WHERE guide_emails_consent_at IS NOT NULL AND unsubscribed_at IS NULL;
 
 CREATE TABLE IF NOT EXISTS member_session (
   id TEXT PRIMARY KEY,

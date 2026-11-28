@@ -20,7 +20,8 @@
     "tag:nyc-hotels": "node scripts/apply-hotel-tags.mjs content/cities/newyork/hotel-tags.json",
     "tier:nyc-hotels": "node scripts/apply-hotel-tiers.mjs",
     "tag:nyc-subway": "node scripts/tag-near-subway.mjs",
-    "snapshot:hotels": "node scripts/export-hotel-snapshot.mjs"
+    "snapshot:hotels": "node scripts/export-hotel-snapshot.mjs",
+    "policy-notice": "node scripts/send-policy-notice.mjs"
   },
   "browserslist": {
     "production": [

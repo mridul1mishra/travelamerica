@@ -2,6 +2,14 @@
 import { useState } from 'react';
 import styles from './EmailSignup.module.css';
 
+// Sign-ups happen on /register (the one signup form). The box passes on the email and the page
+// it was on, so the form is pre-filled and the guide matches what the visitor was reading.
+function registerLink(email: string, source: string): string {
+  const params = new URLSearchParams({ email: email.trim(), source, next: window.location.pathname });
+  return `/register?${params}`;
+}
+
+
 interface EmailSignupProps {
   source?: string;
   city?: string;
@@ -21,31 +29,10 @@ export default function EmailSignup({ source = 'unknown', city = 'NYC' }: EmailS
     }
     setStatus('loading');
     setErrorMsg('');
-    try {
-      const res = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source }),
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        setErrorMsg(data.message || 'Something went wrong. Please try again.');
-        setStatus('error');
-      } else {
-        setStatus('success');
-        // GA4: fire signup event so it can be marked as a key event.
-        // gtag is loaded globally in layout.tsx; guard for safety.
-        if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-          (window as any).gtag('event', 'email_signup', {
-            method: 'drip_form',
-            source: source,
-          });
-        }
-      }
-    } catch {
-      setErrorMsg('Network error. Please try again.');
-      setStatus('error');
+    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'email_signup', { method: 'register_redirect', source });
     }
+    window.location.assign(registerLink(email, source));
   }
 
   if (status === 'success') {
@@ -68,7 +55,7 @@ export default function EmailSignup({ source = 'unknown', city = 'NYC' }: EmailS
         <div className={styles.pdfIcon} aria-hidden="true">📄</div>
         <div className={styles.copy}>
           <p className={styles.headline}>Get your free {city} 3-day itinerary</p>
-          <p className={styles.sub}>Day-by-day plan, packing list, and budget breakdown. Free PDF, sent instantly.</p>
+          <p className={styles.sub}>Day-by-day plan, packing list, and budget breakdown. Free with a Travels Americas account.</p>
         </div>
         <form className={styles.form} onSubmit={handleSubmit} noValidate>
           <input
@@ -90,7 +77,7 @@ export default function EmailSignup({ source = 'unknown', city = 'NYC' }: EmailS
           </button>
         </form>
         {status === 'error' && <p className={styles.errorMsg}>{errorMsg}</p>}
-        <p className={styles.disclaimer}>No spam. Unsubscribe any time.</p>
+        <p className={styles.disclaimer}>Next, create your free account. Once it&apos;s set up, we&apos;ll email you the Orlando travel guide, followed by a few more Orlando travel guide emails. Unsubscribe anytime. See our <a href="/termsandcondition">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
       </div>
     </div>
   );
