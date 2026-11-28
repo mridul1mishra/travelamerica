@@ -24,7 +24,8 @@ export function proxy(request: NextRequest, event: NextFetchEvent) {
 }
 
 export const config = {
-  // Every page except API routes, Next.js internals, the admin area and files
+  // Every page except API routes, Next.js internals, the admin area, .well-known and files
   // (anything with a dot: images, robots.txt, sitemap.xml, favicon.ico, ...).
-  matcher: ["/((?!api/|_next/|admin(?:/|$)|.*\\.[^/]*$).*)"],
+  // .well-known/ is for browsers and services (e.g. Chrome's prefetch check), not page views.
+  matcher: ["/((?!api/|_next/|admin(?:/|$)|\\.well-known/|.*\\.[^/]*$).*)"],
 };

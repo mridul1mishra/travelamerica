@@ -143,6 +143,32 @@ export async function readVisitEntries(day: string): Promise<VisitEntry[]> {
       weight: Number(value) || 1, ...classifyVisitor(agents[ip] ?? "") });
   }
   entries.sort((a, b) => a.time.localeCompare(b.time));
+  return markTooFast(entries);
+}
+
+// Speed rule: more page views than a person could make in a minute means automation,
+// whatever browser the visitor claims to be. Named bots keep their own label.
+export const MAX_PAGES_PER_MINUTE = 20;
+
+export function markTooFast(entries: VisitEntry[]): VisitEntry[] {
+  const byVisitor = new Map<string, VisitEntry[]>();
+  for (const e of entries) {
+    if (e.weight !== 1 || !e.time || e.kind === "bot") continue; // older summaries have no per-visit times
+    const key = `${e.ip}\u0000${e.userAgent}`;
+    (byVisitor.get(key) ?? byVisitor.set(key, []).get(key)!).push(e);
+  }
+  for (const list of byVisitor.values()) {
+    if (list.length <= MAX_PAGES_PER_MINUTE) continue;
+    const times = list.map(e => Date.parse(e.time)).sort((a, b) => a - b);
+    let busiest = 0;
+    for (let start = 0, end = 0; end < times.length; end++) {
+      while (times[end] - times[start] > 60_000) start++;
+      busiest = Math.max(busiest, end - start + 1);
+    }
+    if (busiest > MAX_PAGES_PER_MINUTE) {
+      for (const e of list) { e.kind = "suspicious"; e.label = `Too fast for a person (${busiest} pages/min)`; }
+    }
+  }
   return entries;
 }
 
