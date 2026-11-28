@@ -69,6 +69,13 @@ const migrations = [
     `,
   },
   {
+    name: 'add_subscriber_signup_ip',
+    sql: `
+      ALTER TABLE subscribers
+        ADD COLUMN IF NOT EXISTS signup_ip TEXT;
+    `,
+  },
+  {
     name: 'create_signup_rate_limits_table',
     sql: `
       CREATE TABLE IF NOT EXISTS signup_rate_limits (

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Pool } from 'pg';
 import { createHash } from 'crypto';
+import { isIP } from 'net';
 import { createUnsubscribeToken } from '@/app/lib/unsubscribeToken';
 
 const pool = new Pool({
@@ -40,6 +41,12 @@ function clientIp(req: NextRequest): string {
   return req.headers.get('x-vercel-forwarded-for')?.split(',')[0]?.trim()
     ?? req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
     ?? 'unknown';
+}
+
+/** IP saved with a new subscription; null when it isn't a valid address. */
+function signupIp(req: NextRequest): string | null {
+  const ip = clientIp(req);
+  return isIP(ip) ? ip : null;
 }
 
 async function isRateLimited(client: { query: (sql: string, values?: unknown[]) => Promise<{ rows: Array<{ attempts: number }> }> }, ip: string) {
@@ -447,11 +454,11 @@ export async function POST(req: NextRequest) {
     }
 
     const result = await client.query(
-      `INSERT INTO subscribers (email, source)
-       VALUES ($1, $2)
+      `INSERT INTO subscribers (email, source, signup_ip)
+       VALUES ($1, $2, $3)
        ON CONFLICT (email) DO NOTHING
        RETURNING id`,
-      [normalizedEmail, normalizedSource]
+      [normalizedEmail, normalizedSource, signupIp(req)]
     );
 
     const isNew = (result.rowCount ?? 0) > 0;
