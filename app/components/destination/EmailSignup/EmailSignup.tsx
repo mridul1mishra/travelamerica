@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import styles from './EmailSignup.module.css';
+import { useMember } from '@/app/components/auth/MemberProvider';
+import MemberGuideButton from './MemberGuideButton';
 
 // Sign-ups happen on /register (the one signup form). The box passes on the email and the page
 // it was on, so the form is pre-filled and the guide matches what the visitor was reading.
@@ -44,6 +46,7 @@ export default function EmailSignup({
   offerName,
   successMessage,
 }: EmailSignupProps) {
+  const { member, email: memberEmail } = useMember();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
@@ -113,6 +116,10 @@ export default function EmailSignup({
             {subheadline || 'Day-by-day plan, packing list, and budget breakdown. Free with a Travels Americas account.'}
           </p>
         </div>
+        {member && memberEmail ? (
+          <MemberGuideButton source={source} email={memberEmail} city={city} buttonClassName={styles.button}
+            errorClassName={styles.errorMsg} disclaimerClassName={styles.disclaimer} />
+        ) : (
         <form className={styles.form} onSubmit={handleSubmit} noValidate>
           <input
             className={styles.input}
@@ -132,8 +139,9 @@ export default function EmailSignup({
             {status === 'loading' ? 'Sending...' : buttonLabel || 'Get it free'}
           </button>
         </form>
+        )}
         {status === 'error' && <p className={styles.errorMsg}>{errorMsg}</p>}
-        <p className={styles.disclaimer}>Next, create your free account. Once it&apos;s set up, we&apos;ll email you the {city} travel guide, followed by a few more {city} travel guide emails. Unsubscribe anytime. See our <a href="/termsandcondition">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
+        {!member && <p className={styles.disclaimer}>Next, create your free account. Once it&apos;s set up, we&apos;ll email you the {city} travel guide, followed by a few more {city} travel guide emails. Unsubscribe anytime. See our <a href="/termsandcondition">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>}
       </div>
     </div>
   );
