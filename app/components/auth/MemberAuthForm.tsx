@@ -295,6 +295,9 @@ export default function MemberAuthForm({ returnTo, mode, action, verified = fals
     <a className={styles.primaryButton} href={target}>Continue</a>
   </div>;
 
+  // Shown directly above the main button of whichever step is on screen (only one renders at a time).
+  const errorBox = <p id="member-form-error" className={styles.formError} role={error ? "alert" : undefined} aria-live="assertive">{error}</p>;
+
   return <>
     {stage === "details" && mode === "register" && <form className={styles.form} onSubmit={register} aria-busy={busy}>
       <label htmlFor="member-name">Full name</label>
@@ -307,7 +310,8 @@ export default function MemberAuthForm({ returnTo, mode, action, verified = fals
       <p id="member-phone-note" className={styles.helper}>Include your country code, for example +1 212 555 0123.</p>
       <PasswordField id="member-password" value={password} onChange={setPassword} disabled={busy} newPassword />
       <p className={styles.helper}>Verify your email next to finish your free registration. Once your account is created, we&apos;ll email you our travel guide, followed by a few more travel guide emails. Unsubscribe anytime. See our <Link prefetch={false} href="/termsandcondition">Terms</Link> and <Link prefetch={false} href="/privacy">Privacy Policy</Link>.</p>
-      <button className={styles.primaryButton} type="submit" disabled={busy || pending}>{busy ? "Creating account…" : pending ? "Please wait…" : "Create account"}</button>
+      {errorBox}
+          <button className={styles.primaryButton} type="submit" disabled={busy || pending}>{busy ? "Creating account…" : pending ? "Please wait…" : "Create account"}</button>
     </form>}
 
     {stage === "details" && mode === "signin" && <>
@@ -322,6 +326,7 @@ export default function MemberAuthForm({ returnTo, mode, action, verified = fals
         {emailField}
         {method === "password" ? <>
           <PasswordField id="member-password" value={password} onChange={setPassword} disabled={busy} />
+          {errorBox}
           <button className={styles.primaryButton} type="submit" disabled={busy || pending}>{busy || pending ? "Please wait…" : "Sign in"}</button>
           <div className={styles.secondaryActions}>
             <button type="button" disabled={busy} onClick={forgotPassword}>Forgot password?</button>
@@ -329,6 +334,7 @@ export default function MemberAuthForm({ returnTo, mode, action, verified = fals
           <p className={styles.helper}>Used an email code before? You can also set a password through Forgot password.</p>
         </> : <>
           <p className={styles.helper}>After verifying your account, you can sign in with a six-digit email code. New here? Register first.</p>
+          {errorBox}
           <button className={styles.primaryButton} type="submit" disabled={busy || pending}>{busy ? "Sending code…" : pending ? "Please wait…" : "Email me a code"}</button>
         </>}
       </form>
@@ -341,7 +347,8 @@ export default function MemberAuthForm({ returnTo, mode, action, verified = fals
       <h2 className={styles.formHeading}>Set or reset your password</h2>
       <p className={styles.helper}>Enter your account email. We&apos;ll send a code so you can choose a new password.</p>
       {emailField}
-      <button className={styles.primaryButton} type="submit" disabled={busy || pending}>{busy ? "Sending code…" : pending ? "Please wait…" : "Send reset code"}</button>
+      {errorBox}
+          <button className={styles.primaryButton} type="submit" disabled={busy || pending}>{busy ? "Sending code…" : pending ? "Please wait…" : "Send reset code"}</button>
       <div className={styles.secondaryActions}><button type="button" disabled={busy} onClick={backToSignIn}>Back to sign in</button></div>
     </form>}
 
@@ -363,7 +370,8 @@ export default function MemberAuthForm({ returnTo, mode, action, verified = fals
         onChange={event => setOtp(event.target.value.replace(/\D/g, "").slice(0, 6))}
         aria-describedby="member-form-error" className={styles.codeInput} />
       {stage === "reset-confirm" && <PasswordField id="member-new-password" label="New password" value={newPassword} onChange={setNewPassword} disabled={busy} newPassword />}
-      <button className={styles.primaryButton} type="submit" disabled={busy || pending || otp.length !== 6}>
+      {errorBox}
+          <button className={styles.primaryButton} type="submit" disabled={busy || pending || otp.length !== 6}>
         {busy || pending ? "Please wait…" : stage === "reset-confirm" ? "Reset password" : "Verify and continue"}
       </button>
       <div className={styles.secondaryActions}>
@@ -372,10 +380,7 @@ export default function MemberAuthForm({ returnTo, mode, action, verified = fals
       </div>
     </form>}
 
-    <div className={styles.feedback} aria-live="polite">
-      <p id="member-form-error" className={styles.error} role={error ? "alert" : undefined}>{error}</p>
-      {notice && <p>{notice}</p>}
-    </div>
+    {notice && <div className={styles.feedback} aria-live="polite"><p>{notice}</p></div>}
     {stage !== "verify-signin" && <p className={styles.crossLink}>
       {mode === "register" ? <>Already have an account? <Link prefetch={false} href={memberSignInUrl(target, action)}>Sign in</Link>.</>
         : <>New here? <Link prefetch={false} href={memberRegisterUrl(target, action)}>Create account</Link>.</>}
