@@ -90,9 +90,26 @@ export default async function VisitsPage({ searchParams }: Props) {
         Moves within this site are not counted.{untracked > 0 && ` ${untracked} visits on this day were logged before referrers were recorded and aren't included.`}</p>
       {sources.length === 0 ? <p>No referrer data for this day yet.</p> :
       <table style={{ borderCollapse: "collapse", width: "100%", fontSize: 14 }}>
-        <thead><tr>{["Source", "Human visits", "Bot and suspicious visits"].map(t => <th key={t} style={cell}>{t}</th>)}</tr></thead>
+        <thead><tr>{["Source", "Human visits", "Bot and suspicious visits", "Landing pages"].map(t => <th key={t} style={cell}>{t}</th>)}</tr></thead>
         <tbody>{sources.map(s => <tr key={s.source}>
-          <td style={cell}>{s.source}</td><td style={cell}>{s.human}</td><td style={cell}>{s.other}</td>
+          <td style={cell}>
+            {s.source}
+            {s.referrers.length > 0 && <details style={{ marginTop: 4 }}>
+              <summary style={{ cursor: "pointer", fontSize: 12, color: "#555" }}>Referring URLs ({s.referrers.length})</summary>
+              <ul style={{ margin: "4px 0 0", paddingLeft: 16, fontSize: 12 }}>
+                {s.referrers.slice(0, 50).map(r => <li key={r.url} style={{ wordBreak: "break-all" }}>{r.url} × {r.count}</li>)}
+              </ul>
+            </details>}
+          </td>
+          <td style={cell}>{s.human}</td><td style={cell}>{s.other}</td>
+          <td style={cell}>
+            <details>
+              <summary style={{ cursor: "pointer" }}>{s.pages.length} page{s.pages.length === 1 ? "" : "s"}</summary>
+              <ul style={{ margin: "6px 0 0", paddingLeft: 16, fontSize: 13, minWidth: 220 }}>
+                {s.pages.map(p => <li key={p.path}><a href={p.path}>{p.path}</a> × {p.count}</li>)}
+              </ul>
+            </details>
+          </td>
         </tr>)}</tbody>
       </table>}
     </div>}

@@ -175,24 +175,41 @@ export function summarizeByPage(entries: VisitEntry[]): { path: string; human: n
 }
 
 // Our own domains: a referrer from these is a move within the site, not a traffic source.
+// Vercel deployment addresses (travelamerica-xxxx-....vercel.app) count as our own too.
 const SITE_DOMAINS = ["travelsamericas.com", "travelamerica.work"];
+const isOwnHost = (host: string) =>
+  SITE_DOMAINS.some(d => host === d || host.endsWith(`.${d}`)) || /^travelamerica(-[a-z0-9-]+)?\.vercel\.app$/.test(host);
+
+export type SourceRow = {
+  source: string; human: number; other: number;
+  /** Pages visitors landed on from this source, most first. */
+  pages: { path: string; count: number }[];
+  /** Exact referring URLs seen for this source, most first. */
+  referrers: { url: string; count: number }[];
+};
 
 /** Where visitors came from: referring site per page view, split into humans and everyone else.
  *  Only page views recorded after referrer logging started are counted; moves within the site are skipped. */
-export function summarizeBySource(entries: VisitEntry[]): { source: string; human: number; other: number }[] {
-  const sources = new Map<string, { source: string; human: number; other: number }>();
+export function summarizeBySource(entries: VisitEntry[]): SourceRow[] {
+  const sources = new Map<string, { source: string; human: number; other: number; pages: Map<string, number>; referrers: Map<string, number> }>();
   for (const e of entries) {
     if (e.referrer === undefined) continue;
     let source = "(direct / no referrer)";
     if (e.referrer) {
       try { source = new URL(e.referrer).hostname.replace(/^www\./, "").toLowerCase(); } catch { source = "(unknown)"; }
-      if (SITE_DOMAINS.some(d => source === d || source.endsWith(`.${d}`))) continue;
+      if (isOwnHost(source)) continue;
     }
-    const row = sources.get(source) ?? { source, human: 0, other: 0 };
+    const row = sources.get(source) ?? { source, human: 0, other: 0, pages: new Map<string, number>(), referrers: new Map<string, number>() };
     if (e.kind === "human") row.human += 1; else row.other += 1;
+    row.pages.set(e.path, (row.pages.get(e.path) ?? 0) + 1);
+    if (e.referrer) row.referrers.set(e.referrer, (row.referrers.get(e.referrer) ?? 0) + 1);
     sources.set(source, row);
   }
-  return [...sources.values()].sort((a, b) => b.human - a.human || b.other - a.other);
+  const ranked = <K extends string>(m: Map<string, number>, key: K) =>
+    [...m].sort((a, b) => b[1] - a[1]).map(([value, count]) => ({ [key]: value, count }) as { [P in K]: string } & { count: number });
+  return [...sources.values()]
+    .map(r => ({ source: r.source, human: r.human, other: r.other, pages: ranked(r.pages, "path"), referrers: ranked(r.referrers, "url") }))
+    .sort((a, b) => b.human - a.human || b.other - a.other);
 }
 
 /** Chronological log, one line per visit. */
